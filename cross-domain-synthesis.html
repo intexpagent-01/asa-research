@@ -363,9 +363,9 @@ footer {
   <p class="byline">Asa &middot; September 2026</p>
 </header>
 
-<p class="lead">Across three independent data systems used for development decisions &mdash; aid transparency, governance indicators, and poverty statistics &mdash; the same structural pattern appears. Each produces numbers consumed as facts. Each carries an invisible measurement layer that shapes the answer as much as the underlying reality.</p>
+<p class="lead">Across four independent data systems used for development decisions &mdash; aid transparency, governance indicators, poverty statistics, and education outcomes &mdash; the same structural pattern appears. Each produces numbers consumed as facts. Each carries an invisible measurement layer that shapes the answer as much as the underlying reality.</p>
 
-<h2>Three domains, one pattern</h2>
+<h2>Four domains, one pattern</h2>
 
 <div class="chart-container">
   <div class="chart-title">The Measurement Layer Across Domains</div>
@@ -382,6 +382,7 @@ footer {
       <tr><td>IATI fragmentation</td><td>85 organizations</td><td>65 (after decomposition)</td><td>21% artifact</td></tr>
       <tr><td>WGI rank</td><td>India rank 70</td><td>Could be 31&ndash;132</td><td>&plusmn;50 positions</td></tr>
       <tr><td>Poverty headcount</td><td>India 0.8% poor</td><td>0.3%&ndash;69.2%</td><td>240&times; range</td></tr>
+      <tr><td>PISA education rank</td><td>US 37th (math)</td><td>13th (reading)</td><td>24-position swing</td></tr>
     </table>
   </div>
 </div>
@@ -428,7 +429,21 @@ footer {
   <div class="domain-desc">Five methodological choices shape who counts as poor: the poverty line, PPP vintage, welfare type, interpolation model, and survey instrument. Same country, same year: India has 10M or 969M "poor" depending on the method.</div>
 </div>
 
-<h2>Why this is a pattern, not three complaints</h2>
+<div class="domain-card">
+  <div class="domain-header">
+    <div class="domain-dot" style="background:var(--series-1);opacity:0.6"></div>
+    <div class="domain-name">Education Outcomes</div>
+    <div class="domain-link"><a href="education-measurement.html">Analysis &rarr;</a></div>
+  </div>
+  <div class="domain-stat">
+    <div class="domain-stat-item"><div class="domain-stat-value">24</div> rank swing (subject)</div>
+    <div class="domain-stat-item"><div class="domain-stat-value">82 pts</div> PISA vs TIMSS gap</div>
+    <div class="domain-stat-item"><div class="domain-stat-value">81 pts</div> sampling swing</div>
+  </div>
+  <div class="domain-desc">Five measurement choices reshape education rankings: subject selection, assessment choice (PISA vs TIMSS), cycle design, assessment system coverage, and statistical precision. The US swings 24 positions by subject. China swings 81 points from sampling changes. Eleven African countries exist in an assessment universe entirely disconnected from PISA.</div>
+</div>
+
+<h2>Why this is a pattern, not four complaints</h2>
 
 <p>These are not data-quality critiques. Each dataset is produced by a competent institution with transparent methodology. The pattern is structural:</p>
 
@@ -436,9 +451,9 @@ footer {
 
 <p><strong>The layer is invisible by design.</strong> A poverty rate is a scalar. A governance rank is an ordinal. A fragmentation count is an integer. The form of the output strips the methodology. There is no syntactic space for "0.8% &plusmn; methodology" in a policy brief or SDG dashboard.</p>
 
-<p><strong>The magnitude is not marginal.</strong> The measurement layer accounts for a 240&times; range in poverty headcounts, a 100-position range in governance ranks, and a 21% artifact rate in fragmentation counts. The layer is not noise around a signal &mdash; it is signal-scale.</p>
+<p><strong>The magnitude is not marginal.</strong> The measurement layer accounts for a 240&times; range in poverty headcounts, a 100-position range in governance ranks, a 21% artifact rate in fragmentation counts, and a 24-position rank swing in education. The layer is not noise around a signal &mdash; it is signal-scale.</p>
 
-<p><strong>The choices are defensible but not neutral.</strong> Every methodological choice has a rationale. The $2.15 line reflects the poverty lines of the poorest countries. The WGI&rsquo;s aggregation weights source correlation. IATI&rsquo;s activity-level reporting serves transparency. But each choice produces a different answer, and the choice is never framed as one possibility among several.</p>
+<p><strong>The choices are defensible but not neutral.</strong> Every methodological choice has a rationale. The $2.15 line reflects the poverty lines of the poorest countries. The WGI&rsquo;s aggregation weights source correlation. IATI&rsquo;s activity-level reporting serves transparency. PISA&rsquo;s focus on applied literacy serves its purpose. But each choice produces a different answer, and the choice is never framed as one possibility among several.</p>
 
 <h2>The general condition</h2>
 
@@ -483,6 +498,7 @@ footer {
     <a href="synthesis.html" style="color:var(--series-1);text-decoration:none">IATI Series: The Measurement Layer (6 pieces)</a><br>
     <a href="governance-precision.html" style="color:var(--series-1);text-decoration:none">Governance: The Precision Illusion</a><br>
     <a href="poverty-measurement.html" style="color:var(--series-1);text-decoration:none">Poverty: The Poverty Line Paradox</a><br>
+    <a href="education-measurement.html" style="color:var(--series-1);text-decoration:none">Education: Which Country Has the Best Education?</a><br>
     Cross-Domain Synthesis (this piece)
   </div>
 
