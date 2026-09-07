@@ -1,0 +1,1096 @@
+{
+  "metadata": {
+    "n_indicators": 33,
+    "n_countries": 25,
+    "groups": {
+      "PIC": 13,
+      "ASIA": 8,
+      "HIC": 4
+    }
+  },
+  "indicator_stats": [
+    {
+      "code": "3.1.1",
+      "name": "Maternal mortality ratio",
+      "total": 25,
+      "PIC": 13,
+      "PIC_pct": 100.0,
+      "ASIA": 8,
+      "ASIA_pct": 100.0,
+      "HIC": 4,
+      "HIC_pct": 100.0
+    },
+    {
+      "code": "3.2.1",
+      "name": "Under-5 mortality rate",
+      "total": 25,
+      "PIC": 13,
+      "PIC_pct": 100.0,
+      "ASIA": 8,
+      "ASIA_pct": 100.0,
+      "HIC": 4,
+      "HIC_pct": 100.0
+    },
+    {
+      "code": "3.8.1",
+      "name": "UHC service coverage index",
+      "total": 25,
+      "PIC": 13,
+      "PIC_pct": 100.0,
+      "ASIA": 8,
+      "ASIA_pct": 100.0,
+      "HIC": 4,
+      "HIC_pct": 100.0
+    },
+    {
+      "code": "5.5.1",
+      "name": "Women in national parliaments",
+      "total": 25,
+      "PIC": 13,
+      "PIC_pct": 100.0,
+      "ASIA": 8,
+      "ASIA_pct": 100.0,
+      "HIC": 4,
+      "HIC_pct": 100.0
+    },
+    {
+      "code": "5.5.2",
+      "name": "Women in managerial positions",
+      "total": 25,
+      "PIC": 13,
+      "PIC_pct": 100.0,
+      "ASIA": 8,
+      "ASIA_pct": 100.0,
+      "HIC": 4,
+      "HIC_pct": 100.0
+    },
+    {
+      "code": "6.2.1",
+      "name": "Safely managed sanitation",
+      "total": 25,
+      "PIC": 13,
+      "PIC_pct": 100.0,
+      "ASIA": 8,
+      "ASIA_pct": 100.0,
+      "HIC": 4,
+      "HIC_pct": 100.0
+    },
+    {
+      "code": "7.1.1",
+      "name": "Access to electricity",
+      "total": 25,
+      "PIC": 13,
+      "PIC_pct": 100.0,
+      "ASIA": 8,
+      "ASIA_pct": 100.0,
+      "HIC": 4,
+      "HIC_pct": 100.0
+    },
+    {
+      "code": "7.2.1",
+      "name": "Renewable energy share",
+      "total": 25,
+      "PIC": 13,
+      "PIC_pct": 100.0,
+      "ASIA": 8,
+      "ASIA_pct": 100.0,
+      "HIC": 4,
+      "HIC_pct": 100.0
+    },
+    {
+      "code": "8.1.1",
+      "name": "Real GDP per capita growth",
+      "total": 25,
+      "PIC": 13,
+      "PIC_pct": 100.0,
+      "ASIA": 8,
+      "ASIA_pct": 100.0,
+      "HIC": 4,
+      "HIC_pct": 100.0
+    },
+    {
+      "code": "8.5.2",
+      "name": "Unemployment rate",
+      "total": 25,
+      "PIC": 13,
+      "PIC_pct": 100.0,
+      "ASIA": 8,
+      "ASIA_pct": 100.0,
+      "HIC": 4,
+      "HIC_pct": 100.0
+    },
+    {
+      "code": "9.2.1",
+      "name": "Manufacturing value added % GDP",
+      "total": 25,
+      "PIC": 13,
+      "PIC_pct": 100.0,
+      "ASIA": 8,
+      "ASIA_pct": 100.0,
+      "HIC": 4,
+      "HIC_pct": 100.0
+    },
+    {
+      "code": "9.c.1",
+      "name": "Mobile network coverage",
+      "total": 25,
+      "PIC": 13,
+      "PIC_pct": 100.0,
+      "ASIA": 8,
+      "ASIA_pct": 100.0,
+      "HIC": 4,
+      "HIC_pct": 100.0
+    },
+    {
+      "code": "11.1.1",
+      "name": "Urban slum population",
+      "total": 25,
+      "PIC": 13,
+      "PIC_pct": 100.0,
+      "ASIA": 8,
+      "ASIA_pct": 100.0,
+      "HIC": 4,
+      "HIC_pct": 100.0
+    },
+    {
+      "code": "11.6.2",
+      "name": "Urban PM2.5 levels",
+      "total": 25,
+      "PIC": 13,
+      "PIC_pct": 100.0,
+      "ASIA": 8,
+      "ASIA_pct": 100.0,
+      "HIC": 4,
+      "HIC_pct": 100.0
+    },
+    {
+      "code": "12.2.2",
+      "name": "Domestic material consumption",
+      "total": 25,
+      "PIC": 13,
+      "PIC_pct": 100.0,
+      "ASIA": 8,
+      "ASIA_pct": 100.0,
+      "HIC": 4,
+      "HIC_pct": 100.0
+    },
+    {
+      "code": "13.1.1",
+      "name": "Disaster deaths & missing",
+      "total": 25,
+      "PIC": 13,
+      "PIC_pct": 100.0,
+      "ASIA": 8,
+      "ASIA_pct": 100.0,
+      "HIC": 4,
+      "HIC_pct": 100.0
+    },
+    {
+      "code": "15.1.1",
+      "name": "Forest area proportion",
+      "total": 25,
+      "PIC": 13,
+      "PIC_pct": 100.0,
+      "ASIA": 8,
+      "ASIA_pct": 100.0,
+      "HIC": 4,
+      "HIC_pct": 100.0
+    },
+    {
+      "code": "17.8.1",
+      "name": "Internet users (%)",
+      "total": 25,
+      "PIC": 13,
+      "PIC_pct": 100.0,
+      "ASIA": 8,
+      "ASIA_pct": 100.0,
+      "HIC": 4,
+      "HIC_pct": 100.0
+    },
+    {
+      "code": "17.19.2",
+      "name": "Census & vital registration",
+      "total": 25,
+      "PIC": 13,
+      "PIC_pct": 100.0,
+      "ASIA": 8,
+      "ASIA_pct": 100.0,
+      "HIC": 4,
+      "HIC_pct": 100.0
+    },
+    {
+      "code": "4.2.2",
+      "name": "Pre-primary participation rate",
+      "total": 24,
+      "PIC": 12,
+      "PIC_pct": 92.3,
+      "ASIA": 8,
+      "ASIA_pct": 100.0,
+      "HIC": 4,
+      "HIC_pct": 100.0
+    },
+    {
+      "code": "15.1.2",
+      "name": "KBA protection coverage",
+      "total": 24,
+      "PIC": 12,
+      "PIC_pct": 92.3,
+      "ASIA": 8,
+      "ASIA_pct": 100.0,
+      "HIC": 4,
+      "HIC_pct": 100.0
+    },
+    {
+      "code": "17.1.1",
+      "name": "Tax revenue as % of GDP",
+      "total": 24,
+      "PIC": 12,
+      "PIC_pct": 92.3,
+      "ASIA": 8,
+      "ASIA_pct": 100.0,
+      "HIC": 4,
+      "HIC_pct": 100.0
+    },
+    {
+      "code": "14.5.1",
+      "name": "Marine protected areas",
+      "total": 23,
+      "PIC": 12,
+      "PIC_pct": 92.3,
+      "ASIA": 7,
+      "ASIA_pct": 87.5,
+      "HIC": 4,
+      "HIC_pct": 100.0
+    },
+    {
+      "code": "16.1.1",
+      "name": "Intentional homicides per 100k",
+      "total": 23,
+      "PIC": 12,
+      "PIC_pct": 92.3,
+      "ASIA": 7,
+      "ASIA_pct": 87.5,
+      "HIC": 4,
+      "HIC_pct": 100.0
+    },
+    {
+      "code": "2.2.1",
+      "name": "Stunting prevalence (under 5)",
+      "total": 22,
+      "PIC": 11,
+      "PIC_pct": 84.6,
+      "ASIA": 8,
+      "ASIA_pct": 100.0,
+      "HIC": 3,
+      "HIC_pct": 75.0
+    },
+    {
+      "code": "1.1.1",
+      "name": "Population below intl poverty line",
+      "total": 21,
+      "PIC": 12,
+      "PIC_pct": 92.3,
+      "ASIA": 7,
+      "ASIA_pct": 87.5,
+      "HIC": 2,
+      "HIC_pct": 50.0
+    },
+    {
+      "code": "1.2.1",
+      "name": "Population below national poverty line",
+      "total": 20,
+      "PIC": 12,
+      "PIC_pct": 92.3,
+      "ASIA": 8,
+      "ASIA_pct": 100.0,
+      "HIC": 0,
+      "HIC_pct": 0.0
+    },
+    {
+      "code": "6.1.1",
+      "name": "Safely managed drinking water",
+      "total": 20,
+      "PIC": 8,
+      "PIC_pct": 61.5,
+      "ASIA": 8,
+      "ASIA_pct": 100.0,
+      "HIC": 4,
+      "HIC_pct": 100.0
+    },
+    {
+      "code": "16.3.2",
+      "name": "Unsentenced detainees",
+      "total": 20,
+      "PIC": 9,
+      "PIC_pct": 69.2,
+      "ASIA": 7,
+      "ASIA_pct": 87.5,
+      "HIC": 4,
+      "HIC_pct": 100.0
+    },
+    {
+      "code": "4.1.1",
+      "name": "Min proficiency in reading/math",
+      "total": 19,
+      "PIC": 9,
+      "PIC_pct": 69.2,
+      "ASIA": 6,
+      "ASIA_pct": 75.0,
+      "HIC": 4,
+      "HIC_pct": 100.0
+    },
+    {
+      "code": "2.1.1",
+      "name": "Prevalence of undernourishment",
+      "total": 18,
+      "PIC": 7,
+      "PIC_pct": 53.8,
+      "ASIA": 8,
+      "ASIA_pct": 100.0,
+      "HIC": 3,
+      "HIC_pct": 75.0
+    },
+    {
+      "code": "10.1.1",
+      "name": "Bottom 40% income growth",
+      "total": 12,
+      "PIC": 3,
+      "PIC_pct": 23.1,
+      "ASIA": 7,
+      "ASIA_pct": 87.5,
+      "HIC": 2,
+      "HIC_pct": 50.0
+    },
+    {
+      "code": "10.4.1",
+      "name": "Labour share of GDP",
+      "total": 8,
+      "PIC": 2,
+      "PIC_pct": 15.4,
+      "ASIA": 4,
+      "ASIA_pct": 50.0,
+      "HIC": 2,
+      "HIC_pct": 50.0
+    }
+  ],
+  "country_stats": [
+    {
+      "code": "798",
+      "name": "Tuvalu",
+      "group": "PIC",
+      "indicators": 26,
+      "pct": 78.8,
+      "country_produced": 14,
+      "country_pct": 53.8,
+      "natures": {
+        "G": 2,
+        "CA": 3,
+        "M": 3,
+        "C": 11,
+        "E": 7
+      },
+      "missing": [
+        "2.1.1",
+        "10.1.1",
+        "10.4.1",
+        "14.5.1",
+        "15.1.2",
+        "16.3.2",
+        "17.1.1"
+      ]
+    },
+    {
+      "code": "583",
+      "name": "Micronesia (FSM)",
+      "group": "PIC",
+      "indicators": 27,
+      "pct": 81.8,
+      "country_produced": 18,
+      "country_pct": 66.7,
+      "natures": {
+        "G": 2,
+        "CA": 3,
+        "M": 1,
+        "C": 15,
+        "E": 6
+      },
+      "missing": [
+        "2.1.1",
+        "2.2.1",
+        "6.1.1",
+        "10.1.1",
+        "10.4.1",
+        "16.3.2"
+      ]
+    },
+    {
+      "code": "520",
+      "name": "Nauru",
+      "group": "PIC",
+      "indicators": 27,
+      "pct": 81.8,
+      "country_produced": 16,
+      "country_pct": 59.3,
+      "natures": {
+        "G": 2,
+        "M": 3,
+        "C": 14,
+        "E": 6,
+        "CA": 2
+      },
+      "missing": [
+        "1.2.1",
+        "2.1.1",
+        "4.1.1",
+        "10.1.1",
+        "10.4.1",
+        "16.1.1"
+      ]
+    },
+    {
+      "code": "585",
+      "name": "Palau",
+      "group": "PIC",
+      "indicators": 27,
+      "pct": 81.8,
+      "country_produced": 17,
+      "country_pct": 63.0,
+      "natures": {
+        "CA": 3,
+        "M": 2,
+        "C": 14,
+        "E": 7,
+        "G": 1
+      },
+      "missing": [
+        "1.1.1",
+        "2.1.1",
+        "2.2.1",
+        "10.1.1",
+        "10.4.1",
+        "16.3.2"
+      ]
+    },
+    {
+      "code": "584",
+      "name": "Marshall Islands",
+      "group": "PIC",
+      "indicators": 28,
+      "pct": 84.8,
+      "country_produced": 17,
+      "country_pct": 60.7,
+      "natures": {
+        "G": 2,
+        "CA": 3,
+        "M": 3,
+        "C": 14,
+        "E": 6
+      },
+      "missing": [
+        "2.1.1",
+        "6.1.1",
+        "10.1.1",
+        "10.4.1",
+        "16.3.2"
+      ]
+    },
+    {
+      "code": "598",
+      "name": "Papua New Guinea",
+      "group": "PIC",
+      "indicators": 30,
+      "pct": 90.9,
+      "country_produced": 18,
+      "country_pct": 60.0,
+      "natures": {
+        "G": 2,
+        "CA": 3,
+        "E": 7,
+        "M": 3,
+        "C": 15
+      },
+      "missing": [
+        "6.1.1",
+        "10.1.1",
+        "10.4.1"
+      ]
+    },
+    {
+      "code": "90",
+      "name": "Solomon Islands",
+      "group": "PIC",
+      "indicators": 30,
+      "pct": 90.9,
+      "country_produced": 18,
+      "country_pct": 60.0,
+      "natures": {
+        "G": 2,
+        "CA": 3,
+        "E": 7,
+        "M": 3,
+        "C": 15
+      },
+      "missing": [
+        "6.1.1",
+        "10.1.1",
+        "10.4.1"
+      ]
+    },
+    {
+      "code": "882",
+      "name": "Samoa",
+      "group": "PIC",
+      "indicators": 30,
+      "pct": 90.9,
+      "country_produced": 17,
+      "country_pct": 56.7,
+      "natures": {
+        "G": 2,
+        "CA": 3,
+        "E": 8,
+        "M": 3,
+        "C": 14
+      },
+      "missing": [
+        "4.1.1",
+        "10.1.1",
+        "10.4.1"
+      ]
+    },
+    {
+      "code": "626",
+      "name": "Timor-Leste",
+      "group": "PIC",
+      "indicators": 30,
+      "pct": 90.9,
+      "country_produced": 19,
+      "country_pct": 63.3,
+      "natures": {
+        "G": 2,
+        "CA": 3,
+        "E": 5,
+        "M": 3,
+        "C": 16,
+        "?": 1
+      },
+      "missing": [
+        "4.1.1",
+        "6.1.1",
+        "10.1.1"
+      ]
+    },
+    {
+      "code": "548",
+      "name": "Vanuatu",
+      "group": "PIC",
+      "indicators": 31,
+      "pct": 93.9,
+      "country_produced": 18,
+      "country_pct": 58.1,
+      "natures": {
+        "G": 2,
+        "CA": 3,
+        "E": 7,
+        "M": 4,
+        "C": 15
+      },
+      "missing": [
+        "4.1.1",
+        "10.1.1"
+      ]
+    },
+    {
+      "code": "776",
+      "name": "Tonga",
+      "group": "PIC",
+      "indicators": 31,
+      "pct": 93.9,
+      "country_produced": 18,
+      "country_pct": 58.1,
+      "natures": {
+        "G": 3,
+        "CA": 3,
+        "M": 3,
+        "C": 15,
+        "E": 7
+      },
+      "missing": [
+        "2.1.1",
+        "10.4.1"
+      ]
+    },
+    {
+      "code": "296",
+      "name": "Kiribati",
+      "group": "PIC",
+      "indicators": 31,
+      "pct": 93.9,
+      "country_produced": 17,
+      "country_pct": 54.8,
+      "natures": {
+        "G": 3,
+        "CA": 3,
+        "E": 8,
+        "M": 3,
+        "C": 14
+      },
+      "missing": [
+        "4.2.2",
+        "10.4.1"
+      ]
+    },
+    {
+      "code": "242",
+      "name": "Fiji",
+      "group": "PIC",
+      "indicators": 32,
+      "pct": 97.0,
+      "country_produced": 19,
+      "country_pct": 59.4,
+      "natures": {
+        "G": 3,
+        "CA": 3,
+        "E": 7,
+        "M": 3,
+        "C": 16
+      },
+      "missing": [
+        "10.4.1"
+      ]
+    },
+    {
+      "code": "116",
+      "name": "Cambodia",
+      "group": "ASIA",
+      "indicators": 30,
+      "pct": 90.9,
+      "country_produced": 20,
+      "country_pct": 66.7,
+      "natures": {
+        "CA": 3,
+        "E": 7,
+        "M": 2,
+        "C": 17,
+        "G": 1
+      },
+      "missing": [
+        "1.1.1",
+        "10.1.1",
+        "10.4.1"
+      ]
+    },
+    {
+      "code": "418",
+      "name": "Lao PDR",
+      "group": "ASIA",
+      "indicators": 30,
+      "pct": 90.9,
+      "country_produced": 15,
+      "country_pct": 50.0,
+      "natures": {
+        "G": 3,
+        "CA": 3,
+        "E": 8,
+        "M": 4,
+        "C": 12
+      },
+      "missing": [
+        "14.5.1",
+        "16.1.1",
+        "16.3.2"
+      ]
+    },
+    {
+      "code": "50",
+      "name": "Bangladesh",
+      "group": "ASIA",
+      "indicators": 31,
+      "pct": 93.9,
+      "country_produced": 19,
+      "country_pct": 61.3,
+      "natures": {
+        "G": 2,
+        "CA": 3,
+        "E": 8,
+        "M": 2,
+        "C": 16
+      },
+      "missing": [
+        "4.1.1",
+        "10.4.1"
+      ]
+    },
+    {
+      "code": "704",
+      "name": "Viet Nam",
+      "group": "ASIA",
+      "indicators": 32,
+      "pct": 97.0,
+      "country_produced": 19,
+      "country_pct": 59.4,
+      "natures": {
+        "G": 3,
+        "CA": 3,
+        "E": 7,
+        "M": 3,
+        "C": 16
+      },
+      "missing": [
+        "10.4.1"
+      ]
+    },
+    {
+      "code": "104",
+      "name": "Myanmar",
+      "group": "ASIA",
+      "indicators": 32,
+      "pct": 97.0,
+      "country_produced": 18,
+      "country_pct": 56.2,
+      "natures": {
+        "G": 3,
+        "CA": 3,
+        "E": 8,
+        "M": 3,
+        "C": 15
+      },
+      "missing": [
+        "10.4.1"
+      ]
+    },
+    {
+      "code": "144",
+      "name": "Sri Lanka",
+      "group": "ASIA",
+      "indicators": 32,
+      "pct": 97.0,
+      "country_produced": 19,
+      "country_pct": 59.4,
+      "natures": {
+        "G": 3,
+        "CA": 3,
+        "E": 7,
+        "M": 3,
+        "C": 16
+      },
+      "missing": [
+        "4.1.1"
+      ]
+    },
+    {
+      "code": "360",
+      "name": "Indonesia",
+      "group": "ASIA",
+      "indicators": 33,
+      "pct": 100.0,
+      "country_produced": 19,
+      "country_pct": 57.6,
+      "natures": {
+        "G": 3,
+        "CA": 3,
+        "E": 8,
+        "M": 3,
+        "C": 16
+      },
+      "missing": []
+    },
+    {
+      "code": "608",
+      "name": "Philippines",
+      "group": "ASIA",
+      "indicators": 33,
+      "pct": 100.0,
+      "country_produced": 20,
+      "country_pct": 60.6,
+      "natures": {
+        "G": 2,
+        "CA": 3,
+        "E": 7,
+        "M": 4,
+        "C": 17
+      },
+      "missing": []
+    },
+    {
+      "code": "554",
+      "name": "New Zealand",
+      "group": "HIC",
+      "indicators": 28,
+      "pct": 84.8,
+      "country_produced": 16,
+      "country_pct": 57.1,
+      "natures": {
+        "E": 10,
+        "M": 1,
+        "C": 14,
+        "CA": 2,
+        "G": 1
+      },
+      "missing": [
+        "1.1.1",
+        "1.2.1",
+        "2.2.1",
+        "10.1.1",
+        "10.4.1"
+      ]
+    },
+    {
+      "code": "702",
+      "name": "Singapore",
+      "group": "HIC",
+      "indicators": 28,
+      "pct": 84.8,
+      "country_produced": 19,
+      "country_pct": 67.9,
+      "natures": {
+        "M": 2,
+        "C": 17,
+        "E": 7,
+        "CA": 2
+      },
+      "missing": [
+        "1.1.1",
+        "1.2.1",
+        "2.1.1",
+        "10.1.1",
+        "10.4.1"
+      ]
+    },
+    {
+      "code": "36",
+      "name": "Australia",
+      "group": "HIC",
+      "indicators": 32,
+      "pct": 97.0,
+      "country_produced": 17,
+      "country_pct": 53.1,
+      "natures": {
+        "G": 3,
+        "E": 9,
+        "M": 3,
+        "C": 15,
+        "CA": 2
+      },
+      "missing": [
+        "1.2.1"
+      ]
+    },
+    {
+      "code": "392",
+      "name": "Japan",
+      "group": "HIC",
+      "indicators": 32,
+      "pct": 97.0,
+      "country_produced": 17,
+      "country_pct": 53.1,
+      "natures": {
+        "G": 3,
+        "E": 9,
+        "M": 3,
+        "C": 15,
+        "CA": 2
+      },
+      "missing": [
+        "1.2.1"
+      ]
+    }
+  ],
+  "summary": {
+    "PIC": {
+      "n": 13,
+      "avg_indicators": 29.2,
+      "avg_pct": 88.6,
+      "avg_country_pct": 59.5
+    },
+    "ASIA": {
+      "n": 8,
+      "avg_indicators": 31.6,
+      "avg_pct": 95.8,
+      "avg_country_pct": 58.9
+    },
+    "HIC": {
+      "n": 4,
+      "avg_indicators": 30.0,
+      "avg_pct": 90.9,
+      "avg_country_pct": 57.8
+    }
+  },
+  "nature_mix": {
+    "PIC": {
+      "G": 7.4,
+      "CA": 10.0,
+      "E": 23.2,
+      "M": 9.7,
+      "C": 49.5,
+      "?": 0.3
+    },
+    "ASIA": {
+      "G": 7.9,
+      "CA": 9.5,
+      "E": 23.7,
+      "M": 9.5,
+      "C": 49.4
+    },
+    "HIC": {
+      "G": 5.8,
+      "E": 29.2,
+      "M": 7.5,
+      "C": 50.8,
+      "CA": 6.7
+    }
+  },
+  "goal_stats": {
+    "1": {
+      "indicators": [
+        "1.1.1",
+        "1.2.1"
+      ],
+      "PIC_avg": 92.3,
+      "ASIA_avg": 93.8,
+      "HIC_avg": 25.0
+    },
+    "2": {
+      "indicators": [
+        "2.1.1",
+        "2.2.1"
+      ],
+      "PIC_avg": 69.2,
+      "ASIA_avg": 100.0,
+      "HIC_avg": 75.0
+    },
+    "3": {
+      "indicators": [
+        "3.1.1",
+        "3.2.1",
+        "3.8.1"
+      ],
+      "PIC_avg": 100.0,
+      "ASIA_avg": 100.0,
+      "HIC_avg": 100.0
+    },
+    "4": {
+      "indicators": [
+        "4.1.1",
+        "4.2.2"
+      ],
+      "PIC_avg": 80.8,
+      "ASIA_avg": 87.5,
+      "HIC_avg": 100.0
+    },
+    "5": {
+      "indicators": [
+        "5.5.1",
+        "5.5.2"
+      ],
+      "PIC_avg": 100.0,
+      "ASIA_avg": 100.0,
+      "HIC_avg": 100.0
+    },
+    "6": {
+      "indicators": [
+        "6.1.1",
+        "6.2.1"
+      ],
+      "PIC_avg": 80.8,
+      "ASIA_avg": 100.0,
+      "HIC_avg": 100.0
+    },
+    "7": {
+      "indicators": [
+        "7.1.1",
+        "7.2.1"
+      ],
+      "PIC_avg": 100.0,
+      "ASIA_avg": 100.0,
+      "HIC_avg": 100.0
+    },
+    "8": {
+      "indicators": [
+        "8.1.1",
+        "8.5.2"
+      ],
+      "PIC_avg": 100.0,
+      "ASIA_avg": 100.0,
+      "HIC_avg": 100.0
+    },
+    "9": {
+      "indicators": [
+        "9.2.1",
+        "9.c.1"
+      ],
+      "PIC_avg": 100.0,
+      "ASIA_avg": 100.0,
+      "HIC_avg": 100.0
+    },
+    "10": {
+      "indicators": [
+        "10.1.1",
+        "10.4.1"
+      ],
+      "PIC_avg": 19.2,
+      "ASIA_avg": 68.8,
+      "HIC_avg": 50.0
+    },
+    "11": {
+      "indicators": [
+        "11.1.1",
+        "11.6.2"
+      ],
+      "PIC_avg": 100.0,
+      "ASIA_avg": 100.0,
+      "HIC_avg": 100.0
+    },
+    "12": {
+      "indicators": [
+        "12.2.2"
+      ],
+      "PIC_avg": 100.0,
+      "ASIA_avg": 100.0,
+      "HIC_avg": 100.0
+    },
+    "13": {
+      "indicators": [
+        "13.1.1"
+      ],
+      "PIC_avg": 100.0,
+      "ASIA_avg": 100.0,
+      "HIC_avg": 100.0
+    },
+    "14": {
+      "indicators": [
+        "14.5.1"
+      ],
+      "PIC_avg": 92.3,
+      "ASIA_avg": 87.5,
+      "HIC_avg": 100.0
+    },
+    "15": {
+      "indicators": [
+        "15.1.1",
+        "15.1.2"
+      ],
+      "PIC_avg": 96.2,
+      "ASIA_avg": 100.0,
+      "HIC_avg": 100.0
+    },
+    "16": {
+      "indicators": [
+        "16.1.1",
+        "16.3.2"
+      ],
+      "PIC_avg": 80.8,
+      "ASIA_avg": 87.5,
+      "HIC_avg": 100.0
+    },
+    "17": {
+      "indicators": [
+        "17.1.1",
+        "17.8.1",
+        "17.19.2"
+      ],
+      "PIC_avg": 97.4,
+      "ASIA_avg": 100.0,
+      "HIC_avg": 100.0
+    }
+  }
+}

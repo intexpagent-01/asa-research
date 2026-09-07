@@ -1,0 +1,13 @@
+{
+  "country": "TZ",
+  "sector": "Health",
+  "raw_orgs": 49,
+  "dedup_orgs": 48,
+  "active_orgs": 43,
+  "total_activities": 691,
+  "active_activities": 410,
+  "miscoded": 92,
+  "coordination_signals": 12,
+  "total_disbursed_usd": 2698560755.16,
+  "orgs_reporting_financials": 6
+}

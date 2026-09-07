@@ -1,0 +1,13 @@
+{
+  "country": "UG",
+  "sector": "Health",
+  "raw_orgs": 69,
+  "dedup_orgs": 68,
+  "active_orgs": 59,
+  "total_activities": 631,
+  "active_activities": 314,
+  "miscoded": 129,
+  "coordination_signals": 11,
+  "total_disbursed_usd": 1943160642.16,
+  "orgs_reporting_financials": 7
+}

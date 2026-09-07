@@ -1,0 +1,13 @@
+{
+  "country": "TZ",
+  "sector": "Governance",
+  "raw_orgs": 69,
+  "dedup_orgs": 67,
+  "active_orgs": 49,
+  "total_activities": 1211,
+  "active_activities": 731,
+  "miscoded": 42,
+  "coordination_signals": 14,
+  "total_disbursed_usd": 1884317783.0,
+  "orgs_reporting_financials": 3
+}

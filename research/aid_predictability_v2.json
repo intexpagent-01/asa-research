@@ -1,0 +1,72 @@
+{
+  "KE": {
+    "country": "Kenya",
+    "n_activities": 467,
+    "has_commitment": 393,
+    "has_disbursement": 373,
+    "has_both": 365,
+    "c_only": 28,
+    "d_only": 8,
+    "pct_both": 78.2,
+    "n_ratios": 131,
+    "median_ratio": 0.99450554,
+    "n_delays": 110,
+    "median_delay": 153
+  },
+  "UG": {
+    "country": "Uganda",
+    "n_activities": 239,
+    "has_commitment": 219,
+    "has_disbursement": 196,
+    "has_both": 195,
+    "c_only": 24,
+    "d_only": 1,
+    "pct_both": 81.6,
+    "n_ratios": 84,
+    "median_ratio": 0.9837071215864117,
+    "n_delays": 68,
+    "median_delay": 273
+  },
+  "RW": {
+    "country": "Rwanda",
+    "n_activities": 870,
+    "has_commitment": 766,
+    "has_disbursement": 725,
+    "has_both": 698,
+    "c_only": 68,
+    "d_only": 27,
+    "pct_both": 80.2,
+    "n_ratios": 143,
+    "median_ratio": 0.9838661198054663,
+    "n_delays": 123,
+    "median_delay": 89
+  },
+  "TZ": {
+    "country": "Tanzania",
+    "n_activities": 356,
+    "has_commitment": 336,
+    "has_disbursement": 330,
+    "has_both": 324,
+    "c_only": 12,
+    "d_only": 6,
+    "pct_both": 91.0,
+    "n_ratios": 119,
+    "median_ratio": 0.98217064,
+    "n_delays": 97,
+    "median_delay": 213
+  },
+  "ET": {
+    "country": "Ethiopia",
+    "n_activities": 394,
+    "has_commitment": 337,
+    "has_disbursement": 330,
+    "has_both": 324,
+    "c_only": 13,
+    "d_only": 6,
+    "pct_both": 82.2,
+    "n_ratios": 124,
+    "median_ratio": 0.9734642631340297,
+    "n_delays": 106,
+    "median_delay": 151
+  }
+}

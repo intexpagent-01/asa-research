@@ -1,0 +1,1257 @@
+[
+  {
+    "country": "KE",
+    "total_transactions": 3000,
+    "disbursements": 1471,
+    "sectors": {
+      "Transport": {
+        "volume_usd": 1014194770.0,
+        "donor_count": 1,
+        "hhi": 1.0,
+        "concentration": "Highly concentrated",
+        "top_donors": [
+          [
+            "World Bank",
+            1014194770.0
+          ]
+        ]
+      },
+      "Water & Sanitation": {
+        "volume_usd": 942606340.0,
+        "donor_count": 1,
+        "hhi": 1.0,
+        "concentration": "Highly concentrated",
+        "top_donors": [
+          [
+            "World Bank",
+            942606340.0
+          ]
+        ]
+      },
+      "Social Infrastructure": {
+        "volume_usd": 777272280.03,
+        "donor_count": 2,
+        "hhi": 0.967,
+        "concentration": "Highly concentrated",
+        "top_donors": [
+          [
+            "World Bank",
+            764234094.0
+          ],
+          [
+            "UN-Habitat",
+            13038186.03
+          ]
+        ]
+      },
+      "Government & Civil Society": {
+        "volume_usd": 698670204.94,
+        "donor_count": 2,
+        "hhi": 0.9996,
+        "concentration": "Highly concentrated",
+        "top_donors": [
+          [
+            "World Bank",
+            698520290.0
+          ],
+          [
+            "UN-Habitat",
+            149914.94
+          ]
+        ]
+      },
+      "Energy": {
+        "volume_usd": 611574685.0,
+        "donor_count": 2,
+        "hhi": 0.998,
+        "concentration": "Highly concentrated",
+        "top_donors": [
+          [
+            "World Bank",
+            610973233.0
+          ],
+          [
+            "United Nations Office for Project Services",
+            601452.0
+          ]
+        ]
+      },
+      "Health": {
+        "volume_usd": 331512163.0,
+        "donor_count": 2,
+        "hhi": 0.9248,
+        "concentration": "Highly concentrated",
+        "top_donors": [
+          [
+            "World Bank",
+            318535007.0
+          ],
+          [
+            "United Nations Office for Project Services",
+            12977156.0
+          ]
+        ]
+      },
+      "Agriculture": {
+        "volume_usd": 243027273.0,
+        "donor_count": 1,
+        "hhi": 1.0,
+        "concentration": "Highly concentrated",
+        "top_donors": [
+          [
+            "World Bank",
+            243027273.0
+          ]
+        ]
+      },
+      "Business": {
+        "volume_usd": 86727144.0,
+        "donor_count": 1,
+        "hhi": 1.0,
+        "concentration": "Highly concentrated",
+        "top_donors": [
+          [
+            "World Bank",
+            86727144.0
+          ]
+        ]
+      },
+      "Industry": {
+        "volume_usd": 40490100.0,
+        "donor_count": 1,
+        "hhi": 1.0,
+        "concentration": "Highly concentrated",
+        "top_donors": [
+          [
+            "World Bank",
+            40490100.0
+          ]
+        ]
+      },
+      "Finance": {
+        "volume_usd": 27202570.0,
+        "donor_count": 1,
+        "hhi": 1.0,
+        "concentration": "Highly concentrated",
+        "top_donors": [
+          [
+            "World Bank",
+            27202570.0
+          ]
+        ]
+      },
+      "Environment": {
+        "volume_usd": 21830036.759999998,
+        "donor_count": 2,
+        "hhi": 0.9874,
+        "concentration": "Highly concentrated",
+        "top_donors": [
+          [
+            "United Nations Office for Project Services",
+            21692066.0
+          ],
+          [
+            "UN-Habitat",
+            137970.76
+          ]
+        ]
+      },
+      "Unallocated": {
+        "volume_usd": 9508844.0,
+        "donor_count": 1,
+        "hhi": 1.0,
+        "concentration": "Highly concentrated",
+        "top_donors": [
+          [
+            "United Nations Office for Project Services",
+            9508844.0
+          ]
+        ]
+      },
+      "Multisector": {
+        "volume_usd": 5283978.1,
+        "donor_count": 2,
+        "hhi": 0.5041,
+        "concentration": "Highly concentrated",
+        "top_donors": [
+          [
+            "United Nations Office for Project Services",
+            2882516.0
+          ],
+          [
+            "UN-Habitat",
+            2401462.1
+          ]
+        ]
+      },
+      "Disaster Prevention": {
+        "volume_usd": 1233421.05,
+        "donor_count": 2,
+        "hhi": 0.5302,
+        "concentration": "Highly concentrated",
+        "top_donors": [
+          [
+            "United Nations Office for Project Services",
+            768258.0
+          ],
+          [
+            "UN-Habitat",
+            465163.05
+          ]
+        ]
+      }
+    },
+    "donors": {
+      "World Bank": 4746510821.0,
+      "United Nations Office for Project Services": 48430292.0,
+      "UN-Habitat": 16192696.879999999
+    },
+    "years": {
+      "2004": 6500000.0,
+      "2005": 216391.0,
+      "2006": 1287796.0,
+      "2007": 37879971.0,
+      "2008": 93593631.0,
+      "2009": 64788644.0,
+      "2010": 145121143.0,
+      "2011": 197593698.0,
+      "2012": 219038926.0,
+      "2013": 377460339.0,
+      "2014": 489597938.0,
+      "2015": 403895955.0,
+      "2016": 355215151.0,
+      "2017": 492595070.0,
+      "2018": 478314826.0,
+      "2019": 391189362.0,
+      "2020": 298595353.0,
+      "2021": 225040131.0,
+      "2022": 168118338.0,
+      "2023": 99109328.0,
+      "2024": 135392231.0,
+      "2025": 116056684.88,
+      "2026": 14532903.0
+    }
+  },
+  {
+    "country": "RW",
+    "total_transactions": 3000,
+    "disbursements": 1286,
+    "sectors": {
+      "Social Infrastructure": {
+        "volume_usd": 1073723553.0,
+        "donor_count": 1,
+        "hhi": 1.0,
+        "concentration": "Highly concentrated",
+        "top_donors": [
+          [
+            "World Bank",
+            1073723553.0
+          ]
+        ]
+      },
+      "Energy": {
+        "volume_usd": 893097125.0,
+        "donor_count": 2,
+        "hhi": 0.9611,
+        "concentration": "Highly concentrated",
+        "top_donors": [
+          [
+            "World Bank",
+            875393278.0
+          ],
+          [
+            "United Nations Office for Project Services",
+            17703847.0
+          ]
+        ]
+      },
+      "Education": {
+        "volume_usd": 795352960.0,
+        "donor_count": 1,
+        "hhi": 1.0,
+        "concentration": "Highly concentrated",
+        "top_donors": [
+          [
+            "World Bank",
+            795352960.0
+          ]
+        ]
+      },
+      "Finance": {
+        "volume_usd": 517471133.0,
+        "donor_count": 1,
+        "hhi": 1.0,
+        "concentration": "Highly concentrated",
+        "top_donors": [
+          [
+            "World Bank",
+            517471133.0
+          ]
+        ]
+      },
+      "Agriculture": {
+        "volume_usd": 414916466.86999965,
+        "donor_count": 2,
+        "hhi": 0.6148,
+        "concentration": "Highly concentrated",
+        "top_donors": [
+          [
+            "World Bank",
+            306844042.0
+          ],
+          [
+            "African Development Bank",
+            108072424.87
+          ]
+        ]
+      },
+      "Transport": {
+        "volume_usd": 393431814.5800002,
+        "donor_count": 2,
+        "hhi": 0.5558,
+        "concentration": "Highly concentrated",
+        "top_donors": [
+          [
+            "World Bank",
+            262445251.0
+          ],
+          [
+            "African Development Bank",
+            130986563.58000003
+          ]
+        ]
+      },
+      "Government & Civil Society": {
+        "volume_usd": 276208360.0,
+        "donor_count": 1,
+        "hhi": 1.0,
+        "concentration": "Highly concentrated",
+        "top_donors": [
+          [
+            "World Bank",
+            276208360.0
+          ]
+        ]
+      },
+      "Disaster Prevention": {
+        "volume_usd": 169192038.0,
+        "donor_count": 1,
+        "hhi": 1.0,
+        "concentration": "Highly concentrated",
+        "top_donors": [
+          [
+            "World Bank",
+            169192038.0
+          ]
+        ]
+      },
+      "Health": {
+        "volume_usd": 166317329.0,
+        "donor_count": 1,
+        "hhi": 1.0,
+        "concentration": "Highly concentrated",
+        "top_donors": [
+          [
+            "World Bank",
+            166317329.0
+          ]
+        ]
+      },
+      "Business": {
+        "volume_usd": 125000000.0,
+        "donor_count": 1,
+        "hhi": 1.0,
+        "concentration": "Highly concentrated",
+        "top_donors": [
+          [
+            "World Bank",
+            125000000.0
+          ]
+        ]
+      },
+      "Water & Sanitation": {
+        "volume_usd": 90522713.0,
+        "donor_count": 1,
+        "hhi": 1.0,
+        "concentration": "Highly concentrated",
+        "top_donors": [
+          [
+            "World Bank",
+            90522713.0
+          ]
+        ]
+      },
+      "Reconstruction": {
+        "volume_usd": 73324287.0,
+        "donor_count": 1,
+        "hhi": 1.0,
+        "concentration": "Highly concentrated",
+        "top_donors": [
+          [
+            "World Bank",
+            73324287.0
+          ]
+        ]
+      },
+      "Communications": {
+        "volume_usd": 46220761.0,
+        "donor_count": 1,
+        "hhi": 1.0,
+        "concentration": "Highly concentrated",
+        "top_donors": [
+          [
+            "World Bank",
+            46220761.0
+          ]
+        ]
+      },
+      "Multisector": {
+        "volume_usd": 22692133.85,
+        "donor_count": 1,
+        "hhi": 1.0,
+        "concentration": "Highly concentrated",
+        "top_donors": [
+          [
+            "African Development Bank",
+            22692133.85
+          ]
+        ]
+      },
+      "Industry": {
+        "volume_usd": 2465854.77,
+        "donor_count": 1,
+        "hhi": 1.0,
+        "concentration": "Highly concentrated",
+        "top_donors": [
+          [
+            "African Development Bank",
+            2465854.77
+          ]
+        ]
+      },
+      "Environment": {
+        "volume_usd": 1021567.49,
+        "donor_count": 1,
+        "hhi": 1.0,
+        "concentration": "Highly concentrated",
+        "top_donors": [
+          [
+            "African Development Bank",
+            1021567.49
+          ]
+        ]
+      },
+      "Unallocated": {
+        "volume_usd": 610887.0,
+        "donor_count": 1,
+        "hhi": 1.0,
+        "concentration": "Highly concentrated",
+        "top_donors": [
+          [
+            "United Nations Office for Project Services",
+            610887.0
+          ]
+        ]
+      },
+      "Trade": {
+        "volume_usd": 567205.32,
+        "donor_count": 1,
+        "hhi": 1.0,
+        "concentration": "Highly concentrated",
+        "top_donors": [
+          [
+            "African Development Bank",
+            567205.32
+          ]
+        ]
+      }
+    },
+    "donors": {
+      "World Bank": 4778015705.0,
+      "African Development Bank": 265805749.88000005,
+      "United Nations Office for Project Services": 18314734.0
+    },
+    "years": {
+      "2008": 1945670.0,
+      "2009": 155191319.64,
+      "2010": 17349268.28,
+      "2011": 55600852.370000005,
+      "2012": 108091441.42000005,
+      "2013": 48471292.70000001,
+      "2014": 197323994.71,
+      "2015": 286583449.48,
+      "2016": 235963692.89000002,
+      "2017": 285364947.47999996,
+      "2018": 233968043.68999997,
+      "2019": 291627344.6600001,
+      "2020": 465156409.93000007,
+      "2021": 339944400.73000014,
+      "2022": 410562188.00000006,
+      "2023": 640989441.1200001,
+      "2024": 679952267.54,
+      "2025": 388697972.54,
+      "2026": 219352191.69999996
+    }
+  },
+  {
+    "country": "TZ",
+    "total_transactions": 3000,
+    "disbursements": 938,
+    "sectors": {
+      "Education": {
+        "volume_usd": 1907009519.0,
+        "donor_count": 1,
+        "hhi": 1.0,
+        "concentration": "Highly concentrated",
+        "top_donors": [
+          [
+            "World Bank",
+            1907009519.0
+          ]
+        ]
+      },
+      "Government & Civil Society": {
+        "volume_usd": 1809415282.24,
+        "donor_count": 3,
+        "hhi": 0.9943,
+        "concentration": "Highly concentrated",
+        "top_donors": [
+          [
+            "World Bank",
+            1804220367.0
+          ],
+          [
+            "United Nations Office for Project Services",
+            4939171.0
+          ],
+          [
+            "UN-Habitat",
+            255744.24
+          ]
+        ]
+      },
+      "Energy": {
+        "volume_usd": 1503559734.0,
+        "donor_count": 1,
+        "hhi": 1.0,
+        "concentration": "Highly concentrated",
+        "top_donors": [
+          [
+            "World Bank",
+            1503559734.0
+          ]
+        ]
+      },
+      "Water & Sanitation": {
+        "volume_usd": 1273929869.0,
+        "donor_count": 1,
+        "hhi": 1.0,
+        "concentration": "Highly concentrated",
+        "top_donors": [
+          [
+            "World Bank",
+            1273929869.0
+          ]
+        ]
+      },
+      "Multisector": {
+        "volume_usd": 1072433460.3,
+        "donor_count": 2,
+        "hhi": 0.9993,
+        "concentration": "Highly concentrated",
+        "top_donors": [
+          [
+            "World Bank",
+            1072061463.0
+          ],
+          [
+            "UN-Habitat",
+            371997.3
+          ]
+        ]
+      },
+      "Social Infrastructure": {
+        "volume_usd": 1060748153.6,
+        "donor_count": 2,
+        "hhi": 0.9812,
+        "concentration": "Highly concentrated",
+        "top_donors": [
+          [
+            "World Bank",
+            1050684142.0
+          ],
+          [
+            "UN-Habitat",
+            10064011.6
+          ]
+        ]
+      },
+      "Transport": {
+        "volume_usd": 1054423825.0,
+        "donor_count": 1,
+        "hhi": 1.0,
+        "concentration": "Highly concentrated",
+        "top_donors": [
+          [
+            "World Bank",
+            1054423825.0
+          ]
+        ]
+      },
+      "Health": {
+        "volume_usd": 852562237.0,
+        "donor_count": 2,
+        "hhi": 0.9937,
+        "concentration": "Highly concentrated",
+        "top_donors": [
+          [
+            "World Bank",
+            849886024.0
+          ],
+          [
+            "United Nations Office for Project Services",
+            2676213.0
+          ]
+        ]
+      },
+      "Disaster Prevention": {
+        "volume_usd": 688931142.0,
+        "donor_count": 1,
+        "hhi": 1.0,
+        "concentration": "Highly concentrated",
+        "top_donors": [
+          [
+            "World Bank",
+            688931142.0
+          ]
+        ]
+      },
+      "Agriculture": {
+        "volume_usd": 399453253.13,
+        "donor_count": 3,
+        "hhi": 0.8332,
+        "concentration": "Highly concentrated",
+        "top_donors": [
+          [
+            "World Bank",
+            362800242.0
+          ],
+          [
+            "African Development Bank",
+            36448290.13
+          ],
+          [
+            "United Nations Office for Project Services",
+            204721.0
+          ]
+        ]
+      },
+      "Trade": {
+        "volume_usd": 118490377.0,
+        "donor_count": 1,
+        "hhi": 1.0,
+        "concentration": "Highly concentrated",
+        "top_donors": [
+          [
+            "World Bank",
+            118490377.0
+          ]
+        ]
+      },
+      "Communications": {
+        "volume_usd": 112810055.0,
+        "donor_count": 1,
+        "hhi": 1.0,
+        "concentration": "Highly concentrated",
+        "top_donors": [
+          [
+            "World Bank",
+            112810055.0
+          ]
+        ]
+      },
+      "Finance": {
+        "volume_usd": 95551803.0,
+        "donor_count": 1,
+        "hhi": 1.0,
+        "concentration": "Highly concentrated",
+        "top_donors": [
+          [
+            "World Bank",
+            95551803.0
+          ]
+        ]
+      },
+      "Business": {
+        "volume_usd": 79496064.0,
+        "donor_count": 1,
+        "hhi": 1.0,
+        "concentration": "Highly concentrated",
+        "top_donors": [
+          [
+            "World Bank",
+            79496064.0
+          ]
+        ]
+      },
+      "Industry": {
+        "volume_usd": 74239792.0,
+        "donor_count": 1,
+        "hhi": 1.0,
+        "concentration": "Highly concentrated",
+        "top_donors": [
+          [
+            "World Bank",
+            74239792.0
+          ]
+        ]
+      },
+      "Unallocated": {
+        "volume_usd": 329429.0,
+        "donor_count": 1,
+        "hhi": 1.0,
+        "concentration": "Highly concentrated",
+        "top_donors": [
+          [
+            "United Nations Office for Project Services",
+            329429.0
+          ]
+        ]
+      },
+      "Environment": {
+        "volume_usd": 29190.96,
+        "donor_count": 1,
+        "hhi": 1.0,
+        "concentration": "Highly concentrated",
+        "top_donors": [
+          [
+            "UN-Habitat",
+            29190.96
+          ]
+        ]
+      }
+    },
+    "donors": {
+      "World Bank": 12048094418.0,
+      "African Development Bank": 36448290.13,
+      "UN-Habitat": 10720944.1,
+      "United Nations Office for Project Services": 8149534.0
+    },
+    "years": {
+      "2006": 6076127.0,
+      "2007": 41215792.0,
+      "2008": 61829084.0,
+      "2009": 209187713.13000003,
+      "2010": 197061848.0,
+      "2011": 71770046.0,
+      "2012": 251899186.0,
+      "2013": 534455527.0,
+      "2014": 470049946.0,
+      "2015": 512008664.0,
+      "2016": 344275678.0,
+      "2017": 438152315.0,
+      "2018": 494329969.0,
+      "2019": 558838915.0,
+      "2020": 508204828.0,
+      "2021": 492114907.0,
+      "2022": 1464415731.0,
+      "2023": 1807138411.0,
+      "2024": 1543882327.0,
+      "2025": 1474584416.1,
+      "2026": 621921756.0
+    }
+  },
+  {
+    "country": "UG",
+    "total_transactions": 3000,
+    "disbursements": 1212,
+    "sectors": {
+      "Government & Civil Society": {
+        "volume_usd": 1142435873.0,
+        "donor_count": 1,
+        "hhi": 1.0,
+        "concentration": "Highly concentrated",
+        "top_donors": [
+          [
+            "World Bank",
+            1142435873.0
+          ]
+        ]
+      },
+      "Transport": {
+        "volume_usd": 1040206883.1299996,
+        "donor_count": 2,
+        "hhi": 0.7397,
+        "concentration": "Highly concentrated",
+        "top_donors": [
+          [
+            "World Bank",
+            880213373.0
+          ],
+          [
+            "African Development Bank",
+            159993510.13000005
+          ]
+        ]
+      },
+      "Multisector": {
+        "volume_usd": 926235488.1500002,
+        "donor_count": 2,
+        "hhi": 0.7798,
+        "concentration": "Highly concentrated",
+        "top_donors": [
+          [
+            "World Bank",
+            809540392.0
+          ],
+          [
+            "African Development Bank",
+            116695096.14999999
+          ]
+        ]
+      },
+      "Agriculture": {
+        "volume_usd": 777741285.6699992,
+        "donor_count": 2,
+        "hhi": 0.5004,
+        "concentration": "Highly concentrated",
+        "top_donors": [
+          [
+            "African Development Bank",
+            399470075.67000014
+          ],
+          [
+            "World Bank",
+            378271210.0
+          ]
+        ]
+      },
+      "Social Infrastructure": {
+        "volume_usd": 512349563.64,
+        "donor_count": 2,
+        "hhi": 0.9869,
+        "concentration": "Highly concentrated",
+        "top_donors": [
+          [
+            "World Bank",
+            508983241.0
+          ],
+          [
+            "UN-Habitat",
+            3366322.6399999997
+          ]
+        ]
+      },
+      "Energy": {
+        "volume_usd": 456073503.0,
+        "donor_count": 1,
+        "hhi": 1.0,
+        "concentration": "Highly concentrated",
+        "top_donors": [
+          [
+            "World Bank",
+            456073503.0
+          ]
+        ]
+      },
+      "Water & Sanitation": {
+        "volume_usd": 352164992.0,
+        "donor_count": 1,
+        "hhi": 1.0,
+        "concentration": "Highly concentrated",
+        "top_donors": [
+          [
+            "World Bank",
+            352164992.0
+          ]
+        ]
+      },
+      "Health": {
+        "volume_usd": 289475553.0,
+        "donor_count": 1,
+        "hhi": 1.0,
+        "concentration": "Highly concentrated",
+        "top_donors": [
+          [
+            "World Bank",
+            289475553.0
+          ]
+        ]
+      },
+      "Education": {
+        "volume_usd": 188559148.0,
+        "donor_count": 1,
+        "hhi": 1.0,
+        "concentration": "Highly concentrated",
+        "top_donors": [
+          [
+            "World Bank",
+            188559148.0
+          ]
+        ]
+      },
+      "Industry": {
+        "volume_usd": 88043705.31,
+        "donor_count": 2,
+        "hhi": 0.5127,
+        "concentration": "Highly concentrated",
+        "top_donors": [
+          [
+            "World Bank",
+            51026500.0
+          ],
+          [
+            "African Development Bank",
+            37017205.31
+          ]
+        ]
+      },
+      "Communications": {
+        "volume_usd": 86828608.0,
+        "donor_count": 1,
+        "hhi": 1.0,
+        "concentration": "Highly concentrated",
+        "top_donors": [
+          [
+            "World Bank",
+            86828608.0
+          ]
+        ]
+      },
+      "Trade": {
+        "volume_usd": 1026879.37,
+        "donor_count": 1,
+        "hhi": 1.0,
+        "concentration": "Highly concentrated",
+        "top_donors": [
+          [
+            "African Development Bank",
+            1026879.37
+          ]
+        ]
+      },
+      "Environment": {
+        "volume_usd": 300183.41000000003,
+        "donor_count": 1,
+        "hhi": 1.0,
+        "concentration": "Highly concentrated",
+        "top_donors": [
+          [
+            "UN-Habitat",
+            300183.41000000003
+          ]
+        ]
+      },
+      "Unallocated": {
+        "volume_usd": 78079.0,
+        "donor_count": 1,
+        "hhi": 1.0,
+        "concentration": "Highly concentrated",
+        "top_donors": [
+          [
+            "United Nations Office for Project Services",
+            78079.0
+          ]
+        ]
+      }
+    },
+    "donors": {
+      "World Bank": 5143572393.0,
+      "African Development Bank": 714202766.6299998,
+      "UN-Habitat": 3666506.05,
+      "United Nations Office for Project Services": 78079.0
+    },
+    "years": {
+      "2001": 1436404.0,
+      "2002": 9290382.0,
+      "2003": 4947695.0,
+      "2004": 4859279.0,
+      "2005": 3970975.0,
+      "2006": 6777302.0,
+      "2009": 283613804.2800001,
+      "2010": 40844892.55,
+      "2011": 75465448.34,
+      "2012": 121143020.16999999,
+      "2013": 221563253.87000003,
+      "2014": 141290459.75999996,
+      "2015": 237952052.57,
+      "2016": 177138260.07000005,
+      "2017": 241065180.34999993,
+      "2018": 217525574.52,
+      "2019": 345981717.27000004,
+      "2020": 730809688.83,
+      "2021": 345980328.41999996,
+      "2022": 480641551.00000006,
+      "2023": 364974440.0699999,
+      "2024": 708602601.46,
+      "2025": 657719714.4799997,
+      "2026": 437925719.6699999
+    }
+  },
+  {
+    "country": "ET",
+    "total_transactions": 3000,
+    "disbursements": 1446,
+    "sectors": {
+      "Social Infrastructure": {
+        "volume_usd": 3146245837.4700003,
+        "donor_count": 3,
+        "hhi": 0.9804,
+        "concentration": "Highly concentrated",
+        "top_donors": [
+          [
+            "World Bank",
+            3115152766.0
+          ],
+          [
+            "United Nations Office for Project Services",
+            20804268.0
+          ],
+          [
+            "UN-Habitat",
+            10288803.469999999
+          ]
+        ]
+      },
+      "Transport": {
+        "volume_usd": 1270600333.0,
+        "donor_count": 1,
+        "hhi": 1.0,
+        "concentration": "Highly concentrated",
+        "top_donors": [
+          [
+            "World Bank",
+            1270600333.0
+          ]
+        ]
+      },
+      "Industry": {
+        "volume_usd": 744754273.0,
+        "donor_count": 2,
+        "hhi": 0.9951,
+        "concentration": "Highly concentrated",
+        "top_donors": [
+          [
+            "World Bank",
+            742943400.0
+          ],
+          [
+            "United Nations Office for Project Services",
+            1810873.0
+          ]
+        ]
+      },
+      "Education": {
+        "volume_usd": 716778768.0,
+        "donor_count": 2,
+        "hhi": 0.9951,
+        "concentration": "Highly concentrated",
+        "top_donors": [
+          [
+            "World Bank",
+            715026055.0
+          ],
+          [
+            "United Nations Office for Project Services",
+            1752713.0
+          ]
+        ]
+      },
+      "Health": {
+        "volume_usd": 702788894.0,
+        "donor_count": 2,
+        "hhi": 0.9538,
+        "concentration": "Highly concentrated",
+        "top_donors": [
+          [
+            "World Bank",
+            686143173.0
+          ],
+          [
+            "United Nations Office for Project Services",
+            16645721.0
+          ]
+        ]
+      },
+      "Multisector": {
+        "volume_usd": 638998535.35,
+        "donor_count": 2,
+        "hhi": 0.983,
+        "concentration": "Highly concentrated",
+        "top_donors": [
+          [
+            "World Bank",
+            633524380.0
+          ],
+          [
+            "UN-Habitat",
+            5474155.350000001
+          ]
+        ]
+      },
+      "Energy": {
+        "volume_usd": 561526385.0,
+        "donor_count": 2,
+        "hhi": 0.9948,
+        "concentration": "Highly concentrated",
+        "top_donors": [
+          [
+            "World Bank",
+            560068851.0
+          ],
+          [
+            "United Nations Office for Project Services",
+            1457534.0
+          ]
+        ]
+      },
+      "Water & Sanitation": {
+        "volume_usd": 434548008.0,
+        "donor_count": 1,
+        "hhi": 1.0,
+        "concentration": "Highly concentrated",
+        "top_donors": [
+          [
+            "World Bank",
+            434548008.0
+          ]
+        ]
+      },
+      "Government & Civil Society": {
+        "volume_usd": 399633301.37,
+        "donor_count": 3,
+        "hhi": 0.89,
+        "concentration": "Highly concentrated",
+        "top_donors": [
+          [
+            "World Bank",
+            376293843.0
+          ],
+          [
+            "United Nations Office for Project Services",
+            23141268.0
+          ],
+          [
+            "UN-Habitat",
+            198190.37
+          ]
+        ]
+      },
+      "Agriculture": {
+        "volume_usd": 364684405.0,
+        "donor_count": 2,
+        "hhi": 0.9497,
+        "concentration": "Highly concentrated",
+        "top_donors": [
+          [
+            "World Bank",
+            355277683.0
+          ],
+          [
+            "United Nations Office for Project Services",
+            9406722.0
+          ]
+        ]
+      },
+      "Finance": {
+        "volume_usd": 140269790.0,
+        "donor_count": 1,
+        "hhi": 1.0,
+        "concentration": "Highly concentrated",
+        "top_donors": [
+          [
+            "World Bank",
+            140269790.0
+          ]
+        ]
+      },
+      "Trade": {
+        "volume_usd": 34790502.0,
+        "donor_count": 1,
+        "hhi": 1.0,
+        "concentration": "Highly concentrated",
+        "top_donors": [
+          [
+            "World Bank",
+            34790502.0
+          ]
+        ]
+      },
+      "Unallocated": {
+        "volume_usd": 6364825.0,
+        "donor_count": 1,
+        "hhi": 1.0,
+        "concentration": "Highly concentrated",
+        "top_donors": [
+          [
+            "United Nations Office for Project Services",
+            6364825.0
+          ]
+        ]
+      },
+      "Disaster Prevention": {
+        "volume_usd": 2246986.67,
+        "donor_count": 1,
+        "hhi": 1.0,
+        "concentration": "Highly concentrated",
+        "top_donors": [
+          [
+            "UN-Habitat",
+            2246986.67
+          ]
+        ]
+      },
+      "Environment": {
+        "volume_usd": 1224880.5599999998,
+        "donor_count": 1,
+        "hhi": 1.0,
+        "concentration": "Highly concentrated",
+        "top_donors": [
+          [
+            "UN-Habitat",
+            1224880.5599999998
+          ]
+        ]
+      },
+      "Reconstruction": {
+        "volume_usd": 691082.0,
+        "donor_count": 1,
+        "hhi": 1.0,
+        "concentration": "Highly concentrated",
+        "top_donors": [
+          [
+            "United Nations Office for Project Services",
+            691082.0
+          ]
+        ]
+      }
+    },
+    "donors": {
+      "World Bank": 9064638784.0,
+      "United Nations Office for Project Services": 82075006.0,
+      "UN-Habitat": 19433016.42
+    },
+    "years": {
+      "2007": 13000000.0,
+      "2008": 26548023.0,
+      "2009": 70799079.0,
+      "2010": 320173585.0,
+      "2011": 278606343.0,
+      "2012": 331756498.0,
+      "2013": 897458790.0,
+      "2014": 880771232.0,
+      "2015": 698521672.0,
+      "2016": 1159236926.0,
+      "2017": 929513942.0,
+      "2018": 965713954.0,
+      "2019": 607817752.0,
+      "2020": 415118639.0,
+      "2021": 282834667.0,
+      "2022": 451987304.0,
+      "2023": 434145860.0,
+      "2024": 235344918.0,
+      "2025": 133423032.42,
+      "2026": 33374590.0
+    }
+  }
+]

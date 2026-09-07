@@ -1,0 +1,13 @@
+{
+  "country": "KE",
+  "sector": "Governance",
+  "raw_orgs": 48,
+  "dedup_orgs": 47,
+  "active_orgs": 38,
+  "total_activities": 1314,
+  "active_activities": 769,
+  "miscoded": 49,
+  "coordination_signals": 25,
+  "total_disbursed_usd": 3356423311.95,
+  "orgs_reporting_financials": 7
+}

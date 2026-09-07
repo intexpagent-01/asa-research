@@ -1,0 +1,13 @@
+{
+  "country": "KE",
+  "sector": "Education",
+  "raw_orgs": 31,
+  "dedup_orgs": 30,
+  "active_orgs": 26,
+  "total_activities": 442,
+  "active_activities": 312,
+  "miscoded": 34,
+  "coordination_signals": 2,
+  "total_disbursed_usd": 243966210.0,
+  "orgs_reporting_financials": 4
+}

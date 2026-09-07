@@ -1,0 +1,872 @@
+[
+  {
+    "country": "UG",
+    "sector": "Governance",
+    "total_activities": 1125,
+    "active_activities": 558,
+    "collaboration_type_filled_pct": 48,
+    "aid_type_filled_pct": 63,
+    "basket_fund_activities": 20,
+    "participating_org_completeness": {
+      "Funding": {
+        "filled": 488,
+        "pct": 87
+      },
+      "Implementing": {
+        "filled": 264,
+        "pct": 47
+      },
+      "Extending": {
+        "filled": 347,
+        "pct": 62
+      },
+      "Accountable": {
+        "filled": 158,
+        "pct": 28
+      }
+    },
+    "multi_funder_activities": 0,
+    "keyword_coordination": {
+      "pooled_funding": {
+        "activities": 0,
+        "orgs": 0,
+        "also_in_structured": 0
+      },
+      "joint_programming": {
+        "activities": 11,
+        "orgs": 6,
+        "also_in_structured": 1
+      },
+      "sector_coordination": {
+        "activities": 1,
+        "orgs": 1,
+        "also_in_structured": 1
+      },
+      "donor_coordination": {
+        "activities": 1,
+        "orgs": 1,
+        "also_in_structured": 0
+      },
+      "harmonization": {
+        "activities": 2,
+        "orgs": 2,
+        "also_in_structured": 1
+      }
+    },
+    "total_keyword_coord_activities": 15,
+    "shared_implementers": 2,
+    "shared_implementer_details": [
+      {
+        "name": "Central Archdiocesan Province Caritas Association (CAPCA)",
+        "donors": 2,
+        "activities": 4
+      },
+      {
+        "name": "Community Development Resource Network",
+        "donors": 2,
+        "activities": 4
+      }
+    ],
+    "gap_analysis": {
+      "keyword_only": 12,
+      "structured_only": 26,
+      "both": 3,
+      "neither": 517,
+      "keyword_only_pct": 29
+    },
+    "org_type_distribution": {
+      "Government": 248,
+      "National NGO": 193,
+      "International NGO": 76,
+      "Foundation": 13,
+      "Multilateral": 8,
+      "Regional NGO": 7,
+      "Private sector": 6,
+      "Academic/research": 4,
+      "Other public sector": 3
+    }
+  },
+  {
+    "country": "UG",
+    "sector": "Health",
+    "total_activities": 631,
+    "active_activities": 314,
+    "collaboration_type_filled_pct": 56,
+    "aid_type_filled_pct": 68,
+    "basket_fund_activities": 8,
+    "participating_org_completeness": {
+      "Funding": {
+        "filled": 280,
+        "pct": 89
+      },
+      "Implementing": {
+        "filled": 227,
+        "pct": 72
+      },
+      "Extending": {
+        "filled": 103,
+        "pct": 33
+      },
+      "Accountable": {
+        "filled": 118,
+        "pct": 38
+      }
+    },
+    "multi_funder_activities": 0,
+    "keyword_coordination": {
+      "pooled_funding": {
+        "activities": 1,
+        "orgs": 1,
+        "also_in_structured": 0
+      },
+      "joint_programming": {
+        "activities": 1,
+        "orgs": 1,
+        "also_in_structured": 1
+      },
+      "sector_coordination": {
+        "activities": 0,
+        "orgs": 0,
+        "also_in_structured": 0
+      },
+      "donor_coordination": {
+        "activities": 3,
+        "orgs": 3,
+        "also_in_structured": 1
+      },
+      "harmonization": {
+        "activities": 4,
+        "orgs": 3,
+        "also_in_structured": 1
+      }
+    },
+    "total_keyword_coord_activities": 7,
+    "shared_implementers": 6,
+    "shared_implementer_details": [
+      {
+        "name": "Ministry of Health",
+        "donors": 2,
+        "activities": 11
+      },
+      {
+        "name": "Uganda Virus Research Institute",
+        "donors": 2,
+        "activities": 2
+      },
+      {
+        "name": "Makerere University School of Public Health",
+        "donors": 2,
+        "activities": 6
+      },
+      {
+        "name": "Makerere University",
+        "donors": 2,
+        "activities": 2
+      },
+      {
+        "name": "Hospice Africa Uganda",
+        "donors": 2,
+        "activities": 2
+      }
+    ],
+    "gap_analysis": {
+      "keyword_only": 5,
+      "structured_only": 37,
+      "both": 2,
+      "neither": 270,
+      "keyword_only_pct": 11
+    },
+    "org_type_distribution": {
+      "International NGO": 86,
+      "Foundation": 82,
+      "Government": 65,
+      "Public-private partnership": 28,
+      "Academic/research": 18,
+      "Multilateral": 16,
+      "National NGO": 9,
+      "Private sector": 7,
+      "71": 1,
+      "90": 1,
+      "Academic, Training and Research": 1
+    }
+  },
+  {
+    "country": "KE",
+    "sector": "Governance",
+    "total_activities": 1315,
+    "active_activities": 770,
+    "collaboration_type_filled_pct": 70,
+    "aid_type_filled_pct": 76,
+    "basket_fund_activities": 56,
+    "participating_org_completeness": {
+      "Funding": {
+        "filled": 665,
+        "pct": 86
+      },
+      "Implementing": {
+        "filled": 300,
+        "pct": 39
+      },
+      "Extending": {
+        "filled": 491,
+        "pct": 64
+      },
+      "Accountable": {
+        "filled": 151,
+        "pct": 20
+      }
+    },
+    "multi_funder_activities": 0,
+    "keyword_coordination": {
+      "pooled_funding": {
+        "activities": 1,
+        "orgs": 1,
+        "also_in_structured": 1
+      },
+      "joint_programming": {
+        "activities": 8,
+        "orgs": 2,
+        "also_in_structured": 1
+      },
+      "sector_coordination": {
+        "activities": 1,
+        "orgs": 1,
+        "also_in_structured": 1
+      },
+      "donor_coordination": {
+        "activities": 4,
+        "orgs": 1,
+        "also_in_structured": 2
+      },
+      "harmonization": {
+        "activities": 17,
+        "orgs": 5,
+        "also_in_structured": 9
+      }
+    },
+    "total_keyword_coord_activities": 31,
+    "shared_implementers": 2,
+    "shared_implementer_details": [
+      {
+        "name": "United Nations Development Programme",
+        "donors": 2,
+        "activities": 3
+      },
+      {
+        "name": "Kenya Red Cross Society",
+        "donors": 2,
+        "activities": 2
+      }
+    ],
+    "gap_analysis": {
+      "keyword_only": 17,
+      "structured_only": 55,
+      "both": 14,
+      "neither": 684,
+      "keyword_only_pct": 20
+    },
+    "org_type_distribution": {
+      "Government": 503,
+      "National NGO": 144,
+      "Foundation": 60,
+      "International NGO": 48,
+      "Multilateral": 13,
+      "90": 1,
+      "Other public sector": 1
+    }
+  },
+  {
+    "country": "KE",
+    "sector": "Health",
+    "total_activities": 602,
+    "active_activities": 371,
+    "collaboration_type_filled_pct": 84,
+    "aid_type_filled_pct": 88,
+    "basket_fund_activities": 17,
+    "participating_org_completeness": {
+      "Funding": {
+        "filled": 353,
+        "pct": 95
+      },
+      "Implementing": {
+        "filled": 279,
+        "pct": 75
+      },
+      "Extending": {
+        "filled": 111,
+        "pct": 30
+      },
+      "Accountable": {
+        "filled": 87,
+        "pct": 23
+      }
+    },
+    "multi_funder_activities": 0,
+    "keyword_coordination": {
+      "pooled_funding": {
+        "activities": 0,
+        "orgs": 0,
+        "also_in_structured": 0
+      },
+      "joint_programming": {
+        "activities": 1,
+        "orgs": 1,
+        "also_in_structured": 1
+      },
+      "sector_coordination": {
+        "activities": 0,
+        "orgs": 0,
+        "also_in_structured": 0
+      },
+      "donor_coordination": {
+        "activities": 3,
+        "orgs": 2,
+        "also_in_structured": 1
+      },
+      "harmonization": {
+        "activities": 2,
+        "orgs": 2,
+        "also_in_structured": 2
+      }
+    },
+    "total_keyword_coord_activities": 5,
+    "shared_implementers": 2,
+    "shared_implementer_details": [
+      {
+        "name": "Ministry of Health",
+        "donors": 2,
+        "activities": 6
+      },
+      {
+        "name": "Global Alliance for Improved Nutrition",
+        "donors": 2,
+        "activities": 2
+      }
+    ],
+    "gap_analysis": {
+      "keyword_only": 2,
+      "structured_only": 41,
+      "both": 3,
+      "neither": 325,
+      "keyword_only_pct": 4
+    },
+    "org_type_distribution": {
+      "Foundation": 199,
+      "Government": 86,
+      "International NGO": 35,
+      "Public-private partnership": 29,
+      "Multilateral": 14,
+      "National NGO": 8
+    }
+  },
+  {
+    "country": "RW",
+    "sector": "Governance",
+    "total_activities": 860,
+    "active_activities": 380,
+    "collaboration_type_filled_pct": 61,
+    "aid_type_filled_pct": 72,
+    "basket_fund_activities": 23,
+    "participating_org_completeness": {
+      "Funding": {
+        "filled": 334,
+        "pct": 88
+      },
+      "Implementing": {
+        "filled": 267,
+        "pct": 70
+      },
+      "Extending": {
+        "filled": 130,
+        "pct": 34
+      },
+      "Accountable": {
+        "filled": 117,
+        "pct": 31
+      }
+    },
+    "multi_funder_activities": 0,
+    "keyword_coordination": {
+      "pooled_funding": {
+        "activities": 3,
+        "orgs": 2,
+        "also_in_structured": 1
+      },
+      "joint_programming": {
+        "activities": 0,
+        "orgs": 0,
+        "also_in_structured": 0
+      },
+      "sector_coordination": {
+        "activities": 0,
+        "orgs": 0,
+        "also_in_structured": 0
+      },
+      "donor_coordination": {
+        "activities": 2,
+        "orgs": 2,
+        "also_in_structured": 1
+      },
+      "harmonization": {
+        "activities": 4,
+        "orgs": 4,
+        "also_in_structured": 0
+      }
+    },
+    "total_keyword_coord_activities": 8,
+    "shared_implementers": 0,
+    "shared_implementer_details": [],
+    "gap_analysis": {
+      "keyword_only": 6,
+      "structured_only": 29,
+      "both": 2,
+      "neither": 343,
+      "keyword_only_pct": 16
+    },
+    "org_type_distribution": {
+      "Government": 229,
+      "National NGO": 66,
+      "International NGO": 57,
+      "Foundation": 10,
+      "Multilateral": 6,
+      "Academic/research": 4,
+      "Private sector": 3,
+      "Other public sector": 3,
+      "Regional NGO": 2
+    }
+  },
+  {
+    "country": "RW",
+    "sector": "Health",
+    "total_activities": 302,
+    "active_activities": 221,
+    "collaboration_type_filled_pct": 77,
+    "aid_type_filled_pct": 89,
+    "basket_fund_activities": 8,
+    "participating_org_completeness": {
+      "Funding": {
+        "filled": 215,
+        "pct": 97
+      },
+      "Implementing": {
+        "filled": 197,
+        "pct": 89
+      },
+      "Extending": {
+        "filled": 88,
+        "pct": 40
+      },
+      "Accountable": {
+        "filled": 93,
+        "pct": 42
+      }
+    },
+    "multi_funder_activities": 0,
+    "keyword_coordination": {
+      "pooled_funding": {
+        "activities": 1,
+        "orgs": 1,
+        "also_in_structured": 0
+      },
+      "joint_programming": {
+        "activities": 0,
+        "orgs": 0,
+        "also_in_structured": 0
+      },
+      "sector_coordination": {
+        "activities": 0,
+        "orgs": 0,
+        "also_in_structured": 0
+      },
+      "donor_coordination": {
+        "activities": 2,
+        "orgs": 2,
+        "also_in_structured": 1
+      },
+      "harmonization": {
+        "activities": 6,
+        "orgs": 5,
+        "also_in_structured": 4
+      }
+    },
+    "total_keyword_coord_activities": 8,
+    "shared_implementers": 3,
+    "shared_implementer_details": [
+      {
+        "name": "Donor country-based NGO",
+        "donors": 2,
+        "activities": 5
+      },
+      {
+        "name": "University of Rwanda",
+        "donors": 2,
+        "activities": 2
+      },
+      {
+        "name": "University of Global Health Equity",
+        "donors": 2,
+        "activities": 2
+      }
+    ],
+    "gap_analysis": {
+      "keyword_only": 4,
+      "structured_only": 11,
+      "both": 4,
+      "neither": 202,
+      "keyword_only_pct": 21
+    },
+    "org_type_distribution": {
+      "Government": 105,
+      "Foundation": 45,
+      "International NGO": 32,
+      "Public-private partnership": 17,
+      "Multilateral": 7,
+      "National NGO": 6,
+      "Academic/research": 6,
+      "Other public sector": 1,
+      "90": 1,
+      "Regional NGO": 1
+    }
+  },
+  {
+    "country": "TZ",
+    "sector": "Governance",
+    "total_activities": 1213,
+    "active_activities": 733,
+    "collaboration_type_filled_pct": 76,
+    "aid_type_filled_pct": 78,
+    "basket_fund_activities": 66,
+    "participating_org_completeness": {
+      "Funding": {
+        "filled": 639,
+        "pct": 87
+      },
+      "Implementing": {
+        "filled": 323,
+        "pct": 44
+      },
+      "Extending": {
+        "filled": 408,
+        "pct": 56
+      },
+      "Accountable": {
+        "filled": 136,
+        "pct": 19
+      }
+    },
+    "multi_funder_activities": 0,
+    "keyword_coordination": {
+      "pooled_funding": {
+        "activities": 11,
+        "orgs": 2,
+        "also_in_structured": 3
+      },
+      "joint_programming": {
+        "activities": 5,
+        "orgs": 3,
+        "also_in_structured": 3
+      },
+      "sector_coordination": {
+        "activities": 0,
+        "orgs": 0,
+        "also_in_structured": 0
+      },
+      "donor_coordination": {
+        "activities": 7,
+        "orgs": 3,
+        "also_in_structured": 3
+      },
+      "harmonization": {
+        "activities": 9,
+        "orgs": 3,
+        "also_in_structured": 5
+      }
+    },
+    "total_keyword_coord_activities": 28,
+    "shared_implementers": 1,
+    "shared_implementer_details": [
+      {
+        "name": "Ministry of Finance",
+        "donors": 2,
+        "activities": 5
+      }
+    ],
+    "gap_analysis": {
+      "keyword_only": 16,
+      "structured_only": 70,
+      "both": 12,
+      "neither": 635,
+      "keyword_only_pct": 16
+    },
+    "org_type_distribution": {
+      "Government": 542,
+      "National NGO": 102,
+      "International NGO": 50,
+      "Multilateral": 17,
+      "Foundation": 8,
+      "Private sector": 8,
+      "Academic/research": 3,
+      "Other public sector": 2,
+      "90": 1
+    }
+  },
+  {
+    "country": "TZ",
+    "sector": "Health",
+    "total_activities": 691,
+    "active_activities": 410,
+    "collaboration_type_filled_pct": 85,
+    "aid_type_filled_pct": 89,
+    "basket_fund_activities": 38,
+    "participating_org_completeness": {
+      "Funding": {
+        "filled": 381,
+        "pct": 93
+      },
+      "Implementing": {
+        "filled": 279,
+        "pct": 68
+      },
+      "Extending": {
+        "filled": 164,
+        "pct": 40
+      },
+      "Accountable": {
+        "filled": 92,
+        "pct": 22
+      }
+    },
+    "multi_funder_activities": 0,
+    "keyword_coordination": {
+      "pooled_funding": {
+        "activities": 23,
+        "orgs": 3,
+        "also_in_structured": 9
+      },
+      "joint_programming": {
+        "activities": 1,
+        "orgs": 1,
+        "also_in_structured": 0
+      },
+      "sector_coordination": {
+        "activities": 1,
+        "orgs": 1,
+        "also_in_structured": 1
+      },
+      "donor_coordination": {
+        "activities": 28,
+        "orgs": 4,
+        "also_in_structured": 8
+      },
+      "harmonization": {
+        "activities": 5,
+        "orgs": 4,
+        "also_in_structured": 2
+      }
+    },
+    "total_keyword_coord_activities": 37,
+    "shared_implementers": 2,
+    "shared_implementer_details": [
+      {
+        "name": "Ministry of Health",
+        "donors": 2,
+        "activities": 5
+      },
+      {
+        "name": "Global Alliance for Improved Nutrition",
+        "donors": 2,
+        "activities": 2
+      }
+    ],
+    "gap_analysis": {
+      "keyword_only": 25,
+      "structured_only": 50,
+      "both": 12,
+      "neither": 323,
+      "keyword_only_pct": 29
+    },
+    "org_type_distribution": {
+      "Government": 254,
+      "Foundation": 77,
+      "International NGO": 34,
+      "Public-private partnership": 18,
+      "Multilateral": 11,
+      "Academic/research": 8,
+      "National NGO": 5,
+      "Private sector": 1,
+      "71": 1,
+      "90": 1
+    }
+  },
+  {
+    "country": "ET",
+    "sector": "Governance",
+    "total_activities": 764,
+    "active_activities": 494,
+    "collaboration_type_filled_pct": 68,
+    "aid_type_filled_pct": 89,
+    "basket_fund_activities": 53,
+    "participating_org_completeness": {
+      "Funding": {
+        "filled": 456,
+        "pct": 92
+      },
+      "Implementing": {
+        "filled": 232,
+        "pct": 47
+      },
+      "Extending": {
+        "filled": 276,
+        "pct": 56
+      },
+      "Accountable": {
+        "filled": 130,
+        "pct": 26
+      }
+    },
+    "multi_funder_activities": 0,
+    "keyword_coordination": {
+      "pooled_funding": {
+        "activities": 0,
+        "orgs": 0,
+        "also_in_structured": 0
+      },
+      "joint_programming": {
+        "activities": 2,
+        "orgs": 2,
+        "also_in_structured": 1
+      },
+      "sector_coordination": {
+        "activities": 0,
+        "orgs": 0,
+        "also_in_structured": 0
+      },
+      "donor_coordination": {
+        "activities": 3,
+        "orgs": 3,
+        "also_in_structured": 1
+      },
+      "harmonization": {
+        "activities": 4,
+        "orgs": 3,
+        "also_in_structured": 4
+      }
+    },
+    "total_keyword_coord_activities": 8,
+    "shared_implementers": 1,
+    "shared_implementer_details": [
+      {
+        "name": "ActionAid Ethiopia",
+        "donors": 2,
+        "activities": 2
+      }
+    ],
+    "gap_analysis": {
+      "keyword_only": 3,
+      "structured_only": 57,
+      "both": 5,
+      "neither": 429,
+      "keyword_only_pct": 5
+    },
+    "org_type_distribution": {
+      "Government": 324,
+      "International NGO": 94,
+      "National NGO": 28,
+      "Foundation": 23,
+      "Multilateral": 12,
+      "Private sector": 9,
+      "Other public sector": 3,
+      "Academic/research": 1
+    }
+  },
+  {
+    "country": "ET",
+    "sector": "Health",
+    "total_activities": 782,
+    "active_activities": 505,
+    "collaboration_type_filled_pct": 83,
+    "aid_type_filled_pct": 91,
+    "basket_fund_activities": 98,
+    "participating_org_completeness": {
+      "Funding": {
+        "filled": 470,
+        "pct": 93
+      },
+      "Implementing": {
+        "filled": 407,
+        "pct": 81
+      },
+      "Extending": {
+        "filled": 121,
+        "pct": 24
+      },
+      "Accountable": {
+        "filled": 176,
+        "pct": 35
+      }
+    },
+    "multi_funder_activities": 0,
+    "keyword_coordination": {
+      "pooled_funding": {
+        "activities": 1,
+        "orgs": 1,
+        "also_in_structured": 0
+      },
+      "joint_programming": {
+        "activities": 1,
+        "orgs": 1,
+        "also_in_structured": 1
+      },
+      "sector_coordination": {
+        "activities": 2,
+        "orgs": 2,
+        "also_in_structured": 1
+      },
+      "donor_coordination": {
+        "activities": 1,
+        "orgs": 1,
+        "also_in_structured": 1
+      },
+      "harmonization": {
+        "activities": 9,
+        "orgs": 7,
+        "also_in_structured": 3
+      }
+    },
+    "total_keyword_coord_activities": 13,
+    "shared_implementers": 3,
+    "shared_implementer_details": [
+      {
+        "name": "Ministry of Health",
+        "donors": 3,
+        "activities": 3
+      },
+      {
+        "name": "Global Alliance for Improved Nutrition",
+        "donors": 2,
+        "activities": 5
+      },
+      {
+        "name": "Amref Health Africa in Ethiopia",
+        "donors": 2,
+        "activities": 3
+      }
+    ],
+    "gap_analysis": {
+      "keyword_only": 8,
+      "structured_only": 108,
+      "both": 5,
+      "neither": 384,
+      "keyword_only_pct": 7
+    },
+    "org_type_distribution": {
+      "Foundation": 185,
+      "International NGO": 146,
+      "Government": 127,
+      "Public-private partnership": 20,
+      "Multilateral": 19,
+      "National NGO": 7,
+      "Academic/research": 1
+    }
+  }
+]

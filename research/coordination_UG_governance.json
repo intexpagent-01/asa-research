@@ -1,0 +1,87 @@
+{
+  "country": "UG",
+  "sector": "Governance",
+  "total_activities": 1125,
+  "active_activities": 558,
+  "collaboration_type_filled_pct": 48,
+  "aid_type_filled_pct": 63,
+  "basket_fund_activities": 20,
+  "participating_org_completeness": {
+    "Funding": {
+      "filled": 488,
+      "pct": 87
+    },
+    "Implementing": {
+      "filled": 264,
+      "pct": 47
+    },
+    "Extending": {
+      "filled": 347,
+      "pct": 62
+    },
+    "Accountable": {
+      "filled": 158,
+      "pct": 28
+    }
+  },
+  "multi_funder_activities": 0,
+  "keyword_coordination": {
+    "pooled_funding": {
+      "activities": 0,
+      "orgs": 0,
+      "also_in_structured": 0
+    },
+    "joint_programming": {
+      "activities": 11,
+      "orgs": 6,
+      "also_in_structured": 1
+    },
+    "sector_coordination": {
+      "activities": 1,
+      "orgs": 1,
+      "also_in_structured": 1
+    },
+    "donor_coordination": {
+      "activities": 1,
+      "orgs": 1,
+      "also_in_structured": 0
+    },
+    "harmonization": {
+      "activities": 2,
+      "orgs": 2,
+      "also_in_structured": 1
+    }
+  },
+  "total_keyword_coord_activities": 15,
+  "shared_implementers": 2,
+  "shared_implementer_details": [
+    {
+      "name": "Central Archdiocesan Province Caritas Association (CAPCA)",
+      "donors": 2,
+      "activities": 4
+    },
+    {
+      "name": "Community Development Resource Network",
+      "donors": 2,
+      "activities": 4
+    }
+  ],
+  "gap_analysis": {
+    "keyword_only": 12,
+    "structured_only": 26,
+    "both": 3,
+    "neither": 517,
+    "keyword_only_pct": 29
+  },
+  "org_type_distribution": {
+    "Government": 248,
+    "National NGO": 193,
+    "International NGO": 76,
+    "Foundation": 13,
+    "Multilateral": 8,
+    "Regional NGO": 7,
+    "Private sector": 6,
+    "Academic/research": 4,
+    "Other public sector": 3
+  }
+}

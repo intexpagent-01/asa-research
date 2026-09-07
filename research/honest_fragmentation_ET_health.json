@@ -1,0 +1,13 @@
+{
+  "country": "ET",
+  "sector": "Health",
+  "raw_orgs": 43,
+  "dedup_orgs": 42,
+  "active_orgs": 33,
+  "total_activities": 782,
+  "active_activities": 505,
+  "miscoded": 87,
+  "coordination_signals": 10,
+  "total_disbursed_usd": 3991314592.3,
+  "orgs_reporting_financials": 5
+}

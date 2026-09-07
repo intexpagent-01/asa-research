@@ -1,0 +1,2983 @@
+{
+  "year": "2023",
+  "focus_countries": {
+    "CC": {
+      "BGD": {
+        "country": "Bangladesh",
+        "iso3": "BGD",
+        "estimate": -1.1987203,
+        "score": 23.5908891,
+        "score_lb": 18.2257753,
+        "score_ub": 28.956003,
+        "std_error": 0.1616187,
+        "num_sources": 13.0
+      },
+      "COL": {
+        "country": "Colombia",
+        "iso3": "COL",
+        "estimate": -0.309004899999999,
+        "score": 41.6000941,
+        "score_lb": 36.2514791,
+        "score_ub": 46.9487091,
+        "std_error": 0.1611217,
+        "num_sources": 13.0
+      },
+      "ETH": {
+        "country": "Ethiopia",
+        "iso3": "ETH",
+        "estimate": -0.4629488,
+        "score": 38.4840333,
+        "score_lb": 33.3185455,
+        "score_ub": 43.6495211,
+        "std_error": 0.1556052,
+        "num_sources": 13.0
+      },
+      "GHA": {
+        "country": "Ghana",
+        "iso3": "GHA",
+        "estimate": -0.1303327,
+        "score": 45.2166936,
+        "score_lb": 40.3118115,
+        "score_ub": 50.1215757,
+        "std_error": 0.1477547,
+        "num_sources": 15.0
+      },
+      "GTM": {
+        "country": "Guatemala",
+        "iso3": "GTM",
+        "estimate": -1.0869128,
+        "score": 25.8540445,
+        "score_lb": 20.1622282,
+        "score_ub": 31.5458608,
+        "std_error": 0.1714603,
+        "num_sources": 11.0
+      },
+      "IND": {
+        "country": "India",
+        "iso3": "IND",
+        "estimate": -0.3353176,
+        "score": 41.0674847,
+        "score_lb": 35.8369224,
+        "score_ub": 46.298047,
+        "std_error": 0.1575655,
+        "num_sources": 13.0
+      },
+      "KEN": {
+        "country": "Kenya",
+        "iso3": "KEN",
+        "estimate": -0.7594497,
+        "score": 32.4824001,
+        "score_lb": 27.3169123,
+        "score_ub": 37.6478879,
+        "std_error": 0.1556052,
+        "num_sources": 13.0
+      },
+      "KHM": {
+        "country": "Cambodia",
+        "iso3": "KHM",
+        "estimate": -1.1216382,
+        "score": 25.1511491,
+        "score_lb": 19.5744201,
+        "score_ub": 30.7278781,
+        "std_error": 0.1679934,
+        "num_sources": 12.0
+      },
+      "NGA": {
+        "country": "Nigeria",
+        "iso3": "NGA",
+        "estimate": -1.098731,
+        "score": 25.614826,
+        "score_lb": 20.5448236,
+        "score_ub": 30.6848284,
+        "std_error": 0.1527288,
+        "num_sources": 13.0
+      },
+      "RWA": {
+        "country": "Rwanda",
+        "iso3": "RWA",
+        "estimate": 0.6808504,
+        "score": 61.6362844,
+        "score_lb": 56.2392172,
+        "score_ub": 67.0333515,
+        "std_error": 0.1625813,
+        "num_sources": 12.0
+      },
+      "SEN": {
+        "country": "Senegal",
+        "iso3": "SEN",
+        "estimate": 0.0381077,
+        "score": 48.6261858,
+        "score_lb": 43.460698,
+        "score_ub": 53.7916736,
+        "std_error": 0.1556052,
+        "num_sources": 13.0
+      },
+      "TZA": {
+        "country": "Tanzania",
+        "iso3": "TZA",
+        "estimate": -0.346236,
+        "score": 40.8464795,
+        "score_lb": 35.7188717,
+        "score_ub": 45.9740873,
+        "std_error": 0.1544641,
+        "num_sources": 14.0
+      },
+      "UGA": {
+        "country": "Uganda",
+        "iso3": "UGA",
+        "estimate": -0.996690299999999,
+        "score": 27.6802863,
+        "score_lb": 22.5147985,
+        "score_ub": 32.8457741,
+        "std_error": 0.1556052,
+        "num_sources": 13.0
+      },
+      "VNM": {
+        "country": "Viet Nam",
+        "iso3": "VNM",
+        "estimate": -0.3083958,
+        "score": 41.6124232,
+        "score_lb": 36.0779161,
+        "score_ub": 47.1469304,
+        "std_error": 0.1667215,
+        "num_sources": 11.0
+      },
+      "ZAF": {
+        "country": "South Africa",
+        "iso3": "ZAF",
+        "estimate": -0.2095917,
+        "score": 43.6123698,
+        "score_lb": 38.3020903,
+        "score_ub": 48.9226494,
+        "std_error": 0.1599669,
+        "num_sources": 11.0
+      }
+    },
+    "GE": {
+      "BGD": {
+        "country": "Bangladesh",
+        "iso3": "BGD",
+        "estimate": -0.5574534,
+        "score": 40.5013434,
+        "score_lb": 33.5862002,
+        "score_ub": 47.4164867,
+        "std_error": 0.2168559,
+        "num_sources": 11.0
+      },
+      "COL": {
+        "country": "Colombia",
+        "iso3": "COL",
+        "estimate": -0.0421246,
+        "score": 50.521407,
+        "score_lb": 43.3880318,
+        "score_ub": 57.6547821,
+        "std_error": 0.2236996,
+        "num_sources": 10.0
+      },
+      "ETH": {
+        "country": "Ethiopia",
+        "iso3": "ETH",
+        "estimate": -0.6883758,
+        "score": 37.9556857,
+        "score_lb": 32.0727827,
+        "score_ub": 43.8385887,
+        "std_error": 0.1844853,
+        "num_sources": 12.0
+      },
+      "GHA": {
+        "country": "Ghana",
+        "iso3": "GHA",
+        "estimate": -0.0177779,
+        "score": 50.9948047,
+        "score_lb": 45.340435,
+        "score_ub": 56.6491743,
+        "std_error": 0.1773186,
+        "num_sources": 14.0
+      },
+      "GTM": {
+        "country": "Guatemala",
+        "iso3": "GTM",
+        "estimate": -0.8628806,
+        "score": 34.5626109,
+        "score_lb": 26.9529875,
+        "score_ub": 42.1722342,
+        "std_error": 0.2386345,
+        "num_sources": 8.0
+      },
+      "IND": {
+        "country": "India",
+        "iso3": "IND",
+        "estimate": 0.422603,
+        "score": 59.5575797,
+        "score_lb": 52.6629091,
+        "score_ub": 66.4522503,
+        "std_error": 0.2162139,
+        "num_sources": 11.0
+      },
+      "KEN": {
+        "country": "Kenya",
+        "iso3": "KEN",
+        "estimate": -0.3131112,
+        "score": 45.2523381,
+        "score_lb": 39.3694351,
+        "score_ub": 51.1352411,
+        "std_error": 0.1844853,
+        "num_sources": 12.0
+      },
+      "KHM": {
+        "country": "Cambodia",
+        "iso3": "KHM",
+        "estimate": -0.4160661,
+        "score": 43.2504809,
+        "score_lb": 35.8528946,
+        "score_ub": 50.6480672,
+        "std_error": 0.2319851,
+        "num_sources": 11.0
+      },
+      "NGA": {
+        "country": "Nigeria",
+        "iso3": "NGA",
+        "estimate": -0.8677545,
+        "score": 34.4678426,
+        "score_lb": 28.3355137,
+        "score_ub": 40.6001716,
+        "std_error": 0.1923072,
+        "num_sources": 12.0
+      },
+      "RWA": {
+        "country": "Rwanda",
+        "iso3": "RWA",
+        "estimate": 0.4086662,
+        "score": 59.2865923,
+        "score_lb": 53.1155892,
+        "score_ub": 65.4575954,
+        "std_error": 0.19352,
+        "num_sources": 11.0
+      },
+      "SEN": {
+        "country": "Senegal",
+        "iso3": "SEN",
+        "estimate": 0.1516215,
+        "score": 54.28861,
+        "score_lb": 48.405707,
+        "score_ub": 60.171513,
+        "std_error": 0.1844853,
+        "num_sources": 12.0
+      },
+      "TZA": {
+        "country": "Tanzania",
+        "iso3": "TZA",
+        "estimate": -0.405130699999999,
+        "score": 43.4631091,
+        "score_lb": 37.6006904,
+        "score_ub": 49.3255278,
+        "std_error": 0.1838429,
+        "num_sources": 13.0
+      },
+      "UGA": {
+        "country": "Uganda",
+        "iso3": "UGA",
+        "estimate": -0.4315787,
+        "score": 42.9488536,
+        "score_lb": 37.0659507,
+        "score_ub": 48.8317566,
+        "std_error": 0.1844853,
+        "num_sources": 12.0
+      },
+      "VNM": {
+        "country": "Viet Nam",
+        "iso3": "VNM",
+        "estimate": -0.1794045,
+        "score": 47.8521338,
+        "score_lb": 40.5696989,
+        "score_ub": 55.1345688,
+        "std_error": 0.228374,
+        "num_sources": 10.0
+      },
+      "ZAF": {
+        "country": "South Africa",
+        "iso3": "ZAF",
+        "estimate": -0.18467,
+        "score": 47.7497513,
+        "score_lb": 41.1991699,
+        "score_ub": 54.3003328,
+        "std_error": 0.2054234,
+        "num_sources": 10.0
+      }
+    },
+    "PV": {
+      "BGD": {
+        "country": "Bangladesh",
+        "iso3": "BGD",
+        "estimate": -1.0359445,
+        "score": 48.1988033,
+        "score_lb": 41.7439501,
+        "score_ub": 54.6536565,
+        "std_error": 0.2304167,
+        "num_sources": 10.0
+      },
+      "COL": {
+        "country": "Colombia",
+        "iso3": "COL",
+        "estimate": -0.7993485,
+        "score": 52.2402416,
+        "score_lb": 45.4609388,
+        "score_ub": 59.0195445,
+        "std_error": 0.2419985,
+        "num_sources": 10.0
+      },
+      "ETH": {
+        "country": "Ethiopia",
+        "iso3": "ETH",
+        "estimate": -1.86375129999999,
+        "score": 34.0585384,
+        "score_lb": 27.3394704,
+        "score_ub": 40.7776064,
+        "std_error": 0.2398483,
+        "num_sources": 10.0
+      },
+      "GHA": {
+        "country": "Ghana",
+        "iso3": "GHA",
+        "estimate": -0.0688107,
+        "score": 64.7189964,
+        "score_lb": 58.192122,
+        "score_ub": 71.2458708,
+        "std_error": 0.2329876,
+        "num_sources": 12.0
+      },
+      "GTM": {
+        "country": "Guatemala",
+        "iso3": "GTM",
+        "estimate": -0.2021326,
+        "score": 62.441645,
+        "score_lb": 55.4462121,
+        "score_ub": 69.4370779,
+        "std_error": 0.2497136,
+        "num_sources": 8.0
+      },
+      "IND": {
+        "country": "India",
+        "iso3": "IND",
+        "estimate": -0.837974,
+        "score": 51.5804563,
+        "score_lb": 45.2584928,
+        "score_ub": 57.9024198,
+        "std_error": 0.225673,
+        "num_sources": 11.0
+      },
+      "KEN": {
+        "country": "Kenya",
+        "iso3": "KEN",
+        "estimate": -0.971652,
+        "score": 49.2970221,
+        "score_lb": 42.5779541,
+        "score_ub": 56.0160901,
+        "std_error": 0.2398483,
+        "num_sources": 10.0
+      },
+      "KHM": {
+        "country": "Cambodia",
+        "iso3": "KHM",
+        "estimate": 0.1346422,
+        "score": 68.1942975,
+        "score_lb": 61.0650371,
+        "score_ub": 75.323558,
+        "std_error": 0.2544908,
+        "num_sources": 8.0
+      },
+      "NGA": {
+        "country": "Nigeria",
+        "iso3": "NGA",
+        "estimate": -1.9559706,
+        "score": 32.4832851,
+        "score_lb": 25.9137204,
+        "score_ub": 39.0528499,
+        "std_error": 0.2345115,
+        "num_sources": 11.0
+      },
+      "RWA": {
+        "country": "Rwanda",
+        "iso3": "RWA",
+        "estimate": 0.0380223,
+        "score": 66.543875,
+        "score_lb": 59.7064845,
+        "score_ub": 73.3812656,
+        "std_error": 0.244072,
+        "num_sources": 10.0
+      },
+      "SEN": {
+        "country": "Senegal",
+        "iso3": "SEN",
+        "estimate": -0.1534325,
+        "score": 63.2735206,
+        "score_lb": 56.5544526,
+        "score_ub": 69.9925886,
+        "std_error": 0.2398483,
+        "num_sources": 10.0
+      },
+      "TZA": {
+        "country": "Tanzania",
+        "iso3": "TZA",
+        "estimate": -0.2367117,
+        "score": 61.8509786,
+        "score_lb": 55.1775612,
+        "score_ub": 68.524396,
+        "std_error": 0.2382187,
+        "num_sources": 11.0
+      },
+      "UGA": {
+        "country": "Uganda",
+        "iso3": "UGA",
+        "estimate": -1.0298391,
+        "score": 48.3030933,
+        "score_lb": 41.5840253,
+        "score_ub": 55.0221613,
+        "std_error": 0.2398483,
+        "num_sources": 10.0
+      },
+      "VNM": {
+        "country": "Viet Nam",
+        "iso3": "VNM",
+        "estimate": 0.0907515,
+        "score": 67.4445741,
+        "score_lb": 60.9897209,
+        "score_ub": 73.8994274,
+        "std_error": 0.2304167,
+        "num_sources": 10.0
+      },
+      "ZAF": {
+        "country": "South Africa",
+        "iso3": "ZAF",
+        "estimate": -0.6397104,
+        "score": 54.9671159,
+        "score_lb": 48.3975512,
+        "score_ub": 61.5366806,
+        "std_error": 0.2345115,
+        "num_sources": 11.0
+      }
+    },
+    "RL": {
+      "BGD": {
+        "country": "Bangladesh",
+        "iso3": "BGD",
+        "estimate": -0.9020256,
+        "score": 41.4402154,
+        "score_lb": 37.3470678,
+        "score_ub": 45.533363,
+        "std_error": 0.1450157,
+        "num_sources": 15.0
+      },
+      "COL": {
+        "country": "Colombia",
+        "iso3": "COL",
+        "estimate": -0.5648803,
+        "score": 47.2427231,
+        "score_lb": 43.0518239,
+        "score_ub": 51.4336223,
+        "std_error": 0.1484789,
+        "num_sources": 14.0
+      },
+      "ETH": {
+        "country": "Ethiopia",
+        "iso3": "ETH",
+        "estimate": -1.03931399999999,
+        "score": 39.0773855,
+        "score_lb": 35.1929418,
+        "score_ub": 42.9618292,
+        "std_error": 0.1376215,
+        "num_sources": 15.0
+      },
+      "GHA": {
+        "country": "Ghana",
+        "iso3": "GHA",
+        "estimate": -0.0029916,
+        "score": 56.9132228,
+        "score_lb": 53.1517565,
+        "score_ub": 60.6746892,
+        "std_error": 0.1332646,
+        "num_sources": 17.0
+      },
+      "GTM": {
+        "country": "Guatemala",
+        "iso3": "GTM",
+        "estimate": -1.0108162,
+        "score": 39.5678527,
+        "score_lb": 35.2048086,
+        "score_ub": 43.9308968,
+        "std_error": 0.1545778,
+        "num_sources": 12.0
+      },
+      "IND": {
+        "country": "India",
+        "iso3": "IND",
+        "estimate": -0.0879069,
+        "score": 55.4517708,
+        "score_lb": 51.301167,
+        "score_ub": 59.6023746,
+        "std_error": 0.1470513,
+        "num_sources": 15.0
+      },
+      "KEN": {
+        "country": "Kenya",
+        "iso3": "KEN",
+        "estimate": -0.427558899999999,
+        "score": 49.606121,
+        "score_lb": 45.7216773,
+        "score_ub": 53.4905647,
+        "std_error": 0.1376215,
+        "num_sources": 15.0
+      },
+      "KHM": {
+        "country": "Cambodia",
+        "iso3": "KHM",
+        "estimate": -1.099508,
+        "score": 38.0414044,
+        "score_lb": 33.7791032,
+        "score_ub": 42.3037056,
+        "std_error": 0.1510086,
+        "num_sources": 14.0
+      },
+      "NGA": {
+        "country": "Nigeria",
+        "iso3": "NGA",
+        "estimate": -0.934848799999999,
+        "score": 40.875305,
+        "score_lb": 36.9075512,
+        "score_ub": 44.8430589,
+        "std_error": 0.1405731,
+        "num_sources": 15.0
+      },
+      "RWA": {
+        "country": "Rwanda",
+        "iso3": "RWA",
+        "estimate": 0.0714762,
+        "score": 58.1948661,
+        "score_lb": 54.2258249,
+        "score_ub": 62.1639072,
+        "std_error": 0.1406187,
+        "num_sources": 14.0
+      },
+      "SEN": {
+        "country": "Senegal",
+        "iso3": "SEN",
+        "estimate": -0.170334799999999,
+        "score": 54.0331287,
+        "score_lb": 50.148685,
+        "score_ub": 57.9175724,
+        "std_error": 0.1376215,
+        "num_sources": 15.0
+      },
+      "TZA": {
+        "country": "Tanzania",
+        "iso3": "TZA",
+        "estimate": -0.4944742,
+        "score": 48.4544616,
+        "score_lb": 44.5863044,
+        "score_ub": 52.3226188,
+        "std_error": 0.1370445,
+        "num_sources": 16.0
+      },
+      "UGA": {
+        "country": "Uganda",
+        "iso3": "UGA",
+        "estimate": -0.752792999999999,
+        "score": 44.0086134,
+        "score_lb": 40.1241697,
+        "score_ub": 47.8930571,
+        "std_error": 0.1376215,
+        "num_sources": 15.0
+      },
+      "VNM": {
+        "country": "Viet Nam",
+        "iso3": "VNM",
+        "estimate": -0.340198899999999,
+        "score": 51.109648,
+        "score_lb": 46.8143453,
+        "score_ub": 55.4049508,
+        "std_error": 0.1521778,
+        "num_sources": 14.0
+      },
+      "ZAF": {
+        "country": "South Africa",
+        "iso3": "ZAF",
+        "estimate": 0.039525,
+        "score": 57.6449634,
+        "score_lb": 53.4844119,
+        "score_ub": 61.805515,
+        "std_error": 0.1474037,
+        "num_sources": 13.0
+      }
+    },
+    "RQ": {
+      "BGD": {
+        "country": "Bangladesh",
+        "iso3": "BGD",
+        "estimate": -0.9009111,
+        "score": 40.654144,
+        "score_lb": 35.9318258,
+        "score_ub": 45.3764622,
+        "std_error": 0.1825747,
+        "num_sources": 11.0
+      },
+      "COL": {
+        "country": "Colombia",
+        "iso3": "COL",
+        "estimate": 0.1365735,
+        "score": 57.01675,
+        "score_lb": 51.9455648,
+        "score_ub": 62.0879352,
+        "std_error": 0.1960626,
+        "num_sources": 9.0
+      },
+      "ETH": {
+        "country": "Ethiopia",
+        "iso3": "ETH",
+        "estimate": -0.8373693,
+        "score": 41.6562884,
+        "score_lb": 37.6497325,
+        "score_ub": 45.6628443,
+        "std_error": 0.1549018,
+        "num_sources": 11.0
+      },
+      "GHA": {
+        "country": "Ghana",
+        "iso3": "GHA",
+        "estimate": -0.159406,
+        "score": 52.3487328,
+        "score_lb": 48.4779751,
+        "score_ub": 56.2194905,
+        "std_error": 0.1496516,
+        "num_sources": 13.0
+      },
+      "GTM": {
+        "country": "Guatemala",
+        "iso3": "GTM",
+        "estimate": -0.408294899999999,
+        "score": 48.4234013,
+        "score_lb": 43.0346727,
+        "score_ub": 53.8121298,
+        "std_error": 0.2083395,
+        "num_sources": 7.0
+      },
+      "IND": {
+        "country": "India",
+        "iso3": "IND",
+        "estimate": -0.1271699,
+        "score": 52.8571419,
+        "score_lb": 47.9383954,
+        "score_ub": 57.7758884,
+        "std_error": 0.190169,
+        "num_sources": 10.0
+      },
+      "KEN": {
+        "country": "Kenya",
+        "iso3": "KEN",
+        "estimate": -0.3986548,
+        "score": 48.5754393,
+        "score_lb": 44.5688834,
+        "score_ub": 52.5819953,
+        "std_error": 0.1549018,
+        "num_sources": 11.0
+      },
+      "KHM": {
+        "country": "Cambodia",
+        "iso3": "KHM",
+        "estimate": -0.676237299999999,
+        "score": 44.197569,
+        "score_lb": 39.3178126,
+        "score_ub": 49.0773254,
+        "std_error": 0.1886616,
+        "num_sources": 10.0
+      },
+      "NGA": {
+        "country": "Nigeria",
+        "iso3": "NGA",
+        "estimate": -0.8274258,
+        "score": 41.8131115,
+        "score_lb": 37.3620744,
+        "score_ub": 46.2641487,
+        "std_error": 0.1720864,
+        "num_sources": 11.0
+      },
+      "RWA": {
+        "country": "Rwanda",
+        "iso3": "RWA",
+        "estimate": 0.225197,
+        "score": 58.4144685,
+        "score_lb": 54.3165676,
+        "score_ub": 62.5123693,
+        "std_error": 0.1584334,
+        "num_sources": 11.0
+      },
+      "SEN": {
+        "country": "Senegal",
+        "iso3": "SEN",
+        "estimate": -0.2661232,
+        "score": 50.6656509,
+        "score_lb": 46.659095,
+        "score_ub": 54.6722069,
+        "std_error": 0.1549018,
+        "num_sources": 11.0
+      },
+      "TZA": {
+        "country": "Tanzania",
+        "iso3": "TZA",
+        "estimate": -0.5906321,
+        "score": 45.5476846,
+        "score_lb": 41.5443618,
+        "score_ub": 49.5510074,
+        "std_error": 0.1547768,
+        "num_sources": 12.0
+      },
+      "UGA": {
+        "country": "Uganda",
+        "iso3": "UGA",
+        "estimate": -0.500208099999999,
+        "score": 46.9737995,
+        "score_lb": 42.9672436,
+        "score_ub": 50.9803554,
+        "std_error": 0.1549018,
+        "num_sources": 11.0
+      },
+      "VNM": {
+        "country": "Viet Nam",
+        "iso3": "VNM",
+        "estimate": -0.2794316,
+        "score": 50.4557586,
+        "score_lb": 45.255978,
+        "score_ub": 55.6555392,
+        "std_error": 0.2010344,
+        "num_sources": 9.0
+      },
+      "ZAF": {
+        "country": "South Africa",
+        "iso3": "ZAF",
+        "estimate": -0.06209,
+        "score": 53.8835444,
+        "score_lb": 48.946339,
+        "score_ub": 58.8207497,
+        "std_error": 0.1908827,
+        "num_sources": 9.0
+      }
+    },
+    "VA": {
+      "BGD": {
+        "country": "Bangladesh",
+        "iso3": "BGD",
+        "estimate": -1.1354298,
+        "score": 36.9763918,
+        "score_lb": 32.6648497,
+        "score_ub": 41.287934,
+        "std_error": 0.1502066,
+        "num_sources": 12.0
+      },
+      "COL": {
+        "country": "Colombia",
+        "iso3": "COL",
+        "estimate": 0.0303931,
+        "score": 57.3811943,
+        "score_lb": 52.870241,
+        "score_ub": 61.8921475,
+        "std_error": 0.1571537,
+        "num_sources": 12.0
+      },
+      "ETH": {
+        "country": "Ethiopia",
+        "iso3": "ETH",
+        "estimate": -1.1791506,
+        "score": 36.211169,
+        "score_lb": 32.1283896,
+        "score_ub": 40.2939484,
+        "std_error": 0.1422369,
+        "num_sources": 14.0
+      },
+      "GHA": {
+        "country": "Ghana",
+        "iso3": "GHA",
+        "estimate": 0.17051,
+        "score": 59.8335888,
+        "score_lb": 55.7601068,
+        "score_ub": 63.9070708,
+        "std_error": 0.141913,
+        "num_sources": 15.0
+      },
+      "GTM": {
+        "country": "Guatemala",
+        "iso3": "GTM",
+        "estimate": -0.489678799999999,
+        "score": 48.2786416,
+        "score_lb": 43.7550533,
+        "score_ub": 52.8022299,
+        "std_error": 0.1575939,
+        "num_sources": 11.0
+      },
+      "IND": {
+        "country": "India",
+        "iso3": "IND",
+        "estimate": -0.142948,
+        "score": 54.3472936,
+        "score_lb": 49.9702571,
+        "score_ub": 58.72433,
+        "std_error": 0.1524883,
+        "num_sources": 12.0
+      },
+      "KEN": {
+        "country": "Kenya",
+        "iso3": "KEN",
+        "estimate": -0.2708269,
+        "score": 52.1090946,
+        "score_lb": 48.0263152,
+        "score_ub": 56.1918739,
+        "std_error": 0.1422369,
+        "num_sources": 14.0
+      },
+      "KHM": {
+        "country": "Cambodia",
+        "iso3": "KHM",
+        "estimate": -1.5290134,
+        "score": 30.0876992,
+        "score_lb": 25.4388456,
+        "score_ub": 34.7365528,
+        "std_error": 0.1619579,
+        "num_sources": 10.0
+      },
+      "NGA": {
+        "country": "Nigeria",
+        "iso3": "NGA",
+        "estimate": -0.7370051,
+        "score": 43.9498157,
+        "score_lb": 39.8005339,
+        "score_ub": 48.0990976,
+        "std_error": 0.1445537,
+        "num_sources": 14.0
+      },
+      "RWA": {
+        "country": "Rwanda",
+        "iso3": "RWA",
+        "estimate": -0.527114899999999,
+        "score": 47.6234167,
+        "score_lb": 43.3605332,
+        "score_ub": 51.8863001,
+        "std_error": 0.1485114,
+        "num_sources": 12.0
+      },
+      "SEN": {
+        "country": "Senegal",
+        "iso3": "SEN",
+        "estimate": -0.0061603,
+        "score": 56.7414188,
+        "score_lb": 52.6586395,
+        "score_ub": 60.8241982,
+        "std_error": 0.1422369,
+        "num_sources": 14.0
+      },
+      "TZA": {
+        "country": "Tanzania",
+        "iso3": "TZA",
+        "estimate": -0.6271363,
+        "score": 45.8727932,
+        "score_lb": 41.7900139,
+        "score_ub": 49.9555726,
+        "std_error": 0.1422369,
+        "num_sources": 14.0
+      },
+      "UGA": {
+        "country": "Uganda",
+        "iso3": "UGA",
+        "estimate": -0.9287886,
+        "score": 40.5931271,
+        "score_lb": 36.5103478,
+        "score_ub": 44.6759065,
+        "std_error": 0.1422369,
+        "num_sources": 14.0
+      },
+      "VNM": {
+        "country": "Viet Nam",
+        "iso3": "VNM",
+        "estimate": -1.10491879999999,
+        "score": 37.5104103,
+        "score_lb": 33.1141736,
+        "score_ub": 41.9066469,
+        "std_error": 0.1531572,
+        "num_sources": 10.0
+      },
+      "ZAF": {
+        "country": "South Africa",
+        "iso3": "ZAF",
+        "estimate": 0.5621695,
+        "score": 66.6886049,
+        "score_lb": 62.4647537,
+        "score_ub": 70.912456,
+        "std_error": 0.1471516,
+        "num_sources": 13.0
+      }
+    }
+  },
+  "global_ge": {
+    "scored": [
+      {
+        "iso3": "SGP",
+        "country": "Singapore",
+        "score": 95.3284225,
+        "lb": 88.1788564,
+        "ub": 100.0,
+        "width": 11.8211436,
+        "std_error": 0.2242073,
+        "num_sources": 10.0
+      },
+      {
+        "iso3": "LUX",
+        "country": "Luxembourg",
+        "score": 93.0595368,
+        "lb": 85.9237311,
+        "ub": 100.0,
+        "width": 14.076268900000002,
+        "std_error": 0.2237758,
+        "num_sources": 9.0
+      },
+      {
+        "iso3": "CHE",
+        "country": "Switzerland",
+        "score": 91.0245042,
+        "lb": 83.572568,
+        "ub": 98.4764405,
+        "width": 14.903872499999991,
+        "std_error": 0.2336895,
+        "num_sources": 8.0
+      },
+      {
+        "iso3": "JPN",
+        "country": "Japan",
+        "score": 90.0027288,
+        "lb": 82.4248128,
+        "ub": 97.5806448,
+        "width": 15.155832000000004,
+        "std_error": 0.2376402,
+        "num_sources": 8.0
+      },
+      {
+        "iso3": "DNK",
+        "country": "Denmark",
+        "score": 89.37227,
+        "lb": 82.2364644,
+        "ub": 96.5080757,
+        "width": 14.271611300000004,
+        "std_error": 0.2237758,
+        "num_sources": 9.0
+      },
+      {
+        "iso3": "FIN",
+        "country": "Finland",
+        "score": 86.1002615,
+        "lb": 78.9644558,
+        "ub": 93.2360671,
+        "width": 14.271611300000004,
+        "std_error": 0.2237758,
+        "num_sources": 9.0
+      },
+      {
+        "iso3": "NOR",
+        "country": "Norway",
+        "score": 86.087267,
+        "lb": 78.0889772,
+        "ub": 94.0855569,
+        "width": 15.996579699999998,
+        "std_error": 0.2508229,
+        "num_sources": 7.0
+      },
+      {
+        "iso3": "AUS",
+        "country": "Australia",
+        "score": 85.9860939,
+        "lb": 78.408178,
+        "ub": 93.5640099,
+        "width": 15.155831899999995,
+        "std_error": 0.2376402,
+        "num_sources": 8.0
+      },
+      {
+        "iso3": "NLD",
+        "country": "Netherlands",
+        "score": 85.3894503,
+        "lb": 78.2536447,
+        "ub": 92.5252559,
+        "width": 14.27161120000001,
+        "std_error": 0.2237758,
+        "num_sources": 9.0
+      },
+      {
+        "iso3": "CAN",
+        "country": "Canada",
+        "score": 85.2754831,
+        "lb": 77.6950627,
+        "ub": 92.8559034,
+        "width": 15.160840700000008,
+        "std_error": 0.2377187,
+        "num_sources": 7.0
+      },
+      {
+        "iso3": "MCO",
+        "country": "Monaco",
+        "score": 85.1397113,
+        "lb": 72.8018603,
+        "ub": 97.4775623,
+        "width": 24.675702,
+        "std_error": 0.3869097,
+        "num_sources": 2.0
+      },
+      {
+        "iso3": "NZL",
+        "country": "New Zealand",
+        "score": 84.9223349,
+        "lb": 77.3855917,
+        "ub": 92.4590782,
+        "width": 15.073486499999987,
+        "std_error": 0.236349,
+        "num_sources": 8.0
+      },
+      {
+        "iso3": "LIE",
+        "country": "Liechtenstein",
+        "score": 84.2785979,
+        "lb": 74.1602351,
+        "ub": 94.3969606,
+        "width": 20.236725500000006,
+        "std_error": 0.3173075,
+        "num_sources": 3.0
+      },
+      {
+        "iso3": "SWE",
+        "country": "Sweden",
+        "score": 84.2596283,
+        "lb": 77.1238227,
+        "ub": 91.3954339,
+        "width": 14.271611199999995,
+        "std_error": 0.2237758,
+        "num_sources": 9.0
+      },
+      {
+        "iso3": "IRL",
+        "country": "Ireland",
+        "score": 83.6350611,
+        "lb": 76.4992555,
+        "ub": 90.7708667,
+        "width": 14.271611199999995,
+        "std_error": 0.2237758,
+        "num_sources": 9.0
+      },
+      {
+        "iso3": "ISL",
+        "country": "Iceland",
+        "score": 83.2339776,
+        "lb": 75.7820414,
+        "ub": 90.6859139,
+        "width": 14.903872500000006,
+        "std_error": 0.2336895,
+        "num_sources": 8.0
+      },
+      {
+        "iso3": "AUT",
+        "country": "Austria",
+        "score": 82.0436925,
+        "lb": 74.944358,
+        "ub": 89.143027,
+        "width": 14.19866900000001,
+        "std_error": 0.2226321,
+        "num_sources": 10.0
+      },
+      {
+        "iso3": "DEU",
+        "country": "Germany",
+        "score": 81.7001069,
+        "lb": 74.6007725,
+        "ub": 88.7994414,
+        "width": 14.198668900000001,
+        "std_error": 0.2226321,
+        "num_sources": 10.0
+      },
+      {
+        "iso3": "HKG",
+        "country": "Hong Kong SAR, China",
+        "score": 81.2341077,
+        "lb": 73.3373603,
+        "ub": 89.130855,
+        "width": 15.793494699999997,
+        "std_error": 0.2476386,
+        "num_sources": 8.0
+      },
+      {
+        "iso3": "",
+        "country": "Anguilla",
+        "score": 80.9316501,
+        "lb": 73.7448331,
+        "ub": 88.1184671,
+        "width": 14.37363400000001,
+        "std_error": 0.2253755,
+        "num_sources": 9.0
+      },
+      {
+        "iso3": "KOR",
+        "country": "Korea, Rep.",
+        "score": 80.420774,
+        "lb": 73.233957,
+        "ub": 87.6075911,
+        "width": 14.37363409999999,
+        "std_error": 0.2253755,
+        "num_sources": 9.0
+      },
+      {
+        "iso3": "BMU",
+        "country": "Bermuda",
+        "score": 80.0567528,
+        "lb": 67.7189018,
+        "ub": 92.3946038,
+        "width": 24.675702,
+        "std_error": 0.3869097,
+        "num_sources": 2.0
+      },
+      {
+        "iso3": "USA",
+        "country": "United States",
+        "score": 77.7556405,
+        "lb": 70.1752202,
+        "ub": 85.3360609,
+        "width": 15.160840700000008,
+        "std_error": 0.2377187,
+        "num_sources": 7.0
+      },
+      {
+        "iso3": "ISR",
+        "country": "Israel",
+        "score": 77.7243629,
+        "lb": 70.1439425,
+        "ub": 85.3047833,
+        "width": 15.160840800000003,
+        "std_error": 0.2377187,
+        "num_sources": 7.0
+      },
+      {
+        "iso3": "FRA",
+        "country": "France",
+        "score": 77.6243079,
+        "lb": 70.5249734,
+        "ub": 84.7236423,
+        "width": 14.198668900000001,
+        "std_error": 0.2226321,
+        "num_sources": 10.0
+      },
+      {
+        "iso3": "ARE",
+        "country": "United Arab Emirates",
+        "score": 76.8137703,
+        "lb": 69.6248164,
+        "ub": 84.0027242,
+        "width": 14.377907800000003,
+        "std_error": 0.2254425,
+        "num_sources": 8.0
+      },
+      {
+        "iso3": "EST",
+        "country": "Estonia",
+        "score": 75.9934621,
+        "lb": 69.2187299,
+        "ub": 82.7681942,
+        "width": 13.549464299999997,
+        "std_error": 0.2124527,
+        "num_sources": 11.0
+      },
+      {
+        "iso3": "CZE",
+        "country": "Czechia",
+        "score": 75.3620856,
+        "lb": 68.5556811,
+        "ub": 82.1684901,
+        "width": 13.612808999999999,
+        "std_error": 0.2134459,
+        "num_sources": 10.0
+      },
+      {
+        "iso3": "CYM",
+        "country": "Cayman Islands",
+        "score": 74.38326,
+        "lb": 64.2648972,
+        "ub": 84.5016227,
+        "width": 20.236725500000006,
+        "std_error": 0.3173075,
+        "num_sources": 3.0
+      },
+      {
+        "iso3": "BEL",
+        "country": "Belgium",
+        "score": 73.9850756,
+        "lb": 66.84927,
+        "ub": 81.1208813,
+        "width": 14.27161129999999,
+        "std_error": 0.2237758,
+        "num_sources": 9.0
+      },
+      {
+        "iso3": "SVN",
+        "country": "Slovenia",
+        "score": 73.9433915,
+        "lb": 67.136987,
+        "ub": 80.749796,
+        "width": 13.612808999999999,
+        "std_error": 0.2134459,
+        "num_sources": 10.0
+      },
+      {
+        "iso3": "AND",
+        "country": "Andorra",
+        "score": 73.9008966,
+        "lb": 61.5630457,
+        "ub": 86.2387476,
+        "width": 24.675701899999993,
+        "std_error": 0.3869097,
+        "num_sources": 2.0
+      },
+      {
+        "iso3": "QAT",
+        "country": "Qatar",
+        "score": 73.631595,
+        "lb": 66.3617501,
+        "ub": 80.9014399,
+        "width": 14.539689800000005,
+        "std_error": 0.2279792,
+        "num_sources": 7.0
+      },
+      {
+        "iso3": "GBR",
+        "country": "United Kingdom",
+        "score": 73.4657181,
+        "lb": 66.0137818,
+        "ub": 80.9176543,
+        "width": 14.903872499999991,
+        "std_error": 0.2336895,
+        "num_sources": 8.0
+      },
+      {
+        "iso3": "MAC",
+        "country": "Macao SAR, China",
+        "score": 73.057907,
+        "lb": 62.0062118,
+        "ub": 84.1096021,
+        "width": 22.1033903,
+        "std_error": 0.3465764,
+        "num_sources": 2.0
+      },
+      {
+        "iso3": "ESP",
+        "country": "Spain",
+        "score": 72.3009649,
+        "lb": 65.2016304,
+        "ub": 79.4002994,
+        "width": 14.198668999999995,
+        "std_error": 0.2226321,
+        "num_sources": 10.0
+      },
+      {
+        "iso3": "CHL",
+        "country": "Chile",
+        "score": 70.7252118,
+        "lb": 63.5548366,
+        "ub": 77.8955869,
+        "width": 14.340750299999996,
+        "std_error": 0.2248599,
+        "num_sources": 9.0
+      },
+      {
+        "iso3": "BRN",
+        "country": "Brunei Darussalam",
+        "score": 70.502043,
+        "lb": 62.2803647,
+        "ub": 78.7237214,
+        "width": 16.443356700000002,
+        "std_error": 0.2578283,
+        "num_sources": 5.0
+      },
+      {
+        "iso3": "PRT",
+        "country": "Portugal",
+        "score": 70.1204736,
+        "lb": 63.0211391,
+        "ub": 77.2198081,
+        "width": 14.198668999999995,
+        "std_error": 0.2226321,
+        "num_sources": 10.0
+      },
+      {
+        "iso3": "GUM",
+        "country": "Guam",
+        "score": 69.890828,
+        "lb": 57.5529771,
+        "ub": 82.228679,
+        "width": 24.6757019,
+        "std_error": 0.3869097,
+        "num_sources": 2.0
+      },
+      {
+        "iso3": "LTU",
+        "country": "Lithuania",
+        "score": 69.7124583,
+        "lb": 62.9060538,
+        "ub": 76.5188628,
+        "width": 13.612808999999991,
+        "std_error": 0.2134459,
+        "num_sources": 10.0
+      },
+      {
+        "iso3": "CYP",
+        "country": "Cyprus",
+        "score": 69.4521321,
+        "lb": 62.3163264,
+        "ub": 76.5879377,
+        "width": 14.271611299999996,
+        "std_error": 0.2237758,
+        "num_sources": 9.0
+      },
+      {
+        "iso3": "SMR",
+        "country": "San Marino",
+        "score": 68.8179323,
+        "lb": 56.4800813,
+        "ub": 81.1557833,
+        "width": 24.675701999999994,
+        "std_error": 0.3869097,
+        "num_sources": 2.0
+      },
+      {
+        "iso3": "URY",
+        "country": "Uruguay",
+        "score": 67.9453819,
+        "lb": 60.3357586,
+        "ub": 75.5550052,
+        "width": 15.219246599999998,
+        "std_error": 0.2386345,
+        "num_sources": 8.0
+      },
+      {
+        "iso3": "ITA",
+        "country": "Italy",
+        "score": 67.9329688,
+        "lb": 60.7971632,
+        "ub": 75.0687745,
+        "width": 14.271611300000004,
+        "std_error": 0.2237758,
+        "num_sources": 9.0
+      },
+      {
+        "iso3": "MUS",
+        "country": "Mauritius",
+        "score": 67.3580344,
+        "lb": 60.0406197,
+        "ub": 74.6754492,
+        "width": 14.634829500000002,
+        "std_error": 0.229471,
+        "num_sources": 9.0
+      },
+      {
+        "iso3": "GRL",
+        "country": "Greenland",
+        "score": 66.4926686,
+        "lb": 53.1983177,
+        "ub": 79.7870195,
+        "width": 26.588701800000003,
+        "std_error": 0.4169051,
+        "num_sources": 2.0
+      },
+      {
+        "iso3": "CHN",
+        "country": "China",
+        "score": 66.4607065,
+        "lb": 59.2738895,
+        "ub": 73.6475235,
+        "width": 14.373634000000003,
+        "std_error": 0.2253755,
+        "num_sources": 9.0
+      },
+      {
+        "iso3": "ASM",
+        "country": "American Samoa",
+        "score": 66.2931807,
+        "lb": 52.135805,
+        "ub": 80.4505564,
+        "width": 28.3147514,
+        "std_error": 0.4439692,
+        "num_sources": 1.0
+      },
+      {
+        "iso3": "MLT",
+        "country": "Malta",
+        "score": 66.1378522,
+        "lb": 58.5695124,
+        "ub": 73.706192,
+        "width": 15.1366796,
+        "std_error": 0.2373399,
+        "num_sources": 8.0
+      },
+      {
+        "iso3": "HRV",
+        "country": "Croatia",
+        "score": 65.8990155,
+        "lb": 59.1242833,
+        "ub": 72.6737476,
+        "width": 13.549464299999997,
+        "std_error": 0.2124527,
+        "num_sources": 11.0
+      },
+      {
+        "iso3": "MYS",
+        "country": "Malaysia",
+        "score": 65.8744129,
+        "lb": 58.6875959,
+        "ub": 73.06123,
+        "width": 14.373634099999997,
+        "std_error": 0.2253755,
+        "num_sources": 9.0
+      },
+      {
+        "iso3": "BHR",
+        "country": "Bahrain",
+        "score": 65.5836257,
+        "lb": 58.3946718,
+        "ub": 72.7725796,
+        "width": 14.377907800000003,
+        "std_error": 0.2254425,
+        "num_sources": 8.0
+      },
+      {
+        "iso3": "SAU",
+        "country": "Saudi Arabia",
+        "score": 65.4540371,
+        "lb": 58.3023671,
+        "ub": 72.6057071,
+        "width": 14.303340000000006,
+        "std_error": 0.2242733,
+        "num_sources": 9.0
+      },
+      {
+        "iso3": "BHS",
+        "country": "Bahamas, The",
+        "score": 65.1448344,
+        "lb": 56.1709389,
+        "ub": 74.1187299,
+        "width": 17.947791000000002,
+        "std_error": 0.2814175,
+        "num_sources": 4.0
+      },
+      {
+        "iso3": "KNA",
+        "country": "St. Kitts and Nevis",
+        "score": 64.8078696,
+        "lb": 52.4700186,
+        "ub": 77.1457205,
+        "width": 24.675701899999993,
+        "std_error": 0.3869097,
+        "num_sources": 2.0
+      },
+      {
+        "iso3": "ABW",
+        "country": "Aruba",
+        "score": 64.1272277,
+        "lb": 54.008865,
+        "ub": 74.2455905,
+        "width": 20.236725500000006,
+        "std_error": 0.3173075,
+        "num_sources": 3.0
+      },
+      {
+        "iso3": "LVA",
+        "country": "Latvia",
+        "score": 63.7345266,
+        "lb": 56.9281221,
+        "ub": 70.5409311,
+        "width": 13.612808999999991,
+        "std_error": 0.2134459,
+        "num_sources": 10.0
+      },
+      {
+        "iso3": "POL",
+        "country": "Poland",
+        "score": 63.6700055,
+        "lb": 56.863601,
+        "ub": 70.47641,
+        "width": 13.612808999999999,
+        "std_error": 0.2134459,
+        "num_sources": 10.0
+      },
+      {
+        "iso3": "BRB",
+        "country": "Barbados",
+        "score": 63.1085653,
+        "lb": 54.1086323,
+        "ub": 72.1084983,
+        "width": 17.999865999999997,
+        "std_error": 0.282234,
+        "num_sources": 5.0
+      },
+      {
+        "iso3": "GEO",
+        "country": "Georgia",
+        "score": 62.7658644,
+        "lb": 54.5238729,
+        "ub": 71.0078559,
+        "width": 16.483982999999995,
+        "std_error": 0.2584653,
+        "num_sources": 7.0
+      },
+      {
+        "iso3": "SVK",
+        "country": "Slovak Republic",
+        "score": 62.7084734,
+        "lb": 55.9337413,
+        "ub": 69.4832056,
+        "width": 13.549464300000004,
+        "std_error": 0.2124527,
+        "num_sources": 11.0
+      },
+      {
+        "iso3": "HUN",
+        "country": "Hungary",
+        "score": 61.9606214,
+        "lb": 55.1858893,
+        "ub": 68.7353535,
+        "width": 13.549464200000003,
+        "std_error": 0.2124527,
+        "num_sources": 11.0
+      },
+      {
+        "iso3": "BWA",
+        "country": "Botswana",
+        "score": 61.8596214,
+        "lb": 55.3372863,
+        "ub": 68.3819565,
+        "width": 13.044670199999999,
+        "std_error": 0.2045376,
+        "num_sources": 11.0
+      },
+      {
+        "iso3": "BTN",
+        "country": "Bhutan",
+        "score": 61.7489169,
+        "lb": 53.6525494,
+        "ub": 69.8452843,
+        "width": 16.192734900000005,
+        "std_error": 0.2538986,
+        "num_sources": 7.0
+      },
+      {
+        "iso3": "SYC",
+        "country": "Seychelles",
+        "score": 61.6339366,
+        "lb": 53.8015645,
+        "ub": 69.4663087,
+        "width": 15.664744200000001,
+        "std_error": 0.2456198,
+        "num_sources": 7.0
+      },
+      {
+        "iso3": "FJI",
+        "country": "Fiji",
+        "score": 61.1284251,
+        "lb": 50.3683125,
+        "ub": 71.8885378,
+        "width": 21.520225299999993,
+        "std_error": 0.3374325,
+        "num_sources": 4.0
+      },
+      {
+        "iso3": "OMN",
+        "country": "Oman",
+        "score": 60.5179762,
+        "lb": 52.7891455,
+        "ub": 68.246807,
+        "width": 15.457661500000007,
+        "std_error": 0.2423728,
+        "num_sources": 6.0
+      },
+      {
+        "iso3": "ATG",
+        "country": "Antigua and Barbuda",
+        "score": 59.7249052,
+        "lb": 47.3870543,
+        "ub": 72.0627562,
+        "width": 24.675701899999993,
+        "std_error": 0.3869097,
+        "num_sources": 2.0
+      },
+      {
+        "iso3": "IND",
+        "country": "India",
+        "score": 59.5575797,
+        "lb": 52.6629091,
+        "ub": 66.4522503,
+        "width": 13.789341200000003,
+        "std_error": 0.2162139,
+        "num_sources": 11.0
+      },
+      {
+        "iso3": "WSM",
+        "country": "Samoa",
+        "score": 59.4983921,
+        "lb": 48.8621146,
+        "ub": 70.1346697,
+        "width": 21.272555100000005,
+        "std_error": 0.3335491,
+        "num_sources": 5.0
+      },
+      {
+        "iso3": "RWA",
+        "country": "Rwanda",
+        "score": 59.2865923,
+        "lb": 53.1155892,
+        "ub": 65.4575954,
+        "width": 12.3420062,
+        "std_error": 0.19352,
+        "num_sources": 11.0
+      },
+      {
+        "iso3": "JOR",
+        "country": "Jordan",
+        "score": 58.9409204,
+        "lb": 51.9111469,
+        "ub": 65.9706939,
+        "width": 14.059547000000002,
+        "std_error": 0.2204507,
+        "num_sources": 9.0
+      },
+      {
+        "iso3": "DMA",
+        "country": "Dominica",
+        "score": 58.8922909,
+        "lb": 47.9706257,
+        "ub": 69.8139561,
+        "width": 21.8433304,
+        "std_error": 0.3424987,
+        "num_sources": 3.0
+      },
+      {
+        "iso3": "LCA",
+        "country": "St. Lucia",
+        "score": 58.8922909,
+        "lb": 47.9706257,
+        "ub": 69.8139561,
+        "width": 21.8433304,
+        "std_error": 0.3424987,
+        "num_sources": 3.0
+      },
+      {
+        "iso3": "VIR",
+        "country": "Virgin Islands (U.S.)",
+        "score": 58.6520134,
+        "lb": 46.3141624,
+        "ub": 70.9898643,
+        "width": 24.675701899999993,
+        "std_error": 0.3869097,
+        "num_sources": 2.0
+      },
+      {
+        "iso3": "CPV",
+        "country": "Cabo Verde",
+        "score": 58.3728361,
+        "lb": 51.1906682,
+        "ub": 65.5550041,
+        "width": 14.364335900000007,
+        "std_error": 0.2252297,
+        "num_sources": 8.0
+      },
+      {
+        "iso3": "CRI",
+        "country": "Costa Rica",
+        "score": 57.8366245,
+        "lb": 50.2711819,
+        "ub": 65.4020671,
+        "width": 15.130885199999994,
+        "std_error": 0.237249,
+        "num_sources": 9.0
+      },
+      {
+        "iso3": "VCT",
+        "country": "St. Vincent and the Grenadines",
+        "score": 57.7335517,
+        "lb": 46.8118865,
+        "ub": 68.655217,
+        "width": 21.843330499999993,
+        "std_error": 0.3424987,
+        "num_sources": 3.0
+      },
+      {
+        "iso3": "KWT",
+        "country": "Kuwait",
+        "score": 57.3510373,
+        "lb": 50.3212638,
+        "ub": 64.3808108,
+        "width": 14.05954700000001,
+        "std_error": 0.2204507,
+        "num_sources": 9.0
+      },
+      {
+        "iso3": "THA",
+        "country": "Thailand",
+        "score": 57.278445,
+        "lb": 50.091628,
+        "ub": 64.465262,
+        "width": 14.373633999999996,
+        "std_error": 0.2253755,
+        "num_sources": 9.0
+      },
+      {
+        "iso3": "ALB",
+        "country": "Albania",
+        "score": 57.0459179,
+        "lb": 49.545148,
+        "ub": 64.5466878,
+        "width": 15.001539800000003,
+        "std_error": 0.2352209,
+        "num_sources": 8.0
+      },
+      {
+        "iso3": "MNE",
+        "country": "Montenegro",
+        "score": 56.7205669,
+        "lb": 48.642963,
+        "ub": 64.7981709,
+        "width": 16.1552079,
+        "std_error": 0.2533102,
+        "num_sources": 8.0
+      },
+      {
+        "iso3": "IDN",
+        "country": "Indonesia",
+        "score": 56.6528103,
+        "lb": 49.7581397,
+        "ub": 63.547481,
+        "width": 13.789341299999997,
+        "std_error": 0.2162139,
+        "num_sources": 11.0
+      },
+      {
+        "iso3": "GRC",
+        "country": "Greece",
+        "score": 56.3540919,
+        "lb": 49.2547574,
+        "ub": 63.4534263,
+        "width": 14.198668899999994,
+        "std_error": 0.2226321,
+        "num_sources": 10.0
+      },
+      {
+        "iso3": "JAM",
+        "country": "Jamaica",
+        "score": 54.5486815,
+        "lb": 46.9168395,
+        "ub": 62.1805236,
+        "width": 15.263684099999999,
+        "std_error": 0.2393313,
+        "num_sources": 7.0
+      },
+      {
+        "iso3": "NAM",
+        "country": "Namibia",
+        "score": 54.3336618,
+        "lb": 47.4532806,
+        "ub": 61.214043,
+        "width": 13.760762399999997,
+        "std_error": 0.2157658,
+        "num_sources": 9.0
+      },
+      {
+        "iso3": "KAZ",
+        "country": "Kazakhstan",
+        "score": 54.2964071,
+        "lb": 47.1074531,
+        "ub": 61.485361,
+        "width": 14.377907899999997,
+        "std_error": 0.2254425,
+        "num_sources": 8.0
+      },
+      {
+        "iso3": "SEN",
+        "country": "Senegal",
+        "score": 54.28861,
+        "lb": 48.405707,
+        "ub": 60.171513,
+        "width": 11.765805999999998,
+        "std_error": 0.1844853,
+        "num_sources": 12.0
+      },
+      {
+        "iso3": "TTO",
+        "country": "Trinidad and Tobago",
+        "score": 54.2803521,
+        "lb": 46.5515214,
+        "ub": 62.0091829,
+        "width": 15.4576615,
+        "std_error": 0.2423728,
+        "num_sources": 6.0
+      },
+      {
+        "iso3": "ROU",
+        "country": "Romania",
+        "score": 53.9057495,
+        "lb": 47.1310173,
+        "ub": 60.6804816,
+        "width": 13.549464299999997,
+        "std_error": 0.2124527,
+        "num_sources": 11.0
+      },
+      {
+        "iso3": "BGR",
+        "country": "Bulgaria",
+        "score": 53.4045993,
+        "lb": 46.6298672,
+        "ub": 60.1793314,
+        "width": 13.549464200000003,
+        "std_error": 0.2124527,
+        "num_sources": 11.0
+      },
+      {
+        "iso3": "SRB",
+        "country": "Serbia",
+        "score": 53.3537882,
+        "lb": 45.8530183,
+        "ub": 60.8545581,
+        "width": 15.001539799999996,
+        "std_error": 0.2352209,
+        "num_sources": 8.0
+      },
+      {
+        "iso3": "PHL",
+        "country": "Philippines",
+        "score": 53.3201947,
+        "lb": 46.4255241,
+        "ub": 60.2148654,
+        "width": 13.789341300000004,
+        "std_error": 0.2162139,
+        "num_sources": 11.0
+      },
+      {
+        "iso3": "GRD",
+        "country": "Grenada",
+        "score": 52.9097782,
+        "lb": 41.9881129,
+        "ub": 63.8314434,
+        "width": 21.8433305,
+        "std_error": 0.3424987,
+        "num_sources": 3.0
+      },
+      {
+        "iso3": "AZE",
+        "country": "Azerbaijan",
+        "score": 52.6166207,
+        "lb": 44.9847786,
+        "ub": 60.2484627,
+        "width": 15.263684099999999,
+        "std_error": 0.2393313,
+        "num_sources": 7.0
+      },
+      {
+        "iso3": "ARG",
+        "country": "Argentina",
+        "score": 52.5357627,
+        "lb": 45.3653876,
+        "ub": 59.7061379,
+        "width": 14.340750300000003,
+        "std_error": 0.2248599,
+        "num_sources": 9.0
+      },
+      {
+        "iso3": "DOM",
+        "country": "Dominican Republic",
+        "score": 52.2308591,
+        "lb": 44.6212357,
+        "ub": 59.8404824,
+        "width": 15.2192467,
+        "std_error": 0.2386345,
+        "num_sources": 8.0
+      },
+      {
+        "iso3": "PAN",
+        "country": "Panama",
+        "score": 51.9467897,
+        "lb": 44.3371664,
+        "ub": 59.5564131,
+        "width": 15.2192467,
+        "std_error": 0.2386345,
+        "num_sources": 8.0
+      },
+      {
+        "iso3": "MKD",
+        "country": "North Macedonia",
+        "score": 51.7750718,
+        "lb": 43.6974678,
+        "ub": 59.8526758,
+        "width": 16.155208000000002,
+        "std_error": 0.2533102,
+        "num_sources": 8.0
+      },
+      {
+        "iso3": "XKX",
+        "country": "Kosovo",
+        "score": 51.5204679,
+        "lb": 43.8368037,
+        "ub": 59.2041321,
+        "width": 15.367328400000005,
+        "std_error": 0.2409564,
+        "num_sources": 8.0
+      },
+      {
+        "iso3": "CUB",
+        "country": "Cuba",
+        "score": 51.3036807,
+        "lb": 42.9600514,
+        "ub": 59.64731,
+        "width": 16.6872586,
+        "std_error": 0.2616526,
+        "num_sources": 5.0
+      },
+      {
+        "iso3": "GHA",
+        "country": "Ghana",
+        "score": 50.9948047,
+        "lb": 45.340435,
+        "ub": 56.6491743,
+        "width": 11.3087393,
+        "std_error": 0.1773186,
+        "num_sources": 14.0
+      },
+      {
+        "iso3": "MAR",
+        "country": "Morocco",
+        "score": 50.9743068,
+        "lb": 44.4766442,
+        "ub": 57.4719694,
+        "width": 12.995325199999996,
+        "std_error": 0.2037639,
+        "num_sources": 12.0
+      },
+      {
+        "iso3": "MDA",
+        "country": "Moldova",
+        "score": 50.6857886,
+        "lb": 43.1850188,
+        "ub": 58.1865585,
+        "width": 15.001539699999995,
+        "std_error": 0.2352209,
+        "num_sources": 8.0
+      },
+      {
+        "iso3": "EGY",
+        "country": "Egypt, Arab Rep.",
+        "score": 50.5676507,
+        "lb": 43.8876284,
+        "ub": 57.2476729,
+        "width": 13.3600445,
+        "std_error": 0.2094826,
+        "num_sources": 9.0
+      },
+      {
+        "iso3": "NRU",
+        "country": "Nauru",
+        "score": 50.526336,
+        "lb": 36.7156433,
+        "ub": 64.3370287,
+        "width": 27.6213854,
+        "std_error": 0.4330974,
+        "num_sources": 2.0
+      },
+      {
+        "iso3": "PLW",
+        "country": "Palau",
+        "score": 50.526336,
+        "lb": 36.7156433,
+        "ub": 64.3370287,
+        "width": 27.6213854,
+        "std_error": 0.4330974,
+        "num_sources": 2.0
+      },
+      {
+        "iso3": "COL",
+        "country": "Colombia",
+        "score": 50.521407,
+        "lb": 43.3880318,
+        "ub": 57.6547821,
+        "width": 14.266750299999998,
+        "std_error": 0.2236996,
+        "num_sources": 10.0
+      },
+      {
+        "iso3": "BLZ",
+        "country": "Belize",
+        "score": 50.0916047,
+        "lb": 39.9732419,
+        "ub": 60.2099674,
+        "width": 20.2367255,
+        "std_error": 0.3173075,
+        "num_sources": 3.0
+      },
+      {
+        "iso3": "MEX",
+        "country": "Mexico",
+        "score": 49.8847981,
+        "lb": 42.7514229,
+        "ub": 57.0181732,
+        "width": 14.266750299999998,
+        "std_error": 0.2236996,
+        "num_sources": 10.0
+      },
+      {
+        "iso3": "FSM",
+        "country": "Micronesia, Fed. Sts.",
+        "score": 49.6999263,
+        "lb": 38.9398136,
+        "ub": 60.4600389,
+        "width": 21.5202253,
+        "std_error": 0.3374325,
+        "num_sources": 4.0
+      },
+      {
+        "iso3": "SLV",
+        "country": "El Salvador",
+        "score": 49.4975432,
+        "lb": 42.2322132,
+        "ub": 56.7628732,
+        "width": 14.530660000000005,
+        "std_error": 0.2278376,
+        "num_sources": 10.0
+      },
+      {
+        "iso3": "GUY",
+        "country": "Guyana",
+        "score": 49.4414102,
+        "lb": 41.0589552,
+        "ub": 57.8238653,
+        "width": 16.7649101,
+        "std_error": 0.2628702,
+        "num_sources": 5.0
+      },
+      {
+        "iso3": "TUR",
+        "country": "Turkiye",
+        "score": 49.1222075,
+        "lb": 42.043122,
+        "ub": 56.201293,
+        "width": 14.158171000000003,
+        "std_error": 0.2219971,
+        "num_sources": 9.0
+      },
+      {
+        "iso3": "TON",
+        "country": "Tonga",
+        "score": 48.5443896,
+        "lb": 37.7842769,
+        "ub": 59.3045022,
+        "width": 21.5202253,
+        "std_error": 0.3374325,
+        "num_sources": 4.0
+      },
+      {
+        "iso3": "ECU",
+        "country": "Ecuador",
+        "score": 48.1801661,
+        "lb": 40.5705428,
+        "ub": 55.7897895,
+        "width": 15.2192467,
+        "std_error": 0.2386345,
+        "num_sources": 8.0
+      },
+      {
+        "iso3": "ARM",
+        "country": "Armenia",
+        "score": 48.1625284,
+        "lb": 40.5306864,
+        "ub": 55.7943705,
+        "width": 15.263684099999999,
+        "std_error": 0.2393313,
+        "num_sources": 7.0
+      },
+      {
+        "iso3": "MHL",
+        "country": "Marshall Islands",
+        "score": 48.1295144,
+        "lb": 37.3694018,
+        "ub": 58.8896271,
+        "width": 21.5202253,
+        "std_error": 0.3374325,
+        "num_sources": 4.0
+      },
+      {
+        "iso3": "TUN",
+        "country": "Tunisia",
+        "score": 48.0648067,
+        "lb": 41.5392205,
+        "ub": 54.5903929,
+        "width": 13.051172399999999,
+        "std_error": 0.2046396,
+        "num_sources": 11.0
+      },
+      {
+        "iso3": "VNM",
+        "country": "Viet Nam",
+        "score": 47.8521338,
+        "lb": 40.5696989,
+        "ub": 55.1345688,
+        "width": 14.564869899999998,
+        "std_error": 0.228374,
+        "num_sources": 10.0
+      },
+      {
+        "iso3": "ZAF",
+        "country": "South Africa",
+        "score": 47.7497513,
+        "lb": 41.1991699,
+        "ub": 54.3003328,
+        "width": 13.101162899999999,
+        "std_error": 0.2054234,
+        "num_sources": 10.0
+      },
+      {
+        "iso3": "PER",
+        "country": "Peru",
+        "score": 47.5089547,
+        "lb": 40.3755795,
+        "ub": 54.6423298,
+        "width": 14.266750299999998,
+        "std_error": 0.2236996,
+        "num_sources": 10.0
+      },
+      {
+        "iso3": "RUS",
+        "country": "Russian Federation",
+        "score": 47.2868281,
+        "lb": 40.0978742,
+        "ub": 54.475782,
+        "width": 14.377907800000003,
+        "std_error": 0.2254425,
+        "num_sources": 8.0
+      },
+      {
+        "iso3": "BEN",
+        "country": "Benin",
+        "score": 47.1334148,
+        "lb": 40.960619,
+        "ub": 53.3062106,
+        "width": 12.345591599999999,
+        "std_error": 0.1935762,
+        "num_sources": 11.0
+      },
+      {
+        "iso3": "MDV",
+        "country": "Maldives",
+        "score": 47.0560879,
+        "lb": 36.2959752,
+        "ub": 57.8162005,
+        "width": 21.5202253,
+        "std_error": 0.3374325,
+        "num_sources": 4.0
+      },
+      {
+        "iso3": "BRA",
+        "country": "Brazil",
+        "score": 46.1562672,
+        "lb": 38.9858921,
+        "ub": 53.3266424,
+        "width": 14.340750299999996,
+        "std_error": 0.2248599,
+        "num_sources": 9.0
+      },
+      {
+        "iso3": "LKA",
+        "country": "Sri Lanka",
+        "score": 45.8075951,
+        "lb": 38.549578,
+        "ub": 53.0656123,
+        "width": 14.516034300000001,
+        "std_error": 0.2276083,
+        "num_sources": 8.0
+      },
+      {
+        "iso3": "UZB",
+        "country": "Uzbekistan",
+        "score": 45.5349919,
+        "lb": 38.1495678,
+        "ub": 52.920416,
+        "width": 14.770848200000003,
+        "std_error": 0.2316037,
+        "num_sources": 9.0
+      },
+      {
+        "iso3": "PRI",
+        "country": "Puerto Rico (US)",
+        "score": 45.3536609,
+        "lb": 36.3647682,
+        "ub": 54.3425535,
+        "width": 17.9777853,
+        "std_error": 0.2818878,
+        "num_sources": 5.0
+      },
+      {
+        "iso3": "KEN",
+        "country": "Kenya",
+        "score": 45.2523381,
+        "lb": 39.3694351,
+        "ub": 51.1352411,
+        "width": 11.765806000000005,
+        "std_error": 0.1844853,
+        "num_sources": 12.0
+      },
+      {
+        "iso3": "CIV",
+        "country": "Cote d'Ivoire",
+        "score": 45.1473715,
+        "lb": 39.2849528,
+        "ub": 51.0097902,
+        "width": 11.724837399999998,
+        "std_error": 0.1838429,
+        "num_sources": 13.0
+      },
+      {
+        "iso3": "PRY",
+        "country": "Paraguay",
+        "score": 44.7713941,
+        "lb": 37.2059515,
+        "ub": 52.3368368,
+        "width": 15.130885300000003,
+        "std_error": 0.237249,
+        "num_sources": 9.0
+      },
+      {
+        "iso3": "DZA",
+        "country": "Algeria",
+        "score": 44.4269433,
+        "lb": 37.657673,
+        "ub": 51.1962136,
+        "width": 13.538540599999997,
+        "std_error": 0.2122814,
+        "num_sources": 9.0
+      },
+      {
+        "iso3": "MNG",
+        "country": "Mongolia",
+        "score": 44.2647549,
+        "lb": 37.3784802,
+        "ub": 51.1510296,
+        "width": 13.772549400000003,
+        "std_error": 0.2159506,
+        "num_sources": 11.0
+      },
+      {
+        "iso3": "SUR",
+        "country": "Suriname",
+        "score": 44.136018,
+        "lb": 35.1621225,
+        "ub": 53.1099135,
+        "width": 17.947790999999995,
+        "std_error": 0.2814175,
+        "num_sources": 4.0
+      },
+      {
+        "iso3": "TZA",
+        "country": "Tanzania",
+        "score": 43.4631091,
+        "lb": 37.6006904,
+        "ub": 49.3255278,
+        "width": 11.724837400000006,
+        "std_error": 0.1838429,
+        "num_sources": 13.0
+      },
+      {
+        "iso3": "KIR",
+        "country": "Kiribati",
+        "score": 43.4079036,
+        "lb": 32.647791,
+        "ub": 54.1680162,
+        "width": 21.5202252,
+        "std_error": 0.3374325,
+        "num_sources": 4.0
+      },
+      {
+        "iso3": "BOL",
+        "country": "Bolivia",
+        "score": 43.3803612,
+        "lb": 36.0759312,
+        "ub": 50.6847912,
+        "width": 14.60886,
+        "std_error": 0.2290638,
+        "num_sources": 9.0
+      },
+      {
+        "iso3": "KHM",
+        "country": "Cambodia",
+        "score": 43.2504809,
+        "lb": 35.8528946,
+        "ub": 50.6480672,
+        "width": 14.7951726,
+        "std_error": 0.2319851,
+        "num_sources": 11.0
+      },
+      {
+        "iso3": "UGA",
+        "country": "Uganda",
+        "score": 42.9488536,
+        "lb": 37.0659507,
+        "ub": 48.8317566,
+        "width": 11.765805899999997,
+        "std_error": 0.1844853,
+        "num_sources": 12.0
+      },
+      {
+        "iso3": "GMB",
+        "country": "Gambia, The",
+        "score": 42.2339048,
+        "lb": 36.3714861,
+        "ub": 48.0963235,
+        "width": 11.724837399999998,
+        "std_error": 0.1838429,
+        "num_sources": 13.0
+      },
+      {
+        "iso3": "TKM",
+        "country": "Turkmenistan",
+        "score": 41.9067358,
+        "lb": 32.831745,
+        "ub": 50.9817266,
+        "width": 18.149981600000004,
+        "std_error": 0.2845878,
+        "num_sources": 5.0
+      },
+      {
+        "iso3": "DJI",
+        "country": "Djibouti",
+        "score": 40.9149061,
+        "lb": 34.3570681,
+        "ub": 47.4727441,
+        "width": 13.115676,
+        "std_error": 0.205651,
+        "num_sources": 8.0
+      },
+      {
+        "iso3": "BGD",
+        "country": "Bangladesh",
+        "score": 40.5013434,
+        "lb": 33.5862002,
+        "ub": 47.4164867,
+        "width": 13.8302865,
+        "std_error": 0.2168559,
+        "num_sources": 11.0
+      },
+      {
+        "iso3": "ZMB",
+        "country": "Zambia",
+        "score": 40.3969835,
+        "lb": 34.3581161,
+        "ub": 46.4358509,
+        "width": 12.077734800000002,
+        "std_error": 0.1893763,
+        "num_sources": 11.0
+      },
+      {
+        "iso3": "UKR",
+        "country": "Ukraine",
+        "score": 40.0563826,
+        "lb": 32.8674287,
+        "ub": 47.2453365,
+        "width": 14.377907800000003,
+        "std_error": 0.2254425,
+        "num_sources": 8.0
+      },
+      {
+        "iso3": "GAB",
+        "country": "Gabon",
+        "score": 39.983277,
+        "lb": 33.1028958,
+        "ub": 46.8636582,
+        "width": 13.760762400000004,
+        "std_error": 0.2157658,
+        "num_sources": 9.0
+      },
+      {
+        "iso3": "TUV",
+        "country": "Tuvalu",
+        "score": 39.8572544,
+        "lb": 29.0971418,
+        "ub": 50.6173671,
+        "width": 21.520225300000003,
+        "std_error": 0.3374325,
+        "num_sources": 4.0
+      },
+      {
+        "iso3": "BLR",
+        "country": "Belarus",
+        "score": 39.7439464,
+        "lb": 31.5219647,
+        "ub": 47.965928,
+        "width": 16.443963299999997,
+        "std_error": 0.2578378,
+        "num_sources": 6.0
+      },
+      {
+        "iso3": "NER",
+        "country": "Niger",
+        "score": 39.4498983,
+        "lb": 33.3090802,
+        "ub": 45.5907165,
+        "width": 12.281636300000002,
+        "std_error": 0.1925734,
+        "num_sources": 11.0
+      },
+      {
+        "iso3": "BIH",
+        "country": "Bosnia and Herzegovina",
+        "score": 38.7918855,
+        "lb": 30.7142815,
+        "ub": 46.8694894,
+        "width": 16.1552079,
+        "std_error": 0.2533102,
+        "num_sources": 8.0
+      },
+      {
+        "iso3": "HND",
+        "country": "Honduras",
+        "score": 38.5482305,
+        "lb": 31.5735517,
+        "ub": 45.5229094,
+        "width": 13.949357700000004,
+        "std_error": 0.2187229,
+        "num_sources": 10.0
+      },
+      {
+        "iso3": "PAK",
+        "country": "Pakistan",
+        "score": 38.5358563,
+        "lb": 31.6207131,
+        "ub": 45.4509996,
+        "width": 13.830286500000003,
+        "std_error": 0.2168559,
+        "num_sources": 11.0
+      },
+      {
+        "iso3": "STP",
+        "country": "Sao Tome and Principe",
+        "score": 38.1821735,
+        "lb": 31.3611432,
+        "ub": 45.0032038,
+        "width": 13.6420606,
+        "std_error": 0.2139046,
+        "num_sources": 8.0
+      },
+      {
+        "iso3": "ETH",
+        "country": "Ethiopia",
+        "score": 37.9556857,
+        "lb": 32.0727827,
+        "ub": 43.8385887,
+        "width": 11.765806000000005,
+        "std_error": 0.1844853,
+        "num_sources": 12.0
+      },
+      {
+        "iso3": "SWZ",
+        "country": "Eswatini",
+        "score": 37.3840626,
+        "lb": 30.3036044,
+        "ub": 44.4645208,
+        "width": 14.160916400000001,
+        "std_error": 0.2220401,
+        "num_sources": 9.0
+      },
+      {
+        "iso3": "IRN",
+        "country": "Iran, Islamic Rep.",
+        "score": 36.947486,
+        "lb": 29.315644,
+        "ub": 44.579328,
+        "width": 15.263683999999998,
+        "std_error": 0.2393313,
+        "num_sources": 7.0
+      },
+      {
+        "iso3": "LSO",
+        "country": "Lesotho",
+        "score": 36.7512861,
+        "lb": 30.6021459,
+        "ub": 42.9004264,
+        "width": 12.2982805,
+        "std_error": 0.1928344,
+        "num_sources": 12.0
+      },
+      {
+        "iso3": "LAO",
+        "country": "Lao PDR",
+        "score": 36.6901055,
+        "lb": 29.2488616,
+        "ub": 44.1313495,
+        "width": 14.882487899999997,
+        "std_error": 0.2333542,
+        "num_sources": 9.0
+      },
+      {
+        "iso3": "TJK",
+        "country": "Tajikistan",
+        "score": 36.4005316,
+        "lb": 28.9592876,
+        "ub": 43.8417755,
+        "width": 14.882487899999997,
+        "std_error": 0.2333542,
+        "num_sources": 9.0
+      },
+      {
+        "iso3": "MWI",
+        "country": "Malawi",
+        "score": 36.3969461,
+        "lb": 30.5140431,
+        "ub": 42.2798491,
+        "width": 11.765806000000001,
+        "std_error": 0.1844853,
+        "num_sources": 12.0
+      },
+      {
+        "iso3": "MOZ",
+        "country": "Mozambique",
+        "score": 36.2136298,
+        "lb": 30.3307268,
+        "ub": 42.0965328,
+        "width": 11.765805999999998,
+        "std_error": 0.1844853,
+        "num_sources": 12.0
+      },
+      {
+        "iso3": "CMR",
+        "country": "Cameroon",
+        "score": 36.1993871,
+        "lb": 30.3164841,
+        "ub": 42.08229,
+        "width": 11.7658059,
+        "std_error": 0.1844853,
+        "num_sources": 12.0
+      },
+      {
+        "iso3": "MRT",
+        "country": "Mauritania",
+        "score": 35.4205374,
+        "lb": 29.0646878,
+        "ub": 41.776387,
+        "width": 12.711699199999998,
+        "std_error": 0.1993167,
+        "num_sources": 11.0
+      },
+      {
+        "iso3": "AGO",
+        "country": "Angola",
+        "score": 35.2271686,
+        "lb": 28.5109124,
+        "ub": 41.9434247,
+        "width": 13.432512300000003,
+        "std_error": 0.2106189,
+        "num_sources": 9.0
+      },
+      {
+        "iso3": "VUT",
+        "country": "Vanuatu",
+        "score": 34.9445595,
+        "lb": 25.0972813,
+        "ub": 44.7918376,
+        "width": 19.694556300000002,
+        "std_error": 0.3088064,
+        "num_sources": 6.0
+      },
+      {
+        "iso3": "NPL",
+        "country": "Nepal",
+        "score": 34.9287923,
+        "lb": 27.5288766,
+        "ub": 42.328708,
+        "width": 14.799831399999999,
+        "std_error": 0.2320582,
+        "num_sources": 10.0
+      },
+      {
+        "iso3": "TLS",
+        "country": "Timor-Leste",
+        "score": 34.7149314,
+        "lb": 26.2586474,
+        "ub": 43.1712154,
+        "width": 16.912568,
+        "std_error": 0.2651854,
+        "num_sources": 7.0
+      },
+      {
+        "iso3": "GTM",
+        "country": "Guatemala",
+        "score": 34.5626109,
+        "lb": 26.9529875,
+        "ub": 42.1722342,
+        "width": 15.2192467,
+        "std_error": 0.2386345,
+        "num_sources": 8.0
+      },
+      {
+        "iso3": "BFA",
+        "country": "Burkina Faso",
+        "score": 34.5353814,
+        "lb": 28.6524785,
+        "ub": 40.4182844,
+        "width": 11.765805899999997,
+        "std_error": 0.1844853,
+        "num_sources": 12.0
+      },
+      {
+        "iso3": "NGA",
+        "country": "Nigeria",
+        "score": 34.4678426,
+        "lb": 28.3355137,
+        "ub": 40.6001716,
+        "width": 12.264657900000003,
+        "std_error": 0.1923072,
+        "num_sources": 12.0
+      },
+      {
+        "iso3": "GIN",
+        "country": "Guinea",
+        "score": 34.3558976,
+        "lb": 28.4729946,
+        "ub": 40.2388006,
+        "width": 11.765805999999998,
+        "std_error": 0.1844853,
+        "num_sources": 12.0
+      },
+      {
+        "iso3": "SLB",
+        "country": "Solomon Islands",
+        "score": 33.6582675,
+        "lb": 23.7129682,
+        "ub": 43.6035668,
+        "width": 19.890598600000004,
+        "std_error": 0.3118803,
+        "num_sources": 5.0
+      },
+      {
+        "iso3": "TGO",
+        "country": "Togo",
+        "score": 33.4969833,
+        "lb": 27.3794532,
+        "ub": 39.6145134,
+        "width": 12.2350602,
+        "std_error": 0.1918431,
+        "num_sources": 12.0
+      },
+      {
+        "iso3": "NIC",
+        "country": "Nicaragua",
+        "score": 33.1258883,
+        "lb": 25.8869905,
+        "ub": 40.3647861,
+        "width": 14.477795600000004,
+        "std_error": 0.2270087,
+        "num_sources": 9.0
+      },
+      {
+        "iso3": "SLE",
+        "country": "Sierra Leone",
+        "score": 32.7813461,
+        "lb": 26.9189274,
+        "ub": 38.6437648,
+        "width": 11.724837399999998,
+        "std_error": 0.1838429,
+        "num_sources": 13.0
+      },
+      {
+        "iso3": "MDG",
+        "country": "Madagascar",
+        "score": 32.7748557,
+        "lb": 26.912437,
+        "ub": 38.6372744,
+        "width": 11.724837400000002,
+        "std_error": 0.1838429,
+        "num_sources": 13.0
+      },
+      {
+        "iso3": "ZWE",
+        "country": "Zimbabwe",
+        "score": 32.1204614,
+        "lb": 26.2375584,
+        "ub": 38.0033644,
+        "width": 11.765806000000001,
+        "std_error": 0.1844853,
+        "num_sources": 12.0
+      },
+      {
+        "iso3": "KGZ",
+        "country": "Kyrgyz Republic",
+        "score": 31.8166933,
+        "lb": 24.4167776,
+        "ub": 39.216609,
+        "width": 14.799831399999999,
+        "std_error": 0.2320582,
+        "num_sources": 10.0
+      },
+      {
+        "iso3": "PSE",
+        "country": "West Bank and Gaza",
+        "score": 31.079971,
+        "lb": 21.6661429,
+        "ub": 40.4937992,
+        "width": 18.827656299999997,
+        "std_error": 0.2952136,
+        "num_sources": 6.0
+      },
+      {
+        "iso3": "PNG",
+        "country": "Papua New Guinea",
+        "score": 30.2610764,
+        "lb": 22.7878645,
+        "ub": 37.7342883,
+        "width": 14.946423800000002,
+        "std_error": 0.2343567,
+        "num_sources": 8.0
+      },
+      {
+        "iso3": "BDI",
+        "country": "Burundi",
+        "score": 29.7912739,
+        "lb": 23.5448261,
+        "ub": 36.0377217,
+        "width": 12.492895599999997,
+        "std_error": 0.1958859,
+        "num_sources": 9.0
+      },
+      {
+        "iso3": "GNQ",
+        "country": "Equatorial Guinea",
+        "score": 28.9342709,
+        "lb": 20.8974936,
+        "ub": 36.9710483,
+        "width": 16.0735547,
+        "std_error": 0.2520299,
+        "num_sources": 5.0
+      },
+      {
+        "iso3": "LBN",
+        "country": "Lebanon",
+        "score": 28.6719925,
+        "lb": 21.2298074,
+        "ub": 36.1141775,
+        "width": 14.884370099999998,
+        "std_error": 0.2333837,
+        "num_sources": 8.0
+      },
+      {
+        "iso3": "COG",
+        "country": "Congo, Rep.",
+        "score": 28.6504582,
+        "lb": 21.9138344,
+        "ub": 35.387082,
+        "width": 13.4732476,
+        "std_error": 0.2112576,
+        "num_sources": 10.0
+      },
+      {
+        "iso3": "LBR",
+        "country": "Liberia",
+        "score": 27.7099257,
+        "lb": 21.8270227,
+        "ub": 33.5928287,
+        "width": 11.765805999999998,
+        "std_error": 0.1844853,
+        "num_sources": 12.0
+      },
+      {
+        "iso3": "TCD",
+        "country": "Chad",
+        "score": 27.707048,
+        "lb": 21.5579078,
+        "ub": 33.8561882,
+        "width": 12.2982804,
+        "std_error": 0.1928344,
+        "num_sources": 12.0
+      },
+      {
+        "iso3": "MLI",
+        "country": "Mali",
+        "score": 27.5043888,
+        "lb": 21.6214858,
+        "ub": 33.3872918,
+        "width": 11.765806000000001,
+        "std_error": 0.1844853,
+        "num_sources": 12.0
+      },
+      {
+        "iso3": "COM",
+        "country": "Comoros",
+        "score": 27.0562994,
+        "lb": 19.7113384,
+        "ub": 34.4012605,
+        "width": 14.6899221,
+        "std_error": 0.2303348,
+        "num_sources": 7.0
+      },
+      {
+        "iso3": "PRK",
+        "country": "Korea, Dem. People's Rep.",
+        "score": 26.6321106,
+        "lb": 18.2884814,
+        "ub": 34.9757399,
+        "width": 16.687258500000002,
+        "std_error": 0.2616526,
+        "num_sources": 5.0
+      },
+      {
+        "iso3": "IRQ",
+        "country": "Iraq",
+        "score": 25.2876422,
+        "lb": 17.3524287,
+        "ub": 33.2228557,
+        "width": 15.870426999999996,
+        "std_error": 0.2488449,
+        "num_sources": 8.0
+      },
+      {
+        "iso3": "ERI",
+        "country": "Eritrea",
+        "score": 24.5029613,
+        "lb": 17.9451233,
+        "ub": 31.0607992,
+        "width": 13.115675900000003,
+        "std_error": 0.205651,
+        "num_sources": 8.0
+      },
+      {
+        "iso3": "VEN",
+        "country": "Venezuela, RB",
+        "score": 23.4884579,
+        "lb": 16.3180827,
+        "ub": 30.658833,
+        "width": 14.3407503,
+        "std_error": 0.2248599,
+        "num_sources": 9.0
+      },
+      {
+        "iso3": "LBY",
+        "country": "Libya",
+        "score": 23.190418,
+        "lb": 16.0195062,
+        "ub": 30.3613298,
+        "width": 14.341823600000001,
+        "std_error": 0.2248767,
+        "num_sources": 8.0
+      },
+      {
+        "iso3": "GNB",
+        "country": "Guinea-Bissau",
+        "score": 23.1129238,
+        "lb": 16.4764329,
+        "ub": 29.7494148,
+        "width": 13.272981900000001,
+        "std_error": 0.2081175,
+        "num_sources": 8.0
+      },
+      {
+        "iso3": "CAF",
+        "country": "Central African Republic",
+        "score": 20.7985021,
+        "lb": 14.2690019,
+        "ub": 27.3280024,
+        "width": 13.0590005,
+        "std_error": 0.2047623,
+        "num_sources": 9.0
+      },
+      {
+        "iso3": "MMR",
+        "country": "Myanmar",
+        "score": 20.5926852,
+        "lb": 12.893983,
+        "ub": 28.2913875,
+        "width": 15.397404499999999,
+        "std_error": 0.241428,
+        "num_sources": 9.0
+      },
+      {
+        "iso3": "SYR",
+        "country": "Syrian Arab Republic",
+        "score": 19.9499281,
+        "lb": 12.0038338,
+        "ub": 27.8960225,
+        "width": 15.8921887,
+        "std_error": 0.2491861,
+        "num_sources": 6.0
+      },
+      {
+        "iso3": "COD",
+        "country": "Congo, Dem. Rep.",
+        "score": 19.1032577,
+        "lb": 13.201218,
+        "ub": 25.0052975,
+        "width": 11.8040795,
+        "std_error": 0.1850854,
+        "num_sources": 11.0
+      },
+      {
+        "iso3": "SDN",
+        "country": "Sudan",
+        "score": 16.8737656,
+        "lb": 10.7853024,
+        "ub": 22.9622288,
+        "width": 12.176926399999997,
+        "std_error": 0.1909316,
+        "num_sources": 11.0
+      },
+      {
+        "iso3": "SOM",
+        "country": "Somalia, Fed. Rep.",
+        "score": 15.0705194,
+        "lb": 8.6725968,
+        "ub": 21.4684419,
+        "width": 12.795845099999998,
+        "std_error": 0.2006361,
+        "num_sources": 8.0
+      },
+      {
+        "iso3": "YEM",
+        "country": "Yemen, Rep.",
+        "score": 14.6331553,
+        "lb": 7.3751382,
+        "ub": 21.8911724,
+        "width": 14.516034199999998,
+        "std_error": 0.2276083,
+        "num_sources": 8.0
+      },
+      {
+        "iso3": "HTI",
+        "country": "Haiti",
+        "score": 12.2417295,
+        "lb": 5.1756054,
+        "ub": 19.3078536,
+        "width": 14.132248200000001,
+        "std_error": 0.2215906,
+        "num_sources": 8.0
+      },
+      {
+        "iso3": "AFG",
+        "country": "Afghanistan",
+        "score": 10.6546599,
+        "lb": 2.6695862,
+        "ub": 18.6397337,
+        "width": 15.970147500000001,
+        "std_error": 0.2504085,
+        "num_sources": 8.0
+      },
+      {
+        "iso3": "SSD",
+        "country": "South Sudan",
+        "score": 8.4465115,
+        "lb": 1.3851259,
+        "ub": 15.5078971,
+        "width": 14.122771199999999,
+        "std_error": 0.221442,
+        "num_sources": 7.0
+      }
+    ],
+    "overlaps": 9026,
+    "total_pairs": 21115
+  }
+}

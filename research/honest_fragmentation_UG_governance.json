@@ -1,0 +1,13 @@
+{
+  "country": "UG",
+  "sector": "Governance",
+  "raw_orgs": 85,
+  "dedup_orgs": 82,
+  "active_orgs": 65,
+  "total_activities": 1124,
+  "active_activities": 557,
+  "miscoded": 49,
+  "coordination_signals": 20,
+  "total_disbursed_usd": 1200782256.87,
+  "orgs_reporting_financials": 7
+}

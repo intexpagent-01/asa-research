@@ -1,0 +1,13 @@
+{
+  "country": "ET",
+  "sector": "Governance",
+  "raw_orgs": 57,
+  "dedup_orgs": 56,
+  "active_orgs": 47,
+  "total_activities": 763,
+  "active_activities": 493,
+  "miscoded": 10,
+  "coordination_signals": 12,
+  "total_disbursed_usd": 1067045983.27,
+  "orgs_reporting_financials": 5
+}

@@ -1,0 +1,807 @@
+{
+  "metadata": {
+    "n_indicators": 33,
+    "n_countries": 25,
+    "n_ldc": 15,
+    "n_mic": 5,
+    "n_hic": 5
+  },
+  "indicator_stats": [
+    {
+      "code": "3.1.1",
+      "name": "Maternal mortality ratio",
+      "total": 25,
+      "ldc": 15,
+      "hic": 5,
+      "ldc_pct": 100.0,
+      "hic_pct": 100.0
+    },
+    {
+      "code": "3.2.1",
+      "name": "Under-5 mortality rate",
+      "total": 25,
+      "ldc": 15,
+      "hic": 5,
+      "ldc_pct": 100.0,
+      "hic_pct": 100.0
+    },
+    {
+      "code": "3.8.1",
+      "name": "UHC service coverage index",
+      "total": 25,
+      "ldc": 15,
+      "hic": 5,
+      "ldc_pct": 100.0,
+      "hic_pct": 100.0
+    },
+    {
+      "code": "5.5.1",
+      "name": "Women in national parliaments",
+      "total": 25,
+      "ldc": 15,
+      "hic": 5,
+      "ldc_pct": 100.0,
+      "hic_pct": 100.0
+    },
+    {
+      "code": "6.2.1",
+      "name": "Safely managed sanitation",
+      "total": 25,
+      "ldc": 15,
+      "hic": 5,
+      "ldc_pct": 100.0,
+      "hic_pct": 100.0
+    },
+    {
+      "code": "7.1.1",
+      "name": "Access to electricity",
+      "total": 25,
+      "ldc": 15,
+      "hic": 5,
+      "ldc_pct": 100.0,
+      "hic_pct": 100.0
+    },
+    {
+      "code": "7.2.1",
+      "name": "Renewable energy share",
+      "total": 25,
+      "ldc": 15,
+      "hic": 5,
+      "ldc_pct": 100.0,
+      "hic_pct": 100.0
+    },
+    {
+      "code": "8.1.1",
+      "name": "Real GDP per capita growth",
+      "total": 25,
+      "ldc": 15,
+      "hic": 5,
+      "ldc_pct": 100.0,
+      "hic_pct": 100.0
+    },
+    {
+      "code": "9.2.1",
+      "name": "Manufacturing value added % GDP",
+      "total": 25,
+      "ldc": 15,
+      "hic": 5,
+      "ldc_pct": 100.0,
+      "hic_pct": 100.0
+    },
+    {
+      "code": "9.c.1",
+      "name": "Mobile network coverage",
+      "total": 25,
+      "ldc": 15,
+      "hic": 5,
+      "ldc_pct": 100.0,
+      "hic_pct": 100.0
+    },
+    {
+      "code": "11.1.1",
+      "name": "Urban slum population",
+      "total": 25,
+      "ldc": 15,
+      "hic": 5,
+      "ldc_pct": 100.0,
+      "hic_pct": 100.0
+    },
+    {
+      "code": "11.6.2",
+      "name": "Urban PM2.5 levels",
+      "total": 25,
+      "ldc": 15,
+      "hic": 5,
+      "ldc_pct": 100.0,
+      "hic_pct": 100.0
+    },
+    {
+      "code": "12.2.2",
+      "name": "Domestic material consumption",
+      "total": 25,
+      "ldc": 15,
+      "hic": 5,
+      "ldc_pct": 100.0,
+      "hic_pct": 100.0
+    },
+    {
+      "code": "15.1.1",
+      "name": "Forest area proportion",
+      "total": 25,
+      "ldc": 15,
+      "hic": 5,
+      "ldc_pct": 100.0,
+      "hic_pct": 100.0
+    },
+    {
+      "code": "15.1.2",
+      "name": "KBA protection coverage",
+      "total": 25,
+      "ldc": 15,
+      "hic": 5,
+      "ldc_pct": 100.0,
+      "hic_pct": 100.0
+    },
+    {
+      "code": "17.8.1",
+      "name": "Internet users (%)",
+      "total": 25,
+      "ldc": 15,
+      "hic": 5,
+      "ldc_pct": 100.0,
+      "hic_pct": 100.0
+    },
+    {
+      "code": "2.1.1",
+      "name": "Prevalence of undernourishment",
+      "total": 24,
+      "ldc": 14,
+      "hic": 5,
+      "ldc_pct": 93.3,
+      "hic_pct": 100.0
+    },
+    {
+      "code": "2.2.1",
+      "name": "Stunting prevalence (under 5)",
+      "total": 24,
+      "ldc": 15,
+      "hic": 4,
+      "ldc_pct": 100.0,
+      "hic_pct": 80.0
+    },
+    {
+      "code": "8.5.2",
+      "name": "Unemployment rate",
+      "total": 24,
+      "ldc": 14,
+      "hic": 5,
+      "ldc_pct": 93.3,
+      "hic_pct": 100.0
+    },
+    {
+      "code": "17.1.1",
+      "name": "Tax revenue as % of GDP",
+      "total": 24,
+      "ldc": 14,
+      "hic": 5,
+      "ldc_pct": 93.3,
+      "hic_pct": 100.0
+    },
+    {
+      "code": "1.1.1",
+      "name": "Population below intl poverty line",
+      "total": 23,
+      "ldc": 13,
+      "hic": 5,
+      "ldc_pct": 86.7,
+      "hic_pct": 100.0
+    },
+    {
+      "code": "5.5.2",
+      "name": "Women in managerial positions",
+      "total": 23,
+      "ldc": 13,
+      "hic": 5,
+      "ldc_pct": 86.7,
+      "hic_pct": 100.0
+    },
+    {
+      "code": "1.2.1",
+      "name": "Population below national poverty line",
+      "total": 22,
+      "ldc": 15,
+      "hic": 3,
+      "ldc_pct": 100.0,
+      "hic_pct": 60.0
+    },
+    {
+      "code": "13.1.1",
+      "name": "Disaster deaths & missing",
+      "total": 22,
+      "ldc": 13,
+      "hic": 4,
+      "ldc_pct": 86.7,
+      "hic_pct": 80.0
+    },
+    {
+      "code": "4.2.2",
+      "name": "Pre-primary participation rate",
+      "total": 21,
+      "ldc": 11,
+      "hic": 5,
+      "ldc_pct": 73.3,
+      "hic_pct": 100.0
+    },
+    {
+      "code": "16.1.1",
+      "name": "Intentional homicides per 100k",
+      "total": 20,
+      "ldc": 10,
+      "hic": 5,
+      "ldc_pct": 66.7,
+      "hic_pct": 100.0
+    },
+    {
+      "code": "6.1.1",
+      "name": "Safely managed drinking water",
+      "total": 18,
+      "ldc": 9,
+      "hic": 5,
+      "ldc_pct": 60.0,
+      "hic_pct": 100.0
+    },
+    {
+      "code": "16.3.2",
+      "name": "Unsentenced detainees",
+      "total": 18,
+      "ldc": 9,
+      "hic": 4,
+      "ldc_pct": 60.0,
+      "hic_pct": 80.0
+    },
+    {
+      "code": "4.1.1",
+      "name": "Min proficiency in reading/math",
+      "total": 16,
+      "ldc": 7,
+      "hic": 5,
+      "ldc_pct": 46.7,
+      "hic_pct": 100.0
+    },
+    {
+      "code": "10.1.1",
+      "name": "Bottom 40% income growth",
+      "total": 16,
+      "ldc": 8,
+      "hic": 5,
+      "ldc_pct": 53.3,
+      "hic_pct": 100.0
+    },
+    {
+      "code": "17.19.2",
+      "name": "Census & vital registration",
+      "total": 16,
+      "ldc": 7,
+      "hic": 5,
+      "ldc_pct": 46.7,
+      "hic_pct": 100.0
+    },
+    {
+      "code": "14.5.1",
+      "name": "Marine protected areas",
+      "total": 13,
+      "ldc": 3,
+      "hic": 5,
+      "ldc_pct": 20.0,
+      "hic_pct": 100.0
+    },
+    {
+      "code": "10.4.1",
+      "name": "Labour share of GDP",
+      "total": 12,
+      "ldc": 5,
+      "hic": 3,
+      "ldc_pct": 33.3,
+      "hic_pct": 60.0
+    }
+  ],
+  "country_stats": [
+    {
+      "name": "Central African Republic",
+      "group": "LDC",
+      "indicators": 24,
+      "pct": 72.7,
+      "country_pct": 50.0,
+      "natures": {
+        "G": 2,
+        "CA": 3,
+        "E": 8,
+        "M": 2,
+        "C": 9
+      }
+    },
+    {
+      "name": "Somalia",
+      "group": "LDC",
+      "indicators": 24,
+      "pct": 72.7,
+      "country_pct": 58.3,
+      "natures": {
+        "CA": 3,
+        "E": 6,
+        "M": 3,
+        "C": 11,
+        "G": 1
+      }
+    },
+    {
+      "name": "Afghanistan",
+      "group": "LDC",
+      "indicators": 26,
+      "pct": 78.8,
+      "country_pct": 57.7,
+      "natures": {
+        "CA": 3,
+        "E": 7,
+        "M": 3,
+        "C": 12,
+        "G": 1
+      }
+    },
+    {
+      "name": "Chad",
+      "group": "LDC",
+      "indicators": 26,
+      "pct": 78.8,
+      "country_pct": 50.0,
+      "natures": {
+        "G": 3,
+        "CA": 3,
+        "E": 7,
+        "M": 3,
+        "C": 10
+      }
+    },
+    {
+      "name": "South Sudan",
+      "group": "LDC",
+      "indicators": 26,
+      "pct": 78.8,
+      "country_pct": 50.0,
+      "natures": {
+        "G": 2,
+        "CA": 3,
+        "?": 2,
+        "M": 3,
+        "C": 10,
+        "E": 6
+      }
+    },
+    {
+      "name": "DR Congo",
+      "group": "LDC",
+      "indicators": 27,
+      "pct": 81.8,
+      "country_pct": 51.9,
+      "natures": {
+        "G": 3,
+        "CA": 3,
+        "E": 8,
+        "M": 2,
+        "C": 11
+      }
+    },
+    {
+      "name": "Haiti",
+      "group": "LDC",
+      "indicators": 27,
+      "pct": 81.8,
+      "country_pct": 59.3,
+      "natures": {
+        "G": 2,
+        "CA": 3,
+        "E": 7,
+        "M": 2,
+        "C": 13
+      }
+    },
+    {
+      "name": "Ethiopia",
+      "group": "LDC",
+      "indicators": 28,
+      "pct": 84.8,
+      "country_pct": 53.6,
+      "natures": {
+        "G": 3,
+        "CA": 3,
+        "E": 8,
+        "M": 2,
+        "C": 12
+      }
+    },
+    {
+      "name": "Mali",
+      "group": "LDC",
+      "indicators": 28,
+      "pct": 84.8,
+      "country_pct": 53.6,
+      "natures": {
+        "G": 3,
+        "CA": 3,
+        "E": 7,
+        "M": 3,
+        "C": 12
+      }
+    },
+    {
+      "name": "Burundi",
+      "group": "LDC",
+      "indicators": 29,
+      "pct": 87.9,
+      "country_pct": 58.6,
+      "natures": {
+        "G": 2,
+        "CA": 3,
+        "M": 4,
+        "C": 14,
+        "E": 6
+      }
+    },
+    {
+      "name": "Malawi",
+      "group": "LDC",
+      "indicators": 30,
+      "pct": 90.9,
+      "country_pct": 56.7,
+      "natures": {
+        "G": 3,
+        "CA": 3,
+        "E": 8,
+        "M": 2,
+        "C": 14
+      }
+    },
+    {
+      "name": "Nepal",
+      "group": "LDC",
+      "indicators": 30,
+      "pct": 90.9,
+      "country_pct": 60.0,
+      "natures": {
+        "G": 2,
+        "CA": 3,
+        "E": 7,
+        "M": 3,
+        "C": 15
+      }
+    },
+    {
+      "name": "Niger",
+      "group": "LDC",
+      "indicators": 31,
+      "pct": 93.9,
+      "country_pct": 58.1,
+      "natures": {
+        "G": 3,
+        "CA": 3,
+        "E": 7,
+        "M": 3,
+        "C": 15
+      }
+    },
+    {
+      "name": "Uganda",
+      "group": "LDC",
+      "indicators": 31,
+      "pct": 93.9,
+      "country_pct": 58.1,
+      "natures": {
+        "G": 3,
+        "CA": 3,
+        "E": 8,
+        "M": 2,
+        "C": 15
+      }
+    },
+    {
+      "name": "Tanzania",
+      "group": "LDC",
+      "indicators": 33,
+      "pct": 100.0,
+      "country_pct": 57.6,
+      "natures": {
+        "G": 3,
+        "CA": 3,
+        "E": 7,
+        "M": 4,
+        "C": 16
+      }
+    },
+    {
+      "name": "India",
+      "group": "MIC",
+      "indicators": 31,
+      "pct": 93.9,
+      "country_pct": 61.3,
+      "natures": {
+        "G": 1,
+        "CA": 3,
+        "E": 7,
+        "M": 4,
+        "C": 16
+      }
+    },
+    {
+      "name": "Nigeria",
+      "group": "MIC",
+      "indicators": 31,
+      "pct": 93.9,
+      "country_pct": 61.3,
+      "natures": {
+        "G": 1,
+        "CA": 3,
+        "E": 7,
+        "M": 4,
+        "C": 16
+      }
+    },
+    {
+      "name": "Kenya",
+      "group": "MIC",
+      "indicators": 32,
+      "pct": 97.0,
+      "country_pct": 59.4,
+      "natures": {
+        "G": 2,
+        "CA": 3,
+        "E": 7,
+        "M": 4,
+        "C": 16
+      }
+    },
+    {
+      "name": "Brazil",
+      "group": "MIC",
+      "indicators": 32,
+      "pct": 97.0,
+      "country_pct": 53.1,
+      "natures": {
+        "G": 2,
+        "E": 10,
+        "M": 3,
+        "C": 15,
+        "CA": 2
+      }
+    },
+    {
+      "name": "South Africa",
+      "group": "MIC",
+      "indicators": 32,
+      "pct": 97.0,
+      "country_pct": 65.6,
+      "natures": {
+        "G": 2,
+        "CA": 3,
+        "E": 7,
+        "M": 2,
+        "C": 18
+      }
+    },
+    {
+      "name": "Norway",
+      "group": "HIC",
+      "indicators": 31,
+      "pct": 93.9,
+      "country_pct": 58.1,
+      "natures": {
+        "G": 3,
+        "CA": 3,
+        "E": 9,
+        "M": 1,
+        "C": 15
+      }
+    },
+    {
+      "name": "United States",
+      "group": "HIC",
+      "indicators": 31,
+      "pct": 93.9,
+      "country_pct": 54.8,
+      "natures": {
+        "G": 3,
+        "E": 9,
+        "M": 2,
+        "C": 15,
+        "CA": 2
+      }
+    },
+    {
+      "name": "Germany",
+      "group": "HIC",
+      "indicators": 32,
+      "pct": 97.0,
+      "country_pct": 53.1,
+      "natures": {
+        "G": 3,
+        "CA": 3,
+        "E": 9,
+        "M": 3,
+        "C": 14
+      }
+    },
+    {
+      "name": "Japan",
+      "group": "HIC",
+      "indicators": 32,
+      "pct": 97.0,
+      "country_pct": 53.1,
+      "natures": {
+        "G": 3,
+        "E": 9,
+        "M": 3,
+        "C": 15,
+        "CA": 2
+      }
+    },
+    {
+      "name": "United Kingdom",
+      "group": "HIC",
+      "indicators": 32,
+      "pct": 97.0,
+      "country_pct": 56.2,
+      "natures": {
+        "G": 3,
+        "CA": 3,
+        "E": 8,
+        "M": 3,
+        "C": 15
+      }
+    }
+  ],
+  "summary": {
+    "ldc_avg": 28.0,
+    "mic_avg": 31.6,
+    "hic_avg": 31.6,
+    "ldc_cp": 55.6,
+    "mic_cp": 60.1,
+    "hic_cp": 55.1,
+    "gap": 3.6
+  },
+  "goal_stats": {
+    "1": {
+      "ldc_avg": 93.3,
+      "hic_avg": 80.0,
+      "indicators": [
+        "1.1.1",
+        "1.2.1"
+      ]
+    },
+    "2": {
+      "ldc_avg": 96.7,
+      "hic_avg": 90.0,
+      "indicators": [
+        "2.1.1",
+        "2.2.1"
+      ]
+    },
+    "3": {
+      "ldc_avg": 100.0,
+      "hic_avg": 100.0,
+      "indicators": [
+        "3.1.1",
+        "3.2.1",
+        "3.8.1"
+      ]
+    },
+    "4": {
+      "ldc_avg": 60.0,
+      "hic_avg": 100.0,
+      "indicators": [
+        "4.2.2",
+        "4.1.1"
+      ]
+    },
+    "5": {
+      "ldc_avg": 93.3,
+      "hic_avg": 100.0,
+      "indicators": [
+        "5.5.1",
+        "5.5.2"
+      ]
+    },
+    "6": {
+      "ldc_avg": 80.0,
+      "hic_avg": 100.0,
+      "indicators": [
+        "6.2.1",
+        "6.1.1"
+      ]
+    },
+    "7": {
+      "ldc_avg": 100.0,
+      "hic_avg": 100.0,
+      "indicators": [
+        "7.1.1",
+        "7.2.1"
+      ]
+    },
+    "8": {
+      "ldc_avg": 96.7,
+      "hic_avg": 100.0,
+      "indicators": [
+        "8.1.1",
+        "8.5.2"
+      ]
+    },
+    "9": {
+      "ldc_avg": 100.0,
+      "hic_avg": 100.0,
+      "indicators": [
+        "9.2.1",
+        "9.c.1"
+      ]
+    },
+    "10": {
+      "ldc_avg": 43.3,
+      "hic_avg": 80.0,
+      "indicators": [
+        "10.1.1",
+        "10.4.1"
+      ]
+    },
+    "11": {
+      "ldc_avg": 100.0,
+      "hic_avg": 100.0,
+      "indicators": [
+        "11.1.1",
+        "11.6.2"
+      ]
+    },
+    "12": {
+      "ldc_avg": 100.0,
+      "hic_avg": 100.0,
+      "indicators": [
+        "12.2.2"
+      ]
+    },
+    "13": {
+      "ldc_avg": 86.7,
+      "hic_avg": 80.0,
+      "indicators": [
+        "13.1.1"
+      ]
+    },
+    "14": {
+      "ldc_avg": 20.0,
+      "hic_avg": 100.0,
+      "indicators": [
+        "14.5.1"
+      ]
+    },
+    "15": {
+      "ldc_avg": 100.0,
+      "hic_avg": 100.0,
+      "indicators": [
+        "15.1.1",
+        "15.1.2"
+      ]
+    },
+    "16": {
+      "ldc_avg": 63.3,
+      "hic_avg": 90.0,
+      "indicators": [
+        "16.1.1",
+        "16.3.2"
+      ]
+    },
+    "17": {
+      "ldc_avg": 80.0,
+      "hic_avg": 100.0,
+      "indicators": [
+        "17.8.1",
+        "17.1.1",
+        "17.19.2"
+      ]
+    }
+  }
+}

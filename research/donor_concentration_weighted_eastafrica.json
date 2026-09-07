@@ -1,0 +1,1202 @@
+{
+ "KE": {
+  "code": "KE",
+  "name": "Kenya",
+  "n_activities": 26298,
+  "n_multi_country": 5835,
+  "n_null_percent": 0,
+  "raw": {
+   "total_spend": 262439222894.2602,
+   "n_orgs": 448,
+   "hhi": 0.2499722554674552,
+   "gini": 0.9724605987995721,
+   "top_50": 2,
+   "top_80": 5,
+   "tiny_orgs": 411,
+   "top_15": [
+    {
+     "ref": "US-GOV-11",
+     "name": "Department of State",
+     "spend": 114311377508.0,
+     "pct": 43.55727632757752,
+     "count": 1501
+    },
+    {
+     "ref": "US-GOV-1",
+     "name": "U.S. Agency for International Development",
+     "spend": 59208506842.0,
+     "pct": 22.560845207903924,
+     "count": 2355
+    },
+    {
+     "ref": "US-GOV-14",
+     "name": "Department of Health and Human Services",
+     "spend": 17359639093.0,
+     "pct": 6.614727364893319,
+     "count": 261
+    },
+    {
+     "ref": "44000",
+     "name": "World Bank",
+     "spend": 14216499915.0,
+     "pct": 5.4170637141110545,
+     "count": 74
+    },
+    {
+     "ref": "SE-0",
+     "name": "Sweden",
+     "spend": 6164106135.15039,
+     "pct": 2.3487747247422615,
+     "count": 3223
+    },
+    {
+     "ref": "XM-DAC-46002",
+     "name": "African Development Bank",
+     "spend": 4358954621.596,
+     "pct": 1.6609387017398207,
+     "count": 134
+    },
+    {
+     "ref": "GB-GOV-1",
+     "name": "UK - Foreign, Commonwealth and Development Office",
+     "spend": 3932168236.7139378,
+     "pct": 1.4983157598733836,
+     "count": 637
+    },
+    {
+     "ref": "US-GOV-7",
+     "name": "Department of Defense",
+     "spend": 3890026664.0,
+     "pct": 1.4822581095537448,
+     "count": 100
+    },
+    {
+     "ref": "XM-DAC-3-1",
+     "name": "Ministry of Foreign Affairs, Denmark",
+     "spend": 3253628800.9021015,
+     "pct": 1.239764683426542,
+     "count": 695
+    },
+    {
+     "ref": "US-501c3-522318905",
+     "name": "AidData",
+     "spend": 2785476966.94,
+     "pct": 1.0613798258586908,
+     "count": 82
+    },
+    {
+     "ref": "CA-3",
+     "name": "Foreign Affairs, Trade and Development Canada (DFATD)",
+     "spend": 2752004135.8479996,
+     "pct": 1.0486253180824323,
+     "count": 275
+    },
+    {
+     "ref": "DAC-1601",
+     "name": "Gates Foundation",
+     "spend": 2230304475.7599998,
+     "pct": 0.8498365645056858,
+     "count": 879
+    },
+    {
+     "ref": "47045",
+     "name": "The Global Fund to Fight AIDS, Tuberculosis and Malaria",
+     "spend": 2167337600.0,
+     "pct": 0.8258436281352828,
+     "count": 47
+    },
+    {
+     "ref": "US-GOV-10",
+     "name": "Peace Corps",
+     "spend": 2040775862.0,
+     "pct": 0.7776184670468455,
+     "count": 83
+    },
+    {
+     "ref": "XI-IATI-UNPF",
+     "name": "UN Pooled Funds",
+     "spend": 1611532795.2999997,
+     "pct": 0.6140594296567113,
+     "count": 47
+    }
+   ]
+  },
+  "weighted": {
+   "total_spend": 55741095410.355316,
+   "n_orgs": 448,
+   "hhi": 0.10784892346730347,
+   "gini": 0.9503610188877782,
+   "top_50": 4,
+   "top_80": 15,
+   "tiny_orgs": 395,
+   "top_15": [
+    {
+     "ref": "44000",
+     "name": "World Bank",
+     "spend": 14216499915.0,
+     "pct": 25.504521951606506,
+     "count": 74
+    },
+    {
+     "ref": "US-GOV-1",
+     "name": "U.S. Agency for International Development",
+     "spend": 8996986824.038658,
+     "pct": 16.140671003690464,
+     "count": 2355
+    },
+    {
+     "ref": "XM-DAC-46002",
+     "name": "African Development Bank",
+     "spend": 4358954621.596,
+     "pct": 7.820001723156331,
+     "count": 134
+    },
+    {
+     "ref": "US-501c3-522318905",
+     "name": "AidData",
+     "spend": 2347907834.4712586,
+     "pct": 4.212166655833382,
+     "count": 82
+    },
+    {
+     "ref": "GB-GOV-1",
+     "name": "UK - Foreign, Commonwealth and Development Office",
+     "spend": 2249339019.801215,
+     "pct": 4.0353333626510395,
+     "count": 637
+    },
+    {
+     "ref": "US-GOV-14",
+     "name": "Department of Health and Human Services",
+     "spend": 2182013975.4741297,
+     "pct": 3.9145516596158703,
+     "count": 261
+    },
+    {
+     "ref": "47045",
+     "name": "The Global Fund to Fight AIDS, Tuberculosis and Malaria",
+     "spend": 2167337600.0,
+     "pct": 3.888222116993708,
+     "count": 47
+    },
+    {
+     "ref": "SE-0",
+     "name": "Sweden",
+     "spend": 1499477547.0495949,
+     "pct": 2.6900754927952653,
+     "count": 3223
+    },
+    {
+     "ref": "DE-1",
+     "name": "Federal Ministry for Economic Cooperation and Development (BMZ)",
+     "spend": 1296976299.3630002,
+     "pct": 2.3267865294266428,
+     "count": 570
+    },
+    {
+     "ref": "XM-DAC-41122",
+     "name": "UNICEF",
+     "spend": 1097164447.5,
+     "pct": 1.9683223650753263,
+     "count": 175
+    },
+    {
+     "ref": "XM-DAC-3-1",
+     "name": "Ministry of Foreign Affairs, Denmark",
+     "spend": 1060262138.9297078,
+     "pct": 1.9021193091457211,
+     "count": 695
+    },
+    {
+     "ref": "XM-DAC-41121",
+     "name": "United Nations High Commissioner for Refugees (UNHCR)",
+     "spend": 970155602.0,
+     "pct": 1.7404674143159538,
+     "count": 14
+    },
+    {
+     "ref": "US-GOV-11",
+     "name": "Department of State",
+     "spend": 951760284.6397238,
+     "pct": 1.7074660582700179,
+     "count": 1501
+    },
+    {
+     "ref": "XM-DAC-41140",
+     "name": "World Food Programme",
+     "spend": 857376646.2300001,
+     "pct": 1.5381410069503598,
+     "count": 20
+    },
+    {
+     "ref": "DAC-1601",
+     "name": "Gates Foundation",
+     "spend": 820229310.7414056,
+     "pct": 1.471498370642044,
+     "count": 879
+    }
+   ]
+  },
+  "share_attributed_from_elsewhere": 0.7875305348347778
+ },
+ "UG": {
+  "code": "UG",
+  "name": "Uganda",
+  "n_activities": 20782,
+  "n_multi_country": 4644,
+  "n_null_percent": 0,
+  "raw": {
+   "total_spend": 248857067232.3235,
+   "n_orgs": 427,
+   "hhi": 0.24273651897455695,
+   "gini": 0.9713105748172417,
+   "top_50": 2,
+   "top_80": 6,
+   "tiny_orgs": 393,
+   "top_15": [
+    {
+     "ref": "US-GOV-11",
+     "name": "Department of State",
+     "spend": 107544590236.0,
+     "pct": 43.21540530556862,
+     "count": 864
+    },
+    {
+     "ref": "US-GOV-1",
+     "name": "U.S. Agency for International Development",
+     "spend": 53508044785.0,
+     "pct": 21.50151706764547,
+     "count": 2102
+    },
+    {
+     "ref": "US-GOV-14",
+     "name": "Department of Health and Human Services",
+     "spend": 17528546448.0,
+     "pct": 7.043620116135186,
+     "count": 183
+    },
+    {
+     "ref": "US-501c3-522318905",
+     "name": "AidData",
+     "spend": 12053472878.000074,
+     "pct": 4.843532479126828,
+     "count": 648
+    },
+    {
+     "ref": "SE-0",
+     "name": "Sweden",
+     "spend": 6301851766.734421,
+     "pct": 2.5323177825812966,
+     "count": 2748
+    },
+    {
+     "ref": "44000",
+     "name": "World Bank",
+     "spend": 5143572382.0,
+     "pct": 2.066878163921363,
+     "count": 50
+    },
+    {
+     "ref": "US-GOV-7",
+     "name": "Department of Defense",
+     "spend": 4147622907.0,
+     "pct": 1.6666687239900395,
+     "count": 80
+    },
+    {
+     "ref": "GB-GOV-1",
+     "name": "UK - Foreign, Commonwealth and Development Office",
+     "spend": 3508916837.6600986,
+     "pct": 1.4100129350091182,
+     "count": 430
+    },
+    {
+     "ref": "XM-DAC-3-1",
+     "name": "Ministry of Foreign Affairs, Denmark",
+     "spend": 3095826946.0186486,
+     "pct": 1.244018094582985,
+     "count": 615
+    },
+    {
+     "ref": "XM-DAC-46002",
+     "name": "African Development Bank",
+     "spend": 3083676468.0000005,
+     "pct": 1.239135581840317,
+     "count": 130
+    },
+    {
+     "ref": "47045",
+     "name": "The Global Fund to Fight AIDS, Tuberculosis and Malaria",
+     "spend": 2612422851.0,
+     "pct": 1.0497683992077032,
+     "count": 40
+    },
+    {
+     "ref": "XM-DAC-41111",
+     "name": "United Nations Capital Development Fund (UNCDF)",
+     "spend": 2294038594.57,
+     "pct": 0.9218297957471198,
+     "count": 63
+    },
+    {
+     "ref": "XI-IATI-UNPF",
+     "name": "UN Pooled Funds",
+     "spend": 2273361617.98,
+     "pct": 0.9135210196211451,
+     "count": 56
+    },
+    {
+     "ref": "US-GOV-10",
+     "name": "Peace Corps",
+     "spend": 1969765937.0,
+     "pct": 0.7915250143011214,
+     "count": 90
+    },
+    {
+     "ref": "CA-3",
+     "name": "Foreign Affairs, Trade and Development Canada (DFATD)",
+     "spend": 1704628184.613,
+     "pct": 0.6849828311372101,
+     "count": 203
+    }
+   ]
+  },
+  "weighted": {
+   "total_spend": 51522331912.03983,
+   "n_orgs": 427,
+   "hhi": 0.09222690034995808,
+   "gini": 0.9490825546667419,
+   "top_50": 4,
+   "top_80": 14,
+   "tiny_orgs": 379,
+   "top_15": [
+    {
+     "ref": "US-501c3-522318905",
+     "name": "AidData",
+     "spend": 11764042908.803534,
+     "pct": 22.8329007485286,
+     "count": 648
+    },
+    {
+     "ref": "US-GOV-1",
+     "name": "U.S. Agency for International Development",
+     "spend": 6504812520.022018,
+     "pct": 12.625229252292366,
+     "count": 2102
+    },
+    {
+     "ref": "44000",
+     "name": "World Bank",
+     "spend": 5143572382.0,
+     "pct": 9.98319018397931,
+     "count": 50
+    },
+    {
+     "ref": "XM-DAC-46002",
+     "name": "African Development Bank",
+     "spend": 3083676468.0000005,
+     "pct": 5.985125970743186,
+     "count": 130
+    },
+    {
+     "ref": "47045",
+     "name": "The Global Fund to Fight AIDS, Tuberculosis and Malaria",
+     "spend": 2612422851.0,
+     "pct": 5.070467026725404,
+     "count": 40
+    },
+    {
+     "ref": "US-GOV-14",
+     "name": "Department of Health and Human Services",
+     "spend": 2175536160.5791597,
+     "pct": 4.222511054610819,
+     "count": 183
+    },
+    {
+     "ref": "GB-GOV-1",
+     "name": "UK - Foreign, Commonwealth and Development Office",
+     "spend": 1805045279.048779,
+     "pct": 3.503423102297458,
+     "count": 430
+    },
+    {
+     "ref": "XM-DAC-41121",
+     "name": "United Nations High Commissioner for Refugees (UNHCR)",
+     "spend": 1667197980.0,
+     "pct": 3.2358744608964525,
+     "count": 10
+    },
+    {
+     "ref": "SE-0",
+     "name": "Sweden",
+     "spend": 1406283759.1554618,
+     "pct": 2.729464500085717,
+     "count": 2748
+    },
+    {
+     "ref": "XM-DAC-3-1",
+     "name": "Ministry of Foreign Affairs, Denmark",
+     "spend": 1303834424.0944474,
+     "pct": 2.530619977217617,
+     "count": 615
+    },
+    {
+     "ref": "XM-DAC-41122",
+     "name": "UNICEF",
+     "spend": 1021429635.1999998,
+     "pct": 1.9824988452459977,
+     "count": 109
+    },
+    {
+     "ref": "XM-DAC-46025",
+     "name": "Islamic Development Bank",
+     "spend": 1002473314.11,
+     "pct": 1.9457064090605345,
+     "count": 37
+    },
+    {
+     "ref": "47122",
+     "name": "Gavi, The Vaccine Alliance",
+     "spend": 940614384.36,
+     "pct": 1.8256440449276239,
+     "count": 26
+    },
+    {
+     "ref": "DE-1",
+     "name": "Federal Ministry for Economic Cooperation and Development (BMZ)",
+     "spend": 845385997.232001,
+     "pct": 1.6408147027880342,
+     "count": 411
+    },
+    {
+     "ref": "XM-DAC-7",
+     "name": "Ministry of Foreign Affairs of the Netherlands",
+     "spend": 669800740.9164997,
+     "pct": 1.3000202360017394,
+     "count": 169
+    }
+   ]
+  },
+  "share_attributed_from_elsewhere": 0.7928865967072901
+ },
+ "RW": {
+  "code": "RW",
+  "name": "Rwanda",
+  "n_activities": 9176,
+  "n_multi_country": 2617,
+  "n_null_percent": 0,
+  "raw": {
+   "total_spend": 105079433956.53004,
+   "n_orgs": 253,
+   "hhi": 0.2614665823452164,
+   "gini": 0.9551721226042208,
+   "top_50": 2,
+   "top_80": 7,
+   "tiny_orgs": 211,
+   "top_15": [
+    {
+     "ref": "US-GOV-1",
+     "name": "U.S. Agency for International Development",
+     "spend": 50208574131.0,
+     "pct": 47.7815422490481,
+     "count": 1327
+    },
+    {
+     "ref": "US-GOV-14",
+     "name": "Department of Health and Human Services",
+     "spend": 16622166064.0,
+     "pct": 15.818667305418078,
+     "count": 76
+    },
+    {
+     "ref": "US-GOV-11",
+     "name": "Department of State",
+     "spend": 5474965990.0,
+     "pct": 5.21031165076976,
+     "count": 245
+    },
+    {
+     "ref": "44000",
+     "name": "World Bank",
+     "spend": 4778015675.0,
+     "pct": 4.5470512117305475,
+     "count": 54
+    },
+    {
+     "ref": "GB-GOV-1",
+     "name": "UK - Foreign, Commonwealth and Development Office",
+     "spend": 3037511740.10458,
+     "pct": 2.8906814832683225,
+     "count": 347
+    },
+    {
+     "ref": "XM-DAC-46002",
+     "name": "African Development Bank",
+     "spend": 2080039587.3159997,
+     "pct": 1.979492569570259,
+     "count": 118
+    },
+    {
+     "ref": "SE-0",
+     "name": "Sweden",
+     "spend": 2055886933.0787735,
+     "pct": 1.9565074303019812,
+     "count": 1403
+    },
+    {
+     "ref": "47045",
+     "name": "The Global Fund to Fight AIDS, Tuberculosis and Malaria",
+     "spend": 1913981967.0,
+     "pct": 1.8214620072961079,
+     "count": 26
+    },
+    {
+     "ref": "US-501c3-522318905",
+     "name": "AidData",
+     "spend": 1737850680.7,
+     "pct": 1.6538447299011199,
+     "count": 67
+    },
+    {
+     "ref": "US-GOV-10",
+     "name": "Peace Corps",
+     "spend": 1637360707.0,
+     "pct": 1.5582123402733157,
+     "count": 73
+    },
+    {
+     "ref": "US-GOV-7",
+     "name": "Department of Defense",
+     "spend": 1618020645.0,
+     "pct": 1.5398071573828171,
+     "count": 40
+    },
+    {
+     "ref": "XI-IATI-UNPF",
+     "name": "UN Pooled Funds",
+     "spend": 1504497805.25,
+     "pct": 1.4317718973175955,
+     "count": 57
+    },
+    {
+     "ref": "CA-3",
+     "name": "Foreign Affairs, Trade and Development Canada (DFATD)",
+     "spend": 1158190227.5356002,
+     "pct": 1.102204478960867,
+     "count": 123
+    },
+    {
+     "ref": "DE-1",
+     "name": "Federal Ministry for Economic Cooperation and Development (BMZ)",
+     "spend": 734829742.537,
+     "pct": 0.6993088132174267,
+     "count": 228
+    },
+    {
+     "ref": "XM-DAC-7",
+     "name": "Ministry of Foreign Affairs of the Netherlands",
+     "spend": 655376893.6914995,
+     "pct": 0.6236966350262413,
+     "count": 152
+    }
+   ]
+  },
+  "weighted": {
+   "total_spend": 21724974100.990612,
+   "n_orgs": 253,
+   "hhi": 0.09143182975413831,
+   "gini": 0.9317246114919617,
+   "top_50": 4,
+   "top_80": 12,
+   "tiny_orgs": 206,
+   "top_15": [
+    {
+     "ref": "44000",
+     "name": "World Bank",
+     "spend": 4778015675.0,
+     "pct": 21.993193882712767,
+     "count": 54
+    },
+    {
+     "ref": "US-GOV-1",
+     "name": "U.S. Agency for International Development",
+     "spend": 2246117737.490672,
+     "pct": 10.338874177936322,
+     "count": 1327
+    },
+    {
+     "ref": "XM-DAC-46002",
+     "name": "African Development Bank",
+     "spend": 2080039587.3159997,
+     "pct": 9.574416879149027,
+     "count": 118
+    },
+    {
+     "ref": "47045",
+     "name": "The Global Fund to Fight AIDS, Tuberculosis and Malaria",
+     "spend": 1913981967.0,
+     "pct": 8.810054079248482,
+     "count": 26
+    },
+    {
+     "ref": "US-501c3-522318905",
+     "name": "AidData",
+     "spend": 1598527905.6285279,
+     "pct": 7.3580198447999,
+     "count": 67
+    },
+    {
+     "ref": "GB-GOV-1",
+     "name": "UK - Foreign, Commonwealth and Development Office",
+     "spend": 1329692824.0734708,
+     "pct": 6.120572654734901,
+     "count": 347
+    },
+    {
+     "ref": "DE-1",
+     "name": "Federal Ministry for Economic Cooperation and Development (BMZ)",
+     "spend": 734829742.537,
+     "pct": 3.382419417952233,
+     "count": 228
+    },
+    {
+     "ref": "SE-0",
+     "name": "Sweden",
+     "spend": 656936605.1623284,
+     "pct": 3.023877506635893,
+     "count": 1403
+    },
+    {
+     "ref": "XM-DAC-7",
+     "name": "Ministry of Foreign Affairs of the Netherlands",
+     "spend": 655376893.6914995,
+     "pct": 3.0166981587408,
+     "count": 152
+    },
+    {
+     "ref": "XI-IATI-WBTF",
+     "name": "World Bank Trust Funds",
+     "spend": 605853621.3800001,
+     "pct": 2.788742663460181,
+     "count": 53
+    },
+    {
+     "ref": "XM-DAC-41122",
+     "name": "UNICEF",
+     "spend": 467265699.92,
+     "pct": 2.150822816855251,
+     "count": 162
+    },
+    {
+     "ref": "US-GOV-14",
+     "name": "Department of Health and Human Services",
+     "spend": 457485285.5972223,
+     "pct": 2.1058035948423157,
+     "count": 76
+    },
+    {
+     "ref": "XM-DAC-41121",
+     "name": "United Nations High Commissioner for Refugees (UNHCR)",
+     "spend": 413369512.0,
+     "pct": 1.9027388022577725,
+     "count": 10
+    },
+    {
+     "ref": "XM-DAC-41108",
+     "name": "International Fund for Agricultural Development",
+     "spend": 385180995.5,
+     "pct": 1.7729871331926539,
+     "count": 21
+    },
+    {
+     "ref": "XI-IATI-EC_INTPA",
+     "name": "European Commission - Directorate-General for International Partnerships",
+     "spend": 332068296.9300001,
+     "pct": 1.5285095180613288,
+     "count": 159
+    }
+   ]
+  },
+  "share_attributed_from_elsewhere": 0.793251892563697
+ },
+ "TZ": {
+  "code": "TZ",
+  "name": "Tanzania",
+  "n_activities": 18234,
+  "n_multi_country": 3512,
+  "n_null_percent": 0,
+  "raw": {
+   "total_spend": 250518092672.86374,
+   "n_orgs": 291,
+   "hhi": 0.24992890972577286,
+   "gini": 0.9665309861639527,
+   "top_50": 2,
+   "top_80": 5,
+   "tiny_orgs": 258,
+   "top_15": [
+    {
+     "ref": "US-GOV-11",
+     "name": "Department of State",
+     "spend": 107707514066.0,
+     "pct": 42.99390631504155,
+     "count": 634
+    },
+    {
+     "ref": "US-GOV-1",
+     "name": "U.S. Agency for International Development",
+     "spend": 58892067766.0,
+     "pct": 23.50810958907609,
+     "count": 2071
+    },
+    {
+     "ref": "US-GOV-14",
+     "name": "Department of Health and Human Services",
+     "spend": 17369554019.0,
+     "pct": 6.93345292297185,
+     "count": 192
+    },
+    {
+     "ref": "44000",
+     "name": "World Bank",
+     "spend": 12048094467.0,
+     "pct": 4.809271194130027,
+     "count": 76
+    },
+    {
+     "ref": "US-501c3-522318905",
+     "name": "AidData",
+     "spend": 5817288238.599999,
+     "pct": 2.322103037163244,
+     "count": 115
+    },
+    {
+     "ref": "SE-0",
+     "name": "Sweden",
+     "spend": 5634668388.106509,
+     "pct": 2.249206166304514,
+     "count": 3905
+    },
+    {
+     "ref": "XM-DAC-46002",
+     "name": "African Development Bank",
+     "spend": 5005253374.976,
+     "pct": 1.9979608345142774,
+     "count": 145
+    },
+    {
+     "ref": "GB-GOV-1",
+     "name": "UK - Foreign, Commonwealth and Development Office",
+     "spend": 4809042852.69645,
+     "pct": 1.9196389376061094,
+     "count": 499
+    },
+    {
+     "ref": "US-GOV-7",
+     "name": "Department of Defense",
+     "spend": 3739246500.0,
+     "pct": 1.4926053683806597,
+     "count": 42
+    },
+    {
+     "ref": "47045",
+     "name": "The Global Fund to Fight AIDS, Tuberculosis and Malaria",
+     "spend": 3565243922.2,
+     "pct": 1.4231482780988731,
+     "count": 38
+    },
+    {
+     "ref": "CA-3",
+     "name": "Foreign Affairs, Trade and Development Canada (DFATD)",
+     "spend": 3290631813.8409986,
+     "pct": 1.3135306032119738,
+     "count": 324
+    },
+    {
+     "ref": "XM-DAC-3-1",
+     "name": "Ministry of Foreign Affairs, Denmark",
+     "spend": 2296431351.4352,
+     "pct": 0.9166728546165204,
+     "count": 528
+    },
+    {
+     "ref": "US-GOV-10",
+     "name": "Peace Corps",
+     "spend": 2186828694.0,
+     "pct": 0.8729224586807173,
+     "count": 97
+    },
+    {
+     "ref": "DAC-1601",
+     "name": "Gates Foundation",
+     "spend": 1263447408.24,
+     "pct": 0.5043337967169735,
+     "count": 359
+    },
+    {
+     "ref": "47122",
+     "name": "Gavi, The Vaccine Alliance",
+     "spend": 885620523.6199999,
+     "pct": 0.35351559409183175,
+     "count": 22
+    }
+   ]
+  },
+  "weighted": {
+   "total_spend": 54458374739.57791,
+   "n_orgs": 290,
+   "hhi": 0.09403829829196413,
+   "gini": 0.941508470450612,
+   "top_50": 4,
+   "top_80": 12,
+   "tiny_orgs": 252,
+   "top_15": [
+    {
+     "ref": "44000",
+     "name": "World Bank",
+     "spend": 12048094467.0,
+     "pct": 22.12349252913709,
+     "count": 76
+    },
+    {
+     "ref": "US-GOV-1",
+     "name": "U.S. Agency for International Development",
+     "spend": 6194234354.520654,
+     "pct": 11.37425489493898,
+     "count": 2071
+    },
+    {
+     "ref": "US-501c3-522318905",
+     "name": "AidData",
+     "spend": 5420677173.417087,
+     "pct": 9.953799024188617,
+     "count": 115
+    },
+    {
+     "ref": "XM-DAC-46002",
+     "name": "African Development Bank",
+     "spend": 5005253374.976,
+     "pct": 9.190970900088955,
+     "count": 145
+    },
+    {
+     "ref": "47045",
+     "name": "The Global Fund to Fight AIDS, Tuberculosis and Malaria",
+     "spend": 3565243922.2,
+     "pct": 6.546732140371681,
+     "count": 38
+    },
+    {
+     "ref": "GB-GOV-1",
+     "name": "UK - Foreign, Commonwealth and Development Office",
+     "spend": 3104705306.6599774,
+     "pct": 5.701061262857734,
+     "count": 499
+    },
+    {
+     "ref": "SE-0",
+     "name": "Sweden",
+     "spend": 2427356872.3111815,
+     "pct": 4.457270133232763,
+     "count": 3905
+    },
+    {
+     "ref": "US-GOV-14",
+     "name": "Department of Health and Human Services",
+     "spend": 1873042196.4937098,
+     "pct": 3.439401571293068,
+     "count": 192
+    },
+    {
+     "ref": "CA-3",
+     "name": "Foreign Affairs, Trade and Development Canada (DFATD)",
+     "spend": 1424221717.8553324,
+     "pct": 2.615248296824899,
+     "count": 324
+    },
+    {
+     "ref": "XM-DAC-3-1",
+     "name": "Ministry of Foreign Affairs, Denmark",
+     "spend": 1380550335.6169322,
+     "pct": 2.5350560721262396,
+     "count": 528
+    },
+    {
+     "ref": "47122",
+     "name": "Gavi, The Vaccine Alliance",
+     "spend": 885620523.6199999,
+     "pct": 1.62623384898112,
+     "count": 22
+    },
+    {
+     "ref": "DE-1",
+     "name": "Federal Ministry for Economic Cooperation and Development (BMZ)",
+     "spend": 800145001.7756008,
+     "pct": 1.4692781516193343,
+     "count": 412
+    },
+    {
+     "ref": "XM-DAC-41122",
+     "name": "UNICEF",
+     "spend": 774210677.3999999,
+     "pct": 1.4216558630372385,
+     "count": 147
+    },
+    {
+     "ref": "US-GOV-18",
+     "name": "Millennium Challenge Corporation",
+     "spend": 748787715.4599999,
+     "pct": 1.3749725713276097,
+     "count": 138
+    },
+    {
+     "ref": "XI-IATI-EC_INTPA",
+     "name": "European Commission - Directorate-General for International Partnerships",
+     "spend": 609877672.5849993,
+     "pct": 1.1198969405558985,
+     "count": 147
+    }
+   ]
+  },
+  "share_attributed_from_elsewhere": 0.7825268798439787
+ },
+ "ET": {
+  "code": "ET",
+  "name": "Ethiopia",
+  "n_activities": 22304,
+  "n_multi_country": 4368,
+  "n_null_percent": 0,
+  "raw": {
+   "total_spend": 289233196177.0367,
+   "n_orgs": 358,
+   "hhi": 0.19694484870908738,
+   "gini": 0.962394652082044,
+   "top_50": 2,
+   "top_80": 8,
+   "tiny_orgs": 316,
+   "top_15": [
+    {
+     "ref": "US-GOV-11",
+     "name": "Department of State",
+     "spend": 105233824849.0,
+     "pct": 36.38372988990775,
+     "count": 779
+    },
+    {
+     "ref": "US-GOV-1",
+     "name": "U.S. Agency for International Development",
+     "spend": 66483424775.0,
+     "pct": 22.986097603508203,
+     "count": 2566
+    },
+    {
+     "ref": "44000",
+     "name": "World Bank",
+     "spend": 20650546613.0,
+     "pct": 7.139756738144267,
+     "count": 82
+    },
+    {
+     "ref": "US-GOV-14",
+     "name": "Department of Health and Human Services",
+     "spend": 16920226013.0,
+     "pct": 5.850029054978635,
+     "count": 178
+    },
+    {
+     "ref": "GB-GOV-1",
+     "name": "UK - Foreign, Commonwealth and Development Office",
+     "spend": 7886934761.698655,
+     "pct": 2.7268428610356135,
+     "count": 609
+    },
+    {
+     "ref": "US-501c3-522318905",
+     "name": "AidData",
+     "spend": 6690397014.6,
+     "pct": 2.3131497708530233,
+     "count": 94
+    },
+    {
+     "ref": "SE-0",
+     "name": "Sweden",
+     "spend": 5870844131.536418,
+     "pct": 2.0297960984889625,
+     "count": 3061
+    },
+    {
+     "ref": "CA-3",
+     "name": "Foreign Affairs, Trade and Development Canada (DFATD)",
+     "spend": 4770326919.165998,
+     "pct": 1.649301318872862,
+     "count": 432
+    },
+    {
+     "ref": "XM-DAC-46002",
+     "name": "African Development Bank",
+     "spend": 4305230895.01,
+     "pct": 1.488498191741038,
+     "count": 127
+    },
+    {
+     "ref": "XM-DAC-41122",
+     "name": "UNICEF",
+     "spend": 3452017329.339999,
+     "pct": 1.1935066150660847,
+     "count": 303
+    },
+    {
+     "ref": "47045",
+     "name": "The Global Fund to Fight AIDS, Tuberculosis and Malaria",
+     "spend": 3429325584.5,
+     "pct": 1.185661130820179,
+     "count": 36
+    },
+    {
+     "ref": "US-GOV-7",
+     "name": "Department of Defense",
+     "spend": 3045831662.0,
+     "pct": 1.0530712595436929,
+     "count": 30
+    },
+    {
+     "ref": "XM-DAC-3-1",
+     "name": "Ministry of Foreign Affairs, Denmark",
+     "spend": 2885468776.4460506,
+     "pct": 0.9976271100914311,
+     "count": 385
+    },
+    {
+     "ref": "XI-IATI-WBTF",
+     "name": "World Bank Trust Funds",
+     "spend": 2492152287.96,
+     "pct": 0.8616411673695226,
+     "count": 89
+    },
+    {
+     "ref": "XM-DAC-41140",
+     "name": "World Food Programme",
+     "spend": 2425955523.67,
+     "pct": 0.8387541802722732,
+     "count": 24
+    }
+   ]
+  },
+  "weighted": {
+   "total_spend": 90749347581.76839,
+   "n_orgs": 358,
+   "hhi": 0.09498218328412324,
+   "gini": 0.9451688938476647,
+   "top_50": 4,
+   "top_80": 15,
+   "tiny_orgs": 313,
+   "top_15": [
+    {
+     "ref": "44000",
+     "name": "World Bank",
+     "spend": 20650546613.0,
+     "pct": 22.75558685906047,
+     "count": 82
+    },
+    {
+     "ref": "US-GOV-1",
+     "name": "U.S. Agency for International Development",
+     "spend": 13832967651.023228,
+     "pct": 15.243049145404855,
+     "count": 2566
+    },
+    {
+     "ref": "US-501c3-522318905",
+     "name": "AidData",
+     "spend": 6646904962.645841,
+     "pct": 7.324465838894041,
+     "count": 94
+    },
+    {
+     "ref": "GB-GOV-1",
+     "name": "UK - Foreign, Commonwealth and Development Office",
+     "spend": 6188691285.19348,
+     "pct": 6.819543556075979,
+     "count": 609
+    },
+    {
+     "ref": "XM-DAC-46002",
+     "name": "African Development Bank",
+     "spend": 4305230895.01,
+     "pct": 4.744090188781615,
+     "count": 127
+    },
+    {
+     "ref": "XM-DAC-41122",
+     "name": "UNICEF",
+     "spend": 3452017329.339999,
+     "pct": 3.803903191953649,
+     "count": 303
+    },
+    {
+     "ref": "47045",
+     "name": "The Global Fund to Fight AIDS, Tuberculosis and Malaria",
+     "spend": 3429325584.5,
+     "pct": 3.778898334679548,
+     "count": 36
+    },
+    {
+     "ref": "XI-IATI-WBTF",
+     "name": "World Bank Trust Funds",
+     "spend": 2492152287.96,
+     "pct": 2.7461930629467965,
+     "count": 89
+    },
+    {
+     "ref": "XM-DAC-41140",
+     "name": "World Food Programme",
+     "spend": 2425955523.67,
+     "pct": 2.6732484456531527,
+     "count": 24
+    },
+    {
+     "ref": "DE-1",
+     "name": "Federal Ministry for Economic Cooperation and Development (BMZ)",
+     "spend": 2091926033.5104003,
+     "pct": 2.305169226286173,
+     "count": 570
+    },
+    {
+     "ref": "47122",
+     "name": "Gavi, The Vaccine Alliance",
+     "spend": 1995380623.5500002,
+     "pct": 2.1987823347733615,
+     "count": 26
+    },
+    {
+     "ref": "CA-3",
+     "name": "Foreign Affairs, Trade and Development Canada (DFATD)",
+     "spend": 1818523645.0214307,
+     "pct": 2.0038972108123163,
+     "count": 432
+    },
+    {
+     "ref": "XM-DAC-7",
+     "name": "Ministry of Foreign Affairs of the Netherlands",
+     "spend": 1576432210.636555,
+     "pct": 1.7371278721493106,
+     "count": 262
+    },
+    {
+     "ref": "XM-DAC-41121",
+     "name": "United Nations High Commissioner for Refugees (UNHCR)",
+     "spend": 1537284898.8,
+     "pct": 1.693990028319324,
+     "count": 14
+    },
+    {
+     "ref": "SE-0",
+     "name": "Sweden",
+     "spend": 1481060651.304023,
+     "pct": 1.6320344892502225,
+     "count": 3061
+    }
+   ]
+  },
+  "share_attributed_from_elsewhere": 0.6861692536745397
+ }
+}

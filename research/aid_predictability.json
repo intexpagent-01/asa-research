@@ -1,0 +1,1064 @@
+{
+  "KE": {
+    "country": "Kenya",
+    "code": "KE",
+    "n_commitments": 10000,
+    "n_disbursements": 10000,
+    "n_expenditures": 10000,
+    "by_year": [
+      {
+        "year": 2010,
+        "commitments": 12988869.802199999,
+        "disbursements": 0,
+        "expenditures": 21339129.117691994,
+        "d_c_ratio": 0.0
+      },
+      {
+        "year": 2011,
+        "commitments": 33254246.830000002,
+        "disbursements": 1850009.579,
+        "expenditures": 3017717.962260002,
+        "d_c_ratio": 0.055632280245512325
+      },
+      {
+        "year": 2012,
+        "commitments": 77469211.40999998,
+        "disbursements": 7247527.633,
+        "expenditures": 1923188.0616599997,
+        "d_c_ratio": 0.09355365184554422
+      },
+      {
+        "year": 2013,
+        "commitments": 310383711.6473,
+        "disbursements": 1385000.101,
+        "expenditures": 2305992.0370600005,
+        "d_c_ratio": 0.004462219018032185
+      },
+      {
+        "year": 2014,
+        "commitments": 428208414.7299999,
+        "disbursements": 1885888.0152000003,
+        "expenditures": 2777906.690336401,
+        "d_c_ratio": 0.0044041358140734285
+      },
+      {
+        "year": 2015,
+        "commitments": 618408355.3440001,
+        "disbursements": 22773661.48962887,
+        "expenditures": 3854323.555278002,
+        "d_c_ratio": 0.036826251283362164
+      },
+      {
+        "year": 2016,
+        "commitments": 383754230.98,
+        "disbursements": 58083132.073060155,
+        "expenditures": 3951116.3236150015,
+        "d_c_ratio": 0.1513550272129436
+      },
+      {
+        "year": 2017,
+        "commitments": 474623615.0882,
+        "disbursements": 49737666.55220886,
+        "expenditures": 5600007.178622188,
+        "d_c_ratio": 0.10479391452733772
+      },
+      {
+        "year": 2018,
+        "commitments": 545014494.7533,
+        "disbursements": 73338712.98212601,
+        "expenditures": 3720060.0552193215,
+        "d_c_ratio": 0.13456286702122056
+      },
+      {
+        "year": 2019,
+        "commitments": 316016973.1070603,
+        "disbursements": 47452572.24802801,
+        "expenditures": 4779906.322360596,
+        "d_c_ratio": 0.15015830251608675
+      },
+      {
+        "year": 2020,
+        "commitments": 368471701.60372,
+        "disbursements": 25067337.51397598,
+        "expenditures": 3609673.515083235,
+        "d_c_ratio": 0.0680305635544711
+      },
+      {
+        "year": 2021,
+        "commitments": 404706757.81978,
+        "disbursements": 5699184.608465999,
+        "expenditures": 5298507.763450808,
+        "d_c_ratio": 0.014082257087003978
+      },
+      {
+        "year": 2022,
+        "commitments": 945951563.5208662,
+        "disbursements": 655227.5951549993,
+        "expenditures": 6797803.14934992,
+        "d_c_ratio": 0.0006926650585746889
+      },
+      {
+        "year": 2023,
+        "commitments": 868159466.610472,
+        "disbursements": 18096948.712366555,
+        "expenditures": 9830266.713909468,
+        "d_c_ratio": 0.020845189632063693
+      },
+      {
+        "year": 2024,
+        "commitments": 653335970.0138525,
+        "disbursements": 32082370.919000007,
+        "expenditures": 16125621.285070632,
+        "d_c_ratio": 0.0491054715972852
+      },
+      {
+        "year": 2025,
+        "commitments": 332315559.95567185,
+        "disbursements": 37151710.272300005,
+        "expenditures": 13515584.702315977,
+        "d_c_ratio": 0.11179648126394003
+      }
+    ],
+    "coverage": {
+      "total_activities": 1710,
+      "commitment_only": 1591,
+      "disbursement_only": 108,
+      "both": 11
+    },
+    "activity_ratios": {
+      "n": 11,
+      "median": 0.7999999999999999,
+      "mean": 0.7818182027530373,
+      "over_committed_pct": 9.090909090909092,
+      "under_committed_pct": 0.0
+    },
+    "timing": {
+      "n": 11,
+      "median_days": 4,
+      "mean_days": 26.3,
+      "p25_days": 3,
+      "p75_days": 15
+    },
+    "by_sector": [
+      {
+        "sector_group": "130",
+        "commitments": 2621669293.0027766,
+        "disbursements": 29970613.00671,
+        "ratio": 0.011431881620882324
+      },
+      {
+        "sector_group": "720",
+        "commitments": 1930025413.2545965,
+        "disbursements": 37401554.9,
+        "ratio": 0.01937878881964039
+      },
+      {
+        "sector_group": "122",
+        "commitments": 556986715.2804799,
+        "disbursements": 81946613.08377558,
+        "ratio": 0.14712489694212905
+      },
+      {
+        "sector_group": "311",
+        "commitments": 454051945.73500013,
+        "disbursements": 62586412.99061942,
+        "ratio": 0.13783976388275834
+      },
+      {
+        "sector_group": "151",
+        "commitments": 255068644.88976148,
+        "disbursements": 36556327.660933115,
+        "ratio": 0.14331956668657747
+      },
+      {
+        "sector_group": "112",
+        "commitments": 178808507.66169998,
+        "disbursements": 5735162.952299968,
+        "ratio": 0.032074329277165685
+      },
+      {
+        "sector_group": "140",
+        "commitments": 175121612.183,
+        "disbursements": 4760180.57488,
+        "ratio": 0.02718214225840765
+      },
+      {
+        "sector_group": "520",
+        "commitments": 158324930.6919999,
+        "disbursements": 0,
+        "ratio": 0.0
+      },
+      {
+        "sector_group": "910",
+        "commitments": 139560295.22099996,
+        "disbursements": 0,
+        "ratio": 0.0
+      },
+      {
+        "sector_group": "410",
+        "commitments": 80854964.0288,
+        "disbursements": 10515598.223,
+        "ratio": 0.13005507267623562
+      },
+      {
+        "sector_group": "121",
+        "commitments": 55419507.18571679,
+        "disbursements": 24853524.920579996,
+        "ratio": 0.4484616732027792
+      },
+      {
+        "sector_group": "730",
+        "commitments": 69717935.36999996,
+        "disbursements": 0,
+        "ratio": 0.0
+      }
+    ]
+  },
+  "UG": {
+    "country": "Uganda",
+    "code": "UG",
+    "n_commitments": 10000,
+    "n_disbursements": 10000,
+    "n_expenditures": 10000,
+    "by_year": [
+      {
+        "year": 2010,
+        "commitments": 492996971.17090005,
+        "disbursements": 124444891.5481,
+        "expenditures": 0,
+        "d_c_ratio": 0.25242526592513387
+      },
+      {
+        "year": 2011,
+        "commitments": 222486445.31019998,
+        "disbursements": 190516576.41749993,
+        "expenditures": 0,
+        "d_c_ratio": 0.8563064421829101
+      },
+      {
+        "year": 2012,
+        "commitments": 1200417470.7547,
+        "disbursements": 348682133.028,
+        "expenditures": 0,
+        "d_c_ratio": 0.2904673928219191
+      },
+      {
+        "year": 2013,
+        "commitments": 535981004.7317,
+        "disbursements": 389554241.0210002,
+        "expenditures": 0,
+        "d_c_ratio": 0.7268060576437821
+      },
+      {
+        "year": 2014,
+        "commitments": 349733855.0921001,
+        "disbursements": 246213499.2219999,
+        "expenditures": 0,
+        "d_c_ratio": 0.7040024739874303
+      },
+      {
+        "year": 2015,
+        "commitments": 159436550.1357999,
+        "disbursements": 339141296.2630002,
+        "expenditures": 6886857.229599985,
+        "d_c_ratio": 2.127123899596027
+      },
+      {
+        "year": 2016,
+        "commitments": 253976853.18189397,
+        "disbursements": 308157697.6167698,
+        "expenditures": 626306.0412000001,
+        "d_c_ratio": 1.2133298517407505
+      },
+      {
+        "year": 2017,
+        "commitments": 245467040.68409994,
+        "disbursements": 361885764.3218603,
+        "expenditures": 741047.2609999989,
+        "d_c_ratio": 1.4742743600660573
+      },
+      {
+        "year": 2018,
+        "commitments": 558944926.839609,
+        "disbursements": 374157850.61485106,
+        "expenditures": 3038881.6101999963,
+        "d_c_ratio": 0.6694002085865909
+      },
+      {
+        "year": 2019,
+        "commitments": 504468756.1875989,
+        "disbursements": 501284159.75872874,
+        "expenditures": 1789910.3182711962,
+        "d_c_ratio": 0.9936872276234965
+      },
+      {
+        "year": 2020,
+        "commitments": 933077358.751099,
+        "disbursements": 882836700.534006,
+        "expenditures": 4033340.56183046,
+        "d_c_ratio": 0.9461559561531545
+      },
+      {
+        "year": 2021,
+        "commitments": 211255874.553504,
+        "disbursements": 525724178.2971579,
+        "expenditures": 3844204.481824398,
+        "d_c_ratio": 2.488565960157523
+      },
+      {
+        "year": 2022,
+        "commitments": 365350936.67777145,
+        "disbursements": 649020644.8992583,
+        "expenditures": 30116783.93126978,
+        "d_c_ratio": 1.776430767636638
+      },
+      {
+        "year": 2023,
+        "commitments": 497277739.3696586,
+        "disbursements": 486778733.9110363,
+        "expenditures": 2364597.196866157,
+        "d_c_ratio": 0.9788870391183594
+      },
+      {
+        "year": 2024,
+        "commitments": 605461714.8319303,
+        "disbursements": 787122753.1573331,
+        "expenditures": 15212.0351612,
+        "d_c_ratio": 1.3000372011561954
+      },
+      {
+        "year": 2025,
+        "commitments": 250031614.10423458,
+        "disbursements": 716033352.3435757,
+        "expenditures": -426.0458899999908,
+        "d_c_ratio": 2.863771267120932
+      }
+    ],
+    "coverage": {
+      "total_activities": 1922,
+      "commitment_only": 873,
+      "disbursement_only": 1048,
+      "both": 1
+    },
+    "activity_ratios": {
+      "n": 1,
+      "median": 0.984504096799444,
+      "mean": 0.984504096799444,
+      "over_committed_pct": 0.0,
+      "under_committed_pct": 0.0
+    },
+    "timing": {
+      "n": 1,
+      "median_days": 0,
+      "mean_days": 0.0,
+      "p25_days": 0,
+      "p75_days": 0
+    },
+    "by_sector": [
+      {
+        "sector_group": "152",
+        "commitments": 2657778458.7965918,
+        "disbursements": 815546.2834,
+        "ratio": 0.000306852619976937
+      },
+      {
+        "sector_group": "130",
+        "commitments": 1751837817.5431094,
+        "disbursements": 23875276.319899995,
+        "ratio": 0.013628702429420223
+      },
+      {
+        "sector_group": "210",
+        "commitments": 244629655.4331,
+        "disbursements": 1521245301.739101,
+        "ratio": 6.21856454421211
+      },
+      {
+        "sector_group": "151",
+        "commitments": 352406997.52135044,
+        "disbursements": 913139407.1515411,
+        "ratio": 2.5911500440516053
+      },
+      {
+        "sector_group": "311",
+        "commitments": 189848733.54063082,
+        "disbursements": 947198180.1862,
+        "ratio": 4.989225698382042
+      },
+      {
+        "sector_group": "720",
+        "commitments": 734430171.5431004,
+        "disbursements": 288976679.6478115,
+        "ratio": 0.39347059917302535
+      },
+      {
+        "sector_group": "430",
+        "commitments": 25928972.29206838,
+        "disbursements": 935682927.8166529,
+        "ratio": 36.08638696809732
+      },
+      {
+        "sector_group": "510",
+        "commitments": 555637348.0,
+        "disbursements": 253844772.56310004,
+        "ratio": 0.4568533297425141
+      },
+      {
+        "sector_group": "140",
+        "commitments": 18898522.94029999,
+        "disbursements": 766893470.8861004,
+        "ratio": 40.579545465468364
+      },
+      {
+        "sector_group": "160",
+        "commitments": 229485650.60569677,
+        "disbursements": 483907559.11451983,
+        "ratio": 2.108661512549087
+      },
+      {
+        "sector_group": "122",
+        "commitments": 234814426.43941998,
+        "disbursements": 366558893.30530024,
+        "ratio": 1.5610578057897526
+      },
+      {
+        "sector_group": "236",
+        "commitments": 0,
+        "disbursements": 393777456.29,
+        "ratio": null
+      }
+    ]
+  },
+  "RW": {
+    "country": "Rwanda",
+    "code": "RW",
+    "n_commitments": 10000,
+    "n_disbursements": 10000,
+    "n_expenditures": 10000,
+    "by_year": [
+      {
+        "year": 2010,
+        "commitments": 22857699.23,
+        "disbursements": 0,
+        "expenditures": 445173.17600000004,
+        "d_c_ratio": 0.0
+      },
+      {
+        "year": 2011,
+        "commitments": 68295897.7,
+        "disbursements": 0,
+        "expenditures": 801014.427,
+        "d_c_ratio": 0.0
+      },
+      {
+        "year": 2012,
+        "commitments": 63595910.39024999,
+        "disbursements": 0,
+        "expenditures": 1117182.8404,
+        "d_c_ratio": 0.0
+      },
+      {
+        "year": 2013,
+        "commitments": 59469155.06535,
+        "disbursements": 0,
+        "expenditures": 2006523.8318699999,
+        "d_c_ratio": 0.0
+      },
+      {
+        "year": 2014,
+        "commitments": 37892785.37734,
+        "disbursements": 0,
+        "expenditures": 159788.88575999995,
+        "d_c_ratio": 0.0
+      },
+      {
+        "year": 2015,
+        "commitments": 552823697.4695901,
+        "disbursements": 0,
+        "expenditures": 134438496.36771,
+        "d_c_ratio": 0.0
+      },
+      {
+        "year": 2016,
+        "commitments": 733381285.7318999,
+        "disbursements": 42111.91,
+        "expenditures": 8195051.85957,
+        "d_c_ratio": 5.742157704225185e-05
+      },
+      {
+        "year": 2017,
+        "commitments": 192427476.22605997,
+        "disbursements": 3223837.1155000003,
+        "expenditures": 38128550.08595804,
+        "d_c_ratio": 0.01675351763026139
+      },
+      {
+        "year": 2018,
+        "commitments": 439980876.1716802,
+        "disbursements": 11571010.777370002,
+        "expenditures": 96476334.56325184,
+        "d_c_ratio": 0.026298894802089086
+      },
+      {
+        "year": 2019,
+        "commitments": 423074668.391425,
+        "disbursements": 20143631.332679998,
+        "expenditures": 81279041.51275896,
+        "d_c_ratio": 0.0476124732526961
+      },
+      {
+        "year": 2020,
+        "commitments": 237190725.68066996,
+        "disbursements": 80214178.7687081,
+        "expenditures": 59145672.82770242,
+        "d_c_ratio": 0.3381842967869684
+      },
+      {
+        "year": 2021,
+        "commitments": 439505535.707461,
+        "disbursements": 21946771.840401996,
+        "expenditures": 58660434.8752476,
+        "d_c_ratio": 0.04993514314916382
+      },
+      {
+        "year": 2022,
+        "commitments": 568021273.9692533,
+        "disbursements": 13001967.123123193,
+        "expenditures": 65177673.92148694,
+        "d_c_ratio": 0.02288992986524477
+      },
+      {
+        "year": 2023,
+        "commitments": 508266522.43827784,
+        "disbursements": 12642551.962200014,
+        "expenditures": 60797915.30783493,
+        "d_c_ratio": 0.024873863227407984
+      },
+      {
+        "year": 2024,
+        "commitments": 370438259.35965,
+        "disbursements": 42249687.18051097,
+        "expenditures": 55690115.12453495,
+        "d_c_ratio": 0.11405324939585064
+      },
+      {
+        "year": 2025,
+        "commitments": 163974253.33419997,
+        "disbursements": 56161091.60546266,
+        "expenditures": 52871085.744846046,
+        "d_c_ratio": 0.34249945014842886
+      }
+    ],
+    "coverage": {
+      "total_activities": 492,
+      "commitment_only": 444,
+      "disbursement_only": 48,
+      "both": 0
+    },
+    "activity_ratios": {
+      "n": 0,
+      "median": null,
+      "mean": null,
+      "over_committed_pct": null,
+      "under_committed_pct": null
+    },
+    "timing": {},
+    "by_sector": [
+      {
+        "sector_group": "430",
+        "commitments": 2153427837.1349983,
+        "disbursements": 980720.0712400001,
+        "ratio": 0.00045542277030503474
+      },
+      {
+        "sector_group": "151",
+        "commitments": 525632928.05488986,
+        "disbursements": 3055367.7375000003,
+        "ratio": 0.005812740363900756
+      },
+      {
+        "sector_group": "311",
+        "commitments": 464509268.45838904,
+        "disbursements": 6809292.25146,
+        "ratio": 0.014659109545991717
+      },
+      {
+        "sector_group": "410",
+        "commitments": 145577642.243534,
+        "disbursements": 138902453.6014926,
+        "ratio": 0.9541468831396885
+      },
+      {
+        "sector_group": "236",
+        "commitments": 248040422.8,
+        "disbursements": 0,
+        "ratio": 0.0
+      },
+      {
+        "sector_group": "130",
+        "commitments": 223878915.01429993,
+        "disbursements": 62522.62475999999,
+        "ratio": 0.00027926982206433534
+      },
+      {
+        "sector_group": "160",
+        "commitments": 189789500.98969996,
+        "disbursements": 2535817.8819999984,
+        "ratio": 0.013361212652841209
+      },
+      {
+        "sector_group": "111",
+        "commitments": 160575380.91373494,
+        "disbursements": 16122583.311748218,
+        "ratio": 0.10040507592138093
+      },
+      {
+        "sector_group": "113",
+        "commitments": 157536492.1228,
+        "disbursements": 10500000.0,
+        "ratio": 0.06665122384352211
+      },
+      {
+        "sector_group": "112",
+        "commitments": 122727743.19235,
+        "disbursements": 24500000.0,
+        "ratio": 0.19962886436851843
+      },
+      {
+        "sector_group": "321",
+        "commitments": 135002193.34996,
+        "disbursements": 0,
+        "ratio": 0.0
+      },
+      {
+        "sector_group": "121",
+        "commitments": 122348342.16368498,
+        "disbursements": 562949.1743600001,
+        "ratio": 0.0046011998561194456
+      }
+    ]
+  },
+  "TZ": {
+    "country": "Tanzania",
+    "code": "TZ",
+    "n_commitments": 10000,
+    "n_disbursements": 10000,
+    "n_expenditures": 10000,
+    "by_year": [
+      {
+        "year": 2010,
+        "commitments": 164159816.0,
+        "disbursements": 0,
+        "expenditures": 0,
+        "d_c_ratio": 0.0
+      },
+      {
+        "year": 2011,
+        "commitments": 255569412.94,
+        "disbursements": 179612894.0,
+        "expenditures": 0,
+        "d_c_ratio": 0.7027949547396256
+      },
+      {
+        "year": 2012,
+        "commitments": 67631987.8,
+        "disbursements": 160354216.0,
+        "expenditures": 0,
+        "d_c_ratio": 2.370981856606025
+      },
+      {
+        "year": 2013,
+        "commitments": 22422489.126000002,
+        "disbursements": 56160235.0,
+        "expenditures": 0,
+        "d_c_ratio": 2.5046387439153395
+      },
+      {
+        "year": 2014,
+        "commitments": 457860842.691,
+        "disbursements": 260403712.0,
+        "expenditures": 0,
+        "d_c_ratio": 0.5687398609357399
+      },
+      {
+        "year": 2015,
+        "commitments": 64922104.160500005,
+        "disbursements": 170560271.0,
+        "expenditures": 0,
+        "d_c_ratio": 2.627152542350476
+      },
+      {
+        "year": 2016,
+        "commitments": 378558561.7045232,
+        "disbursements": 200596274.0,
+        "expenditures": 72811.99,
+        "d_c_ratio": 0.5298949602322603
+      },
+      {
+        "year": 2017,
+        "commitments": 113717153.10089256,
+        "disbursements": 189545653.0,
+        "expenditures": 1465693.688024902,
+        "d_c_ratio": 1.6668167275681849
+      },
+      {
+        "year": 2018,
+        "commitments": 127105097.01149008,
+        "disbursements": 137804627.0,
+        "expenditures": 6503058.460125932,
+        "d_c_ratio": 1.084178606838581
+      },
+      {
+        "year": 2019,
+        "commitments": 92207681.66476955,
+        "disbursements": 60275.0,
+        "expenditures": 10563636.120865095,
+        "d_c_ratio": 0.0006536874033894045
+      },
+      {
+        "year": 2020,
+        "commitments": 820037295.0715553,
+        "disbursements": 487919.99399999995,
+        "expenditures": 7427738.16503758,
+        "d_c_ratio": 0.0005949973213808827
+      },
+      {
+        "year": 2021,
+        "commitments": 250332263.65813416,
+        "disbursements": 12139464.331999999,
+        "expenditures": 8697136.155226106,
+        "d_c_ratio": 0.04849340694085776
+      },
+      {
+        "year": 2022,
+        "commitments": 459686739.9371378,
+        "disbursements": 5113153.836600002,
+        "expenditures": 13662672.103319697,
+        "d_c_ratio": 0.011123126669477623
+      },
+      {
+        "year": 2023,
+        "commitments": 146632773.721539,
+        "disbursements": 3111810.225,
+        "expenditures": 4877070.4178685285,
+        "d_c_ratio": 0.021221792004763148
+      },
+      {
+        "year": 2024,
+        "commitments": 206120908.30178997,
+        "disbursements": 1128289.6340787995,
+        "expenditures": 10028510.069006957,
+        "d_c_ratio": 0.005473921318194586
+      },
+      {
+        "year": 2025,
+        "commitments": 11555481.619970003,
+        "disbursements": 688530.8742999999,
+        "expenditures": 11238216.391731013,
+        "d_c_ratio": 0.059584783823297474
+      }
+    ],
+    "coverage": {
+      "total_activities": 421,
+      "commitment_only": 318,
+      "disbursement_only": 102,
+      "both": 1
+    },
+    "activity_ratios": {
+      "n": 1,
+      "median": 0.5741452303985941,
+      "mean": 0.5741452303985941,
+      "over_committed_pct": 0.0,
+      "under_committed_pct": 0.0
+    },
+    "timing": {
+      "n": 1,
+      "median_days": 91,
+      "mean_days": 91.0,
+      "p25_days": 91,
+      "p75_days": 91
+    },
+    "by_sector": [
+      {
+        "sector_group": "130",
+        "commitments": 1035464940.5894997,
+        "disbursements": 37332343.2901,
+        "ratio": 0.03605370092863439
+      },
+      {
+        "sector_group": "112",
+        "commitments": 132154673.9694,
+        "disbursements": 754162120.0,
+        "ratio": 5.706662483800034
+      },
+      {
+        "sector_group": "160",
+        "commitments": 470421304.32809985,
+        "disbursements": 164069984.99627876,
+        "ratio": 0.34877243757193144
+      },
+      {
+        "sector_group": "122",
+        "commitments": 328769283.859226,
+        "disbursements": 263635678.6727,
+        "ratio": 0.8018865861738617
+      },
+      {
+        "sector_group": "232",
+        "commitments": 493000398.7290225,
+        "disbursements": 0,
+        "ratio": 0.0
+      },
+      {
+        "sector_group": "140",
+        "commitments": 291942052.28842366,
+        "disbursements": 0,
+        "ratio": 0.0
+      },
+      {
+        "sector_group": "236",
+        "commitments": 285917702.276,
+        "disbursements": 0,
+        "ratio": 0.0
+      },
+      {
+        "sector_group": "210",
+        "commitments": 280668243.77757215,
+        "disbursements": 0,
+        "ratio": 0.0
+      },
+      {
+        "sector_group": "410",
+        "commitments": 95000770.24199992,
+        "disbursements": 148654634.0,
+        "ratio": 1.564772934170166
+      },
+      {
+        "sector_group": "121",
+        "commitments": 157209887.4019995,
+        "disbursements": 994516.1452000001,
+        "ratio": 0.0063260406939732415
+      },
+      {
+        "sector_group": "220",
+        "commitments": 155100685.1496,
+        "disbursements": 0,
+        "ratio": 0.0
+      },
+      {
+        "sector_group": "151",
+        "commitments": 142307641.46756026,
+        "disbursements": 470737.2086,
+        "ratio": 0.0033078842692175945
+      }
+    ]
+  },
+  "ET": {
+    "country": "Ethiopia",
+    "code": "ET",
+    "n_commitments": 10000,
+    "n_disbursements": 10000,
+    "n_expenditures": 10000,
+    "by_year": [
+      {
+        "year": 2011,
+        "commitments": 0,
+        "disbursements": 0,
+        "expenditures": 57723.73276999999,
+        "d_c_ratio": null
+      },
+      {
+        "year": 2012,
+        "commitments": 0,
+        "disbursements": 0,
+        "expenditures": 799201.9414580002,
+        "d_c_ratio": null
+      },
+      {
+        "year": 2013,
+        "commitments": 31067267.18,
+        "disbursements": 81030288.47207996,
+        "expenditures": 616102.4114850004,
+        "d_c_ratio": 2.6082206716992595
+      },
+      {
+        "year": 2014,
+        "commitments": 34311269.0,
+        "disbursements": 111628763.40439,
+        "expenditures": -4780715.21435,
+        "d_c_ratio": 3.2534140140485626
+      },
+      {
+        "year": 2015,
+        "commitments": 66650422.485,
+        "disbursements": 82841279.60037923,
+        "expenditures": 4622562.224969999,
+        "d_c_ratio": 1.2429220477788128
+      },
+      {
+        "year": 2016,
+        "commitments": 472094560.67399997,
+        "disbursements": 72445092.45598887,
+        "expenditures": 14605921.546274006,
+        "d_c_ratio": 0.15345462221077164
+      },
+      {
+        "year": 2017,
+        "commitments": 8951137.795,
+        "disbursements": 28762837.053000003,
+        "expenditures": 14789245.226429006,
+        "d_c_ratio": 3.2133163081308598
+      },
+      {
+        "year": 2018,
+        "commitments": 47618934.7227,
+        "disbursements": 34866146.84020001,
+        "expenditures": 34253771.83634065,
+        "d_c_ratio": 0.7321908195392551
+      },
+      {
+        "year": 2019,
+        "commitments": 50987074.538980015,
+        "disbursements": 25317804.97,
+        "expenditures": 12038980.548597997,
+        "d_c_ratio": 0.4965533951284916
+      },
+      {
+        "year": 2020,
+        "commitments": 59805807.818380006,
+        "disbursements": 51918912.25691998,
+        "expenditures": 11389093.735619413,
+        "d_c_ratio": 0.8681249221578751
+      },
+      {
+        "year": 2021,
+        "commitments": 90458830.35775,
+        "disbursements": 159243555.1471597,
+        "expenditures": 9974553.706794715,
+        "d_c_ratio": 1.760398122741332
+      },
+      {
+        "year": 2022,
+        "commitments": 7507717.9854,
+        "disbursements": 47768429.67699,
+        "expenditures": 4713852.5612985,
+        "d_c_ratio": 6.362576453974913
+      },
+      {
+        "year": 2023,
+        "commitments": 114642894.264,
+        "disbursements": 47304460.96602,
+        "expenditures": 9046209.560630398,
+        "d_c_ratio": 0.41262444802804044
+      },
+      {
+        "year": 2024,
+        "commitments": 54200805.730044015,
+        "disbursements": 47743914.20525195,
+        "expenditures": 12532928.049285995,
+        "d_c_ratio": 0.880870931016198
+      },
+      {
+        "year": 2025,
+        "commitments": 167519304.35169992,
+        "disbursements": 47196576.43452993,
+        "expenditures": 23153847.953147087,
+        "d_c_ratio": 0.2817381352983812
+      }
+    ],
+    "coverage": {
+      "total_activities": 207,
+      "commitment_only": 150,
+      "disbursement_only": 55,
+      "both": 2
+    },
+    "activity_ratios": {
+      "n": 2,
+      "median": 1.9625521601474574,
+      "mean": 1.499741405924355,
+      "over_committed_pct": 0.0,
+      "under_committed_pct": 50.0
+    },
+    "timing": {
+      "n": 2,
+      "median_days": 0,
+      "mean_days": 0.0,
+      "p25_days": 0,
+      "p75_days": 0
+    },
+    "by_sector": [
+      {
+        "sector_group": "121",
+        "commitments": 820241982.7250001,
+        "disbursements": 338851259.0,
+        "ratio": 0.41311133316325943
+      },
+      {
+        "sector_group": "720",
+        "commitments": 55487123.67,
+        "disbursements": 362133355.7594937,
+        "ratio": 6.526439501770153
+      },
+      {
+        "sector_group": "910",
+        "commitments": 157035405.0,
+        "disbursements": 30224230.0,
+        "ratio": 0.1924676158220498
+      },
+      {
+        "sector_group": "151",
+        "commitments": 91961496.62325001,
+        "disbursements": 63330854.361269996,
+        "ratio": 0.6886670692270843
+      },
+      {
+        "sector_group": "410",
+        "commitments": 4238127.028000001,
+        "disbursements": 23363643.023699593,
+        "ratio": 5.512728351307829
+      },
+      {
+        "sector_group": "430",
+        "commitments": 15090308.52904,
+        "disbursements": 2818372.7525473004,
+        "ratio": 0.18676707286160418
+      },
+      {
+        "sector_group": "312",
+        "commitments": 13792109.189000001,
+        "disbursements": 0,
+        "ratio": 0.0
+      },
+      {
+        "sector_group": "122",
+        "commitments": 3221848.636,
+        "disbursements": 9522076.607887499,
+        "ratio": 2.955469881946217
+      },
+      {
+        "sector_group": "130",
+        "commitments": 10189904.654,
+        "disbursements": 773235.0,
+        "ratio": 0.07588245682911962
+      },
+      {
+        "sector_group": "730",
+        "commitments": 10274037.195,
+        "disbursements": 52107.84219,
+        "ratio": 0.005071798086866864
+      },
+      {
+        "sector_group": "114",
+        "commitments": 7131081.669080001,
+        "disbursements": 1134263.4185,
+        "ratio": 0.1590590980633565
+      },
+      {
+        "sector_group": "160",
+        "commitments": 7787269.199999999,
+        "disbursements": 41170.326,
+        "ratio": 0.005286875917940528
+      }
+    ]
+  }
+}

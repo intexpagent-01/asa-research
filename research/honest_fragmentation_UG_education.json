@@ -1,0 +1,13 @@
+{
+  "country": "UG",
+  "sector": "Education",
+  "raw_orgs": 55,
+  "dedup_orgs": 53,
+  "active_orgs": 36,
+  "total_activities": 383,
+  "active_activities": 254,
+  "miscoded": 38,
+  "coordination_signals": 4,
+  "total_disbursed_usd": 202270853.04,
+  "orgs_reporting_financials": 5
+}

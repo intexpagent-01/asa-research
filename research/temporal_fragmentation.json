@@ -1,0 +1,2609 @@
+{
+  "UG_Governance": {
+    "country": "UG",
+    "sector": "Governance",
+    "timeline": [
+      {
+        "year": 2010,
+        "count": 15,
+        "entered": 15,
+        "exited": 0,
+        "net": 15,
+        "entered_names": [
+          "Australian Aid",
+          "Belgian agency for international cooperation (Enabel)",
+          "CAFOD",
+          "CISU Civil Society in Development",
+          "FCDO"
+        ],
+        "exited_names": []
+      },
+      {
+        "year": 2011,
+        "count": 18,
+        "entered": 3,
+        "exited": 0,
+        "net": 3,
+        "entered_names": [
+          "Avocats Sans Fronti\u00e8res",
+          "Womankind Worldwide",
+          "World Vision UK"
+        ],
+        "exited_names": []
+      },
+      {
+        "year": 2012,
+        "count": 20,
+        "entered": 2,
+        "exited": 0,
+        "net": 2,
+        "entered_names": [
+          "CARE International UK",
+          "Charity Projects Ltd (Comic Relief)"
+        ],
+        "exited_names": []
+      },
+      {
+        "year": 2013,
+        "count": 20,
+        "entered": 1,
+        "exited": 1,
+        "net": 0,
+        "entered_names": [
+          "Disabled People\u2019s Organisations Denmark"
+        ],
+        "exited_names": [
+          "Belgian agency for international cooperation (Enabel)"
+        ]
+      },
+      {
+        "year": 2014,
+        "count": 21,
+        "entered": 1,
+        "exited": 0,
+        "net": 1,
+        "entered_names": [
+          "CoST (Construction Sector Transparency Initiative)"
+        ],
+        "exited_names": []
+      },
+      {
+        "year": 2015,
+        "count": 18,
+        "entered": 2,
+        "exited": 5,
+        "net": -3,
+        "entered_names": [
+          "Chance for Childhood",
+          "Tetra Tech International Development B.V."
+        ],
+        "exited_names": [
+          "Avocats Sans Fronti\u00e8res",
+          "CARE International UK",
+          "Womankind Worldwide",
+          "World Bank",
+          "World Vision UK"
+        ]
+      },
+      {
+        "year": 2016,
+        "count": 29,
+        "entered": 11,
+        "exited": 0,
+        "net": 11,
+        "entered_names": [
+          "Belgian agency for international cooperation (Enabel)",
+          "Department for Environment, Food, and Rural Affairs",
+          "Frontlineaids",
+          "HelpAge International",
+          "Maxwell Stamp PLC"
+        ],
+        "exited_names": []
+      },
+      {
+        "year": 2017,
+        "count": 34,
+        "entered": 9,
+        "exited": 4,
+        "net": 5,
+        "entered_names": [
+          "Avocats Sans Fronti\u00e8res",
+          "CARE International UK",
+          "Caritas Denmark",
+          "Gates Foundation",
+          "IMC WORLDWIDE LTD"
+        ],
+        "exited_names": [
+          "Plan International UK",
+          "Saferworld",
+          "Save The Children UK",
+          "Save the Children International Save is a non-governmental organization for the defense of children's rights in the world, was established in the UK in 1919, dedicated to both provide emergency humanitarian aid as the long-term development through the child sponsorship .\nSave the Children began working in Mozambique in 1984, providing emergency assistance to children and families displaced bywar, and gave their contribution to the reconstruction of the health system.\nSince 1995, Save the Children in Mozambique has workedwith local communities and organizations to design Sponsorship programs for kids. Targeted to help children from early childhood toearly adulthood, our programs work to make a healthy and safe environment where children can learn andgrow. Our early childhood programs help prepare toddlers and young children for school by giving them access to quality preschools and early literacy programs, while our programs designed for primary school-aged kids work to transform students into lifelong learners by building strong curriculums and passionate teachers. Our work with adolescents focuses on that challenging transition between childhood and adulthood, helping ensure it#s a positive one by teaching them money, job and relationship skills. We also provide health education and care to children in need through our school health programs to help children stay healthy, well-nourished and in school. Thanks to the generoussupport from our community of sponsors, these essential programs in Mozambique continue to give children a healthy start and the opportunity to learn, protecting them from harm along the way."
+        ]
+      },
+      {
+        "year": 2018,
+        "count": 41,
+        "entered": 9,
+        "exited": 2,
+        "net": 7,
+        "entered_names": [
+          "ADRA Danmark",
+          "ActionAid Denmark (Mellemfolkeligt Samvirke)",
+          "FSD Africa",
+          "Institute of Development Studies",
+          "Integrity Action"
+        ],
+        "exited_names": [
+          "IMC WORLDWIDE LTD",
+          "Tetra Tech International Development B.V."
+        ]
+      },
+      {
+        "year": 2019,
+        "count": 47,
+        "entered": 10,
+        "exited": 4,
+        "net": 6,
+        "entered_names": [
+          "AFD",
+          "African Women's Development and Communication Network (FEMNET)",
+          "BDO LLP",
+          "CoST (Construction Sector Transparency Initiative)c/o Engineers Against Poverty",
+          "DUF - Danish Youth Council"
+        ],
+        "exited_names": [
+          "Chance for Childhood",
+          "Department for Environment, Food, and Rural Affairs",
+          "Maxwell Stamp PLC",
+          "ODI Sales Limited"
+        ]
+      },
+      {
+        "year": 2020,
+        "count": 46,
+        "entered": 3,
+        "exited": 4,
+        "net": -1,
+        "entered_names": [
+          "Danish Refugee Council",
+          "Integrity Research and Consultancy Ltd",
+          "International Rescue Committee UK"
+        ],
+        "exited_names": [
+          "International Alert",
+          "Ministry of Foreign Affairs of the Netherlands",
+          "Promote Mifumi Project",
+          "Westminster Foundation for Democracy"
+        ]
+      },
+      {
+        "year": 2021,
+        "count": 53,
+        "entered": 9,
+        "exited": 2,
+        "net": 7,
+        "entered_names": [
+          "APT Action on Poverty",
+          "African Disability Forum (ADF)",
+          "African Women&#039;s Development and Communication Network",
+          "African Women's Development Fund",
+          "CKU"
+        ],
+        "exited_names": [
+          "Australian Aid",
+          "Frontlineaids"
+        ]
+      },
+      {
+        "year": 2022,
+        "count": 52,
+        "entered": 6,
+        "exited": 7,
+        "net": -1,
+        "entered_names": [
+          "Danish Family Planning Association",
+          "Forests of the World",
+          "Innovations for Poverty Action",
+          "Itad Limited",
+          "NGO Avocats sans fronti\u00e8res"
+        ],
+        "exited_names": [
+          "BDO LLP",
+          "CARE International UK",
+          "Danish Refugee Council",
+          "HelpAge International",
+          "Integrity Action"
+        ]
+      },
+      {
+        "year": 2023,
+        "count": 51,
+        "entered": 4,
+        "exited": 5,
+        "net": -1,
+        "entered_names": [
+          "Danish Refugee Council",
+          "HelpAge International",
+          "Institute for Fiscal Studies",
+          "Office for Government Policy Coordination"
+        ],
+        "exited_names": [
+          "INTERNATIONAL DISABILITY ALLIANCE",
+          "Minority Rights Group",
+          "Swiss Agency for Development and Cooperation (SDC)",
+          "Tetra Tech International Development UK Ltd",
+          "The Global Initiative Against Transnational Organized Crime"
+        ]
+      },
+      {
+        "year": 2024,
+        "count": 51,
+        "entered": 5,
+        "exited": 5,
+        "net": 0,
+        "entered_names": [
+          "DEPARTMENT FOR SCIENCE, INNOVATION AND TECHNOLOGY",
+          "DH Handicappuljen",
+          "Oxfam Denmark",
+          "University of Sussex",
+          "Westminster Foundation for Democracy"
+        ],
+        "exited_names": [
+          "APT Action on Poverty",
+          "Charity Projects Ltd (Comic Relief)",
+          "FSD Africa",
+          "Finland MFA",
+          "MERCY CORPS EUROPE"
+        ]
+      },
+      {
+        "year": 2025,
+        "count": 49,
+        "entered": 1,
+        "exited": 3,
+        "net": -2,
+        "entered_names": [
+          "Christian Aid"
+        ],
+        "exited_names": [
+          "HelpAge International",
+          "International Rescue Committee UK",
+          "World Vision United Kingdom"
+        ]
+      },
+      {
+        "year": 2026,
+        "count": 31,
+        "entered": 1,
+        "exited": 19,
+        "net": -18,
+        "entered_names": [
+          "Mercy Corps Europe"
+        ],
+        "exited_names": [
+          "African Disability Forum (ADF)",
+          "African Women&#039;s Development and Communication Network",
+          "African Women's Development Fund",
+          "African Women's Development and Communication Network (FEMNET)",
+          "Avocats Sans Fronti\u00e8res"
+        ]
+      }
+    ],
+    "total_ever": 83
+  },
+  "UG_Health": {
+    "country": "UG",
+    "sector": "Health",
+    "timeline": [
+      {
+        "year": 2010,
+        "count": 14,
+        "entered": 14,
+        "exited": 0,
+        "net": 14,
+        "entered_names": [
+          "African Development Bank",
+          "Belgian agency for international cooperation (Enabel)",
+          "CAFOD",
+          "DEPARTMENT FOR SCIENCE, INNOVATION AND TECHNOLOGY",
+          "Drugs for Neglected Diseases initiative"
+        ],
+        "exited_names": []
+      },
+      {
+        "year": 2011,
+        "count": 18,
+        "entered": 4,
+        "exited": 0,
+        "net": 4,
+        "entered_names": [
+          "Australian Aid",
+          "Charity Projects Ltd (Comic Relief)",
+          "Liverpool School of Tropical Medicine",
+          "PONT"
+        ],
+        "exited_names": []
+      },
+      {
+        "year": 2012,
+        "count": 17,
+        "entered": 1,
+        "exited": 2,
+        "net": -1,
+        "entered_names": [
+          "Samaritan's Purse UK"
+        ],
+        "exited_names": [
+          "Belgian agency for international cooperation (Enabel)",
+          "Ministry of Foreign Affairs of the Netherlands"
+        ]
+      },
+      {
+        "year": 2013,
+        "count": 19,
+        "entered": 2,
+        "exited": 0,
+        "net": 2,
+        "entered_names": [
+          "Gates Foundation",
+          "IRC-UK"
+        ],
+        "exited_names": []
+      },
+      {
+        "year": 2014,
+        "count": 25,
+        "entered": 6,
+        "exited": 0,
+        "net": 6,
+        "entered_names": [
+          "Act4Africa",
+          "Belgian agency for international cooperation (Enabel)",
+          "DEPARTMENT FOR BUSINESS, ENERGY & INDUSTRIAL STRATEGY",
+          "Finland MFA",
+          "Hospice Africa Ltd"
+        ],
+        "exited_names": []
+      },
+      {
+        "year": 2015,
+        "count": 26,
+        "entered": 2,
+        "exited": 1,
+        "net": 1,
+        "entered_names": [
+          "Amref Health Africa - UK",
+          "Voluntary Service Overseas"
+        ],
+        "exited_names": [
+          "PONT"
+        ]
+      },
+      {
+        "year": 2016,
+        "count": 30,
+        "entered": 5,
+        "exited": 1,
+        "net": 4,
+        "entered_names": [
+          "AECOM Limited",
+          "HelpAge International",
+          "International Planned Parenthood Federation",
+          "Mott MacDonald Group Limited",
+          "Sense International"
+        ],
+        "exited_names": [
+          "Samaritan's Purse UK"
+        ]
+      },
+      {
+        "year": 2017,
+        "count": 31,
+        "entered": 5,
+        "exited": 4,
+        "net": 1,
+        "entered_names": [
+          "Global Antibiotic Research and Development Partnership",
+          "Save The Children UK",
+          "Save the Children International Save is a non-governmental organization for the defense of children's rights in the world, was established in the UK in 1919, dedicated to both provide emergency humanitarian aid as the long-term development through the child sponsorship .\nSave the Children began working in Mozambique in 1984, providing emergency assistance to children and families displaced bywar, and gave their contribution to the reconstruction of the health system.\nSince 1995, Save the Children in Mozambique has workedwith local communities and organizations to design Sponsorship programs for kids. Targeted to help children from early childhood toearly adulthood, our programs work to make a healthy and safe environment where children can learn andgrow. Our early childhood programs help prepare toddlers and young children for school by giving them access to quality preschools and early literacy programs, while our programs designed for primary school-aged kids work to transform students into lifelong learners by building strong curriculums and passionate teachers. Our work with adolescents focuses on that challenging transition between childhood and adulthood, helping ensure it#s a positive one by teaching them money, job and relationship skills. We also provide health education and care to children in need through our school health programs to help children stay healthy, well-nourished and in school. Thanks to the generoussupport from our community of sponsors, these essential programs in Mozambique continue to give children a healthy start and the opportunity to learn, protecting them from harm along the way.",
+          "THET",
+          "The University of Manchester"
+        ],
+        "exited_names": [
+          "AECOM Limited",
+          "Charity Projects Ltd (Comic Relief)",
+          "IRC-UK",
+          "The Queen Elizabeth Diamond Jubilee Trust"
+        ]
+      },
+      {
+        "year": 2018,
+        "count": 33,
+        "entered": 7,
+        "exited": 5,
+        "net": 2,
+        "entered_names": [
+          "Alliance of Religions and Conservation",
+          "Deutsche Welthungerhilfe",
+          "Food for the Hungry UK",
+          "Global Disability Innovation Hub",
+          "Humanity & Inclusion - Handicap International UK"
+        ],
+        "exited_names": [
+          "Act4Africa",
+          "Australian Aid",
+          "Finland MFA",
+          "HelpAge International",
+          "World Bank"
+        ]
+      },
+      {
+        "year": 2019,
+        "count": 35,
+        "entered": 7,
+        "exited": 5,
+        "net": 2,
+        "entered_names": [
+          "Abt Britain Ltd",
+          "BRAC UK",
+          "DAI Europe",
+          "Global Innovation Fund",
+          "Grand Challenges Canada"
+        ],
+        "exited_names": [
+          "Alliance of Religions and Conservation",
+          "CAFOD",
+          "Save The Children UK",
+          "Save the Children International Save is a non-governmental organization for the defense of children's rights in the world, was established in the UK in 1919, dedicated to both provide emergency humanitarian aid as the long-term development through the child sponsorship .\nSave the Children began working in Mozambique in 1984, providing emergency assistance to children and families displaced bywar, and gave their contribution to the reconstruction of the health system.\nSince 1995, Save the Children in Mozambique has workedwith local communities and organizations to design Sponsorship programs for kids. Targeted to help children from early childhood toearly adulthood, our programs work to make a healthy and safe environment where children can learn andgrow. Our early childhood programs help prepare toddlers and young children for school by giving them access to quality preschools and early literacy programs, while our programs designed for primary school-aged kids work to transform students into lifelong learners by building strong curriculums and passionate teachers. Our work with adolescents focuses on that challenging transition between childhood and adulthood, helping ensure it#s a positive one by teaching them money, job and relationship skills. We also provide health education and care to children in need through our school health programs to help children stay healthy, well-nourished and in school. Thanks to the generoussupport from our community of sponsors, these essential programs in Mozambique continue to give children a healthy start and the opportunity to learn, protecting them from harm along the way.",
+          "The University of Manchester"
+        ]
+      },
+      {
+        "year": 2020,
+        "count": 37,
+        "entered": 4,
+        "exited": 2,
+        "net": 2,
+        "entered_names": [
+          "CAFOD",
+          "Elrha",
+          "Send a Cow",
+          "World Bank"
+        ],
+        "exited_names": [
+          "Deutsche Welthungerhilfe",
+          "Sense International"
+        ]
+      },
+      {
+        "year": 2021,
+        "count": 38,
+        "entered": 4,
+        "exited": 3,
+        "net": 1,
+        "entered_names": [
+          "ACTION AGAINST HUNGER SPAIN",
+          "Innovations for Poverty Action",
+          "Office for Government Policy Coordination",
+          "UK - Department of Health and Social Care (DHSC)"
+        ],
+        "exited_names": [
+          "African Development Bank",
+          "IRC-UK",
+          "International Planned Parenthood Federation"
+        ]
+      },
+      {
+        "year": 2022,
+        "count": 40,
+        "entered": 4,
+        "exited": 2,
+        "net": 2,
+        "entered_names": [
+          "Danish Family Planning Association",
+          "University Of Liverpool",
+          "University of Edinburgh",
+          "VLIR-UOS - Vlaamse Interuniversitaire Raad - Flemish Interuniversity Council"
+        ],
+        "exited_names": [
+          "Food for the Hungry UK",
+          "Voluntary Service Overseas"
+        ]
+      },
+      {
+        "year": 2023,
+        "count": 40,
+        "entered": 5,
+        "exited": 5,
+        "net": 0,
+        "entered_names": [
+          "AFD",
+          "African Development Bank",
+          "DT Global UK",
+          "Finland MFA",
+          "Save The Children UK"
+        ],
+        "exited_names": [
+          "Abt Britain Ltd",
+          "BRAC UK",
+          "CAFOD",
+          "DAI Europe",
+          "Humanity & Inclusion - Handicap International UK"
+        ]
+      },
+      {
+        "year": 2024,
+        "count": 38,
+        "entered": 4,
+        "exited": 6,
+        "net": -2,
+        "entered_names": [
+          "Palladium International Ltd (UK)",
+          "University",
+          "University of Glasgow",
+          "Welthungerhilfe"
+        ],
+        "exited_names": [
+          "Amref Health Africa - UK",
+          "DEPARTMENT FOR BUSINESS, ENERGY & INDUSTRIAL STRATEGY",
+          "Grand Challenges Canada",
+          "Send a Cow",
+          "The Institute of Development Studies"
+        ]
+      },
+      {
+        "year": 2025,
+        "count": 35,
+        "entered": 1,
+        "exited": 4,
+        "net": -3,
+        "entered_names": [
+          "HelpAge International"
+        ],
+        "exited_names": [
+          "Finland MFA",
+          "Global Disability Innovation Hub",
+          "Save The Children UK",
+          "Sightsavers"
+        ]
+      },
+      {
+        "year": 2026,
+        "count": 32,
+        "entered": 1,
+        "exited": 4,
+        "net": -3,
+        "entered_names": [
+          "Manchester Metropolitan University"
+        ],
+        "exited_names": [
+          "ACTION AGAINST HUNGER SPAIN",
+          "AFD",
+          "The University of Oxford",
+          "World Bank"
+        ]
+      }
+    ],
+    "total_ever": 68
+  },
+  "KE_Governance": {
+    "country": "KE",
+    "sector": "Governance",
+    "timeline": [
+      {
+        "year": 2010,
+        "count": 7,
+        "entered": 7,
+        "exited": 0,
+        "net": 7,
+        "entered_names": [
+          "Australian Aid",
+          "CISU Civil Society in Development",
+          "FCDO",
+          "Federal Ministry for Economic Cooperation and Development (BMZ)",
+          "Finland MFA"
+        ],
+        "exited_names": []
+      },
+      {
+        "year": 2011,
+        "count": 8,
+        "entered": 1,
+        "exited": 0,
+        "net": 1,
+        "entered_names": [
+          "Avocats Sans Fronti\u00e8res"
+        ],
+        "exited_names": []
+      },
+      {
+        "year": 2012,
+        "count": 9,
+        "entered": 1,
+        "exited": 0,
+        "net": 1,
+        "entered_names": [
+          "Saferworld"
+        ],
+        "exited_names": []
+      },
+      {
+        "year": 2013,
+        "count": 11,
+        "entered": 2,
+        "exited": 0,
+        "net": 2,
+        "entered_names": [
+          "Save the Children International Save is a non-governmental organization for the defense of children's rights in the world, was established in the UK in 1919, dedicated to both provide emergency humanitarian aid as the long-term development through the child sponsorship .\nSave the Children began working in Mozambique in 1984, providing emergency assistance to children and families displaced bywar, and gave their contribution to the reconstruction of the health system.\nSince 1995, Save the Children in Mozambique has workedwith local communities and organizations to design Sponsorship programs for kids. Targeted to help children from early childhood toearly adulthood, our programs work to make a healthy and safe environment where children can learn andgrow. Our early childhood programs help prepare toddlers and young children for school by giving them access to quality preschools and early literacy programs, while our programs designed for primary school-aged kids work to transform students into lifelong learners by building strong curriculums and passionate teachers. Our work with adolescents focuses on that challenging transition between childhood and adulthood, helping ensure it#s a positive one by teaching them money, job and relationship skills. We also provide health education and care to children in need through our school health programs to help children stay healthy, well-nourished and in school. Thanks to the generoussupport from our community of sponsors, these essential programs in Mozambique continue to give children a healthy start and the opportunity to learn, protecting them from harm along the way.",
+          "Swiss Agency for Development and Cooperation (SDC)"
+        ],
+        "exited_names": []
+      },
+      {
+        "year": 2014,
+        "count": 12,
+        "entered": 2,
+        "exited": 1,
+        "net": 1,
+        "entered_names": [
+          "IRC-UK",
+          "WWF-UK"
+        ],
+        "exited_names": [
+          "Save the Children International Save is a non-governmental organization for the defense of children's rights in the world, was established in the UK in 1919, dedicated to both provide emergency humanitarian aid as the long-term development through the child sponsorship .\nSave the Children began working in Mozambique in 1984, providing emergency assistance to children and families displaced bywar, and gave their contribution to the reconstruction of the health system.\nSince 1995, Save the Children in Mozambique has workedwith local communities and organizations to design Sponsorship programs for kids. Targeted to help children from early childhood toearly adulthood, our programs work to make a healthy and safe environment where children can learn andgrow. Our early childhood programs help prepare toddlers and young children for school by giving them access to quality preschools and early literacy programs, while our programs designed for primary school-aged kids work to transform students into lifelong learners by building strong curriculums and passionate teachers. Our work with adolescents focuses on that challenging transition between childhood and adulthood, helping ensure it#s a positive one by teaching them money, job and relationship skills. We also provide health education and care to children in need through our school health programs to help children stay healthy, well-nourished and in school. Thanks to the generoussupport from our community of sponsors, these essential programs in Mozambique continue to give children a healthy start and the opportunity to learn, protecting them from harm along the way."
+        ]
+      },
+      {
+        "year": 2015,
+        "count": 11,
+        "entered": 0,
+        "exited": 1,
+        "net": -1,
+        "entered_names": [],
+        "exited_names": [
+          "Avocats Sans Fronti\u00e8res"
+        ]
+      },
+      {
+        "year": 2016,
+        "count": 15,
+        "entered": 4,
+        "exited": 0,
+        "net": 4,
+        "entered_names": [
+          "Frontlineaids",
+          "Humanity & Inclusion - Handicap International UK",
+          "Save the Children International Save is a non-governmental organization for the defense of children's rights in the world, was established in the UK in 1919, dedicated to both provide emergency humanitarian aid as the long-term development through the child sponsorship .\nSave the Children began working in Mozambique in 1984, providing emergency assistance to children and families displaced bywar, and gave their contribution to the reconstruction of the health system.\nSince 1995, Save the Children in Mozambique has workedwith local communities and organizations to design Sponsorship programs for kids. Targeted to help children from early childhood toearly adulthood, our programs work to make a healthy and safe environment where children can learn andgrow. Our early childhood programs help prepare toddlers and young children for school by giving them access to quality preschools and early literacy programs, while our programs designed for primary school-aged kids work to transform students into lifelong learners by building strong curriculums and passionate teachers. Our work with adolescents focuses on that challenging transition between childhood and adulthood, helping ensure it#s a positive one by teaching them money, job and relationship skills. We also provide health education and care to children in need through our school health programs to help children stay healthy, well-nourished and in school. Thanks to the generoussupport from our community of sponsors, these essential programs in Mozambique continue to give children a healthy start and the opportunity to learn, protecting them from harm along the way.",
+          "World Vision Germany"
+        ],
+        "exited_names": []
+      },
+      {
+        "year": 2017,
+        "count": 21,
+        "entered": 6,
+        "exited": 0,
+        "net": 6,
+        "entered_names": [
+          "Action Against Hunger",
+          "CKU",
+          "Disabled People\u2019s Organisations Denmark",
+          "Gates Foundation",
+          "INSTITUT DE FORMATION SYNDICALE INTERNATIONALE asbl"
+        ],
+        "exited_names": []
+      },
+      {
+        "year": 2018,
+        "count": 21,
+        "entered": 2,
+        "exited": 2,
+        "net": 0,
+        "entered_names": [
+          "ActionAid Denmark (Mellemfolkeligt Samvirke)",
+          "World Wide Fund for Nature Denmark"
+        ],
+        "exited_names": [
+          "Action Against Hunger",
+          "Humanity & Inclusion - Handicap International UK"
+        ]
+      },
+      {
+        "year": 2019,
+        "count": 27,
+        "entered": 6,
+        "exited": 0,
+        "net": 6,
+        "entered_names": [
+          "AFD",
+          "DUF - Danish Youth Council",
+          "Danish Refugee Council",
+          "INTERNATIONAL DISABILITY ALLIANCE",
+          "Interpeace"
+        ],
+        "exited_names": []
+      },
+      {
+        "year": 2020,
+        "count": 24,
+        "entered": 0,
+        "exited": 3,
+        "net": -3,
+        "entered_names": [],
+        "exited_names": [
+          "Danish Refugee Council",
+          "Disabled People\u2019s Organisations Denmark",
+          "IRC-UK"
+        ]
+      },
+      {
+        "year": 2021,
+        "count": 27,
+        "entered": 6,
+        "exited": 3,
+        "net": 3,
+        "entered_names": [
+          "Disabled People\u2019s Organisations Denmark",
+          "Fundaci\u00f3n Fondo Mujeres del Sur",
+          "Restless Development",
+          "Search for Common Ground (SFCG)",
+          "We are an independent not-for-profit organisation dedicated to countering corruption and other financial crimes and to improving standards of governance. \r\n\r\nHeadquartered in Basel, Switzerland, since 2003, we work worldwide with the public and private sectors and civil society. We maintain field operations in Africa, Eastern Europe, Latin America and Southeast Asia. \r\n\r\nWe are registered as a Swiss foundation and are an Associated Institute of the University of Basel."
+        ],
+        "exited_names": [
+          "Australian Aid",
+          "Frontlineaids",
+          "Saferworld"
+        ]
+      },
+      {
+        "year": 2022,
+        "count": 31,
+        "entered": 7,
+        "exited": 3,
+        "net": 4,
+        "entered_names": [
+          "Danish Family Planning Association",
+          "Danish Red Cross",
+          "Equality Fund",
+          "IRC-UK",
+          "Innovations for Poverty Action"
+        ],
+        "exited_names": [
+          "INSTITUT DE FORMATION SYNDICALE INTERNATIONALE asbl",
+          "Save the Children International Save is a non-governmental organization for the defense of children's rights in the world, was established in the UK in 1919, dedicated to both provide emergency humanitarian aid as the long-term development through the child sponsorship .\nSave the Children began working in Mozambique in 1984, providing emergency assistance to children and families displaced bywar, and gave their contribution to the reconstruction of the health system.\nSince 1995, Save the Children in Mozambique has workedwith local communities and organizations to design Sponsorship programs for kids. Targeted to help children from early childhood toearly adulthood, our programs work to make a healthy and safe environment where children can learn andgrow. Our early childhood programs help prepare toddlers and young children for school by giving them access to quality preschools and early literacy programs, while our programs designed for primary school-aged kids work to transform students into lifelong learners by building strong curriculums and passionate teachers. Our work with adolescents focuses on that challenging transition between childhood and adulthood, helping ensure it#s a positive one by teaching them money, job and relationship skills. We also provide health education and care to children in need through our school health programs to help children stay healthy, well-nourished and in school. Thanks to the generoussupport from our community of sponsors, these essential programs in Mozambique continue to give children a healthy start and the opportunity to learn, protecting them from harm along the way.",
+          "Transparency International UK"
+        ]
+      },
+      {
+        "year": 2023,
+        "count": 30,
+        "entered": 2,
+        "exited": 3,
+        "net": -1,
+        "entered_names": [
+          "Christian Aid",
+          "Danish Refugee Council"
+        ],
+        "exited_names": [
+          "INTERNATIONAL DISABILITY ALLIANCE",
+          "The Global Initiative Against Transnational Organized Crime",
+          "UN-Habitat"
+        ]
+      },
+      {
+        "year": 2024,
+        "count": 30,
+        "entered": 2,
+        "exited": 2,
+        "net": 0,
+        "entered_names": [
+          "Oxfam Denmark",
+          "Welthungerhilfe"
+        ],
+        "exited_names": [
+          "Disabled People\u2019s Organisations Denmark",
+          "World Vision Germany"
+        ]
+      },
+      {
+        "year": 2025,
+        "count": 30,
+        "entered": 2,
+        "exited": 2,
+        "net": 0,
+        "entered_names": [
+          "DH Handicappuljen",
+          "Transparency International Australia"
+        ],
+        "exited_names": [
+          "IRC-UK",
+          "Interpeace"
+        ]
+      },
+      {
+        "year": 2026,
+        "count": 24,
+        "entered": 0,
+        "exited": 6,
+        "net": -6,
+        "entered_names": [],
+        "exited_names": [
+          "Finland MFA",
+          "Fundaci\u00f3n Fondo Mujeres del Sur",
+          "Oxfam Denmark",
+          "Restless Development",
+          "Search for Common Ground (SFCG)"
+        ]
+      }
+    ],
+    "total_ever": 46
+  },
+  "KE_Health": {
+    "country": "KE",
+    "sector": "Health",
+    "timeline": [
+      {
+        "year": 2010,
+        "count": 10,
+        "entered": 10,
+        "exited": 0,
+        "net": 10,
+        "entered_names": [
+          "African Development Bank",
+          "Australian Aid",
+          "Drugs for Neglected Diseases initiative",
+          "FCDO",
+          "Federal Ministry for Economic Cooperation and Development (BMZ)"
+        ],
+        "exited_names": []
+      },
+      {
+        "year": 2011,
+        "count": 10,
+        "entered": 0,
+        "exited": 0,
+        "net": 0,
+        "entered_names": [],
+        "exited_names": []
+      },
+      {
+        "year": 2012,
+        "count": 11,
+        "entered": 1,
+        "exited": 0,
+        "net": 1,
+        "entered_names": [
+          "Save the Children International Save is a non-governmental organization for the defense of children's rights in the world, was established in the UK in 1919, dedicated to both provide emergency humanitarian aid as the long-term development through the child sponsorship .\nSave the Children began working in Mozambique in 1984, providing emergency assistance to children and families displaced bywar, and gave their contribution to the reconstruction of the health system.\nSince 1995, Save the Children in Mozambique has workedwith local communities and organizations to design Sponsorship programs for kids. Targeted to help children from early childhood toearly adulthood, our programs work to make a healthy and safe environment where children can learn andgrow. Our early childhood programs help prepare toddlers and young children for school by giving them access to quality preschools and early literacy programs, while our programs designed for primary school-aged kids work to transform students into lifelong learners by building strong curriculums and passionate teachers. Our work with adolescents focuses on that challenging transition between childhood and adulthood, helping ensure it#s a positive one by teaching them money, job and relationship skills. We also provide health education and care to children in need through our school health programs to help children stay healthy, well-nourished and in school. Thanks to the generoussupport from our community of sponsors, these essential programs in Mozambique continue to give children a healthy start and the opportunity to learn, protecting them from harm along the way."
+        ],
+        "exited_names": []
+      },
+      {
+        "year": 2013,
+        "count": 11,
+        "entered": 0,
+        "exited": 0,
+        "net": 0,
+        "entered_names": [],
+        "exited_names": []
+      },
+      {
+        "year": 2014,
+        "count": 12,
+        "entered": 1,
+        "exited": 0,
+        "net": 1,
+        "entered_names": [
+          "The Queen Elizabeth Diamond Jubilee Trust"
+        ],
+        "exited_names": []
+      },
+      {
+        "year": 2015,
+        "count": 13,
+        "entered": 1,
+        "exited": 0,
+        "net": 1,
+        "entered_names": [
+          "Gates Foundation"
+        ],
+        "exited_names": []
+      },
+      {
+        "year": 2016,
+        "count": 14,
+        "entered": 2,
+        "exited": 1,
+        "net": 1,
+        "entered_names": [
+          "IRC-UK",
+          "Sense International"
+        ],
+        "exited_names": [
+          "African Development Bank"
+        ]
+      },
+      {
+        "year": 2017,
+        "count": 16,
+        "entered": 3,
+        "exited": 1,
+        "net": 2,
+        "entered_names": [
+          "Global Antibiotic Research and Development Partnership",
+          "Swiss Agency for Development and Cooperation (SDC)",
+          "THET"
+        ],
+        "exited_names": [
+          "The Queen Elizabeth Diamond Jubilee Trust"
+        ]
+      },
+      {
+        "year": 2018,
+        "count": 17,
+        "entered": 1,
+        "exited": 0,
+        "net": 1,
+        "entered_names": [
+          "World Vision Germany"
+        ],
+        "exited_names": []
+      },
+      {
+        "year": 2019,
+        "count": 17,
+        "entered": 2,
+        "exited": 2,
+        "net": 0,
+        "entered_names": [
+          "AFD",
+          "Grand Challenges Canada"
+        ],
+        "exited_names": [
+          "IRC-UK",
+          "World Bank"
+        ]
+      },
+      {
+        "year": 2020,
+        "count": 19,
+        "entered": 3,
+        "exited": 1,
+        "net": 2,
+        "entered_names": [
+          "Elrha",
+          "Humanity & Inclusion - Handicap International UK",
+          "World Bank"
+        ],
+        "exited_names": [
+          "THET"
+        ]
+      },
+      {
+        "year": 2021,
+        "count": 16,
+        "entered": 1,
+        "exited": 4,
+        "net": -3,
+        "entered_names": [
+          "ACTION AGAINST HUNGER SPAIN"
+        ],
+        "exited_names": [
+          "Australian Aid",
+          "Humanity & Inclusion - Handicap International UK",
+          "Save the Children International Save is a non-governmental organization for the defense of children's rights in the world, was established in the UK in 1919, dedicated to both provide emergency humanitarian aid as the long-term development through the child sponsorship .\nSave the Children began working in Mozambique in 1984, providing emergency assistance to children and families displaced bywar, and gave their contribution to the reconstruction of the health system.\nSince 1995, Save the Children in Mozambique has workedwith local communities and organizations to design Sponsorship programs for kids. Targeted to help children from early childhood toearly adulthood, our programs work to make a healthy and safe environment where children can learn andgrow. Our early childhood programs help prepare toddlers and young children for school by giving them access to quality preschools and early literacy programs, while our programs designed for primary school-aged kids work to transform students into lifelong learners by building strong curriculums and passionate teachers. Our work with adolescents focuses on that challenging transition between childhood and adulthood, helping ensure it#s a positive one by teaching them money, job and relationship skills. We also provide health education and care to children in need through our school health programs to help children stay healthy, well-nourished and in school. Thanks to the generoussupport from our community of sponsors, these essential programs in Mozambique continue to give children a healthy start and the opportunity to learn, protecting them from harm along the way.",
+          "World Vision Germany"
+        ]
+      },
+      {
+        "year": 2022,
+        "count": 18,
+        "entered": 3,
+        "exited": 1,
+        "net": 2,
+        "entered_names": [
+          "Danish Family Planning Association",
+          "Innovations for Poverty Action",
+          "VLIR-UOS - Vlaamse Interuniversitaire Raad - Flemish Interuniversity Council"
+        ],
+        "exited_names": [
+          "Finland MFA"
+        ]
+      },
+      {
+        "year": 2023,
+        "count": 19,
+        "entered": 2,
+        "exited": 1,
+        "net": 1,
+        "entered_names": [
+          "African Development Bank",
+          "Finland MFA"
+        ],
+        "exited_names": [
+          "Swiss Agency for Development and Cooperation (SDC)"
+        ]
+      },
+      {
+        "year": 2024,
+        "count": 19,
+        "entered": 2,
+        "exited": 2,
+        "net": 0,
+        "entered_names": [
+          "Global Innovation Fund",
+          "United Nations Office for Project Services"
+        ],
+        "exited_names": [
+          "Grand Challenges Canada",
+          "Sense International"
+        ]
+      },
+      {
+        "year": 2025,
+        "count": 19,
+        "entered": 0,
+        "exited": 0,
+        "net": 0,
+        "entered_names": [],
+        "exited_names": []
+      },
+      {
+        "year": 2026,
+        "count": 17,
+        "entered": 0,
+        "exited": 2,
+        "net": -2,
+        "entered_names": [],
+        "exited_names": [
+          "ACTION AGAINST HUNGER SPAIN",
+          "Finland MFA"
+        ]
+      }
+    ],
+    "total_ever": 29
+  },
+  "RW_Governance": {
+    "country": "RW",
+    "sector": "Governance",
+    "timeline": [
+      {
+        "year": 2010,
+        "count": 11,
+        "entered": 11,
+        "exited": 0,
+        "net": 11,
+        "entered_names": [
+          "AidData",
+          "Belgian agency for international cooperation (Enabel)",
+          "CAFOD",
+          "CISU Civil Society in Development",
+          "FCDO"
+        ],
+        "exited_names": []
+      },
+      {
+        "year": 2011,
+        "count": 13,
+        "entered": 2,
+        "exited": 0,
+        "net": 2,
+        "entered_names": [
+          "Australian Aid",
+          "Avocats Sans Fronti\u00e8res"
+        ],
+        "exited_names": []
+      },
+      {
+        "year": 2012,
+        "count": 16,
+        "entered": 3,
+        "exited": 0,
+        "net": 3,
+        "entered_names": [
+          "Charity Projects Ltd (Comic Relief)",
+          "Save The Children UK",
+          "Save the Children International Save is a non-governmental organization for the defense of children's rights in the world, was established in the UK in 1919, dedicated to both provide emergency humanitarian aid as the long-term development through the child sponsorship .\nSave the Children began working in Mozambique in 1984, providing emergency assistance to children and families displaced bywar, and gave their contribution to the reconstruction of the health system.\nSince 1995, Save the Children in Mozambique has workedwith local communities and organizations to design Sponsorship programs for kids. Targeted to help children from early childhood toearly adulthood, our programs work to make a healthy and safe environment where children can learn andgrow. Our early childhood programs help prepare toddlers and young children for school by giving them access to quality preschools and early literacy programs, while our programs designed for primary school-aged kids work to transform students into lifelong learners by building strong curriculums and passionate teachers. Our work with adolescents focuses on that challenging transition between childhood and adulthood, helping ensure it#s a positive one by teaching them money, job and relationship skills. We also provide health education and care to children in need through our school health programs to help children stay healthy, well-nourished and in school. Thanks to the generoussupport from our community of sponsors, these essential programs in Mozambique continue to give children a healthy start and the opportunity to learn, protecting them from harm along the way."
+        ],
+        "exited_names": []
+      },
+      {
+        "year": 2013,
+        "count": 18,
+        "entered": 2,
+        "exited": 0,
+        "net": 2,
+        "entered_names": [
+          "International Alert",
+          "Plan International UK"
+        ],
+        "exited_names": []
+      },
+      {
+        "year": 2014,
+        "count": 20,
+        "entered": 4,
+        "exited": 2,
+        "net": 2,
+        "entered_names": [
+          "CARE International UK",
+          "Disabled People\u2019s Organisations Denmark",
+          "Finland MFA",
+          "Interpeace"
+        ],
+        "exited_names": [
+          "Save The Children UK",
+          "Save the Children International Save is a non-governmental organization for the defense of children's rights in the world, was established in the UK in 1919, dedicated to both provide emergency humanitarian aid as the long-term development through the child sponsorship .\nSave the Children began working in Mozambique in 1984, providing emergency assistance to children and families displaced bywar, and gave their contribution to the reconstruction of the health system.\nSince 1995, Save the Children in Mozambique has workedwith local communities and organizations to design Sponsorship programs for kids. Targeted to help children from early childhood toearly adulthood, our programs work to make a healthy and safe environment where children can learn andgrow. Our early childhood programs help prepare toddlers and young children for school by giving them access to quality preschools and early literacy programs, while our programs designed for primary school-aged kids work to transform students into lifelong learners by building strong curriculums and passionate teachers. Our work with adolescents focuses on that challenging transition between childhood and adulthood, helping ensure it#s a positive one by teaching them money, job and relationship skills. We also provide health education and care to children in need through our school health programs to help children stay healthy, well-nourished and in school. Thanks to the generoussupport from our community of sponsors, these essential programs in Mozambique continue to give children a healthy start and the opportunity to learn, protecting them from harm along the way."
+        ]
+      },
+      {
+        "year": 2015,
+        "count": 23,
+        "entered": 4,
+        "exited": 1,
+        "net": 3,
+        "entered_names": [
+          "ODI Global",
+          "Palladium",
+          "Save The Children UK",
+          "Voluntary Service Overseas"
+        ],
+        "exited_names": [
+          "Avocats Sans Fronti\u00e8res"
+        ]
+      },
+      {
+        "year": 2016,
+        "count": 31,
+        "entered": 9,
+        "exited": 1,
+        "net": 8,
+        "entered_names": [
+          "ActionAid Rwanda",
+          "ActionAid UK",
+          "Hague Institute for the Innovation of Law",
+          "International Bureau of Fiscal Documentation (IBFD)",
+          "Norad - Norwegian Agency for Development Cooperation"
+        ],
+        "exited_names": [
+          "Charity Projects Ltd (Comic Relief)"
+        ]
+      },
+      {
+        "year": 2017,
+        "count": 36,
+        "entered": 8,
+        "exited": 3,
+        "net": 5,
+        "entered_names": [
+          "Handicap International Belgique",
+          "INSTITUT DE FORMATION SYNDICALE INTERNATIONALE asbl",
+          "Netherlands Enterprise Agency",
+          "ODI Sales Limited",
+          "RCN Justice & Democratie"
+        ],
+        "exited_names": [
+          "International Bureau of Fiscal Documentation (IBFD)",
+          "Plan International UK",
+          "Save The Children UK"
+        ]
+      },
+      {
+        "year": 2018,
+        "count": 44,
+        "entered": 8,
+        "exited": 0,
+        "net": 8,
+        "entered_names": [
+          "FSD Africa",
+          "Gates Foundation",
+          "Health Development Initiative",
+          "Institute of Development Studies",
+          "International Bureau of Fiscal Documentation (IBFD)"
+        ],
+        "exited_names": []
+      },
+      {
+        "year": 2019,
+        "count": 48,
+        "entered": 8,
+        "exited": 4,
+        "net": 4,
+        "entered_names": [
+          "AFD",
+          "DEPARTMENT FOR BUSINESS, ENERGY & INDUSTRIAL STRATEGY",
+          "DUF - Danish Youth Council",
+          "GSMA Foundation",
+          "INTOSAI Development Initiative"
+        ],
+        "exited_names": [
+          "CAFOD",
+          "Hague Institute for the Innovation of Law",
+          "International Bureau of Fiscal Documentation (IBFD)",
+          "ODI Sales Limited"
+        ]
+      },
+      {
+        "year": 2020,
+        "count": 49,
+        "entered": 1,
+        "exited": 0,
+        "net": 1,
+        "entered_names": [
+          "CKU"
+        ],
+        "exited_names": []
+      },
+      {
+        "year": 2021,
+        "count": 49,
+        "entered": 9,
+        "exited": 9,
+        "net": 0,
+        "entered_names": [
+          "African Women's Development Fund",
+          "Akili Dada",
+          "CREA",
+          "Equimundo: Center for Masculinities and Social Justice",
+          "Gender at Work"
+        ],
+        "exited_names": [
+          "ActionAid Rwanda",
+          "Australian Aid",
+          "DEPARTMENT FOR BUSINESS, ENERGY & INDUSTRIAL STRATEGY",
+          "Finland MFA",
+          "Natural Resources Institute, University of Greenwich"
+        ]
+      },
+      {
+        "year": 2022,
+        "count": 42,
+        "entered": 2,
+        "exited": 9,
+        "net": -7,
+        "entered_names": [
+          "Hague Institute for the Innovation of Law",
+          "New Zealand Ministry of Foreign Affairs and Trade"
+        ],
+        "exited_names": [
+          "AidData",
+          "CARE International UK",
+          "GSMA Foundation",
+          "Handicap International Belgique",
+          "INSTITUT DE FORMATION SYNDICALE INTERNATIONALE asbl"
+        ]
+      },
+      {
+        "year": 2023,
+        "count": 42,
+        "entered": 3,
+        "exited": 3,
+        "net": 0,
+        "entered_names": [
+          "DH Handicappuljen",
+          "Finland MFA",
+          "Institute for Fiscal Studies"
+        ],
+        "exited_names": [
+          "ActionAid UK",
+          "RCN Justice & Democratie",
+          "TradeMark Africa"
+        ]
+      },
+      {
+        "year": 2024,
+        "count": 38,
+        "entered": 2,
+        "exited": 6,
+        "net": -4,
+        "entered_names": [
+          "Office for Government Policy Coordination",
+          "tearfund"
+        ],
+        "exited_names": [
+          "FSD Africa",
+          "Finland MFA",
+          "Hague Institute for the Innovation of Law",
+          "INTOSAI Development Initiative",
+          "Ministry of Foreign Affairs of the Netherlands"
+        ]
+      },
+      {
+        "year": 2025,
+        "count": 42,
+        "entered": 5,
+        "exited": 1,
+        "net": 4,
+        "entered_names": [
+          "Clowns Without Borders Sweden",
+          "Innovations for Poverty Action",
+          "MyRight - Empowers People with Disabilities",
+          "Netherlands Enterprise Agency",
+          "Trocaire"
+        ],
+        "exited_names": [
+          "New Zealand Ministry of Foreign Affairs and Trade"
+        ]
+      },
+      {
+        "year": 2026,
+        "count": 28,
+        "entered": 0,
+        "exited": 14,
+        "net": -14,
+        "entered_names": [],
+        "exited_names": [
+          "African Women's Development Fund",
+          "Akili Dada",
+          "CREA",
+          "Disabled People\u2019s Organisations Denmark",
+          "Equimundo: Center for Masculinities and Social Justice"
+        ]
+      }
+    ],
+    "total_ever": 76
+  },
+  "RW_Health": {
+    "country": "RW",
+    "sector": "Health",
+    "timeline": [
+      {
+        "year": 2010,
+        "count": 10,
+        "entered": 10,
+        "exited": 0,
+        "net": 10,
+        "entered_names": [
+          "African Development Bank",
+          "Australian Aid",
+          "Belgian agency for international cooperation (Enabel)",
+          "CAFOD",
+          "FCDO"
+        ],
+        "exited_names": []
+      },
+      {
+        "year": 2011,
+        "count": 9,
+        "entered": 0,
+        "exited": 1,
+        "net": -1,
+        "entered_names": [],
+        "exited_names": [
+          "African Development Bank"
+        ]
+      },
+      {
+        "year": 2012,
+        "count": 11,
+        "entered": 2,
+        "exited": 0,
+        "net": 2,
+        "entered_names": [
+          "Netherlands Enterprise Agency",
+          "Vision for a Nation Foundation"
+        ],
+        "exited_names": []
+      },
+      {
+        "year": 2013,
+        "count": 13,
+        "entered": 2,
+        "exited": 0,
+        "net": 2,
+        "entered_names": [
+          "Ministry of Foreign Affairs of the Netherlands",
+          "Scottish Catholic International Aid Fund"
+        ],
+        "exited_names": []
+      },
+      {
+        "year": 2014,
+        "count": 11,
+        "entered": 0,
+        "exited": 2,
+        "net": -2,
+        "entered_names": [],
+        "exited_names": [
+          "CAFOD",
+          "Vision for a Nation Foundation"
+        ]
+      },
+      {
+        "year": 2015,
+        "count": 16,
+        "entered": 5,
+        "exited": 0,
+        "net": 5,
+        "entered_names": [
+          "Amref Health Africa - UK",
+          "Clinton Health Access Initiative",
+          "DEPARTMENT FOR BUSINESS, ENERGY & INDUSTRIAL STRATEGY",
+          "Save the Children International Save is a non-governmental organization for the defense of children's rights in the world, was established in the UK in 1919, dedicated to both provide emergency humanitarian aid as the long-term development through the child sponsorship .\nSave the Children began working in Mozambique in 1984, providing emergency assistance to children and families displaced bywar, and gave their contribution to the reconstruction of the health system.\nSince 1995, Save the Children in Mozambique has workedwith local communities and organizations to design Sponsorship programs for kids. Targeted to help children from early childhood toearly adulthood, our programs work to make a healthy and safe environment where children can learn andgrow. Our early childhood programs help prepare toddlers and young children for school by giving them access to quality preschools and early literacy programs, while our programs designed for primary school-aged kids work to transform students into lifelong learners by building strong curriculums and passionate teachers. Our work with adolescents focuses on that challenging transition between childhood and adulthood, helping ensure it#s a positive one by teaching them money, job and relationship skills. We also provide health education and care to children in need through our school health programs to help children stay healthy, well-nourished and in school. Thanks to the generoussupport from our community of sponsors, these essential programs in Mozambique continue to give children a healthy start and the opportunity to learn, protecting them from harm along the way.",
+          "Voluntary Service Overseas"
+        ],
+        "exited_names": []
+      },
+      {
+        "year": 2016,
+        "count": 15,
+        "entered": 1,
+        "exited": 2,
+        "net": -1,
+        "entered_names": [
+          "Save The Children UK"
+        ],
+        "exited_names": [
+          "Australian Aid",
+          "Scottish Catholic International Aid Fund"
+        ]
+      },
+      {
+        "year": 2017,
+        "count": 21,
+        "entered": 6,
+        "exited": 0,
+        "net": 6,
+        "entered_names": [
+          "Australian Aid",
+          "Belgian Red Cross-Flanders",
+          "Flemish Interuniversity Council for University Development Cooperation (VLIR-UOS)",
+          "Global Antibiotic Research and Development Partnership",
+          "LIGHT FOR THE WORLD BELGIUM"
+        ],
+        "exited_names": []
+      },
+      {
+        "year": 2018,
+        "count": 25,
+        "entered": 6,
+        "exited": 2,
+        "net": 4,
+        "entered_names": [
+          "Gates Foundation",
+          "Global Disability Innovation Hub",
+          "The Power of Nutrition",
+          "The University of Oxford",
+          "TradeMark Africa"
+        ],
+        "exited_names": [
+          "Save The Children UK",
+          "Save the Children International Save is a non-governmental organization for the defense of children's rights in the world, was established in the UK in 1919, dedicated to both provide emergency humanitarian aid as the long-term development through the child sponsorship .\nSave the Children began working in Mozambique in 1984, providing emergency assistance to children and families displaced bywar, and gave their contribution to the reconstruction of the health system.\nSince 1995, Save the Children in Mozambique has workedwith local communities and organizations to design Sponsorship programs for kids. Targeted to help children from early childhood toearly adulthood, our programs work to make a healthy and safe environment where children can learn andgrow. Our early childhood programs help prepare toddlers and young children for school by giving them access to quality preschools and early literacy programs, while our programs designed for primary school-aged kids work to transform students into lifelong learners by building strong curriculums and passionate teachers. Our work with adolescents focuses on that challenging transition between childhood and adulthood, helping ensure it#s a positive one by teaching them money, job and relationship skills. We also provide health education and care to children in need through our school health programs to help children stay healthy, well-nourished and in school. Thanks to the generoussupport from our community of sponsors, these essential programs in Mozambique continue to give children a healthy start and the opportunity to learn, protecting them from harm along the way."
+        ]
+      },
+      {
+        "year": 2019,
+        "count": 26,
+        "entered": 2,
+        "exited": 1,
+        "net": 1,
+        "entered_names": [
+          "Grand Challenges Canada",
+          "Survivors Fund (SURF)"
+        ],
+        "exited_names": [
+          "Australian Aid"
+        ]
+      },
+      {
+        "year": 2020,
+        "count": 30,
+        "entered": 4,
+        "exited": 0,
+        "net": 4,
+        "entered_names": [
+          "AFD",
+          "Christian Blind Mission (UK) Ltd.",
+          "Drugs for Neglected Diseases initiative",
+          "World Jewish Relief"
+        ],
+        "exited_names": []
+      },
+      {
+        "year": 2021,
+        "count": 29,
+        "entered": 1,
+        "exited": 2,
+        "net": -1,
+        "entered_names": [
+          "Sweden"
+        ],
+        "exited_names": [
+          "Amref Health Africa - UK",
+          "Belgian agency for international cooperation (Enabel)"
+        ]
+      },
+      {
+        "year": 2022,
+        "count": 33,
+        "entered": 9,
+        "exited": 5,
+        "net": 4,
+        "entered_names": [
+          "Belgian agency for international cooperation (Enabel)",
+          "HelpAge International",
+          "Imperial College of Science, Technology and Medicine",
+          "Invest International B.V.",
+          "The Institute of Development Studies"
+        ],
+        "exited_names": [
+          "Belgian Red Cross-Flanders",
+          "Flemish Interuniversity Council for University Development Cooperation (VLIR-UOS)",
+          "LIGHT FOR THE WORLD BELGIUM",
+          "Voluntary Service Overseas",
+          "World Jewish Relief"
+        ]
+      },
+      {
+        "year": 2023,
+        "count": 32,
+        "entered": 2,
+        "exited": 3,
+        "net": -1,
+        "entered_names": [
+          "Finland MFA",
+          "Office for Government Policy Coordination"
+        ],
+        "exited_names": [
+          "Ministry of Foreign Affairs of the Netherlands",
+          "Netherlands Enterprise Agency",
+          "SNV Netherlands Development Organisation"
+        ]
+      },
+      {
+        "year": 2024,
+        "count": 26,
+        "entered": 2,
+        "exited": 8,
+        "net": -6,
+        "entered_names": [
+          "London School of Hygiene and Tropical Medicine",
+          "UK - Scottish Government"
+        ],
+        "exited_names": [
+          "DEPARTMENT FOR BUSINESS, ENERGY & INDUSTRIAL STRATEGY",
+          "Finland MFA",
+          "Grand Challenges Canada",
+          "HelpAge International",
+          "Invest International B.V."
+        ]
+      },
+      {
+        "year": 2025,
+        "count": 25,
+        "entered": 0,
+        "exited": 1,
+        "net": -1,
+        "entered_names": [],
+        "exited_names": [
+          "Global Disability Innovation Hub"
+        ]
+      },
+      {
+        "year": 2026,
+        "count": 24,
+        "entered": 0,
+        "exited": 1,
+        "net": -1,
+        "entered_names": [],
+        "exited_names": [
+          "The University of Oxford"
+        ]
+      }
+    ],
+    "total_ever": 50
+  },
+  "TZ_Governance": {
+    "country": "TZ",
+    "sector": "Governance",
+    "timeline": [
+      {
+        "year": 2010,
+        "count": 11,
+        "entered": 11,
+        "exited": 0,
+        "net": 11,
+        "entered_names": [
+          "African Development Bank",
+          "Belgian agency for international cooperation (Enabel)",
+          "CAFOD",
+          "CISU Civil Society in Development",
+          "FCDO"
+        ],
+        "exited_names": []
+      },
+      {
+        "year": 2011,
+        "count": 15,
+        "entered": 5,
+        "exited": 1,
+        "net": 4,
+        "entered_names": [
+          "Australian Aid",
+          "Charity Projects Ltd (Comic Relief)",
+          "EveryChild",
+          "Save The Children UK",
+          "Save the Children International Save is a non-governmental organization for the defense of children's rights in the world, was established in the UK in 1919, dedicated to both provide emergency humanitarian aid as the long-term development through the child sponsorship .\nSave the Children began working in Mozambique in 1984, providing emergency assistance to children and families displaced bywar, and gave their contribution to the reconstruction of the health system.\nSince 1995, Save the Children in Mozambique has workedwith local communities and organizations to design Sponsorship programs for kids. Targeted to help children from early childhood toearly adulthood, our programs work to make a healthy and safe environment where children can learn andgrow. Our early childhood programs help prepare toddlers and young children for school by giving them access to quality preschools and early literacy programs, while our programs designed for primary school-aged kids work to transform students into lifelong learners by building strong curriculums and passionate teachers. Our work with adolescents focuses on that challenging transition between childhood and adulthood, helping ensure it#s a positive one by teaching them money, job and relationship skills. We also provide health education and care to children in need through our school health programs to help children stay healthy, well-nourished and in school. Thanks to the generoussupport from our community of sponsors, these essential programs in Mozambique continue to give children a healthy start and the opportunity to learn, protecting them from harm along the way."
+        ],
+        "exited_names": [
+          "African Development Bank"
+        ]
+      },
+      {
+        "year": 2012,
+        "count": 17,
+        "entered": 2,
+        "exited": 0,
+        "net": 2,
+        "entered_names": [
+          "ADD International",
+          "HelpAge International"
+        ],
+        "exited_names": []
+      },
+      {
+        "year": 2013,
+        "count": 18,
+        "entered": 2,
+        "exited": 1,
+        "net": 1,
+        "entered_names": [
+          "Kepa ry",
+          "Social Development Direct Limited"
+        ],
+        "exited_names": [
+          "CAFOD"
+        ]
+      },
+      {
+        "year": 2014,
+        "count": 19,
+        "entered": 1,
+        "exited": 0,
+        "net": 1,
+        "entered_names": [
+          "CoST (Construction Sector Transparency Initiative)"
+        ],
+        "exited_names": []
+      },
+      {
+        "year": 2015,
+        "count": 23,
+        "entered": 4,
+        "exited": 0,
+        "net": 4,
+        "entered_names": [
+          "CKU",
+          "Plan International UK",
+          "Sightsavers",
+          "Womankind Worldwide"
+        ],
+        "exited_names": []
+      },
+      {
+        "year": 2016,
+        "count": 26,
+        "entered": 6,
+        "exited": 3,
+        "net": 3,
+        "entered_names": [
+          "BBC Media Action",
+          "INPUD International Network of People who Use Drugs",
+          "ODI Sales Limited",
+          "Palladium",
+          "SOAS University of London"
+        ],
+        "exited_names": [
+          "EveryChild",
+          "Kepa ry",
+          "Sightsavers"
+        ]
+      },
+      {
+        "year": 2017,
+        "count": 28,
+        "entered": 2,
+        "exited": 0,
+        "net": 2,
+        "entered_names": [
+          "Disabled People\u2019s Organisations Denmark",
+          "PricewaterhouseCoopers LLP"
+        ],
+        "exited_names": []
+      },
+      {
+        "year": 2018,
+        "count": 34,
+        "entered": 7,
+        "exited": 1,
+        "net": 6,
+        "entered_names": [
+          "ActionAid Denmark (Mellemfolkeligt Samvirke)",
+          "FSD Africa",
+          "Gates Foundation",
+          "Integrity Action",
+          "Natural Resources Institute, University of Greenwich"
+        ],
+        "exited_names": [
+          "Belgian agency for international cooperation (Enabel)"
+        ]
+      },
+      {
+        "year": 2019,
+        "count": 40,
+        "entered": 9,
+        "exited": 3,
+        "net": 6,
+        "entered_names": [
+          "AFD",
+          "ActionAid UK",
+          "Christian Blind Mission (UK) Ltd.",
+          "CoST (Construction Sector Transparency Initiative)c/o Engineers Against Poverty",
+          "DUF - Danish Youth Council"
+        ],
+        "exited_names": [
+          "ADD International",
+          "CKU",
+          "Womankind Worldwide"
+        ]
+      },
+      {
+        "year": 2020,
+        "count": 38,
+        "entered": 2,
+        "exited": 4,
+        "net": -2,
+        "entered_names": [
+          "CARE International UK",
+          "CKU"
+        ],
+        "exited_names": [
+          "Australian Aid",
+          "IRC-UK",
+          "Save The Children UK",
+          "Save the Children International Save is a non-governmental organization for the defense of children's rights in the world, was established in the UK in 1919, dedicated to both provide emergency humanitarian aid as the long-term development through the child sponsorship .\nSave the Children began working in Mozambique in 1984, providing emergency assistance to children and families displaced bywar, and gave their contribution to the reconstruction of the health system.\nSince 1995, Save the Children in Mozambique has workedwith local communities and organizations to design Sponsorship programs for kids. Targeted to help children from early childhood toearly adulthood, our programs work to make a healthy and safe environment where children can learn andgrow. Our early childhood programs help prepare toddlers and young children for school by giving them access to quality preschools and early literacy programs, while our programs designed for primary school-aged kids work to transform students into lifelong learners by building strong curriculums and passionate teachers. Our work with adolescents focuses on that challenging transition between childhood and adulthood, helping ensure it#s a positive one by teaching them money, job and relationship skills. We also provide health education and care to children in need through our school health programs to help children stay healthy, well-nourished and in school. Thanks to the generoussupport from our community of sponsors, these essential programs in Mozambique continue to give children a healthy start and the opportunity to learn, protecting them from harm along the way."
+        ]
+      },
+      {
+        "year": 2021,
+        "count": 32,
+        "entered": 1,
+        "exited": 7,
+        "net": -6,
+        "entered_names": [
+          "United Nations Office for Project Services"
+        ],
+        "exited_names": [
+          "ActionAid UK",
+          "Disabled People\u2019s Organisations Denmark",
+          "Natural Resources Institute, University of Greenwich",
+          "Restless Development",
+          "Social Development Direct Limited"
+        ]
+      },
+      {
+        "year": 2022,
+        "count": 36,
+        "entered": 8,
+        "exited": 4,
+        "net": 4,
+        "entered_names": [
+          "ADRA Danmark",
+          "Danmission",
+          "Itad Limited",
+          "NGO Avocats sans fronti\u00e8res",
+          "NGO Internat. Peace Info Service / Internationale Vredesinformatiedienst - 1967610"
+        ],
+        "exited_names": [
+          "BBC Media Action",
+          "Christian Blind Mission (UK) Ltd.",
+          "ODI Sales Limited",
+          "Palladium"
+        ]
+      },
+      {
+        "year": 2023,
+        "count": 34,
+        "entered": 2,
+        "exited": 4,
+        "net": -2,
+        "entered_names": [
+          "ODI Global",
+          "Palladium International Ltd (UK)"
+        ],
+        "exited_names": [
+          "CARE International UK",
+          "HelpAge International",
+          "Integrity Action",
+          "The Global Initiative Against Transnational Organized Crime"
+        ]
+      },
+      {
+        "year": 2024,
+        "count": 34,
+        "entered": 4,
+        "exited": 4,
+        "net": 0,
+        "entered_names": [
+          "Belgian agency for international cooperation (Enabel)",
+          "Equality Fund",
+          "Innovations for Poverty Action",
+          "Office for Government Policy Coordination"
+        ],
+        "exited_names": [
+          "Ecorys UK",
+          "FSD Africa",
+          "MERCY CORPS EUROPE",
+          "UN-Habitat"
+        ]
+      },
+      {
+        "year": 2025,
+        "count": 34,
+        "entered": 3,
+        "exited": 3,
+        "net": 0,
+        "entered_names": [
+          "Christian Aid",
+          "DEPARTMENT FOR SCIENCE, INNOVATION AND TECHNOLOGY",
+          "Danish Refugee Council"
+        ],
+        "exited_names": [
+          "Charity Projects Ltd (Comic Relief)",
+          "Plan International UK",
+          "The Institute of Development Studies"
+        ]
+      },
+      {
+        "year": 2026,
+        "count": 31,
+        "entered": 1,
+        "exited": 4,
+        "net": -3,
+        "entered_names": [
+          "Oxford Policy Management"
+        ],
+        "exited_names": [
+          "Danish Refugee Council",
+          "Finland MFA",
+          "Itad Limited",
+          "PricewaterhouseCoopers LLP"
+        ]
+      }
+    ],
+    "total_ever": 67
+  },
+  "TZ_Health": {
+    "country": "TZ",
+    "sector": "Health",
+    "timeline": [
+      {
+        "year": 2010,
+        "count": 14,
+        "entered": 14,
+        "exited": 0,
+        "net": 14,
+        "entered_names": [
+          "African Development Bank",
+          "Australian Aid",
+          "CAFOD",
+          "Drugs for Neglected Diseases initiative",
+          "FCDO"
+        ],
+        "exited_names": []
+      },
+      {
+        "year": 2011,
+        "count": 15,
+        "entered": 1,
+        "exited": 0,
+        "net": 1,
+        "entered_names": [
+          "Charity Projects Ltd (Comic Relief)"
+        ],
+        "exited_names": []
+      },
+      {
+        "year": 2012,
+        "count": 15,
+        "entered": 0,
+        "exited": 0,
+        "net": 0,
+        "entered_names": [],
+        "exited_names": []
+      },
+      {
+        "year": 2013,
+        "count": 15,
+        "entered": 0,
+        "exited": 0,
+        "net": 0,
+        "entered_names": [],
+        "exited_names": []
+      },
+      {
+        "year": 2014,
+        "count": 17,
+        "entered": 2,
+        "exited": 0,
+        "net": 2,
+        "entered_names": [
+          "HelpAge International",
+          "The Queen Elizabeth Diamond Jubilee Trust"
+        ],
+        "exited_names": []
+      },
+      {
+        "year": 2015,
+        "count": 23,
+        "entered": 6,
+        "exited": 0,
+        "net": 6,
+        "entered_names": [
+          "Amref Health Africa - UK",
+          "DEPARTMENT FOR BUSINESS, ENERGY & INDUSTRIAL STRATEGY",
+          "Plan International UK",
+          "The Power of Nutrition",
+          "Voluntary Service Overseas"
+        ],
+        "exited_names": []
+      },
+      {
+        "year": 2016,
+        "count": 22,
+        "entered": 1,
+        "exited": 2,
+        "net": -1,
+        "entered_names": [
+          "Gates Foundation"
+        ],
+        "exited_names": [
+          "African Development Bank",
+          "CAFOD"
+        ]
+      },
+      {
+        "year": 2017,
+        "count": 27,
+        "entered": 7,
+        "exited": 2,
+        "net": 5,
+        "entered_names": [
+          "BBC Media Action",
+          "Belgian Red Cross-Flanders",
+          "Global Antibiotic Research and Development Partnership",
+          "Liverpool School of Tropical Medicine",
+          "Malaria Consortium"
+        ],
+        "exited_names": [
+          "Save The Children UK",
+          "The Queen Elizabeth Diamond Jubilee Trust"
+        ]
+      },
+      {
+        "year": 2018,
+        "count": 28,
+        "entered": 4,
+        "exited": 3,
+        "net": 1,
+        "entered_names": [
+          "DEPARTMENT FOR SCIENCE, INNOVATION AND TECHNOLOGY",
+          "Global Disability Innovation Hub",
+          "The University of Oxford",
+          "UK - Department of Health and Social Care (DHSC)"
+        ],
+        "exited_names": [
+          "Charity Projects Ltd (Comic Relief)",
+          "Plan International UK",
+          "Save the Children International Save is a non-governmental organization for the defense of children's rights in the world, was established in the UK in 1919, dedicated to both provide emergency humanitarian aid as the long-term development through the child sponsorship .\nSave the Children began working in Mozambique in 1984, providing emergency assistance to children and families displaced bywar, and gave their contribution to the reconstruction of the health system.\nSince 1995, Save the Children in Mozambique has workedwith local communities and organizations to design Sponsorship programs for kids. Targeted to help children from early childhood toearly adulthood, our programs work to make a healthy and safe environment where children can learn andgrow. Our early childhood programs help prepare toddlers and young children for school by giving them access to quality preschools and early literacy programs, while our programs designed for primary school-aged kids work to transform students into lifelong learners by building strong curriculums and passionate teachers. Our work with adolescents focuses on that challenging transition between childhood and adulthood, helping ensure it#s a positive one by teaching them money, job and relationship skills. We also provide health education and care to children in need through our school health programs to help children stay healthy, well-nourished and in school. Thanks to the generoussupport from our community of sponsors, these essential programs in Mozambique continue to give children a healthy start and the opportunity to learn, protecting them from harm along the way."
+        ]
+      },
+      {
+        "year": 2019,
+        "count": 27,
+        "entered": 1,
+        "exited": 2,
+        "net": -1,
+        "entered_names": [
+          "Abt Britain Ltd"
+        ],
+        "exited_names": [
+          "BBC Media Action",
+          "The University of Manchester"
+        ]
+      },
+      {
+        "year": 2020,
+        "count": 30,
+        "entered": 4,
+        "exited": 1,
+        "net": 3,
+        "entered_names": [
+          "AFD",
+          "Elrha",
+          "Save The Children UK",
+          "Save the Children International Save is a non-governmental organization for the defense of children's rights in the world, was established in the UK in 1919, dedicated to both provide emergency humanitarian aid as the long-term development through the child sponsorship .\nSave the Children began working in Mozambique in 1984, providing emergency assistance to children and families displaced bywar, and gave their contribution to the reconstruction of the health system.\nSince 1995, Save the Children in Mozambique has workedwith local communities and organizations to design Sponsorship programs for kids. Targeted to help children from early childhood toearly adulthood, our programs work to make a healthy and safe environment where children can learn andgrow. Our early childhood programs help prepare toddlers and young children for school by giving them access to quality preschools and early literacy programs, while our programs designed for primary school-aged kids work to transform students into lifelong learners by building strong curriculums and passionate teachers. Our work with adolescents focuses on that challenging transition between childhood and adulthood, helping ensure it#s a positive one by teaching them money, job and relationship skills. We also provide health education and care to children in need through our school health programs to help children stay healthy, well-nourished and in school. Thanks to the generoussupport from our community of sponsors, these essential programs in Mozambique continue to give children a healthy start and the opportunity to learn, protecting them from harm along the way."
+        ],
+        "exited_names": [
+          "THET"
+        ]
+      },
+      {
+        "year": 2021,
+        "count": 27,
+        "entered": 1,
+        "exited": 4,
+        "net": -3,
+        "entered_names": [
+          "ODI"
+        ],
+        "exited_names": [
+          "Australian Aid",
+          "Save The Children UK",
+          "Save the Children International Save is a non-governmental organization for the defense of children's rights in the world, was established in the UK in 1919, dedicated to both provide emergency humanitarian aid as the long-term development through the child sponsorship .\nSave the Children began working in Mozambique in 1984, providing emergency assistance to children and families displaced bywar, and gave their contribution to the reconstruction of the health system.\nSince 1995, Save the Children in Mozambique has workedwith local communities and organizations to design Sponsorship programs for kids. Targeted to help children from early childhood toearly adulthood, our programs work to make a healthy and safe environment where children can learn andgrow. Our early childhood programs help prepare toddlers and young children for school by giving them access to quality preschools and early literacy programs, while our programs designed for primary school-aged kids work to transform students into lifelong learners by building strong curriculums and passionate teachers. Our work with adolescents focuses on that challenging transition between childhood and adulthood, helping ensure it#s a positive one by teaching them money, job and relationship skills. We also provide health education and care to children in need through our school health programs to help children stay healthy, well-nourished and in school. Thanks to the generoussupport from our community of sponsors, these essential programs in Mozambique continue to give children a healthy start and the opportunity to learn, protecting them from harm along the way.",
+          "The Power of Nutrition"
+        ]
+      },
+      {
+        "year": 2022,
+        "count": 30,
+        "entered": 5,
+        "exited": 2,
+        "net": 3,
+        "entered_names": [
+          "NGO APOPO (Anti-persoonsmijnen Ontmijnende ProductOntwikkeling)",
+          "NGO Light for the World",
+          "NGO Rode Kruis-Vlaanderen Internationaal",
+          "University Of Liverpool",
+          "VLIR-UOS - Vlaamse Interuniversitaire Raad - Flemish Interuniversity Council"
+        ],
+        "exited_names": [
+          "Belgian Red Cross-Flanders",
+          "Voluntary Service Overseas"
+        ]
+      },
+      {
+        "year": 2023,
+        "count": 29,
+        "entered": 3,
+        "exited": 4,
+        "net": -1,
+        "entered_names": [
+          "DT Global UK",
+          "Save The Children UK",
+          "United Nations Office for Project Services"
+        ],
+        "exited_names": [
+          "Abt Britain Ltd",
+          "Amref Health Africa - UK",
+          "ODI",
+          "UK - Department of Health and Social Care (DHSC)"
+        ]
+      },
+      {
+        "year": 2024,
+        "count": 30,
+        "entered": 2,
+        "exited": 1,
+        "net": 1,
+        "entered_names": [
+          "London School of Hygiene and Tropical Medicine",
+          "Office for Government Policy Coordination"
+        ],
+        "exited_names": [
+          "DEPARTMENT FOR BUSINESS, ENERGY & INDUSTRIAL STRATEGY"
+        ]
+      },
+      {
+        "year": 2025,
+        "count": 27,
+        "entered": 0,
+        "exited": 3,
+        "net": -3,
+        "entered_names": [],
+        "exited_names": [
+          "Global Disability Innovation Hub",
+          "Malaria Consortium",
+          "Save The Children UK"
+        ]
+      },
+      {
+        "year": 2026,
+        "count": 26,
+        "entered": 0,
+        "exited": 1,
+        "net": -1,
+        "entered_names": [],
+        "exited_names": [
+          "Finland MFA"
+        ]
+      }
+    ],
+    "total_ever": 48
+  },
+  "ET_Governance": {
+    "country": "ET",
+    "sector": "Governance",
+    "timeline": [
+      {
+        "year": 2010,
+        "count": 8,
+        "entered": 8,
+        "exited": 0,
+        "net": 8,
+        "entered_names": [
+          "Australian Aid",
+          "CAFOD",
+          "CISU Civil Society in Development",
+          "FCDO",
+          "Federal Ministry for Economic Cooperation and Development (BMZ)"
+        ],
+        "exited_names": []
+      },
+      {
+        "year": 2011,
+        "count": 9,
+        "entered": 1,
+        "exited": 0,
+        "net": 1,
+        "entered_names": [
+          "Maxwell Stamp PLC"
+        ],
+        "exited_names": []
+      },
+      {
+        "year": 2012,
+        "count": 9,
+        "entered": 0,
+        "exited": 0,
+        "net": 0,
+        "entered_names": [],
+        "exited_names": []
+      },
+      {
+        "year": 2013,
+        "count": 10,
+        "entered": 1,
+        "exited": 0,
+        "net": 1,
+        "entered_names": [
+          "Swiss Agency for Development and Cooperation (SDC)"
+        ],
+        "exited_names": []
+      },
+      {
+        "year": 2014,
+        "count": 11,
+        "entered": 1,
+        "exited": 0,
+        "net": 1,
+        "entered_names": [
+          "IRC-UK"
+        ],
+        "exited_names": []
+      },
+      {
+        "year": 2015,
+        "count": 12,
+        "entered": 1,
+        "exited": 0,
+        "net": 1,
+        "entered_names": [
+          "ODI Global"
+        ],
+        "exited_names": []
+      },
+      {
+        "year": 2016,
+        "count": 13,
+        "entered": 1,
+        "exited": 0,
+        "net": 1,
+        "entered_names": [
+          "Save the Children International Save is a non-governmental organization for the defense of children's rights in the world, was established in the UK in 1919, dedicated to both provide emergency humanitarian aid as the long-term development through the child sponsorship .\nSave the Children began working in Mozambique in 1984, providing emergency assistance to children and families displaced bywar, and gave their contribution to the reconstruction of the health system.\nSince 1995, Save the Children in Mozambique has workedwith local communities and organizations to design Sponsorship programs for kids. Targeted to help children from early childhood toearly adulthood, our programs work to make a healthy and safe environment where children can learn andgrow. Our early childhood programs help prepare toddlers and young children for school by giving them access to quality preschools and early literacy programs, while our programs designed for primary school-aged kids work to transform students into lifelong learners by building strong curriculums and passionate teachers. Our work with adolescents focuses on that challenging transition between childhood and adulthood, helping ensure it#s a positive one by teaching them money, job and relationship skills. We also provide health education and care to children in need through our school health programs to help children stay healthy, well-nourished and in school. Thanks to the generoussupport from our community of sponsors, these essential programs in Mozambique continue to give children a healthy start and the opportunity to learn, protecting them from harm along the way."
+        ],
+        "exited_names": []
+      },
+      {
+        "year": 2017,
+        "count": 15,
+        "entered": 2,
+        "exited": 0,
+        "net": 2,
+        "entered_names": [
+          "Gates Foundation",
+          "Red Barnet"
+        ],
+        "exited_names": []
+      },
+      {
+        "year": 2018,
+        "count": 18,
+        "entered": 4,
+        "exited": 1,
+        "net": 3,
+        "entered_names": [
+          "ADRA Danmark",
+          "British Council",
+          "World Vision Ethiopia",
+          "World Vision United Kingdom"
+        ],
+        "exited_names": [
+          "IRC-UK"
+        ]
+      },
+      {
+        "year": 2019,
+        "count": 26,
+        "entered": 9,
+        "exited": 1,
+        "net": 8,
+        "entered_names": [
+          "AFD",
+          "ALTAI",
+          "Article 19",
+          "BBC Media Action",
+          "Cowater International Inc"
+        ],
+        "exited_names": [
+          "Red Barnet"
+        ]
+      },
+      {
+        "year": 2020,
+        "count": 30,
+        "entered": 5,
+        "exited": 1,
+        "net": 4,
+        "entered_names": [
+          "ActionAid UK",
+          "BRITISH COUNCIL",
+          "CKU",
+          "Interpeace",
+          "Welthungerhilfe"
+        ],
+        "exited_names": [
+          "Maxwell Stamp PLC"
+        ]
+      },
+      {
+        "year": 2021,
+        "count": 38,
+        "entered": 9,
+        "exited": 1,
+        "net": 8,
+        "entered_names": [
+          "African Disability Forum (ADF)",
+          "Amref Health Africa in Ethiopia",
+          "DUF - Danish Youth Council",
+          "Development Expertise Center",
+          "Ethiopian Women Lawyers Association"
+        ],
+        "exited_names": [
+          "Australian Aid"
+        ]
+      },
+      {
+        "year": 2022,
+        "count": 42,
+        "entered": 9,
+        "exited": 5,
+        "net": 4,
+        "entered_names": [
+          "ActionAid Denmark (Mellemfolkeligt Samvirke)",
+          "CARE International UK",
+          "DT Global International Development UK Ltd",
+          "Danish Red Cross",
+          "Forests of the World"
+        ],
+        "exited_names": [
+          "ADRA Danmark",
+          "CAFOD",
+          "DUF - Danish Youth Council",
+          "Save the Children International Save is a non-governmental organization for the defense of children's rights in the world, was established in the UK in 1919, dedicated to both provide emergency humanitarian aid as the long-term development through the child sponsorship .\nSave the Children began working in Mozambique in 1984, providing emergency assistance to children and families displaced bywar, and gave their contribution to the reconstruction of the health system.\nSince 1995, Save the Children in Mozambique has workedwith local communities and organizations to design Sponsorship programs for kids. Targeted to help children from early childhood toearly adulthood, our programs work to make a healthy and safe environment where children can learn andgrow. Our early childhood programs help prepare toddlers and young children for school by giving them access to quality preschools and early literacy programs, while our programs designed for primary school-aged kids work to transform students into lifelong learners by building strong curriculums and passionate teachers. Our work with adolescents focuses on that challenging transition between childhood and adulthood, helping ensure it#s a positive one by teaching them money, job and relationship skills. We also provide health education and care to children in need through our school health programs to help children stay healthy, well-nourished and in school. Thanks to the generoussupport from our community of sponsors, these essential programs in Mozambique continue to give children a healthy start and the opportunity to learn, protecting them from harm along the way.",
+          "World Vision Germany"
+        ]
+      },
+      {
+        "year": 2023,
+        "count": 41,
+        "entered": 2,
+        "exited": 3,
+        "net": -1,
+        "entered_names": [
+          "Christian Aid",
+          "Unilever"
+        ],
+        "exited_names": [
+          "BRITISH COUNCIL",
+          "World Vision Ethiopia",
+          "World Vision United Kingdom"
+        ]
+      },
+      {
+        "year": 2024,
+        "count": 38,
+        "entered": 2,
+        "exited": 5,
+        "net": -3,
+        "entered_names": [
+          "DUF - Danish Youth Council",
+          "UN-Habitat"
+        ],
+        "exited_names": [
+          "ALTAI",
+          "Article 19",
+          "DT Global International Development UK Ltd",
+          "Disabled People\u2019s Organisations Denmark",
+          "Unilever"
+        ]
+      },
+      {
+        "year": 2025,
+        "count": 37,
+        "entered": 2,
+        "exited": 3,
+        "net": -1,
+        "entered_names": [
+          "DH Handicappuljen",
+          "Seefar Foundation"
+        ],
+        "exited_names": [
+          "British Council",
+          "European Institute of Peace",
+          "IRC-UK"
+        ]
+      },
+      {
+        "year": 2026,
+        "count": 26,
+        "entered": 0,
+        "exited": 11,
+        "net": -11,
+        "entered_names": [],
+        "exited_names": [
+          "African Disability Forum (ADF)",
+          "Amref Health Africa in Ethiopia",
+          "Danish Refugee Council",
+          "Development Expertise Center",
+          "Ethiopian Women Lawyers Association"
+        ]
+      }
+    ],
+    "total_ever": 55
+  },
+  "ET_Health": {
+    "country": "ET",
+    "sector": "Health",
+    "timeline": [
+      {
+        "year": 2010,
+        "count": 10,
+        "entered": 10,
+        "exited": 0,
+        "net": 10,
+        "entered_names": [
+          "CAFOD",
+          "Drugs for Neglected Diseases initiative",
+          "Ethiopiaid",
+          "FCDO",
+          "Finland MFA"
+        ],
+        "exited_names": []
+      },
+      {
+        "year": 2011,
+        "count": 12,
+        "entered": 2,
+        "exited": 0,
+        "net": 2,
+        "entered_names": [
+          "Australian Aid",
+          "Save the Children International Save is a non-governmental organization for the defense of children's rights in the world, was established in the UK in 1919, dedicated to both provide emergency humanitarian aid as the long-term development through the child sponsorship .\nSave the Children began working in Mozambique in 1984, providing emergency assistance to children and families displaced bywar, and gave their contribution to the reconstruction of the health system.\nSince 1995, Save the Children in Mozambique has workedwith local communities and organizations to design Sponsorship programs for kids. Targeted to help children from early childhood toearly adulthood, our programs work to make a healthy and safe environment where children can learn andgrow. Our early childhood programs help prepare toddlers and young children for school by giving them access to quality preschools and early literacy programs, while our programs designed for primary school-aged kids work to transform students into lifelong learners by building strong curriculums and passionate teachers. Our work with adolescents focuses on that challenging transition between childhood and adulthood, helping ensure it#s a positive one by teaching them money, job and relationship skills. We also provide health education and care to children in need through our school health programs to help children stay healthy, well-nourished and in school. Thanks to the generoussupport from our community of sponsors, these essential programs in Mozambique continue to give children a healthy start and the opportunity to learn, protecting them from harm along the way."
+        ],
+        "exited_names": []
+      },
+      {
+        "year": 2012,
+        "count": 13,
+        "entered": 1,
+        "exited": 0,
+        "net": 1,
+        "entered_names": [
+          "Federal Ministry for Economic Cooperation and Development (BMZ)"
+        ],
+        "exited_names": []
+      },
+      {
+        "year": 2013,
+        "count": 16,
+        "entered": 3,
+        "exited": 0,
+        "net": 3,
+        "entered_names": [
+          "Gates Foundation",
+          "Swiss Agency for Development and Cooperation (SDC)",
+          "Vision Aid Overseas"
+        ],
+        "exited_names": []
+      },
+      {
+        "year": 2014,
+        "count": 18,
+        "entered": 2,
+        "exited": 0,
+        "net": 2,
+        "entered_names": [
+          "Project Harar",
+          "Sightsavers"
+        ],
+        "exited_names": []
+      },
+      {
+        "year": 2015,
+        "count": 20,
+        "entered": 3,
+        "exited": 1,
+        "net": 2,
+        "entered_names": [
+          "Amref Health Africa - UK",
+          "Amref Health Africa in Ethiopia",
+          "Voluntary Service Overseas"
+        ],
+        "exited_names": [
+          "Federal Ministry for Economic Cooperation and Development (BMZ)"
+        ]
+      },
+      {
+        "year": 2016,
+        "count": 22,
+        "entered": 2,
+        "exited": 0,
+        "net": 2,
+        "entered_names": [
+          "Federal Ministry for Economic Cooperation and Development (BMZ)",
+          "International Planned Parenthood Federation"
+        ],
+        "exited_names": []
+      },
+      {
+        "year": 2017,
+        "count": 26,
+        "entered": 4,
+        "exited": 0,
+        "net": 4,
+        "entered_names": [
+          "EngenderHealth",
+          "IRC-UK",
+          "Instituut voor Tropische Geneeskunde",
+          "Liverpool School of Tropical Medicine"
+        ],
+        "exited_names": []
+      },
+      {
+        "year": 2018,
+        "count": 31,
+        "entered": 7,
+        "exited": 2,
+        "net": 5,
+        "entered_names": [
+          "BBC Media Action",
+          "Dawuro Development Association",
+          "Orbis Charitable Trust",
+          "Orbis Ethiopia",
+          "Send a Cow"
+        ],
+        "exited_names": [
+          "IRC-UK",
+          "Project Harar"
+        ]
+      },
+      {
+        "year": 2019,
+        "count": 29,
+        "entered": 0,
+        "exited": 2,
+        "net": -2,
+        "entered_names": [],
+        "exited_names": [
+          "Australian Aid",
+          "BBC Media Action"
+        ]
+      },
+      {
+        "year": 2020,
+        "count": 30,
+        "entered": 1,
+        "exited": 0,
+        "net": 1,
+        "entered_names": [
+          "Elrha"
+        ],
+        "exited_names": []
+      },
+      {
+        "year": 2021,
+        "count": 28,
+        "entered": 2,
+        "exited": 4,
+        "net": -2,
+        "entered_names": [
+          "ACTION AGAINST HUNGER SPAIN",
+          "African Development Bank"
+        ],
+        "exited_names": [
+          "Amref Health Africa in Ethiopia",
+          "CAFOD",
+          "International Planned Parenthood Federation",
+          "Send a Cow"
+        ]
+      },
+      {
+        "year": 2022,
+        "count": 25,
+        "entered": 6,
+        "exited": 9,
+        "net": -3,
+        "entered_names": [
+          "AFD",
+          "EngenderHealth Ethiopia",
+          "ITM Institute of Tropical Medicine ANTWERPEN - ANVERS",
+          "United Nations Office for Project Services",
+          "VLIR-UOS - Vlaamse Interuniversitaire Raad - Flemish Interuniversity Council"
+        ],
+        "exited_names": [
+          "Dawuro Development Association",
+          "EngenderHealth",
+          "Finland MFA",
+          "Instituut voor Tropische Geneeskunde",
+          "Liverpool School of Tropical Medicine"
+        ]
+      },
+      {
+        "year": 2023,
+        "count": 25,
+        "entered": 1,
+        "exited": 1,
+        "net": 0,
+        "entered_names": [
+          "Finland MFA"
+        ],
+        "exited_names": [
+          "Save the Children International Save is a non-governmental organization for the defense of children's rights in the world, was established in the UK in 1919, dedicated to both provide emergency humanitarian aid as the long-term development through the child sponsorship .\nSave the Children began working in Mozambique in 1984, providing emergency assistance to children and families displaced bywar, and gave their contribution to the reconstruction of the health system.\nSince 1995, Save the Children in Mozambique has workedwith local communities and organizations to design Sponsorship programs for kids. Targeted to help children from early childhood toearly adulthood, our programs work to make a healthy and safe environment where children can learn andgrow. Our early childhood programs help prepare toddlers and young children for school by giving them access to quality preschools and early literacy programs, while our programs designed for primary school-aged kids work to transform students into lifelong learners by building strong curriculums and passionate teachers. Our work with adolescents focuses on that challenging transition between childhood and adulthood, helping ensure it#s a positive one by teaching them money, job and relationship skills. We also provide health education and care to children in need through our school health programs to help children stay healthy, well-nourished and in school. Thanks to the generoussupport from our community of sponsors, these essential programs in Mozambique continue to give children a healthy start and the opportunity to learn, protecting them from harm along the way."
+        ]
+      },
+      {
+        "year": 2024,
+        "count": 24,
+        "entered": 0,
+        "exited": 1,
+        "net": -1,
+        "entered_names": [],
+        "exited_names": [
+          "Sightsavers"
+        ]
+      },
+      {
+        "year": 2025,
+        "count": 24,
+        "entered": 0,
+        "exited": 0,
+        "net": 0,
+        "entered_names": [],
+        "exited_names": []
+      },
+      {
+        "year": 2026,
+        "count": 22,
+        "entered": 0,
+        "exited": 2,
+        "net": -2,
+        "entered_names": [],
+        "exited_names": [
+          "ACTION AGAINST HUNGER SPAIN",
+          "Finland MFA"
+        ]
+      }
+    ],
+    "total_ever": 42
+  }
+}

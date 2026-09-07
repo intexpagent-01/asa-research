@@ -1,0 +1,13 @@
+{
+  "country": "RW",
+  "sector": "Health",
+  "raw_orgs": 50,
+  "dedup_orgs": 50,
+  "active_orgs": 42,
+  "total_activities": 302,
+  "active_activities": 221,
+  "miscoded": 32,
+  "coordination_signals": 7,
+  "total_disbursed_usd": 1238947697.1799998,
+  "orgs_reporting_financials": 6
+}

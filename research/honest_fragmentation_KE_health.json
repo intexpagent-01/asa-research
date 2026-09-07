@@ -1,0 +1,13 @@
+{
+  "country": "KE",
+  "sector": "Health",
+  "raw_orgs": 31,
+  "dedup_orgs": 30,
+  "active_orgs": 26,
+  "total_activities": 602,
+  "active_activities": 371,
+  "miscoded": 60,
+  "coordination_signals": 4,
+  "total_disbursed_usd": 2266629328.33,
+  "orgs_reporting_financials": 6
+}

@@ -1,0 +1,13 @@
+{
+  "country": "RW",
+  "sector": "Governance",
+  "raw_orgs": 77,
+  "dedup_orgs": 76,
+  "active_orgs": 58,
+  "total_activities": 860,
+  "active_activities": 380,
+  "miscoded": 18,
+  "coordination_signals": 62,
+  "total_disbursed_usd": 1776135932.07209,
+  "orgs_reporting_financials": 8
+}
