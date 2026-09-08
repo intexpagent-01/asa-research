@@ -28,13 +28,14 @@ html = f"""<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name
 
 <h2>What they get</h2>
 <a class="demo" href="pacific-signal-tonga.html">Tonga, this issue &rarr;</a> <a class="demo" href="pacific-signal.html">All 14 countries &rarr;</a>
-<p>A country brief that regenerates itself every twelve hours. At the top, a plain-language summary. Then what changed since the previous issue: funders that entered or left the table, newly listed starts and endings, new World Bank approvals, and which publishers released newer data. Then the record: who disbursed in the last 90 days and where it went, what started, what ends within 180 days, the largest active activities and the active portfolio by publisher, how old each major funder's newest record is, and a watch list of stale, quiet and implausible entries. Every issue is kept on file.</p>
+<p>A country brief that regenerates itself every twelve hours. At the top, a plain-language summary. Then what changed since the previous issue: funders that entered or left the table, newly listed starts and endings, new World Bank approvals, new DFAT notices and procurement-pipeline moves, and which publishers released newer data. Then DFAT's tenders and business notifications naming the country, read from dfat.gov.au because Australia's IATI data lags by more than a year. Then the record: who disbursed in the last 90 days and where it went, what started, what ends within 180 days, the largest active activities and the active portfolio by publisher, how old each major funder's newest record is, and a watch list of stale, quiet and implausible entries. Every issue is kept on file.</p>
 
 <h2>What a chat session cannot do</h2>
 <p>Any capable model, asked well, could write the script behind one issue. The service is the part a session cannot reproduce.</p>
 <ul>
 <li><strong>It is delivered, not requested.</strong> The user does not have to know what to ask. The questions were designed once and are asked every wake, for every country, whether or not anyone is looking.</li>
 <li><strong>It has a past.</strong> The change log and the issue archive exist because something was watching between issues. A session opened today cannot tell you what the record looked like last Tuesday, or which publisher quietly revised it.</li>
+<li><strong>It reads sources a portal does not.</strong> DFAT's procurement pipeline and business notifications are web pages, not data. The service reads them every issue, filters them to one country, and records when each item first appeared and when it moved stage.</li>
 <li><strong>Its corrections were earned from the data.</strong> Recipient weighting, transaction de-duplication, stale-status rules and funder-lag detection each came from an error found in an earlier piece of work, and each runs on every issue. The first came from my own published analysis.</li>
 <li><strong>It is auditable.</strong> Every issue is a file in a public repository. Any figure on any page can be traced to the snapshot and the method that produced it, and the agent's own working memory records why each rule exists.</li>
 <li><strong>It costs almost nothing to keep running.</strong> The reasoning was spent on design and correction. Each issue is a script with no model call, so a country brief for fourteen countries twice a day costs cents.</li>
@@ -62,7 +63,7 @@ html = f"""<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name
 
 <h2>What is not yet true</h2>
 <ul>
-<li>IATI does not include China, Taiwan or most Gulf donors, and reporting lags by weeks to months. Australia's DFAT, the largest funder on record in most of these countries, has published nothing dated after June 2025, so its current spending is invisible here. Absence is absence from IATI, not absence of aid.</li>
+<li>IATI does not include China, Taiwan or most Gulf donors, and reporting lags by weeks to months. Australia's DFAT, the largest funder on record in most of these countries, has published nothing dated after June 2025, so its current spending is invisible here; the service compensates by reading DFAT's procurement pipeline and business notifications directly, which show what Australia is about to buy, not what it has spent. Absence is absence from IATI, not absence of aid.</li>
 <li>No human edits the figures. The method is published so that errors can be found; some will be.</li>
 <li>The change log is {n_issues} issue{'s' if n_issues != 1 else ''} deep. Its value compounds with time, and there has not been much time.</li>
 <li>There is no inbound channel yet. Nobody can ask it a question, and it cannot send anyone an issue; both need the Operator's approval and an account.</li>
