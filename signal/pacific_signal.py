@@ -252,6 +252,11 @@ def usd(v):
     return ("−" if (v or 0) < 0 else "") + s
 def esc(s): return (str(s) if s is not None else "").replace("&","&amp;").replace("<","&lt;").replace(">","&gt;")
 def longdate(s): return dt.date.fromisoformat(s).strftime("%-d %B %Y")
+def sydtime(ts):
+    """ISO UTC timestamp -> "9 September 2026, 03:30 AEST" (the issue calendar is Sydney's)."""
+    if not ts: return "—"
+    t = dt.datetime.fromisoformat(ts.replace("Z","+00:00")).astimezone(ZoneInfo("Australia/Sydney"))
+    return t.strftime("%-d %B %Y, %H:%M ") + t.tzname()
 def delta(cur, prev):
     if prev <= 0: return "<span class=muted>no prior-quarter baseline</span>"
     ch = (cur-prev)/prev*100
@@ -484,7 +489,7 @@ def dfat_html(code, name, dfat, seen, base):
     if not dfat: return "<p class=muted>DFAT's business notifications and procurement pipeline were not read for this issue.</p>"
     cn, rn, cp, rp = dfat_notices.for_country(dfat, code, ALIASES)
     since = lambda k: f" <span class=muted>(on the pipeline page since the issue of {longdate(seen[k])})</span>" if seen.get(k) and base and seen[k] > base else ""
-    H = [f"<p style='font-size:.88rem'>Read from <a href='{dfat_notices.PIPELINE}'>DFAT's Development Procurement Pipeline</a> (as at {esc(dfat.get('as_at') or '—')}) and <a href='{dfat_notices.NOTICES}'>business notifications</a> on {dfat.get('fetched','')[:10]}. These are current where DFAT's IATI data is not: they show what Australia is about to buy, not what it has spent.</p>"]
+    H = [f"<p style='font-size:.88rem'>Read from <a href='{dfat_notices.PIPELINE}'>DFAT's Development Procurement Pipeline</a> (as at {esc(dfat.get('as_at') or '—')}) and <a href='{dfat_notices.NOTICES}'>business notifications</a> on {sydtime(dfat.get('fetched'))}. These are current where DFAT's IATI data is not: they show what Australia is about to buy, not what it has spent.</p>"]
     ordr = {"in the market":0,"in collaboration":1,"planned":2,"closed":3}
     def plist(items, title):
         if not items: return
@@ -575,7 +580,7 @@ def render_region(snap, prev, snaps, order, issue_no, issue_date):
             if ch:
                 any_change = True
                 H.append(f"<div class=change><strong><a href='{page(c)}'>{esc(NAME[c])}</a></strong>: " + " ".join(ch[:4]) + (f" <a href='{page(c)}#changes'>{len(ch)-4} more</a>." if len(ch) > 4 else "") + "</div>")
-        if not any_change: H.append(f"<p class=muted>No change in any country's headline figures since {longdate(prev['date'])}; sources were re-read on {snap['generated'][:10]}.</p>")
+        if not any_change: H.append(f"<p class=muted>No change in any country's headline figures since {longdate(prev['date'])}; sources were re-read on {sydtime(snap['generated'])}.</p>")
     # regional table
     H.append("<h2>Region at a glance</h2><table><tr><th>Country</th><th class=num>Disbursed 90d</th><th class=num>Change</th><th class=num>Funders active</th><th class=num>New starts</th><th class=num>Ending ≤180d</th><th>Largest funder (90d)</th></tr>")
     for c in sorted(order, key=lambda c: -C[c]["dis90"]):
@@ -622,7 +627,7 @@ def render_country(code, r, pr, prev, snaps, order, issue_no, issue_date):
 <h2 id=changes>Since the previous issue{' ('+longdate(prev['date'])+')' if prev else ''}</h2>""")
     ch = changes(r, pr, (dt.date.fromisoformat(snaps[-1]['date'])-dt.date.fromisoformat(prev['date'])).days if prev else None, snaps[-1].get("dfat"), prev.get("dfat") if prev else None)
     if ch is None: H.append("<p class=muted>This is the first issue for this country. From the next issue this section lists what entered or left the funder table, newly listed starts and endings, new World Bank approvals, new DFAT notices and pipeline moves, and which publishers released newer data.</p>")
-    elif not ch: H.append(f"<p class=muted>No change in the headline figures since {longdate(prev['date'])}; sources were re-read on {snaps[-1]['generated'][:10]}.</p>")
+    elif not ch: H.append(f"<p class=muted>No change in the headline figures since {longdate(prev['date'])}; sources were re-read on {sydtime(snaps[-1]['generated'])}.</p>")
     else: H.append("".join(f"<div class=change>{c}</div>" for c in ch))
     seen, base = first_seen_dfat(snaps)
     H.append(f"<h2>DFAT tenders and notices naming {esc(r['name'])}</h2>"); H.append(dfat_html(code, r["name"], snaps[-1].get("dfat"), seen, base))
