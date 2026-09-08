@@ -234,7 +234,7 @@ def delta(cur, prev):
 def tag(a, code_name):
     """Suffix for an activity row: declared share if partial, and the other country its title names."""
     bits = []
-    if a.get("pct") is not None and a["pct"] < 99.5: bits.append(f"{a['pct']:.0f}% declared for {esc(code_name)}")
+    if a.get("pct") is not None and a["pct"] < 99.5: bits.append(("under 1" if a["pct"] < 1 else f"{a['pct']:.0f}") + f"% declared for {esc(code_name)}")
     if a.get("names"): bits.append(f"title names {esc(a['names'])}")
     return f" <span class=muted>[{'; '.join(bits)}]</span>" if bits else ""
 def plural(n, one, many=None): return f"{n:,} {one if n == 1 else (many or one + 's')}"
@@ -347,12 +347,13 @@ def changes(r, pr, days=None):
     if len(entered) > 3: out.append(f"{len(entered)-3} more funders entered the table: {joinlist(esc(o['name']) for o in entered[3:8])}.")
     pa = {a["aid"] for a in (pr.get("new_starts_all") or pr["new_starts"])}
     new = [a for a in (r.get("new_starts_all") or r["new_starts"]) if a["aid"] not in pa]
-    new.sort(key=lambda a: (bool(a.get("names")), -(a.get("commitment") or 0)))
+    marginal = lambda a: a.get("pct") is not None and a["pct"] < 5     # a global activity with a sliver declared here
+    new.sort(key=lambda a: (bool(a.get("names")), marginal(a), -(a.get("commitment") or 0)))
     for a in new[:3]: out.append(f"Newly listed start: {esc(a['title'])} ({esc(a['org'])}, from {a['start']}{', '+usd(a['commitment'])+' committed' if a.get('commitment') else ''}){tag(a, cn)}.")
     if len(new) > 3: out[-1] += more(len(new)-3, "newly listed starts")
     pe = {a["aid"] for a in (pr.get("ending_all") or pr["ending_soon"])}
     ends = [a for a in (r.get("ending_all") or r["ending_soon"]) if a["aid"] not in pe]
-    ends.sort(key=lambda a: (bool(a.get("names")), -(a.get("spend") or 0)))
+    ends.sort(key=lambda a: (bool(a.get("names")), marginal(a), -(a.get("spend") or 0)))
     for a in ends[:3]: out.append(f"Now ending within 180 days: {esc(a['title'])} ({esc(a['org'])}, ends {a['end']}{', '+usd(a['spend'])+' spent' if a.get('spend') else ''}){tag(a, cn)}.")
     if len(ends) > 3: out[-1] += more(len(ends)-3, "activities now ending within 180 days")
     left = [prv[k] for k in prv if k not in cur]; left.sort(key=lambda o: -o["usd"])
