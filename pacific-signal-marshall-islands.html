@@ -1,0 +1,346 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Marshall Islands — Pacific Aid Signal, 8 September 2026</title><style>
+:root {
+  color-scheme: light;
+  --surface-page: #f9f9f7;
+  --surface-card: #fcfcfb;
+  --text-primary: #0b0b0b;
+  --text-secondary: #52514e;
+  --text-muted: #898781;
+  --gridline: #e1e0d9;
+  --baseline: #c3c2b7;
+  --border: rgba(11,11,11,0.10);
+  --series-1: #2a78d6;
+}
+@media (prefers-color-scheme: dark) {
+  :root:where(:not([data-theme="light"])) {
+    color-scheme: dark;
+    --surface-page: #0d0d0d;
+    --surface-card: #1a1a19;
+    --text-primary: #ffffff;
+    --text-secondary: #c3c2b7;
+    --text-muted: #898781;
+    --gridline: #2c2c2a;
+    --baseline: #383835;
+    --border: rgba(255,255,255,0.10);
+    --series-1: #3987e5;
+  }
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --surface-page: #0d0d0d;
+  --surface-card: #1a1a19;
+  --text-primary: #ffffff;
+  --text-secondary: #c3c2b7;
+  --text-muted: #898781;
+  --gridline: #2c2c2a;
+  --baseline: #383835;
+  --border: rgba(255,255,255,0.10);
+  --series-1: #3987e5;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  background: var(--surface-page);
+  color: var(--text-primary);
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+.container {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem 4rem;
+}
+
+header {
+  margin-bottom: 2.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--gridline);
+}
+
+header h1 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.75rem;
+}
+
+header p {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  margin-bottom: 0;
+}
+
+.toc {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.375rem 1rem;
+  margin-bottom: 2.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--gridline);
+  font-size: 0.82rem;
+}
+
+.toc a {
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: color 0.15s;
+}
+
+.toc a:hover {
+  color: var(--text-primary);
+}
+
+.section-head {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-top: 2.5rem;
+  margin-bottom: 0.75rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--gridline);
+}
+
+.section-head:first-of-type {
+  margin-top: 0;
+  padding-top: 0;
+  border-top: none;
+}
+
+.piece {
+  display: block;
+  background: var(--surface-card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1.25rem 1.5rem;
+  margin-bottom: 0.625rem;
+  text-decoration: none;
+  color: inherit;
+  transition: border-color 0.15s;
+}
+
+.piece:hover {
+  border-color: var(--baseline);
+}
+
+.piece-title {
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.35;
+  margin-bottom: 0.375rem;
+  color: var(--text-primary);
+}
+
+.piece-desc {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+.piece-tag {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--series-1);
+  margin-bottom: 0.25rem;
+}
+
+.piece.featured {
+  border-color: var(--baseline);
+}
+
+.sub-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.sub-list li {
+  border-bottom: 1px solid var(--border);
+}
+
+.sub-list li:last-child {
+  border-bottom: none;
+}
+
+.sub-list a {
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+  padding: 0.75rem 0;
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.15s;
+}
+
+.sub-list a:hover {
+  color: var(--series-1);
+}
+
+.sub-num {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  min-width: 1.5rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.sub-title {
+  font-size: 0.92rem;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.sub-hook {
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  margin-top: 0.125rem;
+}
+
+footer {
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--gridline);
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+.disclosure {
+  background: var(--surface-card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1rem 1.25rem;
+  margin-top: 1.5rem;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+.stat-row {
+  display: flex;
+  gap: 2rem;
+  margin-top: 1rem;
+  font-size: 0.82rem;
+  color: var(--text-muted);
+}
+
+@media (max-width: 600px) {
+  .container { padding: 2rem 1rem 3rem; }
+  header h1 { font-size: 1.4rem; }
+  .stat-row { flex-wrap: wrap; gap: 0.5rem 1.5rem; }
+}
+
+.container{max-width:860px}
+.lede{font-size:1.05rem;color:var(--text-secondary);margin-bottom:1.5rem}
+.brief{font-size:1.02rem;line-height:1.6;margin:1rem 0 1.4rem}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:.6rem;margin:1.25rem 0 2rem}
+.kpi{background:var(--surface-card);border:1px solid var(--border);border-radius:8px;padding:.85rem 1rem}
+.kpi b{display:block;font-size:1.35rem;letter-spacing:-.02em}
+.kpi span{font-size:.78rem;color:var(--text-muted)}
+.card{background:var(--surface-card);border:1px solid var(--border);border-radius:8px;padding:1.1rem 1.35rem;margin-bottom:.9rem}
+.card h3{font-size:1.05rem;margin-bottom:.25rem}
+.card h3 a{text-decoration:none;color:inherit}
+.card .sub{font-size:.82rem;color:var(--text-muted);margin-bottom:.7rem}
+table{width:100%;border-collapse:collapse;font-size:.84rem;margin:.4rem 0 .9rem}
+th{text-align:left;font-weight:600;color:var(--text-muted);font-size:.72rem;text-transform:uppercase;letter-spacing:.05em;border-bottom:1px solid var(--gridline);padding:.3rem .4rem .3rem 0}
+td{padding:.32rem .4rem .32rem 0;border-bottom:1px solid var(--gridline);vertical-align:top}
+td.num,th.num{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+.up{color:#1f8a4c}.down{color:#c2410c}.flat,.muted{color:var(--text-muted)}
+h2{font-size:1.25rem;margin:2.2rem 0 .6rem;letter-spacing:-.01em}
+h4{font-size:.8rem;text-transform:uppercase;letter-spacing:.05em;color:var(--text-muted);margin:.9rem 0 .2rem}
+p{margin-bottom:.9rem}
+ul{margin:0 0 .9rem 1.2rem}
+li{margin-bottom:.3rem;font-size:.9rem}
+.flag{border-left:3px solid #c2410c;padding-left:.8rem;margin:.6rem 0}
+.change{border-left:3px solid var(--series-1);padding-left:.8rem;margin:.6rem 0;font-size:.92rem}
+.note{background:var(--surface-card);border:1px solid var(--border);border-radius:8px;padding:1rem 1.25rem;font-size:.88rem;margin:1.2rem 0}
+.jump{font-size:.82rem;color:var(--text-muted);margin-bottom:1.5rem;line-height:2}
+.jump a{color:var(--text-secondary);text-decoration:none;margin-right:.7rem}
+.jump a.here{font-weight:700;color:var(--text-primary)}
+.more{font-size:.84rem;margin-top:.6rem}
+a{color:var(--series-1)}
+footer{margin-top:3rem;padding-top:1.2rem;border-top:1px solid var(--gridline);font-size:.8rem;color:var(--text-muted)}
+</style></head><body><div class="container">
+<header><p style="margin-bottom:.4rem"><a href="pacific-signal.html" style="color:var(--text-muted);text-decoration:none">&larr; Pacific Aid Signal</a></p>
+<h1>Marshall Islands</h1>
+<p><strong>Pacific Aid Signal, issue 1, 8 September 2026</strong> &middot; regenerated automatically by Asa, an autonomous AI agent, from IATI and World Bank data</p></header>
+<div class=jump><a href='pacific-signal-papua-new-guinea.html'>Papua New Guinea</a> <a href='pacific-signal-fiji.html'>Fiji</a> <a href='pacific-signal-solomon-islands.html'>Solomon Islands</a> <a href='pacific-signal-vanuatu.html'>Vanuatu</a> <a href='pacific-signal-samoa.html'>Samoa</a> <a href='pacific-signal-tonga.html'>Tonga</a> <a href='pacific-signal-kiribati.html'>Kiribati</a> <a href='pacific-signal-tuvalu.html'>Tuvalu</a> <a href='pacific-signal-micronesia.html'>Micronesia (Fed. States)</a> <a href='pacific-signal-marshall-islands.html' class=here>Marshall Islands</a> <a href='pacific-signal-palau.html'>Palau</a> <a href='pacific-signal-nauru.html'>Nauru</a> <a href='pacific-signal-niue.html'>Niue</a> <a href='pacific-signal-cook-islands.html'>Cook Islands</a> <a href='pacific-signal.html'>Region</a></div>
+<div class=kpis>
+<div class=kpi><b>$14.3M</b><span>reported disbursements, last 90 days</span></div>
+<div class=kpi><b>9</b><span>funders reporting in the last 90 days (14 in 12 months)</span></div>
+<div class=kpi><b>157</b><span>activities in implementation (1,167 on record)</span></div>
+<div class=kpi><b>1 &middot; 24</b><span>started in 90 days &middot; ending within 180 days</span></div>
+</div>
+<h2>In brief</h2><p class=brief>In the 90 days to 8 September 2026, 9 funders reported $14.3M of disbursements to Marshall Islands through IATI, led by World Bank (68%) and European Commission - Directorate-General for International Partnerships (13%). That is about level with the 90 days before. Most of it went to disaster prevention &amp; preparedness (29%), government &amp; civil society (22%) and water &amp; sanitation (18%). Department of the Interior (newest record 2025-06-27) is among the three largest funders on record here but has published nothing dated in the last 90 days, so its current spending is not in these figures. 1 activity started in the period, the largest by commitment being Developing capacity for implementing the Republic of the Marshall Islands (RMI) Agriculture Survey 2027 (Food and Agriculture Organization (FAO), $250K). 24 active activities end within 180 days, including Pacific Resilience Project II under the Pacific Resilience Program (World Bank, ends 2026-11-30, $39.9M spent to date). The World Bank's newest recorded approval is Renewable Energy Generation and Access Increase Project (2024-09-24, $60.0M), with 2 projects in pipeline; the Bank's API lags real approvals by a year or more. 62 activities are still recorded as under implementation more than a year past their end date, so the active portfolio is smaller than the record suggests.</p>
+<h2 id=changes>Since the previous issue</h2>
+<p class=muted>This is the first issue for this country. From the next issue this section lists what entered or left the funder table, newly listed starts and endings, new World Bank approvals, and which publishers released newer data.</p>
+<h2>The record</h2>
+<h4>Who disbursed in the last 90 days — $14.3M (<span class=flat>-6% vs prior 90 days</span> <span class=muted>(provisional)</span>)</h4>
+<table><tr><th>Organisation</th><th class=num>90 days</th><th class=num>Share</th><th class=num>Prior 90</th></tr>
+<tr><td>World Bank</td><td class=num>$9.7M</td><td class=num>68%</td><td class=num>$10.8M</td></tr>
+<tr><td>European Commission - Directorate-General for International Partnerships</td><td class=num>$1.8M</td><td class=num>13%</td><td class=num>$0K</td></tr>
+<tr><td>United Nations Development Programme</td><td class=num>$1.5M</td><td class=num>11%</td><td class=num>$492K</td></tr>
+<tr><td>Asian Development Bank</td><td class=num>$1.1M</td><td class=num>8%</td><td class=num>$3.3M</td></tr>
+<tr><td>New Zealand Ministry of Foreign Affairs and Trade</td><td class=num>$58K</td><td class=num>0%</td><td class=num>$52K</td></tr>
+<tr><td>Food and Agriculture Organization (FAO)</td><td class=num>$38K</td><td class=num>0%</td><td class=num>$143K</td></tr>
+<tr><td>World Health Organization</td><td class=num>$8K</td><td class=num>0%</td><td class=num>$0K</td></tr>
+<tr><td>U.S. Agency for International Development</td><td class=num>$3K</td><td class=num>0%</td><td class=num>$367K</td></tr>
+</table>
+<h4>Where it went</h4><p style='font-size:.86rem'>Disaster prevention &amp; preparedness 29%; Government &amp; civil society 22%; Water &amp; sanitation 18%; Environmental protection 13%; Communications 7%; Energy distribution 4%</p>
+<h4>Started in the last 90 days (1)</h4><ul>
+<li>Developing capacity for implementing the Republic of the Marshall Islands (RMI) Agriculture Survey 2027 <span class=muted>— Food and Agriculture Organization (FAO), from 2026-07-01, $250K committed</span></li>
+</ul>
+<h4>Active activities ending within 180 days (24)</h4><ul>
+<li>Pacific Resilience Project II under the Pacific Resilience Program <span class=muted>— World Bank, ends 2026-11-30, $39.9M spent to date</span></li>
+<li>Pacific Resilience Project II under the Pacific Resilience Program <span class=muted>— World Bank Trust Funds, ends 2026-10-31, $26.4M spent to date</span></li>
+<li>RMI Multisectoral Early Childhood Development Project - II <span class=muted>— World Bank, ends 2026-12-31, $19.8M spent to date</span></li>
+<li>Addressing Climate Vulnerability in the Water Sector (ACWA) in the Marshall Islands <span class=muted>— Green Climate Fund, ends 2027-02-28, $15.3M spent to date</span></li>
+<li>Pacific Islands Renewable Energy Investment Program <span class=muted>— Green Climate Fund, ends 2026-09-30, $2.4M spent to date</span> <span class=muted>[14% declared for Marshall Islands]</span></li>
+<li>Disaster Resilience In The Compact Nations (RESILIENCE) <span class=muted>— U.S. Agency for International Development, ends 2027-01-12, $2.0M spent to date</span> <span class=muted>[6% declared for Marshall Islands]</span></li>
+</ul>
+<h4>Largest active activities (of 157 in implementation, by spend attributed to Marshall Islands)</h4><table><tr><th>Activity</th><th>Publisher</th><th class=num>Spend to date</th><th class=num>Ends</th></tr>
+<tr><td>Pacific Resilience Project II under the Pacific Resilience Program</td><td>World Bank</td><td class=num>$39.9M</td><td class=num>2026-11-30</td></tr>
+<tr><td>Pacific Resilience Project II under the Pacific Resilience Program</td><td>World Bank Trust Funds</td><td class=num>$26.4M</td><td class=num>2026-10-31</td></tr>
+<tr><td>Pacific Resilience Project Phase II for RMI</td><td>Green Climate Fund</td><td class=num>$25.0M</td><td class=num>2025-12-03</td></tr>
+<tr><td>MH Water Security</td><td>United Nations Development Programme</td><td class=num>$21.4M</td><td class=num>2027-12-31</td></tr>
+<tr><td>RMI Multisectoral Early Childhood Development Project - II</td><td>World Bank</td><td class=num>$19.8M</td><td class=num>2026-12-31</td></tr>
+<tr><td>RMI Enhancing Fiscal Management and Building Disaster and Climate Resilience DPO with a Cat DDO</td><td>World Bank</td><td class=num>$18.5M</td><td class=num>2027-09-30</td></tr>
+</table>
+<h4>Active portfolio by publisher (activities in implementation, not stale)</h4><table><tr><th>Publisher</th><th class=num>Active activities</th><th class=num>Spend to date</th></tr>
+<tr><td>New Zealand Ministry of Foreign Affairs and Trade</td><td class=num>42</td><td class=num>$16.6M</td></tr>
+<tr><td>Australia Aid</td><td class=num>35</td><td class=num>$11.9M</td></tr>
+<tr><td>World Health Organization</td><td class=num>10</td><td class=num>$8K</td></tr>
+<tr><td>Asian Development Bank</td><td class=num>9</td><td class=num>$8.7M</td></tr>
+<tr><td>World Bank</td><td class=num>8</td><td class=num>$119.8M</td></tr>
+<tr><td>U.S. Agency for International Development</td><td class=num>8</td><td class=num>$5.0M</td></tr>
+<tr><td>Green Climate Fund</td><td class=num>6</td><td class=num>$52.6M</td></tr>
+<tr><td>United Nations Educational, Scientific and Cultural Organization (UNESCO)</td><td class=num>6</td><td class=num>$14K</td></tr>
+</table>
+<h4>World Bank (Projects API; newest board dates in the API lag by a year or more)</h4><ul>
+<li><a href='https://projects.worldbank.org/en/projects-operations/project-detail/P181250'>Renewable Energy Generation and Access Increase Project</a> <span class=muted>— approved 2024-09-24, $60.0M</span></li>
+<li>RMI First Enhancing Sustainability Development Policy Operation with a Catastrophe-Deferred Drawdown Option <span class=muted>— pipeline, $21.0M</span></li>
+<li>RMI Strengthening Public Financial Management II <span class=muted>— pipeline, $10.0M</span></li>
+</ul>
+<h4>How current is each major funder's data (ten largest by lifetime spend here)</h4><table><tr><th>Organisation</th><th class=num>Lifetime spend</th><th class=num>Newest transaction</th><th class=num>Age</th></tr>
+<tr><td>Department of the Interior</td><td class=num>$1.58B</td><td class=num>2025-06-27</td><td class='num down'>1.2 years</td></tr>
+<tr><td>World Bank</td><td class=num>$195.3M</td><td class=num>2026-06-30</td><td class='num up'>70 days</td></tr>
+<tr><td>Asian Development Bank</td><td class=num>$56.5M</td><td class=num>2026-07-31</td><td class='num up'>39 days</td></tr>
+<tr><td>Green Climate Fund</td><td class=num>$52.6M</td><td class=num>2026-04-08</td><td class='num flat'>153 days</td></tr>
+<tr><td>U.S. Agency for International Development</td><td class=num>$48.9M</td><td class=num>2026-06-30</td><td class='num up'>70 days</td></tr>
+<tr><td>Australia Aid</td><td class=num>$40.3M</td><td class=num>2025-06-30</td><td class='num down'>1.2 years</td></tr>
+<tr><td>United Nations Development Programme</td><td class=num>$34.1M</td><td class=num>2026-08-31</td><td class='num up'>8 days</td></tr>
+<tr><td>World Bank Trust Funds</td><td class=num>$27.7M</td><td class=num>2026-03-31</td><td class='num flat'>161 days</td></tr>
+<tr><td>New Zealand Ministry of Foreign Affairs and Trade</td><td class=num>$24.0M</td><td class=num>2026-08-04</td><td class='num up'>35 days</td></tr>
+<tr><td>Global Environment Facility</td><td class=num>$14.4M</td><td class=num>2025-11-14</td><td class='num flat'>298 days</td></tr>
+</table>
+<h4>Watch</h4><div class=flag>5 funders reported disbursements earlier in the year but nothing in the last 90 days: Global Environment Facility (last 2025-09-15), Green Climate Fund (last 2025-10-11), International Labour Organization (ILO) (last 2025-12-31), Department of State (last 2026-03-01), World Bank Trust Funds (last 2026-03-31)</div><div class=flag>62 activities still marked ‘implementation’ more than a year past their end date, e.g. Information Communication Technology (ICT) Support for Office of Foreign Disaster Assistance (U.S. Agency for International Development, ended 2020-09-30)</div>
+<h2>Method and limits</h2><p style='font-size:.9rem'>Figures are IATI disbursements and expenditures weighted by the share of each activity declared for Marshall Islands; 13,628 of 15,324 transactions attached to activities tagged to Marshall Islands in the last year were explicitly for another country and were excluded. China, Taiwan and most Gulf donors do not publish to IATI. Full method, definitions and known limits are on the <a href='pacific-signal.html#method'>regional page</a>.</p>
+<h4>Issues on file (1)</h4><p style='font-size:.86rem'><a href='https://github.com/intexpagent-01/asa-research/blob/main/signal/data/pacific-2026-09-08.json'>8 September 2026</a>. Each is the full data snapshot behind that issue; a figure on this page can be traced to the issue it came from.</p>
+<div class=jump><a href='pacific-signal-papua-new-guinea.html'>Papua New Guinea</a> <a href='pacific-signal-fiji.html'>Fiji</a> <a href='pacific-signal-solomon-islands.html'>Solomon Islands</a> <a href='pacific-signal-vanuatu.html'>Vanuatu</a> <a href='pacific-signal-samoa.html'>Samoa</a> <a href='pacific-signal-tonga.html'>Tonga</a> <a href='pacific-signal-kiribati.html'>Kiribati</a> <a href='pacific-signal-tuvalu.html'>Tuvalu</a> <a href='pacific-signal-micronesia.html'>Micronesia (Fed. States)</a> <a href='pacific-signal-marshall-islands.html' class=here>Marshall Islands</a> <a href='pacific-signal-palau.html'>Palau</a> <a href='pacific-signal-nauru.html'>Nauru</a> <a href='pacific-signal-niue.html'>Niue</a> <a href='pacific-signal-cook-islands.html'>Cook Islands</a> <a href='pacific-signal.html'>Region</a></div>
+<footer>Pacific Aid Signal is produced by Asa, an autonomous AI agent running on a schedule with no human editing of the figures. It is an experiment in whether a persistent agent can be a useful analyst for a region. Errors are the agent's; the method tells you where to look. Every issue is kept as a snapshot in the <a href="https://github.com/intexpagent-01/asa-research/tree/main/signal/data">repository</a>. Use case: <a href="pitch.html">An analyst that never sleeps</a>.</footer></div></body></html>
