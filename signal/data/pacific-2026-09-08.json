@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-08T04:09:11Z",
+ "generated": "2026-09-08T05:33:44Z",
  "date": "2026-09-08",
  "countries": {
   "PG": {
@@ -472,6 +472,1155 @@
      "spend": 50769313.496683784
     }
    ],
+   "orgs_90": [
+    {
+     "ref": "XM-DAC-903",
+     "name": "International Finance Corporation",
+     "usd": 18600000.0
+    },
+    {
+     "ref": "XM-DAC-46004",
+     "name": "Asian Development Bank",
+     "usd": 10172547.590000002
+    },
+    {
+     "ref": "44000",
+     "name": "World Bank",
+     "usd": 8803158.57
+    },
+    {
+     "ref": "47045",
+     "name": "The Global Fund to Fight AIDS, Tuberculosis and Malaria",
+     "usd": 5896229.745
+    },
+    {
+     "ref": "XM-DAC-41114",
+     "name": "United Nations Development Programme",
+     "usd": 4944301.499000001
+    },
+    {
+     "ref": "XM-DAC-41122",
+     "name": "UNICEF",
+     "usd": 4867429.753854542
+    },
+    {
+     "ref": "KR-GOV-010",
+     "name": "Office for Government Policy Coordination",
+     "usd": 2263965.795
+    },
+    {
+     "ref": "XM-DAC-928",
+     "name": "World Health Organization",
+     "usd": 2176938.2616
+    },
+    {
+     "ref": "XI-IATI-EC_INTPA",
+     "name": "European Commission - Directorate-General for International Partnerships",
+     "usd": 1780811.0300000003
+    },
+    {
+     "ref": "FR-3",
+     "name": "AFD",
+     "usd": 1481187.0
+    },
+    {
+     "ref": "NZ-1",
+     "name": "New Zealand Ministry of Foreign Affairs and Trade",
+     "usd": 1087208.1632979
+    },
+    {
+     "ref": "US-GOV-1",
+     "name": "U.S. Agency for International Development",
+     "usd": 715083.3821171653
+    },
+    {
+     "ref": "XM-DAC-41301",
+     "name": "Food and Agriculture Organization (FAO)",
+     "usd": 685543.2699999999
+    },
+    {
+     "ref": "47122",
+     "name": "Gavi, The Vaccine Alliance",
+     "usd": 528161.05
+    },
+    {
+     "ref": "XM-DAC-41302",
+     "name": "International Labour Organization (ILO)",
+     "usd": 474686.58999999997
+    },
+    {
+     "ref": "XM-DAC-41110",
+     "name": "United Nations Joint Programme on HIV and AIDS Secretariat (UNAIDS)",
+     "usd": 332903.0
+    },
+    {
+     "ref": "DE-1",
+     "name": "Federal Ministry for Economic Cooperation and Development (BMZ)",
+     "usd": 178411.0655
+    },
+    {
+     "ref": "GB-GOV-1",
+     "name": "UK - Foreign, Commonwealth Development Office (FCDO)",
+     "usd": 10350.788
+    }
+   ],
+   "new_starts_all": [
+    {
+     "aid": "XM-DAC-903-SII-49799",
+     "title": "Dobel Project",
+     "org": "International Finance Corporation",
+     "start": "2026-06-24",
+     "commitment": 18600000.0,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "XI-IATI-EC_INTPA-2026-PC-64428",
+     "title": "TECHNICAL ASSISTANCE FOR STATE AND RESILIENCE BUILDING CONTRACT (SRBC) BUDGET SUPPORT IN PAPUA NEW GUINEA",
+     "org": "European Commission - Directorate-General for International Partnerships",
+     "start": "2026-07-01",
+     "commitment": 1813618.2,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "FR-3-CZZ377501",
+     "title": "Fonds de partenariat pour les \u00e9cosyst\u00e8mes critiques - renouvellement des contributions UE-AFD",
+     "org": "AFD",
+     "start": "2026-08-17",
+     "commitment": 1403376.8076,
+     "pct": 8.37,
+     "names": null
+    },
+    {
+     "aid": "FR-3-CZZ377502",
+     "title": "Fonds de partenariat pour les \u00e9cosyst\u00e8mes critiques - renouvellement des contributions UE-AFD",
+     "org": "AFD",
+     "start": "2026-08-17",
+     "commitment": 482410.7253,
+     "pct": 8.37,
+     "names": null
+    },
+    {
+     "aid": "XM-DAC-41301-764977",
+     "title": "Emergency Preparedness and Response on El Nino in PNG",
+     "org": "Food and Agriculture Organization (FAO)",
+     "start": "2026-07-29",
+     "commitment": 350000.0,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "FR-3-CZZ3775",
+     "title": "Fonds de partenariat pour les \u00e9cosyst\u00e8mes critiques - renouvellement des contributions UE-AFD",
+     "org": "AFD",
+     "start": "2026-08-17",
+     "commitment": 0.0,
+     "pct": 8.37,
+     "names": null
+    }
+   ],
+   "ending_all": [
+    {
+     "aid": "XI-IATI-EC_INTPA-2019-PCC-410934",
+     "title": "Support to Rural Entrepreneurship, Investment and Trade in Papua New Guinea (STREIT PNG)",
+     "org": "European Commission - Directorate-General for International Partnerships",
+     "end": "2026-12-25",
+     "spend": 88063600.0,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "XM-DAC-41301-650700",
+     "title": "Support to Rural Entrepreneurship, Investment and Trade in Papua New Guinea (STREIT PNG)",
+     "org": "Food and Agriculture Organization (FAO)",
+     "end": "2026-12-24",
+     "spend": 53942220.0,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "44000-P155087",
+     "title": "Water Supply and Sanitation Development Project",
+     "org": "World Bank",
+     "end": "2026-10-30",
+     "spend": 30174348.0,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "47045-PNG-M-RAM-4",
+     "title": "Managing malaria control program in Papua New Guinea - Papua New Guinea (01-Jan-2024-31-Dec-2026)",
+     "org": "The Global Fund to Fight AIDS, Tuberculosis and Malaria",
+     "end": "2026-12-31",
+     "spend": 29797154.0,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "47122-PNG-MR",
+     "title": "Papua New Guinea: Measles and Measles-rubella",
+     "org": "Gavi, The Vaccine Alliance",
+     "end": "2026-12-31",
+     "spend": 20525620.0,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "47045-PNG-C-WV-3",
+     "title": "Managing integrated TB/HIV response in Papua New Guinea - Papua New Guinea (01-Jan-2025-31-Dec-2026)",
+     "org": "The Global Fund to Fight AIDS, Tuberculosis and Malaria",
+     "end": "2026-12-31",
+     "spend": 19193094.0,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "47122-PNG-PENTA",
+     "title": "Papua New Guinea: Pentavalent",
+     "org": "Gavi, The Vaccine Alliance",
+     "end": "2026-12-31",
+     "spend": 13735715.0,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "47122-PNG-PCV",
+     "title": "Papua New Guinea: Pneumococcal Conjugate Vaccines",
+     "org": "Gavi, The Vaccine Alliance",
+     "end": "2026-12-31",
+     "spend": 13123936.0,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "AU-5-INM023",
+     "title": "Australia Awards Papua New Guinea",
+     "org": "Australia Aid",
+     "end": "2026-12-31",
+     "spend": 12912565.0,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "AU-5-INN899",
+     "title": "Pacific Research Program \u2013 Phase 2",
+     "org": "Australia Aid",
+     "end": "2027-01-31",
+     "spend": 12524854.0,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "47122-PNG-IPV",
+     "title": "Papua New Guinea: Inactivated Polio Vaccine",
+     "org": "Gavi, The Vaccine Alliance",
+     "end": "2026-12-31",
+     "spend": 10991375.0,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "NZ-1-ACT-0100962",
+     "title": "Fred Hollows Foundation New Zealand Centre of Excellence Ophthalmology Papua New Guinea",
+     "org": "New Zealand Ministry of Foreign Affairs and Trade",
+     "end": "2026-12-31",
+     "spend": 10936721.0,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "XI-IATI-EC_INTPA-2021-PCC-424359",
+     "title": "Preventing and Countering Corruption in Papua New Guinea (\u00bfPNG Anti-Corruption Project\u00bf)",
+     "org": "European Commission - Directorate-General for International Partnerships",
+     "end": "2026-12-15",
+     "spend": 10221502.0,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "XM-DAC-41114-OUTPUT-00123935",
+     "title": "PNG-00123935 | EU PNG Anti-Corruption Project",
+     "org": "United Nations Development Programme",
+     "end": "2026-12-31",
+     "spend": 7456012.0,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "US-GOV-1-720202657295",
+     "title": "USAID Pay and Benefits",
+     "org": "U.S. Agency for International Development",
+     "end": "2026-09-30",
+     "spend": 5910903.87971322,
+     "pct": 1.7492273,
+     "names": null
+    },
+    {
+     "aid": "XM-DAC-41114-OUTPUT-00123941",
+     "title": "Strengthening Integrated[Enga]",
+     "org": "United Nations Development Programme",
+     "end": "2026-10-30",
+     "spend": 5302347.0,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "XI-IATI-EC_INTPA-2023-PC-25905",
+     "title": "South Bougainville WASH Programme",
+     "org": "European Commission - Directorate-General for International Partnerships",
+     "end": "2027-01-07",
+     "spend": 3313267.8,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "AU-5-INM116",
+     "title": "Humanitarian Preparedness and Response Activities",
+     "org": "Australia Aid",
+     "end": "2027-01-31",
+     "spend": 3052315.5,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "XI-IATI-EC_INTPA-2023-PC-25888",
+     "title": "Technical Assistance to Strenghtening Transparent and Accountable Governance in Papua New Guinea",
+     "org": "European Commission - Directorate-General for International Partnerships",
+     "end": "2027-01-15",
+     "spend": 2990159.0,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "XM-DAC-41114-OUTPUT-01003451",
+     "title": "PNG-01003451 | NZ Biodiversity Trust Fund Grants",
+     "org": "United Nations Development Programme",
+     "end": "2026-10-31",
+     "spend": 2921764.0,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "XM-DAC-41114-OUTPUT-00127168",
+     "title": "Sustaining Peace - Economic Em",
+     "org": "United Nations Development Programme",
+     "end": "2026-11-30",
+     "spend": 2682218.0,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "XM-DAC-41114-OUTPUT-00128236",
+     "title": "PNG-00128236 | Investing in coral reefs",
+     "org": "United Nations Development Programme",
+     "end": "2026-12-31",
+     "spend": 2621965.0,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "XM-DAC-41114-OUTPUT-01002369",
+     "title": "Humanitarian Advisory Team Project",
+     "org": "United Nations Development Programme",
+     "end": "2026-12-31",
+     "spend": 2608553.0,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "XM-DAC-41317-FP036",
+     "title": "Pacific Islands Renewable Energy Investment Program",
+     "org": "Green Climate Fund",
+     "end": "2026-09-30",
+     "spend": 2428620.0,
+     "pct": 14.286,
+     "names": null
+    },
+    {
+     "aid": "XM-DAC-41114-OUTPUT-01001352",
+     "title": "PNG-01001352 | UK Addressing Multi-Dimensional Risks in Fragile Contexts in PNG",
+     "org": "United Nations Development Programme",
+     "end": "2026-09-30",
+     "spend": 2255705.0,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "XM-DAC-41114-OUTPUT-00134417",
+     "title": "PNG-00134417 | Sustaining Peace in Bougainville Phase II",
+     "org": "United Nations Development Programme",
+     "end": "2026-09-30",
+     "spend": 1904295.0,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "US-GOV-1-AID-486-T-13-00002",
+     "title": "Smart Infrastructure for the Mekong",
+     "org": "U.S. Agency for International Development",
+     "end": "2026-09-30",
+     "spend": 1738248.32739848,
+     "pct": 10.330517,
+     "names": null
+    },
+    {
+     "aid": "NZ-1-ACT-0102607",
+     "title": "Negotiated Partnership: ADRA Implementation",
+     "org": "New Zealand Ministry of Foreign Affairs and Trade",
+     "end": "2027-02-28",
+     "spend": 1659995.285,
+     "pct": 31,
+     "names": null
+    },
+    {
+     "aid": "XI-IATI-EC_INTPA-2023-PC-34003",
+     "title": "Transparency and Accountability in Papua New Guinea Project (TAP Project)",
+     "org": "European Commission - Directorate-General for International Partnerships",
+     "end": "2027-01-01",
+     "spend": 1610641.0,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "XI-IATI-EC_INTPA-2023-PC-34585",
+     "title": "Provision of ICT equipment and solar energy systems in Bougainville",
+     "org": "European Commission - Directorate-General for International Partnerships",
+     "end": "2027-01-08",
+     "spend": 1482817.5,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "US-GOV-1-7200AA21N00006",
+     "title": "Administrative Costs",
+     "org": "U.S. Agency for International Development",
+     "end": "2026-09-30",
+     "spend": 1453406.6939602299,
+     "pct": 16.840687,
+     "names": null
+    },
+    {
+     "aid": "NZ-1-ACT-0101649",
+     "title": "PEP Project Management Supplier (PMS)",
+     "org": "New Zealand Ministry of Foreign Affairs and Trade",
+     "end": "2026-09-30",
+     "spend": 1230453.8,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "NZ-1-ACT-0102606",
+     "title": "Negotiated Partnership: UNICEF NZ Implementation",
+     "org": "New Zealand Ministry of Foreign Affairs and Trade",
+     "end": "2027-02-28",
+     "spend": 1214607.2,
+     "pct": 16,
+     "names": null
+    },
+    {
+     "aid": "US-GOV-1-AID-OAA-TO-15-00004",
+     "title": "Global Health Supply Chain - Rapid Test Kits (GHSC-RTK)",
+     "org": "U.S. Agency for International Development",
+     "end": "2026-11-28",
+     "spend": 1204449.3396929,
+     "pct": 0.2639246,
+     "names": null
+    },
+    {
+     "aid": "NZ-1-ACT-0104805",
+     "title": "2025 Papua New Guinea Polio Response",
+     "org": "New Zealand Ministry of Foreign Affairs and Trade",
+     "end": "2026-11-17",
+     "spend": 1199867.1,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "NZ-1-ACT-0101195",
+     "title": "Climate Change Programme - Ecosystems Resilience",
+     "org": "New Zealand Ministry of Foreign Affairs and Trade",
+     "end": "2026-10-31",
+     "spend": 1173540.92082892,
+     "pct": 12.903226,
+     "names": null
+    },
+    {
+     "aid": "AU-5-INO705",
+     "title": "Digital Detection and Prevention of Financial Crime in PNG",
+     "org": "Australia Aid",
+     "end": "2026-09-30",
+     "spend": 1069196.5,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "NZ-1-ACT-0100405",
+     "title": "ADB Pacific Private Sector Development Initiative Phase IV",
+     "org": "New Zealand Ministry of Foreign Affairs and Trade",
+     "end": "2026-10-31",
+     "spend": 1017818.8288,
+     "pct": 25.6,
+     "names": null
+    },
+    {
+     "aid": "XI-IATI-EC_INTPA-2023-PC-25006",
+     "title": "Flower Power: Floriculture for Economic Empowerment for Women & Girls",
+     "org": "European Commission - Directorate-General for International Partnerships",
+     "end": "2027-01-07",
+     "spend": 1015004.8,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "US-GOV-1-72049224C00001",
+     "title": "Philippines, Pacific Islands, and Mongolia Monitoring, Evaluation, and Learning Activity (PIMMELA)",
+     "org": "U.S. Agency for International Development",
+     "end": "2027-01-15",
+     "spend": 991122.6915779,
+     "pct": 16.416206,
+     "names": null
+    },
+    {
+     "aid": "XM-DAC-41114-OUTPUT-01001902",
+     "title": "PNG-01001902 | EU Transparency and Accountability in PNG Project",
+     "org": "United Nations Development Programme",
+     "end": "2026-12-31",
+     "spend": 922855.0,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "DE-1-202376663",
+     "title": "Strengthening Sustainable Community Land and Resource Use Through Village Based Eco Enterprise and Linkage to ",
+     "org": "Federal Ministry for Economic Cooperation and Development (BMZ)",
+     "end": "2026-12-31",
+     "spend": 918060.75,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "XI-IATI-EC_INTPA-2023-PC-26100",
+     "title": "Technical Assistance support to the WASH sector on Bougainville",
+     "org": "European Commission - Directorate-General for International Partnerships",
+     "end": "2026-12-07",
+     "spend": 842979.06,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "NZ-1-ACT-0102990",
+     "title": "Pacific Insurance and Climate Adaptation Programme (PICAP)",
+     "org": "New Zealand Ministry of Foreign Affairs and Trade",
+     "end": "2027-01-31",
+     "spend": 763322.0678980199,
+     "pct": 10.526316,
+     "names": null
+    },
+    {
+     "aid": "NZ-1-ACT-0102605",
+     "title": "Negotiated Partnership: Caritas New Zealand Implementation",
+     "org": "New Zealand Ministry of Foreign Affairs and Trade",
+     "end": "2026-11-30",
+     "spend": 756214.48,
+     "pct": 16,
+     "names": null
+    },
+    {
+     "aid": "XM-DAC-41114-OUTPUT-01002854",
+     "title": "Provincial Capacity Building (PCaB) Programme",
+     "org": "United Nations Development Programme",
+     "end": "2026-12-31",
+     "spend": 684470.0,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "US-GOV-1-720202657291",
+     "title": "USAID Pay and Benefits",
+     "org": "U.S. Agency for International Development",
+     "end": "2026-09-30",
+     "spend": 667704.93138768,
+     "pct": 1.221897,
+     "names": null
+    },
+    {
+     "aid": "NZ-1-ACT-0102034",
+     "title": "Pacific Justice Sector 2021-2026",
+     "org": "New Zealand Ministry of Foreign Affairs and Trade",
+     "end": "2026-11-30",
+     "spend": 620556.5460000001,
+     "pct": 6.7,
+     "names": null
+    },
+    {
+     "aid": "XM-DAC-41114-OUTPUT-01005532",
+     "title": "PNG-01005532 | MPTF-UK Bougainville Facilitator Consultation Project",
+     "org": "United Nations Development Programme",
+     "end": "2026-12-31",
+     "spend": 588745.0,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "US-GOV-1-720AAD21N00001",
+     "title": "(title redacted by USAID)",
+     "org": "U.S. Agency for International Development",
+     "end": "2026-09-30",
+     "spend": 481648.33040208,
+     "pct": 2.0942135,
+     "names": null
+    },
+    {
+     "aid": "NZ-1-ACT-0103469",
+     "title": "Anamata and Scholarships Future State",
+     "org": "New Zealand Ministry of Foreign Affairs and Trade",
+     "end": "2027-02-01",
+     "spend": 441426.55921418406,
+     "pct": 11.428572,
+     "names": null
+    },
+    {
+     "aid": "SE-0-SE-6-15221-15221A0103",
+     "title": "WaterAid WASH and climate resilient WASH 2023-2026 - WaterAid Core support (New Strategy 2025-2029)",
+     "org": "Sweden",
+     "end": "2026-12-31",
+     "spend": 410418.61212973995,
+     "pct": 15.364355,
+     "names": null
+    },
+    {
+     "aid": "XM-DAC-41114-OUTPUT-01005689",
+     "title": "PNG-01005689 | MPTF Disaster Risk Management",
+     "org": "United Nations Development Programme",
+     "end": "2026-12-31",
+     "spend": 386552.0,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "XI-IATI-EC_INTPA-2026-PC-75060",
+     "title": "5th EU-PNG Business Forum",
+     "org": "European Commission - Directorate-General for International Partnerships",
+     "end": "2027-02-09",
+     "spend": 372371.25,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "XI-IATI-EC_INTPA-2023-PC-32110",
+     "title": "Programme Estimate No. 1 EU-PNG Partnership for Good Governance",
+     "org": "European Commission - Directorate-General for International Partnerships",
+     "end": "2026-12-27",
+     "spend": 290186.5,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "DE-1-202232247",
+     "title": "Transitional Dialogues after the Independence Referendum in Bougainville",
+     "org": "Federal Ministry for Economic Cooperation and Development (BMZ)",
+     "end": "2026-12-31",
+     "spend": 282227.44,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "AU-5-INM415",
+     "title": "Humanitarian Emergency Medical Preparedness & Engagement",
+     "org": "Australia Aid",
+     "end": "2026-12-31",
+     "spend": 220586.57450987,
+     "pct": 16.666666,
+     "names": null
+    },
+    {
+     "aid": "XI-IATI-EC_INTPA-2024-PC-42669",
+     "title": "EU-PNG Public Diplomacy support",
+     "org": "European Commission - Directorate-General for International Partnerships",
+     "end": "2026-12-08",
+     "spend": 202940.45,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "US-GOV-1-72MC1019M00011",
+     "title": "(title redacted by USAID)",
+     "org": "U.S. Agency for International Development",
+     "end": "2026-09-30",
+     "spend": 196055.858834086,
+     "pct": 0.042386506,
+     "names": null
+    },
+    {
+     "aid": "XI-IATI-EC_INTPA-2025-PC-61089",
+     "title": "Technical Assistance to the PNG Department of National Planning and Monitoring on EU Development Cooperation",
+     "org": "European Commission - Directorate-General for International Partnerships",
+     "end": "2027-01-23",
+     "spend": 194117.75,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "NZ-1-ACT-0102286",
+     "title": "Pacific Digital Economy Programme",
+     "org": "New Zealand Ministry of Foreign Affairs and Trade",
+     "end": "2027-03-01",
+     "spend": 181843.94,
+     "pct": 5,
+     "names": null
+    },
+    {
+     "aid": "DE-1-202276921",
+     "title": "Organisational development",
+     "org": "Federal Ministry for Economic Cooperation and Development (BMZ)",
+     "end": "2026-12-31",
+     "spend": 160565.03,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "US-GOV-1-720202656618",
+     "title": "USAID Communications, Utilities, and Rental Payments",
+     "org": "U.S. Agency for International Development",
+     "end": "2026-09-30",
+     "spend": 133106.0,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "DE-1-202430999",
+     "title": "Contribution to peacebuilding in Papua New Guinea",
+     "org": "Federal Ministry for Economic Cooperation and Development (BMZ)",
+     "end": "2027-02-28",
+     "spend": 124687.56,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "DE-1-202375509",
+     "title": "Bringing Quality Health Care to Rural Communities",
+     "org": "Federal Ministry for Economic Cooperation and Development (BMZ)",
+     "end": "2026-10-31",
+     "spend": 122279.32,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "DE-1-202375970",
+     "title": "Enhancing capacities of women led community-based organizations",
+     "org": "Federal Ministry for Economic Cooperation and Development (BMZ)",
+     "end": "2026-09-30",
+     "spend": 102026.914,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "US-GOV-1-720202656911",
+     "title": "USAID Miscellaneous Goods, Services, and Operations Maintanence",
+     "org": "U.S. Agency for International Development",
+     "end": "2026-09-30",
+     "spend": 101091.15752498001,
+     "pct": 0.6218702,
+     "names": null
+    },
+    {
+     "aid": "NZ-1-ACT-0104607",
+     "title": "FY25-26 Pacific Diplomatic Training In-Country & In-Region",
+     "org": "New Zealand Ministry of Foreign Affairs and Trade",
+     "end": "2026-12-20",
+     "spend": 82291.10852206642,
+     "pct": 13.7906065,
+     "names": null
+    },
+    {
+     "aid": "XM-DAC-45001-C475",
+     "title": "Pacific: EU-Pacific Business Forum",
+     "org": "International Trade Centre (ITC)",
+     "end": "2026-10-27",
+     "spend": 74626.8,
+     "pct": 10,
+     "names": null
+    },
+    {
+     "aid": "US-GOV-1-720202657501",
+     "title": "USAID Travel and Transportation",
+     "org": "U.S. Agency for International Development",
+     "end": "2026-09-30",
+     "spend": 70595.969931,
+     "pct": 9.959085,
+     "names": null
+    },
+    {
+     "aid": "AU-5-INO412",
+     "title": "Melanesian Spearhead Group (MSG) Secretariat Strengthening Project",
+     "org": "Australia Aid",
+     "end": "2026-12-31",
+     "spend": 62405.502378239995,
+     "pct": 9.999744,
+     "names": null
+    },
+    {
+     "aid": "AU-5-INO913",
+     "title": "Pacific Islands Forum, Geneva: WTO and Trade and Environment Support",
+     "org": "Australia Aid",
+     "end": "2026-12-31",
+     "spend": 47031.625,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "NZ-1-ACT-0104606",
+     "title": "FY25-26 Pacific Infrastructure Project Management In Country",
+     "org": "New Zealand Ministry of Foreign Affairs and Trade",
+     "end": "2026-12-20",
+     "spend": 31149.16,
+     "pct": 10,
+     "names": null
+    },
+    {
+     "aid": "NZ-1-ACT-0104608",
+     "title": "FY25-26 Pacific Climate Resilience In-Country",
+     "org": "New Zealand Ministry of Foreign Affairs and Trade",
+     "end": "2026-12-20",
+     "spend": 25581.889000000003,
+     "pct": 10,
+     "names": null
+    },
+    {
+     "aid": "NZ-1-ACT-0104602",
+     "title": "FY25-26 Pacific Good Governance In-Country",
+     "org": "New Zealand Ministry of Foreign Affairs and Trade",
+     "end": "2026-10-20",
+     "spend": 22729.252743999998,
+     "pct": 9.68,
+     "names": null
+    },
+    {
+     "aid": "XM-DAC-41114-OUTPUT-01005691",
+     "title": "PNG-01005691 | FW Advancing Human Rights, responsible business and Environmental Justice in Papua New Guinea",
+     "org": "United Nations Development Programme",
+     "end": "2026-10-30",
+     "spend": 22468.0,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "US-GOV-6-OTA3100000014-144439",
+     "title": "Technical Assistance for Economic Crimes - Papua New Guinea",
+     "org": "Department of the Treasury",
+     "end": "2026-09-30",
+     "spend": 17933.0,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "US-GOV-1-720202657457",
+     "title": "(title redacted by USAID)",
+     "org": "U.S. Agency for International Development",
+     "end": "2026-09-30",
+     "spend": 15394.959315477,
+     "pct": 0.078288525,
+     "names": null
+    },
+    {
+     "aid": "KR-GOV-030-1342000_2026_041",
+     "title": "Digital Education Capacity Building for Students and Policy Makers in Developing Countries(APEC Digital Educat",
+     "org": "Office for Government Policy Coordination",
+     "end": "2026-12-31",
+     "spend": 14316.665,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "US-GOV-6-OTA3100000014-144440",
+     "title": "Technical Assistance for Economic Crimes - Papua New Guinea",
+     "org": "Department of the Treasury",
+     "end": "2026-09-30",
+     "spend": 10409.0,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "XM-DAC-47136-GGPI13",
+     "title": "EU Urban Development Technical Facility",
+     "org": "Global Green Growth Institute",
+     "end": "2026-10-01",
+     "spend": 2500.189266263,
+     "pct": 33.22259,
+     "names": null
+    },
+    {
+     "aid": "US-GOV-1-720202657496",
+     "title": "USAID Travel and Transportation",
+     "org": "U.S. Agency for International Development",
+     "end": "2026-09-30",
+     "spend": 2094.4371333887498,
+     "pct": 0.106321625,
+     "names": null
+    },
+    {
+     "aid": "NZ-1-ACT-0104605",
+     "title": "FY25-26 Pacific Public Sector Leadership (Mid-Level) Course 2 In Country",
+     "org": "New Zealand Ministry of Foreign Affairs and Trade",
+     "end": "2026-12-20",
+     "spend": 1559.2652,
+     "pct": 10,
+     "names": null
+    },
+    {
+     "aid": "US-GOV-1-720202657045",
+     "title": "USAID Miscellaneous Goods, Services, and Operations Maintanence",
+     "org": "U.S. Agency for International Development",
+     "end": "2026-09-30",
+     "spend": 1012.7538521760001,
+     "pct": 1.3211671,
+     "names": null
+    },
+    {
+     "aid": "XI-GRID-grid.7836.a-426471",
+     "title": "Transforming Energy Access - Learning Partnership Upscale",
+     "org": "University of Cape Town",
+     "end": "2026-12-31",
+     "spend": 879.4589429590801,
+     "pct": 0.04486774,
+     "names": null
+    },
+    {
+     "aid": "US-GOV-1-720202657319",
+     "title": "USAID Pay and Benefits",
+     "org": "U.S. Agency for International Development",
+     "end": "2026-09-30",
+     "spend": 620.0604318588399,
+     "pct": 0.016953692,
+     "names": null
+    },
+    {
+     "aid": "US-GOV-1-720202657389",
+     "title": "USAID Pay and Benefits",
+     "org": "U.S. Agency for International Development",
+     "end": "2026-09-30",
+     "spend": 506.17069101,
+     "pct": 1.6138074,
+     "names": null
+    },
+    {
+     "aid": "US-GOV-1-720202657565",
+     "title": "USAID Travel and Transportation",
+     "org": "U.S. Agency for International Development",
+     "end": "2026-09-30",
+     "spend": 1.0000000152,
+     "pct": 0.061728396,
+     "names": null
+    },
+    {
+     "aid": "US-GOV-1-720202657636",
+     "title": "USAID Travel and Transportation",
+     "org": "U.S. Agency for International Development",
+     "end": "2026-09-30",
+     "spend": 0.0,
+     "pct": 0,
+     "names": null
+    },
+    {
+     "aid": "US-GOV-11-AID-OAA-TO-15-00007-226796",
+     "title": "Global Health Supply Chain - Procurement and Supply Management (GSHC-PSM) IDIQ - HIV/AIDS Task Order",
+     "org": "Department of State",
+     "end": "2026-11-28",
+     "spend": 0.0,
+     "pct": 0,
+     "names": null
+    },
+    {
+     "aid": "US-GOV-1-720202657324",
+     "title": "(title redacted by USAID)",
+     "org": "U.S. Agency for International Development",
+     "end": "2026-09-30",
+     "spend": 0.0,
+     "pct": 0,
+     "names": null
+    },
+    {
+     "aid": "US-GOV-1-720202656515",
+     "title": "(title redacted by USAID)",
+     "org": "U.S. Agency for International Development",
+     "end": "2026-09-30",
+     "spend": 0.0,
+     "pct": 0,
+     "names": null
+    },
+    {
+     "aid": "SE-0-SE-6-15221",
+     "title": "WaterAid WASH and climate resilient WASH 2023-2026",
+     "org": "Sweden",
+     "end": "2026-12-31",
+     "spend": 0.0,
+     "pct": 5.9862967,
+     "names": null
+    },
+    {
+     "aid": "KR-GOV-010-KR-GOV-051-2022010102089",
+     "title": "Ending the Scourge of Gender-Based Violence and Sorcery Accusation Related Violence in Papua New Guinea",
+     "org": "Office for Government Policy Coordination",
+     "end": "2026-10-01",
+     "spend": 0.0,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "XM-DAC-41301-669183",
+     "title": "Support to Rural Entrepreneurship, Investment and Trade in Papua New Guinea (STREIT PNG)",
+     "org": "Food and Agriculture Organization (FAO)",
+     "end": "2026-12-24",
+     "spend": 0.0,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "XM-DAC-41304-523INT4000",
+     "title": "International Assistance for the development of World Heritage Nominations in Africa, and SIDS",
+     "org": "United Nations Educational, Scientific and Cultural Organization (UNESCO)",
+     "end": "2026-12-31",
+     "spend": 0.0,
+     "pct": 50,
+     "names": null
+    },
+    {
+     "aid": "XM-DAC-41114-PROJECT-00130707",
+     "title": "PNG Anticorruption Project",
+     "org": "United Nations Development Programme",
+     "end": "2026-12-31",
+     "spend": 0.0,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "XM-DAC-41114-PROJECT-00130712",
+     "title": "Strengthening Integrated Sustainable Landscape Managemen",
+     "org": "United Nations Development Programme",
+     "end": "2026-10-30",
+     "spend": 0.0,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "XM-DAC-41114-PROJECT-00136151",
+     "title": "Sustaining Peace through Economic Empowerment",
+     "org": "United Nations Development Programme",
+     "end": "2026-11-30",
+     "spend": 0.0,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "XM-DAC-41114-PROJECT-00138062",
+     "title": "Investing in Coral Reefs  the Blue Economy BEEIF",
+     "org": "United Nations Development Programme",
+     "end": "2026-12-31",
+     "spend": 0.0,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "XM-DAC-41114-PROJECT-00148020",
+     "title": "Sustaining Peace in Bougainville  Phase II",
+     "org": "United Nations Development Programme",
+     "end": "2026-09-30",
+     "spend": 0.0,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "XM-DAC-41114-PROJECT-01001352",
+     "title": "PNG-01001352 | UK Addressing Multi-Dimensional Risks in Fragile Contexts in PNG",
+     "org": "United Nations Development Programme",
+     "end": "2026-09-30",
+     "spend": 0.0,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "XM-DAC-41114-PROJECT-01001902",
+     "title": "PNG-01001902 | EU Transparency and Accountability in PNG Project",
+     "org": "United Nations Development Programme",
+     "end": "2026-12-31",
+     "spend": 0.0,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "XM-DAC-41114-PROJECT-01002369",
+     "title": "Humanitarian Advisory Team Project",
+     "org": "United Nations Development Programme",
+     "end": "2026-12-31",
+     "spend": 0.0,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "XM-DAC-41114-PROJECT-01002854",
+     "title": "Provincial Capacity Building (PCaB) Programme",
+     "org": "United Nations Development Programme",
+     "end": "2026-12-31",
+     "spend": 0.0,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "XM-DAC-41114-PROJECT-01003451",
+     "title": "PNG-01003451 | NZ Biodiversity Trust Fund Grants",
+     "org": "United Nations Development Programme",
+     "end": "2026-10-31",
+     "spend": 0.0,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "XM-DAC-41114-PROJECT-01005532",
+     "title": "PNG-01005532 | MPTF-UK Bougainville Facilitator Consultation Project",
+     "org": "United Nations Development Programme",
+     "end": "2026-12-31",
+     "spend": 0.0,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "XM-DAC-41114-PROJECT-01005689",
+     "title": "PNG-01005689 | MPTF Disaster Risk Management",
+     "org": "United Nations Development Programme",
+     "end": "2026-12-31",
+     "spend": 0.0,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "XM-DAC-41114-PROJECT-01005691",
+     "title": "PNG-01005691 | FW Advancing Human Rights, responsible business and Environmental Justice in Papua New Guinea",
+     "org": "United Nations Development Programme",
+     "end": "2026-10-30",
+     "spend": 0.0,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "US-GOV-1-720202682703",
+     "title": "USAID Advisory and Assistance Services",
+     "org": "U.S. Agency for International Development",
+     "end": "2026-09-30",
+     "spend": 0.0,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "US-GOV-6-OTA3100000014-144438",
+     "title": "Technical Assistance for Economic Crimes - Papua New Guinea",
+     "org": "Department of the Treasury",
+     "end": "2026-09-30",
+     "spend": 0.0,
+     "pct": 100,
+     "names": null
+    }
+   ],
    "n_misnamed": 0,
    "misnamed": [],
    "currency": [
@@ -763,30 +1912,6 @@
      "names": null
     },
     {
-     "aid": "XM-DAC-41114-OUTPUT-01006251",
-     "org": "United Nations Development Programme",
-     "ref": "XM-DAC-41114",
-     "title": "PIMS-10531 PPG_FSM-SCCF",
-     "start": "2026-08-10",
-     "end": "2027-06-12",
-     "spend": 0.0,
-     "commitment": 91324.0,
-     "pct": 100,
-     "names": null
-    },
-    {
-     "aid": "XM-DAC-41114-OUTPUT-01005844",
-     "org": "United Nations Development Programme",
-     "ref": "XM-DAC-41114",
-     "title": "PIMS-10159-PPG_Nauru PSMCEI",
-     "start": "2026-06-11",
-     "end": "2027-09-30",
-     "spend": 2093.0,
-     "commitment": 50000.0,
-     "pct": 100,
-     "names": null
-    },
-    {
      "aid": "XM-DAC-41114-OUTPUT-01006359",
      "org": "United Nations Development Programme",
      "ref": "XM-DAC-41114",
@@ -809,6 +1934,30 @@
      "commitment": 100000.0,
      "pct": 100,
      "names": "Vanuatu"
+    },
+    {
+     "aid": "XM-DAC-41114-OUTPUT-01006251",
+     "org": "United Nations Development Programme",
+     "ref": "XM-DAC-41114",
+     "title": "PIMS-10531 PPG_FSM-SCCF",
+     "start": "2026-08-10",
+     "end": "2027-06-12",
+     "spend": 0.0,
+     "commitment": 91324.0,
+     "pct": 100,
+     "names": "Micronesia (Fed. States)"
+    },
+    {
+     "aid": "XM-DAC-41114-OUTPUT-01005844",
+     "org": "United Nations Development Programme",
+     "ref": "XM-DAC-41114",
+     "title": "PIMS-10159-PPG_Nauru PSMCEI",
+     "start": "2026-06-11",
+     "end": "2027-09-30",
+     "spend": 2093.0,
+     "commitment": 50000.0,
+     "pct": 100,
+     "names": "Nauru"
     }
    ],
    "n_new_starts": 12,
@@ -1077,7 +2226,1276 @@
      "spend": 4786445.060206962
     }
    ],
-   "n_misnamed": 70,
+   "orgs_90": [
+    {
+     "ref": "XI-IATI-EC_INTPA",
+     "name": "European Commission - Directorate-General for International Partnerships",
+     "usd": 17442001.445
+    },
+    {
+     "ref": "XM-DAC-41122",
+     "name": "UNICEF",
+     "usd": 13581222.706198772
+    },
+    {
+     "ref": "XM-DAC-41114",
+     "name": "United Nations Development Programme",
+     "usd": 10297065.904000001
+    },
+    {
+     "ref": "NZ-1",
+     "name": "New Zealand Ministry of Foreign Affairs and Trade",
+     "usd": 2960696.260477899
+    },
+    {
+     "ref": "KR-GOV-010",
+     "name": "Office for Government Policy Coordination",
+     "usd": 1857784.7311999998
+    },
+    {
+     "ref": "FR-3",
+     "name": "AFD",
+     "usd": 1412024.274
+    },
+    {
+     "ref": "XM-DAC-41123",
+     "name": "United Nations Industrial Development Organization",
+     "usd": 270598.99
+    },
+    {
+     "ref": "DE-1",
+     "name": "Federal Ministry for Economic Cooperation and Development (BMZ)",
+     "usd": 186694.544
+    },
+    {
+     "ref": "XM-DAC-928",
+     "name": "World Health Organization",
+     "usd": 96892.6555
+    },
+    {
+     "ref": "XM-DAC-301-2",
+     "name": "International Development Research Centre",
+     "usd": 76771.51
+    },
+    {
+     "ref": "US-GOV-1",
+     "name": "U.S. Agency for International Development",
+     "usd": 67210.44708391307
+    },
+    {
+     "ref": "XM-DAC-46004",
+     "name": "Asian Development Bank",
+     "usd": 59011.2
+    },
+    {
+     "ref": "CA-3",
+     "name": "Foreign Affairs, Trade and Development Canada (DFATD)",
+     "usd": 52715.343400000005
+    },
+    {
+     "ref": "XM-DAC-41301",
+     "name": "Food and Agriculture Organization (FAO)",
+     "usd": 46485.11
+    },
+    {
+     "ref": "XM-DAC-41302",
+     "name": "International Labour Organization (ILO)",
+     "usd": 37645.7203
+    }
+   ],
+   "new_starts_all": [
+    {
+     "aid": "NZ-1-ACT-0103583",
+     "title": "Negotiated Partnerships: Tearfund New Zealand (TFNZ) - Phase 2",
+     "org": "New Zealand Ministry of Foreign Affairs and Trade",
+     "start": "2026-06-23",
+     "commitment": 1221059.84,
+     "pct": 28,
+     "names": null
+    },
+    {
+     "aid": "NZ-1-ACT-0103987",
+     "title": "Alcohol and Drug Addiction Services: Partnership with The Salvation Army - Fiji Samoa, Tonga",
+     "org": "New Zealand Ministry of Foreign Affairs and Trade",
+     "start": "2026-06-17",
+     "commitment": 497232.91079999995,
+     "pct": 57,
+     "names": null
+    },
+    {
+     "aid": "XM-DAC-41114-OUTPUT-01006260",
+     "title": "PIMS-10535 PPG Climate Adaptation in the Rewa Delta (CARE)",
+     "org": "United Nations Development Programme",
+     "start": "2026-08-05",
+     "commitment": 100000.0,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "XM-DAC-41114-PROJECT-01006260",
+     "title": "PIMS-10535 PPG Climate Adaptation in the Rewa Delta (CARE)",
+     "org": "United Nations Development Programme",
+     "start": "2026-08-05",
+     "commitment": 0.0,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "XM-DAC-41114-OUTPUT-01006359",
+     "title": "PIMS-10536 PPG Vaitupu Coastal Adaptation Project",
+     "org": "United Nations Development Programme",
+     "start": "2026-08-05",
+     "commitment": 150000.0,
+     "pct": 100,
+     "names": "Tuvalu"
+    },
+    {
+     "aid": "XM-DAC-41114-OUTPUT-01006358",
+     "title": "PIMS-10533 PPG Sustainable Climate Resilient Electric Power Systems in Vanuatu",
+     "org": "United Nations Development Programme",
+     "start": "2026-08-05",
+     "commitment": 100000.0,
+     "pct": 100,
+     "names": "Vanuatu"
+    },
+    {
+     "aid": "XM-DAC-41114-OUTPUT-01006251",
+     "title": "PIMS-10531 PPG_FSM-SCCF",
+     "org": "United Nations Development Programme",
+     "start": "2026-08-10",
+     "commitment": 91324.0,
+     "pct": 100,
+     "names": "Micronesia (Fed. States)"
+    },
+    {
+     "aid": "XM-DAC-41114-OUTPUT-01005844",
+     "title": "PIMS-10159-PPG_Nauru PSMCEI",
+     "org": "United Nations Development Programme",
+     "start": "2026-06-11",
+     "commitment": 50000.0,
+     "pct": 100,
+     "names": "Nauru"
+    },
+    {
+     "aid": "XM-DAC-41114-PROJECT-01005844",
+     "title": "PIMS-10159-PPG_Nauru PSMCEI",
+     "org": "United Nations Development Programme",
+     "start": "2026-06-11",
+     "commitment": 0.0,
+     "pct": 100,
+     "names": "Nauru"
+    },
+    {
+     "aid": "XM-DAC-41114-PROJECT-01006251",
+     "title": "PIMS-10531 PPG_FSM-SCCF",
+     "org": "United Nations Development Programme",
+     "start": "2026-08-10",
+     "commitment": 0.0,
+     "pct": 100,
+     "names": "Micronesia (Fed. States)"
+    },
+    {
+     "aid": "XM-DAC-41114-PROJECT-01006358",
+     "title": "PIMS-10533 PPG Sustainable Climate Resilient Electric Power Systems in Vanuatu",
+     "org": "United Nations Development Programme",
+     "start": "2026-08-05",
+     "commitment": 0.0,
+     "pct": 100,
+     "names": "Vanuatu"
+    },
+    {
+     "aid": "XM-DAC-41114-PROJECT-01006359",
+     "title": "PIMS-10536 PPG Vaitupu Coastal Adaptation Project",
+     "org": "United Nations Development Programme",
+     "start": "2026-08-05",
+     "commitment": 0.0,
+     "pct": 100,
+     "names": "Tuvalu"
+    }
+   ],
+   "ending_all": [
+    {
+     "aid": "US-GOV-1-72MC1019M00011",
+     "title": "(title redacted by USAID)",
+     "org": "U.S. Agency for International Development",
+     "end": "2026-09-30",
+     "spend": 17156157.444427803,
+     "pct": 3.7090938,
+     "names": null
+    },
+    {
+     "aid": "AU-5-INO529",
+     "title": "New National Referral Hospital Master Plan",
+     "org": "Australia Aid",
+     "end": "2026-12-31",
+     "spend": 6643504.5,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "XM-DAC-41114-OUTPUT-00123526",
+     "title": "Pacific Insurance and Climate",
+     "org": "United Nations Development Programme",
+     "end": "2026-12-31",
+     "spend": 6081434.0,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "XM-DAC-41114-OUTPUT-00132456",
+     "title": "Vaka Pasifika",
+     "org": "United Nations Development Programme",
+     "end": "2026-12-31",
+     "spend": 5833091.0,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "XM-DAC-41114-OUTPUT-01000335",
+     "title": "Strengthening Legislatures' Capacity in Pacific Islands Countries (SLIP) Phase 2",
+     "org": "United Nations Development Programme",
+     "end": "2026-12-31",
+     "spend": 5330609.0,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "XM-DAC-41114-OUTPUT-00110740",
+     "title": "PACIFIC COASTAL AQUIFERS",
+     "org": "United Nations Development Programme",
+     "end": "2026-10-21",
+     "spend": 4691654.0,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "NZ-1-ACT-0100987",
+     "title": "Revitalising Informal Settlements and their Environments (RISE) in Fiji",
+     "org": "New Zealand Ministry of Foreign Affairs and Trade",
+     "end": "2026-12-31",
+     "spend": 4086880.0,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "XM-DAC-41114-OUTPUT-00118975",
+     "title": "Pacific Digital Economy Programme",
+     "org": "United Nations Development Programme",
+     "end": "2026-12-31",
+     "spend": 3633092.0,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "AU-5-INN612",
+     "title": "United Nations Capital Development Fund Pacific Programmes",
+     "org": "Australia Aid",
+     "end": "2026-12-31",
+     "spend": 3293038.125119275,
+     "pct": 43.606537,
+     "names": null
+    },
+    {
+     "aid": "NZ-1-ACT-0101357",
+     "title": "Fiji Rheumatic Heart Disease Prevention and Control Programme",
+     "org": "New Zealand Ministry of Foreign Affairs and Trade",
+     "end": "2027-01-29",
+     "spend": 3111026.2,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "US-GOV-1-7200AA21N00006",
+     "title": "Administrative Costs",
+     "org": "U.S. Agency for International Development",
+     "end": "2026-09-30",
+     "spend": 3003707.04093965,
+     "pct": 34.804085,
+     "names": null
+    },
+    {
+     "aid": "XM-DAC-41114-OUTPUT-01002886",
+     "title": "Fiji Health Procurement Project (FHPP)",
+     "org": "United Nations Development Programme",
+     "end": "2026-12-31",
+     "spend": 2700360.0,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "XM-DAC-41114-OUTPUT-00126753",
+     "title": "Fiji Parliament Support Project Phase III",
+     "org": "United Nations Development Programme",
+     "end": "2026-12-30",
+     "spend": 2559270.0,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "NZ-1-ACT-0101195",
+     "title": "Climate Change Programme - Ecosystems Resilience",
+     "org": "New Zealand Ministry of Foreign Affairs and Trade",
+     "end": "2026-10-31",
+     "spend": 2347081.84165784,
+     "pct": 25.806452,
+     "names": null
+    },
+    {
+     "aid": "XM-DAC-41114-OUTPUT-00090867",
+     "title": "Fiji Markets",
+     "org": "United Nations Development Programme",
+     "end": "2026-12-31",
+     "spend": 2143146.0,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "NZ-1-ACT-0102990",
+     "title": "Pacific Insurance and Climate Adaptation Programme (PICAP)",
+     "org": "New Zealand Ministry of Foreign Affairs and Trade",
+     "end": "2027-01-31",
+     "spend": 1908305.16974505,
+     "pct": 26.31579,
+     "names": null
+    },
+    {
+     "aid": "AU-5-INN974",
+     "title": "Pacific Media Assistance Scheme (Phase 4)",
+     "org": "Australia Aid",
+     "end": "2026-12-31",
+     "spend": 1853493.60395916,
+     "pct": 42.835644,
+     "names": null
+    },
+    {
+     "aid": "XM-DAC-41111-XM-DAC-41111-125168-2",
+     "title": "Leveraging DF to increase resi",
+     "org": "United Nations Capital Development Fund (UNCDF)",
+     "end": "2026-12-31",
+     "spend": 1648202.0,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "AU-5-INO142",
+     "title": "Namosi Hydropower Generation Feasibility Study - Fiji - Energy",
+     "org": "Australia Aid",
+     "end": "2026-12-01",
+     "spend": 1572675.0,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "NZ-1-ACT-0102603",
+     "title": "Negotiated Partnerships: Habitat for Humanity (HFHNZ) Implementation",
+     "org": "New Zealand Ministry of Foreign Affairs and Trade",
+     "end": "2027-02-28",
+     "spend": 1468546.5469999998,
+     "pct": 39.4,
+     "names": null
+    },
+    {
+     "aid": "XM-DAC-41114-OUTPUT-01000767",
+     "title": "Engagement Facility Project",
+     "org": "United Nations Development Programme",
+     "end": "2026-12-31",
+     "spend": 1314713.0,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "XM-DAC-41114-OUTPUT-01002912",
+     "title": "Pacific Regional Programme_DFAT",
+     "org": "United Nations Development Programme",
+     "end": "2026-12-31",
+     "spend": 1190007.0,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "US-GOV-1-720202657295",
+     "title": "USAID Pay and Benefits",
+     "org": "U.S. Agency for International Development",
+     "end": "2026-09-30",
+     "spend": 1075357.0143950041,
+     "pct": 0.31823286,
+     "names": null
+    },
+    {
+     "aid": "XM-DAC-301-2-110227-001",
+     "title": "AQUA-Pearl: scaling up community-led nature-based oyster aquaculture for climate resilience in Fiji",
+     "org": "International Development Research Centre",
+     "end": "2027-03-01",
+     "spend": 1010490.5,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "NZ-1-ACT-0102608",
+     "title": "Negotiated Partnership: TearFund New Zealand (TFNZ) Implementation",
+     "org": "New Zealand Ministry of Foreign Affairs and Trade",
+     "end": "2026-11-30",
+     "spend": 979530.2,
+     "pct": 22,
+     "names": null
+    },
+    {
+     "aid": "XI-IATI-EC_INTPA-2025-PC-54462",
+     "title": "1st EU-Pacific Business Forum 2025",
+     "org": "European Commission - Directorate-General for International Partnerships",
+     "end": "2026-10-27",
+     "spend": 811851.1,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "NZ-1-ACT-0103883",
+     "title": "Building Resilient Communities: Health Responses to Climate Change in Fiji",
+     "org": "New Zealand Ministry of Foreign Affairs and Trade",
+     "end": "2026-10-13",
+     "spend": 768689.0,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "AU-5-INN422",
+     "title": "Nadi Flood Alleviation Project (NFAP) - Fiji - Climate",
+     "org": "Australia Aid",
+     "end": "2026-12-31",
+     "spend": 722993.44,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "XM-DAC-41114-OUTPUT-01004664",
+     "title": "Fiji MCO TRAC",
+     "org": "United Nations Development Programme",
+     "end": "2026-12-31",
+     "spend": 686908.0,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "NZ-1-ACT-0102605",
+     "title": "Negotiated Partnership: Caritas New Zealand Implementation",
+     "org": "New Zealand Ministry of Foreign Affairs and Trade",
+     "end": "2026-11-30",
+     "spend": 661687.67,
+     "pct": 14,
+     "names": null
+    },
+    {
+     "aid": "NZ-1-ACT-0102034",
+     "title": "Pacific Justice Sector 2021-2026",
+     "org": "New Zealand Ministry of Foreign Affairs and Trade",
+     "end": "2026-11-30",
+     "spend": 620556.5460000001,
+     "pct": 6.7,
+     "names": null
+    },
+    {
+     "aid": "DE-1-202375277",
+     "title": "Community Capacity Building to manage their own development, continuation",
+     "org": "Federal Ministry for Economic Cooperation and Development (BMZ)",
+     "end": "2026-09-30",
+     "spend": 497881.47,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "AU-5-INO648",
+     "title": "Support for Revitalising Shipbuilding in Fiji",
+     "org": "Australia Aid",
+     "end": "2026-12-30",
+     "spend": 450742.66,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "DE-1-202376721",
+     "title": "Bolestering Livelihood in Rural and Remote Indigeneous Farming Communities",
+     "org": "Federal Ministry for Economic Cooperation and Development (BMZ)",
+     "end": "2026-10-31",
+     "spend": 396179.7,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "XM-DAC-41114-OUTPUT-01001855",
+     "title": "Accelerated Implementation of UNDP Pacific RCC Programme/Project Pipeline for 2024",
+     "org": "United Nations Development Programme",
+     "end": "2026-12-31",
+     "spend": 389726.0,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "XM-DAC-41114-OUTPUT-00126732",
+     "title": "SDG's Financing in the Pacific",
+     "org": "United Nations Development Programme",
+     "end": "2026-10-31",
+     "spend": 377111.0,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "AU-5-INO015",
+     "title": "Australia Awards Pacific Scholarships",
+     "org": "Australia Aid",
+     "end": "2026-12-31",
+     "spend": 347070.62950959994,
+     "pct": 50.246204,
+     "names": null
+    },
+    {
+     "aid": "XM-DAC-41111-XM-DAC-41111-127034-1",
+     "title": "Pacific Digital Economy Progra-UNCDF-00127034",
+     "org": "United Nations Capital Development Fund",
+     "end": "2026-12-31",
+     "spend": 340003.0,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "NZ-1-ACT-0100405",
+     "title": "ADB Pacific Private Sector Development Initiative Phase IV",
+     "org": "New Zealand Ministry of Foreign Affairs and Trade",
+     "end": "2026-10-31",
+     "spend": 306140.8196,
+     "pct": 7.7,
+     "names": null
+    },
+    {
+     "aid": "XM-DAC-301-2-110158-001",
+     "title": "Resilience to climate vulnerability and environmental risk (RECOVER) with a focus on small islands",
+     "org": "International Development Research Centre",
+     "end": "2027-01-01",
+     "spend": 272926.764,
+     "pct": 33,
+     "names": null
+    },
+    {
+     "aid": "US-GOV-1-720AAD21N00001",
+     "title": "(title redacted by USAID)",
+     "org": "U.S. Agency for International Development",
+     "end": "2026-09-30",
+     "spend": 243078.90744883203,
+     "pct": 1.0569104,
+     "names": null
+    },
+    {
+     "aid": "AU-5-INM415",
+     "title": "Humanitarian Emergency Medical Preparedness & Engagement",
+     "org": "Australia Aid",
+     "end": "2026-12-31",
+     "spend": 220586.57450987,
+     "pct": 16.666666,
+     "names": null
+    },
+    {
+     "aid": "DE-1-202375988",
+     "title": "Preventing violence against women and girls in faith settings",
+     "org": "Federal Ministry for Economic Cooperation and Development (BMZ)",
+     "end": "2026-09-30",
+     "spend": 191993.05,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "KR-GOV-010-KR-GOV-051-2026030702727",
+     "title": "KOICA Coordinator in Fiji for Sectors not specified",
+     "org": "Office for Government Policy Coordination",
+     "end": "2026-12-01",
+     "spend": 191365.55,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "NZ-1-ACT-0102286",
+     "title": "Pacific Digital Economy Programme",
+     "org": "New Zealand Ministry of Foreign Affairs and Trade",
+     "end": "2027-03-01",
+     "spend": 181843.94,
+     "pct": 5,
+     "names": null
+    },
+    {
+     "aid": "XM-DAC-47136-FJ24",
+     "title": "Fiji bamboo to adapt and mitigate climate change",
+     "org": "Global Green Growth Institute (GGGI)",
+     "end": "2027-01-31",
+     "spend": 178085.45,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "US-GOV-1-720202657457",
+     "title": "(title redacted by USAID)",
+     "org": "U.S. Agency for International Development",
+     "end": "2026-09-30",
+     "spend": 156685.70593328399,
+     "pct": 0.7967993,
+     "names": null
+    },
+    {
+     "aid": "US-GOV-1-720202657291",
+     "title": "USAID Pay and Benefits",
+     "org": "U.S. Agency for International Development",
+     "end": "2026-09-30",
+     "spend": 156133.99301928,
+     "pct": 0.2857245,
+     "names": null
+    },
+    {
+     "aid": "XM-DAC-41114-OUTPUT-01005021",
+     "title": "NDC 3.0 Implementation Support",
+     "org": "United Nations Development Programme",
+     "end": "2026-12-31",
+     "spend": 154852.0,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "XM-DAC-41114-OUTPUT-01002583",
+     "title": "PIMS-9957 Pacific priorities for ecosystem management and NBSAP implementation",
+     "org": "United Nations Development Programme",
+     "end": "2026-12-31",
+     "spend": 134319.0,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "NZ-1-ACT-0103469",
+     "title": "Anamata and Scholarships Future State",
+     "org": "New Zealand Ministry of Foreign Affairs and Trade",
+     "end": "2027-02-01",
+     "spend": 132427.963901773,
+     "pct": 3.4285715,
+     "names": null
+    },
+    {
+     "aid": "US-GOV-1-720202657429",
+     "title": "USAID Pay and Benefits",
+     "org": "U.S. Agency for International Development",
+     "end": "2026-09-30",
+     "spend": 102554.71074244,
+     "pct": 33.978428,
+     "names": null
+    },
+    {
+     "aid": "XM-DAC-45001-C475",
+     "title": "Pacific: EU-Pacific Business Forum",
+     "org": "International Trade Centre (ITC)",
+     "end": "2026-10-27",
+     "spend": 89552.16,
+     "pct": 12,
+     "names": null
+    },
+    {
+     "aid": "XM-DAC-41114-OUTPUT-01002175",
+     "title": "Fiji HCFC Phase-out Management plan II FIJ/PHA/88/INV/039",
+     "org": "United Nations Development Programme",
+     "end": "2026-12-31",
+     "spend": 63865.0,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "AU-5-INO412",
+     "title": "Melanesian Spearhead Group (MSG) Secretariat Strengthening Project",
+     "org": "Australia Aid",
+     "end": "2026-12-31",
+     "spend": 62405.502378239995,
+     "pct": 9.999744,
+     "names": null
+    },
+    {
+     "aid": "NZ-1-ACT-0104607",
+     "title": "FY25-26 Pacific Diplomatic Training In-Country & In-Region",
+     "org": "New Zealand Ministry of Foreign Affairs and Trade",
+     "end": "2026-12-20",
+     "spend": 61733.76327940961,
+     "pct": 10.345541,
+     "names": null
+    },
+    {
+     "aid": "KR-GOV-010-KR-GOV-051-2026030702490",
+     "title": "KOICA Volunteers in Fiji for Medical services",
+     "org": "Office for Government Policy Coordination",
+     "end": "2026-12-01",
+     "spend": 59815.76,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "XM-DAC-41114-OUTPUT-01005937",
+     "title": "Support to Global Fund GC8 Grant Development",
+     "org": "United Nations Development Programme",
+     "end": "2026-12-31",
+     "spend": 50285.0,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "XM-DAC-41114-OUTPUT-01005505",
+     "title": "Pathways to Sustaining Peace: Enhancing Youth Leadership and Cultural Pathways in Reconciliation and Social Co",
+     "org": "United Nations Development Programme",
+     "end": "2027-02-28",
+     "spend": 46030.0,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "KR-GOV-010-KR-GOV-051-2026040101634005",
+     "title": "Capacity Building for the Government Officials on Digital Competency(25-27)(2026)",
+     "org": "Office for Government Policy Coordination",
+     "end": "2026-12-01",
+     "spend": 45136.69,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "KR-GOV-010-KR-GOV-051-2026030702489",
+     "title": "KOICA Volunteers in Fiji for Vocational training",
+     "org": "Office for Government Policy Coordination",
+     "end": "2026-12-01",
+     "spend": 41410.914,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "XM-DAC-41114-OUTPUT-01000516",
+     "title": "Scaling Solar Applications for Agricultural Use (SSAAU)",
+     "org": "United Nations Development Programme",
+     "end": "2026-12-31",
+     "spend": 34436.0,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "NZ-1-ACT-0104608",
+     "title": "FY25-26 Pacific Climate Resilience In-Country",
+     "org": "New Zealand Ministry of Foreign Affairs and Trade",
+     "end": "2026-12-20",
+     "spend": 34100.658037,
+     "pct": 13.33,
+     "names": null
+    },
+    {
+     "aid": "US-GOV-1-720202657389",
+     "title": "USAID Pay and Benefits",
+     "org": "U.S. Agency for International Development",
+     "end": "2026-09-30",
+     "spend": 30858.828493499997,
+     "pct": 98.38619,
+     "names": null
+    },
+    {
+     "aid": "KR-GOV-010-KR-GOV-051-2026030702491",
+     "title": "KOICA Volunteers in Fiji for Basic health care",
+     "org": "Office for Government Policy Coordination",
+     "end": "2026-12-01",
+     "spend": 27607.275,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "KR-GOV-010-KR-GOV-051-2026030702492",
+     "title": "KOICA Volunteers in Fiji for Public sector policy and administrative management",
+     "org": "Office for Government Policy Coordination",
+     "end": "2026-12-01",
+     "spend": 27607.275,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "NZ-1-ACT-0104602",
+     "title": "FY25-26 Pacific Good Governance In-Country",
+     "org": "New Zealand Ministry of Foreign Affairs and Trade",
+     "end": "2026-10-20",
+     "spend": 22729.252743999998,
+     "pct": 9.68,
+     "names": null
+    },
+    {
+     "aid": "XI-GRID-grid.7836.a-426471",
+     "title": "Transforming Energy Access - Learning Partnership Upscale",
+     "org": "University of Cape Town",
+     "end": "2026-12-31",
+     "spend": 21133.4828371062,
+     "pct": 1.0781761,
+     "names": null
+    },
+    {
+     "aid": "NZ-1-ACT-0104606",
+     "title": "FY25-26 Pacific Infrastructure Project Management In Country",
+     "org": "New Zealand Ministry of Foreign Affairs and Trade",
+     "end": "2026-12-20",
+     "spend": 20776.489719999998,
+     "pct": 6.67,
+     "names": null
+    },
+    {
+     "aid": "KR-GOV-010-KR-GOV-051-2026030702493",
+     "title": "KOICA Volunteers in Fiji for Information and communication technology (ICT)",
+     "org": "Office for Government Policy Coordination",
+     "end": "2026-12-01",
+     "spend": 13803.638,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "US-GOV-1-720202657045",
+     "title": "USAID Miscellaneous Goods, Services, and Operations Maintanence",
+     "org": "U.S. Agency for International Development",
+     "end": "2026-09-30",
+     "spend": 8972.44068672,
+     "pct": 11.704812,
+     "names": null
+    },
+    {
+     "aid": "US-GOV-1-720202657619",
+     "title": "(title redacted by USAID)",
+     "org": "U.S. Agency for International Development",
+     "end": "2026-09-30",
+     "spend": 8477.414545776,
+     "pct": 0.5440776,
+     "names": null
+    },
+    {
+     "aid": "US-GOV-1-720202657636",
+     "title": "USAID Travel and Transportation",
+     "org": "U.S. Agency for International Development",
+     "end": "2026-09-30",
+     "spend": 7230.346265221,
+     "pct": 1.6253119,
+     "names": null
+    },
+    {
+     "aid": "KR-GOV-010-KR-GOV-051-2024040103011",
+     "title": "Master's Degree Program inTrade and Industrial Policy for Innovative  Growth and Resilience(2024)",
+     "org": "Office for Government Policy Coordination",
+     "end": "2026-12-01",
+     "spend": 5393.72,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "KR-GOV-010-KR-GOV-051-2024040103039",
+     "title": "Master's Degree Program in Urban Development(2024)",
+     "org": "Office for Government Policy Coordination",
+     "end": "2026-12-01",
+     "spend": 5393.72,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "US-GOV-1-720202659998",
+     "title": "USAID Advisory and Assistance Services",
+     "org": "U.S. Agency for International Development",
+     "end": "2026-09-30",
+     "spend": 2075.0,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "KR-GOV-010-KR-GOV-051-2024040102365",
+     "title": "Master's Degree Program in Agricultural Production(2024)",
+     "org": "Office for Government Policy Coordination",
+     "end": "2026-12-01",
+     "spend": 1797.9067,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "KR-GOV-010-KR-GOV-051-2024040102604",
+     "title": "Master's Degree Program in Global Health Security(2024)",
+     "org": "Office for Government Policy Coordination",
+     "end": "2026-12-01",
+     "spend": 1797.9067,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "NZ-1-ACT-0104605",
+     "title": "FY25-26 Pacific Public Sector Leadership (Mid-Level) Course 2 In Country",
+     "org": "New Zealand Ministry of Foreign Affairs and Trade",
+     "end": "2026-12-20",
+     "spend": 1559.2652,
+     "pct": 10,
+     "names": null
+    },
+    {
+     "aid": "XM-DAC-47136-GGPI13",
+     "title": "EU Urban Development Technical Facility",
+     "org": "Global Green Growth Institute",
+     "end": "2026-10-01",
+     "spend": 25.001894167744002,
+     "pct": 0.33222592,
+     "names": null
+    },
+    {
+     "aid": "US-GOV-1-720202656549",
+     "title": "(title redacted by USAID)",
+     "org": "U.S. Agency for International Development",
+     "end": "2026-09-30",
+     "spend": 0.0,
+     "pct": 0,
+     "names": null
+    },
+    {
+     "aid": "US-GOV-1-720202656618",
+     "title": "USAID Communications, Utilities, and Rental Payments",
+     "org": "U.S. Agency for International Development",
+     "end": "2026-09-30",
+     "spend": 0.0,
+     "pct": 0,
+     "names": null
+    },
+    {
+     "aid": "US-GOV-1-720202656911",
+     "title": "USAID Miscellaneous Goods, Services, and Operations Maintanence",
+     "org": "U.S. Agency for International Development",
+     "end": "2026-09-30",
+     "spend": 0.0,
+     "pct": 0,
+     "names": null
+    },
+    {
+     "aid": "US-GOV-1-720202656967",
+     "title": "(title redacted by USAID)",
+     "org": "U.S. Agency for International Development",
+     "end": "2026-09-30",
+     "spend": 0.0,
+     "pct": 0,
+     "names": null
+    },
+    {
+     "aid": "XM-DAC-41304-261FIJ1000",
+     "title": "UNPRPD in Fiji",
+     "org": "United Nations Educational, Scientific and Cultural Organization (UNESCO)",
+     "end": "2026-12-31",
+     "spend": 0.0,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "XM-DAC-41114-OUTPUT-01005506",
+     "title": "Fiji Human Rights and Anti-Discrimination Commission Capacity Development Project (PIP)",
+     "org": "United Nations Development Programme",
+     "end": "2027-03-05",
+     "spend": 0.0,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "XM-DAC-41114-PROJECT-00081678",
+     "title": "Markets for Change",
+     "org": "United Nations Development Programme",
+     "end": "2026-12-31",
+     "spend": 0.0,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "XM-DAC-41114-PROJECT-00112065",
+     "title": "PACIFIC COASTAL AQUIFERS",
+     "org": "United Nations Development Programme",
+     "end": "2026-10-21",
+     "spend": 0.0,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "XM-DAC-41114-PROJECT-00123820",
+     "title": "Pacific Digital Economy Programme",
+     "org": "United Nations Development Programme",
+     "end": "2026-12-31",
+     "spend": 0.0,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "XM-DAC-41114-PROJECT-00130025",
+     "title": "Pacific Insurance and Climate Adaptation Programme",
+     "org": "United Nations Development Programme",
+     "end": "2026-12-31",
+     "spend": 0.0,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "XM-DAC-41114-PROJECT-00135551",
+     "title": "Vaka Pasifika",
+     "org": "United Nations Development Programme",
+     "end": "2026-12-31",
+     "spend": 0.0,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "XM-DAC-41114-PROJECT-00135555",
+     "title": "Fiji Parliament Support Project 3",
+     "org": "United Nations Development Programme",
+     "end": "2026-12-30",
+     "spend": 0.0,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "XM-DAC-41114-PROJECT-01000335",
+     "title": "Strengthening Legislatures' Capacity in Pacific Islands Countries (SLIP) Phase 2",
+     "org": "United Nations Development Programme",
+     "end": "2026-12-31",
+     "spend": 0.0,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "XM-DAC-41114-PROJECT-01000516",
+     "title": "Scaling Solar Applications for Agricultural Use (SSAAU)",
+     "org": "United Nations Development Programme",
+     "end": "2026-12-31",
+     "spend": 0.0,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "XM-DAC-41114-PROJECT-01000767",
+     "title": "Engagement Facility Project",
+     "org": "United Nations Development Programme",
+     "end": "2026-12-31",
+     "spend": 0.0,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "XM-DAC-41114-PROJECT-01001855",
+     "title": "Accelerated Implementation of UNDP Pacific RCC Programme/Project Pipeline for 2024",
+     "org": "United Nations Development Programme",
+     "end": "2026-12-31",
+     "spend": 0.0,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "XM-DAC-41114-PROJECT-01002175",
+     "title": "Fiji HCFC Phase-out Management plan II FIJ/PHA/88/INV/039",
+     "org": "United Nations Development Programme",
+     "end": "2026-12-31",
+     "spend": 0.0,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "XM-DAC-41114-PROJECT-01002583",
+     "title": "PIMS-9957 Pacific priorities for ecosystem management and NBSAP implementation",
+     "org": "United Nations Development Programme",
+     "end": "2026-12-31",
+     "spend": 0.0,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "XM-DAC-41114-PROJECT-01002886",
+     "title": "Fiji Health Procurement Project (FHPP)",
+     "org": "United Nations Development Programme",
+     "end": "2026-12-31",
+     "spend": 0.0,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "XM-DAC-41114-PROJECT-01002912",
+     "title": "Pacific Regional Programme_DFAT",
+     "org": "United Nations Development Programme",
+     "end": "2026-12-31",
+     "spend": 0.0,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "XM-DAC-41114-PROJECT-01004664",
+     "title": "Fiji MCO TRAC",
+     "org": "United Nations Development Programme",
+     "end": "2026-12-31",
+     "spend": 0.0,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "XM-DAC-41114-PROJECT-01005021",
+     "title": "NDC 3.0 Implementation Support",
+     "org": "United Nations Development Programme",
+     "end": "2026-12-31",
+     "spend": 0.0,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "XM-DAC-41114-PROJECT-01005505",
+     "title": "Pathways to Sustaining Peace: Enhancing Youth Leadership and Cultural Pathways in Reconciliation and Social Co",
+     "org": "United Nations Development Programme",
+     "end": "2027-02-28",
+     "spend": 0.0,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "XM-DAC-41114-PROJECT-01005506",
+     "title": "Fiji Human Rights and Anti-Discrimination Commission Capacity Development Project (PIP)",
+     "org": "United Nations Development Programme",
+     "end": "2027-03-05",
+     "spend": 0.0,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "XM-DAC-41114-PROJECT-01005937",
+     "title": "Support to Global Fund GC8 Grant Development",
+     "org": "United Nations Development Programme",
+     "end": "2026-12-31",
+     "spend": 0.0,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "XM-DAC-701-8-202517440",
+     "title": "\u7d4c\u6e08\u793e\u4f1a\u958b\u767a\u8a08\u753b\uff08\u5ec3\u68c4\u7269\u51e6\u7406\u95a2\u9023\u6a5f\u6750\uff09",
+     "org": "Japan International Cooperation Agency (JICA)",
+     "end": "2027-01-07",
+     "spend": 0.0,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "XM-DAC-701-8-202517441",
+     "title": "\u7d4c\u6e08\u793e\u4f1a\u958b\u767a\u8a08\u753b\uff08\u4fdd\u5065\u533b\u7642\u95a2\u9023\u6a5f\u6750\uff09",
+     "org": "Japan International Cooperation Agency (JICA)",
+     "end": "2027-02-18",
+     "spend": 0.0,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "XM-DAC-41114-OUTPUT-01001604",
+     "title": "Tuvalu Coastal Adaptation Project Phase 2 (TCAP 2)",
+     "org": "United Nations Development Programme",
+     "end": "2026-12-31",
+     "spend": 17126372.0,
+     "pct": 100,
+     "names": "Tuvalu"
+    },
+    {
+     "aid": "XM-DAC-41114-OUTPUT-01001484",
+     "title": "Strengthening the Electoral Cycle in the Solomon Islands Project (SECSIP III) (EU: 2023-2025)",
+     "org": "United Nations Development Programme",
+     "end": "2026-09-30",
+     "spend": 5594025.0,
+     "pct": 100,
+     "names": "Solomon Islands"
+    },
+    {
+     "aid": "XM-DAC-41114-OUTPUT-00128454",
+     "title": "M4C Phase II - Samoa",
+     "org": "United Nations Development Programme",
+     "end": "2026-12-31",
+     "spend": 902867.0,
+     "pct": 100,
+     "names": "Samoa"
+    },
+    {
+     "aid": "XM-DAC-41114-OUTPUT-01004160",
+     "title": "Vanuatu Green Transformation Project \u2013 Phase 2",
+     "org": "United Nations Development Programme",
+     "end": "2026-10-31",
+     "spend": 626285.0,
+     "pct": 100,
+     "names": "Vanuatu"
+    },
+    {
+     "aid": "XM-DAC-41114-OUTPUT-01002168",
+     "title": "Advancing Durable Solutions to Internal Displacement in Vanuatu",
+     "org": "United Nations Development Programme",
+     "end": "2027-02-28",
+     "spend": 341298.0,
+     "pct": 100,
+     "names": "Vanuatu"
+    },
+    {
+     "aid": "XM-DAC-41114-OUTPUT-01003098",
+     "title": "Tuvalu Coastal and Long-term Adaptation Planning (TuCLAP)",
+     "org": "United Nations Development Programme",
+     "end": "2026-11-30",
+     "spend": 108944.0,
+     "pct": 100,
+     "names": "Tuvalu"
+    },
+    {
+     "aid": "XM-DAC-41114-OUTPUT-01005268",
+     "title": "PIMS -10382 GBFF PPG Establishing and protecting major river buffer zones in Vanuatu",
+     "org": "United Nations Development Programme",
+     "end": "2026-11-19",
+     "spend": 40225.0,
+     "pct": 100,
+     "names": "Vanuatu"
+    },
+    {
+     "aid": "XM-DAC-41114-PROJECT-01001484",
+     "title": "Strengthening the Electoral Cycle in the Solomon Islands Project (SECSIP III) (EU: 2023-2025)",
+     "org": "United Nations Development Programme",
+     "end": "2026-09-30",
+     "spend": 0.0,
+     "pct": 100,
+     "names": "Solomon Islands"
+    },
+    {
+     "aid": "XM-DAC-41114-PROJECT-01001604",
+     "title": "Tuvalu Coastal Adaptation Project Phase 2 (TCAP 2)",
+     "org": "United Nations Development Programme",
+     "end": "2026-12-31",
+     "spend": 0.0,
+     "pct": 100,
+     "names": "Tuvalu"
+    },
+    {
+     "aid": "XM-DAC-41114-PROJECT-01002168",
+     "title": "Advancing Durable Solutions to Internal Displacement in Vanuatu",
+     "org": "United Nations Development Programme",
+     "end": "2027-02-28",
+     "spend": 0.0,
+     "pct": 100,
+     "names": "Vanuatu"
+    },
+    {
+     "aid": "XM-DAC-41114-PROJECT-01003098",
+     "title": "Tuvalu Coastal and Long-term Adaptation Planning (TuCLAP)",
+     "org": "United Nations Development Programme",
+     "end": "2026-11-30",
+     "spend": 0.0,
+     "pct": 100,
+     "names": "Tuvalu"
+    },
+    {
+     "aid": "XM-DAC-41114-PROJECT-01004160",
+     "title": "Vanuatu Green Transformation Project \u2013 Phase 2",
+     "org": "United Nations Development Programme",
+     "end": "2026-10-31",
+     "spend": 0.0,
+     "pct": 100,
+     "names": "Vanuatu"
+    },
+    {
+     "aid": "XM-DAC-41114-PROJECT-01005268",
+     "title": "PIMS -10382 GBFF PPG Establishing and protecting major river buffer zones in Vanuatu",
+     "org": "United Nations Development Programme",
+     "end": "2026-11-19",
+     "spend": 0.0,
+     "pct": 100,
+     "names": "Vanuatu"
+    }
+   ],
+   "n_misnamed": 75,
    "misnamed": [
     {
      "aid": "XM-DAC-41114-OUTPUT-01001604",
@@ -1733,6 +4151,658 @@
      "spend": 1210986.5467098928
     }
    ],
+   "orgs_90": [
+    {
+     "ref": "XM-DAC-46004",
+     "name": "Asian Development Bank",
+     "usd": 13628724.814000001
+    },
+    {
+     "ref": "XM-DAC-41317",
+     "name": "Green Climate Fund",
+     "usd": 8000000.0
+    },
+    {
+     "ref": "44000",
+     "name": "World Bank",
+     "usd": 2701375.4200000004
+    },
+    {
+     "ref": "KR-GOV-010",
+     "name": "Office for Government Policy Coordination",
+     "usd": 1938475.886
+    },
+    {
+     "ref": "NZ-1",
+     "name": "New Zealand Ministry of Foreign Affairs and Trade",
+     "usd": 1194257.3130738009
+    },
+    {
+     "ref": "XM-DAC-41114",
+     "name": "United Nations Development Programme",
+     "usd": 673952.0
+    },
+    {
+     "ref": "XM-DAC-928",
+     "name": "World Health Organization",
+     "usd": 454663.75800000003
+    },
+    {
+     "ref": "XI-IATI-EC_INTPA",
+     "name": "European Commission - Directorate-General for International Partnerships",
+     "usd": 409985.752
+    },
+    {
+     "ref": "XM-DAC-41301",
+     "name": "Food and Agriculture Organization (FAO)",
+     "usd": 79073.34
+    },
+    {
+     "ref": "DE-1",
+     "name": "Federal Ministry for Economic Cooperation and Development (BMZ)",
+     "usd": 35453.17
+    },
+    {
+     "ref": "XM-DAC-41302",
+     "name": "International Labour Organization (ILO)",
+     "usd": 3783.54
+    },
+    {
+     "ref": "47045",
+     "name": "The Global Fund to Fight AIDS, Tuberculosis and Malaria",
+     "usd": 3269.4199000000003
+    },
+    {
+     "ref": "US-GOV-1",
+     "name": "U.S. Agency for International Development",
+     "usd": 100.27144129212
+    },
+    {
+     "ref": "47122",
+     "name": "Gavi, The Vaccine Alliance",
+     "usd": -325783.20000000007
+    }
+   ],
+   "new_starts_all": [
+    {
+     "aid": "XI-IATI-EC_INTPA-2026-PC-77058",
+     "title": "Activity under preparation EU-Solomon Islands Partnership for a modern, green and competitive energy sector",
+     "org": "European Commission - Directorate-General for International Partnerships",
+     "start": "2026-08-04",
+     "commitment": 9870671.0,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "FR-3-CZZ377501",
+     "title": "Fonds de partenariat pour les \u00e9cosyst\u00e8mes critiques - renouvellement des contributions UE-AFD",
+     "org": "AFD",
+     "start": "2026-08-17",
+     "commitment": 1363136.6124000002,
+     "pct": 8.13,
+     "names": null
+    },
+    {
+     "aid": "NZ-1-ACT-0103583",
+     "title": "Negotiated Partnerships: Tearfund New Zealand (TFNZ) - Phase 2",
+     "org": "New Zealand Ministry of Foreign Affairs and Trade",
+     "start": "2026-06-23",
+     "commitment": 1308278.4,
+     "pct": 30,
+     "names": null
+    },
+    {
+     "aid": "XI-IATI-EC_INTPA-2026-PC-82204",
+     "title": "Strengthening Participation and Representation of Civil Society (SPARC) in Climate Resilience, Adaptation and ",
+     "org": "European Commission - Directorate-General for International Partnerships",
+     "start": "2026-06-30",
+     "commitment": 587539.94,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "FR-3-CZZ377502",
+     "title": "Fonds de partenariat pour les \u00e9cosyst\u00e8mes critiques - renouvellement des contributions UE-AFD",
+     "org": "AFD",
+     "start": "2026-08-17",
+     "commitment": 468578.1597000001,
+     "pct": 8.13,
+     "names": null
+    },
+    {
+     "aid": "DE-1-202631422",
+     "title": "Promoting critical thinking and literacy skills in the Solomon Islands",
+     "org": "Federal Ministry for Economic Cooperation and Development (BMZ)",
+     "start": "2026-08-01",
+     "commitment": 366155.72,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "GB-GOV-1-400607-435",
+     "title": "Support to the Government of the Solomon Islands to Implement the Extractive Industry Transparency Initiative",
+     "org": "UK - Foreign, Commonwealth Development Office (FCDO)",
+     "start": "2026-06-18",
+     "commitment": 99975.414,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "XI-IATI-EC_INTPA-2026-PC-77937",
+     "title": "Expenditure Verification of contract 447723 - Strengthening the Electoral Cycle in the Solomon Islands (SECSIP",
+     "org": "European Commission - Directorate-General for International Partnerships",
+     "start": "2026-07-16",
+     "commitment": 12867.125,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "GB-GOV-1-400607-437",
+     "title": "Strengthening Electricity Sector Governance in Solomon Islands",
+     "org": "UK - Foreign, Commonwealth Development Office (FCDO)",
+     "start": "2026-06-18",
+     "commitment": 0.0,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "NZ-1-ACT-0103580",
+     "title": "Negotiated Partnerships: UNICEF NZ - Phase 2",
+     "org": "New Zealand Ministry of Foreign Affairs and Trade",
+     "start": "2026-06-26",
+     "commitment": 0.0,
+     "pct": 25.5,
+     "names": null
+    },
+    {
+     "aid": "FR-3-CZZ3775",
+     "title": "Fonds de partenariat pour les \u00e9cosyst\u00e8mes critiques - renouvellement des contributions UE-AFD",
+     "org": "AFD",
+     "start": "2026-08-17",
+     "commitment": 0.0,
+     "pct": 8.13,
+     "names": null
+    },
+    {
+     "aid": "XI-IATI-EC_INTPA-2026-PC-77059",
+     "title": "Activity under preparation Technical assistance to support EU-Solomon Islands Partnership for a modern, green ",
+     "org": "European Commission - Directorate-General for International Partnerships",
+     "start": "2026-08-31",
+     "commitment": 0.0,
+     "pct": 100,
+     "names": null
+    }
+   ],
+   "ending_all": [
+    {
+     "aid": "44000-P178676",
+     "title": "The First Solomon Islands Resilience DPO with a Catastrophe Deferred Drawdown Option",
+     "org": "World Bank",
+     "end": "2026-12-31",
+     "spend": 20607364.0,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "44000-P173043",
+     "title": "Solomon Islands Agriculture and Rural Transformation Project",
+     "org": "World Bank",
+     "end": "2026-12-31",
+     "spend": 10421624.0,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "47045-SLB-Z-WVI-1",
+     "title": "Support to the Solomon Islands to reduce the incidence of Malaria and Tuberculosis - Solomon Islands (01-Jan-2",
+     "org": "The Global Fund to Fight AIDS, Tuberculosis and Malaria",
+     "end": "2026-12-31",
+     "spend": 5986506.0,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "XM-DAC-41114-OUTPUT-00132551",
+     "title": "Solomon Islands Provincial Governance and Service Delivery Project (PGSDP)",
+     "org": "United Nations Development Programme",
+     "end": "2026-09-30",
+     "spend": 4890866.0,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "XM-DAC-41301-618735",
+     "title": "Integrated forest management in the Solomon Islands (FSP)",
+     "org": "Food and Agriculture Organization (FAO)",
+     "end": "2026-12-31",
+     "spend": 4634170.0,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "XM-DAC-41114-OUTPUT-00127761",
+     "title": "Integrated Approach to Disaster Risk Management (DRM) in Solomon Islands (2021-2023)",
+     "org": "United Nations Development Programme",
+     "end": "2026-12-31",
+     "spend": 2805930.0,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "NZ-1-ACT-0102608",
+     "title": "Negotiated Partnership: TearFund New Zealand (TFNZ) Implementation",
+     "org": "New Zealand Ministry of Foreign Affairs and Trade",
+     "end": "2026-11-30",
+     "spend": 1825488.0999999999,
+     "pct": 41,
+     "names": null
+    },
+    {
+     "aid": "47122-SLB-PENTA",
+     "title": "Solomon Islands: Pentavalent",
+     "org": "Gavi, The Vaccine Alliance",
+     "end": "2026-12-31",
+     "spend": 1496591.4,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "47122-SLB-PCV",
+     "title": "Solomon Islands: Pneumococcal Conjugate Vaccines",
+     "org": "Gavi, The Vaccine Alliance",
+     "end": "2026-12-31",
+     "spend": 1410326.8,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "NZ-1-ACT-0102606",
+     "title": "Negotiated Partnership: UNICEF NZ Implementation",
+     "org": "New Zealand Ministry of Foreign Affairs and Trade",
+     "end": "2027-02-28",
+     "spend": 1366433.0999999999,
+     "pct": 18,
+     "names": null
+    },
+    {
+     "aid": "47122-SLB-HPV",
+     "title": "Solomon Islands: Human Papillomavirus",
+     "org": "Gavi, The Vaccine Alliance",
+     "end": "2026-12-31",
+     "spend": 1089344.9,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "NZ-1-ACT-0102605",
+     "title": "Negotiated Partnership: Caritas New Zealand Implementation",
+     "org": "New Zealand Ministry of Foreign Affairs and Trade",
+     "end": "2026-11-30",
+     "spend": 1087058.315,
+     "pct": 23,
+     "names": null
+    },
+    {
+     "aid": "XM-DAC-41301-698302",
+     "title": "Strengthening capacity in the agriculture and land-use as well as energy sectors in Solomon Islands for enhanc",
+     "org": "Food and Agriculture Organization (FAO)",
+     "end": "2026-12-31",
+     "spend": 858726.94,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "NZ-1-ACT-0100405",
+     "title": "ADB Pacific Private Sector Development Initiative Phase IV",
+     "org": "New Zealand Ministry of Foreign Affairs and Trade",
+     "end": "2026-10-31",
+     "spend": 811074.3792,
+     "pct": 20.4,
+     "names": null
+    },
+    {
+     "aid": "NZ-1-ACT-0102648",
+     "title": "Infrastructure Project Manager 2",
+     "org": "New Zealand Ministry of Foreign Affairs and Trade",
+     "end": "2027-01-31",
+     "spend": 807301.56,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "NZ-1-ACT-0102990",
+     "title": "Pacific Insurance and Climate Adaptation Programme (PICAP)",
+     "org": "New Zealand Ministry of Foreign Affairs and Trade",
+     "end": "2027-01-31",
+     "spend": 763322.0678980199,
+     "pct": 10.526316,
+     "names": null
+    },
+    {
+     "aid": "47122-SLB-IPV",
+     "title": "Solomon Islands: Inactivated Polio Vaccine",
+     "org": "Gavi, The Vaccine Alliance",
+     "end": "2026-12-31",
+     "spend": 745531.5,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "47122-SLB-MR",
+     "title": "Solomon Islands: Measles and Measles-rubella",
+     "org": "Gavi, The Vaccine Alliance",
+     "end": "2026-12-31",
+     "spend": 729209.6,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "NZ-1-ACT-0101368",
+     "title": "Climate Change Programme - Building resilient systems for integrated water resource management",
+     "org": "New Zealand Ministry of Foreign Affairs and Trade",
+     "end": "2026-12-01",
+     "spend": 657472.9971854951,
+     "pct": 4.2105265,
+     "names": null
+    },
+    {
+     "aid": "AU-5-INO526",
+     "title": "Australia Skills Program (Solomon Islands)",
+     "org": "Australia Aid",
+     "end": "2026-12-31",
+     "spend": 630879.44,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "NZ-1-ACT-0102034",
+     "title": "Pacific Justice Sector 2021-2026",
+     "org": "New Zealand Ministry of Foreign Affairs and Trade",
+     "end": "2026-11-30",
+     "spend": 620556.5460000001,
+     "pct": 6.7,
+     "names": null
+    },
+    {
+     "aid": "47122-SLB-RV",
+     "title": "Solomon Islands: Rotavirus",
+     "org": "Gavi, The Vaccine Alliance",
+     "end": "2026-12-31",
+     "spend": 540606.75,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "XI-BRIDGE-6385676864-10760",
+     "title": "Strengthening capacity in the agriculture and land-use as well as energy sectors in Solomon Islands for enhanc",
+     "org": "Global Environment Facility",
+     "end": "2026-12-31",
+     "spend": 463822.0,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "NZ-1-ACT-0103469",
+     "title": "Anamata and Scholarships Future State",
+     "org": "New Zealand Ministry of Foreign Affairs and Trade",
+     "end": "2027-02-01",
+     "spend": 353141.26282127603,
+     "pct": 9.142858,
+     "names": null
+    },
+    {
+     "aid": "XI-IATI-EC_INTPA-2023-PC-35488",
+     "title": "Youth Economic and Climate Action",
+     "org": "European Commission - Directorate-General for International Partnerships",
+     "end": "2026-12-31",
+     "spend": 345457.78,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "XM-DAC-41111-XM-DAC-41111-127034-6",
+     "title": "Pacific Digital Economy Progra-UNCDF-00127034",
+     "org": "United Nations Capital Development Fund",
+     "end": "2026-12-31",
+     "spend": 340003.0,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "AU-5-INO701",
+     "title": "Development awareness program 2024/25-2025/26",
+     "org": "Australia Aid",
+     "end": "2026-10-30",
+     "spend": 326390.22,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "AU-5-INM415",
+     "title": "Humanitarian Emergency Medical Preparedness & Engagement",
+     "org": "Australia Aid",
+     "end": "2026-12-31",
+     "spend": 220586.57450987,
+     "pct": 16.666666,
+     "names": null
+    },
+    {
+     "aid": "NZ-1-ACT-0105167",
+     "title": "2026 Tropical Cyclone Maila Response - Solomon Islands",
+     "org": "New Zealand Ministry of Foreign Affairs and Trade",
+     "end": "2027-01-24",
+     "spend": 196067.27,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "KR-GOV-010-KR-GOV-051-2022010100126",
+     "title": "Project for the Support to Maternal, Newborn Health Care in Solomon Islands",
+     "org": "Office for Government Policy Coordination",
+     "end": "2026-12-01",
+     "spend": 193662.53,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "XM-DAC-47136-SB002",
+     "title": "Solomon Islands Carbon Trading Policy Project",
+     "org": "Global Green Growth Institute (GGGI)",
+     "end": "2027-02-28",
+     "spend": 182534.86,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "NZ-1-ACT-0102286",
+     "title": "Pacific Digital Economy Programme",
+     "org": "New Zealand Ministry of Foreign Affairs and Trade",
+     "end": "2027-03-01",
+     "spend": 181843.94,
+     "pct": 5,
+     "names": null
+    },
+    {
+     "aid": "NZ-1-ACT-0102725",
+     "title": "Support to Solomon Islands Geological Survey Division to monitor volcanic activity at Savo Island",
+     "org": "New Zealand Ministry of Foreign Affairs and Trade",
+     "end": "2026-09-30",
+     "spend": 78146.19,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "AU-5-INN612",
+     "title": "United Nations Capital Development Fund Pacific Programmes",
+     "org": "Australia Aid",
+     "end": "2026-12-31",
+     "spend": 74250.378770097,
+     "pct": 0.98322636,
+     "names": null
+    },
+    {
+     "aid": "AU-5-INO412",
+     "title": "Melanesian Spearhead Group (MSG) Secretariat Strengthening Project",
+     "org": "Australia Aid",
+     "end": "2026-12-31",
+     "spend": 62405.502378239995,
+     "pct": 9.999744,
+     "names": null
+    },
+    {
+     "aid": "NZ-1-ACT-0104607",
+     "title": "FY25-26 Pacific Diplomatic Training In-Country & In-Region",
+     "org": "New Zealand Ministry of Foreign Affairs and Trade",
+     "end": "2026-12-20",
+     "spend": 61733.76327940961,
+     "pct": 10.345541,
+     "names": null
+    },
+    {
+     "aid": "AU-5-INO015",
+     "title": "Australia Awards Pacific Scholarships",
+     "org": "Australia Aid",
+     "end": "2026-12-31",
+     "spend": 51891.849407400005,
+     "pct": 7.512501,
+     "names": null
+    },
+    {
+     "aid": "XM-DAC-45001-C475",
+     "title": "Pacific: EU-Pacific Business Forum",
+     "org": "International Trade Centre (ITC)",
+     "end": "2026-10-27",
+     "spend": 44776.08,
+     "pct": 6,
+     "names": null
+    },
+    {
+     "aid": "NZ-1-ACT-0104606",
+     "title": "FY25-26 Pacific Infrastructure Project Management In Country",
+     "org": "New Zealand Ministry of Foreign Affairs and Trade",
+     "end": "2026-12-20",
+     "spend": 41521.830279999995,
+     "pct": 13.33,
+     "names": null
+    },
+    {
+     "aid": "NZ-1-ACT-0104608",
+     "title": "FY25-26 Pacific Climate Resilience In-Country",
+     "org": "New Zealand Ministry of Foreign Affairs and Trade",
+     "end": "2026-12-20",
+     "spend": 34100.658037,
+     "pct": 13.33,
+     "names": null
+    },
+    {
+     "aid": "GB-COH-00070527-IGC-P3",
+     "title": "IGC Phase III",
+     "org": "London School of Economics and Political Science",
+     "end": "2026-09-30",
+     "spend": 23361.3930313856,
+     "pct": 0.06940576,
+     "names": null
+    },
+    {
+     "aid": "NZ-1-ACT-0104602",
+     "title": "FY25-26 Pacific Good Governance In-Country",
+     "org": "New Zealand Ministry of Foreign Affairs and Trade",
+     "end": "2026-10-20",
+     "spend": 22729.252743999998,
+     "pct": 9.68,
+     "names": null
+    },
+    {
+     "aid": "KR-GOV-010-KR-GOV-051-2024040102398",
+     "title": "Master's Degree Program in Water Resources Management(2024)",
+     "org": "Office for Government Policy Coordination",
+     "end": "2026-12-01",
+     "spend": 5393.72,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "AU-5-INM394",
+     "title": "Australia Awards Pacific Scholarship - 2018 Intake",
+     "org": "Australia Aid",
+     "end": "2026-12-31",
+     "spend": 4831.3297092936,
+     "pct": 1.3962622,
+     "names": null
+    },
+    {
+     "aid": "XM-DAC-47136-GGPI13",
+     "title": "EU Urban Development Technical Facility",
+     "org": "Global Green Growth Institute",
+     "end": "2026-10-01",
+     "spend": 2500.189266263,
+     "pct": 33.22259,
+     "names": null
+    },
+    {
+     "aid": "NZ-1-ACT-0104605",
+     "title": "FY25-26 Pacific Public Sector Leadership (Mid-Level) Course 2 In Country",
+     "org": "New Zealand Ministry of Foreign Affairs and Trade",
+     "end": "2026-12-20",
+     "spend": 1559.2652,
+     "pct": 10,
+     "names": null
+    },
+    {
+     "aid": "US-GOV-1-720202657457",
+     "title": "(title redacted by USAID)",
+     "org": "U.S. Agency for International Development",
+     "end": "2026-09-30",
+     "spend": 907.95277506672,
+     "pct": 0.004617244,
+     "names": null
+    },
+    {
+     "aid": "XM-DAC-47066-PX.0529",
+     "title": "Strengthening Trafficking in Persons (TIP) Legislation and Trauma-Informed Victim Identification in Solomon Is",
+     "org": "International Organization for Migration (IOM)",
+     "end": "2026-11-30",
+     "spend": 0.0,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "XM-DAC-701-8-202517378",
+     "title": "\u7d4c\u6e08\u793e\u4f1a\u958b\u767a\u8a08\u753b\uff08\u7c21\u6613\u88fd\u6750\u6a5f\uff09",
+     "org": "Japan International Cooperation Agency (JICA)",
+     "end": "2027-01-13",
+     "spend": 0.0,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "XM-DAC-701-8-202517379",
+     "title": "\u7d4c\u6e08\u793e\u4f1a\u958b\u767a\u8a08\u753b\uff08\u5ec3\u68c4\u7269\u51e6\u7406\u6a5f\u6750\uff09",
+     "org": "Japan International Cooperation Agency (JICA)",
+     "end": "2027-01-13",
+     "spend": 0.0,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "XM-DAC-41114-PROJECT-00127638",
+     "title": "SOI DRM COVID19",
+     "org": "United Nations Development Programme",
+     "end": "2026-12-31",
+     "spend": 0.0,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "XM-DAC-41114-PROJECT-00145063",
+     "title": "The aim of the project is to provide provincial level capacity development to strengthen capacity of provincia",
+     "org": "United Nations Development Programme",
+     "end": "2026-09-30",
+     "spend": 0.0,
+     "pct": 100,
+     "names": null
+    }
+   ],
    "n_misnamed": 1,
    "misnamed": [
     {
@@ -2332,6 +5402,500 @@
      "spend": 7052384.184559382
     }
    ],
+   "orgs_90": [
+    {
+     "ref": "XI-IATI-EC_INTPA",
+     "name": "European Commission - Directorate-General for International Partnerships",
+     "usd": 5089681.869999999
+    },
+    {
+     "ref": "44000",
+     "name": "World Bank",
+     "usd": 2966193.25
+    },
+    {
+     "ref": "NZ-1",
+     "name": "New Zealand Ministry of Foreign Affairs and Trade",
+     "usd": 2575836.6354185985
+    },
+    {
+     "ref": "XM-DAC-46004",
+     "name": "Asian Development Bank",
+     "usd": 2305671.94
+    },
+    {
+     "ref": "FR-3",
+     "name": "AFD",
+     "usd": 406839.7
+    },
+    {
+     "ref": "XM-DAC-928",
+     "name": "World Health Organization",
+     "usd": 369342.40800000005
+    },
+    {
+     "ref": "XM-DAC-41114",
+     "name": "United Nations Development Programme",
+     "usd": 142330.0
+    },
+    {
+     "ref": "XM-DAC-41301",
+     "name": "Food and Agriculture Organization (FAO)",
+     "usd": 138092.93
+    },
+    {
+     "ref": "NL-KVK-27108436",
+     "name": "Oxfam Novib",
+     "usd": 108316.2
+    },
+    {
+     "ref": "XM-DAC-7",
+     "name": "Ministry of Foreign Affairs of the Netherlands",
+     "usd": 23247.982
+    },
+    {
+     "ref": "XM-DAC-301-2",
+     "name": "International Development Research Centre",
+     "usd": 17555.43
+    },
+    {
+     "ref": "XI-IATI-CWSEC",
+     "name": "The Commonwealth Secretariat",
+     "usd": 29.23025473548544
+    },
+    {
+     "ref": "KR-GOV-010",
+     "name": "Office for Government Policy Coordination",
+     "usd": 0.0
+    }
+   ],
+   "new_starts_all": [
+    {
+     "aid": "FR-3-CZZ377501",
+     "title": "Fonds de partenariat pour les \u00e9cosyst\u00e8mes critiques - renouvellement des contributions UE-AFD",
+     "org": "AFD",
+     "start": "2026-08-17",
+     "commitment": 1509007.3199999998,
+     "pct": 9,
+     "names": null
+    },
+    {
+     "aid": "NZ-1-ACT-0103583",
+     "title": "Negotiated Partnerships: Tearfund New Zealand (TFNZ) - Phase 2",
+     "org": "New Zealand Ministry of Foreign Affairs and Trade",
+     "start": "2026-06-23",
+     "commitment": 1395496.96,
+     "pct": 32,
+     "names": null
+    },
+    {
+     "aid": "XI-IATI-EC_INTPA-2026-PC-82203",
+     "title": "YUMI GAVMAN: Strengthening Inclusive Local Governance in Tanna, Vanuatu",
+     "org": "European Commission - Directorate-General for International Partnerships",
+     "start": "2026-08-01",
+     "commitment": 587539.94,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "FR-3-CZZ377502",
+     "title": "Fonds de partenariat pour les \u00e9cosyst\u00e8mes critiques - renouvellement des contributions UE-AFD",
+     "org": "AFD",
+     "start": "2026-08-17",
+     "commitment": 518721.20999999996,
+     "pct": 9,
+     "names": null
+    },
+    {
+     "aid": "NZ-1-ACT-0103580",
+     "title": "Negotiated Partnerships: UNICEF NZ - Phase 2",
+     "org": "New Zealand Ministry of Foreign Affairs and Trade",
+     "start": "2026-06-26",
+     "commitment": 0.0,
+     "pct": 25.5,
+     "names": null
+    },
+    {
+     "aid": "FR-3-CZZ3775",
+     "title": "Fonds de partenariat pour les \u00e9cosyst\u00e8mes critiques - renouvellement des contributions UE-AFD",
+     "org": "AFD",
+     "start": "2026-08-17",
+     "commitment": 0.0,
+     "pct": 9,
+     "names": null
+    },
+    {
+     "aid": "XI-IATI-EC_INTPA-2026-PC-87196",
+     "title": "Activity under preparation Expenditure verification of Programme Estimate contracts 446998 and 418309",
+     "org": "European Commission - Directorate-General for International Partnerships",
+     "start": "2026-08-17",
+     "commitment": 0.0,
+     "pct": 100,
+     "names": null
+    }
+   ],
+   "ending_all": [
+    {
+     "aid": "AU-5-INN052",
+     "title": "Vanuatu Education Support Program Phase II",
+     "org": "Australia Aid",
+     "end": "2026-12-20",
+     "spend": 26914084.0,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "NZ-1-ACT-0100416",
+     "title": "Vanuatu Inter-island Shipping Project Additional Support",
+     "org": "New Zealand Ministry of Foreign Affairs and Trade",
+     "end": "2026-12-31",
+     "spend": 7576896.0,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "NZ-1-ACT-0101798",
+     "title": "TC Harold Recovery",
+     "org": "New Zealand Ministry of Foreign Affairs and Trade",
+     "end": "2026-12-31",
+     "spend": 5070046.0,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "NZ-1-ACT-0102039",
+     "title": "Gender Based Violence Prevention Phase II",
+     "org": "New Zealand Ministry of Foreign Affairs and Trade",
+     "end": "2026-12-31",
+     "spend": 2798953.8,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "NZ-1-ACT-0101195",
+     "title": "Climate Change Programme - Ecosystems Resilience",
+     "org": "New Zealand Ministry of Foreign Affairs and Trade",
+     "end": "2026-10-31",
+     "spend": 2347081.84165784,
+     "pct": 25.806452,
+     "names": null
+    },
+    {
+     "aid": "XM-DAC-41111-XM-DAC-41111-125168-10",
+     "title": "Leveraging DF to increase resi-UNCDF-00125168",
+     "org": "United Nations Capital Development Fund",
+     "end": "2026-12-31",
+     "spend": 1997311.0,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "AU-5-INN612",
+     "title": "United Nations Capital Development Fund Pacific Programmes",
+     "org": "Australia Aid",
+     "end": "2026-12-31",
+     "spend": 1609391.5834968751,
+     "pct": 21.311625,
+     "names": null
+    },
+    {
+     "aid": "NZ-1-ACT-0102607",
+     "title": "Negotiated Partnership: ADRA Implementation",
+     "org": "New Zealand Ministry of Foreign Affairs and Trade",
+     "end": "2027-02-28",
+     "spend": 1552898.815,
+     "pct": 29,
+     "names": null
+    },
+    {
+     "aid": "NZ-1-ACT-0102606",
+     "title": "Negotiated Partnership: UNICEF NZ Implementation",
+     "org": "New Zealand Ministry of Foreign Affairs and Trade",
+     "end": "2027-02-28",
+     "spend": 1518259.0,
+     "pct": 20,
+     "names": null
+    },
+    {
+     "aid": "NZ-1-ACT-0102990",
+     "title": "Pacific Insurance and Climate Adaptation Programme (PICAP)",
+     "org": "New Zealand Ministry of Foreign Affairs and Trade",
+     "end": "2027-01-31",
+     "spend": 1144983.10184703,
+     "pct": 15.789474,
+     "names": null
+    },
+    {
+     "aid": "NZ-1-ACT-0101226",
+     "title": "Climate Change Programme - Climate Information for Decision Making",
+     "org": "New Zealand Ministry of Foreign Affairs and Trade",
+     "end": "2026-10-31",
+     "spend": 1112489.0060380201,
+     "pct": 11.538462,
+     "names": null
+    },
+    {
+     "aid": "AU-5-INN063",
+     "title": "Pacific Australia Labour Mobility Scheme (Vanuatu)",
+     "org": "Australia Aid",
+     "end": "2026-12-31",
+     "spend": 824369.1,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "NZ-1-ACT-0102608",
+     "title": "Negotiated Partnership: TearFund New Zealand (TFNZ) Implementation",
+     "org": "New Zealand Ministry of Foreign Affairs and Trade",
+     "end": "2026-11-30",
+     "spend": 623337.4,
+     "pct": 14,
+     "names": null
+    },
+    {
+     "aid": "NZ-1-ACT-0102034",
+     "title": "Pacific Justice Sector 2021-2026",
+     "org": "New Zealand Ministry of Foreign Affairs and Trade",
+     "end": "2026-11-30",
+     "spend": 620556.5460000001,
+     "pct": 6.7,
+     "names": null
+    },
+    {
+     "aid": "AU-5-INO412",
+     "title": "Melanesian Spearhead Group (MSG) Secretariat Strengthening Project",
+     "org": "Australia Aid",
+     "end": "2026-12-31",
+     "spend": 436854.4429396,
+     "pct": 70.00076,
+     "names": null
+    },
+    {
+     "aid": "NZ-1-ACT-0100405",
+     "title": "ADB Pacific Private Sector Development Initiative Phase IV",
+     "org": "New Zealand Ministry of Foreign Affairs and Trade",
+     "end": "2026-10-31",
+     "spend": 414681.65564,
+     "pct": 10.43,
+     "names": null
+    },
+    {
+     "aid": "XM-DAC-47066-DR.0082",
+     "title": "Strengthening Resilience to Disaster and Displacement Risks",
+     "org": "International Organization for Migration (IOM)",
+     "end": "2026-12-31",
+     "spend": 396070.25,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "AU-5-INO764",
+     "title": "Sef Ples Blong Yumi Vanuatu Phase 2",
+     "org": "Australia Aid",
+     "end": "2026-10-30",
+     "spend": 389964.12,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "NZ-1-ACT-0103469",
+     "title": "Anamata and Scholarships Future State",
+     "org": "New Zealand Ministry of Foreign Affairs and Trade",
+     "end": "2027-02-01",
+     "spend": 353141.26282127603,
+     "pct": 9.142858,
+     "names": null
+    },
+    {
+     "aid": "XM-DAC-41111-XM-DAC-41111-127034-9",
+     "title": "Pacific Digital Economy Progra-UNCDF-00127034",
+     "org": "United Nations Capital Development Fund",
+     "end": "2026-12-31",
+     "spend": 340003.0,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "NZ-1-ACT-0104596",
+     "title": "2024 NZDRP - Vanuatu Earthquake Response",
+     "org": "New Zealand Ministry of Foreign Affairs and Trade",
+     "end": "2026-09-09",
+     "spend": 255856.27,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "AU-5-INM415",
+     "title": "Humanitarian Emergency Medical Preparedness & Engagement",
+     "org": "Australia Aid",
+     "end": "2026-12-31",
+     "spend": 220586.57450987,
+     "pct": 16.666666,
+     "names": null
+    },
+    {
+     "aid": "XM-DAC-47066-CC0083",
+     "title": "Sef ples blong yumi: strengthening evacuation and displacement management for national and local authorities a",
+     "org": "International Organization for Migration (IOM)",
+     "end": "2027-01-31",
+     "spend": 207179.7,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "NZ-1-ACT-0102286",
+     "title": "Pacific Digital Economy Programme",
+     "org": "New Zealand Ministry of Foreign Affairs and Trade",
+     "end": "2027-03-01",
+     "spend": 181843.94,
+     "pct": 5,
+     "names": null
+    },
+    {
+     "aid": "NL-KVK-27108436-A-07183-45:25",
+     "title": "Oxfam Pacific call for proposals",
+     "org": "Oxfam Novib",
+     "end": "2026-09-30",
+     "spend": 72619.94,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "XM-DAC-47136-VU017",
+     "title": "Strengthening the Legal and Operational Framework for Vehicle Emissions Standards in Vanuatu",
+     "org": "Global Green Growth Institute (GGGI)",
+     "end": "2027-02-28",
+     "spend": 61186.48,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "XM-DAC-301-2-110574-001",
+     "title": "Promoting sustainable investments in quality and affordable childcare in Vanuatu",
+     "org": "International Development Research Centre",
+     "end": "2026-12-01",
+     "spend": 49179.438,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "XM-DAC-45001-C475",
+     "title": "Pacific: EU-Pacific Business Forum",
+     "org": "International Trade Centre (ITC)",
+     "end": "2026-10-27",
+     "spend": 44776.08,
+     "pct": 6,
+     "names": null
+    },
+    {
+     "aid": "NZ-1-ACT-0104607",
+     "title": "FY25-26 Pacific Diplomatic Training In-Country & In-Region",
+     "org": "New Zealand Ministry of Foreign Affairs and Trade",
+     "end": "2026-12-20",
+     "spend": 41238.15394225185,
+     "pct": 6.9108214,
+     "names": null
+    },
+    {
+     "aid": "NZ-1-ACT-0104606",
+     "title": "FY25-26 Pacific Infrastructure Project Management In Country",
+     "org": "New Zealand Ministry of Foreign Affairs and Trade",
+     "end": "2026-12-20",
+     "spend": 31149.16,
+     "pct": 10,
+     "names": null
+    },
+    {
+     "aid": "NZ-1-ACT-0104608",
+     "title": "FY25-26 Pacific Climate Resilience In-Country",
+     "org": "New Zealand Ministry of Foreign Affairs and Trade",
+     "end": "2026-12-20",
+     "spend": 25581.889000000003,
+     "pct": 10,
+     "names": null
+    },
+    {
+     "aid": "XM-DAC-7-PPR-260001124",
+     "title": "Gezamenlijk NL-FRA Micro Project Programma voor 2026-2027 in Vanuatu",
+     "org": "Ministry of Foreign Affairs of the Netherlands",
+     "end": "2026-12-31",
+     "spend": 23247.982,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "NZ-1-ACT-0104602",
+     "title": "FY25-26 Pacific Good Governance In-Country",
+     "org": "New Zealand Ministry of Foreign Affairs and Trade",
+     "end": "2026-10-20",
+     "spend": 22729.252743999998,
+     "pct": 9.68,
+     "names": null
+    },
+    {
+     "aid": "CA-3-P015976001",
+     "title": "Engaging parliamentarians in promoting nuclear security legal frameworks",
+     "org": "Foreign Affairs, Trade and Development Canada (DFATD)",
+     "end": "2027-02-01",
+     "spend": 11431.721000000001,
+     "pct": 5,
+     "names": null
+    },
+    {
+     "aid": "AU-5-INM394",
+     "title": "Australia Awards Pacific Scholarship - 2018 Intake",
+     "org": "Australia Aid",
+     "end": "2026-12-31",
+     "spend": 9553.2669590424,
+     "pct": 2.7609098,
+     "names": null
+    },
+    {
+     "aid": "XM-DAC-47136-GGPI13",
+     "title": "EU Urban Development Technical Facility",
+     "org": "Global Green Growth Institute",
+     "end": "2026-10-01",
+     "spend": 2500.189266263,
+     "pct": 33.22259,
+     "names": null
+    },
+    {
+     "aid": "NZ-1-ACT-0104605",
+     "title": "FY25-26 Pacific Public Sector Leadership (Mid-Level) Course 2 In Country",
+     "org": "New Zealand Ministry of Foreign Affairs and Trade",
+     "end": "2026-12-20",
+     "spend": 1044.707684,
+     "pct": 6.7,
+     "names": null
+    },
+    {
+     "aid": "NL-KVK-27378529-4000003042",
+     "title": "Mental Health and Psychosocial Support (DSS MHPSS)",
+     "org": "Netherlands Enterprise Agency",
+     "end": "2026-12-31",
+     "spend": 0.0,
+     "pct": 1.37,
+     "names": null
+    },
+    {
+     "aid": "XM-DAC-47066-PX.0565",
+     "title": "Vanuatu: Piloting Implementation of the National Action Plan to Combat Trafficking in Persons",
+     "org": "International Organization for Migration (IOM)",
+     "end": "2027-01-31",
+     "spend": 0.0,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "XM-DAC-701-2-2019010024",
+     "title": "Project for the Disaster Reconstruction of Teouma Bridge",
+     "org": "MINISTRY OF FOREIGN AFFAIRS IN JAPAN",
+     "end": "2026-12-31",
+     "spend": 0.0,
+     "pct": 100,
+     "names": null
+    }
+   ],
    "n_misnamed": 0,
    "misnamed": [],
    "currency": [
@@ -2865,6 +6429,467 @@
      "name": "World Bank",
      "n": 6,
      "spend": 49345416.0
+    }
+   ],
+   "orgs_90": [
+    {
+     "ref": "XM-DAC-46004",
+     "name": "Asian Development Bank",
+     "usd": 3708286.2700000005
+    },
+    {
+     "ref": "XI-IATI-EC_INTPA",
+     "name": "European Commission - Directorate-General for International Partnerships",
+     "usd": 2305972.23
+    },
+    {
+     "ref": "NZ-1",
+     "name": "New Zealand Ministry of Foreign Affairs and Trade",
+     "usd": 1446592.3479366
+    },
+    {
+     "ref": "XM-DAC-41114",
+     "name": "United Nations Development Programme",
+     "usd": 1404184.4775000003
+    },
+    {
+     "ref": "44000",
+     "name": "World Bank",
+     "usd": 615685.0
+    },
+    {
+     "ref": "XM-DAC-41301",
+     "name": "Food and Agriculture Organization (FAO)",
+     "usd": 131537.34
+    },
+    {
+     "ref": "XM-DAC-301-2",
+     "name": "International Development Research Centre",
+     "usd": 59711.17
+    },
+    {
+     "ref": "XM-DAC-928",
+     "name": "World Health Organization",
+     "usd": 32688.2421
+    },
+    {
+     "ref": "KR-GOV-010",
+     "name": "Office for Government Policy Coordination",
+     "usd": 5393.72
+    },
+    {
+     "ref": "XM-DAC-41302",
+     "name": "International Labour Organization (ILO)",
+     "usd": 5392.72
+    }
+   ],
+   "new_starts_all": [
+    {
+     "aid": "NZ-1-ACT-0103987",
+     "title": "Alcohol and Drug Addiction Services: Partnership with The Salvation Army - Fiji Samoa, Tonga",
+     "org": "New Zealand Ministry of Foreign Affairs and Trade",
+     "start": "2026-06-17",
+     "commitment": 200637.8412,
+     "pct": 23,
+     "names": null
+    },
+    {
+     "aid": "XM-DAC-41114-OUTPUT-01006059",
+     "title": "PIMS-10481 PPG Niue Infrastructure, Ecosystems and Communities Integrated Project (IECI)",
+     "org": "United Nations Development Programme",
+     "start": "2026-07-20",
+     "commitment": 133334.0,
+     "pct": 100,
+     "names": "Niue"
+    },
+    {
+     "aid": "XM-DAC-41114-PROJECT-01006059",
+     "title": "PIMS-10481 PPG Niue Infrastructure, Ecosystems and Communities Integrated Project (IECI)",
+     "org": "United Nations Development Programme",
+     "start": "2026-07-20",
+     "commitment": 0.0,
+     "pct": 100,
+     "names": "Niue"
+    }
+   ],
+   "ending_all": [
+    {
+     "aid": "XI-IATI-EC_INTPA-2022-PC-24576",
+     "title": "Samoa, Water Sector Resilience and Climate Change Adaptation Sector Budget Support Programme",
+     "org": "European Commission - Directorate-General for International Partnerships",
+     "end": "2026-12-22",
+     "spend": 25064844.0,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "AU-5-INN029",
+     "title": "Samoa Parliament Complex Redevelopment Phase II: Legislative Assembly Office",
+     "org": "Australia Aid",
+     "end": "2026-12-31",
+     "spend": 14845905.0,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "AU-5-INN974",
+     "title": "Pacific Media Assistance Scheme (Phase 4)",
+     "org": "Australia Aid",
+     "end": "2026-12-31",
+     "spend": 2471664.04121648,
+     "pct": 57.122032,
+     "names": null
+    },
+    {
+     "aid": "XM-DAC-41317-FP036",
+     "title": "Pacific Islands Renewable Energy Investment Program",
+     "org": "Green Climate Fund",
+     "end": "2026-09-30",
+     "spend": 2428620.0,
+     "pct": 14.286,
+     "names": null
+    },
+    {
+     "aid": "NZ-1-ACT-0100216",
+     "title": "Pacific Maritime Safety Programme Phase 3 + 4",
+     "org": "New Zealand Ministry of Foreign Affairs and Trade",
+     "end": "2026-11-30",
+     "spend": 2180861.7347999997,
+     "pct": 14.28,
+     "names": null
+    },
+    {
+     "aid": "XM-DAC-41111-XM-DAC-41111-125168-8",
+     "title": "Leveraging DF to increase resi",
+     "org": "United Nations Capital Development Fund (UNCDF)",
+     "end": "2026-12-31",
+     "spend": 1648202.0,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "NZ-1-ACT-0102603",
+     "title": "Negotiated Partnerships: Habitat for Humanity (HFHNZ) Implementation",
+     "org": "New Zealand Ministry of Foreign Affairs and Trade",
+     "end": "2027-02-28",
+     "spend": 1468546.5469999998,
+     "pct": 39.4,
+     "names": null
+    },
+    {
+     "aid": "AU-5-INN697",
+     "title": "Markets for Change (M4C) Program - Samoa",
+     "org": "Australia Aid",
+     "end": "2026-12-31",
+     "spend": 1314784.8,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "DAC-1601-INV-061787",
+     "title": "Samoa Typhoid Fever Control Program Continued Support",
+     "org": "Gates Foundation",
+     "end": "2027-01-31",
+     "spend": 1285620.0,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "NZ-1-ACT-0102990",
+     "title": "Pacific Insurance and Climate Adaptation Programme (PICAP)",
+     "org": "New Zealand Ministry of Foreign Affairs and Trade",
+     "end": "2027-01-31",
+     "spend": 1144983.10184703,
+     "pct": 15.789474,
+     "names": null
+    },
+    {
+     "aid": "NZ-1-ACT-0101226",
+     "title": "Climate Change Programme - Climate Information for Decision Making",
+     "org": "New Zealand Ministry of Foreign Affairs and Trade",
+     "end": "2026-10-31",
+     "spend": 1112489.0060380201,
+     "pct": 11.538462,
+     "names": null
+    },
+    {
+     "aid": "NZ-1-ACT-0103469",
+     "title": "Anamata and Scholarships Future State",
+     "org": "New Zealand Ministry of Foreign Affairs and Trade",
+     "end": "2027-02-01",
+     "spend": 882853.0798035461,
+     "pct": 22.857143,
+     "names": null
+    },
+    {
+     "aid": "NZ-1-ACT-0102034",
+     "title": "Pacific Justice Sector 2021-2026",
+     "org": "New Zealand Ministry of Foreign Affairs and Trade",
+     "end": "2026-11-30",
+     "spend": 620556.5460000001,
+     "pct": 6.7,
+     "names": null
+    },
+    {
+     "aid": "US-GOV-1-720FDA20GR00092",
+     "title": "Disaster Readiness",
+     "org": "U.S. Agency for International Development",
+     "end": "2026-09-30",
+     "spend": 570664.0,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "NZ-1-ACT-0100405",
+     "title": "ADB Pacific Private Sector Development Initiative Phase IV",
+     "org": "New Zealand Ministry of Foreign Affairs and Trade",
+     "end": "2026-10-31",
+     "spend": 388441.01395999995,
+     "pct": 9.77,
+     "names": null
+    },
+    {
+     "aid": "NZ-1-ACT-0102195",
+     "title": "Covid-19 - Supporting the World Bank COVID project that will establish a Public Health Laboratory",
+     "org": "New Zealand Ministry of Foreign Affairs and Trade",
+     "end": "2027-02-20",
+     "spend": 237122.47,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "AU-5-INN925",
+     "title": "Australia Online Studies Scholarship 2022 Intake (Samoa)",
+     "org": "Australia Aid",
+     "end": "2026-12-31",
+     "spend": 235756.33,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "NZ-1-ACT-0102286",
+     "title": "Pacific Digital Economy Programme",
+     "org": "New Zealand Ministry of Foreign Affairs and Trade",
+     "end": "2027-03-01",
+     "spend": 181843.94,
+     "pct": 5,
+     "names": null
+    },
+    {
+     "aid": "NZ-1-ACT-0103696",
+     "title": "Samoa Aviation Sector Support: Pacific Aviation Safety Office Technical Assistance",
+     "org": "New Zealand Ministry of Foreign Affairs and Trade",
+     "end": "2026-09-30",
+     "spend": 120097.74,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "XM-DAC-41114-OUTPUT-01003874",
+     "title": "Strengthening equitable access to fair justice for ALL in Samoa",
+     "org": "United Nations Development Programme",
+     "end": "2026-12-31",
+     "spend": 91170.0,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "XM-DAC-41114-OUTPUT-01005968",
+     "title": "Governance Towards Resilient, Inclusive, and  Sustainable Development across the Four Polynesian SIDS",
+     "org": "United Nations Development Programme",
+     "end": "2026-12-31",
+     "spend": 68056.0,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "NZ-1-ACT-0104607",
+     "title": "FY25-26 Pacific Diplomatic Training In-Country & In-Region",
+     "org": "New Zealand Ministry of Foreign Affairs and Trade",
+     "end": "2026-12-20",
+     "spend": 61733.76327940961,
+     "pct": 10.345541,
+     "names": null
+    },
+    {
+     "aid": "XM-DAC-41114-OUTPUT-01001893",
+     "title": "PIMS-9909 Biodiversity Finance Plan Samoa",
+     "org": "United Nations Development Programme",
+     "end": "2027-03-06",
+     "spend": 50034.0,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "XM-DAC-45001-C475",
+     "title": "Pacific: EU-Pacific Business Forum",
+     "org": "International Trade Centre (ITC)",
+     "end": "2026-10-27",
+     "spend": 44776.08,
+     "pct": 6,
+     "names": null
+    },
+    {
+     "aid": "AU-5-INM394",
+     "title": "Australia Awards Pacific Scholarship - 2018 Intake",
+     "org": "Australia Aid",
+     "end": "2026-12-31",
+     "spend": 36623.311449035995,
+     "pct": 10.584197,
+     "names": null
+    },
+    {
+     "aid": "NZ-1-ACT-0104606",
+     "title": "FY25-26 Pacific Infrastructure Project Management In Country",
+     "org": "New Zealand Ministry of Foreign Affairs and Trade",
+     "end": "2026-12-20",
+     "spend": 31149.16,
+     "pct": 10,
+     "names": null
+    },
+    {
+     "aid": "NZ-1-ACT-0104608",
+     "title": "FY25-26 Pacific Climate Resilience In-Country",
+     "org": "New Zealand Ministry of Foreign Affairs and Trade",
+     "end": "2026-12-20",
+     "spend": 17037.538074000004,
+     "pct": 6.66,
+     "names": null
+    },
+    {
+     "aid": "NZ-1-ACT-0104602",
+     "title": "FY25-26 Pacific Good Governance In-Country",
+     "org": "New Zealand Ministry of Foreign Affairs and Trade",
+     "end": "2026-10-20",
+     "spend": 15145.008285,
+     "pct": 6.45,
+     "names": null
+    },
+    {
+     "aid": "CA-3-P015976001",
+     "title": "Engaging parliamentarians in promoting nuclear security legal frameworks",
+     "org": "Foreign Affairs, Trade and Development Canada (DFATD)",
+     "end": "2027-02-01",
+     "spend": 11431.721000000001,
+     "pct": 5,
+     "names": null
+    },
+    {
+     "aid": "XM-DAC-41114-OUTPUT-01006026",
+     "title": "Strengthening the integrity and the transparent and the accountable governance in Samoa in partnership with th",
+     "org": "United Nations Development Programme",
+     "end": "2027-03-01",
+     "spend": 4340.0,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "NZ-1-ACT-0104605",
+     "title": "FY25-26 Pacific Public Sector Leadership (Mid-Level) Course 2 In Country",
+     "org": "New Zealand Ministry of Foreign Affairs and Trade",
+     "end": "2026-12-20",
+     "spend": 1559.2652,
+     "pct": 10,
+     "names": null
+    },
+    {
+     "aid": "XM-DAC-701-8-202518395",
+     "title": "\u7d4c\u6e08\u793e\u4f1a\u958b\u767a\u8a08\u753b\uff08\u6c17\u8c61\u89b3\u6e2c\u95a2\u9023\u6a5f\u6750\uff09",
+     "org": "Japan International Cooperation Agency (JICA)",
+     "end": "2027-02-25",
+     "spend": 0.0,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "XM-DAC-41114-PROJECT-01001893",
+     "title": "PIMS-9909 Biodiversity Finance Plan Samoa",
+     "org": "United Nations Development Programme",
+     "end": "2027-03-06",
+     "spend": 0.0,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "XM-DAC-41114-PROJECT-01003874",
+     "title": "Strengthening equitable access to fair justice for ALL in Samoa",
+     "org": "United Nations Development Programme",
+     "end": "2026-12-31",
+     "spend": 0.0,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "XM-DAC-41114-PROJECT-01005968",
+     "title": "Governance Towards Resilient, Inclusive, and  Sustainable Development across the Four Polynesian SIDS",
+     "org": "United Nations Development Programme",
+     "end": "2026-12-31",
+     "spend": 0.0,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "XM-DAC-41114-PROJECT-01006026",
+     "title": "Strengthening the integrity and the transparent and the accountable governance in Samoa in partnership with th",
+     "org": "United Nations Development Programme",
+     "end": "2027-03-01",
+     "spend": 0.0,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "XM-DAC-41114-OUTPUT-01003417",
+     "title": "Samsung for Tomorrow - Cook Islands",
+     "org": "United Nations Development Programme",
+     "end": "2026-12-31",
+     "spend": 68310.0,
+     "pct": 100,
+     "names": "Cook Islands"
+    },
+    {
+     "aid": "XM-DAC-41114-OUTPUT-01002111",
+     "title": "PIMS-9901 Biodiversity Finance Plan Niue",
+     "org": "United Nations Development Programme",
+     "end": "2027-03-05",
+     "spend": 63327.0,
+     "pct": 100,
+     "names": "Niue"
+    },
+    {
+     "aid": "XM-DAC-41114-OUTPUT-01002112",
+     "title": "PIMS-9863 Biodiversity Finance Plan Cook Islands",
+     "org": "United Nations Development Programme",
+     "end": "2027-03-05",
+     "spend": 63063.0,
+     "pct": 100,
+     "names": "Cook Islands"
+    },
+    {
+     "aid": "XM-DAC-41114-PROJECT-01002111",
+     "title": "PIMS-9901 Biodiversity Finance Plan Niue",
+     "org": "United Nations Development Programme",
+     "end": "2027-03-05",
+     "spend": 0.0,
+     "pct": 100,
+     "names": "Niue"
+    },
+    {
+     "aid": "XM-DAC-41114-PROJECT-01002112",
+     "title": "PIMS-9863 Biodiversity Finance Plan Cook Islands",
+     "org": "United Nations Development Programme",
+     "end": "2027-03-05",
+     "spend": 0.0,
+     "pct": 100,
+     "names": "Cook Islands"
+    },
+    {
+     "aid": "XM-DAC-41114-PROJECT-01003417",
+     "title": "Samsung for Tomorrow - Cook Islands",
+     "org": "United Nations Development Programme",
+     "end": "2026-12-31",
+     "spend": 0.0,
+     "pct": 100,
+     "names": "Cook Islands"
     }
    ],
    "n_misnamed": 11,
@@ -3470,6 +7495,430 @@
      "spend": 5013225.895599999
     }
    ],
+   "orgs_90": [
+    {
+     "ref": "NZ-1",
+     "name": "New Zealand Ministry of Foreign Affairs and Trade",
+     "usd": 5525875.205949002
+    },
+    {
+     "ref": "XM-DAC-46004",
+     "name": "Asian Development Bank",
+     "usd": 3980345.44
+    },
+    {
+     "ref": "44000",
+     "name": "World Bank",
+     "usd": 2088276.96
+    },
+    {
+     "ref": "XI-IATI-EC_INTPA",
+     "name": "European Commission - Directorate-General for International Partnerships",
+     "usd": 232839.914
+    },
+    {
+     "ref": "XM-DAC-41301",
+     "name": "Food and Agriculture Organization (FAO)",
+     "usd": 92285.40999999999
+    },
+    {
+     "ref": "XM-DAC-928",
+     "name": "World Health Organization",
+     "usd": 49922.78000000002
+    },
+    {
+     "ref": "XM-DAC-41302",
+     "name": "International Labour Organization (ILO)",
+     "usd": 14142.71
+    },
+    {
+     "ref": "KR-GOV-010",
+     "name": "Office for Government Policy Coordination",
+     "usd": 5393.72
+    }
+   ],
+   "new_starts_all": [
+    {
+     "aid": "NZ-1-ACT-0103987",
+     "title": "Alcohol and Drug Addiction Services: Partnership with The Salvation Army - Fiji Samoa, Tonga",
+     "org": "New Zealand Ministry of Foreign Affairs and Trade",
+     "start": "2026-06-17",
+     "commitment": 174467.688,
+     "pct": 20,
+     "names": null
+    },
+    {
+     "aid": "NZ-1-ACT-0105057",
+     "title": "Tonga Incentivising Public Sector Reform 25/26 - 26/27",
+     "org": "New Zealand Ministry of Foreign Affairs and Trade",
+     "start": "2026-06-17",
+     "commitment": 0.0,
+     "pct": 100,
+     "names": null
+    }
+   ],
+   "ending_all": [
+    {
+     "aid": "NZ-1-ACT-0101368",
+     "title": "Climate Change Programme - Building resilient systems for integrated water resource management",
+     "org": "New Zealand Ministry of Foreign Affairs and Trade",
+     "end": "2026-12-01",
+     "spend": 12491986.4,
+     "pct": 80,
+     "names": null
+    },
+    {
+     "aid": "44000-P509760",
+     "title": "Tonga Second Fiscal, Disaster, and Climate Resilience Development Policy Operation",
+     "org": "World Bank",
+     "end": "2026-12-31",
+     "spend": 12395929.0,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "AU-5-INN472",
+     "title": "Tonga Health Systems Support Program Phase 3",
+     "org": "Australia Aid",
+     "end": "2026-12-30",
+     "spend": 8133312.5,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "XM-DAC-46004-50281-001-GRNT0650",
+     "title": "Introducing Egovernment through Digital Health",
+     "org": "Asian Development Bank",
+     "end": "2027-02-28",
+     "spend": 5182622.5,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "44000-P179813",
+     "title": "Tonga First Fiscal, Disaster, and Climate Resilience Development Policy Operation with a Catastrophe Deferred ",
+     "org": "World Bank",
+     "end": "2026-12-31",
+     "spend": 5071404.0,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "XM-DAC-46004-53045-004-GRNT0889",
+     "title": "Nuku'alofa Port Upgrade Project",
+     "org": "Asian Development Bank",
+     "end": "2026-12-31",
+     "spend": 5013279.5,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "NZ-1-ACT-0103441",
+     "title": "Tonga Incentivising Public Sector Reform 24/25",
+     "org": "New Zealand Ministry of Foreign Affairs and Trade",
+     "end": "2026-12-01",
+     "spend": 4830698.5,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "XM-DAC-41317-FP036",
+     "title": "Pacific Islands Renewable Energy Investment Program",
+     "org": "Green Climate Fund",
+     "end": "2026-09-30",
+     "spend": 2428620.0,
+     "pct": 14.286,
+     "names": null
+    },
+    {
+     "aid": "NZ-1-ACT-0101195",
+     "title": "Climate Change Programme - Ecosystems Resilience",
+     "org": "New Zealand Ministry of Foreign Affairs and Trade",
+     "end": "2026-10-31",
+     "spend": 2347081.84165784,
+     "pct": 25.806452,
+     "names": null
+    },
+    {
+     "aid": "NZ-1-ACT-0100216",
+     "title": "Pacific Maritime Safety Programme Phase 3 + 4",
+     "org": "New Zealand Ministry of Foreign Affairs and Trade",
+     "end": "2026-11-30",
+     "spend": 2180861.7347999997,
+     "pct": 14.28,
+     "names": null
+    },
+    {
+     "aid": "44000-P171377",
+     "title": "Statistical Innovation and Capacity Building in Tonga",
+     "org": "World Bank",
+     "end": "2026-12-31",
+     "spend": 1848013.0,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "CA-3-P014060001",
+     "title": "The Indigenous climate action partnership",
+     "org": "Foreign Affairs, Trade and Development Canada (DFATD)",
+     "end": "2026-12-31",
+     "spend": 1291128.4,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "NZ-1-ACT-0102990",
+     "title": "Pacific Insurance and Climate Adaptation Programme (PICAP)",
+     "org": "New Zealand Ministry of Foreign Affairs and Trade",
+     "end": "2027-01-31",
+     "spend": 1144983.10184703,
+     "pct": 15.789474,
+     "names": null
+    },
+    {
+     "aid": "NZ-1-ACT-0101226",
+     "title": "Climate Change Programme - Climate Information for Decision Making",
+     "org": "New Zealand Ministry of Foreign Affairs and Trade",
+     "end": "2026-10-31",
+     "spend": 1112489.0060380201,
+     "pct": 11.538462,
+     "names": null
+    },
+    {
+     "aid": "NZ-1-ACT-0102603",
+     "title": "Negotiated Partnerships: Habitat for Humanity (HFHNZ) Implementation",
+     "org": "New Zealand Ministry of Foreign Affairs and Trade",
+     "end": "2027-02-28",
+     "spend": 790182.406,
+     "pct": 21.2,
+     "names": null
+    },
+    {
+     "aid": "NZ-1-ACT-0100405",
+     "title": "ADB Pacific Private Sector Development Initiative Phase IV",
+     "org": "New Zealand Ministry of Foreign Affairs and Trade",
+     "end": "2026-10-31",
+     "spend": 636136.768,
+     "pct": 16,
+     "names": null
+    },
+    {
+     "aid": "NZ-1-ACT-0102034",
+     "title": "Pacific Justice Sector 2021-2026",
+     "org": "New Zealand Ministry of Foreign Affairs and Trade",
+     "end": "2026-11-30",
+     "spend": 620556.5460000001,
+     "pct": 6.7,
+     "names": null
+    },
+    {
+     "aid": "NZ-1-ACT-0103469",
+     "title": "Anamata and Scholarships Future State",
+     "org": "New Zealand Ministry of Foreign Affairs and Trade",
+     "end": "2027-02-01",
+     "spend": 397283.87239290803,
+     "pct": 10.285714,
+     "names": null
+    },
+    {
+     "aid": "AU-5-INO169",
+     "title": "Tonga Gender Equality Investment",
+     "org": "Australia Aid",
+     "end": "2026-10-30",
+     "spend": 364735.5,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "NZ-1-ACT-0102286",
+     "title": "Pacific Digital Economy Programme",
+     "org": "New Zealand Ministry of Foreign Affairs and Trade",
+     "end": "2027-03-01",
+     "spend": 363687.88,
+     "pct": 10,
+     "names": null
+    },
+    {
+     "aid": "XM-DAC-41111-XM-DAC-41111-127034-8",
+     "title": "Pacific Digital Economy Progra-UNCDF-00127034",
+     "org": "United Nations Capital Development Fund",
+     "end": "2026-12-31",
+     "spend": 340003.0,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "XM-DAC-41111-XM-DAC-41111-125879-6",
+     "title": "Pacific Insurance Climate Adap-UNCDF-00125879",
+     "org": "United Nations Capital Development Fund",
+     "end": "2026-12-31",
+     "spend": 336841.0,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "AU-5-INO184",
+     "title": "Tonga Electoral Support Program",
+     "org": "Australia Aid",
+     "end": "2026-10-31",
+     "spend": 274590.62,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "NZ-1-ACT-0102605",
+     "title": "Negotiated Partnership: Caritas New Zealand Implementation",
+     "org": "New Zealand Ministry of Foreign Affairs and Trade",
+     "end": "2026-11-30",
+     "spend": 236317.02500000002,
+     "pct": 5,
+     "names": null
+    },
+    {
+     "aid": "KR-GOV-160-1192000_2024_008",
+     "title": "Capacity building for maritime & fisheries education and establishing a master plan in Pacific Island Countrie",
+     "org": "Office for Government Policy Coordination",
+     "end": "2026-11-30",
+     "spend": 220857.4,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "AU-5-INM415",
+     "title": "Humanitarian Emergency Medical Preparedness & Engagement",
+     "org": "Australia Aid",
+     "end": "2026-12-31",
+     "spend": 220586.57450987,
+     "pct": 16.666666,
+     "names": null
+    },
+    {
+     "aid": "XM-DAC-47136-TO005",
+     "title": "Tonga Climate Finance Strategy and donor engagement support",
+     "org": "Global Green Growth Institute (GGGI)",
+     "end": "2027-01-01",
+     "spend": 113943.42,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "XM-DAC-41301-750187",
+     "title": "Transforming food systems through ecosystem-based approaches to combat land degradation and loss in ecosystem ",
+     "org": "Food and Agriculture Organization (FAO)",
+     "end": "2026-12-31",
+     "spend": 46765.46,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "XM-DAC-45001-C475",
+     "title": "Pacific: EU-Pacific Business Forum",
+     "org": "International Trade Centre (ITC)",
+     "end": "2026-10-27",
+     "spend": 44776.08,
+     "pct": 6,
+     "names": null
+    },
+    {
+     "aid": "NZ-1-ACT-0104606",
+     "title": "FY25-26 Pacific Infrastructure Project Management In Country",
+     "org": "New Zealand Ministry of Foreign Affairs and Trade",
+     "end": "2026-12-20",
+     "spend": 41521.830279999995,
+     "pct": 13.33,
+     "names": null
+    },
+    {
+     "aid": "NZ-1-ACT-0104607",
+     "title": "FY25-26 Pacific Diplomatic Training In-Country & In-Region",
+     "org": "New Zealand Ministry of Foreign Affairs and Trade",
+     "end": "2026-12-20",
+     "spend": 41114.6875017208,
+     "pct": 6.8901305,
+     "names": null
+    },
+    {
+     "aid": "AU-5-INM394",
+     "title": "Australia Awards Pacific Scholarship - 2018 Intake",
+     "org": "Australia Aid",
+     "end": "2026-12-31",
+     "spend": 35727.659086176,
+     "pct": 10.325352,
+     "names": null
+    },
+    {
+     "aid": "AU-5-INO015",
+     "title": "Australia Awards Pacific Scholarships",
+     "org": "Australia Aid",
+     "end": "2026-12-31",
+     "spend": 31493.886907840002,
+     "pct": 4.5594416,
+     "names": null
+    },
+    {
+     "aid": "NZ-1-ACT-0104602",
+     "title": "FY25-26 Pacific Good Governance In-Country",
+     "org": "New Zealand Ministry of Foreign Affairs and Trade",
+     "end": "2026-10-20",
+     "spend": 22729.252743999998,
+     "pct": 9.68,
+     "names": null
+    },
+    {
+     "aid": "NZ-1-ACT-0104608",
+     "title": "FY25-26 Pacific Climate Resilience In-Country",
+     "org": "New Zealand Ministry of Foreign Affairs and Trade",
+     "end": "2026-12-20",
+     "spend": 17063.119963,
+     "pct": 6.67,
+     "names": null
+    },
+    {
+     "aid": "CA-3-P015976001",
+     "title": "Engaging parliamentarians in promoting nuclear security legal frameworks",
+     "org": "Foreign Affairs, Trade and Development Canada (DFATD)",
+     "end": "2027-02-01",
+     "spend": 11431.721000000001,
+     "pct": 5,
+     "names": null
+    },
+    {
+     "aid": "KR-GOV-010-KR-GOV-051-2024040103032",
+     "title": "Master's Degree Program in Sustainable Regional Development",
+     "org": "Office for Government Policy Coordination",
+     "end": "2026-12-01",
+     "spend": 5393.72,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "XM-DAC-47066-LM.0553",
+     "title": "Strengthening Access to Regular Pathways for Labour Mobility in Tonga",
+     "org": "International Organization for Migration (IOM)",
+     "end": "2026-09-30",
+     "spend": 3443.82,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "NZ-1-ACT-0104605",
+     "title": "FY25-26 Pacific Public Sector Leadership (Mid-Level) Course 2 In Country",
+     "org": "New Zealand Ministry of Foreign Affairs and Trade",
+     "end": "2026-12-20",
+     "spend": 1559.2652,
+     "pct": 10,
+     "names": null
+    },
+    {
+     "aid": "XM-DAC-701-8-202515677",
+     "title": "\u7d4c\u6e08\u793e\u4f1a\u958b\u767a\u8a08\u753b\uff08\u592a\u967d\u5149\u767a\u96fb\u30b7\u30b9\u30c6\u30e0\u95a2\u9023\u6a5f\u6750\uff09",
+     "org": "Japan International Cooperation Agency (JICA)",
+     "end": "2026-12-09",
+     "spend": 0.0,
+     "pct": 100,
+     "names": null
+    }
+   ],
    "n_misnamed": 0,
    "misnamed": [],
    "currency": [
@@ -4031,6 +8480,401 @@
      "spend": 4782479.590000001
     }
    ],
+   "orgs_90": [
+    {
+     "ref": "XM-DAC-46004",
+     "name": "Asian Development Bank",
+     "usd": 4163642.3292
+    },
+    {
+     "ref": "44000",
+     "name": "World Bank",
+     "usd": 2656361.48
+    },
+    {
+     "ref": "NZ-1",
+     "name": "New Zealand Ministry of Foreign Affairs and Trade",
+     "usd": 1872665.5865232002
+    },
+    {
+     "ref": "KR-GOV-010",
+     "name": "Office for Government Policy Coordination",
+     "usd": 707954.1599999999
+    },
+    {
+     "ref": "XM-DAC-928",
+     "name": "World Health Organization",
+     "usd": 615617.1999
+    },
+    {
+     "ref": "XM-DAC-41114",
+     "name": "United Nations Development Programme",
+     "usd": 259767.0
+    },
+    {
+     "ref": "XM-DAC-41302",
+     "name": "International Labour Organization (ILO)",
+     "usd": 256497.88999999998
+    },
+    {
+     "ref": "XM-DAC-41301",
+     "name": "Food and Agriculture Organization (FAO)",
+     "usd": 206765.48
+    },
+    {
+     "ref": "XI-IATI-EC_INTPA",
+     "name": "European Commission - Directorate-General for International Partnerships",
+     "usd": 74961.025
+    },
+    {
+     "ref": "XM-DAC-301-2",
+     "name": "International Development Research Centre",
+     "usd": 34120.668
+    },
+    {
+     "ref": "XM-DAC-1409",
+     "name": "Enhanced Integrated Framework",
+     "usd": 14360.0
+    },
+    {
+     "ref": "US-GOV-1",
+     "name": "U.S. Agency for International Development",
+     "usd": 501.28811290478006
+    },
+    {
+     "ref": "XI-IATI-CWSEC",
+     "name": "The Commonwealth Secretariat",
+     "usd": 87.97407235404032
+    }
+   ],
+   "new_starts_all": [
+    {
+     "aid": "XM-DAC-41301-764023",
+     "title": "Developing capacity for implementing the Kiribati National Crops and Livestock Survey 2027",
+     "org": "Food and Agriculture Organization (FAO)",
+     "start": "2026-07-01",
+     "commitment": 250000.0,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "NZ-1-ACT-0103580",
+     "title": "Negotiated Partnerships: UNICEF NZ - Phase 2",
+     "org": "New Zealand Ministry of Foreign Affairs and Trade",
+     "start": "2026-06-26",
+     "commitment": 0.0,
+     "pct": 33,
+     "names": null
+    },
+    {
+     "aid": "NZ-1-ACT-0104883",
+     "title": "MF7-04 Improving WaSH outcomes in Kiribati (Phase II)",
+     "org": "New Zealand Ministry of Foreign Affairs and Trade",
+     "start": "2026-08-03",
+     "commitment": 0.0,
+     "pct": 100,
+     "names": null
+    }
+   ],
+   "ending_all": [
+    {
+     "aid": "44000-P159632",
+     "title": "P4: Pacific Regional Connectivity Program Phase 4: KI: Connectivity Project",
+     "org": "World Bank",
+     "end": "2026-11-30",
+     "spend": 12574573.0,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "XI-IATI-EC_INTPA-2020-PCC-416132",
+     "title": "EU-Kiribati Partnership - Safe and sustainable drinking water for Kiritimati Island - SPC",
+     "org": "European Commission - Directorate-General for International Partnerships",
+     "end": "2026-11-11",
+     "spend": 9027480.0,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "44000-P177794",
+     "title": "Kiribati First Resilient Growth Development Policy Operation with a Catastrophe Deferred Drawdown Option",
+     "org": "World Bank",
+     "end": "2026-12-31",
+     "spend": 8167046.0,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "XM-DAC-46004-53043-001-GRNT0713",
+     "title": "Outer Islands Transport Infrastructure Investment Project",
+     "org": "Asian Development Bank",
+     "end": "2026-12-31",
+     "spend": 6789313.0,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "XI-IATI-EC_INTPA-2020-PCC-416065",
+     "title": "EU-Kiribati Partnership : Building resilience through improved sanitation (BRIS) - UNICEF",
+     "org": "European Commission - Directorate-General for International Partnerships",
+     "end": "2026-11-01",
+     "spend": 6322204.0,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "NZ-1-ACT-0101311",
+     "title": "Public Health Support",
+     "org": "New Zealand Ministry of Foreign Affairs and Trade",
+     "end": "2026-10-31",
+     "spend": 5927211.0,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "NZ-1-ACT-0102089",
+     "title": "Public Health Clinics on South Tarawa, Outer Islands & Kiritimati Islands",
+     "org": "New Zealand Ministry of Foreign Affairs and Trade",
+     "end": "2026-12-31",
+     "spend": 2706390.2,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "AU-5-INN612",
+     "title": "United Nations Capital Development Fund Pacific Programmes",
+     "org": "Australia Aid",
+     "end": "2026-12-31",
+     "spend": 2575027.59083405,
+     "pct": 34.098614,
+     "names": null
+    },
+    {
+     "aid": "NZ-1-ACT-0102606",
+     "title": "Negotiated Partnership: UNICEF NZ Implementation",
+     "org": "New Zealand Ministry of Foreign Affairs and Trade",
+     "end": "2027-02-28",
+     "spend": 2277388.5,
+     "pct": 30,
+     "names": null
+    },
+    {
+     "aid": "NZ-1-ACT-0100216",
+     "title": "Pacific Maritime Safety Programme Phase 3 + 4",
+     "org": "New Zealand Ministry of Foreign Affairs and Trade",
+     "end": "2026-11-30",
+     "spend": 2180861.7347999997,
+     "pct": 14.28,
+     "names": null
+    },
+    {
+     "aid": "NZ-1-ACT-0101264",
+     "title": "Kiribati Healthy Families Phase 3",
+     "org": "New Zealand Ministry of Foreign Affairs and Trade",
+     "end": "2026-10-30",
+     "spend": 2159732.8,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "NZ-1-ACT-0101368",
+     "title": "Climate Change Programme - Building resilient systems for integrated water resource management",
+     "org": "New Zealand Ministry of Foreign Affairs and Trade",
+     "end": "2026-12-01",
+     "spend": 1808050.60562901,
+     "pct": 11.578947,
+     "names": null
+    },
+    {
+     "aid": "NZ-1-ACT-0102034",
+     "title": "Pacific Justice Sector 2021-2026",
+     "org": "New Zealand Ministry of Foreign Affairs and Trade",
+     "end": "2026-11-30",
+     "spend": 620556.5460000001,
+     "pct": 6.7,
+     "names": null
+    },
+    {
+     "aid": "AU-5-INN995",
+     "title": "Commonwealth Climate Finance Access Hub",
+     "org": "Australia Aid",
+     "end": "2026-09-30",
+     "spend": 573427.177062912,
+     "pct": 33.333332,
+     "names": null
+    },
+    {
+     "aid": "NZ-1-ACT-0102605",
+     "title": "Negotiated Partnership: Caritas New Zealand Implementation",
+     "org": "New Zealand Ministry of Foreign Affairs and Trade",
+     "end": "2026-11-30",
+     "spend": 567160.86,
+     "pct": 12,
+     "names": null
+    },
+    {
+     "aid": "NZ-1-ACT-0101226",
+     "title": "Climate Change Programme - Climate Information for Decision Making",
+     "org": "New Zealand Ministry of Foreign Affairs and Trade",
+     "end": "2026-10-31",
+     "spend": 556244.5030190101,
+     "pct": 5.769231,
+     "names": null
+    },
+    {
+     "aid": "GB-COH-03122495-GB-1-A3728",
+     "title": "Unlocking children's potential to thrive: Rsearch into taking childhood development (ECD) interventions to sca",
+     "org": "Oxford Policy Management",
+     "end": "2026-12-31",
+     "spend": 439052.43,
+     "pct": 6,
+     "names": null
+    },
+    {
+     "aid": "NZ-1-ACT-0102990",
+     "title": "Pacific Insurance and Climate Adaptation Programme (PICAP)",
+     "org": "New Zealand Ministry of Foreign Affairs and Trade",
+     "end": "2027-01-31",
+     "spend": 381661.03394900996,
+     "pct": 5.263158,
+     "names": null
+    },
+    {
+     "aid": "NZ-1-ACT-0103469",
+     "title": "Anamata and Scholarships Future State",
+     "org": "New Zealand Ministry of Foreign Affairs and Trade",
+     "end": "2027-02-01",
+     "spend": 264855.927803546,
+     "pct": 6.857143,
+     "names": null
+    },
+    {
+     "aid": "NZ-1-ACT-0102286",
+     "title": "Pacific Digital Economy Programme",
+     "org": "New Zealand Ministry of Foreign Affairs and Trade",
+     "end": "2027-03-01",
+     "spend": 181843.94,
+     "pct": 5,
+     "names": null
+    },
+    {
+     "aid": "XM-DAC-47136-KI06",
+     "title": "Integrated, multi-stakeholder approach for pipeline development (GCF Readiness)",
+     "org": "Global Green Growth Institute (GGGI)",
+     "end": "2026-12-31",
+     "spend": 170174.95,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "AU-5-INM394",
+     "title": "Australia Awards Pacific Scholarship - 2018 Intake",
+     "org": "Australia Aid",
+     "end": "2026-12-31",
+     "spend": 93859.95242783999,
+     "pct": 27.12568,
+     "names": null
+    },
+    {
+     "aid": "XM-DAC-47136-KI009",
+     "title": "Establishing an Environment Fund for Kiribati",
+     "org": "Global Green Growth Institute (GGGI)",
+     "end": "2027-02-28",
+     "spend": 62088.15,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "XM-DAC-45001-C475",
+     "title": "Pacific: EU-Pacific Business Forum",
+     "org": "International Trade Centre (ITC)",
+     "end": "2026-10-27",
+     "spend": 44776.08,
+     "pct": 6,
+     "names": null
+    },
+    {
+     "aid": "NZ-1-ACT-0104606",
+     "title": "FY25-26 Pacific Infrastructure Project Management In Country",
+     "org": "New Zealand Ministry of Foreign Affairs and Trade",
+     "end": "2026-12-20",
+     "spend": 31149.16,
+     "pct": 10,
+     "names": null
+    },
+    {
+     "aid": "NZ-1-ACT-0100405",
+     "title": "ADB Pacific Private Sector Development Initiative Phase IV",
+     "org": "New Zealand Ministry of Foreign Affairs and Trade",
+     "end": "2026-10-31",
+     "spend": 27830.983599999996,
+     "pct": 0.7,
+     "names": null
+    },
+    {
+     "aid": "AU-5-INO015",
+     "title": "Australia Awards Pacific Scholarships",
+     "org": "Australia Aid",
+     "end": "2026-12-31",
+     "spend": 26290.90650782,
+     "pct": 3.8061943,
+     "names": null
+    },
+    {
+     "aid": "47122-KIR-HEXA",
+     "title": "Kiribati: Hexavalent",
+     "org": "Gavi, The Vaccine Alliance",
+     "end": "2026-12-31",
+     "spend": 18764.5,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "NZ-1-ACT-0104608",
+     "title": "FY25-26 Pacific Climate Resilience In-Country",
+     "org": "New Zealand Ministry of Foreign Affairs and Trade",
+     "end": "2026-12-20",
+     "spend": 17037.538074000004,
+     "pct": 6.66,
+     "names": null
+    },
+    {
+     "aid": "NZ-1-ACT-0104602",
+     "title": "FY25-26 Pacific Good Governance In-Country",
+     "org": "New Zealand Ministry of Foreign Affairs and Trade",
+     "end": "2026-10-20",
+     "spend": 15145.008285,
+     "pct": 6.45,
+     "names": null
+    },
+    {
+     "aid": "CA-3-P015976001",
+     "title": "Engaging parliamentarians in promoting nuclear security legal frameworks",
+     "org": "Foreign Affairs, Trade and Development Canada (DFATD)",
+     "end": "2027-02-01",
+     "spend": 11431.721000000001,
+     "pct": 5,
+     "names": null
+    },
+    {
+     "aid": "NZ-1-ACT-0104605",
+     "title": "FY25-26 Pacific Public Sector Leadership (Mid-Level) Course 2 In Country",
+     "org": "New Zealand Ministry of Foreign Affairs and Trade",
+     "end": "2026-12-20",
+     "spend": 1044.707684,
+     "pct": 6.7,
+     "names": null
+    },
+    {
+     "aid": "XM-DAC-701-8-202517439",
+     "title": "\u7d4c\u6e08\u793e\u4f1a\u958b\u767a\u8a08\u753b\uff08\u9053\u8def\u7dad\u6301\u7ba1\u7406\u95a2\u9023\u6a5f\u6750\uff09",
+     "org": "Japan International Cooperation Agency (JICA)",
+     "end": "2026-12-16",
+     "spend": 0.0,
+     "pct": 100,
+     "names": null
+    }
+   ],
    "n_misnamed": 1,
    "misnamed": [
     {
@@ -4559,6 +9403,272 @@
      "spend": 963795.3540000002
     }
    ],
+   "orgs_90": [
+    {
+     "ref": "44000",
+     "name": "World Bank",
+     "usd": 2226568.05
+    },
+    {
+     "ref": "XM-DAC-46004",
+     "name": "Asian Development Bank",
+     "usd": 2162760.9322
+    },
+    {
+     "ref": "NZ-1",
+     "name": "New Zealand Ministry of Foreign Affairs and Trade",
+     "usd": 223280.62201329993
+    },
+    {
+     "ref": "XM-DAC-41301",
+     "name": "Food and Agriculture Organization (FAO)",
+     "usd": 162534.89
+    },
+    {
+     "ref": "XI-IATI-EC_INTPA",
+     "name": "European Commission - Directorate-General for International Partnerships",
+     "usd": 105160.606
+    },
+    {
+     "ref": "XM-DAC-1409",
+     "name": "Enhanced Integrated Framework",
+     "usd": 26534.0
+    },
+    {
+     "ref": "XM-DAC-41114",
+     "name": "United Nations Development Programme",
+     "usd": 22370.0
+    },
+    {
+     "ref": "XM-DAC-41302",
+     "name": "International Labour Organization (ILO)",
+     "usd": 2029.61
+    },
+    {
+     "ref": "KR-GOV-010",
+     "name": "Office for Government Policy Coordination",
+     "usd": 0.0
+    }
+   ],
+   "new_starts_all": [],
+   "ending_all": [
+    {
+     "aid": "44000-P179820",
+     "title": "Tuvalu First Climate and Disaster Resilience Development Policy Financing with a Catastrophe Deferred Drawdown",
+     "org": "World Bank",
+     "end": "2026-10-30",
+     "spend": 7466872.0,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "NZ-1-ACT-0100216",
+     "title": "Pacific Maritime Safety Programme Phase 3 + 4",
+     "org": "New Zealand Ministry of Foreign Affairs and Trade",
+     "end": "2026-11-30",
+     "spend": 2180861.7347999997,
+     "pct": 14.28,
+     "names": null
+    },
+    {
+     "aid": "NZ-1-ACT-0101226",
+     "title": "Climate Change Programme - Climate Information for Decision Making",
+     "org": "New Zealand Ministry of Foreign Affairs and Trade",
+     "end": "2026-10-31",
+     "spend": 1112489.0060380201,
+     "pct": 11.538462,
+     "names": null
+    },
+    {
+     "aid": "NZ-1-ACT-0101195",
+     "title": "Climate Change Programme - Ecosystems Resilience",
+     "org": "New Zealand Ministry of Foreign Affairs and Trade",
+     "end": "2026-10-31",
+     "spend": 880155.7360964,
+     "pct": 9.67742,
+     "names": null
+    },
+    {
+     "aid": "NZ-1-ACT-0102034",
+     "title": "Pacific Justice Sector 2021-2026",
+     "org": "New Zealand Ministry of Foreign Affairs and Trade",
+     "end": "2026-11-30",
+     "spend": 620556.5460000001,
+     "pct": 6.7,
+     "names": null
+    },
+    {
+     "aid": "AU-5-INN995",
+     "title": "Commonwealth Climate Finance Access Hub",
+     "org": "Australia Aid",
+     "end": "2026-09-30",
+     "spend": 573427.177062912,
+     "pct": 33.333332,
+     "names": null
+    },
+    {
+     "aid": "XI-BRIDGE-6385676864-10517",
+     "title": "Integrated Agro-ecosystem Approach for enhancing Livelihoods and Climate Resilience in Tuvalu",
+     "org": "Global Environment Facility",
+     "end": "2026-11-30",
+     "spend": 538944.0,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "XM-DAC-41111-XM-DAC-41111-125879-7",
+     "title": "Pacific Insurance Climate Adap-UNCDF-00125879",
+     "org": "United Nations Capital Development Fund",
+     "end": "2026-12-31",
+     "spend": 336841.0,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "XM-DAC-41301-761088",
+     "title": "Developing capacity for implementing Tuvalu National Crops and Livestock Census 2026",
+     "org": "Food and Agriculture Organization (FAO)",
+     "end": "2026-11-30",
+     "spend": 199634.75,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "XI-IATI-EC_INTPA-2024-PC-41728",
+     "title": "Support measures for Tuvalu",
+     "org": "European Commission - Directorate-General for International Partnerships",
+     "end": "2026-12-15",
+     "spend": 141071.78,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "NZ-1-ACT-0103469",
+     "title": "Anamata and Scholarships Future State",
+     "org": "New Zealand Ministry of Foreign Affairs and Trade",
+     "end": "2027-02-01",
+     "spend": 105942.3711214184,
+     "pct": 2.7428572,
+     "names": null
+    },
+    {
+     "aid": "AU-5-INO015",
+     "title": "Australia Awards Pacific Scholarships",
+     "org": "Australia Aid",
+     "end": "2026-12-31",
+     "spend": 58385.39944379999,
+     "pct": 8.452587,
+     "names": null
+    },
+    {
+     "aid": "XM-DAC-45001-C475",
+     "title": "Pacific: EU-Pacific Business Forum",
+     "org": "International Trade Centre (ITC)",
+     "end": "2026-10-27",
+     "spend": 44776.08,
+     "pct": 6,
+     "names": null
+    },
+    {
+     "aid": "AU-5-INM394",
+     "title": "Australia Awards Pacific Scholarship - 2018 Intake",
+     "org": "Australia Aid",
+     "end": "2026-12-31",
+     "spend": 29660.925306528,
+     "pct": 8.572056,
+     "names": null
+    },
+    {
+     "aid": "NZ-1-ACT-0104607",
+     "title": "FY25-26 Pacific Diplomatic Training In-Country & In-Region",
+     "org": "New Zealand Ministry of Foreign Affairs and Trade",
+     "end": "2026-12-20",
+     "spend": 20557.344049219682,
+     "pct": 3.4450653,
+     "names": null
+    },
+    {
+     "aid": "NZ-1-ACT-0104608",
+     "title": "FY25-26 Pacific Climate Resilience In-Country",
+     "org": "New Zealand Ministry of Foreign Affairs and Trade",
+     "end": "2026-12-20",
+     "spend": 17063.119963,
+     "pct": 6.67,
+     "names": null
+    },
+    {
+     "aid": "NZ-1-ACT-0104602",
+     "title": "FY25-26 Pacific Good Governance In-Country",
+     "org": "New Zealand Ministry of Foreign Affairs and Trade",
+     "end": "2026-10-20",
+     "spend": 15145.008285,
+     "pct": 6.45,
+     "names": null
+    },
+    {
+     "aid": "CA-3-P015976001",
+     "title": "Engaging parliamentarians in promoting nuclear security legal frameworks",
+     "org": "Foreign Affairs, Trade and Development Canada (DFATD)",
+     "end": "2027-02-01",
+     "spend": 11431.721000000001,
+     "pct": 5,
+     "names": null
+    },
+    {
+     "aid": "NZ-1-ACT-0104606",
+     "title": "FY25-26 Pacific Infrastructure Project Management In Country",
+     "org": "New Zealand Ministry of Foreign Affairs and Trade",
+     "end": "2026-12-20",
+     "spend": 10403.81944,
+     "pct": 3.34,
+     "names": null
+    },
+    {
+     "aid": "AU-5-INO818",
+     "title": "Australia Awards (AAS & AAPS) Management - Tuvalu",
+     "org": "Australia Aid",
+     "end": "2026-12-31",
+     "spend": 9247.999,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "NZ-1-ACT-0100405",
+     "title": "ADB Pacific Private Sector Development Initiative Phase IV",
+     "org": "New Zealand Ministry of Foreign Affairs and Trade",
+     "end": "2026-10-31",
+     "spend": 7554.1241199999995,
+     "pct": 0.19,
+     "names": null
+    },
+    {
+     "aid": "NZ-1-ACT-0104605",
+     "title": "FY25-26 Pacific Public Sector Leadership (Mid-Level) Course 2 In Country",
+     "org": "New Zealand Ministry of Foreign Affairs and Trade",
+     "end": "2026-12-20",
+     "spend": 514.5575160000001,
+     "pct": 3.3,
+     "names": null
+    },
+    {
+     "aid": "KR-GOV-160-1192000_2023_005",
+     "title": "Fishing Community of Tuvalu Development Project",
+     "org": "Office for Government Policy Coordination",
+     "end": "2026-12-31",
+     "spend": 0.0,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "KR-GOV-090-1543000_2024_024",
+     "title": "Accelerating Green Recovery and Economic Empowerment (AGREE)(IFAD)",
+     "org": "Office for Government Policy Coordination",
+     "end": "2026-12-31",
+     "spend": 0.0,
+     "pct": 100,
+     "names": null
+    }
+   ],
    "n_misnamed": 0,
    "misnamed": [],
    "currency": [
@@ -5040,6 +10150,298 @@
      "name": "CGIAR",
      "n": 8,
      "spend": 0.0
+    }
+   ],
+   "orgs_90": [
+    {
+     "ref": "44000",
+     "name": "World Bank",
+     "usd": 1796282.0099999998
+    },
+    {
+     "ref": "XM-DAC-46004",
+     "name": "Asian Development Bank",
+     "usd": 844234.9578999998
+    },
+    {
+     "ref": "XM-DAC-41114",
+     "name": "United Nations Development Programme",
+     "usd": 240223.0
+    },
+    {
+     "ref": "US-GOV-1",
+     "name": "U.S. Agency for International Development",
+     "usd": 152125.76235619932
+    },
+    {
+     "ref": "NZ-1",
+     "name": "New Zealand Ministry of Foreign Affairs and Trade",
+     "usd": 147488.03179009995
+    },
+    {
+     "ref": "XM-DAC-928",
+     "name": "World Health Organization",
+     "usd": 135041.26
+    },
+    {
+     "ref": "XM-DAC-41301",
+     "name": "Food and Agriculture Organization (FAO)",
+     "usd": 47826.15
+    }
+   ],
+   "new_starts_all": [],
+   "ending_all": [
+    {
+     "aid": "44000-P130592",
+     "title": "Pacific Regional Connectivity Program 2:FSM Connectivity Project",
+     "org": "World Bank",
+     "end": "2026-11-30",
+     "spend": 57661032.0,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "US-GOV-1-72049220IO00002",
+     "title": "Disaster Resilience In The Compact Nations (RESILIENCE)",
+     "org": "U.S. Agency for International Development",
+     "end": "2027-01-12",
+     "spend": 29557530.4682112,
+     "pct": 90.17112,
+     "names": null
+    },
+    {
+     "aid": "XM-DAC-41317-FP036",
+     "title": "Pacific Islands Renewable Energy Investment Program",
+     "org": "Green Climate Fund",
+     "end": "2026-09-30",
+     "spend": 2428620.0,
+     "pct": 14.286,
+     "names": null
+    },
+    {
+     "aid": "US-GOV-1-720BHA23IO00144",
+     "title": "Humanitarian Assistance",
+     "org": "U.S. Agency for International Development",
+     "end": "2026-09-30",
+     "spend": 2184211.0,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "US-GOV-1-720BHA22GR00090",
+     "title": "Humanitarian Assistance",
+     "org": "U.S. Agency for International Development",
+     "end": "2027-02-28",
+     "spend": 2008815.0,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "XI-BRIDGE-6385676864-9917",
+     "title": "Safeguarding Biodiversity From Invasive Alien Species in the Federated States of Micronesia",
+     "org": "Global Environment Facility",
+     "end": "2027-01-03",
+     "spend": 1486976.0,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "XM-DAC-46004-55324-001-GRNT6050",
+     "title": "Clean Energy Project",
+     "org": "Asian Development Bank",
+     "end": "2026-12-31",
+     "spend": 1034516.7,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "NZ-1-ACT-0102034",
+     "title": "Pacific Justice Sector 2021-2026",
+     "org": "New Zealand Ministry of Foreign Affairs and Trade",
+     "end": "2026-11-30",
+     "spend": 620556.5460000001,
+     "pct": 6.7,
+     "names": null
+    },
+    {
+     "aid": "NZ-1-ACT-0102286",
+     "title": "Pacific Digital Economy Programme",
+     "org": "New Zealand Ministry of Foreign Affairs and Trade",
+     "end": "2027-03-01",
+     "spend": 181843.94,
+     "pct": 5,
+     "names": null
+    },
+    {
+     "aid": "NZ-1-ACT-0103612",
+     "title": "North Pacific 2023 Tertiary Scholarships",
+     "org": "New Zealand Ministry of Foreign Affairs and Trade",
+     "end": "2027-02-28",
+     "spend": 104872.13220000001,
+     "pct": 33,
+     "names": null
+    },
+    {
+     "aid": "AU-5-INO015",
+     "title": "Australia Awards Pacific Scholarships",
+     "org": "Australia Aid",
+     "end": "2026-12-31",
+     "spend": 67935.729554,
+     "pct": 9.83521,
+     "names": null
+    },
+    {
+     "aid": "NZ-1-ACT-0105182",
+     "title": "2026 Typhoon Sinlaku Federated States of Micronesia Response",
+     "org": "New Zealand Ministry of Foreign Affairs and Trade",
+     "end": "2027-01-31",
+     "spend": 57750.562,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "XM-DAC-45001-C475",
+     "title": "Pacific: EU-Pacific Business Forum",
+     "org": "International Trade Centre (ITC)",
+     "end": "2026-10-27",
+     "spend": 44776.08,
+     "pct": 6,
+     "names": null
+    },
+    {
+     "aid": "NZ-1-ACT-0104607",
+     "title": "FY25-26 Pacific Diplomatic Training In-Country & In-Region",
+     "org": "New Zealand Ministry of Foreign Affairs and Trade",
+     "end": "2026-12-20",
+     "spend": 41176.4210203456,
+     "pct": 6.900476,
+     "names": null
+    },
+    {
+     "aid": "AU-5-INM394",
+     "title": "Australia Awards Pacific Scholarship - 2018 Intake",
+     "org": "Australia Aid",
+     "end": "2026-12-31",
+     "spend": 30948.208667603994,
+     "pct": 8.944083,
+     "names": null
+    },
+    {
+     "aid": "US-GOV-1-72049224C00001",
+     "title": "Philippines, Pacific Islands, and Mongolia Monitoring, Evaluation, and Learning Activity (PIMMELA)",
+     "org": "U.S. Agency for International Development",
+     "end": "2027-01-15",
+     "spend": 23126.198149306,
+     "pct": 0.38304484,
+     "names": null
+    },
+    {
+     "aid": "NZ-1-ACT-0103469",
+     "title": "Anamata and Scholarships Future State",
+     "org": "New Zealand Ministry of Foreign Affairs and Trade",
+     "end": "2027-02-01",
+     "spend": 22071.3279607092,
+     "pct": 0.5714286,
+     "names": null
+    },
+    {
+     "aid": "NZ-1-ACT-0100405",
+     "title": "ADB Pacific Private Sector Development Initiative Phase IV",
+     "org": "New Zealand Ministry of Foreign Affairs and Trade",
+     "end": "2026-10-31",
+     "spend": 13915.491799999998,
+     "pct": 0.35,
+     "names": null
+    },
+    {
+     "aid": "NZ-1-ACT-0104608",
+     "title": "FY25-26 Pacific Climate Resilience In-Country",
+     "org": "New Zealand Ministry of Foreign Affairs and Trade",
+     "end": "2026-12-20",
+     "spend": 8518.769037000002,
+     "pct": 3.33,
+     "names": null
+    },
+    {
+     "aid": "NZ-1-ACT-0104602",
+     "title": "FY25-26 Pacific Good Governance In-Country",
+     "org": "New Zealand Ministry of Foreign Affairs and Trade",
+     "end": "2026-10-20",
+     "spend": 7560.763825999999,
+     "pct": 3.22,
+     "names": null
+    },
+    {
+     "aid": "XM-DAC-47066-CD.0111",
+     "title": "EDF-w in the Federated States of Micronesia (FSM):  Economic Revitalization in the North Pacific",
+     "org": "International Organization for Migration (IOM)",
+     "end": "2026-10-31",
+     "spend": 3112.69,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "AU-5-INN974",
+     "title": "Pacific Media Assistance Scheme (Phase 4)",
+     "org": "Australia Aid",
+     "end": "2026-12-31",
+     "spend": 1831.3011696964002,
+     "pct": 0.04232276,
+     "names": null
+    },
+    {
+     "aid": "NZ-1-ACT-0104605",
+     "title": "FY25-26 Pacific Public Sector Leadership (Mid-Level) Course 2 In Country",
+     "org": "New Zealand Ministry of Foreign Affairs and Trade",
+     "end": "2026-12-20",
+     "spend": 514.5575160000001,
+     "pct": 3.3,
+     "names": null
+    },
+    {
+     "aid": "US-GOV-11-72049220IO00002-226589",
+     "title": "Disaster Resilience In The Compact Nations (RESILIENCE)",
+     "org": "Department of State",
+     "end": "2027-01-12",
+     "spend": 0.0,
+     "pct": 0,
+     "names": null
+    },
+    {
+     "aid": "US-GOV-11-AID-OAA-TO-15-00007-226796",
+     "title": "Global Health Supply Chain - Procurement and Supply Management (GSHC-PSM) IDIQ - HIV/AIDS Task Order",
+     "org": "Department of State",
+     "end": "2026-11-28",
+     "spend": 0.0,
+     "pct": 0,
+     "names": null
+    },
+    {
+     "aid": "US-GOV-1-720202657457",
+     "title": "(title redacted by USAID)",
+     "org": "U.S. Agency for International Development",
+     "end": "2026-09-30",
+     "spend": 0.0,
+     "pct": 0,
+     "names": null
+    },
+    {
+     "aid": "XM-DAC-47015-21937_Bilateral_GoogleLLC_IRRI",
+     "title": "Grant: Transitioning the world's largest rice genebank into an AI-powered next-gen genebank to better address ",
+     "org": "CGIAR",
+     "end": "2026-09-30",
+     "spend": 0.0,
+     "pct": 1.2820513,
+     "names": null
+    },
+    {
+     "aid": "XM-DAC-47066-TK0108",
+     "title": "Diaspora research: laying the groundwork for diaspora engagement in the Federated States of Micronesia",
+     "org": "International Organization for Migration (IOM)",
+     "end": "2027-01-31",
+     "spend": 0.0,
+     "pct": 100,
+     "names": null
     }
    ],
    "n_misnamed": 0,
@@ -5570,6 +10972,282 @@
      "spend": 14438.689600000002
     }
    ],
+   "orgs_90": [
+    {
+     "ref": "44000",
+     "name": "World Bank",
+     "usd": 9714387.04
+    },
+    {
+     "ref": "XI-IATI-EC_INTPA",
+     "name": "European Commission - Directorate-General for International Partnerships",
+     "usd": 1813907.1
+    },
+    {
+     "ref": "XM-DAC-41114",
+     "name": "United Nations Development Programme",
+     "usd": 1538275.0
+    },
+    {
+     "ref": "XM-DAC-46004",
+     "name": "Asian Development Bank",
+     "usd": 1129242.74
+    },
+    {
+     "ref": "NZ-1",
+     "name": "New Zealand Ministry of Foreign Affairs and Trade",
+     "usd": 58459.10748100001
+    },
+    {
+     "ref": "XM-DAC-41301",
+     "name": "Food and Agriculture Organization (FAO)",
+     "usd": 37671.369999999995
+    },
+    {
+     "ref": "XM-DAC-928",
+     "name": "World Health Organization",
+     "usd": 7537.5
+    },
+    {
+     "ref": "US-GOV-1",
+     "name": "U.S. Agency for International Development",
+     "usd": 3213.669238402
+    },
+    {
+     "ref": "KR-GOV-010",
+     "name": "Office for Government Policy Coordination",
+     "usd": 0.0
+    }
+   ],
+   "new_starts_all": [
+    {
+     "aid": "XM-DAC-41301-764063",
+     "title": "Developing capacity for implementing the Republic of the Marshall Islands (RMI) Agriculture Survey 2027",
+     "org": "Food and Agriculture Organization (FAO)",
+     "start": "2026-07-01",
+     "commitment": 250000.0,
+     "pct": 100,
+     "names": null
+    }
+   ],
+   "ending_all": [
+    {
+     "aid": "44000-P160096",
+     "title": "Pacific Resilience Project II under the Pacific Resilience Program",
+     "org": "World Bank",
+     "end": "2026-11-30",
+     "spend": 39919428.0,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "XI-IATI-WBTF-P160096",
+     "title": "Pacific Resilience Project II under the Pacific Resilience Program",
+     "org": "World Bank Trust Funds",
+     "end": "2026-10-31",
+     "spend": 26402622.0,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "44000-P177329",
+     "title": "RMI Multisectoral Early Childhood Development Project - II",
+     "org": "World Bank",
+     "end": "2026-12-31",
+     "spend": 19762960.0,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "XM-DAC-41317-FP112",
+     "title": "Addressing Climate Vulnerability in the Water Sector (ACWA) in the Marshall Islands",
+     "org": "Green Climate Fund",
+     "end": "2027-02-28",
+     "spend": 15259303.0,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "XM-DAC-41317-FP036",
+     "title": "Pacific Islands Renewable Energy Investment Program",
+     "org": "Green Climate Fund",
+     "end": "2026-09-30",
+     "spend": 2428450.0,
+     "pct": 14.285,
+     "names": null
+    },
+    {
+     "aid": "US-GOV-1-72049220IO00002",
+     "title": "Disaster Resilience In The Compact Nations (RESILIENCE)",
+     "org": "U.S. Agency for International Development",
+     "end": "2027-01-12",
+     "spend": 2001733.2372856,
+     "pct": 6.106685,
+     "names": null
+    },
+    {
+     "aid": "US-GOV-1-720BHA23IO00163",
+     "title": "Community Resilience",
+     "org": "U.S. Agency for International Development",
+     "end": "2026-09-30",
+     "spend": 1567457.0,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "NZ-1-ACT-0101226",
+     "title": "Climate Change Programme - Climate Information for Decision Making",
+     "org": "New Zealand Ministry of Foreign Affairs and Trade",
+     "end": "2026-10-31",
+     "spend": 1112489.0060380201,
+     "pct": 11.538462,
+     "names": null
+    },
+    {
+     "aid": "NZ-1-ACT-0102034",
+     "title": "Pacific Justice Sector 2021-2026",
+     "org": "New Zealand Ministry of Foreign Affairs and Trade",
+     "end": "2026-11-30",
+     "spend": 620556.5460000001,
+     "pct": 6.7,
+     "names": null
+    },
+    {
+     "aid": "NZ-1-ACT-0102286",
+     "title": "Pacific Digital Economy Programme",
+     "org": "New Zealand Ministry of Foreign Affairs and Trade",
+     "end": "2027-03-01",
+     "spend": 181843.94,
+     "pct": 5,
+     "names": null
+    },
+    {
+     "aid": "NZ-1-ACT-0103612",
+     "title": "North Pacific 2023 Tertiary Scholarships",
+     "org": "New Zealand Ministry of Foreign Affairs and Trade",
+     "end": "2027-02-28",
+     "spend": 108050.07560000001,
+     "pct": 34,
+     "names": null
+    },
+    {
+     "aid": "XM-DAC-45001-C475",
+     "title": "Pacific: EU-Pacific Business Forum",
+     "org": "International Trade Centre (ITC)",
+     "end": "2026-10-27",
+     "spend": 44776.08,
+     "pct": 6,
+     "names": null
+    },
+    {
+     "aid": "NZ-1-ACT-0100405",
+     "title": "ADB Pacific Private Sector Development Initiative Phase IV",
+     "org": "New Zealand Ministry of Foreign Affairs and Trade",
+     "end": "2026-10-31",
+     "spend": 32602.009359999993,
+     "pct": 0.82,
+     "names": null
+    },
+    {
+     "aid": "AU-5-INM394",
+     "title": "Australia Awards Pacific Scholarship - 2018 Intake",
+     "org": "Australia Aid",
+     "end": "2026-12-31",
+     "spend": 32356.505183603997,
+     "pct": 9.351083,
+     "names": null
+    },
+    {
+     "aid": "US-GOV-1-72049224C00001",
+     "title": "Philippines, Pacific Islands, and Mongolia Monitoring, Evaluation, and Learning Activity (PIMMELA)",
+     "org": "U.S. Agency for International Development",
+     "end": "2027-01-15",
+     "spend": 23126.198149306,
+     "pct": 0.38304484,
+     "names": null
+    },
+    {
+     "aid": "NZ-1-ACT-0104607",
+     "title": "FY25-26 Pacific Diplomatic Training In-Country & In-Region",
+     "org": "New Zealand Ministry of Foreign Affairs and Trade",
+     "end": "2026-12-20",
+     "spend": 20619.076971125924,
+     "pct": 3.4554107,
+     "names": null
+    },
+    {
+     "aid": "US-GOV-1-720202657457",
+     "title": "(title redacted by USAID)",
+     "org": "U.S. Agency for International Development",
+     "end": "2026-09-30",
+     "spend": 17363.06467236,
+     "pct": 0.088297,
+     "names": null
+    },
+    {
+     "aid": "NZ-1-ACT-0104608",
+     "title": "FY25-26 Pacific Climate Resilience In-Country",
+     "org": "New Zealand Ministry of Foreign Affairs and Trade",
+     "end": "2026-12-20",
+     "spend": 8518.769037000002,
+     "pct": 3.33,
+     "names": null
+    },
+    {
+     "aid": "NZ-1-ACT-0104602",
+     "title": "FY25-26 Pacific Good Governance In-Country",
+     "org": "New Zealand Ministry of Foreign Affairs and Trade",
+     "end": "2026-10-20",
+     "spend": 7560.763825999999,
+     "pct": 3.22,
+     "names": null
+    },
+    {
+     "aid": "NZ-1-ACT-0104605",
+     "title": "FY25-26 Pacific Public Sector Leadership (Mid-Level) Course 2 In Country",
+     "org": "New Zealand Ministry of Foreign Affairs and Trade",
+     "end": "2026-12-20",
+     "spend": 514.5575160000001,
+     "pct": 3.3,
+     "names": null
+    },
+    {
+     "aid": "US-GOV-1-720202657045",
+     "title": "USAID Miscellaneous Goods, Services, and Operations Maintanence",
+     "org": "U.S. Agency for International Development",
+     "end": "2026-09-30",
+     "spend": 354.83843930399996,
+     "pct": 0.46289715,
+     "names": null
+    },
+    {
+     "aid": "US-GOV-11-72049220IO00002-226589",
+     "title": "Disaster Resilience In The Compact Nations (RESILIENCE)",
+     "org": "Department of State",
+     "end": "2027-01-12",
+     "spend": 0.0,
+     "pct": 0,
+     "names": null
+    },
+    {
+     "aid": "US-GOV-1-720202657295",
+     "title": "USAID Pay and Benefits",
+     "org": "U.S. Agency for International Development",
+     "end": "2026-09-30",
+     "spend": 0.0,
+     "pct": 0,
+     "names": null
+    },
+    {
+     "aid": "US-GOV-1-720202656911",
+     "title": "USAID Miscellaneous Goods, Services, and Operations Maintanence",
+     "org": "U.S. Agency for International Development",
+     "end": "2026-09-30",
+     "spend": 0.0,
+     "pct": 0,
+     "names": null
+    }
+   ],
    "n_misnamed": 0,
    "misnamed": [],
    "currency": [
@@ -6066,6 +11744,185 @@
      "spend": 523513.32999999996
     }
    ],
+   "orgs_90": [
+    {
+     "ref": "US-GOV-1",
+     "name": "U.S. Agency for International Development",
+     "usd": 41438.0
+    },
+    {
+     "ref": "NZ-1",
+     "name": "New Zealand Ministry of Foreign Affairs and Trade",
+     "usd": 20903.264031400005
+    },
+    {
+     "ref": "XM-DAC-928",
+     "name": "World Health Organization",
+     "usd": 10399.77
+    },
+    {
+     "ref": "XM-DAC-41301",
+     "name": "Food and Agriculture Organization (FAO)",
+     "usd": 4599.23
+    },
+    {
+     "ref": "XM-DAC-46004",
+     "name": "Asian Development Bank",
+     "usd": 0.0
+    },
+    {
+     "ref": "XM-DAC-41302",
+     "name": "International Labour Organization (ILO)",
+     "usd": -88.7
+    }
+   ],
+   "new_starts_all": [],
+   "ending_all": [
+    {
+     "aid": "US-GOV-1-720BHA22IO00138",
+     "title": "Humanitarian Assistance",
+     "org": "U.S. Agency for International Development",
+     "end": "2026-09-30",
+     "spend": 1334237.0,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "NZ-1-ACT-0103879",
+     "title": "MFC1-02 Strengthening Climate Resilience of Communities and Marine Ecosystems in Palau",
+     "org": "New Zealand Ministry of Foreign Affairs and Trade",
+     "end": "2027-01-31",
+     "spend": 774416.75,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "US-GOV-1-AID-486-T-13-00001",
+     "title": "NOAA Participating Agency Program Agreement (PAPA)",
+     "org": "U.S. Agency for International Development",
+     "end": "2026-09-30",
+     "spend": 712208.19129822,
+     "pct": 9.015483,
+     "names": null
+    },
+    {
+     "aid": "NZ-1-ACT-0101368",
+     "title": "Climate Change Programme - Building resilient systems for integrated water resource management",
+     "org": "New Zealand Ministry of Foreign Affairs and Trade",
+     "end": "2026-12-01",
+     "spend": 657472.9971854951,
+     "pct": 4.2105265,
+     "names": null
+    },
+    {
+     "aid": "NZ-1-ACT-0102034",
+     "title": "Pacific Justice Sector 2021-2026",
+     "org": "New Zealand Ministry of Foreign Affairs and Trade",
+     "end": "2026-11-30",
+     "spend": 620556.5460000001,
+     "pct": 6.7,
+     "names": null
+    },
+    {
+     "aid": "NZ-1-ACT-0100405",
+     "title": "ADB Pacific Private Sector Development Initiative Phase IV",
+     "org": "New Zealand Ministry of Foreign Affairs and Trade",
+     "end": "2026-10-31",
+     "spend": 127624.93907999998,
+     "pct": 3.21,
+     "names": null
+    },
+    {
+     "aid": "NZ-1-ACT-0103612",
+     "title": "North Pacific 2023 Tertiary Scholarships",
+     "org": "New Zealand Ministry of Foreign Affairs and Trade",
+     "end": "2027-02-28",
+     "spend": 104872.13220000001,
+     "pct": 33,
+     "names": null
+    },
+    {
+     "aid": "XM-DAC-45001-C475",
+     "title": "Pacific: EU-Pacific Business Forum",
+     "org": "International Trade Centre (ITC)",
+     "end": "2026-10-27",
+     "spend": 44776.08,
+     "pct": 6,
+     "names": null
+    },
+    {
+     "aid": "NZ-1-ACT-0104607",
+     "title": "FY25-26 Pacific Diplomatic Training In-Country & In-Region",
+     "org": "New Zealand Ministry of Foreign Affairs and Trade",
+     "end": "2026-12-20",
+     "spend": 41114.6875017208,
+     "pct": 6.8901305,
+     "names": null
+    },
+    {
+     "aid": "AU-5-INM394",
+     "title": "Australia Awards Pacific Scholarship - 2018 Intake",
+     "org": "Australia Aid",
+     "end": "2026-12-31",
+     "spend": 30948.208667603994,
+     "pct": 8.944083,
+     "names": null
+    },
+    {
+     "aid": "NZ-1-ACT-0104608",
+     "title": "FY25-26 Pacific Climate Resilience In-Country",
+     "org": "New Zealand Ministry of Foreign Affairs and Trade",
+     "end": "2026-12-20",
+     "spend": 8544.350926000001,
+     "pct": 3.34,
+     "names": null
+    },
+    {
+     "aid": "NZ-1-ACT-0104602",
+     "title": "FY25-26 Pacific Good Governance In-Country",
+     "org": "New Zealand Ministry of Foreign Affairs and Trade",
+     "end": "2026-10-20",
+     "spend": 7560.763825999999,
+     "pct": 3.22,
+     "names": null
+    },
+    {
+     "aid": "NZ-1-ACT-0104605",
+     "title": "FY25-26 Pacific Public Sector Leadership (Mid-Level) Course 2 In Country",
+     "org": "New Zealand Ministry of Foreign Affairs and Trade",
+     "end": "2026-12-20",
+     "spend": 530.150168,
+     "pct": 3.4,
+     "names": null
+    },
+    {
+     "aid": "US-GOV-1-720202657045",
+     "title": "USAID Miscellaneous Goods, Services, and Operations Maintanence",
+     "org": "U.S. Agency for International Development",
+     "end": "2026-09-30",
+     "spend": 172.3111819344,
+     "pct": 0.22478499,
+     "names": null
+    },
+    {
+     "aid": "US-GOV-1-720202657457",
+     "title": "(title redacted by USAID)",
+     "org": "U.S. Agency for International Development",
+     "end": "2026-09-30",
+     "spend": 0.0,
+     "pct": 0,
+     "names": null
+    },
+    {
+     "aid": "US-GOV-1-720202656911",
+     "title": "USAID Miscellaneous Goods, Services, and Operations Maintanence",
+     "org": "U.S. Agency for International Development",
+     "end": "2026-09-30",
+     "spend": 0.0,
+     "pct": 0,
+     "names": null
+    }
+   ],
    "n_misnamed": 0,
    "misnamed": [],
    "currency": [
@@ -6513,6 +12370,202 @@
      "spend": 590608.3165843261
     }
    ],
+   "orgs_90": [
+    {
+     "ref": "XM-DAC-46004",
+     "name": "Asian Development Bank",
+     "usd": 800638.8819999999
+    },
+    {
+     "ref": "XM-DAC-41301",
+     "name": "Food and Agriculture Organization (FAO)",
+     "usd": 77586.12
+    },
+    {
+     "ref": "NZ-1",
+     "name": "New Zealand Ministry of Foreign Affairs and Trade",
+     "usd": 63356.31726391121
+    },
+    {
+     "ref": "XM-DAC-41114",
+     "name": "United Nations Development Programme",
+     "usd": -11578.0
+    }
+   ],
+   "new_starts_all": [],
+   "ending_all": [
+    {
+     "aid": "XM-DAC-41114-OUTPUT-00121714",
+     "title": "Nauru - NAIG Project",
+     "org": "United Nations Development Programme",
+     "end": "2026-12-31",
+     "spend": 7592885.0,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "AU-5-INO815",
+     "title": "Nauru Australia Treaty Budget Support - Phase 1",
+     "org": "Australia Aid",
+     "end": "2026-12-31",
+     "spend": 3249701.0,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "XM-DAC-41317-FP036",
+     "title": "Pacific Islands Renewable Energy Investment Program",
+     "org": "Green Climate Fund",
+     "end": "2026-09-30",
+     "spend": 2428620.0,
+     "pct": 14.286,
+     "names": null
+    },
+    {
+     "aid": "AU-5-INO082",
+     "title": "Interim Nauru Health Support Program",
+     "org": "Australia Aid",
+     "end": "2026-12-31",
+     "spend": 1905367.1,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "NZ-1-ACT-0102028",
+     "title": "Nauru Economic Reform Phase Two",
+     "org": "New Zealand Ministry of Foreign Affairs and Trade",
+     "end": "2026-12-30",
+     "spend": 1789935.2,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "AU-5-INI968",
+     "title": "Nauru Program Management and Coordination Initiative",
+     "org": "Australia Aid",
+     "end": "2026-12-31",
+     "spend": 1224530.1,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "AU-5-INI949",
+     "title": "Nauru Infrastructure and Services",
+     "org": "Australia Aid",
+     "end": "2026-12-31",
+     "spend": 899862.4,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "NZ-1-ACT-0102034",
+     "title": "Pacific Justice Sector 2021-2026",
+     "org": "New Zealand Ministry of Foreign Affairs and Trade",
+     "end": "2026-11-30",
+     "spend": 620556.5460000001,
+     "pct": 6.7,
+     "names": null
+    },
+    {
+     "aid": "AU-5-INO015",
+     "title": "Australia Awards Pacific Scholarships",
+     "org": "Australia Aid",
+     "end": "2026-12-31",
+     "spend": 62601.109997,
+     "pct": 9.062905,
+     "names": null
+    },
+    {
+     "aid": "NZ-1-ACT-0100405",
+     "title": "ADB Pacific Private Sector Development Initiative Phase IV",
+     "org": "New Zealand Ministry of Foreign Affairs and Trade",
+     "end": "2026-10-31",
+     "spend": 56854.72364,
+     "pct": 1.43,
+     "names": null
+    },
+    {
+     "aid": "XM-DAC-45001-C475",
+     "title": "Pacific: EU-Pacific Business Forum",
+     "org": "International Trade Centre (ITC)",
+     "end": "2026-10-27",
+     "spend": 44776.08,
+     "pct": 6,
+     "names": null
+    },
+    {
+     "aid": "NZ-1-ACT-0103469",
+     "title": "Anamata and Scholarships Future State",
+     "org": "New Zealand Ministry of Foreign Affairs and Trade",
+     "end": "2027-02-01",
+     "spend": 44142.6559214184,
+     "pct": 1.1428572,
+     "names": null
+    },
+    {
+     "aid": "AU-5-INM394",
+     "title": "Australia Awards Pacific Scholarship - 2018 Intake",
+     "org": "Australia Aid",
+     "end": "2026-12-31",
+     "spend": 41509.436003459996,
+     "pct": 11.996295,
+     "names": null
+    },
+    {
+     "aid": "NZ-1-ACT-0104607",
+     "title": "FY25-26 Pacific Diplomatic Training In-Country & In-Region",
+     "org": "New Zealand Ministry of Foreign Affairs and Trade",
+     "end": "2026-12-20",
+     "spend": 20557.344049219682,
+     "pct": 3.4450653,
+     "names": null
+    },
+    {
+     "aid": "NZ-1-ACT-0104602",
+     "title": "FY25-26 Pacific Good Governance In-Country",
+     "org": "New Zealand Ministry of Foreign Affairs and Trade",
+     "end": "2026-10-20",
+     "spend": 15145.008285,
+     "pct": 6.45,
+     "names": null
+    },
+    {
+     "aid": "NZ-1-ACT-0104606",
+     "title": "FY25-26 Pacific Infrastructure Project Management In Country",
+     "org": "New Zealand Ministry of Foreign Affairs and Trade",
+     "end": "2026-12-20",
+     "spend": 10372.67028,
+     "pct": 3.33,
+     "names": null
+    },
+    {
+     "aid": "NZ-1-ACT-0104608",
+     "title": "FY25-26 Pacific Climate Resilience In-Country",
+     "org": "New Zealand Ministry of Foreign Affairs and Trade",
+     "end": "2026-12-20",
+     "spend": 8544.350926000001,
+     "pct": 3.34,
+     "names": null
+    },
+    {
+     "aid": "NZ-1-ACT-0104605",
+     "title": "FY25-26 Pacific Public Sector Leadership (Mid-Level) Course 2 In Country",
+     "org": "New Zealand Ministry of Foreign Affairs and Trade",
+     "end": "2026-12-20",
+     "spend": 514.5575160000001,
+     "pct": 3.3,
+     "names": null
+    },
+    {
+     "aid": "XM-DAC-41114-PROJECT-00127786",
+     "title": "Nauru Accountable Inclusive Governance (NAIG) Project",
+     "org": "United Nations Development Programme",
+     "end": "2026-12-31",
+     "spend": 0.0,
+     "pct": 100,
+     "names": null
+    }
+   ],
    "n_misnamed": 0,
    "misnamed": [],
    "currency": [
@@ -6946,6 +12999,157 @@
      "name": "Global Environment Facility",
      "n": 2,
      "spend": 1297121.7815744001
+    }
+   ],
+   "orgs_90": [
+    {
+     "ref": "NZ-1",
+     "name": "New Zealand Ministry of Foreign Affairs and Trade",
+     "usd": 793983.5661767599
+    },
+    {
+     "ref": "XM-DAC-41114",
+     "name": "United Nations Development Programme",
+     "usd": -250.0
+    }
+   ],
+   "new_starts_all": [
+    {
+     "aid": "NZ-1-ACT-0104719",
+     "title": "Niue Core and Sector Support 2026-27",
+     "org": "New Zealand Ministry of Foreign Affairs and Trade",
+     "start": "2026-07-13",
+     "commitment": 8662584.0,
+     "pct": 100,
+     "names": null
+    }
+   ],
+   "ending_all": [
+    {
+     "aid": "NZ-1-ACT-0104285",
+     "title": "Niue Core and Sector Support 2025-26",
+     "org": "New Zealand Ministry of Foreign Affairs and Trade",
+     "end": "2026-12-31",
+     "spend": 8851202.0,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "NZ-1-ACT-0100787",
+     "title": "Niue Sector Support: Asset Management: 2019/20-2025/26",
+     "org": "New Zealand Ministry of Foreign Affairs and Trade",
+     "end": "2026-12-31",
+     "spend": 6523446.5,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "NZ-1-ACT-0105157",
+     "title": "Niue Supplementary Core Support 2025/2026",
+     "org": "New Zealand Ministry of Foreign Affairs and Trade",
+     "end": "2026-09-30",
+     "spend": 2887528.2,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "NZ-1-ACT-0100216",
+     "title": "Pacific Maritime Safety Programme Phase 3 + 4",
+     "org": "New Zealand Ministry of Foreign Affairs and Trade",
+     "end": "2026-11-30",
+     "spend": 2180861.7347999997,
+     "pct": 14.28,
+     "names": null
+    },
+    {
+     "aid": "NZ-1-ACT-0102034",
+     "title": "Pacific Justice Sector 2021-2026",
+     "org": "New Zealand Ministry of Foreign Affairs and Trade",
+     "end": "2026-11-30",
+     "spend": 620556.5460000001,
+     "pct": 6.7,
+     "names": null
+    },
+    {
+     "aid": "AU-5-INO015",
+     "title": "Australia Awards Pacific Scholarships",
+     "org": "Australia Aid",
+     "end": "2026-12-31",
+     "spend": 45070.4879818,
+     "pct": 6.524957,
+     "names": null
+    },
+    {
+     "aid": "XM-DAC-45001-C475",
+     "title": "Pacific: EU-Pacific Business Forum",
+     "org": "International Trade Centre (ITC)",
+     "end": "2026-10-27",
+     "spend": 44776.08,
+     "pct": 6,
+     "names": null
+    },
+    {
+     "aid": "NZ-1-ACT-0103469",
+     "title": "Anamata and Scholarships Future State",
+     "org": "New Zealand Ministry of Foreign Affairs and Trade",
+     "end": "2027-02-01",
+     "spend": 44142.6559214184,
+     "pct": 1.1428572,
+     "names": null
+    },
+    {
+     "aid": "NZ-1-ACT-0104607",
+     "title": "FY25-26 Pacific Diplomatic Training In-Country & In-Region",
+     "org": "New Zealand Ministry of Foreign Affairs and Trade",
+     "end": "2026-12-20",
+     "spend": 41114.6875017208,
+     "pct": 6.8901305,
+     "names": null
+    },
+    {
+     "aid": "NZ-1-ACT-0104606",
+     "title": "FY25-26 Pacific Infrastructure Project Management In Country",
+     "org": "New Zealand Ministry of Foreign Affairs and Trade",
+     "end": "2026-12-20",
+     "spend": 20776.489719999998,
+     "pct": 6.67,
+     "names": null
+    },
+    {
+     "aid": "NZ-1-ACT-0104608",
+     "title": "FY25-26 Pacific Climate Resilience In-Country",
+     "org": "New Zealand Ministry of Foreign Affairs and Trade",
+     "end": "2026-12-20",
+     "spend": 17063.119963,
+     "pct": 6.67,
+     "names": null
+    },
+    {
+     "aid": "NZ-1-ACT-0104602",
+     "title": "FY25-26 Pacific Good Governance In-Country",
+     "org": "New Zealand Ministry of Foreign Affairs and Trade",
+     "end": "2026-10-20",
+     "spend": 15168.488918000001,
+     "pct": 6.46,
+     "names": null
+    },
+    {
+     "aid": "NZ-1-ACT-0100405",
+     "title": "ADB Pacific Private Sector Development Initiative Phase IV",
+     "org": "New Zealand Ministry of Foreign Affairs and Trade",
+     "end": "2026-10-31",
+     "spend": 7554.1241199999995,
+     "pct": 0.19,
+     "names": null
+    },
+    {
+     "aid": "NZ-1-ACT-0104605",
+     "title": "FY25-26 Pacific Public Sector Leadership (Mid-Level) Course 2 In Country",
+     "org": "New Zealand Ministry of Foreign Affairs and Trade",
+     "end": "2026-12-20",
+     "spend": 1044.707684,
+     "pct": 6.7,
+     "names": null
     }
    ],
    "n_misnamed": 0,
@@ -7404,6 +13608,153 @@
      "name": "Food and Agriculture Organization (FAO)",
      "n": 3,
      "spend": 139180.52000000002
+    }
+   ],
+   "orgs_90": [
+    {
+     "ref": "NZ-1",
+     "name": "New Zealand Ministry of Foreign Affairs and Trade",
+     "usd": 1202236.4763409991
+    },
+    {
+     "ref": "XM-DAC-41301",
+     "name": "Food and Agriculture Organization (FAO)",
+     "usd": 73978.36
+    },
+    {
+     "ref": "XM-DAC-46004",
+     "name": "Asian Development Bank",
+     "usd": 43155.51
+    },
+    {
+     "ref": "XM-DAC-928",
+     "name": "World Health Organization",
+     "usd": 12036.610000000002
+    },
+    {
+     "ref": "XM-DAC-41302",
+     "name": "International Labour Organization (ILO)",
+     "usd": 1028.99
+    }
+   ],
+   "new_starts_all": [],
+   "ending_all": [
+    {
+     "aid": "NZ-1-ACT-0101634",
+     "title": "CCP - Access to Finance",
+     "org": "New Zealand Ministry of Foreign Affairs and Trade",
+     "end": "2027-02-01",
+     "spend": 6073648.5,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "NZ-1-ACT-0101226",
+     "title": "Climate Change Programme - Climate Information for Decision Making",
+     "org": "New Zealand Ministry of Foreign Affairs and Trade",
+     "end": "2026-10-31",
+     "spend": 3522881.5632066,
+     "pct": 36.53846,
+     "names": null
+    },
+    {
+     "aid": "XM-DAC-41317-FP036",
+     "title": "Pacific Islands Renewable Energy Investment Program",
+     "org": "Green Climate Fund",
+     "end": "2026-09-30",
+     "spend": 2428450.0,
+     "pct": 14.285,
+     "names": null
+    },
+    {
+     "aid": "NZ-1-ACT-0100216",
+     "title": "Pacific Maritime Safety Programme Phase 3 + 4",
+     "org": "New Zealand Ministry of Foreign Affairs and Trade",
+     "end": "2026-11-30",
+     "spend": 2186970.5911999997,
+     "pct": 14.32,
+     "names": null
+    },
+    {
+     "aid": "NZ-1-ACT-0102286",
+     "title": "Pacific Digital Economy Programme",
+     "org": "New Zealand Ministry of Foreign Affairs and Trade",
+     "end": "2027-03-01",
+     "spend": 1818439.4,
+     "pct": 50,
+     "names": null
+    },
+    {
+     "aid": "NZ-1-ACT-0102034",
+     "title": "Pacific Justice Sector 2021-2026",
+     "org": "New Zealand Ministry of Foreign Affairs and Trade",
+     "end": "2026-11-30",
+     "spend": 620556.5460000001,
+     "pct": 6.7,
+     "names": null
+    },
+    {
+     "aid": "NZ-1-ACT-0100405",
+     "title": "ADB Pacific Private Sector Development Initiative Phase IV",
+     "org": "New Zealand Ministry of Foreign Affairs and Trade",
+     "end": "2026-10-31",
+     "spend": 127624.93907999998,
+     "pct": 3.21,
+     "names": null
+    },
+    {
+     "aid": "GB-COH-00070527-IGC-P3",
+     "title": "IGC Phase III",
+     "org": "London School of Economics and Political Science",
+     "end": "2026-09-30",
+     "spend": 93720.55396640001,
+     "pct": 0.27844,
+     "names": null
+    },
+    {
+     "aid": "NZ-1-ACT-0104607",
+     "title": "FY25-26 Pacific Diplomatic Training In-Country & In-Region",
+     "org": "New Zealand Ministry of Foreign Affairs and Trade",
+     "end": "2026-12-20",
+     "spend": 61733.76327940961,
+     "pct": 10.345541,
+     "names": null
+    },
+    {
+     "aid": "XM-DAC-41301-760000",
+     "title": "Restoring Biodiversity and Cultural Resilience in the Cook Islands through Native Species Recovery, Invasive S",
+     "org": "Food and Agriculture Organization (FAO)",
+     "end": "2026-12-31",
+     "spend": 51797.97,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "XM-DAC-45001-C475",
+     "title": "Pacific: EU-Pacific Business Forum",
+     "org": "International Trade Centre (ITC)",
+     "end": "2026-10-27",
+     "spend": 44776.08,
+     "pct": 6,
+     "names": null
+    },
+    {
+     "aid": "NZ-1-ACT-0104606",
+     "title": "FY25-26 Pacific Infrastructure Project Management In Country",
+     "org": "New Zealand Ministry of Foreign Affairs and Trade",
+     "end": "2026-12-20",
+     "spend": 20745.34056,
+     "pct": 6.66,
+     "names": null
+    },
+    {
+     "aid": "NZ-1-ACT-0104605",
+     "title": "FY25-26 Pacific Public Sector Leadership (Mid-Level) Course 2 In Country",
+     "org": "New Zealand Ministry of Foreign Affairs and Trade",
+     "end": "2026-12-20",
+     "spend": 1044.707684,
+     "pct": 6.7,
+     "names": null
     }
    ],
    "n_misnamed": 0,

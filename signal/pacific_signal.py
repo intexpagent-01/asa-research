@@ -18,8 +18,8 @@ from concurrent.futures import ThreadPoolExecutor
 from zoneinfo import ZoneInfo
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-DATA = os.path.join(HERE, "data")
-SITE = os.path.join(os.path.dirname(HERE), "site")
+DATA = os.environ.get("SIGNAL_DATA") or os.path.join(HERE, "data")
+SITE = os.environ.get("SIGNAL_SITE") or os.path.join(os.path.dirname(HERE), "site")
 DPORTAL = "https://d-portal.org/q.json"
 WB = "https://search.worldbank.org/api/v2/projects"
 REPO = "https://github.com/intexpagent-01/asa-research"
@@ -198,6 +198,10 @@ def analyze(code, name):
            "new_starts":dedupe(new_starts)[:8],"n_new_starts":len(new_starts),"ending_soon":dedupe(ending)[:6],"n_ending_soon":len(ending),
            "stale":stale[:5],"n_stale":len(stale),"implausible":implausible[:5],"n_activities":len(a_seen),
            "n_active":len(active),"largest_active":dedupe(active)[:6],"active_by_funder":active_by_funder,
+           # full sets for the change log (the displayed lists above are truncated)
+           "orgs_90":[{"ref":o,"name":orgname[o],"usd":v} for o,v in sorted(dis90.items(), key=lambda kv: -kv[1])],
+           "new_starts_all":[{k:x[k] for k in ("aid","title","org","start","commitment","pct","names")} for x in new_starts],
+           "ending_all":[{k:x[k] for k in ("aid","title","org","end","spend","pct","names")} for x in ending],
            "n_misnamed":len(misnamed),"misnamed":misnamed[:4],
            "currency":currency,"wb_recent":wb_recent[:6],"wb_pipeline":[{"id":p["id"],"name":p["name"],"amount":p["amount"]} for p in wb_pipe][:6],"n_wb_total":len(wb)}
     print(f"{name:26s} trans {n_trans:7d} (other-country {n_other:6d}) 90d ${tot90/1e6:7.1f}M prev ${totprev/1e6:7.1f}M orgs {len(dis90):3d} new {len(new_starts):3d} ending {len(ending):3d} active {len(active):4d} stale {len(stale):3d} WB {len(wb_recent)}  [{time.time()-t0:.0f}s]", flush=True)
@@ -318,24 +322,17 @@ def brief(r, pr, issue_date):
         S.append(f"{plural(r['n_stale'],'activity','activities')} {'is' if r['n_stale']==1 else 'are'} still recorded as under implementation more than a year past {'its' if r['n_stale']==1 else 'their'} end date, so the active portfolio is smaller than the record suggests.")
     return " ".join(S)
 
-def changes(r, pr):
-    """What changed since the previous issue for one country. Returns a list of HTML strings."""
+def changes(r, pr, days=None):
+    """What changed since the previous issue for one country. Returns a list of HTML strings, most useful first.
+    Entries compare full sets where the previous issue stored them (orgs_90, new_starts_all, ending_all) and fall
+    back to the displayed rows for older issues. Exits from the funder table are mostly the 90-day window moving,
+    so they are grouped in one sentence; count drift below three units or five percent is not reported."""
     if not pr: return None
-    out = []
+    out = []; cn = r["name"]; moved = f"the window moved {days} day{'s' if days != 1 else ''} and " if days else ""
+    def more(n, what): return f" And {n} more {what}." if n > 0 else ""
     d, p = r["dis90"], pr["dis90"]
     if abs(d-p) > max(1e5, 0.05*max(p,1)):
-        out.append(f"90-day disbursements {usd(p)} → {usd(d)} ({'+' if d>=p else '−'}{usd(abs(d-p))}); the window moved and publishers added or revised records.")
-    cur = {o["ref"]: o for o in r["top_orgs_90"]}; prv = {o["ref"]: o for o in pr["top_orgs_90"]}
-    for ref in cur:
-        if ref not in prv: out.append(f"{esc(cur[ref]['name'])} entered the 90-day funder table at {usd(cur[ref]['usd'])}.")
-    for ref in prv:
-        if ref not in cur: out.append(f"{esc(prv[ref]['name'])} ({usd(prv[ref]['usd'])} last issue) dropped out of the 90-day funder table.")
-    pa = {a["aid"] for a in pr["new_starts"]}
-    for a in r["new_starts"]:
-        if a["aid"] not in pa: out.append(f"Newly listed start: {esc(a['title'])} ({esc(a['org'])}, from {a['start']}{', '+usd(a['commitment'])+' committed' if a['commitment'] else ''}).")
-    pe = {a["aid"] for a in pr["ending_soon"]}
-    for a in r["ending_soon"]:
-        if a["aid"] not in pe: out.append(f"Now ending within 180 days: {esc(a['title'])} ({esc(a['org'])}, ends {a['end']}).")
+        out.append(f"90-day disbursements {usd(p)} &rarr; {usd(d)} ({'+' if d>=p else '&minus;'}{usd(abs(d-p))}); {moved}publishers added or revised records.")
     pw = {w["id"] for w in pr["wb_recent"]}
     for w in r["wb_recent"]:
         if w["id"] not in pw: out.append(f"World Bank approval now on record: {esc(w['name'])} ({w['approved']}, {usd(w['amount'])}).")
@@ -344,8 +341,24 @@ def changes(r, pr):
         q = pc.get(f["ref"])
         if q and f["latest"] and (q["latest"] or "") < f["latest"]:
             out.append(f"{esc(f['name'])} published newer data: newest transaction now {f['latest']} (was {q['latest'] or 'none'}).")
-    for k, lbl in (("n_stale","stale activities"),("n_quiet","quiet funders"),("n_active","active activities")):
-        if k in r and k in pr and r[k] != pr[k]: out.append(f"{lbl.capitalize()}: {pr[k]} → {r[k]}.")
+    cur = {o["ref"]: o for o in r.get("orgs_90") or r["top_orgs_90"]}; prv = {o["ref"]: o for o in pr.get("orgs_90") or pr["top_orgs_90"]}
+    entered = [cur[k] for k in cur if k not in prv]; entered.sort(key=lambda o: -o["usd"])
+    for o in entered[:3]: out.append(f"{esc(o['name'])} entered the 90-day funder table at {usd(o['usd'])}.")
+    if len(entered) > 3: out.append(f"{len(entered)-3} more funders entered the table: {joinlist(esc(o['name']) for o in entered[3:8])}.")
+    pa = {a["aid"] for a in (pr.get("new_starts_all") or pr["new_starts"])}
+    new = [a for a in (r.get("new_starts_all") or r["new_starts"]) if a["aid"] not in pa]
+    new.sort(key=lambda a: (bool(a.get("names")), -(a.get("commitment") or 0)))
+    for a in new[:3]: out.append(f"Newly listed start: {esc(a['title'])} ({esc(a['org'])}, from {a['start']}{', '+usd(a['commitment'])+' committed' if a.get('commitment') else ''}){tag(a, cn)}.")
+    if len(new) > 3: out[-1] += more(len(new)-3, "newly listed starts")
+    pe = {a["aid"] for a in (pr.get("ending_all") or pr["ending_soon"])}
+    ends = [a for a in (r.get("ending_all") or r["ending_soon"]) if a["aid"] not in pe]
+    ends.sort(key=lambda a: (bool(a.get("names")), -(a.get("spend") or 0)))
+    for a in ends[:3]: out.append(f"Now ending within 180 days: {esc(a['title'])} ({esc(a['org'])}, ends {a['end']}{', '+usd(a['spend'])+' spent' if a.get('spend') else ''}){tag(a, cn)}.")
+    if len(ends) > 3: out[-1] += more(len(ends)-3, "activities now ending within 180 days")
+    left = [prv[k] for k in prv if k not in cur]; left.sort(key=lambda o: -o["usd"])
+    if left: out.append("No longer in the 90-day funder table (their last reported disbursement fell out of the window, or was revised): " + joinlist(f"{esc(o['name'])} ({usd(o['usd'])} last issue)" for o in left[:5]) + (f" and {len(left)-5} more" if len(left) > 5 else "") + ".")
+    for k, lbl in (("n_active","Active activities"),("n_stale","Stale activities"),("n_quiet","Quiet funders")):
+        if k in r and k in pr and abs(r[k]-pr[k]) >= max(3, 0.05*pr[k]): out.append(f"{lbl}: {pr[k]} &rarr; {r[k]}.")
     return out
 
 # ---------------------------------------------------------------- page bodies
@@ -458,7 +471,7 @@ def render_region(snap, prev, snaps, order, issue_no, issue_date):
     else:
         any_change = False
         for c in order:
-            ch = changes(C[c], P.get(c)) if c in P else None
+            ch = changes(C[c], P.get(c), (dt.date.fromisoformat(snap['date'])-dt.date.fromisoformat(prev['date'])).days) if c in P else None
             if ch:
                 any_change = True
                 H.append(f"<div class=change><strong><a href='{page(c)}'>{esc(NAME[c])}</a></strong>: " + " ".join(ch[:4]) + (f" <a href='{page(c)}#changes'>{len(ch)-4} more</a>." if len(ch) > 4 else "") + "</div>")
@@ -492,7 +505,7 @@ def render_country(code, r, pr, prev, snaps, order, issue_no, issue_date):
 </div>
 <h2>In brief</h2><p class=brief>{brief(r, pr, issue_date)}</p>
 <h2 id=changes>Since the previous issue{' ('+longdate(prev['date'])+')' if prev else ''}</h2>""")
-    ch = changes(r, pr)
+    ch = changes(r, pr, (dt.date.fromisoformat(snaps[-1]['date'])-dt.date.fromisoformat(prev['date'])).days if prev else None)
     if ch is None: H.append("<p class=muted>This is the first issue for this country. From the next issue this section lists what entered or left the funder table, newly listed starts and endings, new World Bank approvals, and which publishers released newer data.</p>")
     elif not ch: H.append(f"<p class=muted>No change in the headline figures since {longdate(prev['date'])}; sources were re-read on {snaps[-1]['generated'][:10]}.</p>")
     else: H.append("".join(f"<div class=change>{c}</div>" for c in ch))
