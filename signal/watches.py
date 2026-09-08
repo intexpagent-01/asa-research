@@ -1,0 +1,181 @@
+"""Standing watches for the Pacific Aid Signal.
+
+A watch is one country plus a short query: a funder, a keyword, a tender number, a project name. On every issue
+it is matched against the country's current activity index, funder tables, World Bank projects and the DFAT
+items naming the country, and the change log reports what matched since the previous issue. No model call at
+runtime; the question outlives the session that filed it.
+
+Sources: `watches.json` beside this file (filed by the Operator or Asa), and optionally open GitHub Issues on the
+public repository titled "Watch <country>: <query>" when SIGNAL_WATCH_ISSUES=1. Issue bodies are never read or
+rendered; the query is reduced to a short safe character set before use; the author is not shown.
+"""
+import datetime as dt, json, os, re, sys, urllib.request
+from dfat_notices import for_country
+
+LOCAL = os.environ.get("SIGNAL_WATCHES") or os.path.join(os.path.dirname(os.path.abspath(__file__)), "watches.json")
+ISSUES_API = "https://api.github.com/repos/intexpagent-01/asa-research/issues?state=open&per_page=50"
+SAFE = re.compile(r"[^A-Za-z0-9 .,'&()/-]")
+STATUS = {1: "pipeline", 2: "implementation", 3: "finalisation"}
+KIND = {"activity": "IATI activity", "funder": "funder", "wb": "World Bank project", "dfat-item": "DFAT pipeline item", "notice": "DFAT notice"}
+
+def usd(v):
+    v = v or 0
+    return f"${v/1e9:.1f}B" if abs(v) >= 9.995e8 else f"${v/1e6:.1f}M" if abs(v) >= 9.995e5 else f"${v/1e3:.0f}K" if abs(v) >= 999.5 else f"${v:.0f}"
+def esc(s): return (str(s) if s is not None else "").replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
+
+def clean_query(q):
+    q = SAFE.sub(" ", q or ""); q = re.sub(r"\s+", " ", q).strip()[:60]
+    return q if len(q) >= 3 else None
+
+def load(aliases, names):
+    """Watches as {id, code, query, since, source, note[, url]}; local file first, GitHub Issues only if enabled."""
+    W = []
+    try:
+        for i, w in enumerate(json.load(open(LOCAL)), 1):
+            q = clean_query(w.get("query")); code = w.get("country")
+            if q and code in aliases:
+                W.append({"id": w.get("id") or f"W{i}", "code": code, "query": q, "since": w.get("since"), "source": "local", "note": w.get("note") or ""})
+    except FileNotFoundError:
+        pass
+    if os.environ.get("SIGNAL_WATCH_ISSUES") == "1":
+        try: W += from_issues(aliases, names)
+        except Exception as e: print(f"!! GitHub issues read failed ({e}); local watches only", file=sys.stderr)
+    return W
+
+def from_issues(aliases, names):
+    req = urllib.request.Request(ISSUES_API, headers={"Accept": "application/vnd.github+json", "User-Agent": "pacific-aid-signal"})
+    rows = json.load(urllib.request.urlopen(req, timeout=15)); out = []
+    for it in rows:
+        if "pull_request" in it: continue
+        m = re.match(r"\s*watch\s+(.+?)\s*:\s*(.+)$", it.get("title") or "", re.I)
+        if not m: continue
+        want = m.group(1).strip().lower()
+        code = next((c for c, al in aliases.items() if want in [a.lower() for a in al] + [c.lower(), names[c].lower()]), None)
+        q = clean_query(m.group(2))
+        if code and q:
+            out.append({"id": f"#{it['number']}", "code": code, "query": q, "since": (it.get("created_at") or "")[:10], "source": "issue", "note": "", "url": it.get("html_url")})
+    return out
+
+# ---------------------------------------------------------------- matching
+def _pat(q): return r"(?<![A-Za-z0-9])" + re.escape(q) + r"(?![A-Za-z0-9])"
+def hit(q, *texts):
+    flags = re.I if len(q) > 3 else 0
+    return any(t and re.search(_pat(q), str(t), flags) for t in texts)
+
+def matches(w, r, dfat, aliases):
+    """Hits for one watch in one country's snapshot record: {kind, key, label, detail, sort}. Returns None when the
+    record has no activity index (issues before the watches feature), so a diff against it is not attempted."""
+    idx = r.get("acts_index")
+    if not idx: return None
+    q = w["query"]; H = []
+    cols = idx["cols"]
+    for row in idx["rows"]:
+        a = dict(zip(cols, row))
+        if hit(q, a["title"], a["org"], a["aid"]):
+            st = STATUS.get(a["st"], str(a["st"])) + (", stale" if a.get("stale") else "")
+            det = f"{a['org']}; {st}; {a['start'] or '?'} to {a['end'] or '?'}; {usd(a['spend'])} spent"
+            if a.get("pct") is not None and a["pct"] < 99.5: det += f"; {'under 1' if a['pct'] < 1 else f'{a['pct']:.0f}'}% declared for this country"
+            if a.get("names"): det += f"; title names {a['names']}"
+            rank = 3 if a.get("stale") else {2: 0, 1: 1, 3: 2}.get(a["st"], 3)
+            H.append({"kind": "activity", "key": a["aid"], "label": a["title"], "detail": det, "sort": (rank, -(a["spend"] or 0))})
+    F = {}
+    for o in r.get("orgs_90", []):
+        if hit(q, o["name"], o["ref"]): F.setdefault(o["ref"], {"name": o["name"], "bits": []})["bits"].append(f"disbursed {usd(o['usd'])} in the last 90 days")
+    for f in r.get("currency", []):
+        if hit(q, f["name"], f["ref"]): F.setdefault(f["ref"], {"name": f["name"], "bits": []})["bits"].append(f"newest transaction {f['latest'] or 'none'}; {usd(f['lifetime_usd'])} lifetime")
+    for ref, name, last in r.get("quiet_orgs", []):
+        if hit(q, name, ref): F.setdefault(ref, {"name": name, "bits": []})["bits"].append(f"quiet since {last}")
+    for f in r.get("active_by_funder", []):
+        if hit(q, f["name"], f["ref"]): F.setdefault(f["ref"], {"name": f["name"], "bits": []})["bits"].append(f"{f['n']} active activities")
+    for ref, v in F.items(): H.append({"kind": "funder", "key": ref, "label": v["name"], "detail": "; ".join(v["bits"]), "sort": (0, 0)})
+    for p in r.get("wb_recent", []):
+        if hit(q, p["name"], p["id"]): H.append({"kind": "wb", "key": p["id"], "label": p["name"], "detail": f"approved {p['approved']}; {usd(p['amount'])}", "sort": (0, -(p["amount"] or 0))})
+    for p in r.get("wb_pipeline", []):
+        if hit(q, p["name"], p["id"]): H.append({"kind": "wb", "key": p["id"], "label": p["name"], "detail": "pipeline" + (f"; {usd(p['amount'])}" if p.get("amount") else ""), "sort": (1, 0)})
+    cn, rn, cp, rp = for_country(dfat, r["code"], aliases)
+    for p in cp + rp:
+        if hit(q, p["title"], p["id"], p.get("status")): H.append({"kind": "dfat-item", "key": p["id"], "label": f"{p['id']} {p['title']}", "detail": f"{p['section']}; {p.get('status') or ''}".rstrip("; "), "sort": (0, 0)})
+    cutoff = (dt.date.today() - dt.timedelta(days=365)).isoformat()      # older notices are history, not a live match
+    for n in cn + rn:
+        if (n.get("date") or "") >= cutoff and hit(q, n["title"], n.get("summary")):
+            H.append({"kind": "notice", "key": n["url"], "label": n["title"], "detail": f"{n.get('date') or ''} {n.get('category') or ''}".strip(), "sort": (0, -int((n.get("date") or "0000").replace("-", "") or 0)), "url": n["url"]})
+    H.sort(key=lambda h: (["dfat-item", "notice", "funder", "activity", "wb"].index(h["kind"]), h["sort"], h["label"]))
+    return H
+
+def diff(cur, prev):
+    """(new, gone) by (kind, key); prev None means the watch was not checked against the previous issue."""
+    if prev is None: return None, None
+    pk = {(h["kind"], h["key"]) for h in prev}; ck = {(h["kind"], h["key"]) for h in cur}
+    return [h for h in cur if (h["kind"], h["key"]) not in pk], [h for h in prev if (h["kind"], h["key"]) not in ck]
+
+def first_seen(w, snaps, aliases):
+    """Issue date on which each hit first matched, across issues that carry an activity index."""
+    seen = {}
+    for s in snaps:
+        r = s["countries"].get(w["code"])
+        if not r or not r.get("acts_index"): continue
+        for h in matches(w, r, s.get("dfat"), aliases) or []: seen.setdefault((h["kind"], h["key"]), s["date"])
+    return seen
+
+# ---------------------------------------------------------------- rendering
+def line(h):
+    lab = f"<a href='{esc(h['url'])}'>{esc(h['label'])}</a>" if h.get("url") else esc(h["label"])
+    return f"{lab} <span class=muted>({KIND[h['kind']]}; {esc(h['detail'])})</span>"
+
+def change_lines(watches, r, pr, dfat, pdfat, aliases):
+    """Change-log entries for a country's watches: new and lost matches, three per watch."""
+    out = []
+    for w in watches:
+        cur = matches(w, r, dfat, aliases)
+        if cur is None: continue
+        new, gone = diff(cur, matches(w, pr, pdfat, aliases) if pr else None)
+        if new is None:
+            out.append(f"Watch “{esc(w['query'])}” first checked in this issue: {len(cur)} match{'es' if len(cur) != 1 else ''} on file."); continue
+        for h in new[:3]: out.append(f"Watch “{esc(w['query'])}”: new match, {line(h)}.")
+        if len(new) > 3: out[-1] += f" And {len(new)-3} more new matches for this watch."
+        if gone: out.append(f"Watch “{esc(w['query'])}”: no longer matching " + ", ".join(esc(h["label"]) for h in gone[:3]) + (f" and {len(gone)-3} more" if len(gone) > 3 else "") + " (left the record, or the match moved outside the window).")
+    return out
+
+def brief_sentence(watches, r, pr, dfat, pdfat, aliases, name):
+    if not watches: return ""
+    n_new = 0; checked = 0; first = 0; on_file = 0
+    for w in watches:
+        cur = matches(w, r, dfat, aliases)
+        if cur is None: continue
+        checked += 1; on_file += len(cur); new, _ = diff(cur, matches(w, pr, pdfat, aliases) if pr else None)
+        if new is None: first += 1
+        else: n_new += len(new)
+    if not checked: return ""
+    k = len(watches); head = f"{k} standing watch{'es are' if k != 1 else ' is'} held for {name}; "
+    if first == checked: return head + f"first checked in this issue, {on_file} match{'es' if on_file != 1 else ''} on file."
+    return head + (f"{n_new} new match{'es' if n_new != 1 else ''} this issue." if n_new else "no new matches this issue.")
+
+def html(watches, r, pr, snaps, dfat, pdfat, aliases, longdate, name, limit=8):
+    """Section body for one country page."""
+    if not watches:
+        return f"<p class=muted>No standing watch is held for {esc(name)}. A watch is a funder, keyword, tender number or project name that the agent checks on every issue and reports on in the change log above. Watches are filed by the Operator of this experiment or by the agent; a public route to file one is not open yet.</p>"
+    H = [f"<p style='font-size:.88rem'>A watch is a question asked once and checked on every issue: the agent matches it against {esc(name)}'s current activities, funders, World Bank projects and DFAT items and reports what changed. Watches are filed by the Operator of this experiment or by the agent; a public route to file one is not open yet.</p>"]
+    for w in watches:
+        src = f"filed {longdate(w['since'])}" if w.get("since") else "filed date unknown"
+        if w.get("url"): src += f", <a href='{esc(w['url'])}'>issue {esc(w['id'])}</a>"
+        elif w.get("note"): src += f"; {esc(w['note'])}"
+        H.append(f"<h4>“{esc(w['query'])}” <span class=muted style='font-weight:normal'>({src})</span></h4>")
+        cur = matches(w, r, dfat, aliases)
+        if cur is None: H.append("<p class=muted>Not yet checked: this issue carries no activity index. From the next issue the watch is matched on every run.</p>"); continue
+        new, gone = diff(cur, matches(w, pr, pdfat, aliases) if pr else None)
+        if new is None: status = f"First checked in this issue: {len(cur)} match{'es' if len(cur) != 1 else ''} on file."
+        elif new or gone: status = f"Since the previous issue: {len(new)} new match{'es' if len(new) != 1 else ''}" + (f", {len(gone)} no longer matching" if gone else "") + f"; {len(cur)} on file."
+        else: status = f"Since the previous issue: no change; {len(cur)} match{'es' if len(cur) != 1 else ''} on file."
+        H.append(f"<p style='font-size:.9rem'><strong>{status}</strong></p>")
+        if cur:
+            seen = first_seen(w, snaps, aliases); base = min(seen.values()) if seen else None
+            newk = {(h["kind"], h["key"]) for h in (new or [])}
+            H.append("<ul>")
+            for h in cur[:limit]:
+                fs = seen.get((h["kind"], h["key"]))
+                mark = " <span class=up>new</span>" if (h["kind"], h["key"]) in newk else (f" <span class=muted>first matched {longdate(fs)}</span>" if fs and base and fs > base else "")
+                H.append(f"<li>{line(h)}{mark}</li>")
+            if len(cur) > limit: H.append(f"<li class=muted>and {len(cur)-limit} more</li>")
+            H.append("</ul>")
+        else: H.append("<p class=muted>Nothing on record matches this watch.</p>")
+    return "\n".join(H)

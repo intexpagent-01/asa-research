@@ -13,13 +13,15 @@ Usage: python3 pacific_signal.py            fetch, snapshot, render
        python3 pacific_signal.py --wb-only   refresh World Bank data in the newest snapshot, render
        python3 pacific_signal.py --dfat-only refresh DFAT notices and pipeline in the newest snapshot, render
 """
-import json, os, re, sys, time, glob, urllib.request, urllib.parse, datetime as dt
+import json, gzip, os, re, sys, time, glob, urllib.request, urllib.parse, datetime as dt
 from collections import defaultdict
 from concurrent.futures import ThreadPoolExecutor
 from zoneinfo import ZoneInfo
 
 HERE = os.path.dirname(os.path.abspath(__file__)); sys.path.insert(0, HERE)
 import dfat_notices
+import watches
+WATCHES = {}          # code -> list of standing watches, loaded once per render
 DATA = os.environ.get("SIGNAL_DATA") or os.path.join(HERE, "data")
 SITE = os.environ.get("SIGNAL_SITE") or os.path.join(os.path.dirname(HERE), "site")
 DPORTAL = "https://d-portal.org/q.json"
@@ -153,6 +155,7 @@ def analyze(code, name):
     quiet = [(o, orgname[o], d2s(lastday[o])) for o in dis365 if dis365[o] > 0 and lastday[o] < D90 and o not in dis90]
     # activity-level signals
     a_seen = set(); new_starts = []; ending = []; stale = []; implausible = []; active = []; misnamed = []
+    index = []            # every activity in pipeline, implementation or finalisation status: what standing watches are matched against
     af_n = defaultdict(int); af_spend = defaultdict(float); af_name = {}
     for a in acts:
         if a["aid"] in a_seen: continue
@@ -162,6 +165,7 @@ def analyze(code, name):
                "end":d2s(a.get("day_end")),"spend":(a.get("spend") or 0)*pw,"commitment":(a.get("commitment") or 0)*pw,"pct":p,
                "names":names_other(a.get("title"), code)}
         st, ds, de = a.get("status_code"), a.get("day_start"), a.get("day_end")
+        if st in (1,2,3): index.append([rec['aid'], rec['ref'], rec['org'], rec['title'], st, rec['start'], rec['end'], round(rec['spend']), p, rec['names'], bool(de and st == 2 and de < D365)])
         if ds and D90 <= ds <= TODAY_D and st in (1,2): new_starts.append(rec)
         if de and st == 2 and TODAY_D <= de <= TODAY_D+180: ending.append(rec)
         if de and st == 2 and de < D365: stale.append(rec)
@@ -205,6 +209,7 @@ def analyze(code, name):
            "new_starts_all":[{k:x[k] for k in ("aid","title","org","start","commitment","pct","names")} for x in new_starts],
            "ending_all":[{k:x[k] for k in ("aid","title","org","end","spend","pct","names")} for x in ending],
            "n_misnamed":len(misnamed),"misnamed":misnamed[:4],
+           "acts_index":{"cols":["aid","ref","org","title","st","start","end","spend","pct","names","stale"],"rows":index},
            "currency":currency,"wb_recent":wb_recent[:6],"wb_pipeline":[{"id":p["id"],"name":p["name"],"amount":p["amount"]} for p in wb_pipe][:6],"n_wb_total":len(wb)}
     print(f"{name:26s} trans {n_trans:7d} (other-country {n_other:6d}) 90d ${tot90/1e6:7.1f}M prev ${totprev/1e6:7.1f}M orgs {len(dis90):3d} new {len(new_starts):3d} ending {len(ending):3d} active {len(active):4d} stale {len(stale):3d} WB {len(wb_recent)}  [{time.time()-t0:.0f}s]", flush=True)
     return out
@@ -214,9 +219,17 @@ def build_snapshot():
         res = list(ex.map(lambda cn: analyze(cn[0], cn[1]), COUNTRIES))
     snap = {"generated":dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds").replace("+00:00","Z"),"date":TODAY.isoformat(),"countries":{r["code"]:r for r in res}}
     snap["dfat"] = fetch_dfat_guarded()
-    path = os.path.join(DATA, f"pacific-{TODAY.isoformat()}.json")
-    json.dump(snap, open(path,"w"), indent=1); print("saved", path)
+    save_snapshot(snap)
     return snap
+
+def save_snapshot(snap):
+    """Main snapshot as readable JSON; the activity index (about 2 MB a day) as a compressed sidecar next to it."""
+    path = os.path.join(DATA, f"pacific-{snap['date']}.json")
+    idx = {c: r.pop("acts_index") for c, r in snap["countries"].items() if "acts_index" in r}
+    json.dump(snap, open(path, "w"), indent=1); print("saved", path)
+    if idx:
+        with gzip.open(path[:-5] + ".index.json.gz", "wt") as f: json.dump(idx, f, separators=(",", ":"))
+        for c, i in idx.items(): snap["countries"][c]["acts_index"] = i
 
 def fetch_dfat_guarded():
     """DFAT notices and pipeline; on any failure keep the newest snapshot's block so the section never silently empties."""
@@ -242,8 +255,15 @@ def first_seen_dfat(snaps):
     return seen, base
 
 def load_snapshots():
-    files = sorted(glob.glob(os.path.join(DATA, "pacific-*.json")))
-    return [json.load(open(f)) for f in files]
+    files = sorted(glob.glob(os.path.join(DATA, "pacific-????-??-??.json"))); out = []
+    for f in files:
+        s = json.load(open(f)); side = f[:-5] + ".index.json.gz"
+        if os.path.exists(side):
+            with gzip.open(side, "rt") as g:
+                for c, i in json.load(g).items():
+                    if c in s["countries"]: s["countries"][c]["acts_index"] = i
+        out.append(s)
+    return out
 
 # ---------------------------------------------------------------- rendering helpers
 def usd(v):
@@ -433,7 +453,8 @@ def changes(r, pr, days=None, dfat=None, pdfat=None):
     dc = dfat_changes(r["code"], cn, dfat, pdfat)
     # DFAT items are actionable, so they go after the World Bank line (index of first non-headline entry) rather than last
     k = 1 if out and out[0].startswith("90-day disbursements") else 0
-    return out[:k] + dc + out[k:]
+    wl = watches.change_lines(WATCHES.get(r['code'], []), r, pr, dfat, pdfat, ALIASES)
+    return out[:k] + dc + wl + out[k:]
 
 # ---------------------------------------------------------------- page bodies
 def country_body(r, full):
@@ -518,6 +539,7 @@ def method_html(snap, n_trans, n_other, n_stale, n_quiet):
 <ul><li><strong>{n_stale} stale activities</strong> across the region are recorded as under implementation more than a year after their end date. Each is a reporting lapse that makes the active portfolio look larger than it is.</li>
 <li><strong>{n_quiet} funders have gone quiet</strong>: disbursements earlier in the year, none in the last 90 days. Some are seasonal, some are ended programmes never closed, some are late reporting. Each is a question worth asking.</li>
 <li><strong>DFAT's procurement pipeline and business notifications</strong> are read directly from dfat.gov.au on every issue, matched to countries by name in the title or summary, and diffed between issues. They show what Australia is about to buy while its IATI data lags. Contact details on those pages are not copied.</li>
+<li><strong>Standing watches</strong> are short queries (a funder, keyword, tender number or project name) for one country, matched on every issue against the country's activity index, funder tables, World Bank projects and DFAT items, and diffed between issues. Each issue keeps the activity index it was matched against, as a compressed file beside the snapshot.</li>
 <li><strong>Not in this data:</strong> China, Taiwan and most Gulf donors do not publish to IATI. Australian DFAT and New Zealand MFAT, the World Bank, ADB, Japan, the EU, the United States and the UN agencies do, with varying lag and completeness. Absence here is absence from IATI, not absence of aid.</li></ul>
 <h2 id="method">Method</h2>
 <div class=note><p>Source: IATI data through d-portal.org (activity, transaction and recipient-country tables joined by activity identifier), fetched {snap['generated'][:16].replace('T',' ')} UTC; World Bank Projects API, whose newest board-approval dates currently lag real approvals by a year or more, so the World Bank lists are a floor. Disbursements are IATI transaction types D (disbursement) and E (expenditure); a small number of negative adjustments are included as reported. Windows: last 90 days against the 90 days before that; new starts by declared start date; ending soon by declared end date for activities in implementation status; stale means implementation status with an end date more than 365 days ago; active means implementation status and not stale; quiet means positive disbursements in the year but none in the last 90 days; activities whose title names a different Pacific country are kept (the publisher declared them for this country) but shown last and flagged. Weighting: transaction-level recipient country when declared, otherwise the activity's declared percentage for the country; missing percentages are treated as 100% and counted in the flag above. Values in USD as converted by d-portal. One issue per calendar day (Sydney); a later run on the same day refreshes that issue; the change log compares against the newest earlier issue. Code and snapshots: <a href="{REPO}/tree/main/signal">github.com/intexpagent-01/asa-research/signal</a>.</p>
@@ -532,6 +554,9 @@ def render(snaps):
     snap = snaps[-1]; earlier = [s for s in snaps if s["date"] < snap["date"]]; prev = earlier[-1] if earlier else None
     issue_no = len(snaps); issue_date = longdate(snap["date"])
     C = snap["countries"]; order = [c for c,_,_ in COUNTRIES if c in C]; P = prev["countries"] if prev else {}
+    WATCHES.clear()
+    for w in watches.load(ALIASES, NAME): WATCHES.setdefault(w["code"], []).append(w)
+    snap["watches"] = [w for ws in WATCHES.values() for w in ws]
     render_region(snap, prev, snaps, order, issue_no, issue_date)
     for c in order: render_country(c, C[c], P.get(c), prev, snaps, order, issue_no, issue_date)
     n_dfat = len((snap.get("dfat") or {}).get("items", []))
@@ -588,6 +613,18 @@ def render_region(snap, prev, snaps, order, issue_no, issue_date):
         toptxt = f"{esc(top['name'])} ({top['pct']:.0f}%)" if top else "<span class=muted>none reported</span>"
         H.append(f"<tr><td><a href='{page(c)}'>{esc(r['name'])}</a></td><td class=num>{usd(r['dis90'])}</td><td class=num>{delta(r['dis90'], r['dis_prev90'])}</td><td class=num>{r['n_orgs_90']}</td><td class=num>{r['n_new_starts']}</td><td class=num>{r['n_ending_soon']}</td><td>{toptxt}</td></tr>")
     H.append("</table>")
+    # standing watches
+    allw = [w for c in order for w in WATCHES.get(c, [])]
+    H.append("<h2>Standing watches</h2><p style='font-size:.88rem'>A watch is a question asked once and checked on every issue: a funder, a keyword, a tender number or a project name for one country. Each issue reports what matched since the previous one and when each match first appeared. Watches are filed by the Operator of this experiment or by the agent; a public route to file one is not open yet.</p>")
+    if allw:
+        H.append("<table><tr><th>Country</th><th>Watch</th><th class=num>Matches on file</th><th class=num>New this issue</th></tr>")
+        for w in allw:
+            cur = watches.matches(w, C[w['code']], snap.get('dfat'), ALIASES)
+            if cur is None: H.append(f"<tr><td><a href='{page(w['code'])}#watches'>{esc(NAME[w['code']])}</a></td><td>“{esc(w['query'])}”</td><td class=num colspan=2>not yet checked</td></tr>"); continue
+            new, _ = watches.diff(cur, watches.matches(w, P[w['code']], prev.get('dfat'), ALIASES) if w['code'] in P else None)
+            H.append(f"<tr><td><a href='{page(w['code'])}#watches'>{esc(NAME[w['code']])}</a></td><td>“{esc(w['query'])}”</td><td class=num>{len(cur)}</td><td class=num>{'first check' if new is None else len(new)}</td></tr>")
+        H.append("</table>")
+    else: H.append("<p class=muted>No standing watches are held.</p>")
     dfat = snap.get("dfat"); seen, base = first_seen_dfat(snaps)
     if dfat:
         rows = []
@@ -623,12 +660,13 @@ def render_country(code, r, pr, prev, snaps, order, issue_no, issue_date):
 <div class=kpi><b>{r.get('n_active',0):,}</b><span>activities in implementation ({r['n_activities']:,} on record)</span></div>
 <div class=kpi><b>{r['n_new_starts']} &middot; {r['n_ending_soon']}</b><span>started in 90 days &middot; ending within 180 days</span></div>
 </div>
-<h2>In brief</h2><p class=brief>{brief(r, pr, issue_date, snaps[-1].get('dfat'))}</p>
+<h2>In brief</h2><p class=brief>{brief(r, pr, issue_date, snaps[-1].get('dfat'))} {watches.brief_sentence(WATCHES.get(code, []), r, pr, snaps[-1].get('dfat'), prev.get('dfat') if prev else None, ALIASES, r['name'])}</p>
 <h2 id=changes>Since the previous issue{' ('+longdate(prev['date'])+')' if prev else ''}</h2>""")
     ch = changes(r, pr, (dt.date.fromisoformat(snaps[-1]['date'])-dt.date.fromisoformat(prev['date'])).days if prev else None, snaps[-1].get("dfat"), prev.get("dfat") if prev else None)
     if ch is None: H.append("<p class=muted>This is the first issue for this country. From the next issue this section lists what entered or left the funder table, newly listed starts and endings, new World Bank approvals, new DFAT notices and pipeline moves, and which publishers released newer data.</p>")
     elif not ch: H.append(f"<p class=muted>No change in the headline figures since {longdate(prev['date'])}; sources were re-read on {sydtime(snaps[-1]['generated'])}.</p>")
     else: H.append("".join(f"<div class=change>{c}</div>" for c in ch))
+    H.append(f"<h2 id=watches>Standing watches for {esc(r['name'])}</h2>"); H.append(watches.html(WATCHES.get(code, []), r, pr, snaps, snaps[-1].get('dfat'), prev.get('dfat') if prev else None, ALIASES, longdate, r['name']))
     seen, base = first_seen_dfat(snaps)
     H.append(f"<h2>DFAT tenders and notices naming {esc(r['name'])}</h2>"); H.append(dfat_html(code, r["name"], snaps[-1].get("dfat"), seen, base))
     H.append("<h2>The record (IATI and World Bank)</h2>"); H.append(country_body(r, True))
