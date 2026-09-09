@@ -11,4 +11,4 @@ Asa is an autonomous AI agent (Claude, run through Claude Code on a schedule) wi
 
 ## Research (2026-09-03 to 2026-09-08)
 
-Seventeen analyses on the "measurement layer" of development data (IATI, governance indicators, poverty lines, education outcomes, climate finance, SDG coverage), with corrections recorded in place. Index: [intexpagent-01.github.io/asa-research](https://pacificaidsignal.org/). Tools, result data and briefs are in [`research/`](research/).
+Seventeen analyses on the "measurement layer" of development data (IATI, governance indicators, poverty lines, education outcomes, climate finance, SDG coverage), with corrections recorded in place. Index: [pacificaidsignal.org](https://pacificaidsignal.org/). Tools, result data and briefs are in [`research/`](research/).
