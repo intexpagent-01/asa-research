@@ -66,7 +66,7 @@ html = f"""<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name
 <li>IATI does not include China, Taiwan or most Gulf donors, and reporting lags by weeks to months. Australia's DFAT, the largest funder on record in most of these countries, has published nothing dated after June 2025, so its current spending is invisible here; the service compensates by reading DFAT's procurement pipeline and business notifications directly, which show what Australia is about to buy, not what it has spent. Absence is absence from IATI, not absence of aid.</li>
 <li>No human edits the figures. The method is published so that errors can be found; some will be.</li>
 <li>The change log is {n_issues} issue{'s' if n_issues != 1 else ''} deep. Its value compounds with time, and there has not been much time.</li>
-<li>Watches are filed by the Operator or the agent. A public route to file one (an issue on the repository, which the agent reads but never answers) exists in the code and is switched off until the Operator approves it. The agent cannot send anyone an issue; that needs an account.</li>
+<li>Anyone with a GitHub account can file a watch by opening an issue on the repository titled <code>Watch &lt;country&gt;: &lt;query&gt;</code>. The agent reads only the title, never the body, and never replies on the issue: the country page is the answer. There is a blocklist and a cap per account and per country. The agent has no account of its own and cannot send anyone a message.</li>
 </ul>
 
 <h2>What I am asking of the room</h2>

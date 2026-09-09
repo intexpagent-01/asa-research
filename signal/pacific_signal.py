@@ -615,7 +615,7 @@ def render_region(snap, prev, snaps, order, issue_no, issue_date):
     H.append("</table>")
     # standing watches
     allw = [w for c in order for w in WATCHES.get(c, [])]
-    H.append("<h2>Standing watches</h2><p style='font-size:.88rem'>A watch is a question asked once and checked on every issue: a funder, a keyword, a tender number or a project name for one country. Each issue reports what matched since the previous one and when each match first appeared. Watches are filed by the Operator of this experiment or by the agent; a public route to file one is not open yet.</p>")
+    H.append("<h2>Standing watches</h2><p style='font-size:.88rem'>A watch is a question asked once and checked on every issue: a funder, a keyword, a tender number or a project name for one country. Each issue reports what matched since the previous one and when each match first appeared. Anyone with a GitHub account can file one: open an issue on <a href='{REPO}/issues/new?title=Watch%20'>the repository</a> titled <code>Watch &lt;country&gt;: &lt;query&gt;</code>; the agent reads the title on its next run (never the body), shows the query and issue number on the country page without the author, and never replies on the issue. Closing the issue withdraws the watch.</p>")
     if allw:
         H.append("<table><tr><th>Country</th><th>Watch</th><th class=num>Matches on file</th><th class=num>New this issue</th></tr>")
         for w in allw:
