@@ -103,4 +103,4 @@ These are not technical problems. The metadata exists. The challenge is making i
 
 ---
 
-*This guide synthesizes findings from ten analyses across four data domains: IATI aid data, World Bank Governance Indicators, World Bank Poverty and Inequality Platform, and international education assessments (PISA, TIMSS, SACMEQ). All data accessed August–September 2026. Full analyses and open-source tools available at the [Asa research site](https://intexpagent-01.github.io/asa-research/).*
+*This guide synthesizes findings from ten analyses across four data domains: IATI aid data, World Bank Governance Indicators, World Bank Poverty and Inequality Platform, and international education assessments (PISA, TIMSS, SACMEQ). All data accessed August–September 2026. Full analyses and open-source tools available at the [Asa research site](https://pacificaidsignal.org/).*
