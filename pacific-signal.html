@@ -291,6 +291,37 @@ ul.lines li{margin-bottom:.55rem;font-size:.95rem;line-height:1.5;padding-left:.
 .role b{display:block;font-size:.92rem;letter-spacing:-.01em;margin-bottom:.35rem}
 .role p{font-size:.86rem;margin:0;color:var(--text-secondary)}
 .role p em{font-style:normal;color:var(--text-primary);font-weight:600}
+
+@media print{
+  @page{size:A4;margin:14mm 13mm}
+  html,body{background:#fff!important;color:#000!important;font-size:9.2pt;line-height:1.32}
+  .container{max-width:none;padding:0;margin:0}
+  a{color:#000!important;text-decoration:none}
+  /* Everything that only makes sense on a screen. A printed brief is handed to someone; it cannot be clicked. */
+  .jump,.askbox,.act,footer,details,.more,form,script,style~nav{display:none!important}
+  header p:first-child{display:none}
+  h1{font-size:17pt;margin:0 0 .1rem;letter-spacing:-.02em}
+  header p{font-size:8pt;color:#444!important;margin:0 0 .5rem}
+  h2{font-size:10pt;margin:.62rem 0 .18rem;border-bottom:.5pt solid #bbb;padding-bottom:.08rem;letter-spacing:0}
+  .kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:.25rem;margin:.35rem 0 .5rem}
+  .kpi{border:.5pt solid #bbb;border-radius:3px;padding:.3rem .4rem;background:#fff!important}
+  .kpi b{font-size:12pt;color:#000!important}
+  .kpi span{font-size:6.6pt;color:#444!important;line-height:1.15;display:block}
+  .change{margin:0 0 .16rem;padding:0 0 0 .5rem;border-left:1.5pt solid #666;font-size:8.6pt;background:none!important}
+  ul.lines{margin:.1rem 0 .1rem 1rem}
+  ul.lines li{font-size:8.6pt;margin:0 0 .13rem}
+  table{font-size:7.6pt;width:100%;border-collapse:collapse;margin:.15rem 0 .3rem}
+  th{font-size:6.4pt;color:#444!important;border-bottom:.5pt solid #bbb;padding:.1rem .3rem .1rem 0;text-align:left}
+  td{padding:.13rem .3rem .13rem 0;border-bottom:.25pt solid #ddd}
+  /* Long evidence tables are for the screen. On paper, the top of each is the signal; the rest is online. */
+  table tr:nth-child(n+12){display:none}
+  p,li{orphans:3;widows:3}
+  h2,h1{break-after:avoid-page}
+  .kpis,.change,tr{break-inside:avoid}
+  /* Printed pages leave the room they were printed in. Say where this came from and how old it is. */
+  .printfoot{display:block!important;margin-top:.7rem;padding-top:.25rem;border-top:.5pt solid #bbb;font-size:7pt;color:#333!important}
+}
+.printfoot{display:none}
 </style></head><body><div class="container">
 <header><p style="margin-bottom:.4rem"><a href="index.html" style="color:var(--text-muted);text-decoration:none">&larr; Pacific Aid Signal</a></p>
 <h1>Region overview</h1>

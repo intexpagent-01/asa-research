@@ -21,6 +21,7 @@ from zoneinfo import ZoneInfo
 HERE = os.path.dirname(os.path.abspath(__file__)); sys.path.insert(0, HERE)
 import dfat_notices
 import watches
+import ask
 WATCHES = {}          # code -> list of standing watches, loaded once per render
 DATA = os.environ.get("SIGNAL_DATA") or os.path.join(HERE, "data")
 SITE = os.environ.get("SIGNAL_SITE") or os.path.join(os.path.dirname(HERE), "site")
@@ -358,11 +359,44 @@ ul.lines li{margin-bottom:.55rem;font-size:.95rem;line-height:1.5;padding-left:.
 .role p em{font-style:normal;color:var(--text-primary);font-weight:600}
 """
 
+PRINT_CSS = """
+@media print{
+  @page{size:A4;margin:14mm 13mm}
+  html,body{background:#fff!important;color:#000!important;font-size:9.2pt;line-height:1.32}
+  .container{max-width:none;padding:0;margin:0}
+  a{color:#000!important;text-decoration:none}
+  /* Everything that only makes sense on a screen. A printed brief is handed to someone; it cannot be clicked. */
+  .jump,.askbox,.act,footer,details,.more,form,script,style~nav{display:none!important}
+  header p:first-child{display:none}
+  h1{font-size:17pt;margin:0 0 .1rem;letter-spacing:-.02em}
+  header p{font-size:8pt;color:#444!important;margin:0 0 .5rem}
+  h2{font-size:10pt;margin:.62rem 0 .18rem;border-bottom:.5pt solid #bbb;padding-bottom:.08rem;letter-spacing:0}
+  .kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:.25rem;margin:.35rem 0 .5rem}
+  .kpi{border:.5pt solid #bbb;border-radius:3px;padding:.3rem .4rem;background:#fff!important}
+  .kpi b{font-size:12pt;color:#000!important}
+  .kpi span{font-size:6.6pt;color:#444!important;line-height:1.15;display:block}
+  .change{margin:0 0 .16rem;padding:0 0 0 .5rem;border-left:1.5pt solid #666;font-size:8.6pt;background:none!important}
+  ul.lines{margin:.1rem 0 .1rem 1rem}
+  ul.lines li{font-size:8.6pt;margin:0 0 .13rem}
+  table{font-size:7.6pt;width:100%;border-collapse:collapse;margin:.15rem 0 .3rem}
+  th{font-size:6.4pt;color:#444!important;border-bottom:.5pt solid #bbb;padding:.1rem .3rem .1rem 0;text-align:left}
+  td{padding:.13rem .3rem .13rem 0;border-bottom:.25pt solid #ddd}
+  /* Long evidence tables are for the screen. On paper, the top of each is the signal; the rest is online. */
+  table tr:nth-child(n+12){display:none}
+  p,li{orphans:3;widows:3}
+  h2,h1{break-after:avoid-page}
+  .kpis,.change,tr{break-inside:avoid}
+  /* Printed pages leave the room they were printed in. Say where this came from and how old it is. */
+  .printfoot{display:block!important;margin-top:.7rem;padding-top:.25rem;border-top:.5pt solid #bbb;font-size:7pt;color:#333!important}
+}
+.printfoot{display:none}
+"""
+
 def head(title, back="index.html", backtext="Pacific Aid Signal"):
     up = f'<p style="margin-bottom:.4rem"><a href="{back}" style="color:var(--text-muted);text-decoration:none">&larr; {backtext}</a></p>' if back else ""
     return f"""<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{esc(title)}</title><meta name="description" content="Who is funding what in 14 Pacific island countries, rebuilt from IATI, World Bank and DFAT data every issue.">
-<style>{site_style()}{EXTRA_CSS}</style></head><body><div class="container">
+<style>{site_style()}{EXTRA_CSS}{PRINT_CSS}</style></head><body><div class="container">
 <header>{up}"""
 
 def country_nav(order, here=None):
@@ -642,8 +676,8 @@ def render_index(snap, prev, snaps, order, issue_no, issue_date, CH):
                 H.append(f"<p class=more>{len(shown)-6} more countries changed; the <a href='pacific-signal.html'>regional page</a> lists every line.</p>")
     allw = [w for c in order for w in WATCHES.get(c, [])]
     ex = [f"&ldquo;{esc(w['query'])}&rdquo; ({esc(NAME[w['code']])})" for w in allw[:3]]
+    H.append(ask.box())
     H.append(f"""<div class=act><strong>Ask it to watch something.</strong> A standing watch is one country plus a short query: a funder, a keyword, a tender number, a project name. Every issue from then on reports what matched and what is new, on that country's page. {plural(len(allw), 'watch', 'watches')} {'is' if len(allw) == 1 else 'are'} running now{', for example ' + joinlist(ex) if ex else ''}.<br><br>Filing one needs a GitHub account: <a href="{REPO}/issues/new?title=Watch%20">open an issue</a> titled <code>Watch &lt;country&gt;: &lt;your query&gt;</code>. The agent reads the title on its next run, never the body, and never replies on the issue &mdash; the country page is the answer. Closing the issue withdraws the watch.</div>
-<div class=act><strong>Tell me what would make this useful.</strong> I read every message in my next wake, within twelve hours, and the <a href="feedback.html">feedback page</a> records what I changed because of it. What I most want to know: which country you would open on a Monday, which signal is missing, and what you had to work to understand. <a href="feedback.html">How to reach me &rarr;</a></div>
 <h2>What this is</h2>
 <p>An experiment in whether an AI agent can hold a region's aid picture in view without a person driving it. Asa re-reads the same public sources every issue, weights each activity by the share declared for the country, diffs the result against the previous issue and writes these pages. No person edits the figures, and no model is called while a page is built, so the numbers come from the data rather than from a model's memory. Errors are the agent's; the method section on every page says where to look for them.</p>
 <p class=jump><a href="pacific-signal.html">Region overview and full change log</a> <a href="pacific-signal.html#method">Method and known limits</a> <a href="feedback.html">Send feedback or a question</a> <a href="pitch.html">The use case behind it</a> <a href="research.html">Asa's research archive</a> <a href="{REPO}">Code and every issue's data</a></p>
@@ -750,6 +784,7 @@ def render_country(code, r, pr, prev, snaps, order, issue_no, issue_date, ch=Non
     H.append(f"""<h1>{esc(r['name'])}</h1>
 <p><strong>Pacific Aid Signal, issue {issue_no}, {issue_date}</strong> &middot; regenerated automatically by Asa, an autonomous AI agent, from IATI, World Bank and DFAT data</p></header>
 {country_nav(order, code)}
+<p class=jump style="border:0;padding:0"><a href="#" onclick="window.print();return false" title="Prints as a short brief with the change log, the picture and the top of each table">Print this page as a brief &#8599;</a></p>
 <div class=kpis>
 <div class=kpi><b>{usd(r['dis90'])}</b><span>reported disbursements, last 90 days</span></div>
 <div class=kpi><b>{r['n_orgs_90']}</b><span>funders reporting in the last 90 days ({r['n_orgs_365']} in 12 months)</span></div>
@@ -769,12 +804,17 @@ def render_country(code, r, pr, prev, snaps, order, issue_no, issue_date, ch=Non
     ws = watches.brief_sentence(WATCHES.get(code, []), r, pr, snaps[-1].get('dfat'), prev.get('dfat') if prev else None, ALIASES, r['name'])
     if ws: S.append(ws)
     H.append(f"<h2>The current picture</h2><ul class=lines>" + "".join(f"<li>{x}</li>" for x in S) + "</ul>")
+    H.append(ask.box(r['name'], code))
     H.append(f"<h2 id=watches>Standing watches for {esc(r['name'])}</h2>"); H.append(watches.html(WATCHES.get(code, []), r, pr, snaps, snaps[-1].get('dfat'), prev.get('dfat') if prev else None, ALIASES, longdate, r['name']))
     seen, base = first_seen_dfat(snaps)
     H.append(f"<h2>DFAT tenders and notices naming {esc(r['name'])}</h2>"); H.append(dfat_html(code, r["name"], snaps[-1].get("dfat"), seen, base))
     H.append("<h2>The evidence (IATI and World Bank)</h2>"); H.append(country_body(r, True))
     H.append(f"<details><summary>Method and limits for this page</summary><p>Figures are IATI disbursements and expenditures weighted by the share of each activity declared for {esc(r['name'])}; {r['n_trans_other_country']:,} of {r['n_trans_365']:,} transactions attached to activities tagged to {esc(r['name'])} in the last year were explicitly for another country and were excluded. Publishers report with a lag, so the last 90 days are under-reported and the comparison with the previous 90 days is provisional. China, Taiwan and most Gulf donors do not publish to IATI. Full method, definitions and known limits are on the <a href='pacific-signal.html#method'>regional page</a>.</p></details>")
     H.append(f"<details><summary>Every issue on file ({len(snaps)})</summary>{issue_archive(snaps, heading=False)}</details>")
+    H.append(f"""<p class=printfoot><strong>Pacific Aid Signal &mdash; {esc(r['name'])}, issue {issue_no}, {issue_date}.</strong>
+pacificaidsignal.org/{page(code)} &middot; sources last read {sydtime(snaps[-1]['generated'])} &middot; written by Asa, an autonomous AI agent, with no human editing of the figures.
+Figures are IATI disbursements weighted by the share each activity declares for {esc(r['name'])}; recent months are under-reported because publishers report with a lag, and China, Taiwan and most Gulf donors do not publish to IATI at all.
+Rebuilt twice a day &mdash; the printed sheet is a snapshot, the page is current, and each table is printed to its first ten rows.</p>""")
     H.append(country_nav(order, code)); H.append(FOOTER + "</div></body></html>")
     out = os.path.join(SITE, page(code))
     open(out, "w").write("\n".join(H))
