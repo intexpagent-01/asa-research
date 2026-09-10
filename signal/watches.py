@@ -15,6 +15,7 @@ skipped, and only links back to the repository's own issues are rendered.
 """
 import datetime as dt, json, os, re, sys, urllib.request
 from dfat_notices import for_country
+import mfat_tenders
 
 LOCAL = os.environ.get("SIGNAL_WATCHES") or os.path.join(os.path.dirname(os.path.abspath(__file__)), "watches.json")
 ISSUES_API = "https://api.github.com/repos/intexpagent-01/asa-research/issues?state=open&per_page=100&sort=created&direction=asc"
@@ -24,7 +25,8 @@ BLOCKLIST = os.path.join(os.path.dirname(os.path.abspath(__file__)), "watch-bloc
 MAX_PER_AUTHOR, MAX_PER_COUNTRY = 5, 10
 SAFE = re.compile(r"[^A-Za-z0-9 .,'&()/-]")
 STATUS = {1: "pipeline", 2: "implementation", 3: "finalisation"}
-KIND = {"activity": "IATI activity", "funder": "funder", "wb": "World Bank project", "dfat-item": "DFAT pipeline item", "notice": "DFAT notice"}
+KIND = {"activity": "IATI activity", "funder": "funder", "wb": "World Bank project", "dfat-item": "DFAT pipeline item", "notice": "DFAT notice",
+        "nz-tender": "New Zealand MFAT tender"}
 
 def usd(v):
     v = v or 0
@@ -94,7 +96,7 @@ def hit(q, *texts):
     flags = re.I if len(q) > 3 else 0
     return any(t and re.search(_pat(q), str(t), flags) for t in texts)
 
-def matches(w, r, dfat, aliases):
+def matches(w, r, dfat, aliases, nz=None):
     """Hits for one watch in one country's snapshot record: {kind, key, label, detail, sort}. Returns None when the
     record has no activity index (issues before the watches feature), so a diff against it is not attempted."""
     idx = r.get("acts_index")
@@ -132,7 +134,16 @@ def matches(w, r, dfat, aliases):
     for n in cn + rn:
         if (n.get("date") or "") >= cutoff and hit(q, n["title"], n.get("summary")):
             H.append({"kind": "notice", "key": n["url"], "label": n["title"], "detail": f"{n.get('date') or ''} {n.get('category') or ''}".strip(), "sort": (0, -int((n.get("date") or "0000").replace("-", "") or 0)), "url": n["url"]})
-    H.sort(key=lambda h: (["dfat-item", "notice", "funder", "activity", "wb"].index(h["kind"]), h["sort"], h["label"]))
+    zc, zr = mfat_tenders.for_country(nz, r["code"], aliases)
+    for t in zc + zr:
+        if hit(q, t["title"], t.get("overview"), t.get("ref"), t.get("dept")):
+            det = mfat_tenders.STATUS_WORD.get(t["status"], t["status"])
+            o = t.get("outcome") or {}
+            if o.get("supplier"): det += f"; awarded to {o['supplier']}"
+            elif o.get("state"): det += f"; {o['state']}"
+            H.append({"kind": "nz-tender", "key": t["id"], "label": t["title"], "detail": det,
+                      "sort": (0 if t["status"] == "open" else 1, 0), "url": t.get("url")})
+    H.sort(key=lambda h: (["dfat-item", "nz-tender", "notice", "funder", "activity", "wb"].index(h["kind"]), h["sort"], h["label"]))
     return H
 
 def _tail(h):
@@ -174,7 +185,7 @@ def first_seen(w, snaps, aliases):
     for s in snaps:
         r = s["countries"].get(w["code"])
         if not r or not r.get("acts_index"): continue
-        for h in matches(w, r, s.get("dfat"), aliases) or []: seen.setdefault((h["kind"], h["key"]), s["date"])
+        for h in matches(w, r, s.get("dfat"), aliases, s.get("nz")) or []: seen.setdefault((h["kind"], h["key"]), s["date"])
     return seen
 
 # ---------------------------------------------------------------- rendering
@@ -187,13 +198,13 @@ def line(h):
     lab = f"<a href='{esc(h['url'])}'>{esc(h['label'])}</a>" if h.get("url") else esc(h["label"])
     return f"{lab} <span class=muted>({KIND[h['kind']]}; {esc(h['detail'])})</span>"
 
-def change_lines(watches, r, pr, dfat, pdfat, aliases):
+def change_lines(watches, r, pr, dfat, pdfat, aliases, nz=None, pnz=None):
     """Change-log entries for a country's watches: new and lost matches, three per watch."""
     out = []
     for w in watches:
-        cur = matches(w, r, dfat, aliases)
+        cur = matches(w, r, dfat, aliases, nz)
         if cur is None: continue
-        new, gone, moved = diff(cur, matches(w, pr, pdfat, aliases) if pr else None, moved=True)
+        new, gone, moved = diff(cur, matches(w, pr, pdfat, aliases, pnz) if pr else None, moved=True)
         if new is None:
             out.append(f"Watch “{esc(w['query'])}” first checked in this issue: {len(cur)} match{'es' if len(cur) != 1 else ''} on file."); continue
         for h in new[:3]: out.append(f"Watch “{esc(w['query'])}”: new match, {line(h)}.")
@@ -206,13 +217,13 @@ def change_lines(watches, r, pr, dfat, pdfat, aliases):
         if gone: out.append(f"Watch “{esc(w['query'])}”: no longer matching " + ", ".join(esc(h["label"]) for h in gone[:3]) + (f" and {len(gone)-3} more" if len(gone) > 3 else "") + " (left the record, or the match moved outside the window).")
     return out
 
-def brief_sentence(watches, r, pr, dfat, pdfat, aliases, name):
+def brief_sentence(watches, r, pr, dfat, pdfat, aliases, name, nz=None, pnz=None):
     if not watches: return ""
     n_new = 0; checked = 0; first = 0; on_file = 0
     for w in watches:
-        cur = matches(w, r, dfat, aliases)
+        cur = matches(w, r, dfat, aliases, nz)
         if cur is None: continue
-        checked += 1; on_file += len(cur); new, _ = diff(cur, matches(w, pr, pdfat, aliases) if pr else None)
+        checked += 1; on_file += len(cur); new, _ = diff(cur, matches(w, pr, pdfat, aliases, pnz) if pr else None)
         if new is None: first += 1
         else: n_new += len(new)
     if not checked: return ""
@@ -220,19 +231,19 @@ def brief_sentence(watches, r, pr, dfat, pdfat, aliases, name):
     if first == checked: return head + f"first checked in this issue, {on_file} match{'es' if on_file != 1 else ''} on file."
     return head + (f"{n_new} new match{'es' if n_new != 1 else ''} this issue." if n_new else "no new matches this issue.")
 
-def html(watches, r, pr, snaps, dfat, pdfat, aliases, longdate, name, limit=8):
+def html(watches, r, pr, snaps, dfat, pdfat, aliases, longdate, name, limit=8, nz=None, pnz=None):
     """Section body for one country page."""
     if not watches:
         return f"<p class=muted>No standing watch is held for {esc(name)}. A watch is a funder, keyword, tender number or project name that the agent checks on every issue and reports on in the change log above. {file_para(name)}</p>"
-    H = [f"<details><summary>What a standing watch is, and how to file one</summary><p>A watch is a question asked once and checked on every issue: the agent matches it against {esc(name)}'s current activities, funders, World Bank projects and DFAT items and reports what changed. {file_para(name)}</p></details>"]
+    H = [f"<details><summary>What a standing watch is, and how to file one</summary><p>A watch is a question asked once and checked on every issue: the agent matches it against {esc(name)}'s current activities, funders, World Bank projects, DFAT items and New Zealand MFAT tenders and reports what changed. {file_para(name)}</p></details>"]
     for w in watches:
         src = f"filed {longdate(w['since'])}" if w.get("since") else "filed date unknown"
         if w.get("url"): src += f", <a href='{esc(w['url'])}'>issue {esc(w['id'])}</a>"
         elif w.get("note"): src += f"; {esc(w['note'])}"
         H.append(f"<h4>“{esc(w['query'])}” <span class=muted style='font-weight:normal'>({src})</span></h4>")
-        cur = matches(w, r, dfat, aliases)
+        cur = matches(w, r, dfat, aliases, nz)
         if cur is None: H.append("<p class=muted>Not yet checked: this issue carries no activity index. From the next issue the watch is matched on every run.</p>"); continue
-        new, gone, moved = diff(cur, matches(w, pr, pdfat, aliases) if pr else None, moved=True)
+        new, gone, moved = diff(cur, matches(w, pr, pdfat, aliases, pnz) if pr else None, moved=True)
         if new is None: status = f"First checked in this issue: {len(cur)} match{'es' if len(cur) != 1 else ''} on file."
         elif new or gone or moved: status = f"Since the previous issue: {len(new)} new match{'es' if len(new) != 1 else ''}" + (f", {len(gone)} no longer matching" if gone else "") + (f", {len(moved)} republished under a new publisher identifier" if moved else "") + f"; {len(cur)} on file."
         else: status = f"Since the previous issue: no change; {len(cur)} match{'es' if len(cur) != 1 else ''} on file."

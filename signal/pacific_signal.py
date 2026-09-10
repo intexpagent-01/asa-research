@@ -12,6 +12,7 @@ Usage: python3 pacific_signal.py            fetch, snapshot, render
        python3 pacific_signal.py --no-fetch  re-render from the newest snapshot
        python3 pacific_signal.py --wb-only   refresh World Bank data in the newest snapshot, render
        python3 pacific_signal.py --dfat-only refresh DFAT notices and pipeline in the newest snapshot, render
+       python3 pacific_signal.py --nz-only   refresh New Zealand MFAT tenders (GETS) in the newest snapshot, render
 """
 import json, gzip, os, re, sys, time, glob, urllib.request, urllib.parse, datetime as dt
 from collections import defaultdict
@@ -20,6 +21,7 @@ from zoneinfo import ZoneInfo
 
 HERE = os.path.dirname(os.path.abspath(__file__)); sys.path.insert(0, HERE)
 import dfat_notices
+import mfat_tenders
 import watches
 import ask
 WATCHES = {}          # code -> list of standing watches, loaded once per render
@@ -223,6 +225,7 @@ def build_snapshot():
         res = list(ex.map(lambda cn: analyze(cn[0], cn[1]), COUNTRIES))
     snap = {"generated":dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds").replace("+00:00","Z"),"date":TODAY.isoformat(),"countries":{r["code"]:r for r in res}}
     snap["dfat"] = fetch_dfat_guarded()
+    snap["nz"] = fetch_nz_guarded()
     save_snapshot(snap)
     return snap
 
@@ -242,6 +245,29 @@ def fetch_dfat_guarded():
         print(f"!! DFAT fetch failed ({e}); keeping previous values", file=sys.stderr)
         files = sorted(glob.glob(os.path.join(DATA, "pacific-*.json")))
         return json.load(open(files[-1])).get("dfat") if files else None
+
+def fetch_nz_guarded():
+    """New Zealand MFAT tenders from GETS; on failure keep the newest snapshot's block rather than empty the section."""
+    try: return mfat_tenders.fetch_all()
+    except Exception as e:
+        print(f"!! GETS fetch failed ({e}); keeping previous values", file=sys.stderr)
+        files = sorted(glob.glob(os.path.join(DATA, "pacific-*.json")))
+        return json.load(open(files[-1])).get("nz") if files else None
+
+def refresh_nz():
+    files = sorted(glob.glob(os.path.join(DATA, "pacific-*.json"))); snap = json.load(open(files[-1]))
+    d = fetch_nz_guarded()
+    if d: snap["nz"] = d; json.dump(snap, open(files[-1], "w"), indent=1); print("GETS block refreshed in", files[-1])
+
+def first_seen_nz(snaps):
+    """Issue date on which each GETS tender first appeared, and the first issue that carried GETS data at all."""
+    seen, base = {}, None
+    for s in snaps:
+        d = s.get("nz")
+        if not d: continue
+        base = base or s["date"]
+        for t in d.get("tenders", []): seen.setdefault(t["id"], s["date"])
+    return seen, base
 
 def refresh_dfat():
     files = sorted(glob.glob(os.path.join(DATA, "pacific-*.json"))); snap = json.load(open(files[-1]))
@@ -383,6 +409,9 @@ PRINT_CSS = """
   td{padding:.13rem .3rem .13rem 0;border-bottom:.25pt solid #ddd}
   /* Long evidence tables are for the screen. On paper, the top of each is the signal; the rest is online. */
   table tr:nth-child(n+12){display:none}
+  /* Same for the tender lists: what is open and what was decided fits on paper; the descriptions do not. */
+  .proc li:nth-child(n+6){display:none}
+  .ov{display:none!important}
   p,li{orphans:3;widows:3}
   h2,h1{break-after:avoid-page}
   .kpis,.change,tr{break-inside:avoid}
@@ -395,7 +424,7 @@ PRINT_CSS = """
 def head(title, back="index.html", backtext="Pacific Aid Signal"):
     up = f'<p style="margin-bottom:.4rem"><a href="{back}" style="color:var(--text-muted);text-decoration:none">&larr; {backtext}</a></p>' if back else ""
     return f"""<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>{esc(title)}</title><meta name="description" content="Who is funding what in 14 Pacific island countries, rebuilt from IATI, World Bank and DFAT data every issue.">
+<title>{esc(title)}</title><meta name="description" content="Who is funding what in 14 Pacific island countries, rebuilt from IATI, World Bank, DFAT and New Zealand MFAT data every issue.">
 <style>{site_style()}{EXTRA_CSS}{PRINT_CSS}</style></head><body><div class="container">
 <header>{up}"""
 
@@ -405,7 +434,7 @@ def country_nav(order, here=None):
 FOOTER = f"""<footer>Pacific Aid Signal is produced by Asa, an autonomous AI agent running on a schedule with no human editing of the figures. It is an experiment in whether a persistent agent can be a useful analyst for a region. Errors are the agent's; the method tells you where to look. Every issue is kept as a snapshot in the <a href="{REPO}/tree/main/signal/data">repository</a>. Use case: <a href="pitch.html">An analyst that never sleeps</a>. <a href="feedback.html">Tell the agent what would make this useful</a>.</footer>"""
 
 # ---------------------------------------------------------------- narrative
-def brief(r, pr, issue_date, dfat=None, as_list=False):
+def brief(r, pr, issue_date, dfat=None, as_list=False, nz=None):
     """Plain-language summary of one country, templated from the snapshot (no model call).
 
     `as_list` returns the sentences separately, so a page can show them as short lines instead of a paragraph."""
@@ -446,6 +475,19 @@ def brief(r, pr, issue_date, dfat=None, as_list=False):
             S.append(f"DFAT's procurement pipeline (as at {esc(dfat.get('as_at') or 'the last read')}) names no {n}-specific item; {plural(len(rp),'Pacific-wide item')} apply.")
         recent = [x for x in cn if x.get("date") and x["date"] >= d2s(D90)]
         if recent: S.append(f"DFAT published {plural(len(recent),'business notification')} naming {n} in the last 90 days, newest {esc(recent[0]['title'])} ({longdate(recent[0]['date'])}).")
+    if nz:
+        zc, zr = mfat_tenders.for_country(nz, r["code"], ALIASES)
+        live = [t for t in zc if t["status"] == "open"]
+        done = [t for t in zc if t.get("outcome")]
+        if live:
+            t = live[0]; ro = [x for x in zr if x["status"] == "open"]
+            S.append(f"New Zealand's MFAT has {plural(len(live),'tender')} open on GETS naming {n}{':' if len(live) == 1 else ', including'} {esc(t['title'])} (closes {nzdate(t.get('closes'))})"
+                     + (f"; {plural(len(ro),'Pacific-wide tender')} also open" if ro else "") + ".")
+        elif [x for x in zr if x["status"] == "open"]:
+            S.append(f"New Zealand's MFAT has no open GETS tender naming {n}; {plural(len([x for x in zr if x['status']=='open']),'Pacific-wide tender')} apply.")
+        if done:
+            t = sorted(done, key=lambda t: (t["outcome"].get("date") or ""), reverse=True)[0]
+            S.append(f"The newest MFAT outcome published for {n} is {esc(t['title'])}, {outcome_line(t['outcome'])}.")
     return S if as_list else " ".join(S)
 
 def short(t, n):
@@ -477,7 +519,78 @@ def dfat_changes(code, cn, dfat, pdfat):
     if gone: out.append("No longer on DFAT's pipeline page: " + joinlist(f"{esc(q['id'])} {esc(q['title'])} (was \u201c{esc(q['section'])}\u201d)" for q in gone[:4]) + (f" and {len(gone)-4} more" if len(gone) > 4 else "") + ".")
     return out
 
-def changes(r, pr, days=None, dfat=None, pdfat=None):
+# ---------------------------------------------------------------- New Zealand (GETS)
+def nzdate(s):
+    """"Wednesday, 16 September 2026 4:00 PM (Pacific/Auckland UTC+12:00)" -> "16 September 2026"."""
+    m = re.search(r"(\d{1,2}\s+\w+\s+\d{4})", s or "")
+    return m.group(1) if m else (s or "")
+
+def nzmoney(v):
+    return f"NZ${v/1e6:.1f}M" if v >= 1e6 else f"NZ${v/1e3:.0f}K" if v >= 1e3 else f"NZ${v:,.0f}"
+
+def outcome_line(o):
+    """The published outcome as one clause. Individual awardees are withheld by the source module, not here."""
+    if not o: return ""
+    st = o.get("state")
+    if st == "awarded":
+        when = f" on {longdate(o['date'])}" if o.get("date") else ""
+        val = f", {nzmoney(o['value_nzd'])}" if o.get("value_nzd") else ""
+        if o.get("supplier"): return f"awarded to {esc(o['supplier'])}{when}{val}"
+        return f"awarded{when}{val} to an individual rather than a company &mdash; the GETS notice names the person, this page does not"
+    if st == "not awarded": return "closed without an award" + (f" on {longdate(o['date'])}" if o.get("date") else "")
+    if st == "superseded": return f"superseded by GETS listing {esc(o['superseded_by'])}" if o.get("superseded_by") else "superseded"
+    return "completed" + (f" on {longdate(o['date'])}" if o.get("date") else "")
+
+def nz_changes(code, cn, nz, pnz):
+    """New Zealand MFAT tender changes for one country since the previous issue (none if either issue lacks GETS data)."""
+    if not nz or not pnz: return []
+    out = []
+    cur_c, cur_r = mfat_tenders.for_country(nz, code, ALIASES)
+    prv_c, prv_r = mfat_tenders.for_country(pnz, code, ALIASES)
+    prev = {t["id"]: t for t in prv_c + prv_r}
+    for t in cur_c + cur_r:
+        where = cn if t in cur_c else "the Pacific"
+        lbl = f"<a href='{esc(t['url'])}'>{esc(t['title'])}</a>"
+        q = prev.get(t["id"])
+        if not q:
+            when = f", closes {nzdate(t.get('closes'))}" if t.get("closes") and t["status"] == "open" else ""
+            out.append(f"New Zealand MFAT tender naming {where} on GETS: {lbl} ({esc(t.get('type_full') or t['type'])}{when}).")
+        elif q.get("status") != t["status"]:
+            # when bidding shuts and the result lands in the same issue, the result is the news
+            tail = f": {outcome_line(t['outcome'])}" if t.get("outcome") else ""
+            out.append(f"New Zealand MFAT tender {lbl} is now {esc(mfat_tenders.STATUS_WORD.get(t['status'], t['status']))}{tail}.")
+        elif (q.get("outcome") or {}) != (t.get("outcome") or {}) and t.get("outcome"):
+            out.append(f"New Zealand MFAT tender {lbl}: {outcome_line(t['outcome'])}.")
+    gone = [q for k, q in prev.items() if k not in {t["id"] for t in cur_c + cur_r}]
+    if gone: out.append("No longer listed on GETS: " + joinlist(esc(q["title"]) for q in gone[:4]) + (f" and {len(gone)-4} more" if len(gone) > 4 else "") + ".")
+    return out
+
+def nz_html(code, name, nz, seen, base):
+    """New Zealand MFAT tenders naming the country, then Pacific-wide ones."""
+    if not nz: return "<p class=muted>New Zealand's tender service was not read for this issue.</p>"
+    cn, rn = mfat_tenders.for_country(nz, code, ALIASES)
+    H = [f"<p style='font-size:.88rem'>Read from <a href='{mfat_tenders.SEARCH}'>GETS, the New Zealand Government Electronic Tenders Service</a>, on {sydtime(nz.get('fetched'))}. New Zealand is the second bilateral funder of the Pacific and its IATI data lags too; GETS shows what MFAT is buying now, and — unlike any other source here — what the outcome was. Named contacts, addresses and telephone numbers on those pages are not copied, and where an award names an individual rather than an organisation the name is not repeated.</p>"]
+    def tlist(items, title):
+        if not items: return
+        order = {"open": 0, "closed": 1, "completed": 2}
+        H.append(f"<h4>{title} ({len(items)})</h4><ul class=proc>")
+        for t in sorted(items, key=lambda t: (order.get(t["status"], 9), t.get("closes") or "")):
+            bits = [esc(mfat_tenders.STATUS_WORD.get(t["status"], t["status"]))]
+            if t["status"] == "open" and t.get("closes"): bits.append("closes " + esc(nzdate(t["closes"])))
+            if t.get("outcome"): bits.append(outcome_line(t["outcome"]))
+            if t.get("dept"): bits.append(esc(t["dept"]))
+            since = f" <span class=muted>(first seen in the issue of {longdate(seen[t['id']])})</span>" if seen.get(t["id"]) and base and seen[t["id"]] > base else ""
+            note = esc((t.get("outcome") or {}).get("note") or "")
+            H.append(f"<li><strong>{esc(t.get('type_full') or t['type'])}</strong> &middot; <a href='{esc(t['url'])}'>{esc(t['title'])}</a>{since}<br><span class=muted>{' &middot; '.join(bits)}</span>"
+                     + (f"<br><span class=muted>{note}</span>" if note else "")
+                     + (f"<br><span class='muted ov'>{esc(short(t['overview'], 260))}</span>" if t.get("overview") else "") + "</li>")
+        H.append("</ul>")
+    tlist(cn, f"MFAT tenders naming {esc(name)}")
+    tlist(rn, "Pacific-wide MFAT tenders")
+    if not (cn or rn): H.append(f"<p class=muted>No New Zealand MFAT tender on GETS names {esc(name)}.</p>")
+    return "\n".join(H)
+
+def changes(r, pr, days=None, dfat=None, pdfat=None, nz=None, pnz=None):
     """What changed since the previous issue for one country. Returns a list of HTML strings, most useful first.
     Entries compare full sets where the previous issue stored them (orgs_90, new_starts_all, ending_all) and fall
     back to the displayed rows for older issues. Exits from the funder table are mostly the 90-day window moving,
@@ -515,10 +628,10 @@ def changes(r, pr, days=None, dfat=None, pdfat=None):
     if left: out.append("No longer in the 90-day funder table (their last reported disbursement fell out of the window, or was revised): " + joinlist(f"{esc(o['name'])} ({usd(o['usd'])} last issue)" for o in left[:5]) + (f" and {len(left)-5} more" if len(left) > 5 else "") + ".")
     for k, lbl in (("n_active","Active activities"),("n_stale","Stale activities"),("n_quiet","Quiet funders")):
         if k in r and k in pr and abs(r[k]-pr[k]) >= max(3, 0.05*pr[k]): out.append(f"{lbl}: {pr[k]} &rarr; {r[k]}.")
-    dc = dfat_changes(r["code"], cn, dfat, pdfat)
-    # DFAT items are actionable, so they go after the World Bank line (index of first non-headline entry) rather than last
+    dc = dfat_changes(r["code"], cn, dfat, pdfat) + nz_changes(r["code"], cn, nz, pnz)
+    # Procurement items are actionable, so they go after the World Bank line (index of first non-headline entry) rather than last
     k = 1 if out and out[0].startswith("90-day disbursements") else 0
-    wl = watches.change_lines(WATCHES.get(r['code'], []), r, pr, dfat, pdfat, ALIASES)
+    wl = watches.change_lines(WATCHES.get(r['code'], []), r, pr, dfat, pdfat, ALIASES, nz, pnz)
     return out[:k] + dc + wl + out[k:]
 
 # ---------------------------------------------------------------- page bodies
@@ -605,6 +718,7 @@ def method_html(snap, n_trans, n_other, n_stale, n_quiet):
 <li><strong>{n_quiet} funders have gone quiet</strong>: disbursements earlier in the year, none in the last 90 days. Some are seasonal, some are ended programmes never closed, some are late reporting. Each is a question worth asking.</li>
 <li><strong>DFAT's procurement pipeline and business notifications</strong> are read directly from dfat.gov.au on every issue, matched to countries by name in the title or summary, and diffed between issues. They show what Australia is about to buy while its IATI data lags. Contact details on those pages are not copied.</li>
 <li><strong>Standing watches</strong> are short queries (a funder, keyword, tender number or project name) for one country, matched on every issue against the country's activity index, funder tables, World Bank projects and DFAT items, and diffed between issues. Each issue keeps the activity index it was matched against, as a compressed file beside the snapshot.</li>
+<li><strong>New Zealand MFAT tenders</strong> are read from <a href="https://www.gets.govt.nz/ExternalIndex.htm">GETS</a>, New Zealand’s government tender service, on every issue: open, closed and completed tenders from MFAT’s aid business units or with a Pacific country in the title, matched to countries the same way and diffed between issues. GETS publishes the outcome as well as the opportunity, which no other source here does. Named contacts, postal addresses and telephone numbers on those pages are not stored, and where an award names an individual rather than an organisation the name is not repeated.</li>
 <li><strong>Not in this data:</strong> China, Taiwan and most Gulf donors do not publish to IATI. Australian DFAT and New Zealand MFAT, the World Bank, ADB, Japan, the EU, the United States and the UN agencies do, with varying lag and completeness. Absence here is absence from IATI, not absence of aid.</li></ul>
 <h2 id="method">Method</h2>
 <div class=note><p>Source: IATI data through d-portal.org (activity, transaction and recipient-country tables joined by activity identifier), fetched {snap['generated'][:16].replace('T',' ')} UTC; World Bank Projects API, whose newest board-approval dates currently lag real approvals by a year or more, so the World Bank lists are a floor. Disbursements are IATI transaction types D (disbursement) and E (expenditure); a small number of negative adjustments are included as reported. Windows: last 90 days against the 90 days before that; new starts by declared start date; ending soon by declared end date for activities in implementation status; stale means implementation status with an end date more than 365 days ago; active means implementation status and not stale; quiet means positive disbursements in the year but none in the last 90 days; activities whose title names a different Pacific country are kept (the publisher declared them for this country) but shown last and flagged. Weighting: transaction-level recipient country when declared, otherwise the activity's declared percentage for the country; missing percentages are treated as 100% and counted in the flag above. Values in USD as converted by d-portal. One issue per calendar day (Sydney); a later run on the same day refreshes that issue; the change log compares against the newest earlier issue. Code and snapshots: <a href="{REPO}/tree/main/signal">github.com/intexpagent-01/asa-research/signal</a>.</p>
@@ -624,7 +738,8 @@ def render(snaps):
     for w in watches.load(ALIASES, NAME): WATCHES.setdefault(w["code"], []).append(w)
     snap["watches"] = [w for ws in WATCHES.values() for w in ws]
     days = (dt.date.fromisoformat(snap["date"]) - dt.date.fromisoformat(prev["date"])).days if prev else None
-    CH = {c: changes(C[c], P.get(c), days, snap.get("dfat"), prev.get("dfat") if prev else None) for c in order}
+    CH = {c: changes(C[c], P.get(c), days, snap.get("dfat"), prev.get("dfat") if prev else None,
+                     snap.get("nz"), prev.get("nz") if prev else None) for c in order}
     render_index(snap, prev, snaps, order, issue_no, issue_date, CH)
     render_region(snap, prev, snaps, order, issue_no, issue_date, CH)
     for c in order: render_country(c, C[c], P.get(c), prev, snaps, order, issue_no, issue_date, CH.get(c))
@@ -643,7 +758,7 @@ def render_index(snap, prev, snaps, order, issue_no, issue_date, CH):
     H.append(f"""<h1>Pacific Aid Signal</h1>
 <p><strong>Issue {issue_no}, {issue_date}</strong> &middot; rebuilt automatically by Asa, an autonomous AI agent &middot; sources last read {sydtime(snap['generated'])}</p></header>
 <p class="hero"><strong>Someone will ask you what is happening with aid in a Pacific island country. This tells you, and it is current.</strong></p>
-<p>Fourteen countries, one page each: who is funding what, what changed since the last issue, and how old each funder's data is. Read from IATI, the World Bank and DFAT every twelve hours and weighted so that a global programme which merely touches a country is not counted as that country's programme. {usd(tot90)} of disbursements reported in the last 90 days; {n_ch if n_ch else 'no'} change{'' if n_ch == 1 else 's'} since the previous issue.</p>
+<p>Fourteen countries, one page each: who is funding what, what changed since the last issue, and how old each funder's data is. Read from IATI, the World Bank, DFAT and New Zealand’s tender service every twelve hours and weighted so that a global programme which merely touches a country is not counted as that country's programme. {usd(tot90)} of disbursements reported in the last 90 days; {n_ch if n_ch else 'no'} change{'' if n_ch == 1 else 's'} since the previous issue.</p>
 
 <h2>Who this is for, and where to start</h2>
 <div class="roles">
@@ -745,9 +860,9 @@ def render_region(snap, prev, snaps, order, issue_no, issue_date, CH):
     if allw:
         H.append("<table><tr><th>Country</th><th>Watch</th><th class=num>Matches on file</th><th class=num>New this issue</th></tr>")
         for w in allw:
-            cur = watches.matches(w, C[w['code']], snap.get('dfat'), ALIASES)
+            cur = watches.matches(w, C[w['code']], snap.get('dfat'), ALIASES, snap.get('nz'))
             if cur is None: H.append(f"<tr><td><a href='{page(w['code'])}#watches'>{esc(NAME[w['code']])}</a></td><td>“{esc(w['query'])}”</td><td class=num colspan=2>not yet checked</td></tr>"); continue
-            new, _ = watches.diff(cur, watches.matches(w, P[w['code']], prev.get('dfat'), ALIASES) if w['code'] in P else None)
+            new, _ = watches.diff(cur, watches.matches(w, P[w['code']], prev.get('dfat'), ALIASES, prev.get('nz')) if w['code'] in P else None)
             H.append(f"<tr><td><a href='{page(w['code'])}#watches'>{esc(NAME[w['code']])}</a></td><td>“{esc(w['query'])}”</td><td class=num>{len(cur)}</td><td class=num>{'first check' if new is None else len(new)}</td></tr>")
         H.append("</table>")
     else: H.append("<p class=muted>No standing watches are held.</p>")
@@ -770,7 +885,7 @@ def render_region(snap, prev, snaps, order, issue_no, issue_date, CH):
     for c in order:
         r = C[c]
         H.append(f"<div class=card id='{c}'><h3><a href='{page(c)}'>{esc(r['name'])} &rarr;</a></h3><div class=sub>{r['n_activities']:,} activities on record &middot; {r.get('n_active',0):,} active &middot; {usd(r['dis365'])} disbursed over 12 months &middot; {r['n_orgs_365']} funders reporting</div>")
-        H.append(f"<p style='font-size:.92rem'>{brief(r, P.get(c), issue_date, snap.get('dfat'))}</p><p class=more><a href='{page(c)}'>Full {esc(r['name'])} page: funders, sectors, starts, endings, active portfolio, data currency, change log &rarr;</a></p></div>")
+        H.append(f"<p style='font-size:.92rem'>{brief(r, P.get(c), issue_date, snap.get('dfat'), nz=snap.get('nz'))}</p><p class=more><a href='{page(c)}'>Full {esc(r['name'])} page: funders, sectors, starts, endings, active portfolio, data currency, change log &rarr;</a></p></div>")
     H.append(method_html(snap, n_trans, n_other, n_stale, n_quiet)); H.append(issue_archive(snaps)); H.append(FOOTER + "</div></body></html>")
     out = os.path.join(SITE, "pacific-signal.html")
     open(out, "w").write("\n".join(H)); print("rendered", out, f"{os.path.getsize(out)//1024}KB")
@@ -782,7 +897,7 @@ def render_country(code, r, pr, prev, snaps, order, issue_no, issue_date, ch=Non
     that explains the machinery is folded into a details element so it is available without being in the way."""
     H = [head(f"{r['name']} — Pacific Aid Signal, {issue_date}")]
     H.append(f"""<h1>{esc(r['name'])}</h1>
-<p><strong>Pacific Aid Signal, issue {issue_no}, {issue_date}</strong> &middot; regenerated automatically by Asa, an autonomous AI agent, from IATI, World Bank and DFAT data</p></header>
+<p><strong>Pacific Aid Signal, issue {issue_no}, {issue_date}</strong> &middot; regenerated automatically by Asa, an autonomous AI agent, from IATI, World Bank, DFAT and New Zealand MFAT data</p></header>
 {country_nav(order, code)}
 <p class=jump style="border:0;padding:0"><a href="#" onclick="window.print();return false" title="Prints as a short brief with the change log, the picture and the top of each table">Print this page as a brief &#8599;</a></p>
 <div class=kpis>
@@ -800,14 +915,16 @@ def render_country(code, r, pr, prev, snaps, order, issue_no, issue_date, ch=Non
         for c in ch[:6]: H.append(f"<div class=change>{c}</div>")
         if len(ch) > 6:
             H.append(f"<details><summary>{len(ch)-6} more changes this issue</summary>" + "".join(f"<div class=change>{c}</div>" for c in ch[6:]) + "</details>")
-    S = brief(r, pr, issue_date, snaps[-1].get('dfat'), as_list=True)
-    ws = watches.brief_sentence(WATCHES.get(code, []), r, pr, snaps[-1].get('dfat'), prev.get('dfat') if prev else None, ALIASES, r['name'])
+    S = brief(r, pr, issue_date, snaps[-1].get('dfat'), as_list=True, nz=snaps[-1].get('nz'))
+    ws = watches.brief_sentence(WATCHES.get(code, []), r, pr, snaps[-1].get('dfat'), prev.get('dfat') if prev else None, ALIASES, r['name'], snaps[-1].get('nz'), prev.get('nz') if prev else None)
     if ws: S.append(ws)
     H.append(f"<h2>The current picture</h2><ul class=lines>" + "".join(f"<li>{x}</li>" for x in S) + "</ul>")
     H.append(ask.box(r['name'], code))
-    H.append(f"<h2 id=watches>Standing watches for {esc(r['name'])}</h2>"); H.append(watches.html(WATCHES.get(code, []), r, pr, snaps, snaps[-1].get('dfat'), prev.get('dfat') if prev else None, ALIASES, longdate, r['name']))
+    H.append(f"<h2 id=watches>Standing watches for {esc(r['name'])}</h2>"); H.append(watches.html(WATCHES.get(code, []), r, pr, snaps, snaps[-1].get('dfat'), prev.get('dfat') if prev else None, ALIASES, longdate, r['name'], nz=snaps[-1].get('nz'), pnz=prev.get('nz') if prev else None))
     seen, base = first_seen_dfat(snaps)
     H.append(f"<h2>DFAT tenders and notices naming {esc(r['name'])}</h2>"); H.append(dfat_html(code, r["name"], snaps[-1].get("dfat"), seen, base))
+    nseen, nbase = first_seen_nz(snaps)
+    H.append(f"<h2>New Zealand MFAT tenders naming {esc(r['name'])}</h2>"); H.append(nz_html(code, r["name"], snaps[-1].get("nz"), nseen, nbase))
     H.append("<h2>The evidence (IATI and World Bank)</h2>"); H.append(country_body(r, True))
     H.append(f"<details><summary>Method and limits for this page</summary><p>Figures are IATI disbursements and expenditures weighted by the share of each activity declared for {esc(r['name'])}; {r['n_trans_other_country']:,} of {r['n_trans_365']:,} transactions attached to activities tagged to {esc(r['name'])} in the last year were explicitly for another country and were excluded. Publishers report with a lag, so the last 90 days are under-reported and the comparison with the previous 90 days is provisional. China, Taiwan and most Gulf donors do not publish to IATI. Full method, definitions and known limits are on the <a href='pacific-signal.html#method'>regional page</a>.</p></details>")
     H.append(f"<details><summary>Every issue on file ({len(snaps)})</summary>{issue_archive(snaps, heading=False)}</details>")
@@ -833,6 +950,7 @@ def refresh_wb():
 if __name__ == "__main__":
     if "--wb-only" in sys.argv: refresh_wb()
     elif "--dfat-only" in sys.argv: refresh_dfat()
+    elif "--nz-only" in sys.argv: refresh_nz()
     elif "--no-fetch" not in sys.argv: build_snapshot()
     render(load_snapshots())
     print("country pages:", ", ".join(page(c) for c,_,_ in COUNTRIES))
