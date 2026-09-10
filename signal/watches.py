@@ -109,7 +109,8 @@ def matches(w, r, dfat, aliases):
             if a.get("pct") is not None and a["pct"] < 99.5: det += f"; {'under 1' if a['pct'] < 1 else f'{a['pct']:.0f}'}% declared for this country"
             if a.get("names"): det += f"; title names {a['names']}"
             rank = 3 if a.get("stale") else {2: 0, 1: 1, 3: 2}.get(a["st"], 3)
-            H.append({"kind": "activity", "key": a["aid"], "label": a["title"], "detail": det, "sort": (rank, -(a["spend"] or 0))})
+            H.append({"kind": "activity", "key": a["aid"], "label": a["title"], "detail": det, "sort": (rank, -(a["spend"] or 0)),
+                      "ref": a["ref"], "org": a["org"]})
     F = {}
     for o in r.get("orgs_90", []):
         if hit(q, o["name"], o["ref"]): F.setdefault(o["ref"], {"name": o["name"], "bits": []})["bits"].append(f"disbursed {usd(o['usd'])} in the last 90 days")
@@ -134,11 +135,38 @@ def matches(w, r, dfat, aliases):
     H.sort(key=lambda h: (["dfat-item", "notice", "funder", "activity", "wb"].index(h["kind"]), h["sort"], h["label"]))
     return H
 
-def diff(cur, prev):
-    """(new, gone) by (kind, key); prev None means the watch was not checked against the previous issue."""
-    if prev is None: return None, None
+def _tail(h):
+    """An activity identifier with its publisher's own prefix removed. IATI identifiers are conventionally
+    <org ref>-<publisher's own reference>, so the tail survives a change of organisation identifier."""
+    k, ref = h.get("key") or "", h.get("ref") or ""
+    return k[len(ref):].lstrip("-") if ref and k.startswith(ref) else k
+
+def _reidentified(new, gone):
+    """A publisher that re-registers under a new IATI organisation identifier makes every one of its activities look
+    like one hit leaving and an identical one arriving. Pair those up so the change log can say what really happened.
+
+    Deliberately strict: same kind and title, a different organisation identifier, and the same identifier tail. Two
+    unrelated activities that merely share a title are left as a separate arrival and departure, which is honest.
+    Found on 2026-09-10, when IM-CR-017899B ("Manx Times") became IM-CR-024714B ("openmindedly")."""
+    pool = list(gone); moved = []; arrivals = []
+    for h in new:
+        m = next((g for g in pool if g["kind"] == "activity" == h["kind"]
+                  and (g["label"] or "").strip().lower() == (h["label"] or "").strip().lower()
+                  and (g.get("ref") or "") != (h.get("ref") or "") and _tail(g) == _tail(h)), None)
+        if m: pool.remove(m); moved.append((m, h))
+        else: arrivals.append(h)
+    return arrivals, pool, moved
+
+def diff(cur, prev, moved=False):
+    """(new, gone[, reidentified]) by (kind, key); prev None means the watch was not checked against the previous issue.
+
+    Hits whose publisher merely changed its organisation identifier are held out of both lists; pass moved=True to
+    receive them as (old, new) pairs."""
+    if prev is None: return (None, None, None) if moved else (None, None)
     pk = {(h["kind"], h["key"]) for h in prev}; ck = {(h["kind"], h["key"]) for h in cur}
-    return [h for h in cur if (h["kind"], h["key"]) not in pk], [h for h in prev if (h["kind"], h["key"]) not in ck]
+    n = [h for h in cur if (h["kind"], h["key"]) not in pk]; g = [h for h in prev if (h["kind"], h["key"]) not in ck]
+    n, g, mv = _reidentified(n, g)
+    return (n, g, mv) if moved else (n, g)
 
 def first_seen(w, snaps, aliases):
     """Issue date on which each hit first matched, across issues that carry an activity index."""
@@ -165,10 +193,15 @@ def change_lines(watches, r, pr, dfat, pdfat, aliases):
     for w in watches:
         cur = matches(w, r, dfat, aliases)
         if cur is None: continue
-        new, gone = diff(cur, matches(w, pr, pdfat, aliases) if pr else None)
+        new, gone, moved = diff(cur, matches(w, pr, pdfat, aliases) if pr else None, moved=True)
         if new is None:
             out.append(f"Watch “{esc(w['query'])}” first checked in this issue: {len(cur)} match{'es' if len(cur) != 1 else ''} on file."); continue
         for h in new[:3]: out.append(f"Watch “{esc(w['query'])}”: new match, {line(h)}.")
+        for o, h in moved[:2]:
+            out.append(f"Watch “{esc(w['query'])}”: same activity, new publisher identity — {esc(h['label'])} is now published by "
+                       f"{esc(h.get('org'))} ({esc(h.get('ref'))}), previously {esc(o.get('org'))} ({esc(o.get('ref'))}). The publisher re-registered; "
+                       f"the activity did not change.")
+        if len(moved) > 2: out[-1] += f" {len(moved)-2} more of its activities moved with it."
         if len(new) > 3: out[-1] += f" And {len(new)-3} more new matches for this watch."
         if gone: out.append(f"Watch “{esc(w['query'])}”: no longer matching " + ", ".join(esc(h["label"]) for h in gone[:3]) + (f" and {len(gone)-3} more" if len(gone) > 3 else "") + " (left the record, or the match moved outside the window).")
     return out
@@ -199,9 +232,9 @@ def html(watches, r, pr, snaps, dfat, pdfat, aliases, longdate, name, limit=8):
         H.append(f"<h4>“{esc(w['query'])}” <span class=muted style='font-weight:normal'>({src})</span></h4>")
         cur = matches(w, r, dfat, aliases)
         if cur is None: H.append("<p class=muted>Not yet checked: this issue carries no activity index. From the next issue the watch is matched on every run.</p>"); continue
-        new, gone = diff(cur, matches(w, pr, pdfat, aliases) if pr else None)
+        new, gone, moved = diff(cur, matches(w, pr, pdfat, aliases) if pr else None, moved=True)
         if new is None: status = f"First checked in this issue: {len(cur)} match{'es' if len(cur) != 1 else ''} on file."
-        elif new or gone: status = f"Since the previous issue: {len(new)} new match{'es' if len(new) != 1 else ''}" + (f", {len(gone)} no longer matching" if gone else "") + f"; {len(cur)} on file."
+        elif new or gone or moved: status = f"Since the previous issue: {len(new)} new match{'es' if len(new) != 1 else ''}" + (f", {len(gone)} no longer matching" if gone else "") + (f", {len(moved)} republished under a new publisher identifier" if moved else "") + f"; {len(cur)} on file."
         else: status = f"Since the previous issue: no change; {len(cur)} match{'es' if len(cur) != 1 else ''} on file."
         H.append(f"<p style='font-size:.9rem'><strong>{status}</strong></p>")
         if cur:
