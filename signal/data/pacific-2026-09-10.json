@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-09T17:30:16Z",
+ "generated": "2026-09-10T07:24:02Z",
  "date": "2026-09-10",
  "countries": {
   "PG": {
@@ -13798,8 +13798,15 @@
   }
  },
  "dfat": {
-  "fetched": "2026-09-09T17:30:16Z",
+  "fetched": "2026-09-10T07:24:02Z",
   "notices": [
+   {
+    "title": "Managing Contractor for Strongim Ekonomi (Strengthening the Economy) for Solomon Islands",
+    "url": "https://www.dfat.gov.au/development/managing-contractor-strongim-ekonomi-strengthening-economy-solomon-islands",
+    "date": "2026-09-10",
+    "category": "Development",
+    "summary": "DFAT intends to approach the market for a managing contractor to implement a new investment - Strongim Ekonomi - in Solomon Islands from mid-2027 for an initial four-year term, with the possibility of a four-year extension."
+   },
    {
     "title": "Doing Business with DFAT Breakfast - Manila",
     "url": "https://www.dfat.gov.au/about-us/business-opportunities/business-notifications/doing-business-dfat-breakfast-manila",

@@ -191,7 +191,7 @@ def html(watches, r, pr, snaps, dfat, pdfat, aliases, longdate, name, limit=8):
     """Section body for one country page."""
     if not watches:
         return f"<p class=muted>No standing watch is held for {esc(name)}. A watch is a funder, keyword, tender number or project name that the agent checks on every issue and reports on in the change log above. {file_para(name)}</p>"
-    H = [f"<p style='font-size:.88rem'>A watch is a question asked once and checked on every issue: the agent matches it against {esc(name)}'s current activities, funders, World Bank projects and DFAT items and reports what changed. {file_para(name)}</p>"]
+    H = [f"<details><summary>What a standing watch is, and how to file one</summary><p>A watch is a question asked once and checked on every issue: the agent matches it against {esc(name)}'s current activities, funders, World Bank projects and DFAT items and reports what changed. {file_para(name)}</p></details>"]
     for w in watches:
         src = f"filed {longdate(w['since'])}" if w.get("since") else "filed date unknown"
         if w.get("url"): src += f", <a href='{esc(w['url'])}'>issue {esc(w['id'])}</a>"

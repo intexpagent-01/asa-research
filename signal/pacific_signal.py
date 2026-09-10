@@ -294,7 +294,7 @@ def joinlist(items):
     return items[0] if len(items) == 1 else ", ".join(items[:-1]) + " and " + items[-1] if items else ""
 
 def site_style():
-    src = open(os.path.join(SITE,"index.html")).read()
+    src = open(os.path.join(SITE,"research.html")).read()
     m = re.search(r"<style>(.*?)</style>", src, re.S)
     return m.group(1) if m else ""
 
@@ -329,12 +329,33 @@ li{margin-bottom:.3rem;font-size:.9rem}
 .more{font-size:.84rem;margin-top:.6rem}
 a{color:var(--series-1)}
 footer{margin-top:3rem;padding-top:1.2rem;border-top:1px solid var(--gridline);font-size:.8rem;color:var(--text-muted)}
+details{margin:.6rem 0 1rem;font-size:.88rem}
+details summary{cursor:pointer;color:var(--text-secondary);font-size:.85rem;padding:.2rem 0}
+details summary:hover{color:var(--text-primary)}
+details[open] summary{margin-bottom:.5rem}
+details .note,details p,details ul{font-size:.85rem}
+ul.lines{list-style:none;margin:.6rem 0 1.4rem 0}
+ul.lines li{margin-bottom:.55rem;font-size:.95rem;line-height:1.5;padding-left:.9rem;border-left:2px solid var(--gridline)}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:.7rem;margin:1.6rem 0 2.2rem}
+.step{background:var(--surface-card);border:1px solid var(--border);border-radius:8px;padding:.9rem 1.1rem}
+.step b{display:block;font-size:.72rem;text-transform:uppercase;letter-spacing:.06em;color:var(--text-muted);margin-bottom:.35rem}
+.step p{font-size:.9rem;margin:0}
+.cgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(165px,1fr));gap:.55rem;margin:1rem 0 1.6rem}
+.ctile{display:block;background:var(--surface-card);border:1px solid var(--border);border-radius:8px;padding:.7rem .85rem;text-decoration:none;color:inherit}
+.ctile:hover{border-color:var(--series-1)}
+.ctile b{display:block;font-size:.98rem;letter-spacing:-.01em;margin-bottom:.15rem}
+.ctile span{display:block;font-size:.78rem;color:var(--text-muted);font-variant-numeric:tabular-nums}
+.ctile em{font-style:normal;color:var(--series-1);font-size:.78rem}
+.hero{font-size:1.12rem;line-height:1.55;margin:.2rem 0 1.2rem}
+.act{background:var(--surface-card);border:1px solid var(--border);border-left:3px solid var(--series-1);border-radius:8px;padding:1rem 1.25rem;margin:1.4rem 0;font-size:.92rem}
 """
 
-def head(title, back="index.html", backtext="Asa"):
+def head(title, back="index.html", backtext="Pacific Aid Signal"):
+    up = f'<p style="margin-bottom:.4rem"><a href="{back}" style="color:var(--text-muted);text-decoration:none">&larr; {backtext}</a></p>' if back else ""
     return f"""<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>{esc(title)}</title><style>{site_style()}{EXTRA_CSS}</style></head><body><div class="container">
-<header><p style="margin-bottom:.4rem"><a href="{back}" style="color:var(--text-muted);text-decoration:none">&larr; {backtext}</a></p>"""
+<title>{esc(title)}</title><meta name="description" content="Who is funding what in 14 Pacific island countries, rebuilt from IATI, World Bank and DFAT data every issue.">
+<style>{site_style()}{EXTRA_CSS}</style></head><body><div class="container">
+<header>{up}"""
 
 def country_nav(order, here=None):
     return "<div class=jump>" + " ".join(f"<a href='{page(c)}'{' class=here' if c==here else ''}>{esc(NAME[c])}</a>" for c in order) + " <a href='pacific-signal.html'>Region</a></div>"
@@ -342,8 +363,10 @@ def country_nav(order, here=None):
 FOOTER = f"""<footer>Pacific Aid Signal is produced by Asa, an autonomous AI agent running on a schedule with no human editing of the figures. It is an experiment in whether a persistent agent can be a useful analyst for a region. Errors are the agent's; the method tells you where to look. Every issue is kept as a snapshot in the <a href="{REPO}/tree/main/signal/data">repository</a>. Use case: <a href="pitch.html">An analyst that never sleeps</a>.</footer>"""
 
 # ---------------------------------------------------------------- narrative
-def brief(r, pr, issue_date, dfat=None):
-    """Plain-language summary of one country, templated from the snapshot (no model call)."""
+def brief(r, pr, issue_date, dfat=None, as_list=False):
+    """Plain-language summary of one country, templated from the snapshot (no model call).
+
+    `as_list` returns the sentences separately, so a page can show them as short lines instead of a paragraph."""
     S = []; n = r["name"]
     if r["dis90"] > 0 and r["top_orgs_90"]:
         t = r["top_orgs_90"]; lead = f"{esc(t[0]['name'])} ({t[0]['pct']:.0f}%)"
@@ -381,7 +404,7 @@ def brief(r, pr, issue_date, dfat=None):
             S.append(f"DFAT's procurement pipeline (as at {esc(dfat.get('as_at') or 'the last read')}) names no {n}-specific item; {plural(len(rp),'Pacific-wide item')} apply.")
         recent = [x for x in cn if x.get("date") and x["date"] >= d2s(D90)]
         if recent: S.append(f"DFAT published {plural(len(recent),'business notification')} naming {n} in the last 90 days, newest {esc(recent[0]['title'])} ({longdate(recent[0]['date'])}).")
-    return " ".join(S)
+    return S if as_list else " ".join(S)
 
 def short(t, n):
     """Truncate at a word boundary, drop a trailing full stop so the caller can add its own punctuation."""
@@ -545,9 +568,10 @@ def method_html(snap, n_trans, n_other, n_stale, n_quiet):
 <div class=note><p>Source: IATI data through d-portal.org (activity, transaction and recipient-country tables joined by activity identifier), fetched {snap['generated'][:16].replace('T',' ')} UTC; World Bank Projects API, whose newest board-approval dates currently lag real approvals by a year or more, so the World Bank lists are a floor. Disbursements are IATI transaction types D (disbursement) and E (expenditure); a small number of negative adjustments are included as reported. Windows: last 90 days against the 90 days before that; new starts by declared start date; ending soon by declared end date for activities in implementation status; stale means implementation status with an end date more than 365 days ago; active means implementation status and not stale; quiet means positive disbursements in the year but none in the last 90 days; activities whose title names a different Pacific country are kept (the publisher declared them for this country) but shown last and flagged. Weighting: transaction-level recipient country when declared, otherwise the activity's declared percentage for the country; missing percentages are treated as 100% and counted in the flag above. Values in USD as converted by d-portal. One issue per calendar day (Sydney); a later run on the same day refreshes that issue; the change log compares against the newest earlier issue. Code and snapshots: <a href="{REPO}/tree/main/signal">github.com/intexpagent-01/asa-research/signal</a>.</p>
 <p>Known limits: IATI reporting lag means the most recent weeks are under-reported, and the World Bank and others disburse disproportionately in June at fiscal year-end, so the 90-day change is provisional and biased downward in a September issue; it firms up as later issues refresh the same window; activity titles are as published; sector shares use the DAC 3-digit group of each transaction; the page reflects only what publishers report.</p></div>"""
 
-def issue_archive(snaps):
+def issue_archive(snaps, heading=True):
     items = [f"<a href='{REPO}/blob/main/signal/data/pacific-{s['date']}.json'>{longdate(s['date'])}</a>" for s in reversed(snaps)]
-    return f"<h4>Issues on file ({len(snaps)})</h4><p style='font-size:.86rem'>{' · '.join(items)}. Each is the full data snapshot behind that issue; a figure on this page can be traced to the issue it came from.</p>"
+    h = f"<h4>Issues on file ({len(snaps)})</h4>" if heading else ""
+    return f"{h}<p style='font-size:.86rem'>{' · '.join(items)}. Each is the full data snapshot behind that issue; a figure on this page can be traced to the issue it came from.</p>"
 
 # ---------------------------------------------------------------- pages
 def render(snaps):
@@ -557,22 +581,74 @@ def render(snaps):
     WATCHES.clear()
     for w in watches.load(ALIASES, NAME): WATCHES.setdefault(w["code"], []).append(w)
     snap["watches"] = [w for ws in WATCHES.values() for w in ws]
-    render_region(snap, prev, snaps, order, issue_no, issue_date)
-    for c in order: render_country(c, C[c], P.get(c), prev, snaps, order, issue_no, issue_date)
+    days = (dt.date.fromisoformat(snap["date"]) - dt.date.fromisoformat(prev["date"])).days if prev else None
+    CH = {c: changes(C[c], P.get(c), days, snap.get("dfat"), prev.get("dfat") if prev else None) for c in order}
+    render_index(snap, prev, snaps, order, issue_no, issue_date, CH)
+    render_region(snap, prev, snaps, order, issue_no, issue_date, CH)
+    for c in order: render_country(c, C[c], P.get(c), prev, snaps, order, issue_no, issue_date, CH.get(c))
     n_dfat = len((snap.get("dfat") or {}).get("items", []))
     print(f"issue {issue_no} {snap['date']}; previous {prev['date'] if prev else 'none'}; DFAT pipeline items {n_dfat}")
 
-def render_region(snap, prev, snaps, order, issue_no, issue_date):
+def render_index(snap, prev, snaps, order, issue_no, issue_date, CH):
+    """The front door at the root of the site: what this is, one tile per country, what changed today, one action.
+
+    Deliberately short. The regional page holds the detail; this page exists so that a first-time reader knows within
+    a few seconds what they are looking at and what to do with it (Operator feedback, 2026-09-09)."""
+    C = snap["countries"]
+    tot90 = sum(C[c]["dis90"] for c in order)
+    n_ch = sum(len(CH.get(c) or []) for c in order)
+    H = [head("Pacific Aid Signal", back=None)]
+    H.append(f"""<h1>Pacific Aid Signal</h1>
+<p><strong>Issue {issue_no}, {issue_date}</strong> &middot; rebuilt automatically by Asa, an autonomous AI agent &middot; sources last read {sydtime(snap['generated'])}</p></header>
+<p class="hero">Who is funding what in the <strong>14 Pacific island countries</strong> &mdash; read straight from IATI, the World Bank and DFAT, corrected for the share of each activity that is really for the country, and rewritten every issue. One page per country. {usd(tot90)} of disbursements reported in the last 90 days; {n_ch if n_ch else 'no'} change{'' if n_ch == 1 else 's'} since the previous issue.</p>
+<div class="steps">
+<div class="step"><b>1 &middot; Open your country</b><p>Every country has one page, the same shape in every issue.</p></div>
+<div class="step"><b>2 &middot; Read the top</b><p>What changed since the last issue, then the current picture in six lines. Everything below that is the evidence.</p></div>
+<div class="step"><b>3 &middot; Leave a question</b><p>Name a funder, a keyword or a tender number and every future issue reports what matched. That is a <em>standing watch</em>.</p></div>
+</div>
+<h2>Open your country</h2>""")
+    tiles = []
+    for c in sorted(order, key=lambda c: -C[c]["dis90"]):
+        r = C[c]; n = len(CH.get(c) or [])
+        note = (f"<em>{n} change{'' if n == 1 else 's'} this issue</em>" if n else
+                "<span>no change this issue</span>" if CH.get(c) is not None else "<span>first issue</span>")
+        tiles.append(f"<a class=ctile href='{page(c)}'><b>{esc(r['name'])}</b><span>{usd(r['dis90'])} in 90 days &middot; {r['n_orgs_90']} funder{'' if r['n_orgs_90'] == 1 else 's'} &middot; {r.get('n_active',0):,} active</span>{note}</a>")
+    H.append("<div class=cgrid>" + "".join(tiles) + "</div>")
+    H.append(f"<h2>What changed since the previous issue{' (' + longdate(prev['date']) + ')' if prev else ''}</h2>")
+    if not prev:
+        H.append("<p class=muted>This is the first issue; the change log begins with the next one.</p>")
+    else:
+        shown = [c for c in order if CH.get(c)]
+        if not shown:
+            H.append(f"<p class=muted>Nothing moved in any of the 14 countries since {longdate(prev['date'])}. The sources were re-read on {sydtime(snap['generated'])}; publishers release in batches, so a quiet issue is normal, and saying so is more useful than inventing movement.</p>")
+        else:
+            for c in shown[:6]:
+                H.append(f"<div class=change><strong><a href='{page(c)}#changes'>{esc(NAME[c])}</a></strong>: {(CH[c])[0]}" + (f" <a href='{page(c)}#changes'>{len(CH[c])-1} more</a>." if len(CH[c]) > 1 else "") + "</div>")
+            if len(shown) > 6:
+                H.append(f"<p class=more>{len(shown)-6} more countries changed; the <a href='pacific-signal.html'>regional page</a> lists every line.</p>")
+    allw = [w for c in order for w in WATCHES.get(c, [])]
+    ex = [f"&ldquo;{esc(w['query'])}&rdquo; ({esc(NAME[w['code']])})" for w in allw[:3]]
+    H.append(f"""<div class=act><strong>Ask it to watch something.</strong> A standing watch is one country plus a short query: a funder, a keyword, a tender number, a project name. Every issue from then on reports what matched and what is new, on that country's page. {plural(len(allw), 'watch', 'watches')} {'is' if len(allw) == 1 else 'are'} running now{', for example ' + joinlist(ex) if ex else ''}.<br><br>Filing one needs a GitHub account: <a href="{REPO}/issues/new?title=Watch%20">open an issue</a> titled <code>Watch &lt;country&gt;: &lt;your query&gt;</code>. The agent reads the title on its next run, never the body, and never replies on the issue &mdash; the country page is the answer. Closing the issue withdraws the watch.</div>
+<h2>What this is</h2>
+<p>An experiment in whether an AI agent can hold a region's aid picture in view without a person driving it. Asa re-reads the same public sources every issue, weights each activity by the share declared for the country, diffs the result against the previous issue and writes these pages. No person edits the figures, and no model is called while a page is built, so the numbers come from the data rather than from a model's memory. Errors are the agent's; the method section on every page says where to look for them.</p>
+<p class=jump><a href="pacific-signal.html">Region overview and full change log</a> <a href="pacific-signal.html#method">Method and known limits</a> <a href="pitch.html">The use case behind it</a> <a href="research.html">Asa's research archive</a> <a href="{REPO}">Code and every issue's data</a></p>
+<details><summary>What is not in this data</summary><p>China, Taiwan and most Gulf donors do not publish to IATI, so they are absent here; absence is absence from IATI, not absence of aid. Publishers report with a lag of weeks to more than a year (Australia's DFAT has published no IATI transaction dated after 30 June 2025, which is why its procurement pipeline is read directly instead), so the most recent 90 days are always under-reported and the comparison with the previous 90 days is provisional. The World Bank's Projects API lags real board approvals by a year or more. About 70% of the transactions attached to Pacific-tagged activities are explicitly for another country and are excluded here.</p></details>""")
+    H.append(FOOTER)
+    H.append("</div></body></html>")
+    out = os.path.join(SITE, "index.html")
+    open(out, "w").write("\n".join(H)); print("rendered", out, f"{os.path.getsize(out)//1024}KB")
+
+def render_region(snap, prev, snaps, order, issue_no, issue_date, CH):
     C = snap["countries"]; P = prev["countries"] if prev else {}
     tot90 = sum(C[c]["dis90"] for c in order); totprev = sum(C[c]["dis_prev90"] for c in order)
     n_new = sum(C[c]["n_new_starts"] for c in order); n_end = sum(C[c]["n_ending_soon"] for c in order)
     n_wb = sum(len(C[c]["wb_recent"]) for c in order); wb_amt = sum(p["amount"] for c in order for p in C[c]["wb_recent"])
     n_stale = sum(C[c]["n_stale"] for c in order); n_quiet = sum(C[c]["n_quiet"] for c in order)
     n_trans = sum(C[c]["n_trans_365"] for c in order); n_other = sum(C[c]["n_trans_other_country"] for c in order)
-    H = [head(f"Pacific Aid Signal — {issue_date}")]
-    H.append(f"""<h1>Pacific Aid Signal</h1>
-<p><strong>Issue {issue_no}, {issue_date}</strong> &middot; regenerated automatically by Asa, an autonomous AI agent, from IATI and World Bank data &middot; 14 Pacific island countries &middot; one page per country below</p></header>
-<p class="lede">For the person responsible for one Pacific country's aid picture: what moved over the last 90 days, what changed since the previous issue, and where the data cannot be trusted. Every figure is weighted by the share of each activity declared for the country, so a global programme that touches Tonga does not count as a Tongan programme.</p>
+    H = [head(f"Region overview — Pacific Aid Signal, {issue_date}")]
+    H.append(f"""<h1>Region overview</h1>
+<p><strong>Pacific Aid Signal, issue {issue_no}, {issue_date}</strong> &middot; all 14 countries on one page &middot; regenerated automatically by Asa, an autonomous AI agent</p></header>
+<p class="lede">What moved across the region over the last 90 days, what changed since the previous issue, and where the data cannot be trusted. Every figure is weighted by the share of each activity declared for the country, so a global programme that touches Tonga does not count as a Tongan programme.</p>
 <div class="kpis">
 <div class="kpi"><b>{usd(tot90)}</b><span>reported disbursements, last 90 days, 14 countries</span></div>
 <div class="kpi"><b>{delta(tot90, totprev)}</b><span>against the previous 90 days; provisional, see method</span></div>
@@ -601,7 +677,7 @@ def render_region(snap, prev, snaps, order, issue_no, issue_date):
     else:
         any_change = False
         for c in order:
-            ch = changes(C[c], P.get(c), (dt.date.fromisoformat(snap['date'])-dt.date.fromisoformat(prev['date'])).days, snap.get("dfat"), prev.get("dfat")) if c in P else None
+            ch = CH.get(c)
             if ch:
                 any_change = True
                 H.append(f"<div class=change><strong><a href='{page(c)}'>{esc(NAME[c])}</a></strong>: " + " ".join(ch[:4]) + (f" <a href='{page(c)}#changes'>{len(ch)-4} more</a>." if len(ch) > 4 else "") + "</div>")
@@ -615,7 +691,8 @@ def render_region(snap, prev, snaps, order, issue_no, issue_date):
     H.append("</table>")
     # standing watches
     allw = [w for c in order for w in WATCHES.get(c, [])]
-    H.append("<h2>Standing watches</h2><p style='font-size:.88rem'>A watch is a question asked once and checked on every issue: a funder, a keyword, a tender number or a project name for one country. Each issue reports what matched since the previous one and when each match first appeared. Anyone with a GitHub account can file one: open an issue on <a href='{REPO}/issues/new?title=Watch%20'>the repository</a> titled <code>Watch &lt;country&gt;: &lt;query&gt;</code>; the agent reads the title on its next run (never the body), shows the query and issue number on the country page without the author, and never replies on the issue. Closing the issue withdraws the watch.</p>")
+    H.append(f"<h2>Standing watches</h2><p style='font-size:.9rem'>A question asked once and checked on every issue: a funder, a keyword, a tender number or a project name for one country. <a href='{REPO}/issues/new?title=Watch%20'>File one</a> with a GitHub account.</p>"
+             "<details><summary>How a watch works</summary><p>Open an issue on the repository titled <code>Watch &lt;country&gt;: &lt;query&gt;</code>. On its next run the agent reads the title (never the body), matches the query against that country's activity index, funder tables, World Bank projects and DFAT items, and reports what matched and what is new on the country page, with the issue number and without the author. The agent never replies on the issue: the page is the answer. Closing the issue withdraws the watch. Queries are 3 to 60 plain characters; there are caps per account and per country.</p></details>")
     if allw:
         H.append("<table><tr><th>Country</th><th>Watch</th><th class=num>Matches on file</th><th class=num>New this issue</th></tr>")
         for w in allw:
@@ -649,10 +726,14 @@ def render_region(snap, prev, snaps, order, issue_no, issue_date):
     out = os.path.join(SITE, "pacific-signal.html")
     open(out, "w").write("\n".join(H)); print("rendered", out, f"{os.path.getsize(out)//1024}KB")
 
-def render_country(code, r, pr, prev, snaps, order, issue_no, issue_date):
-    H = [head(f"{r['name']} — Pacific Aid Signal, {issue_date}", "pacific-signal.html", "Pacific Aid Signal")]
+def render_country(code, r, pr, prev, snaps, order, issue_no, issue_date, ch=None):
+    """One country page: what changed, then the picture in short lines, then the evidence, then the method.
+
+    The order is deliberate. A reader who has thirty seconds should get the change log and six lines; everything
+    that explains the machinery is folded into a details element so it is available without being in the way."""
+    H = [head(f"{r['name']} — Pacific Aid Signal, {issue_date}")]
     H.append(f"""<h1>{esc(r['name'])}</h1>
-<p><strong>Pacific Aid Signal, issue {issue_no}, {issue_date}</strong> &middot; regenerated automatically by Asa, an autonomous AI agent, from IATI and World Bank data</p></header>
+<p><strong>Pacific Aid Signal, issue {issue_no}, {issue_date}</strong> &middot; regenerated automatically by Asa, an autonomous AI agent, from IATI, World Bank and DFAT data</p></header>
 {country_nav(order, code)}
 <div class=kpis>
 <div class=kpi><b>{usd(r['dis90'])}</b><span>reported disbursements, last 90 days</span></div>
@@ -660,18 +741,26 @@ def render_country(code, r, pr, prev, snaps, order, issue_no, issue_date):
 <div class=kpi><b>{r.get('n_active',0):,}</b><span>activities in implementation ({r['n_activities']:,} on record)</span></div>
 <div class=kpi><b>{r['n_new_starts']} &middot; {r['n_ending_soon']}</b><span>started in 90 days &middot; ending within 180 days</span></div>
 </div>
-<h2>In brief</h2><p class=brief>{brief(r, pr, issue_date, snaps[-1].get('dfat'))} {watches.brief_sentence(WATCHES.get(code, []), r, pr, snaps[-1].get('dfat'), prev.get('dfat') if prev else None, ALIASES, r['name'])}</p>
-<h2 id=changes>Since the previous issue{' ('+longdate(prev['date'])+')' if prev else ''}</h2>""")
-    ch = changes(r, pr, (dt.date.fromisoformat(snaps[-1]['date'])-dt.date.fromisoformat(prev['date'])).days if prev else None, snaps[-1].get("dfat"), prev.get("dfat") if prev else None)
-    if ch is None: H.append("<p class=muted>This is the first issue for this country. From the next issue this section lists what entered or left the funder table, newly listed starts and endings, new World Bank approvals, new DFAT notices and pipeline moves, and which publishers released newer data.</p>")
-    elif not ch: H.append(f"<p class=muted>No change in the headline figures since {longdate(prev['date'])}; sources were re-read on {sydtime(snaps[-1]['generated'])}.</p>")
-    else: H.append("".join(f"<div class=change>{c}</div>" for c in ch))
+<h2 id=changes>What changed since the previous issue{' (' + longdate(prev['date']) + ')' if prev else ''}</h2>""")
+    if ch is None:
+        H.append("<p class=muted>This is the first issue for this country. From the next issue this section lists what entered or left the funder table, newly listed starts and endings, new World Bank approvals, new DFAT notices and pipeline moves, which publishers released newer data, and what each standing watch found.</p>")
+    elif not ch:
+        H.append(f"<p class=muted>Nothing moved since {longdate(prev['date'])}; the sources were re-read on {sydtime(snaps[-1]['generated'])}. Publishers release in batches, so a quiet issue is normal.</p>")
+    else:
+        for c in ch[:6]: H.append(f"<div class=change>{c}</div>")
+        if len(ch) > 6:
+            H.append(f"<details><summary>{len(ch)-6} more changes this issue</summary>" + "".join(f"<div class=change>{c}</div>" for c in ch[6:]) + "</details>")
+    S = brief(r, pr, issue_date, snaps[-1].get('dfat'), as_list=True)
+    ws = watches.brief_sentence(WATCHES.get(code, []), r, pr, snaps[-1].get('dfat'), prev.get('dfat') if prev else None, ALIASES, r['name'])
+    if ws: S.append(ws)
+    H.append(f"<h2>The current picture</h2><ul class=lines>" + "".join(f"<li>{x}</li>" for x in S) + "</ul>")
     H.append(f"<h2 id=watches>Standing watches for {esc(r['name'])}</h2>"); H.append(watches.html(WATCHES.get(code, []), r, pr, snaps, snaps[-1].get('dfat'), prev.get('dfat') if prev else None, ALIASES, longdate, r['name']))
     seen, base = first_seen_dfat(snaps)
     H.append(f"<h2>DFAT tenders and notices naming {esc(r['name'])}</h2>"); H.append(dfat_html(code, r["name"], snaps[-1].get("dfat"), seen, base))
-    H.append("<h2>The record (IATI and World Bank)</h2>"); H.append(country_body(r, True))
-    H.append(f"<h2>Method and limits</h2><p style='font-size:.9rem'>Figures are IATI disbursements and expenditures weighted by the share of each activity declared for {esc(r['name'])}; {r['n_trans_other_country']:,} of {r['n_trans_365']:,} transactions attached to activities tagged to {esc(r['name'])} in the last year were explicitly for another country and were excluded. China, Taiwan and most Gulf donors do not publish to IATI. Full method, definitions and known limits are on the <a href='pacific-signal.html#method'>regional page</a>.</p>")
-    H.append(issue_archive(snaps)); H.append(country_nav(order, code)); H.append(FOOTER + "</div></body></html>")
+    H.append("<h2>The evidence (IATI and World Bank)</h2>"); H.append(country_body(r, True))
+    H.append(f"<details><summary>Method and limits for this page</summary><p>Figures are IATI disbursements and expenditures weighted by the share of each activity declared for {esc(r['name'])}; {r['n_trans_other_country']:,} of {r['n_trans_365']:,} transactions attached to activities tagged to {esc(r['name'])} in the last year were explicitly for another country and were excluded. Publishers report with a lag, so the last 90 days are under-reported and the comparison with the previous 90 days is provisional. China, Taiwan and most Gulf donors do not publish to IATI. Full method, definitions and known limits are on the <a href='pacific-signal.html#method'>regional page</a>.</p></details>")
+    H.append(f"<details><summary>Every issue on file ({len(snaps)})</summary>{issue_archive(snaps, heading=False)}</details>")
+    H.append(country_nav(order, code)); H.append(FOOTER + "</div></body></html>")
     out = os.path.join(SITE, page(code))
     open(out, "w").write("\n".join(H))
 
