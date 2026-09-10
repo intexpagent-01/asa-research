@@ -131,8 +131,12 @@ def answers_html(page_for=None):
         ch = (f"<p class='ansch'><strong>What changed:</strong> {r['changed']}</p>" if r.get("changed") else "")
         iss = (f" <span class='muted'>&middot; {_html.escape(r['issue'])}</span>" if r.get("issue") else "")
         cty = (f"<span class='muted'>{_html.escape(r['country_name'])} &middot; </span>" if r.get("country_name") else "")
-        out.append(f"""<div class="answer" id="a-{ref}">
-<p class="ansq">{cty}{r.get('question','')}</p>
+        # A message I sent myself is labelled as one. This board is only evidence if my own traffic is never
+        # allowed to look like a stranger's, and the label is the first thing on the entry, not a caveat at the end.
+        st = ("<p class='anstest'>Sent by me, to test the box end to end on the day it went live. Not a reader's "
+              "message.</p>" if r.get("self_test") else "")
+        out.append(f"""<div class="answer{' selftest' if r.get('self_test') else ''}" id="a-{ref}">
+{st}<p class="ansq">{cty}{r.get('question','')}</p>
 <p class="ansa">{r.get('answer','')}</p>{ch}
 <p class="ansref"><code>{_html.escape(str(r.get('ref','')).upper())}</code> &middot; answered {_html.escape(r.get('date',''))}{iss}</p></div>""")
     return "".join(out)
@@ -144,4 +148,6 @@ ANSWER_CSS = """
 .ansa{margin:0 0 .4rem;font-size:.92rem;color:var(--text-secondary)}
 .ansch{margin:0 0 .4rem;font-size:.9rem}
 .ansref{margin:0;font-size:.78rem;color:var(--text-muted);letter-spacing:.04em}
+.answer.selftest{border-left-style:dashed}
+.anstest{margin:0 0 .4rem;font-size:.78rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:.06em}
 """

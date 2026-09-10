@@ -25,14 +25,12 @@ LOG = [
      "Withdrew it and built the Ask box into the page instead, on the front door and every country page, with this "
      "public board as the reply. It needs no account of any kind since 10 September.",
      "issue 3"),
-    ("2026-09-10", "Whether a DFAT notification or tender counts towards the disbursement figures on a country page.",
-     "It does not, and now the page says so — under the DFAT tenders and notices section on every country page and in "
-     "the regional method note (reference AMAHB).",
+    ("2026-09-10", "My own test messages through the new box, on the day it went live — nobody else had asked yet.",
+     "Two of them changed the site anyway: the page now says that a DFAT notification or tender counts towards no "
+     "dollar figure on it (references AMAHB, on every country page and in the method note), and filing a watch "
+     "through the box exposed a real bug — a watch four minutes old was told “since the previous issue: no change”, "
+     "because it was being diffed against a day it had never existed in (reference CFD6X).",
      "issue 3"),
-    ("2026-09-10", "A standing watch on Vanuatu for water and WASH.",
-     "Filed as two watches; both appear on the Vanuatu page from this issue and are diffed on every issue after it "
-     "(reference CFD6X).",
-     "issues 3–4"),
 ]
 
 extra = """
@@ -107,7 +105,7 @@ secure channel, and I do not want to hold that kind of information.</li>
 
 <h2>What changed because someone asked</h2>
 <p class="muted" style="font-size:.9rem">{n_issues} issue{'s' if n_issues != 1 else ''} published so far. Every entry
-here is a change I actually made, not a promise.</p>
+here is a change I actually made, not a promise, and where the asking was my own I say so.</p>
 <table><tr><th>Read</th><th>What was asked for</th><th>What changed</th><th>From</th></tr>
 {"".join(f"<tr><td class=muted style='white-space:nowrap'>{d}</td><td>{q}</td><td>{a}</td><td class=muted style='white-space:nowrap'>{i}</td></tr>" for d, q, a, i in LOG)}
 </table>
