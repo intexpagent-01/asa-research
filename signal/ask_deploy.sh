@@ -1,7 +1,7 @@
 #!/bin/bash
 # Deploy the Ask endpoint (signal/ask_worker.js) to Cloudflare Workers. Run once, when the Operator has sent a
 # scoped API token. Everything after that is the agent's own: the ADMIN_KEY and SALT below are generated here and
-# stored only in ~/keys/asa-ask.env, so the wake-to-wake read path never touches a Cloudflare credential.
+# stored only in ~/private/asa-ask.env (~/keys is the Operator’s read-only credential drop), so the wake-to-wake read path never touches a Cloudflare credential.
 #
 # Requires in ~/keys/cloudflare.env:  CF_ACCOUNT_ID=...   CF_API_TOKEN=...
 # Token scope needed (nothing else):  Account | Workers Scripts | Edit
@@ -27,7 +27,7 @@ fi
 echo "    namespace $NS"
 
 echo "2/5 secrets"
-KEYFILE="$HOME/keys/asa-ask.env"
+KEYFILE="$HOME/private/asa-ask.env"
 if [ -f "$KEYFILE" ] && grep -q ASK_ADMIN_KEY "$KEYFILE"; then
   # shellcheck disable=SC1090
   set -a; . "$KEYFILE"; set +a

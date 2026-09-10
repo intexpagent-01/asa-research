@@ -16,6 +16,7 @@ skipped, and only links back to the repository's own issues are rendered.
 import datetime as dt, json, os, re, sys, urllib.request
 from dfat_notices import for_country
 import mfat_tenders
+import ask
 
 LOCAL = os.environ.get("SIGNAL_WATCHES") or os.path.join(os.path.dirname(os.path.abspath(__file__)), "watches.json")
 ISSUES_API = "https://api.github.com/repos/intexpagent-01/asa-research/issues?state=open&per_page=100&sort=created&direction=asc"
@@ -95,6 +96,17 @@ def _pat(q): return r"(?<![A-Za-z0-9])" + re.escape(q) + r"(?![A-Za-z0-9])"
 def hit(q, *texts):
     flags = re.I if len(q) > 3 else 0
     return any(t and re.search(_pat(q), str(t), flags) for t in texts)
+
+def prev_for(w, pr, pdate):
+    """The previous snapshot to diff this watch against, or None when the watch is younger than it.
+
+    A watch filed after the previous issue was never actually checked against it. Matching it retroactively makes
+    the page say "since the previous issue: no change" to someone who filed it minutes ago, and marks none of its
+    matches as new. The truthful statement for a watch's first appearance is "first checked in this issue".
+    """
+    if pr is not None and pdate and w.get("since") and str(w["since"]) > str(pdate):
+        return None
+    return pr
 
 def matches(w, r, dfat, aliases, nz=None):
     """Hits for one watch in one country's snapshot record: {kind, key, label, detail, sort}. Returns None when the
@@ -190,7 +202,11 @@ def first_seen(w, snaps, aliases):
 
 # ---------------------------------------------------------------- rendering
 def file_para(name):
-    return (f"Anyone with a GitHub account can file one: <a href='{esc(file_url(name))}'>open an issue</a> on the repository titled "
+    """How to file one. The Ask box comes first because it needs no account, which is the point of it."""
+    box = (f"Use the Ask box on this page: choose <em>file a standing watch</em>, type the country and the term, and send. "
+           f"No account, no name, no e-mail address; you get a reference and a link where my answer appears. "
+           if ask.ENDPOINT else "")
+    return (box + f"{'Or, if you would rather have a public record of it: anyone' if box else 'Anyone'} with a GitHub account can file one: <a href='{esc(file_url(name))}'>open an issue</a> on the repository titled "
             f"<code>Watch {esc(name)}: your query</code> (3 to 60 plain characters). The agent reads the title on its next run, never the body, "
             f"shows the query and the issue number here without the author, and does not reply on the issue: this page is the answer. "
             f"Closing the issue withdraws the watch. Watches filed by the Operator of this experiment or by the agent are marked as such.")
@@ -198,13 +214,14 @@ def line(h):
     lab = f"<a href='{esc(h['url'])}'>{esc(h['label'])}</a>" if h.get("url") else esc(h["label"])
     return f"{lab} <span class=muted>({KIND[h['kind']]}; {esc(h['detail'])})</span>"
 
-def change_lines(watches, r, pr, dfat, pdfat, aliases, nz=None, pnz=None):
+def change_lines(watches, r, pr, dfat, pdfat, aliases, nz=None, pnz=None, pdate=None):
     """Change-log entries for a country's watches: new and lost matches, three per watch."""
     out = []
     for w in watches:
         cur = matches(w, r, dfat, aliases, nz)
         if cur is None: continue
-        new, gone, moved = diff(cur, matches(w, pr, pdfat, aliases, pnz) if pr else None, moved=True)
+        prw = prev_for(w, pr, pdate)
+        new, gone, moved = diff(cur, matches(w, prw, pdfat, aliases, pnz) if prw else None, moved=True)
         if new is None:
             out.append(f"Watch “{esc(w['query'])}” first checked in this issue: {len(cur)} match{'es' if len(cur) != 1 else ''} on file."); continue
         for h in new[:3]: out.append(f"Watch “{esc(w['query'])}”: new match, {line(h)}.")
@@ -217,13 +234,14 @@ def change_lines(watches, r, pr, dfat, pdfat, aliases, nz=None, pnz=None):
         if gone: out.append(f"Watch “{esc(w['query'])}”: no longer matching " + ", ".join(esc(h["label"]) for h in gone[:3]) + (f" and {len(gone)-3} more" if len(gone) > 3 else "") + " (left the record, or the match moved outside the window).")
     return out
 
-def brief_sentence(watches, r, pr, dfat, pdfat, aliases, name, nz=None, pnz=None):
+def brief_sentence(watches, r, pr, dfat, pdfat, aliases, name, nz=None, pnz=None, pdate=None):
     if not watches: return ""
     n_new = 0; checked = 0; first = 0; on_file = 0
     for w in watches:
         cur = matches(w, r, dfat, aliases, nz)
         if cur is None: continue
-        checked += 1; on_file += len(cur); new, _ = diff(cur, matches(w, pr, pdfat, aliases, pnz) if pr else None)
+        checked += 1; on_file += len(cur); prw = prev_for(w, pr, pdate)
+        new, _ = diff(cur, matches(w, prw, pdfat, aliases, pnz) if prw else None)
         if new is None: first += 1
         else: n_new += len(new)
     if not checked: return ""
@@ -231,7 +249,7 @@ def brief_sentence(watches, r, pr, dfat, pdfat, aliases, name, nz=None, pnz=None
     if first == checked: return head + f"first checked in this issue, {on_file} match{'es' if on_file != 1 else ''} on file."
     return head + (f"{n_new} new match{'es' if n_new != 1 else ''} this issue." if n_new else "no new matches this issue.")
 
-def html(watches, r, pr, snaps, dfat, pdfat, aliases, longdate, name, limit=8, nz=None, pnz=None):
+def html(watches, r, pr, snaps, dfat, pdfat, aliases, longdate, name, limit=8, nz=None, pnz=None, pdate=None):
     """Section body for one country page."""
     if not watches:
         return f"<p class=muted>No standing watch is held for {esc(name)}. A watch is a funder, keyword, tender number or project name that the agent checks on every issue and reports on in the change log above. {file_para(name)}</p>"
@@ -243,7 +261,8 @@ def html(watches, r, pr, snaps, dfat, pdfat, aliases, longdate, name, limit=8, n
         H.append(f"<h4>“{esc(w['query'])}” <span class=muted style='font-weight:normal'>({src})</span></h4>")
         cur = matches(w, r, dfat, aliases, nz)
         if cur is None: H.append("<p class=muted>Not yet checked: this issue carries no activity index. From the next issue the watch is matched on every run.</p>"); continue
-        new, gone, moved = diff(cur, matches(w, pr, pdfat, aliases, pnz) if pr else None, moved=True)
+        prw = prev_for(w, pr, pdate)
+        new, gone, moved = diff(cur, matches(w, prw, pdfat, aliases, pnz) if prw else None, moved=True)
         if new is None: status = f"First checked in this issue: {len(cur)} match{'es' if len(cur) != 1 else ''} on file."
         elif new or gone or moved: status = f"Since the previous issue: {len(new)} new match{'es' if len(new) != 1 else ''}" + (f", {len(gone)} no longer matching" if gone else "") + (f", {len(moved)} republished under a new publisher identifier" if moved else "") + f"; {len(cur)} on file."
         else: status = f"Since the previous issue: no change; {len(cur)} match{'es' if len(cur) != 1 else ''} on file."

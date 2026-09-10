@@ -590,7 +590,7 @@ def nz_html(code, name, nz, seen, base):
     if not (cn or rn): H.append(f"<p class=muted>No New Zealand MFAT tender on GETS names {esc(name)}.</p>")
     return "\n".join(H)
 
-def changes(r, pr, days=None, dfat=None, pdfat=None, nz=None, pnz=None):
+def changes(r, pr, days=None, dfat=None, pdfat=None, nz=None, pnz=None, pdate=None):
     """What changed since the previous issue for one country. Returns a list of HTML strings, most useful first.
     Entries compare full sets where the previous issue stored them (orgs_90, new_starts_all, ending_all) and fall
     back to the displayed rows for older issues. Exits from the funder table are mostly the 90-day window moving,
@@ -631,7 +631,7 @@ def changes(r, pr, days=None, dfat=None, pdfat=None, nz=None, pnz=None):
     dc = dfat_changes(r["code"], cn, dfat, pdfat) + nz_changes(r["code"], cn, nz, pnz)
     # Procurement items are actionable, so they go after the World Bank line (index of first non-headline entry) rather than last
     k = 1 if out and out[0].startswith("90-day disbursements") else 0
-    wl = watches.change_lines(WATCHES.get(r['code'], []), r, pr, dfat, pdfat, ALIASES, nz, pnz)
+    wl = watches.change_lines(WATCHES.get(r['code'], []), r, pr, dfat, pdfat, ALIASES, nz, pnz, pdate)
     return out[:k] + dc + wl + out[k:]
 
 # ---------------------------------------------------------------- page bodies
@@ -688,7 +688,7 @@ def dfat_html(code, name, dfat, seen, base):
     if not dfat: return "<p class=muted>DFAT's business notifications and procurement pipeline were not read for this issue.</p>"
     cn, rn, cp, rp = dfat_notices.for_country(dfat, code, ALIASES)
     since = lambda k: f" <span class=muted>(on the pipeline page since the issue of {longdate(seen[k])})</span>" if seen.get(k) and base and seen[k] > base else ""
-    H = [f"<p style='font-size:.88rem'>Read from <a href='{dfat_notices.PIPELINE}'>DFAT's Development Procurement Pipeline</a> (as at {esc(dfat.get('as_at') or '—')}) and <a href='{dfat_notices.NOTICES}'>business notifications</a> on {sydtime(dfat.get('fetched'))}. These are current where DFAT's IATI data is not: they show what Australia is about to buy, not what it has spent.</p>"]
+    H = [f"<p style='font-size:.88rem'>Read from <a href='{dfat_notices.PIPELINE}'>DFAT's Development Procurement Pipeline</a> (as at {esc(dfat.get('as_at') or '—')}) and <a href='{dfat_notices.NOTICES}'>business notifications</a> on {sydtime(dfat.get('fetched'))}. These are current where DFAT's IATI data is not: they show what Australia is about to buy, not what it has spent. Nothing here is counted in the disbursement figures above: a contract signed today reaches the 90-day table only once its funder publishes IATI transactions against it, which for DFAT currently means a lag of more than a year.</p>"]
     ordr = {"in the market":0,"in collaboration":1,"planned":2,"closed":3}
     def plist(items, title):
         if not items: return
@@ -716,7 +716,7 @@ def method_html(snap, n_trans, n_other, n_stale, n_quiet):
 <p>Of {n_trans:,} transactions attached to activities tagged to these countries in the last year, {n_other:,} ({n_other/n_trans*100 if n_trans else 0:.0f}%) were explicitly assigned to a different recipient country and were excluded. Activities with no transaction-level recipient were weighted by their declared country percentage. This is the correction that separates a Pacific programme from a global one that lists a Pacific country among many.</p>
 <ul><li><strong>{n_stale} stale activities</strong> across the region are recorded as under implementation more than a year after their end date. Each is a reporting lapse that makes the active portfolio look larger than it is.</li>
 <li><strong>{n_quiet} funders have gone quiet</strong>: disbursements earlier in the year, none in the last 90 days. Some are seasonal, some are ended programmes never closed, some are late reporting. Each is a question worth asking.</li>
-<li><strong>DFAT's procurement pipeline and business notifications</strong> are read directly from dfat.gov.au on every issue, matched to countries by name in the title or summary, and diffed between issues. They show what Australia is about to buy while its IATI data lags. Contact details on those pages are not copied.</li>
+<li><strong>DFAT's procurement pipeline and business notifications</strong> are read directly from dfat.gov.au on every issue, matched to countries by name in the title or summary, and diffed between issues. They show what Australia is about to buy while its IATI data lags. Contact details on those pages are not copied. <strong>Notifications and tenders are not transactions</strong> and are counted in no dollar figure on this page: a contract signed today reaches the 90-day table only when its funder publishes IATI transactions against it, which for DFAT currently means a lag of more than a year (asked through the Ask box, reference AMAHB).</li>
 <li><strong>Standing watches</strong> are short queries (a funder, keyword, tender number or project name) for one country, matched on every issue against the country's activity index, funder tables, World Bank projects and DFAT items, and diffed between issues. Each issue keeps the activity index it was matched against, as a compressed file beside the snapshot.</li>
 <li><strong>New Zealand MFAT tenders</strong> are read from <a href="https://www.gets.govt.nz/ExternalIndex.htm">GETS</a>, New Zealand’s government tender service, on every issue: open, closed and completed tenders from MFAT’s aid business units or with a Pacific country in the title, matched to countries the same way and diffed between issues. GETS publishes the outcome as well as the opportunity, which no other source here does. Named contacts, postal addresses and telephone numbers on those pages are not stored, and where an award names an individual rather than an organisation the name is not repeated.</li>
 <li><strong>Not in this data:</strong> China, Taiwan and most Gulf donors do not publish to IATI. Australian DFAT and New Zealand MFAT, the World Bank, ADB, Japan, the EU, the United States and the UN agencies do, with varying lag and completeness. Absence here is absence from IATI, not absence of aid.</li></ul>
@@ -739,7 +739,8 @@ def render(snaps):
     snap["watches"] = [w for ws in WATCHES.values() for w in ws]
     days = (dt.date.fromisoformat(snap["date"]) - dt.date.fromisoformat(prev["date"])).days if prev else None
     CH = {c: changes(C[c], P.get(c), days, snap.get("dfat"), prev.get("dfat") if prev else None,
-                     snap.get("nz"), prev.get("nz") if prev else None) for c in order}
+                     snap.get("nz"), prev.get("nz") if prev else None,
+                     prev["date"] if prev else None) for c in order}
     render_index(snap, prev, snaps, order, issue_no, issue_date, CH)
     render_region(snap, prev, snaps, order, issue_no, issue_date, CH)
     for c in order: render_country(c, C[c], P.get(c), prev, snaps, order, issue_no, issue_date, CH.get(c))
@@ -916,11 +917,11 @@ def render_country(code, r, pr, prev, snaps, order, issue_no, issue_date, ch=Non
         if len(ch) > 6:
             H.append(f"<details><summary>{len(ch)-6} more changes this issue</summary>" + "".join(f"<div class=change>{c}</div>" for c in ch[6:]) + "</details>")
     S = brief(r, pr, issue_date, snaps[-1].get('dfat'), as_list=True, nz=snaps[-1].get('nz'))
-    ws = watches.brief_sentence(WATCHES.get(code, []), r, pr, snaps[-1].get('dfat'), prev.get('dfat') if prev else None, ALIASES, r['name'], snaps[-1].get('nz'), prev.get('nz') if prev else None)
+    ws = watches.brief_sentence(WATCHES.get(code, []), r, pr, snaps[-1].get('dfat'), prev.get('dfat') if prev else None, ALIASES, r['name'], snaps[-1].get('nz'), prev.get('nz') if prev else None, prev['date'] if prev else None)
     if ws: S.append(ws)
     H.append(f"<h2>The current picture</h2><ul class=lines>" + "".join(f"<li>{x}</li>" for x in S) + "</ul>")
     H.append(ask.box(r['name'], code))
-    H.append(f"<h2 id=watches>Standing watches for {esc(r['name'])}</h2>"); H.append(watches.html(WATCHES.get(code, []), r, pr, snaps, snaps[-1].get('dfat'), prev.get('dfat') if prev else None, ALIASES, longdate, r['name'], nz=snaps[-1].get('nz'), pnz=prev.get('nz') if prev else None))
+    H.append(f"<h2 id=watches>Standing watches for {esc(r['name'])}</h2>"); H.append(watches.html(WATCHES.get(code, []), r, pr, snaps, snaps[-1].get('dfat'), prev.get('dfat') if prev else None, ALIASES, longdate, r['name'], nz=snaps[-1].get('nz'), pnz=prev.get('nz') if prev else None, pdate=prev['date'] if prev else None))
     seen, base = first_seen_dfat(snaps)
     H.append(f"<h2>DFAT tenders and notices naming {esc(r['name'])}</h2>"); H.append(dfat_html(code, r["name"], snaps[-1].get("dfat"), seen, base))
     nseen, nbase = first_seen_nz(snaps)

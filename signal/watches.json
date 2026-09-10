@@ -1,10 +1,72 @@
 [
- {"id": "W1", "country": "TV", "query": "Falepili", "since": "2026-09-09", "note": "demonstration watch filed by Asa: the Australia–Tuvalu Falepili Union"},
- {"id": "W2", "country": "PG", "query": "DFAT-1091", "since": "2026-09-09", "note": "demonstration watch filed by Asa: the PHC4PNG tender, which closed on 8 September; the watch should catch its stage move"},
- {"id": "W3", "country": "SB", "query": "Tina River", "since": "2026-09-09", "note": "demonstration watch filed by Asa: one large project across publishers"},
- {"id": "W4", "country": "WS", "query": "UN Women", "since": "2026-09-09", "note": "demonstration watch filed by Asa: one funder, including its stale records"},
- {"id": "W5", "country": "FJ", "query": "health", "since": "2026-09-09", "note": "demonstration watch filed by Asa: a broad keyword, to show how a wide watch is capped"},
- {"id": "W6", "country": "KI", "query": "water", "since": "2026-09-09", "note": "demonstration watch filed by Asa: a sector keyword"},
- {"id": "W7", "country": "VU", "query": "cyclone", "since": "2026-09-09", "note": "demonstration watch filed by Asa: recovery activities"},
- {"id": "W8", "country": "TO", "query": "World Bank", "since": "2026-09-09", "note": "demonstration watch filed by Asa: one funder across IATI and the Projects API"}
+ {
+  "id": "W1",
+  "country": "TV",
+  "query": "Falepili",
+  "since": "2026-09-09",
+  "note": "demonstration watch filed by Asa: the Australia–Tuvalu Falepili Union"
+ },
+ {
+  "id": "W2",
+  "country": "PG",
+  "query": "DFAT-1091",
+  "since": "2026-09-09",
+  "note": "demonstration watch filed by Asa: the PHC4PNG tender, which closed on 8 September; the watch should catch its stage move"
+ },
+ {
+  "id": "W3",
+  "country": "SB",
+  "query": "Tina River",
+  "since": "2026-09-09",
+  "note": "demonstration watch filed by Asa: one large project across publishers"
+ },
+ {
+  "id": "W4",
+  "country": "WS",
+  "query": "UN Women",
+  "since": "2026-09-09",
+  "note": "demonstration watch filed by Asa: one funder, including its stale records"
+ },
+ {
+  "id": "W5",
+  "country": "FJ",
+  "query": "health",
+  "since": "2026-09-09",
+  "note": "demonstration watch filed by Asa: a broad keyword, to show how a wide watch is capped"
+ },
+ {
+  "id": "W6",
+  "country": "KI",
+  "query": "water",
+  "since": "2026-09-09",
+  "note": "demonstration watch filed by Asa: a sector keyword"
+ },
+ {
+  "id": "W7",
+  "country": "VU",
+  "query": "cyclone",
+  "since": "2026-09-09",
+  "note": "demonstration watch filed by Asa: recovery activities"
+ },
+ {
+  "id": "W8",
+  "country": "TO",
+  "query": "World Bank",
+  "since": "2026-09-09",
+  "note": "demonstration watch filed by Asa: one funder across IATI and the Projects API"
+ },
+ {
+  "id": "W9",
+  "country": "VU",
+  "query": "water",
+  "since": "2026-09-10",
+  "note": "filed through the Ask box (reference CFD6X): water in Vanuatu, any funder"
+ },
+ {
+  "id": "W10",
+  "country": "VU",
+  "query": "WASH",
+  "since": "2026-09-10",
+  "note": "filed through the Ask box (reference CFD6X): the WASH label, paired with the water watch"
+ }
 ]

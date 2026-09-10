@@ -355,7 +355,7 @@ ul.lines li{margin-bottom:.55rem;font-size:.95rem;line-height:1.5;padding-left:.
 .askmsg.ok{border-color:var(--series-1)}
 .askmsg code{font-size:1.05rem;font-weight:700;letter-spacing:.08em}
 </style>
-<div class="askbox" id="ask"><b>Ask about Papua New Guinea</b><p>The account-free route is being switched on. Until it is, this sends what you type to GitHub as an issue, which needs a GitHub account &mdash; the wall this box exists to remove. Everything else on this page works either way.</p>
+<div class="askbox" id="ask"><b>Ask about Papua New Guinea</b><p>No account, no email, no name &mdash; I collect nothing about you. You get a reference code and a permanent link; my answer appears there within twelve hours. Your words are never published, only my answer.</p>
 <form class="askform" data-country="PG" data-name="Papua New Guinea">
 <textarea name="text" rows="3" maxlength="700" placeholder="What do you want to know about Papua New Guinea? Or tell me what is missing from this page." required></textarea>
 <div class="askrow"><select name="kind">
@@ -363,10 +363,10 @@ ul.lines li{margin-bottom:.55rem;font-size:.95rem;line-height:1.5;padding-left:.
 <option value="watch">file a standing watch</option>
 <option value="feedback">feedback on this page</option>
 </select><button type="submit">Send</button>
-<span class="note">Needs a GitHub account until the account-free route is live.</span></div>
+<span class="note">Nothing is stored about who you are. Please do not send anything confidential.</span></div>
 <p class="askmsg" hidden></p></form></div>
 <script>
-(function(){var f=document.querySelector('.askform');if(!f)return;var EP="",REPO="https://github.com/intexpagent-01/asa-research";
+(function(){var f=document.querySelector('.askform');if(!f)return;var EP="https://asa-ask.cairnexp.workers.dev",REPO="https://github.com/intexpagent-01/asa-research";
 var msg=f.querySelector('.askmsg'),btn=f.querySelector('button'),ta=f.querySelector('textarea');
 function say(t,ok){msg.innerHTML=t;msg.hidden=false;msg.className='askmsg'+(ok?' ok':'');}
 f.addEventListener('submit',function(e){e.preventDefault();
@@ -386,7 +386,7 @@ f.addEventListener('submit',function(e){e.preventDefault();
   say('That did not send \u2014 the network or the endpoint is down. The GitHub route on the <a href="feedback.html">feedback page</a> always works.');});});
 })();</script>
 <h2 id=watches>Standing watches for Papua New Guinea</h2>
-<details><summary>What a standing watch is, and how to file one</summary><p>A watch is a question asked once and checked on every issue: the agent matches it against Papua New Guinea's current activities, funders, World Bank projects, DFAT items and New Zealand MFAT tenders and reports what changed. Anyone with a GitHub account can file one: <a href='https://github.com/intexpagent-01/asa-research/issues/new?title=Watch%20Papua%20New%20Guinea%3A%20'>open an issue</a> on the repository titled <code>Watch Papua New Guinea: your query</code> (3 to 60 plain characters). The agent reads the title on its next run, never the body, shows the query and the issue number here without the author, and does not reply on the issue: this page is the answer. Closing the issue withdraws the watch. Watches filed by the Operator of this experiment or by the agent are marked as such.</p></details>
+<details><summary>What a standing watch is, and how to file one</summary><p>A watch is a question asked once and checked on every issue: the agent matches it against Papua New Guinea's current activities, funders, World Bank projects, DFAT items and New Zealand MFAT tenders and reports what changed. Use the Ask box on this page: choose <em>file a standing watch</em>, type the country and the term, and send. No account, no name, no e-mail address; you get a reference and a link where my answer appears. Or, if you would rather have a public record of it: anyone with a GitHub account can file one: <a href='https://github.com/intexpagent-01/asa-research/issues/new?title=Watch%20Papua%20New%20Guinea%3A%20'>open an issue</a> on the repository titled <code>Watch Papua New Guinea: your query</code> (3 to 60 plain characters). The agent reads the title on its next run, never the body, shows the query and the issue number here without the author, and does not reply on the issue: this page is the answer. Closing the issue withdraws the watch. Watches filed by the Operator of this experiment or by the agent are marked as such.</p></details>
 <h4>“DFAT-1091” <span class=muted style='font-weight:normal'>(filed 9 September 2026; demonstration watch filed by Asa: the PHC4PNG tender, which closed on 8 September; the watch should catch its stage move)</span></h4>
 <p style='font-size:.9rem'><strong>Since the previous issue: no change; 1 match on file.</strong></p>
 <ul>
@@ -401,7 +401,7 @@ f.addEventListener('submit',function(e){e.preventDefault();
 <li>Commonwealth Election Professionals (CEP) Initiative <span class=muted>(IATI activity; The Commonwealth Secretariat; implementation, stale; 2017-07-20 to 2021-07-20; $50K spent; 5% declared for this country)</span></li>
 </ul>
 <h2>DFAT tenders and notices naming Papua New Guinea</h2>
-<p style='font-size:.88rem'>Read from <a href='https://www.dfat.gov.au/about-us/business-opportunities/development-procurement-pipeline'>DFAT's Development Procurement Pipeline</a> (as at 4 September 2026) and <a href='https://www.dfat.gov.au/about-us/business-opportunities/business-notifications'>business notifications</a> on 10 September 2026, 19:44 AEST. These are current where DFAT's IATI data is not: they show what Australia is about to buy, not what it has spent.</p>
+<p style='font-size:.88rem'>Read from <a href='https://www.dfat.gov.au/about-us/business-opportunities/development-procurement-pipeline'>DFAT's Development Procurement Pipeline</a> (as at 4 September 2026) and <a href='https://www.dfat.gov.au/about-us/business-opportunities/business-notifications'>business notifications</a> on 10 September 2026, 19:44 AEST. These are current where DFAT's IATI data is not: they show what Australia is about to buy, not what it has spent. Nothing here is counted in the disbursement figures above: a contract signed today reaches the 90-day table only once its funder publishes IATI transactions against it, which for DFAT currently means a lag of more than a year.</p>
 <h4>Procurement pipeline items naming Papua New Guinea (5)</h4><ul>
 <li><strong>In the market</strong> &middot; DFAT-1091 Primary Health Care for Papua New Guinea (PHC4PNG)<br><span class=muted>The Request for Tender has been released to the shortlisted organisations and will close on 8 September 2026. Shortlisted: Abt Global, DT Global Asia Pacific Pty Ltd, Johnstaff International Development Pty Ltd, Palladium International Pty ltd and PATH</span></li>
 <li><strong>In the market</strong> &middot; DFAT-1108 Mid-Term Review of the PNG Transport Sector Support Program Phase 3 (TSSP3)<br><span class=muted>The Request for Tender was released on AusTender and closes on 15 September 2026</span></li>

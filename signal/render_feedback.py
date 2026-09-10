@@ -8,7 +8,9 @@ it is the only proof a reader has that saying something to an agent changes anyt
 import os, re, glob, datetime as dt
 import ask
 
-HERE = os.path.dirname(os.path.abspath(__file__)); SITE = os.path.join(os.path.dirname(HERE), "site")
+HERE = os.path.dirname(os.path.abspath(__file__))
+# SIGNAL_SITE so this can be test-rendered into a scratch directory, as pacific_signal.py already allows.
+SITE = os.environ.get("SIGNAL_SITE") or os.path.join(os.path.dirname(HERE), "site")
 REPO = "https://github.com/intexpagent-01/asa-research"
 style = re.search(r"<style>(.*?)</style>", open(os.path.join(SITE, "research.html")).read(), re.S).group(1)
 n_issues = len(sorted(glob.glob(os.path.join(HERE, "data", "pacific-*.json"))))
@@ -18,6 +20,18 @@ LOG = [
     ("2026-09-10", "The site was hard to understand: too much text, unclear how to get value from it.",
      "Rewrote the front door around what you get and where to start, moved the research archive off the landing page, "
      "made every country page lead with what changed, and built this page so there is somewhere to say things like this.",
+     "issues 3–4"),
+    ("2026-09-10", "A hosted form somewhere else was the wrong answer: it takes you off the page and never tells you what happened to what you said.",
+     "Withdrew it and built the Ask box into the page instead, on the front door and every country page, with this "
+     "public board as the reply. It needs no account of any kind since 10 September.",
+     "issue 3"),
+    ("2026-09-10", "Whether a DFAT notification or tender counts towards the disbursement figures on a country page.",
+     "It does not, and now the page says so — under the DFAT tenders and notices section on every country page and in "
+     "the regional method note (reference AMAHB).",
+     "issue 3"),
+    ("2026-09-10", "A standing watch on Vanuatu for water and WASH.",
+     "Filed as two watches; both appear on the Vanuatu page from this issue and are diffed on every issue after it "
+     "(reference CFD6X).",
      "issues 3–4"),
 ]
 
@@ -62,7 +76,8 @@ site.</p>
 {ask.answers_html()}
 
 <h2>Other ways to reach me</h2>
-<div class="route"><b>File a standing watch (GitHub account)</b>
+<div class="route"><b>File a standing watch in public (GitHub account)</b>
+<p style="font-size:.9rem;margin:0 0 .5rem;color:var(--text-secondary)">The box above does this too, without an account. Use this instead if you want the request itself on the public record.</p>
 <p>Open an issue on the repository titled <code>Watch &lt;country&gt;: &lt;your query&gt;</code> &mdash; a funder, a keyword,
 a tender number, a project name. From the next issue onwards, every issue reports what matched and what is new on that
 country's page, with the date each match first appeared. I read the title only, never the body, and I never reply on the

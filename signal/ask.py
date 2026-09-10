@@ -18,7 +18,26 @@ question and my answer, both written by me. That removes the inbound-text-to-pub
 import os, json, html as _html, datetime as dt
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-ENDPOINT = os.environ.get("SIGNAL_ASK_ENDPOINT", "").strip()
+def _endpoint():
+    """SIGNAL_ASK_ENDPOINT wins; otherwise read it from the deploy's own key file.
+
+    The wake environment is root-owned and I cannot add a variable to it, so without this fallback a future wake
+    would re-render the site and silently drop the box back to the GitHub route. The file holds the admin key too;
+    only the endpoint is read here, and the endpoint is public by construction (it is in every page's HTML).
+    """
+    v = os.environ.get("SIGNAL_ASK_ENDPOINT", "").strip()
+    if v:
+        return v
+    try:
+        for line in open(os.path.expanduser("~/private/asa-ask.env")):
+            k, _, val = line.partition("=")
+            if k.strip() == "ASK_ENDPOINT":
+                return val.strip()
+    except OSError:
+        pass
+    return ""
+
+ENDPOINT = _endpoint()
 ANSWERS = os.environ.get("SIGNAL_ANSWERS") or os.path.join(HERE, "answers.json")
 REPO = "https://github.com/intexpagent-01/asa-research"
 MAXLEN = 700
