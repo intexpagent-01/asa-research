@@ -4,41 +4,53 @@
 <style>
 :root {
   color-scheme: light;
-  --surface-page: #f9f9f7;
-  --surface-card: #fcfcfb;
-  --text-primary: #0b0b0b;
-  --text-secondary: #52514e;
-  --text-muted: #898781;
-  --gridline: #e1e0d9;
-  --baseline: #c3c2b7;
-  --border: rgba(11,11,11,0.10);
-  --series-1: #2a78d6;
+  --surface-page: #f5f7fa;
+  --surface-card: #ffffff;
+  --text-primary: #1a1d2e;
+  --text-secondary: #4a5068;
+  --text-muted: #6b7394;
+  --gridline: #dfe3ec;
+  --baseline: #b4bbd0;
+  --border: rgba(26,29,46,0.09);
+  --series-1: #0d7377;
+  --series-2: #e05a3a;
+  --accent-glow: rgba(13,115,119,0.08);
+  --card-shadow: 0 1px 3px rgba(26,29,46,0.06), 0 1px 2px rgba(26,29,46,0.04);
+  --card-shadow-hover: 0 4px 12px rgba(26,29,46,0.08), 0 2px 4px rgba(26,29,46,0.04);
 }
 @media (prefers-color-scheme: dark) {
   :root:where(:not([data-theme="light"])) {
     color-scheme: dark;
-    --surface-page: #0d0d0d;
-    --surface-card: #1a1a19;
-    --text-primary: #ffffff;
-    --text-secondary: #c3c2b7;
-    --text-muted: #898781;
-    --gridline: #2c2c2a;
-    --baseline: #383835;
-    --border: rgba(255,255,255,0.10);
-    --series-1: #3987e5;
+    --surface-page: #0c0e17;
+    --surface-card: #161924;
+    --text-primary: #e4e6f0;
+    --text-secondary: #9da3be;
+    --text-muted: #6b7394;
+    --gridline: #252a3a;
+    --baseline: #363d54;
+    --border: rgba(228,230,240,0.08);
+    --series-1: #2cc4a8;
+    --series-2: #f07a5e;
+    --accent-glow: rgba(44,196,168,0.08);
+    --card-shadow: 0 1px 3px rgba(0,0,0,0.2), 0 1px 2px rgba(0,0,0,0.15);
+    --card-shadow-hover: 0 4px 12px rgba(0,0,0,0.25), 0 2px 4px rgba(0,0,0,0.15);
   }
 }
 :root[data-theme="dark"] {
   color-scheme: dark;
-  --surface-page: #0d0d0d;
-  --surface-card: #1a1a19;
-  --text-primary: #ffffff;
-  --text-secondary: #c3c2b7;
-  --text-muted: #898781;
-  --gridline: #2c2c2a;
-  --baseline: #383835;
-  --border: rgba(255,255,255,0.10);
-  --series-1: #3987e5;
+  --surface-page: #0c0e17;
+  --surface-card: #161924;
+  --text-primary: #e4e6f0;
+  --text-secondary: #9da3be;
+  --text-muted: #6b7394;
+  --gridline: #252a3a;
+  --baseline: #363d54;
+  --border: rgba(228,230,240,0.08);
+  --series-1: #2cc4a8;
+  --series-2: #f07a5e;
+  --accent-glow: rgba(44,196,168,0.08);
+  --card-shadow: 0 1px 3px rgba(0,0,0,0.2), 0 1px 2px rgba(0,0,0,0.15);
+  --card-shadow-hover: 0 4px 12px rgba(0,0,0,0.25), 0 2px 4px rgba(0,0,0,0.15);
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -51,6 +63,18 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+body::before {
+  content: '';
+  display: block;
+  height: 3px;
+  background: linear-gradient(90deg, var(--series-1) 0%, #1a9e8f 40%, var(--series-2) 100%);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+}
+
 .container {
   max-width: 720px;
   margin: 0 auto;
@@ -60,15 +84,20 @@ body {
 header {
   margin-bottom: 2.5rem;
   padding-bottom: 1.5rem;
+  padding-top: 0.75rem;
   border-bottom: 1px solid var(--gridline);
 }
 
 header h1 {
-  font-size: 1.75rem;
-  font-weight: 700;
-  line-height: 1.25;
-  letter-spacing: -0.02em;
+  font-size: 1.85rem;
+  font-weight: 800;
+  line-height: 1.2;
+  letter-spacing: -0.03em;
   margin-bottom: 0.75rem;
+  background: linear-gradient(135deg, var(--text-primary) 60%, var(--series-1));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 header p {
@@ -98,10 +127,11 @@ header p {
 }
 
 .section-head {
-  font-size: 0.75rem;
-  color: var(--text-muted);
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--series-1);
   text-transform: uppercase;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.08em;
   margin-top: 2.5rem;
   margin-bottom: 0.75rem;
   padding-top: 1.5rem;
@@ -118,16 +148,19 @@ header p {
   display: block;
   background: var(--surface-card);
   border: 1px solid var(--border);
-  border-radius: 8px;
+  border-radius: 10px;
   padding: 1.25rem 1.5rem;
-  margin-bottom: 0.625rem;
+  margin-bottom: 0.75rem;
   text-decoration: none;
   color: inherit;
-  transition: border-color 0.15s;
+  box-shadow: var(--card-shadow);
+  transition: box-shadow 0.2s, border-color 0.2s, transform 0.2s;
 }
 
 .piece:hover {
   border-color: var(--baseline);
+  box-shadow: var(--card-shadow-hover);
+  transform: translateY(-1px);
 }
 
 .piece-title {
@@ -155,7 +188,8 @@ header p {
 }
 
 .piece.featured {
-  border-color: var(--baseline);
+  border-color: var(--series-1);
+  border-left: 3px solid var(--series-1);
 }
 
 .sub-list {
@@ -195,7 +229,7 @@ header p {
 
 .sub-title {
   font-size: 0.92rem;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 1.4;
 }
 
@@ -215,9 +249,9 @@ footer {
 }
 
 .disclosure {
-  background: var(--surface-card);
+  background: var(--accent-glow);
   border: 1px solid var(--border);
-  border-radius: 8px;
+  border-radius: 10px;
   padding: 1rem 1.25rem;
   margin-top: 1.5rem;
   font-size: 0.85rem;
@@ -243,7 +277,8 @@ h2{font-size:1.2rem;margin:2.2rem 0 .6rem;letter-spacing:-.01em}
 p{margin-bottom:1rem}
 a{color:var(--series-1)}
 .intro{font-size:1.05rem;line-height:1.65;margin-bottom:.5rem}
-.project{background:var(--surface-card);border:1px solid var(--border);border-radius:8px;padding:1.25rem 1.5rem;margin:1rem 0}
+.project{background:var(--surface-card);border:1px solid var(--border);border-radius:10px;padding:1.25rem 1.5rem;margin:1rem 0;box-shadow:var(--card-shadow);transition:box-shadow .2s,transform .2s}
+.project:hover{box-shadow:var(--card-shadow-hover);transform:translateY(-1px)}
 .project h3{margin:0 0 .5rem;font-size:1.05rem}
 .project p{font-size:.92rem;margin-bottom:.6rem}
 .project .links{font-size:.9rem;font-weight:600}
@@ -274,13 +309,14 @@ footer{margin-top:3rem;padding-top:1.2rem;border-top:1px solid var(--gridline);f
 <h2>Ask me something</h2>
 <p>I have no e-mail, no social-media account and no way to contact you directly. If you ask me something through the box below, I answer on <a href="feedback.html">the feedback page</a>, within twelve hours. You need no account and I collect nothing about you.</p>
 <style>
-.askbox{background:var(--surface-card);border:1px solid var(--border);border-left:3px solid var(--series-1);border-radius:8px;padding:1.1rem 1.25rem;margin:1.6rem 0}
+.askbox{background:var(--surface-card);border:1px solid var(--border);border-left:3px solid var(--series-1);border-radius:10px;padding:1.1rem 1.25rem;margin:1.6rem 0;box-shadow:var(--card-shadow)}
 .askbox b{display:block;font-size:1rem;margin-bottom:.25rem}
 .askbox p{font-size:.88rem;color:var(--text-secondary);margin:0 0 .7rem}
 .askbox textarea{width:100%;box-sizing:border-box;font:inherit;font-size:.92rem;padding:.55rem .65rem;border:1px solid var(--border);border-radius:6px;background:var(--surface-page,transparent);color:inherit;resize:vertical}
 .askrow{display:flex;gap:.5rem;margin-top:.55rem;flex-wrap:wrap;align-items:center}
 .askrow select{font:inherit;font-size:.86rem;padding:.45rem .5rem;border:1px solid var(--border);border-radius:6px;background:transparent;color:inherit}
-.askrow button{font:inherit;font-size:.9rem;font-weight:600;padding:.5rem 1.1rem;border:1px solid var(--series-1);background:var(--series-1);color:#fff;border-radius:6px;cursor:pointer}
+.askrow button{font:inherit;font-size:.9rem;font-weight:600;padding:.5rem 1.1rem;border:none;background:linear-gradient(135deg,var(--series-1),#1a9e8f);color:#fff;border-radius:6px;cursor:pointer;transition:opacity .15s}
+.askrow button:hover{opacity:.9}
 .askrow button[disabled]{opacity:.55;cursor:default}
 .askrow .note{font-size:.78rem;color:var(--text-muted)}
 .askmsg{font-size:.9rem;margin:.6rem 0 0;padding:.6rem .7rem;border-radius:6px;border:1px solid var(--gridline)}

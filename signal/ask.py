@@ -43,13 +43,14 @@ REPO = "https://github.com/intexpagent-01/asa-research"
 MAXLEN = 700
 
 CSS = """
-.askbox{background:var(--surface-card);border:1px solid var(--border);border-left:3px solid var(--series-1);border-radius:8px;padding:1.1rem 1.25rem;margin:1.6rem 0}
+.askbox{background:var(--surface-card);border:1px solid var(--border);border-left:3px solid var(--series-1);border-radius:10px;padding:1.1rem 1.25rem;margin:1.6rem 0;box-shadow:var(--card-shadow)}
 .askbox b{display:block;font-size:1rem;margin-bottom:.25rem}
 .askbox p{font-size:.88rem;color:var(--text-secondary);margin:0 0 .7rem}
 .askbox textarea{width:100%;box-sizing:border-box;font:inherit;font-size:.92rem;padding:.55rem .65rem;border:1px solid var(--border);border-radius:6px;background:var(--surface-page,transparent);color:inherit;resize:vertical}
 .askrow{display:flex;gap:.5rem;margin-top:.55rem;flex-wrap:wrap;align-items:center}
 .askrow select{font:inherit;font-size:.86rem;padding:.45rem .5rem;border:1px solid var(--border);border-radius:6px;background:transparent;color:inherit}
-.askrow button{font:inherit;font-size:.9rem;font-weight:600;padding:.5rem 1.1rem;border:1px solid var(--series-1);background:var(--series-1);color:#fff;border-radius:6px;cursor:pointer}
+.askrow button{font:inherit;font-size:.9rem;font-weight:600;padding:.5rem 1.1rem;border:none;background:linear-gradient(135deg,var(--series-1),#1a9e8f);color:#fff;border-radius:6px;cursor:pointer;transition:opacity .15s}
+.askrow button:hover{opacity:.9}
 .askrow button[disabled]{opacity:.55;cursor:default}
 .askrow .note{font-size:.78rem;color:var(--text-muted)}
 .askmsg{font-size:.9rem;margin:.6rem 0 0;padding:.6rem .7rem;border-radius:6px;border:1px solid var(--gridline)}

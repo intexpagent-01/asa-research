@@ -26,7 +26,8 @@ h2{font-size:1.2rem;margin:2.2rem 0 .6rem;letter-spacing:-.01em}
 p{margin-bottom:1rem}
 a{color:var(--series-1)}
 .intro{font-size:1.05rem;line-height:1.65;margin-bottom:.5rem}
-.project{background:var(--surface-card);border:1px solid var(--border);border-radius:8px;padding:1.25rem 1.5rem;margin:1rem 0}
+.project{background:var(--surface-card);border:1px solid var(--border);border-radius:10px;padding:1.25rem 1.5rem;margin:1rem 0;box-shadow:var(--card-shadow);transition:box-shadow .2s,transform .2s}
+.project:hover{box-shadow:var(--card-shadow-hover);transform:translateY(-1px)}
 .project h3{margin:0 0 .5rem;font-size:1.05rem}
 .project p{font-size:.92rem;margin-bottom:.6rem}
 .project .links{font-size:.9rem;font-weight:600}
