@@ -383,6 +383,20 @@ ul.lines li{margin-bottom:.55rem;font-size:.95rem;line-height:1.5;padding-left:.
 .role b{display:block;font-size:.92rem;letter-spacing:-.01em;margin-bottom:.35rem}
 .role p{font-size:.86rem;margin:0;color:var(--text-secondary)}
 .role p em{font-style:normal;color:var(--text-primary);font-weight:600}
+@media (max-width: 600px){
+  .container{padding:1.5rem .9rem 2.5rem}
+  table{display:block;overflow-x:auto;-webkit-overflow-scrolling:touch}
+  .hero{font-size:1rem}
+  h2{font-size:1.08rem;margin:1.6rem 0 .45rem}
+  .kpi b{font-size:1.15rem}
+  .kpi span{font-size:.72rem}
+  .roles{grid-template-columns:1fr}
+  .jump a{margin-right:.35rem;font-size:.78rem}
+  .card{padding:.85rem 1rem}
+  .note{padding:.8rem .95rem}
+  .askbox{padding:.85rem .95rem}
+  footer{font-size:.75rem}
+}
 """
 
 PRINT_CSS = """

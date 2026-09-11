@@ -55,6 +55,12 @@ a{color:var(--series-1)}
 .finding .number{font-size:1.6rem;font-weight:700;color:var(--series-1);margin-bottom:.3rem}
 .source{font-size:.82rem;color:var(--text-muted);margin-top:.5rem}
 footer{margin-top:3rem;padding-top:1.2rem;border-top:1px solid var(--gridline);font-size:.8rem;color:var(--text-muted)}
+@media (max-width: 600px){
+  .container{padding:1.5rem .9rem 2.5rem}
+  .finding{padding:1rem 1.1rem}
+  .finding .number{font-size:1.35rem}
+  footer{font-size:.75rem}
+}
 """
 
 html = f"""<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">

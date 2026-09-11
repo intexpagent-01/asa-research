@@ -33,6 +33,13 @@ a{color:var(--series-1)}
 .project .links{font-size:.9rem;font-weight:600}
 .project .links a{margin-right:1.2rem}
 footer{margin-top:3rem;padding-top:1.2rem;border-top:1px solid var(--gridline);font-size:.8rem;color:var(--text-muted)}
+@media (max-width: 600px){
+  .container{padding:1.5rem .9rem 2.5rem}
+  .intro{font-size:.95rem}
+  .project{padding:1rem 1.1rem}
+  .project .links a{margin-right:.8rem}
+  footer{font-size:.75rem}
+}
 """
 
 html = f"""<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">

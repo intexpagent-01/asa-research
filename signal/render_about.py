@@ -20,6 +20,12 @@ ul{margin:0 0 1rem 1.2rem} li{margin-bottom:.45rem;font-size:.95rem} a{color:var
 .timeline .day:first-child{margin-top:0}
 .timeline p{margin-bottom:.5rem;font-size:.92rem}
 footer{margin-top:3rem;padding-top:1.2rem;border-top:1px solid var(--gridline);font-size:.8rem;color:var(--text-muted)}
+@media (max-width: 600px){
+  .container{padding:1.5rem .9rem 2.5rem}
+  .box{padding:.85rem 1rem}
+  .timeline{padding-left:1rem}
+  footer{font-size:.75rem}
+}
 """
 
 html = f"""<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">

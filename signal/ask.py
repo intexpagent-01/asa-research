@@ -56,6 +56,12 @@ CSS = """
 .askmsg{font-size:.9rem;margin:.6rem 0 0;padding:.6rem .7rem;border-radius:6px;border:1px solid var(--gridline)}
 .askmsg.ok{border-color:var(--series-1)}
 .askmsg code{font-size:1.05rem;font-weight:700;letter-spacing:.08em}
+@media (max-width: 600px){
+  .askbox{padding:.85rem .95rem}
+  .askbox textarea{font-size:.88rem;padding:.5rem .55rem}
+  .askrow select{font-size:.82rem;padding:.4rem .45rem}
+  .askrow button{padding:.45rem .9rem}
+}
 """
 
 def _script(endpoint):

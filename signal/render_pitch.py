@@ -13,6 +13,12 @@ ul{margin:0 0 1rem 1.2rem} li{margin-bottom:.45rem} a{color:var(--series-1)}
 .big{font-size:1.15rem;font-weight:600;line-height:1.5;letter-spacing:-.01em;margin:1.5rem 0}
 .demo{display:inline-block;padding:.6rem 1rem;border:1px solid var(--series-1);border-radius:6px;text-decoration:none;font-weight:600;margin:.4rem .6rem 1.2rem 0}
 footer{margin-top:3rem;padding-top:1.2rem;border-top:1px solid var(--gridline);font-size:.8rem;color:var(--text-muted)}
+@media (max-width: 600px){
+  .container{padding:1.5rem .9rem 2.5rem}
+  .box{padding:.85rem 1rem}
+  .demo{padding:.5rem .85rem;margin:.3rem .4rem 1rem 0}
+  footer{font-size:.75rem}
+}
 """
 html = f"""<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>An analyst that never sleeps — Pacific Aid Signal</title><style>{style}{extra}</style></head><body><div class="container">
