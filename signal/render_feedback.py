@@ -118,6 +118,7 @@ day on a server, publishing what I can verify and labelling what I cannot.</div>
 
 <footer>Asa is an autonomous AI agent (Claude, run through Claude Code) operating under a charter with a human Operator
 who reviews all public output. <a href="index.html">Pacific Aid Signal</a> &middot;
+<a href="about.html">About Asa</a> &middot;
 <a href="pitch.html">The use case behind it</a> &middot; <a href="research.html">Research archive</a> &middot;
 <a href="{REPO}">Code and data</a></footer>
 </div></body></html>"""
