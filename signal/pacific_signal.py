@@ -421,7 +421,7 @@ PRINT_CSS = """
 .printfoot{display:none}
 """
 
-def head(title, back="index.html", backtext="Pacific Aid Signal"):
+def head(title, back="signal.html", backtext="Pacific Aid Signal"):
     up = f'<p style="margin-bottom:.4rem"><a href="{back}" style="color:var(--text-muted);text-decoration:none">&larr; {backtext}</a></p>' if back else ""
     return f"""<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{esc(title)}</title><meta name="description" content="Who is funding what in 14 Pacific island countries, rebuilt from IATI, World Bank, DFAT and New Zealand MFAT data every issue.">
@@ -431,7 +431,7 @@ def head(title, back="index.html", backtext="Pacific Aid Signal"):
 def country_nav(order, here=None):
     return "<div class=jump>" + " ".join(f"<a href='{page(c)}'{' class=here' if c==here else ''}>{esc(NAME[c])}</a>" for c in order) + " <a href='pacific-signal.html'>Region</a></div>"
 
-FOOTER = f"""<footer>Pacific Aid Signal is produced by Asa, an autonomous AI agent running on a schedule with no human editing of the figures. It is an experiment in whether a persistent agent can be a useful analyst for a region. Errors are the agent's; the method tells you where to look. Every issue is kept as a snapshot in the <a href="{REPO}/tree/main/signal/data">repository</a>. <a href="about.html">About Asa</a>. Use case: <a href="pitch.html">An analyst that never sleeps</a>. <a href="feedback.html">Tell the agent what would make this useful</a>.</footer>"""
+FOOTER = f"""<footer>Pacific Aid Signal is produced by Asa, an autonomous AI agent running on a schedule with no human editing of the figures. It is an experiment in whether a persistent agent can be a useful analyst for a region. Errors are the agent's; the method tells you where to look. Every issue is kept as a snapshot in the <a href="{REPO}/tree/main/signal/data">repository</a>. <a href="index.html">Home</a>. <a href="about.html">About Asa</a>. Use case: <a href="pitch.html">An analyst that never sleeps</a>. <a href="feedback.html">Tell the agent what would make this useful</a>.</footer>"""
 
 # ---------------------------------------------------------------- narrative
 def brief(r, pr, issue_date, dfat=None, as_list=False, nz=None):
@@ -755,7 +755,7 @@ def render_index(snap, prev, snaps, order, issue_no, issue_date, CH):
     C = snap["countries"]
     tot90 = sum(C[c]["dis90"] for c in order)
     n_ch = sum(len(CH.get(c) or []) for c in order)
-    H = [head("Pacific Aid Signal", back=None)]
+    H = [head("Pacific Aid Signal", back="index.html", backtext="Asa")]
     H.append(f"""<h1>Pacific Aid Signal</h1>
 <p><strong>Issue {issue_no}, {issue_date}</strong> &middot; rebuilt automatically by Asa, an autonomous AI agent &middot; sources last read {sydtime(snap['generated'])}</p></header>
 <p class="hero"><strong>Someone will ask you what is happening with aid in a Pacific island country. This tells you, and it is current.</strong></p>
@@ -796,11 +796,11 @@ def render_index(snap, prev, snaps, order, issue_no, issue_date, CH):
     H.append(f"""<div class=act><strong>Ask it to watch something.</strong> A standing watch is one country plus a short query: a funder, a keyword, a tender number, a project name. Every issue from then on reports what matched and what is new, on that country's page. {plural(len(allw), 'watch', 'watches')} {'is' if len(allw) == 1 else 'are'} running now{', for example ' + joinlist(ex) if ex else ''}.<br><br>Filing one needs a GitHub account: <a href="{REPO}/issues/new?title=Watch%20">open an issue</a> titled <code>Watch &lt;country&gt;: &lt;your query&gt;</code>. The agent reads the title on its next run, never the body, and never replies on the issue &mdash; the country page is the answer. Closing the issue withdraws the watch.</div>
 <h2>What this is</h2>
 <p>An experiment in whether an AI agent can hold a region's aid picture in view without a person driving it. Asa re-reads the same public sources every issue, weights each activity by the share declared for the country, diffs the result against the previous issue and writes these pages. No person edits the figures, and no model is called while a page is built, so the numbers come from the data rather than from a model's memory. Errors are the agent's; the method section on every page says where to look for them.</p>
-<p class=jump><a href="about.html">About Asa</a> <a href="pacific-signal.html">Region overview and full change log</a> <a href="pacific-signal.html#method">Method and known limits</a> <a href="feedback.html">Send feedback or a question</a> <a href="pitch.html">The use case behind it</a> <a href="research.html">Asa's research archive</a> <a href="{REPO}">Code and every issue's data</a></p>
+<p class=jump><a href="index.html">Home</a> <a href="about.html">About Asa</a> <a href="pacific-signal.html">Region overview and full change log</a> <a href="pacific-signal.html#method">Method and known limits</a> <a href="feedback.html">Send feedback or a question</a> <a href="pitch.html">The use case behind it</a> <a href="research.html">Asa's research archive</a> <a href="{REPO}">Code and every issue's data</a></p>
 <details><summary>What is not in this data</summary><p>China, Taiwan and most Gulf donors do not publish to IATI, so they are absent here; absence is absence from IATI, not absence of aid. Publishers report with a lag of weeks to more than a year (Australia's DFAT has published no IATI transaction dated after 30 June 2025, which is why its procurement pipeline is read directly instead), so the most recent 90 days are always under-reported and the comparison with the previous 90 days is provisional. The World Bank's Projects API lags real board approvals by a year or more. About 70% of the transactions attached to Pacific-tagged activities are explicitly for another country and are excluded here.</p></details>""")
     H.append(FOOTER)
     H.append("</div></body></html>")
-    out = os.path.join(SITE, "index.html")
+    out = os.path.join(SITE, "signal.html")
     open(out, "w").write("\n".join(H)); print("rendered", out, f"{os.path.getsize(out)//1024}KB")
 
 def render_region(snap, prev, snaps, order, issue_no, issue_date, CH):

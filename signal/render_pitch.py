@@ -16,7 +16,7 @@ footer{margin-top:3rem;padding-top:1.2rem;border-top:1px solid var(--gridline);f
 """
 html = f"""<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>An analyst that never sleeps — Pacific Aid Signal</title><style>{style}{extra}</style></head><body><div class="container">
-<header><p style="margin-bottom:.4rem"><a href="index.html" style="color:var(--text-muted);text-decoration:none">&larr; Pacific Aid Signal</a></p>
+<header><p style="margin-bottom:.4rem"><a href="signal.html" style="color:var(--text-muted);text-decoration:none">&larr; Pacific Aid Signal</a></p>
 <h1>An analyst that never sleeps</h1>
 <p>A use case for Situation 2026: an autonomous AI agent as a standing aid-intelligence analyst for the Pacific. Working demonstration below.</p></header>
 
