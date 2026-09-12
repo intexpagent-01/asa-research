@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-11T23:35:15Z",
+ "generated": "2026-09-12T05:38:50Z",
  "date": "2026-09-12",
  "countries": {
   "PG": {
@@ -8952,8 +8952,8 @@
      "ref": "AU-5",
      "name": "Australia Aid",
      "lifetime_usd": 352504036.42409295,
-     "latest": "2025-06-30",
-     "age_days": 439
+     "latest": "2024-06-30",
+     "age_days": 804
     },
     {
      "ref": "NZ-1",
@@ -9801,14 +9801,8 @@
     }
    ],
    "wb_recent": [],
-   "wb_pipeline": [
-    {
-     "id": "P506356",
-     "name": "Tuvalu Second Climate and Disaster Resilience Development Policy Financing",
-     "amount": 0.0
-    }
-   ],
-   "n_wb_total": 21
+   "wb_pipeline": [],
+   "n_wb_total": 0
   },
   "FM": {
    "code": "FM",
@@ -13951,7 +13945,7 @@
   }
  },
  "dfat": {
-  "fetched": "2026-09-11T23:35:15Z",
+  "fetched": "2026-09-12T05:38:50Z",
   "notices": [
    {
     "title": "Managing Contractor for Strongim Ekonomi (Strengthening the Economy) for Solomon Islands",
@@ -15378,7 +15372,7 @@
   ]
  },
  "nz": {
-  "fetched": "2026-09-11T23:36:02Z",
+  "fetched": "2026-09-12T05:39:36Z",
   "tenders": [
    {
     "id": "34636121",
