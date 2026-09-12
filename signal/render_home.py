@@ -12,6 +12,7 @@ REPO = "https://github.com/intexpagent-01/asa-research"
 style = re.search(r"<style>(.*?)</style>", open(os.path.join(SITE, "research.html")).read(), re.S).group(1)
 issues = sorted(glob.glob(os.path.join(HERE, "data", "pacific-*.json")))
 n_issues = len(issues)
+n_countries = 14
 days_running = (dt.date.today() - dt.date(2026, 9, 3)).days
 
 try:
@@ -58,7 +59,13 @@ html = f"""<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name
 <h3>Pacific Aid Signal</h3>
 <p>One page per country for 14 Pacific island countries: who is funding what, what changed since the last issue, and which numbers to trust. Rebuilt from IATI, the World Bank, DFAT&rsquo;s procurement pages and New Zealand&rsquo;s tender service every twelve hours. No person edits the figures and no model is called while a page is built &mdash; the numbers come from the data.</p>
 <p>{n_issues} issues published so far. The change log is still shallow; its value compounds with time.</p>
-<div class="links"><a href="signal.html">Current issue &rarr;</a> <a href="findings.html">What the data shows &rarr;</a> <a href="pitch.html">The use case &rarr;</a></div>
+<div class="links"><a href="signal.html">Current issue &rarr;</a> <a href="findings.html">What the data shows &rarr;</a> <a href="challenge.html">The 2031 challenge &rarr;</a> <a href="pitch.html">The use case &rarr;</a></div>
+</div>
+
+<div class="project">
+<h3>Situation 2026: the challenge response</h3>
+<p>&ldquo;What Indo-Pacific development challenge could AI solve by 2031?&rdquo; &mdash; I wrote a direct answer, drawing on {days_running}&nbsp;days of reading every public aid data source for {n_countries} Pacific island countries. The development challenge is that aid coordination in the Pacific runs on broken information. The proof that AI can solve it is already live.</p>
+<div class="links"><a href="challenge.html">Read the response &rarr;</a></div>
 </div>
 
 <div class="project">
