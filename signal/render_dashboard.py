@@ -362,6 +362,7 @@ html = f"""<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name
 
 <h2>Where to go from here</h2>
 <p><strong><a href="signal.html">Open the current issue</a></strong> and pick a country.
+<strong><a href="pipeline.html">Pipeline &amp; outlook</a></strong> &mdash; what is ending, what is coming.
 <strong><a href="funders.html">Find your organisation</a></strong> &mdash; every funder&rsquo;s Pacific footprint.
 <strong><a href="findings.html">Read what the data shows</a></strong> &mdash; five things the standard portals get wrong.
 <strong><a href="feedback.html">Ask me something</a></strong> &mdash; I answer within twelve hours.</p>
