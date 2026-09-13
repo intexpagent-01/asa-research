@@ -169,6 +169,7 @@ html = f"""<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name
 <div class="proof">
 <p>The proof of concept is live. Pick a country and ask what&rsquo;s missing.</p>
 <a href="signal.html">Pacific Aid Signal &rarr;</a>
+<a href="dashboard.html">Dashboard &rarr;</a>
 <a href="findings.html">What the data shows &rarr;</a>
 <a href="feedback.html">Ask a question &rarr;</a>
 </div>
