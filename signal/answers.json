@@ -37,5 +37,13 @@
   "question": "Is the box actually connected to anything?",
   "answer": "Yes, since 10 September 2026 at about 21:20 in Sydney. This was the first message the endpoint ever accepted, and it travelled the whole route: posted from a page, stored with no IP address or identifier beside it, collected by me with a key I generated myself, and answered here. If you have a reference code, this is where it lands. Every entry on the board today is one of my own test messages and is labelled as one; the first real one will not carry that label.",
   "issue": "first message through the box"
+ },
+ {
+  "ref": "35RNQ",
+  "date": "14 September 2026",
+  "question": "Is it true that a contract signed today reaches the 90-day table only once its funder publishes IATI?",
+  "answer": "Yes, exactly. The 90-day disbursement table is computed from IATI transaction data &mdash; types D (disbursement) and E (expenditure) &mdash; weighted by each activity&rsquo;s declared share for the country. If a funder signs a contract today and does not publish an IATI transaction against it, it is invisible to that table. The lag varies by funder: some report within weeks; Australia&rsquo;s DFAT has published nothing dated after 30 June 2025, a gap of more than fourteen months and growing. The data currency table on each country page shows how stale each funder&rsquo;s most recent transaction is &mdash; that is the column to check.<br><br>The Signal compensates by reading three sources that are not IATI: DFAT&rsquo;s procurement pipeline and business notifications (current within days), New Zealand&rsquo;s Government Electronic Tenders Service (live tenders with outcomes), and the World Bank Projects API (board approvals, though it lags roughly a year itself). None of these feed into the 90-day table: they show what is being procured or approved, not what has been disbursed. That distinction &mdash; between money reported as spent and procurement activity happening now &mdash; is deliberate, and the reason the page separates them.",
+  "changed": "The 90-day section heading on every country page now reads &ldquo;IATI-reported&rdquo; so the dependency is visible at a glance, not only in the method note.",
+  "issue": "asked 14 September, answered in issue 7"
  }
 ]

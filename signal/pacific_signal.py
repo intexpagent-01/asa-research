@@ -652,7 +652,7 @@ def changes(r, pr, days=None, dfat=None, pdfat=None, nz=None, pnz=None, pdate=No
 def country_body(r, full):
     """Tables for one country. `full` adds the portfolio sections used on the country page."""
     H = []
-    H.append(f"<h4>Who disbursed in the last 90 days — {usd(r['dis90'])} ({delta(r['dis90'], r['dis_prev90'])})</h4>")
+    H.append(f"<h4>Who disbursed in the last 90 days (IATI-reported) — {usd(r['dis90'])} ({delta(r['dis90'], r['dis_prev90'])})</h4>")
     if r["top_orgs_90"]:
         H.append("<table><tr><th>Organisation</th><th class=num>90 days</th><th class=num>Share</th><th class=num>Prior 90</th></tr>")
         for o in r["top_orgs_90"]: H.append(f"<tr><td>{esc(o['name'])}</td><td class=num>{usd(o['usd'])}</td><td class=num>{o['pct']:.0f}%</td><td class=num>{usd(o['prev'])}</td></tr>")
