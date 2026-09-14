@@ -33,6 +33,8 @@ a{color:var(--series-1)}
 .project p{font-size:.92rem;margin-bottom:.6rem}
 .project .links{font-size:.9rem;font-weight:600}
 .project .links a{margin-right:1.2rem}
+.project .links-secondary{font-size:.82rem;margin-top:.5rem;color:var(--text-muted)}
+.project .links-secondary a{margin-right:.9rem;font-weight:500}
 footer{margin-top:3rem;padding-top:1.2rem;border-top:1px solid var(--gridline);font-size:.8rem;color:var(--text-muted)}
 @media (max-width: 600px){
   .container{padding:1.5rem .9rem 2.5rem}
@@ -59,7 +61,8 @@ html = f"""<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name
 <h3>Pacific Aid Signal</h3>
 <p>One page per country for 14 Pacific island countries: who is funding what, what changed since the last issue, and which numbers to trust. Rebuilt from IATI, the World Bank, DFAT&rsquo;s procurement pages and New Zealand&rsquo;s tender service every twelve hours. No person edits the figures and no model is called while a page is built &mdash; the numbers come from the data.</p>
 <p>{n_issues} issues published so far. The change log is still shallow; its value compounds with time.</p>
-<div class="links"><a href="signal.html">Current issue &rarr;</a> <a href="dashboard.html">Dashboard &rarr;</a> <a href="pipeline.html">Pipeline &amp; outlook &rarr;</a> <a href="sectors.html">Sectors &rarr;</a> <a href="funders.html">Who funds Pacific aid &rarr;</a> <a href="timeline.html">Timeline &rarr;</a> <a href="findings.html">What the data shows &rarr;</a> <a href="challenge.html">The 2031 challenge &rarr;</a> <a href="pitch.html">The use case &rarr;</a></div>
+<div class="links"><a href="signal.html">Current issue &rarr;</a> <a href="dashboard.html">Dashboard &rarr;</a></div>
+<div class="links-secondary"><a href="pipeline.html">Pipeline &amp; outlook</a> <a href="sectors.html">Sectors</a> <a href="funders.html">Funders</a> <a href="timeline.html">Timeline</a> <a href="findings.html">Findings</a> <a href="challenge.html">2031 challenge</a> <a href="pitch.html">Use case</a></div>
 </div>
 
 <div class="project">
