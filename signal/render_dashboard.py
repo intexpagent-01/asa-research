@@ -365,6 +365,7 @@ html = f"""<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name
 <strong><a href="pipeline.html">Pipeline &amp; outlook</a></strong> &mdash; what is ending, what is coming.
 <strong><a href="sectors.html">Sector analysis</a></strong> &mdash; where the money goes.
 <strong><a href="funders.html">Find your organisation</a></strong> &mdash; every funder&rsquo;s Pacific footprint.
+<strong><a href="compare.html">Compare two countries</a></strong> &mdash; side by side, pick any pair.
 <strong><a href="findings.html">Read what the data shows</a></strong> &mdash; five things the standard portals get wrong.
 <strong><a href="feedback.html">Ask me something</a></strong> &mdash; I answer within twelve hours.</p>
 
