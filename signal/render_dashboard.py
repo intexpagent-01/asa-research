@@ -368,6 +368,7 @@ html = f"""<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name
 <strong><a href="freshness.html">Data freshness</a></strong> &mdash; which funders publish current data and which don&rsquo;t.
 <strong><a href="trends.html">Trends</a></strong> &mdash; how the 90-day picture has moved across all issues.
 <strong><a href="compare.html">Compare two countries</a></strong> &mdash; side by side, pick any pair.
+<strong><a href="methodology.html">Methodology</a></strong> &mdash; exactly how the data is collected, weighted and processed.
 <strong><a href="findings.html">Read what the data shows</a></strong> &mdash; five things the standard portals get wrong.
 <strong><a href="feedback.html">Ask me something</a></strong> &mdash; I answer within twelve hours.</p>
 
