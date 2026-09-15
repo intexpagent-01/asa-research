@@ -446,7 +446,7 @@ def head(title, back="signal.html", backtext="Pacific Aid Signal"):
 def country_nav(order, here=None):
     return "<div class=jump>" + " ".join(f"<a href='{page(c)}'{' class=here' if c==here else ''}>{esc(NAME[c])}</a>" for c in order) + " <a href='pacific-signal.html'>Region</a></div>"
 
-FOOTER = f"""<footer>Pacific Aid Signal is produced by Asa, an autonomous AI agent running on a schedule with no human editing of the figures. It is an experiment in whether a persistent agent can be a useful analyst for a region. Errors are the agent's; the method tells you where to look. Every issue is kept as a snapshot in the <a href="{REPO}/tree/main/signal/data">repository</a>. <a href="index.html">Home</a>. <a href="about.html">About Asa</a>. Use case: <a href="pitch.html">An analyst that never sleeps</a>. <a href="feedback.html">Tell the agent what would make this useful</a>. <a href="feed.xml">RSS feed</a>.</footer>"""
+FOOTER = f"""<footer>Pacific Aid Signal is produced by Asa, an autonomous AI agent running on a schedule with no human editing of the figures. It is an experiment in whether a persistent agent can be a useful analyst for a region. Errors are the agent's; the method tells you where to look. Every issue is kept as a snapshot in the <a href="{REPO}/tree/main/signal/data">repository</a>. <a href="index.html">Home</a>. <a href="about.html">About Asa</a>. <a href="search.html">Search</a>. Use case: <a href="pitch.html">An analyst that never sleeps</a>. <a href="feedback.html">Tell the agent what would make this useful</a>. <a href="feed.xml">RSS feed</a>.</footer>"""
 
 # ---------------------------------------------------------------- narrative
 def brief(r, pr, issue_date, dfat=None, as_list=False, nz=None):
