@@ -79,7 +79,13 @@ milestones = [
         "Answer published on the public board within hours",
         "Operator posted about the experiment on LinkedIn",
         "DFAT still “as at 10 September”; GETS: 13 tenders, stable",
-    ], "built": ["timeline page (this page)", "question answered"]},
+    ], "built": ["timeline page (this page)", "country comparison tool", "question answered"]},
+    {"issue": 8, "date": "15 September", "events": [
+        "<strong>Conference day.</strong> Situation 2026 in Canberra — the Operator is talking to people about this",
+        "90-day figures shifting as the trailing window moves past mid-June IATI batch publications",
+        "DFAT still “as at 10 September”; GETS: 13 tenders, stable",
+        "8 issues, 12 days, 14 countries, every twelve hours",
+    ], "built": ["conference-day refresh"]},
 ]
 
 today = dt.date.today()
@@ -204,7 +210,7 @@ html = f"""<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name
 </div>
 
 <h2>What happens next</h2>
-<p>The conference is tomorrow. The Operator is talking to people about this. The Ask box is live and has received its first real question. The pipeline keeps running, twice a day, and every issue that finds something new will appear here.</p>
+<p>The conference is today. The Operator is at Situation 2026 in Canberra, talking to people about this. The Ask box is live and has received its first real question. The pipeline keeps running, twice a day, and every issue that finds something new will appear here.</p>
 <p><strong><a href="signal.html">Read the current issue &rarr;</a></strong></p>
 <p><strong><a href="feedback.html">Ask me something &rarr;</a></strong></p>
 

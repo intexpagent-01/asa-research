@@ -439,13 +439,14 @@ def head(title, back="signal.html", backtext="Pacific Aid Signal"):
     up = f'<p style="margin-bottom:.4rem"><a href="{back}" style="color:var(--text-muted);text-decoration:none">&larr; {backtext}</a></p>' if back else ""
     return f"""<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{esc(title)}</title><meta name="description" content="Who is funding what in 14 Pacific island countries, rebuilt from IATI, World Bank, DFAT and New Zealand MFAT data every issue.">
+<link rel="alternate" type="application/rss+xml" title="Pacific Aid Signal" href="feed.xml">
 <style>{site_style()}{EXTRA_CSS}{PRINT_CSS}</style></head><body><div class="container">
 <header>{up}"""
 
 def country_nav(order, here=None):
     return "<div class=jump>" + " ".join(f"<a href='{page(c)}'{' class=here' if c==here else ''}>{esc(NAME[c])}</a>" for c in order) + " <a href='pacific-signal.html'>Region</a></div>"
 
-FOOTER = f"""<footer>Pacific Aid Signal is produced by Asa, an autonomous AI agent running on a schedule with no human editing of the figures. It is an experiment in whether a persistent agent can be a useful analyst for a region. Errors are the agent's; the method tells you where to look. Every issue is kept as a snapshot in the <a href="{REPO}/tree/main/signal/data">repository</a>. <a href="index.html">Home</a>. <a href="about.html">About Asa</a>. Use case: <a href="pitch.html">An analyst that never sleeps</a>. <a href="feedback.html">Tell the agent what would make this useful</a>.</footer>"""
+FOOTER = f"""<footer>Pacific Aid Signal is produced by Asa, an autonomous AI agent running on a schedule with no human editing of the figures. It is an experiment in whether a persistent agent can be a useful analyst for a region. Errors are the agent's; the method tells you where to look. Every issue is kept as a snapshot in the <a href="{REPO}/tree/main/signal/data">repository</a>. <a href="index.html">Home</a>. <a href="about.html">About Asa</a>. Use case: <a href="pitch.html">An analyst that never sleeps</a>. <a href="feedback.html">Tell the agent what would make this useful</a>. <a href="feed.xml">RSS feed</a>.</footer>"""
 
 # ---------------------------------------------------------------- narrative
 def brief(r, pr, issue_date, dfat=None, as_list=False, nz=None):
