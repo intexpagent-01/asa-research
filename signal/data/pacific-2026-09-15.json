@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-14T23:55:39Z",
+ "generated": "2026-09-15T05:56:26Z",
  "date": "2026-09-15",
  "countries": {
   "PG": {
@@ -13941,7 +13941,7 @@
   }
  },
  "dfat": {
-  "fetched": "2026-09-14T23:55:39Z",
+  "fetched": "2026-09-15T05:56:26Z",
   "notices": [
    {
     "title": "Managing Contractor for Strongim Ekonomi (Strengthening the Economy) for Solomon Islands",
@@ -15368,7 +15368,7 @@
   ]
  },
  "nz": {
-  "fetched": "2026-09-14T23:56:27Z",
+  "fetched": "2026-09-15T05:57:12Z",
   "tenders": [
    {
     "id": "34636121",
@@ -15629,30 +15629,6 @@
      "date": "2026-08-28"
     },
     "summary": "This is a Notice of Information (Advance Notice) from The Ministry of Foreign Affairs (MFAT) as part of New Zealand\u2019s International Development Cooperation (IDC) Programme for targeting main contractors, for the provision of Early Contractor Involvement (ECI) services for the Niue Justice Building. This opportunity may lead to continuation to Construction services. MFAT is looking to engage through an Early Contractor Involvement (ECI) for the Niue Justice Building project. The ECI is expected to be appointed in early 2027 and will be expected to work collaboratively with MFAT, Government of Niue and the consulting team/s. MFAT is working in partnership with the Government of Niue to design "
-   },
-   {
-    "id": "34554329",
-    "ref": "WPG-0105711",
-    "title": "Advance Notice: Scoping Study for a Renewable Energy Upgrade Programme for the Pacific",
-    "type": "NOI",
-    "date_label": "3:56 PM 5 Aug 2026 (Pacific/Auckland UTC+12:00)",
-    "org": "Ministry of Foreign Affairs and Trade",
-    "status": "completed",
-    "url": "https://www.gets.govt.nz/MFAT/ExternalTenderDetails.htm?id=34554329",
-    "opened": "Friday, 24 July 2026 9:30 AM (Pacific/Auckland UTC+12:00)",
-    "closes": "Wednesday, 5 August 2026 10:30 AM (Pacific/Auckland UTC+12:00)",
-    "dept": "Crown Funding",
-    "type_full": "Notice of Information (Advance Notice) (NOI)",
-    "coverage": "Sole Agency",
-    "categories": "83000000 - Public Utilities and Public Sector Related Services",
-    "regions": "International",
-    "overview": "This is an extension of the initial Advance Notice due to a revised release timeframe. MFAT is looking to procure consultancy services to undertake a scoping study for targeted renewable energy investments across Pacific partner countries, including Realm countries. The purpose of this work is to identify a portfolio of renewable energy and electricity network investments that maximises renewable energy supply while minimising the time to commissioning, within the available programme budget. The portfolio will focus on the remediation and upgrading of existing renewable energy and electricity network infrastructure, aligned with partner country priorities and needs. For planning purposes, th",
-    "outcome": {
-     "state": "completed",
-     "date": "2026-08-05",
-     "note": "Advance Notice has continued through to RFP"
-    },
-    "summary": "This is an extension of the initial Advance Notice due to a revised release timeframe. MFAT is looking to procure consultancy services to undertake a scoping study for targeted renewable energy investments across Pacific partner countries, including Realm countries. The purpose of this work is to identify a portfolio of renewable energy and electricity network investments that maximises renewable energy supply while minimising the time to commissioning, within the available programme budget. The portfolio will focus on the remediation and upgrading of existing renewable energy and electricity network infrastructure, aligned with partner country priorities and needs. For planning purposes, th"
    }
   ]
  }
