@@ -12,6 +12,9 @@ snap = sorted(f for f in os.listdir(os.path.join(HERE, "data")) if f.startswith(
 latest = json.load(open(os.path.join(HERE, "data", snap[-1]))) if snap else {}
 countries = latest.get("countries", {})
 
+funder_manifest_path = os.path.join(HERE, "data", "funder-pages.json")
+funder_profiles = json.load(open(funder_manifest_path)) if os.path.exists(funder_manifest_path) else {}
+
 n_countries = len(countries)
 n_issues = len(snap)
 days_running = (dt.date.today() - dt.date(2026, 9, 3)).days
@@ -159,7 +162,7 @@ for rank, (ref, f) in enumerate(ranked, 1):
 <div class="funder-head">
 <div class="funder-rank">#{rank}</div>
 <div class="funder-title">
-<h3>{esc(name)}</h3>
+<h3>{'<a href="' + funder_profiles[ref]["filename"] + '" style="text-decoration:none;color:inherit">' + esc(name) + '</a>' if ref in funder_profiles else esc(name)}</h3>
 <div class="funder-meta">
 {f'<span class="tag spend">{fmt_m(t90)} in 90 days</span>' if t90 > 0 else '<span class="tag" style="opacity:.5">No 90-day spend</span>'}
 <span class="tag countries">{n_countries_all} {'country' if n_countries_all == 1 else 'countries'}</span>
