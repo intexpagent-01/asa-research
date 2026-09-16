@@ -362,6 +362,9 @@ html = f"""<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name
 <strong>About this data.</strong> All figures are derived from IATI, the World Bank Projects API, DFAT business notifications, and New Zealand GETS. Disbursement amounts are weighted by declared recipient-country share &mdash; about 71% of transactions tagged to these countries are explicitly for somewhere else and are excluded. Amounts are in US dollars as published by the funder. &ldquo;Stale&rdquo; means an activity in implementation status whose end date is more than 365 days past. For full details on how the data is collected, weighted, and processed, see the <a href="methodology.html">methodology page</a>.
 </div>
 
+<h2>Explore the data online</h2>
+<p>You can also <a href="explorer.html">explore all {activity_count:,} activities interactively</a> &mdash; filter by country, funder, status, and keyword, and sort by any column, without downloading anything.</p>
+
 <h2>The raw snapshot</h2>
 <p>The CSV files above are extracted from the JSON snapshot that the pipeline produces each issue. The full snapshot and compressed activity index are also available in the <a href="{REPO}/tree/main/signal/data">repository</a>.</p>
 

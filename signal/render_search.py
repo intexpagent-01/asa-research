@@ -29,6 +29,7 @@ PAGE_META = {
     "pacific-signal.html": ("Region Overview", "All 14 Pacific island countries at a glance"),
     "research.html": ("Research Archive", "17 analyses on what development data actually measures"),
     "download.html": ("Download Data", "Download Pacific aid data as CSV: disbursements, funders, sectors, activities for 14 countries"),
+    "explorer.html": ("Data Explorer", "Filter, sort, and search 10,000+ aid activities across 14 Pacific island countries by country, funder, status, and keyword"),
 }
 
 COUNTRY_NAMES = {

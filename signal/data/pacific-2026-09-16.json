@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-16T00:09:36Z",
+ "generated": "2026-09-16T06:10:35Z",
  "date": "2026-09-16",
  "countries": {
   "PG": {
@@ -13840,8 +13840,15 @@
   }
  },
  "dfat": {
-  "fetched": "2026-09-16T00:09:36Z",
+  "fetched": "2026-09-16T06:10:35Z",
   "notices": [
+   {
+    "title": "Harnessing Agricultural Resilience, Value Chains, and Enterprise for Sustainable Transformation (HARVEST)",
+    "url": "https://www.dfat.gov.au/about-us/business-opportunities/business-notifications/harnessing-agricultural-resilience-value-chains-and-enterprise-sustainable-transformation-harvest",
+    "date": "2026-09-14",
+    "category": "Development",
+    "summary": "DFAT intends to approach the market for an implementing service provider to implement HARVEST, Australia\u2019s new climate program in the Philippines focusing on climate-resilient agriculture and food security."
+   },
    {
     "title": "Managing Contractor for Strongim Ekonomi (Strengthening the Economy) for Solomon Islands",
     "url": "https://www.dfat.gov.au/development/managing-contractor-strongim-ekonomi-strengthening-economy-solomon-islands",
@@ -15267,27 +15274,8 @@
   ]
  },
  "nz": {
-  "fetched": "2026-09-16T00:10:25Z",
+  "fetched": "2026-09-16T06:11:19Z",
   "tenders": [
-   {
-    "id": "34636121",
-    "ref": "WPG-0105711",
-    "title": "RFP: Scoping Study for a Renewable Energy Upgrade Programme for the Pacific",
-    "type": "RFP",
-    "date_label": "4:00 PM 16 Sep 2026 (Pacific/Auckland UTC+12:00)",
-    "org": "Ministry of Foreign Affairs and Trade",
-    "status": "open",
-    "url": "https://www.gets.govt.nz/MFAT/ExternalTenderDetails.htm?id=34636121",
-    "opened": "Wednesday, 5 August 2026 10:30 AM (Pacific/Auckland UTC+12:00)",
-    "closes": "Wednesday, 16 September 2026 4:00 PM (Pacific/Auckland UTC+12:00)",
-    "dept": "Crown Funding",
-    "type_full": "Request for Proposals (RFP)",
-    "coverage": "Sole Agency",
-    "categories": "83000000 - Public Utilities and Public Sector Related Services",
-    "regions": "International",
-    "overview": "The Ministry of Foreign Affairs and Trade (MFAT) invites proposals from suitably qualified suppliers to undertake a scoping study for the Renewable Energy Upgrade Programme for the Pacific (RE-UP). RE-UP will identify and prioritise a portfolio of renewable energy and electricity network upgrade investments across the Cook Islands, Niue, Samoa, Tonga, Tuvalu and Kiribati. The programme aims to increase renewable electricity generation, strengthen energy security, reduce reliance on imported fossil fuels, and support Pacific countries to meet their renewable energy and climate commitments. MFAT is seeking a supplier to identify, assess and prioritise investment opportunities with an indicativ",
-    "summary": "The Ministry of Foreign Affairs and Trade (MFAT) invites proposals from suitably qualified suppliers to undertake a scoping study for the Renewable Energy Upgrade Programme for the Pacific (RE-UP). RE-UP will identify and prioritise a portfolio of renewable energy and electricity network upgrade investments across the Cook Islands, Niue, Samoa, Tonga, Tuvalu and Kiribati. The programme aims to increase renewable electricity generation, strengthen energy security, reduce reliance on imported fossil fuels, and support Pacific countries to meet their renewable energy and climate commitments. MFAT is seeking a supplier to identify, assess and prioritise investment opportunities with an indicativ"
-   },
    {
     "id": "34873849",
     "ref": "WPG-0105604",
