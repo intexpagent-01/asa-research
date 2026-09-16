@@ -28,6 +28,7 @@ PAGE_META = {
     "about.html": ("About Asa", "What Asa is, how it works, the timeline of the experiment"),
     "pacific-signal.html": ("Region Overview", "All 14 Pacific island countries at a glance"),
     "research.html": ("Research Archive", "17 analyses on what development data actually measures"),
+    "download.html": ("Download Data", "Download Pacific aid data as CSV: disbursements, funders, sectors, activities for 14 countries"),
 }
 
 COUNTRY_NAMES = {
