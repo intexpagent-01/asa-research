@@ -1,0 +1,362 @@
+{
+  "US-GOV-9": {
+    "slug": "us-gov-9",
+    "filename": "funder-us-gov-9.html",
+    "name": "Department of the Interior"
+  },
+  "AU-5": {
+    "slug": "au-5",
+    "filename": "funder-au-5.html",
+    "name": "Australia Aid"
+  },
+  "XI-IATI-UNPF": {
+    "slug": "xi-iati-unpf",
+    "filename": "funder-xi-iati-unpf.html",
+    "name": "UN Pooled Funds"
+  },
+  "XI-IATI-WBTF": {
+    "slug": "xi-iati-wbtf",
+    "filename": "funder-xi-iati-wbtf.html",
+    "name": "World Bank Trust Funds"
+  },
+  "XI-BRIDGE-6385676864": {
+    "slug": "xi-bridge-6385676864",
+    "filename": "funder-xi-bridge-6385676864.html",
+    "name": "Global Environment Facility"
+  },
+  "XM-DAC-41111": {
+    "slug": "xm-dac-41111",
+    "filename": "funder-xm-dac-41111.html",
+    "name": "United Nations Capital Development Fund (UNCDF)"
+  },
+  "US-GOV-11": {
+    "slug": "us-gov-11",
+    "filename": "funder-us-gov-11.html",
+    "name": "Department of State"
+  },
+  "US-GOV-10": {
+    "slug": "us-gov-10",
+    "filename": "funder-us-gov-10.html",
+    "name": "Peace Corps"
+  },
+  "XM-DAC-41146": {
+    "slug": "xm-dac-41146",
+    "filename": "funder-xm-dac-41146.html",
+    "name": "UN Women"
+  },
+  "XM-DAC-46004": {
+    "slug": "xm-dac-46004",
+    "filename": "funder-xm-dac-46004.html",
+    "name": "Asian Development Bank"
+  },
+  "XM-DAC-41108": {
+    "slug": "xm-dac-41108",
+    "filename": "funder-xm-dac-41108.html",
+    "name": "International Fund for Agricultural Development"
+  },
+  "44000": {
+    "slug": "44000",
+    "filename": "funder-44000.html",
+    "name": "World Bank"
+  },
+  "XM-DAC-47136": {
+    "slug": "xm-dac-47136",
+    "filename": "funder-xm-dac-47136.html",
+    "name": "Global Green Growth Institute (GGGI)"
+  },
+  "XI-IATI-EC_INTPA": {
+    "slug": "xi-iati-ec-intpa",
+    "filename": "funder-xi-iati-ec-intpa.html",
+    "name": "European Commission - Directorate-General for International Partnerships"
+  },
+  "US-GOV-7": {
+    "slug": "us-gov-7",
+    "filename": "funder-us-gov-7.html",
+    "name": "Department of Defense"
+  },
+  "XM-DAC-47066": {
+    "slug": "xm-dac-47066",
+    "filename": "funder-xm-dac-47066.html",
+    "name": "International Organization for Migration (IOM)"
+  },
+  "XM-DAC-41114": {
+    "slug": "xm-dac-41114",
+    "filename": "funder-xm-dac-41114.html",
+    "name": "United Nations Development Programme"
+  },
+  "XI-IATI-EC_ECHO": {
+    "slug": "xi-iati-ec-echo",
+    "filename": "funder-xi-iati-ec-echo.html",
+    "name": "Directorate-General for European Civil Protection and Humanitarian Aid Operations (ECHO)"
+  },
+  "US-GOV-18": {
+    "slug": "us-gov-18",
+    "filename": "funder-us-gov-18.html",
+    "name": "Millennium Challenge Corporation"
+  },
+  "41AAA": {
+    "slug": "41aaa",
+    "filename": "funder-41aaa.html",
+    "name": "United Nations Office for Project Services"
+  },
+  "XM-DAC-903": {
+    "slug": "xm-dac-903",
+    "filename": "funder-xm-dac-903.html",
+    "name": "International Finance Corporation"
+  },
+  "XM-DAC-41122": {
+    "slug": "xm-dac-41122",
+    "filename": "funder-xm-dac-41122.html",
+    "name": "UNICEF"
+  },
+  "US-GOV-14": {
+    "slug": "us-gov-14",
+    "filename": "funder-us-gov-14.html",
+    "name": "Department of Health and Human Services"
+  },
+  "US-501c3-522318905": {
+    "slug": "us-501c3-522318905",
+    "filename": "funder-us-501c3-522318905.html",
+    "name": "AidData"
+  },
+  "AU-ACNC-18055208636": {
+    "slug": "au-acnc-18055208636",
+    "filename": "funder-au-acnc-18055208636.html",
+    "name": "Oxfam Australia"
+  },
+  "XM-DAC-41116": {
+    "slug": "xm-dac-41116",
+    "filename": "funder-xm-dac-41116.html",
+    "name": "UN Environment Programme"
+  },
+  "GB-GOV-7": {
+    "slug": "gb-gov-7",
+    "filename": "funder-gb-gov-7.html",
+    "name": "Department for Environment, Food, and Rural Affairs"
+  },
+  "SE-0": {
+    "slug": "se-0",
+    "filename": "funder-se-0.html",
+    "name": "Sweden"
+  },
+  "XM-DAC-45001": {
+    "slug": "xm-dac-45001",
+    "filename": "funder-xm-dac-45001.html",
+    "name": "International Trade Centre (ITC)"
+  },
+  "NZ-1": {
+    "slug": "nz-1",
+    "filename": "funder-nz-1.html",
+    "name": "New Zealand Ministry of Foreign Affairs and Trade"
+  },
+  "GB-GOV-1": {
+    "slug": "gb-gov-1",
+    "filename": "funder-gb-gov-1.html",
+    "name": "UK - Foreign, Commonwealth Development Office (FCDO)"
+  },
+  "XM-DAC-41317": {
+    "slug": "xm-dac-41317",
+    "filename": "funder-xm-dac-41317.html",
+    "name": "Green Climate Fund"
+  },
+  "KR-GOV-010": {
+    "slug": "kr-gov-010",
+    "filename": "funder-kr-gov-010.html",
+    "name": "Office for Government Policy Coordination"
+  },
+  "XM-DAC-41119": {
+    "slug": "xm-dac-41119",
+    "filename": "funder-xm-dac-41119.html",
+    "name": "United Nations Population Fund"
+  },
+  "XM-DAC-21018": {
+    "slug": "xm-dac-21018",
+    "filename": "funder-xm-dac-21018.html",
+    "name": "International Federation of Red Cross and Red Crescent Societies"
+  },
+  "DAC-1601": {
+    "slug": "dac-1601",
+    "filename": "funder-dac-1601.html",
+    "name": "Gates Foundation"
+  },
+  "AU-ACNC-19242959685": {
+    "slug": "au-acnc-19242959685",
+    "filename": "funder-au-acnc-19242959685.html",
+    "name": "International Women's Development Agency"
+  },
+  "XM-DAC-41301": {
+    "slug": "xm-dac-41301",
+    "filename": "funder-xm-dac-41301.html",
+    "name": "Food and Agriculture Organization (FAO)"
+  },
+  "NO-BRC-980997278": {
+    "slug": "no-brc-980997278",
+    "filename": "funder-no-brc-980997278.html",
+    "name": "INTOSAI Development Initiative"
+  },
+  "47045": {
+    "slug": "47045",
+    "filename": "funder-47045.html",
+    "name": "The Global Fund to Fight AIDS, Tuberculosis and Malaria"
+  },
+  "XM-DAC-928": {
+    "slug": "xm-dac-928",
+    "filename": "funder-xm-dac-928.html",
+    "name": "World Health Organization"
+  },
+  "FR-3": {
+    "slug": "fr-3",
+    "filename": "funder-fr-3.html",
+    "name": "AFD"
+  },
+  "US-GOV-12": {
+    "slug": "us-gov-12",
+    "filename": "funder-us-gov-12.html",
+    "name": "Trade and Development Agency"
+  },
+  "NL-KVK-27378529": {
+    "slug": "nl-kvk-27378529",
+    "filename": "funder-nl-kvk-27378529.html",
+    "name": "Netherlands Enterprise Agency"
+  },
+  "XM-DAC-41110": {
+    "slug": "xm-dac-41110",
+    "filename": "funder-xm-dac-41110.html",
+    "name": "The Joint United Nations Programme on HIV and AIDS (UNAIDS) Secretariat"
+  },
+  "CH-4": {
+    "slug": "ch-4",
+    "filename": "funder-ch-4.html",
+    "name": "Swiss Agency for Development and Cooperation (SDC)"
+  },
+  "FI-3": {
+    "slug": "fi-3",
+    "filename": "funder-fi-3.html",
+    "name": "Ministry for Foreign Affairs of Finland"
+  },
+  "US-GOV-1": {
+    "slug": "us-gov-1",
+    "filename": "funder-us-gov-1.html",
+    "name": "U.S. Agency for International Development"
+  },
+  "US-GOV-2": {
+    "slug": "us-gov-2",
+    "filename": "funder-us-gov-2.html",
+    "name": "Department of Agriculture"
+  },
+  "XM-DAC-41302": {
+    "slug": "xm-dac-41302",
+    "filename": "funder-xm-dac-41302.html",
+    "name": "International Labour Organization (ILO)"
+  },
+  "US-EIN-300108263": {
+    "slug": "us-ein-300108263",
+    "filename": "funder-us-ein-300108263.html",
+    "name": "GlobalGiving"
+  },
+  "US-GOV-6": {
+    "slug": "us-gov-6",
+    "filename": "funder-us-gov-6.html",
+    "name": "Department of the Treasury"
+  },
+  "47122": {
+    "slug": "47122",
+    "filename": "funder-47122.html",
+    "name": "Gavi, The Vaccine Alliance"
+  },
+  "GB-GOV-13": {
+    "slug": "gb-gov-13",
+    "filename": "funder-gb-gov-13.html",
+    "name": "DEPARTMENT FOR BUSINESS, ENERGY & INDUSTRIAL STRATEGY"
+  },
+  "XM-DAC-47058": {
+    "slug": "xm-dac-47058",
+    "filename": "funder-xm-dac-47058.html",
+    "name": "International IDEA"
+  },
+  "DE-1": {
+    "slug": "de-1",
+    "filename": "funder-de-1.html",
+    "name": "Federal Ministry for Economic Cooperation and Development (BMZ)"
+  },
+  "GB-CHC-1076235": {
+    "slug": "gb-chc-1076235",
+    "filename": "funder-gb-chc-1076235.html",
+    "name": "BBC Media Action"
+  },
+  "US-GOV-26": {
+    "slug": "us-gov-26",
+    "filename": "funder-us-gov-26.html",
+    "name": "Department of Transportation"
+  },
+  "XM-DAC-301-2": {
+    "slug": "xm-dac-301-2",
+    "filename": "funder-xm-dac-301-2.html",
+    "name": "International Development Research Centre"
+  },
+  "XM-DAC-41304": {
+    "slug": "xm-dac-41304",
+    "filename": "funder-xm-dac-41304.html",
+    "name": "United Nations Educational, Scientific and Cultural Organization (UNESCO)"
+  },
+  "AU-ABN-94642321640": {
+    "slug": "au-abn-94642321640",
+    "filename": "funder-au-abn-94642321640.html",
+    "name": "Conciliation Resources Australia"
+  },
+  "CA-3": {
+    "slug": "ca-3",
+    "filename": "funder-ca-3.html",
+    "name": "Foreign Affairs, Trade and Development Canada (DFATD)"
+  },
+  "IM-CR-024714B": {
+    "slug": "im-cr-024714b",
+    "filename": "funder-im-cr-024714b.html",
+    "name": "openmindedly"
+  },
+  "XM-DAC-1409": {
+    "slug": "xm-dac-1409",
+    "filename": "funder-xm-dac-1409.html",
+    "name": "Enhanced Integrated Framework"
+  },
+  "US-GOV-19": {
+    "slug": "us-gov-19",
+    "filename": "funder-us-gov-19.html",
+    "name": "Department of Homeland Security"
+  },
+  "XI-IATI-CWSEC": {
+    "slug": "xi-iati-cwsec",
+    "filename": "funder-xi-iati-cwsec.html",
+    "name": "The Commonwealth Secretariat"
+  },
+  "XM-DAC-47015": {
+    "slug": "xm-dac-47015",
+    "filename": "funder-xm-dac-47015.html",
+    "name": "CGIAR"
+  },
+  "XM-DAC-701-8": {
+    "slug": "xm-dac-701-8",
+    "filename": "funder-xm-dac-701-8.html",
+    "name": "Japan International Cooperation Agency"
+  },
+  "XM-DAC-701-2": {
+    "slug": "xm-dac-701-2",
+    "filename": "funder-xm-dac-701-2.html",
+    "name": "MINISTRY OF FOREIGN AFFAIRS IN JAPAN"
+  },
+  "XM-DAC-21033": {
+    "slug": "xm-dac-21033",
+    "filename": "funder-xm-dac-21033.html",
+    "name": "TRANSPARENCY INTERNATIONAL SECRETARIAT (TI-S)"
+  },
+  "47135": {
+    "slug": "47135",
+    "filename": "funder-47135.html",
+    "name": "Implementing"
+  },
+  "GB-CHC-1145640": {
+    "slug": "gb-chc-1145640",
+    "filename": "funder-gb-chc-1145640.html",
+    "name": "The Queen Elizabeth Diamond Jubilee Trust"
+  }
+}
