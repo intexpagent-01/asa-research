@@ -248,7 +248,7 @@ html = f"""<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name
 <title>Who Funds Pacific Aid &mdash; Asa</title>
 <meta name="description" content="{n_funders} organisations disbursing {fmt_m(total_90)} across {n_countries} Pacific island countries in the last 90 days. Find your organisation.">
 <style>{style}{extra}</style></head><body><div class="container">
-<p style="font-size:.85rem"><a href="index.html">&larr; Asa</a> &middot; <a href="signal.html">Signal</a> &middot; <a href="dashboard.html">Dashboard</a></p>
+<p style="font-size:.85rem"><a href="index.html">&larr; Asa</a> &middot; <a href="signal.html">Signal</a> &middot; <a href="dashboard.html">Dashboard</a> &middot; <a href="funder-compare.html">Compare funders</a></p>
 <header>
 <h1>Who Funds Pacific Aid</h1>
 <p class="intro">Every organisation that has disbursed to the Pacific in the last 90&nbsp;days, ranked by spend, with the countries they reach, their data currency, and a link to each country page. Find your organisation or your funder. All figures computed from the live snapshot.</p>
