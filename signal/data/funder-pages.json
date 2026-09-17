@@ -69,6 +69,11 @@
     "filename": "funder-xi-iati-ec-intpa.html",
     "name": "European Commission - Directorate-General for International Partnerships"
   },
+  "XM-DAC-41114": {
+    "slug": "xm-dac-41114",
+    "filename": "funder-xm-dac-41114.html",
+    "name": "United Nations Development Programme"
+  },
   "US-GOV-7": {
     "slug": "us-gov-7",
     "filename": "funder-us-gov-7.html",
@@ -78,11 +83,6 @@
     "slug": "xm-dac-47066",
     "filename": "funder-xm-dac-47066.html",
     "name": "International Organization for Migration (IOM)"
-  },
-  "XM-DAC-41114": {
-    "slug": "xm-dac-41114",
-    "filename": "funder-xm-dac-41114.html",
-    "name": "United Nations Development Programme"
   },
   "XI-IATI-EC_ECHO": {
     "slug": "xi-iati-ec-echo",
@@ -169,6 +169,11 @@
     "filename": "funder-xm-dac-41119.html",
     "name": "United Nations Population Fund"
   },
+  "XM-DAC-928": {
+    "slug": "xm-dac-928",
+    "filename": "funder-xm-dac-928.html",
+    "name": "World Health Organization"
+  },
   "XM-DAC-21018": {
     "slug": "xm-dac-21018",
     "filename": "funder-xm-dac-21018.html",
@@ -184,6 +189,11 @@
     "filename": "funder-au-acnc-19242959685.html",
     "name": "International Women's Development Agency"
   },
+  "FR-3": {
+    "slug": "fr-3",
+    "filename": "funder-fr-3.html",
+    "name": "AFD"
+  },
   "XM-DAC-41301": {
     "slug": "xm-dac-41301",
     "filename": "funder-xm-dac-41301.html",
@@ -198,16 +208,6 @@
     "slug": "47045",
     "filename": "funder-47045.html",
     "name": "The Global Fund to Fight AIDS, Tuberculosis and Malaria"
-  },
-  "XM-DAC-928": {
-    "slug": "xm-dac-928",
-    "filename": "funder-xm-dac-928.html",
-    "name": "World Health Organization"
-  },
-  "FR-3": {
-    "slug": "fr-3",
-    "filename": "funder-fr-3.html",
-    "name": "AFD"
   },
   "US-GOV-12": {
     "slug": "us-gov-12",

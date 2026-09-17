@@ -312,9 +312,9 @@ footer{margin-top:3rem;padding-top:1.2rem;border-top:1px solid var(--gridline);f
 <p class="intro">This page explains exactly how the Pacific Aid Signal turns raw data into the figures on each country page. No model is called during data collection or rendering &mdash; every number is produced by deterministic code that you can read in <a href="https://github.com/intexpagent-01/asa-research">the public repository</a>.</p>
 </header>
 
-<div class="key-stat"><b>253,676</b> transactions read</div>
+<div class="key-stat"><b>254,786</b> transactions read</div>
 <div class="key-stat"><b>70%</b> excluded (other-country)</div>
-<div class="key-stat"><b>10,415</b> activities indexed</div>
+<div class="key-stat"><b>10,426</b> activities indexed</div>
 <div class="key-stat"><b>10</b> issues published</div>
 
 <h2>Sources</h2>
@@ -323,7 +323,7 @@ footer{margin-top:3rem;padding-top:1.2rem;border-top:1px solid var(--gridline);f
 <div class="source-card">
 <h3>1. IATI via d-portal</h3>
 <p>The International Aid Transparency Initiative standard, queried through d-portal&rsquo;s API. This is the primary source for disbursement figures, funder identification, sector classification, activity status, and timeline.</p>
-<p class="detail">Endpoint: <code>d-portal.org/q.json</code>. Fetches transactions for the last 365 days in 60-day slices (the API caps results and ignores sort order). Also fetches the full activity list per country for status, start/end dates, and commitment data. 253,676 transactions read across 14 countries for the current issue.</p>
+<p class="detail">Endpoint: <code>d-portal.org/q.json</code>. Fetches transactions for the last 365 days in 60-day slices (the API caps results and ignores sort order). Also fetches the full activity list per country for status, start/end dates, and commitment data. 254,786 transactions read across 14 countries for the current issue.</p>
 </div>
 
 <div class="source-card">
@@ -380,7 +380,7 @@ footer{margin-top:3rem;padding-top:1.2rem;border-top:1px solid var(--gridline);f
 <div class="step-num">3</div>
 <div class="step-body">
 <p><strong>Weight by recipient country.</strong> This is the single most important quality step. When a transaction specifies which country received the money (<code>trans_country</code>), it is allocated 100% to that country or 0% to any other. When it carries a <code>country_percent</code> (declared share), that percentage is used. When it has neither, it is allocated 100% to the tagged country.</p>
-<p>The result: <strong>70% of the 253,676 transactions tagged to a Pacific country are explicitly for somewhere else</strong> and are excluded. Without this step, the numbers would be wildly wrong &mdash; d-portal&rsquo;s standard portal tells you the US State Department is Tonga&rsquo;s largest donor at $91 billion, when Tonga&rsquo;s declared share of that global programme is 0.005%.</p>
+<p>The result: <strong>70% of the 254,786 transactions tagged to a Pacific country are explicitly for somewhere else</strong> and are excluded. Without this step, the numbers would be wildly wrong &mdash; d-portal&rsquo;s standard portal tells you the US State Department is Tonga&rsquo;s largest donor at $91 billion, when Tonga&rsquo;s declared share of that global programme is 0.005%.</p>
 <div class="exclusion-bar">
 <span style="width:30%;background:var(--series-1)"></span>
 <span style="width:70%;background:var(--alert)"></span>
