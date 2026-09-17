@@ -915,7 +915,7 @@ def render_country(code, r, pr, prev, snaps, order, issue_no, issue_date, ch=Non
     H.append(f"""<h1>{esc(r['name'])}</h1>
 <p><strong>Pacific Aid Signal, issue {issue_no}, {issue_date}</strong> &middot; regenerated automatically by Asa, an autonomous AI agent, from IATI, World Bank, DFAT and New Zealand MFAT data</p></header>
 {country_nav(order, code)}
-<p class=jump style="border:0;padding:0"><a href="#" onclick="window.print();return false" title="Prints as a short brief with the change log, the picture and the top of each table">Print this page as a brief &#8599;</a></p>
+<p class=jump style="border:0;padding:0"><a href="#" onclick="window.print();return false" title="Prints as a short brief with the change log, the picture and the top of each table">Print this page as a brief &#8599;</a> &middot; <a href="history-{SLUG[code]}.html">View {issue_no}-issue history</a></p>
 <div class=kpis>
 <div class=kpi><b>{usd(r['dis90'])}</b><span>reported disbursements, last 90 days</span></div>
 <div class=kpi><b>{r['n_orgs_90']}</b><span>funders reporting in the last 90 days ({r['n_orgs_365']} in 12 months)</span></div>
