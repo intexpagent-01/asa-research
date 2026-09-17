@@ -362,6 +362,7 @@ html = f"""<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name
 
 <h2>Where to go from here</h2>
 <p><strong><a href="signal.html">Open the current issue</a></strong> and pick a country.
+<strong><a href="map.html">Map</a></strong> &mdash; see where the aid goes, geographically.
 <strong><a href="alerts.html">Alerts &amp; watch list</a></strong> &mdash; what needs attention right now.
 <strong><a href="pipeline.html">Pipeline &amp; outlook</a></strong> &mdash; what is ending, what is coming.
 <strong><a href="sectors.html">Sector analysis</a></strong> &mdash; where the money goes.
