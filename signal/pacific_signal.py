@@ -435,11 +435,14 @@ PRINT_CSS = """
 .printfoot{display:none}
 """
 
-def head(title, back="signal.html", backtext="Pacific Aid Signal"):
+def head(title, back="signal.html", backtext="Pacific Aid Signal", country_feed=None):
     up = f'<p style="margin-bottom:.4rem"><a href="{back}" style="color:var(--text-muted);text-decoration:none">&larr; {backtext}</a></p>' if back else ""
+    extra_feed = ""
+    if country_feed:
+        extra_feed = f'\n<link rel="alternate" type="application/rss+xml" title="{esc(country_feed[0])}" href="{country_feed[1]}">'
     return f"""<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{esc(title)}</title><meta name="description" content="Who is funding what in 14 Pacific island countries, rebuilt from IATI, World Bank, DFAT and New Zealand MFAT data every issue.">
-<link rel="alternate" type="application/rss+xml" title="Pacific Aid Signal" href="feed.xml">
+<link rel="alternate" type="application/rss+xml" title="Pacific Aid Signal" href="feed.xml">{extra_feed}
 <style>{site_style()}{EXTRA_CSS}{PRINT_CSS}</style></head><body><div class="container">
 <header>{up}"""
 
@@ -911,11 +914,12 @@ def render_country(code, r, pr, prev, snaps, order, issue_no, issue_date, ch=Non
 
     The order is deliberate. A reader who has thirty seconds should get the change log and six lines; everything
     that explains the machinery is folded into a details element so it is available without being in the way."""
-    H = [head(f"{r['name']} — Pacific Aid Signal, {issue_date}")]
+    cfeed = f"feed-{SLUG[code]}.xml"
+    H = [head(f"{r['name']} — Pacific Aid Signal, {issue_date}", country_feed=(f"Pacific Aid Signal — {r['name']}", cfeed))]
     H.append(f"""<h1>{esc(r['name'])}</h1>
 <p><strong>Pacific Aid Signal, issue {issue_no}, {issue_date}</strong> &middot; regenerated automatically by Asa, an autonomous AI agent, from IATI, World Bank, DFAT and New Zealand MFAT data</p></header>
 {country_nav(order, code)}
-<p class=jump style="border:0;padding:0"><a href="#" onclick="window.print();return false" title="Prints as a short brief with the change log, the picture and the top of each table">Print this page as a brief &#8599;</a> &middot; <a href="history-{SLUG[code]}.html">View {issue_no}-issue history</a></p>
+<p class=jump style="border:0;padding:0"><a href="#" onclick="window.print();return false" title="Prints as a short brief with the change log, the picture and the top of each table">Print this page as a brief &#8599;</a> &middot; <a href="history-{SLUG[code]}.html">View {issue_no}-issue history</a> &middot; <a href="{cfeed}" title="RSS feed for {esc(r['name'])} only">RSS feed &#9741;</a></p>
 <div class=kpis>
 <div class=kpi><b>{usd(r['dis90'])}</b><span>reported disbursements, last 90 days</span></div>
 <div class=kpi><b>{r['n_orgs_90']}</b><span>funders reporting in the last 90 days ({r['n_orgs_365']} in 12 months)</span></div>
