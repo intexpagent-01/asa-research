@@ -97,8 +97,6 @@ FJ,Fiji,US-GOV-1-720202656618,U.S. Agency for International Development,"USAID C
 FJ,Fiji,US-GOV-1-720202656911,U.S. Agency for International Development,"USAID Miscellaneous Goods, Services, and Operations Maintanence",,2026-09-30,
 FJ,Fiji,US-GOV-1-720202656967,U.S. Agency for International Development,(title redacted by USAID),,2026-09-30,
 FJ,Fiji,XM-DAC-41304-261FIJ1000,"United Nations Educational, Scientific and Cultural Organization (UNESCO)",UNPRPD in Fiji,,2026-12-31,
-FJ,Fiji,XM-DAC-701-8-202517440,Japan International Cooperation Agency (JICA),経済社会開発計画（廃棄物処理関連機材）,,2027-01-07,
-FJ,Fiji,XM-DAC-701-8-202517441,Japan International Cooperation Agency (JICA),経済社会開発計画（保健医療関連機材）,,2027-02-18,
 FJ,Fiji,XM-DAC-41114-OUTPUT-01005506,United Nations Development Programme,Fiji Human Rights and Anti-Discrimination Commission Capacity Development Project (PIP),,2027-03-05,
 FJ,Fiji,XM-DAC-41114-PROJECT-00081678,United Nations Development Programme,Markets for Change,,2026-12-31,
 FJ,Fiji,XM-DAC-41114-PROJECT-00112065,United Nations Development Programme,PACIFIC COASTAL AQUIFERS,,2026-10-21,
@@ -118,6 +116,8 @@ FJ,Fiji,XM-DAC-41114-PROJECT-01005021,United Nations Development Programme,NDC 3
 FJ,Fiji,XM-DAC-41114-PROJECT-01005505,United Nations Development Programme,Pathways to Sustaining Peace: Enhancing Youth Leadership and Cultural Pathways in Reconciliation and Social Co,,2027-02-28,
 FJ,Fiji,XM-DAC-41114-PROJECT-01005506,United Nations Development Programme,Fiji Human Rights and Anti-Discrimination Commission Capacity Development Project (PIP),,2027-03-05,
 FJ,Fiji,XM-DAC-41114-PROJECT-01005937,United Nations Development Programme,Support to Global Fund GC8 Grant Development,,2026-12-31,
+FJ,Fiji,XM-DAC-701-8-202517440,Japan International Cooperation Agency (JICA),経済社会開発計画（廃棄物処理関連機材）,,2027-01-07,
+FJ,Fiji,XM-DAC-701-8-202517441,Japan International Cooperation Agency (JICA),経済社会開発計画（保健医療関連機材）,,2027-02-18,
 FJ,Fiji,XM-DAC-41114-OUTPUT-01001604,United Nations Development Programme,Tuvalu Coastal Adaptation Project Phase 2 (TCAP 2),,2026-12-31,17271404.0
 FJ,Fiji,XM-DAC-41114-OUTPUT-01001484,United Nations Development Programme,Strengthening the Electoral Cycle in the Solomon Islands Project (SECSIP III) (EU: 2023-2025),,2026-09-30,5597987.0
 FJ,Fiji,XM-DAC-41114-OUTPUT-00128454,United Nations Development Programme,M4C Phase II - Samoa,,2026-12-31,927840.0
@@ -351,10 +351,11 @@ PG,Papua New Guinea,US-GOV-1-720202657565,U.S. Agency for International Developm
 PG,Papua New Guinea,US-GOV-11-72049224C00001-228191,Department of State,"Philippines, Pacific Islands, and Mongolia Monitoring, Evaluation, and Learning Activity (PIMMELA)",,2027-01-15,
 PG,Papua New Guinea,US-GOV-1-720202657324,U.S. Agency for International Development,(title redacted by USAID),,2026-09-30,
 PG,Papua New Guinea,US-GOV-1-720202657636,U.S. Agency for International Development,USAID Travel and Transportation,,2026-09-30,
-PG,Papua New Guinea,SE-0-SE-6-15221,Sweden,WaterAid WASH and climate resilient WASH 2023-2026,,2026-12-31,
 PG,Papua New Guinea,US-GOV-1-720202656515,U.S. Agency for International Development,(title redacted by USAID),,2026-09-30,
+PG,Papua New Guinea,SE-0-SE-6-15221,Sweden,WaterAid WASH and climate resilient WASH 2023-2026,,2026-12-31,
 PG,Papua New Guinea,KR-GOV-010-KR-GOV-051-2022010102089,Office for Government Policy Coordination,Ending the Scourge of Gender-Based Violence and Sorcery Accusation Related Violence in Papua New Guinea,,2026-10-01,
 PG,Papua New Guinea,XM-DAC-41301-669183,Food and Agriculture Organization (FAO),"Support to Rural Entrepreneurship, Investment and Trade in Papua New Guinea (STREIT PNG)",,2026-12-24,
+PG,Papua New Guinea,US-GOV-1-720202682703,U.S. Agency for International Development,USAID Advisory and Assistance Services,,2026-09-30,
 PG,Papua New Guinea,XM-DAC-41114-PROJECT-00086294,United Nations Development Programme,PIMS5507 FSP Sustainable Finance of Papua New Guinea,,2026-10-31,
 PG,Papua New Guinea,XM-DAC-41114-PROJECT-00100578,United Nations Development Programme,Building Resilience to Climate Change in PNG,,2026-09-30,
 PG,Papua New Guinea,XM-DAC-41114-PROJECT-00130707,United Nations Development Programme,PNG Anticorruption Project,,2026-12-31,
@@ -371,7 +372,6 @@ PG,Papua New Guinea,XM-DAC-41114-PROJECT-01003716,United Nations Development Pro
 PG,Papua New Guinea,XM-DAC-41114-PROJECT-01005532,United Nations Development Programme,PNG-01005532 | MPTF-UK Bougainville Facilitator Consultation Project,,2026-12-31,
 PG,Papua New Guinea,XM-DAC-41114-PROJECT-01005689,United Nations Development Programme,PNG-01005689 | MPTF Disaster Risk Management,,2026-12-31,
 PG,Papua New Guinea,XM-DAC-41114-PROJECT-01005691,United Nations Development Programme,"PNG-01005691 | FW Advancing Human Rights, responsible business and Environmental Justice in Papua New Guinea",,2026-10-30,
-PG,Papua New Guinea,US-GOV-1-720202682703,U.S. Agency for International Development,USAID Advisory and Assistance Services,,2026-09-30,
 PG,Papua New Guinea,US-GOV-6-OTA3100000014-144438,Department of the Treasury,Technical Assistance for Economic Crimes - Papua New Guinea,,2026-09-30,
 PW,Palau,US-GOV-1-720BHA22IO00138,U.S. Agency for International Development,Humanitarian Assistance,,2026-09-30,1334237.0
 PW,Palau,NZ-1-ACT-0103879,New Zealand Ministry of Foreign Affairs and Trade,MFC1-02 Strengthening Climate Resilience of Communities and Marine Ecosystems in Palau,,2027-01-31,774416.75

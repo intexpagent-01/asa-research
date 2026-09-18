@@ -1,77 +1,77 @@
 {
- "generated": "2026-09-18T06:11:58Z",
+ "generated": "2026-09-18T12:16:01Z",
  "date": "2026-09-18",
  "countries": {
   "PG": {
    "code": "PG",
    "name": "Papua New Guinea",
    "n_trans_365": 39385,
-   "n_trans_other_country": 20571,
+   "n_trans_other_country": 20565,
    "n_null_pct": 0,
-   "n_negative": 821,
-   "dis90": 65088149.16643561,
-   "dis_prev90": 97709461.07963504,
-   "dis365": 641306362.0930152,
+   "n_negative": 824,
+   "dis90": 65099372.92586561,
+   "dis_prev90": 97703346.33522004,
+   "dis365": 641400117.9478842,
    "n_orgs_90": 17,
    "n_orgs_365": 31,
-   "n_acts_90": 269,
+   "n_acts_90": 270,
    "n_acts_prev90": 239,
-   "com365": 733193388.3057148,
+   "com365": 733095392.5191748,
    "top_orgs_90": [
     {
      "ref": "XM-DAC-903",
      "name": "International Finance Corporation",
      "usd": 18600000.0,
-     "pct": 28.57663067425425,
+     "pct": 28.571703787656233,
      "prev": 0.0
     },
     {
      "ref": "XM-DAC-46004",
      "name": "Asian Development Bank",
-     "usd": 10172547.59,
-     "pct": 15.628878252457264,
+     "usd": 10172547.590000002,
+     "pct": 15.62618368318905,
      "prev": 29668434.428000007
     },
     {
      "ref": "44000",
      "name": "World Bank",
      "usd": 8803158.57,
-     "pct": 13.524979097945494,
-     "prev": 19168905.86
+     "pct": 13.522647261172441,
+     "prev": 19168905.859999996
     },
     {
      "ref": "XM-DAC-41114",
      "name": "United Nations Development Programme",
      "usd": 5785896.998399999,
-     "pct": 8.889324819492098,
+     "pct": 8.887792214202907,
      "prev": 5302888.503
     },
     {
      "ref": "XM-DAC-41122",
      "name": "UNICEF",
      "usd": 4867429.753854542,
-     "pct": 7.478211957461157,
-     "prev": 5823185.0164451515
+     "pct": 7.476922641632067,
+     "prev": 5823185.016445151
     },
     {
      "ref": "47045",
      "name": "The Global Fund to Fight AIDS, Tuberculosis and Malaria",
-     "usd": 3717060.87,
-     "pct": 5.71081052019958,
-     "prev": 9067385.0128
+     "usd": 3717060.8699999996,
+     "pct": 5.7098259214154705,
+     "prev": 9067385.012800002
     },
     {
      "ref": "XM-DAC-928",
      "name": "World Health Organization",
-     "usd": 3303699.678300003,
-     "pct": 5.07573148201246,
+     "usd": 3303699.6783000026,
+     "pct": 5.074856376976498,
      "prev": 3033174.9445999996
     },
     {
      "ref": "KR-GOV-010",
      "name": "Office for Government Policy Coordination",
      "usd": 2263965.795,
-     "pct": 3.4783072248849147,
+     "pct": 3.4777075311895507,
      "prev": 0.0
     }
    ],
@@ -80,37 +80,37 @@
      "code": "998",
      "name": "Unallocated / unspecified",
      "usd": 19077019.389999997,
-     "pct": 29.309512767398765
+     "pct": 29.30445952486313
     },
     {
      "code": "122",
      "name": "Basic health",
-     "usd": 6244975.937681698,
-     "pct": 9.594643598964222
+     "usd": 6244975.937681699,
+     "pct": 9.5929893899184
     },
     {
      "code": "160",
      "name": "Other social infrastructure",
      "usd": 5651904.597980001,
-     "pct": 8.68346184422548
+     "pct": 8.681964731697681
     },
     {
      "code": "210",
      "name": "Transport & storage",
      "usd": 4938882.83,
-     "pct": 7.587990891200304
+     "pct": 7.586682648424803
     },
     {
      "code": "311",
      "name": "Agriculture",
      "usd": 4452710.442500001,
-     "pct": 6.841046334124609
+     "pct": 6.8398668717910605
     },
     {
      "code": "410",
      "name": "Environmental protection",
      "usd": 4305155.124300001,
-     "pct": 6.614345590456681
+     "pct": 6.6132052135166655
     }
    ],
    "quiet_orgs": [
@@ -463,7 +463,7 @@
      "ref": "US-GOV-1",
      "name": "U.S. Agency for International Development",
      "n": 38,
-     "spend": 77128494.89747974
+     "spend": 77128494.89747976
     },
     {
      "ref": "XM-DAC-928",
@@ -481,7 +481,7 @@
      "ref": "XI-IATI-UNPF",
      "name": "UN Pooled Funds",
      "n": 23,
-     "spend": 50769313.49668378
+     "spend": 50769313.496683784
     }
    ],
    "orgs_90": [
@@ -493,7 +493,7 @@
     {
      "ref": "XM-DAC-46004",
      "name": "Asian Development Bank",
-     "usd": 10172547.59
+     "usd": 10172547.590000002
     },
     {
      "ref": "44000",
@@ -513,12 +513,12 @@
     {
      "ref": "47045",
      "name": "The Global Fund to Fight AIDS, Tuberculosis and Malaria",
-     "usd": 3717060.87
+     "usd": 3717060.8699999996
     },
     {
      "ref": "XM-DAC-928",
      "name": "World Health Organization",
-     "usd": 3303699.678300003
+     "usd": 3303699.6783000026
     },
     {
      "ref": "KR-GOV-010",
@@ -568,7 +568,7 @@
     {
      "ref": "NZ-1",
      "name": "New Zealand Ministry of Foreign Affairs and Trade",
-     "usd": -1175533.1567360996
+     "usd": -1164309.3973061
     }
    ],
    "new_starts_all": [
@@ -1493,21 +1493,21 @@
      "names": null
     },
     {
-     "aid": "SE-0-SE-6-15221",
-     "title": "WaterAid WASH and climate resilient WASH 2023-2026",
-     "org": "Sweden",
-     "end": "2026-12-31",
-     "spend": 0.0,
-     "pct": 5.9862967,
-     "names": null
-    },
-    {
      "aid": "US-GOV-1-720202656515",
      "title": "(title redacted by USAID)",
      "org": "U.S. Agency for International Development",
      "end": "2026-09-30",
      "spend": 0.0,
      "pct": 0,
+     "names": null
+    },
+    {
+     "aid": "SE-0-SE-6-15221",
+     "title": "WaterAid WASH and climate resilient WASH 2023-2026",
+     "org": "Sweden",
+     "end": "2026-12-31",
+     "spend": 0.0,
+     "pct": 5.9862967,
      "names": null
     },
     {
@@ -1524,6 +1524,15 @@
      "title": "Support to Rural Entrepreneurship, Investment and Trade in Papua New Guinea (STREIT PNG)",
      "org": "Food and Agriculture Organization (FAO)",
      "end": "2026-12-24",
+     "spend": 0.0,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "US-GOV-1-720202682703",
+     "title": "USAID Advisory and Assistance Services",
+     "org": "U.S. Agency for International Development",
+     "end": "2026-09-30",
      "spend": 0.0,
      "pct": 100,
      "names": null
@@ -1673,15 +1682,6 @@
      "names": null
     },
     {
-     "aid": "US-GOV-1-720202682703",
-     "title": "USAID Advisory and Assistance Services",
-     "org": "U.S. Agency for International Development",
-     "end": "2026-09-30",
-     "spend": 0.0,
-     "pct": 100,
-     "names": null
-    },
-    {
      "aid": "US-GOV-6-OTA3100000014-144438",
      "title": "Technical Assistance for Economic Crimes - Papua New Guinea",
      "org": "Department of the Treasury",
@@ -1797,69 +1797,69 @@
    "n_trans_other_country": 21574,
    "n_null_pct": 0,
    "n_negative": 1082,
-   "dis90": 46283459.722514585,
-   "dis_prev90": 58032118.040343516,
-   "dis365": 219263554.62272683,
+   "dis90": 46275317.29451458,
+   "dis_prev90": 58033695.00274352,
+   "dis365": 219251140.90857685,
    "n_orgs_90": 17,
    "n_orgs_365": 33,
    "n_acts_90": 396,
    "n_acts_prev90": 205,
-   "com365": 644094888.013564,
+   "com365": 644111501.189564,
    "top_orgs_90": [
     {
      "ref": "XM-DAC-41114",
      "name": "United Nations Development Programme",
      "usd": 13787094.704099998,
-     "pct": 29.78838398589565,
+     "pct": 29.793625436111924,
      "prev": 13356034.798700001
     },
     {
      "ref": "XM-DAC-41122",
      "name": "UNICEF",
      "usd": 13581222.706198772,
-     "pct": 29.34357713883733,
+     "pct": 29.34874032254053,
      "prev": 12996674.943881147
     },
     {
      "ref": "XI-IATI-EC_INTPA",
      "name": "European Commission - Directorate-General for International Partnerships",
      "usd": 12792405.185,
-     "pct": 27.639258736695382,
+     "pct": 27.64412203504523,
      "prev": 12367836.947
     },
     {
      "ref": "KR-GOV-010",
      "name": "Office for Government Policy Coordination",
      "usd": 1857784.7311999998,
-     "pct": 4.013927961172445,
+     "pct": 4.014634236598134,
      "prev": 682.2506
     },
     {
      "ref": "NZ-1",
      "name": "New Zealand Ministry of Foreign Affairs and Trade",
-     "usd": 1842692.204631899,
-     "pct": 3.981319062316168,
-     "prev": 10567019.758958742
+     "usd": 1834549.7766318992,
+     "pct": 3.964423982133051,
+     "prev": 10568596.72135874
     },
     {
      "ref": "FR-3",
      "name": "AFD",
      "usd": 1412024.274,
-     "pct": 3.0508183322197087,
+     "pct": 3.0513551425554017,
      "prev": 0.0
     },
     {
      "ref": "XM-DAC-41123",
      "name": "United Nations Industrial Development Organization",
      "usd": 270598.99,
-     "pct": 0.5846559259448946,
+     "pct": 0.5847587997674873,
      "prev": 121068.77999999998
     },
     {
      "ref": "DE-1",
      "name": "Federal Ministry for Economic Cooperation and Development (BMZ)",
      "usd": 186694.544,
-     "pct": 0.40337205800797654,
+     "pct": 0.4034430338139044,
      "prev": 67156.445
     }
    ],
@@ -1868,37 +1868,37 @@
      "code": "410",
      "name": "Environmental protection",
      "usd": 7725050.1900710445,
-     "pct": 16.69073625088834
+     "pct": 16.693673089058997
     },
     {
      "code": "231",
      "name": "Energy policy",
      "usd": 6266388.0,
-     "pct": 13.53915208061189
+     "pct": 13.541534378075049
     },
     {
      "code": "232",
      "name": "Energy generation, renewable",
      "usd": 4601809.54706,
-     "pct": 9.942665424429043
+     "pct": 9.944414897843375
     },
     {
      "code": "151",
      "name": "Government & civil society",
      "usd": 4110124.7994273854,
-     "pct": 8.88033181630978
+     "pct": 8.881894365561907
     },
     {
      "code": "140",
      "name": "Water & sanitation",
      "usd": 3916903.4124902748,
-     "pct": 8.46285786752648
+     "pct": 8.464346959657865
     },
     {
      "code": "122",
      "name": "Basic health",
      "usd": 3593350.1920889006,
-     "pct": 7.763789080661391
+     "pct": 7.76515516732038
     }
    ],
    "quiet_orgs": [
@@ -2296,7 +2296,7 @@
     {
      "ref": "NZ-1",
      "name": "New Zealand Ministry of Foreign Affairs and Trade",
-     "usd": 1842692.204631899
+     "usd": 1834549.7766318992
     },
     {
      "ref": "FR-3",
@@ -3209,24 +3209,6 @@
      "names": null
     },
     {
-     "aid": "XM-DAC-701-8-202517440",
-     "title": "\u7d4c\u6e08\u793e\u4f1a\u958b\u767a\u8a08\u753b\uff08\u5ec3\u68c4\u7269\u51e6\u7406\u95a2\u9023\u6a5f\u6750\uff09",
-     "org": "Japan International Cooperation Agency (JICA)",
-     "end": "2027-01-07",
-     "spend": 0.0,
-     "pct": 100,
-     "names": null
-    },
-    {
-     "aid": "XM-DAC-701-8-202517441",
-     "title": "\u7d4c\u6e08\u793e\u4f1a\u958b\u767a\u8a08\u753b\uff08\u4fdd\u5065\u533b\u7642\u95a2\u9023\u6a5f\u6750\uff09",
-     "org": "Japan International Cooperation Agency (JICA)",
-     "end": "2027-02-18",
-     "spend": 0.0,
-     "pct": 100,
-     "names": null
-    },
-    {
      "aid": "XM-DAC-41114-OUTPUT-01005506",
      "title": "Fiji Human Rights and Anti-Discrimination Commission Capacity Development Project (PIP)",
      "org": "United Nations Development Programme",
@@ -3393,6 +3375,24 @@
      "title": "Support to Global Fund GC8 Grant Development",
      "org": "United Nations Development Programme",
      "end": "2026-12-31",
+     "spend": 0.0,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "XM-DAC-701-8-202517440",
+     "title": "\u7d4c\u6e08\u793e\u4f1a\u958b\u767a\u8a08\u753b\uff08\u5ec3\u68c4\u7269\u51e6\u7406\u95a2\u9023\u6a5f\u6750\uff09",
+     "org": "Japan International Cooperation Agency (JICA)",
+     "end": "2027-01-07",
+     "spend": 0.0,
+     "pct": 100,
+     "names": null
+    },
+    {
+     "aid": "XM-DAC-701-8-202517441",
+     "title": "\u7d4c\u6e08\u793e\u4f1a\u958b\u767a\u8a08\u753b\uff08\u4fdd\u5065\u533b\u7642\u95a2\u9023\u6a5f\u6750\uff09",
+     "org": "Japan International Cooperation Agency (JICA)",
+     "end": "2027-02-18",
      "spend": 0.0,
      "pct": 100,
      "names": null
@@ -3657,17 +3657,17 @@
    "code": "SB",
    "name": "Solomon Islands",
    "n_trans_365": 22511,
-   "n_trans_other_country": 14542,
+   "n_trans_other_country": 14540,
    "n_null_pct": 0,
    "n_negative": 296,
    "dis90": 28586766.8086775,
-   "dis_prev90": 33218758.386294127,
-   "dis365": 153295129.21182272,
+   "dis_prev90": 33217260.768084127,
+   "dis365": 153398811.77819273,
    "n_orgs_90": 15,
-   "n_orgs_365": 28,
+   "n_orgs_365": 29,
    "n_acts_90": 108,
    "n_acts_prev90": 146,
-   "com365": 82236756.66198035,
+   "com365": 82228450.07398035,
    "top_orgs_90": [
     {
      "ref": "XM-DAC-46004",
@@ -3786,6 +3786,11 @@
      "2025-12-02"
     ],
     [
+     "GB-GOV-7",
+     "Department for Environment, Food, and Rural Affairs",
+     "2025-12-31"
+    ],
+    [
      "XM-DAC-301-2",
      "International Development Research Centre",
      "2025-12-31"
@@ -3799,14 +3804,9 @@
      "XM-DAC-701-8",
      "Japan International Cooperation Agency (JICA)",
      "2026-01-14"
-    ],
-    [
-     "SE-0",
-     "Sweden",
-     "2026-03-28"
     ]
    ],
-   "n_quiet": 13,
+   "n_quiet": 14,
    "new_starts": [
     {
      "aid": "XI-IATI-EC_INTPA-2026-PC-77058",
@@ -4162,7 +4162,7 @@
      "ref": "XM-DAC-47136",
      "name": "Global Green Growth Institute (GGGI)",
      "n": 12,
-     "spend": 1210986.5467098928
+     "spend": 1210986.546709893
     },
     {
      "ref": "44000",
@@ -4838,7 +4838,7 @@
     {
      "ref": "AU-5",
      "name": "Australia Aid",
-     "lifetime_usd": 1920912869.8022566,
+     "lifetime_usd": 1920912869.8022559,
      "latest": "2025-06-30",
      "age_days": 445
     },
@@ -4940,14 +4940,14 @@
    "code": "VU",
    "name": "Vanuatu",
    "n_trans_365": 15261,
-   "n_trans_other_country": 11112,
+   "n_trans_other_country": 11114,
    "n_null_pct": 0,
    "n_negative": 183,
    "dis90": 13699983.680357335,
    "dis_prev90": 15390549.674292937,
-   "dis365": 97074680.35569775,
+   "dis365": 97096551.77639976,
    "n_orgs_90": 13,
-   "n_orgs_365": 24,
+   "n_orgs_365": 25,
    "n_acts_90": 72,
    "n_acts_prev90": 86,
    "com365": 196692264.50215268,
@@ -5054,6 +5054,11 @@
      "2025-10-16"
     ],
     [
+     "GB-GOV-7",
+     "Department for Environment, Food, and Rural Affairs",
+     "2025-10-31"
+    ],
+    [
      "XM-DAC-41302",
      "International Labour Organization (ILO)",
      "2025-10-31"
@@ -5082,14 +5087,9 @@
      "XM-DAC-41304",
      "United Nations Educational, Scientific and Cultural Organization (UNESCO)",
      "2025-12-31"
-    ],
-    [
-     "XM-DAC-47066",
-     "International Organization for Migration (IOM)",
-     "2026-03-31"
     ]
    ],
-   "n_quiet": 11,
+   "n_quiet": 12,
    "new_starts": [
     {
      "aid": "FR-3-CZZ377501",
@@ -5385,7 +5385,7 @@
      "ref": "NZ-1",
      "name": "New Zealand Ministry of Foreign Affairs and Trade",
      "n": 108,
-     "spend": 124041409.51364118
+     "spend": 124041409.51364113
     },
     {
      "ref": "AU-5",
@@ -5939,14 +5939,14 @@
     {
      "ref": "AU-5",
      "name": "Australian Aid",
-     "lifetime_usd": 767693481.1165956,
+     "lifetime_usd": 767693481.1165955,
      "latest": "2025-06-30",
      "age_days": 445
     },
     {
      "ref": "NZ-1",
      "name": "New Zealand Ministry of Foreign Affairs and Trade",
-     "lifetime_usd": 382353068.5274591,
+     "lifetime_usd": 382353068.52745914,
      "latest": "2026-08-04",
      "age_days": 45
     },
@@ -5994,8 +5994,8 @@
     },
     {
      "ref": "XM-DAC-47136",
-     "name": "Global Green Growth Institute",
-     "lifetime_usd": 19572908.953744844,
+     "name": "Global Green Growth Institute (GGGI)",
+     "lifetime_usd": 19572908.953744847,
      "latest": "2025-04-01",
      "age_days": 535
     },
@@ -6031,72 +6031,72 @@
    "code": "WS",
    "name": "Samoa",
    "n_trans_365": 15586,
-   "n_trans_other_country": 12805,
+   "n_trans_other_country": 12801,
    "n_null_pct": 0,
    "n_negative": 107,
-   "dis90": 9783343.3352666,
-   "dis_prev90": 16496840.315348998,
-   "dis365": 56575693.83020766,
+   "dis90": 9777467.1208666,
+   "dis_prev90": 16496877.919212198,
+   "dis365": 56571759.308270864,
    "n_orgs_90": 11,
    "n_orgs_365": 17,
-   "n_acts_90": 91,
-   "n_acts_prev90": 96,
-   "com365": 110326079.0799035,
+   "n_acts_90": 90,
+   "n_acts_prev90": 97,
+   "com365": 110324396.0500035,
    "top_orgs_90": [
     {
      "ref": "XM-DAC-46004",
      "name": "Asian Development Bank",
      "usd": 3708286.2700000005,
-     "pct": 37.90407985205345,
+     "pct": 37.926860036030746,
      "prev": 981664.5459999999
     },
     {
      "ref": "XI-IATI-EC_INTPA",
      "name": "European Commission - Directorate-General for International Partnerships",
      "usd": 2305972.23,
-     "pct": 23.570390519645006,
+     "pct": 23.5845562198691,
      "prev": 99020.766
     },
     {
      "ref": "XM-DAC-41114",
      "name": "United Nations Development Programme",
      "usd": 1567783.6615000002,
-     "pct": 16.02502956068727,
+     "pct": 16.034660532420627,
      "prev": 821158.0003
     },
     {
      "ref": "NZ-1",
      "name": "New Zealand Ministry of Foreign Affairs and Trade",
      "usd": 771366.5808665997,
-     "pct": 7.884488506970912,
-     "prev": 10466902.809148997
+     "pct": 7.889227049614784,
+     "prev": 10466940.413012197
     },
     {
      "ref": "44000",
      "name": "World Bank",
      "usd": 615685.0,
-     "pct": 6.293196291911822,
+     "pct": 6.296978474988013,
      "prev": 3068421.26
     },
     {
      "ref": "XM-DAC-41301",
      "name": "Food and Agriculture Organization (FAO)",
      "usd": 503388.49,
-     "pct": 5.145362610196921,
+     "pct": 5.148454950318293,
      "prev": 598365.3800000002
     },
     {
      "ref": "XM-DAC-928",
      "name": "World Health Organization",
      "usd": 152270.45210000005,
-     "pct": 1.5564255171450614,
+     "pct": 1.5573609219818472,
      "prev": 324914.66810000007
     },
     {
      "ref": "XM-DAC-41304",
      "name": "United Nations Educational, Scientific and Cultural Organization (UNESCO)",
-     "usd": 88093.0408,
-     "pct": 0.9004390194755385,
+     "usd": 82216.8264,
+     "pct": 0.8408806225953632,
      "prev": 0.0
     }
    ],
@@ -6105,37 +6105,37 @@
      "code": "210",
      "name": "Transport & storage",
      "usd": 4045515.464,
-     "pct": 41.3510527573625
+     "pct": 41.37590455677683
     },
     {
      "code": "140",
      "name": "Water & sanitation",
      "usd": 2190998.34,
-     "pct": 22.395190119741358
+     "pct": 22.408649529734305
     },
     {
      "code": "410",
      "name": "Environmental protection",
      "usd": 951686.4999999999,
-     "pct": 9.727620378704271
+     "pct": 9.733466635433182
     },
     {
      "code": "114",
      "name": "Post-secondary education",
      "usd": 441260.05164900015,
-     "pct": 4.510319596557179
+     "pct": 4.513030278642248
     },
     {
      "code": "151",
      "name": "Government & civil society",
      "usd": 352958.49,
-     "pct": 3.6077491906848405
+     "pct": 3.6099174319567178
     },
     {
      "code": "311",
      "name": "Agriculture",
      "usd": 351990.9236,
-     "pct": 3.5978592546288075
+     "pct": 3.600021552092953
     }
    ],
    "quiet_orgs": [
@@ -6490,7 +6490,7 @@
     {
      "ref": "XM-DAC-41304",
      "name": "United Nations Educational, Scientific and Cultural Organization (UNESCO)",
-     "usd": 88093.0408
+     "usd": 82216.8264
     },
     {
      "ref": "XM-DAC-301-2",
@@ -6972,7 +6972,7 @@
     {
      "ref": "AU-5",
      "name": "Australian Aid",
-     "lifetime_usd": 440214548.51753443,
+     "lifetime_usd": 440214548.5175345,
      "latest": "2025-06-30",
      "age_days": 445
     },
@@ -7078,73 +7078,73 @@
    "code": "TO",
    "name": "Tonga",
    "n_trans_365": 15565,
-   "n_trans_other_country": 12803,
+   "n_trans_other_country": 12789,
    "n_null_pct": 0,
    "n_negative": 64,
-   "dis90": 5124171.824402001,
-   "dis_prev90": 26666830.950597122,
-   "dis365": 83203574.56051761,
+   "dis90": 5124007.664402001,
+   "dis_prev90": 26667016.64868592,
+   "dis365": 83205712.12993701,
    "n_orgs_90": 8,
    "n_orgs_365": 18,
-   "n_acts_90": 59,
-   "n_acts_prev90": 82,
-   "com365": 134278393.09553888,
+   "n_acts_90": 58,
+   "n_acts_prev90": 83,
+   "com365": 134261779.9195389,
    "top_orgs_90": [
     {
      "ref": "XM-DAC-46004",
      "name": "Asian Development Bank",
      "usd": 3980345.44,
-     "pct": 77.67782924540226,
+     "pct": 77.68031784286038,
      "prev": 341372.58499999996
     },
     {
      "ref": "44000",
      "name": "World Bank",
      "usd": 2088276.96,
-     "pct": 40.753453076170125,
+     "pct": 40.754758711777086,
      "prev": 5690243.029999999
     },
     {
      "ref": "XI-IATI-EC_INTPA",
      "name": "European Commission - Directorate-General for International Partnerships",
      "usd": 232839.914,
-     "pct": 4.5439521151727345,
+     "pct": 4.5440976916878535,
      "prev": 0.0
     },
     {
      "ref": "XM-DAC-41301",
      "name": "Food and Agriculture Organization (FAO)",
      "usd": 141754.50999999998,
-     "pct": 2.7663886937777105,
+     "pct": 2.766477321741936,
      "prev": 10586.82
     },
     {
      "ref": "XM-DAC-928",
      "name": "World Health Organization",
      "usd": 82195.92000000003,
-     "pct": 1.604082041288544,
+     "pct": 1.6041334319431142,
      "prev": 102550.48999999996
     },
     {
      "ref": "XM-DAC-41302",
      "name": "International Labour Organization (ILO)",
      "usd": 14142.71,
-     "pct": 0.27599991734567714,
+     "pct": 0.2760087596717233,
      "prev": 4747.93
     },
     {
      "ref": "KR-GOV-010",
      "name": "Office for Government Policy Coordination",
      "usd": 5393.72,
-     "pct": 0.10526032664077295,
+     "pct": 0.10526369891036214,
      "prev": 0.0
     },
     {
      "ref": "NZ-1",
      "name": "New Zealand Ministry of Foreign Affairs and Trade",
-     "usd": -1420777.3495979991,
-     "pct": -27.72696541579782,
-     "prev": 12281145.299597124
+     "usd": -1420941.5095979993,
+     "pct": -27.73105745859244,
+     "prev": 12281330.997685922
     }
    ],
    "sectors_90": [
@@ -7152,37 +7152,37 @@
      "code": "210",
      "name": "Transport & storage",
      "usd": 2384426.0818,
-     "pct": 46.53290645807464
+     "pct": 46.534397252473184
     },
     {
      "code": "430",
      "name": "Multisector",
      "usd": 1685041.9379399996,
-     "pct": 32.884181008833494
+     "pct": 32.885234533244066
     },
     {
      "code": "140",
      "name": "Water & sanitation",
      "usd": 970915.9,
-     "pct": 18.947762355984374
+     "pct": 18.94836939345818
     },
     {
      "code": "236",
      "name": "Energy distribution",
      "usd": 334501.79999999993,
-     "pct": 6.527919270916269
+     "pct": 6.528128408625987
     },
     {
      "code": "111",
      "name": "Education (general)",
      "usd": 266272.081,
-     "pct": 5.196392512288059
+     "pct": 5.196558991312036
     },
     {
      "code": "114",
      "name": "Post-secondary education",
      "usd": 259659.32420099998,
-     "pct": 5.0673422574252305
+     "pct": 5.0675046020116294
     }
    ],
    "quiet_orgs": [
@@ -7534,7 +7534,7 @@
     {
      "ref": "NZ-1",
      "name": "New Zealand Ministry of Foreign Affairs and Trade",
-     "usd": -1420777.3495979991
+     "usd": -1420941.5095979993
     }
    ],
    "new_starts_all": [],
@@ -8016,72 +8016,72 @@
    "code": "KI",
    "name": "Kiribati",
    "n_trans_365": 16962,
-   "n_trans_other_country": 12771,
+   "n_trans_other_country": 12774,
    "n_null_pct": 0,
    "n_negative": 90,
-   "dis90": 10580255.982332459,
-   "dis_prev90": 19619425.00998336,
-   "dis365": 94948745.60645635,
+   "dis90": 10572031.47433246,
+   "dis_prev90": 19619450.431087364,
+   "dis365": 94940859.12122814,
    "n_orgs_90": 14,
    "n_orgs_365": 20,
    "n_acts_90": 72,
-   "n_acts_prev90": 80,
-   "com365": 69754871.78021918,
+   "n_acts_prev90": 81,
+   "com365": 69763139.18320619,
    "top_orgs_90": [
     {
      "ref": "XM-DAC-46004",
      "name": "Asian Development Bank",
      "usd": 4163642.3292,
-     "pct": 39.352945109765756,
+     "pct": 39.38355971895081,
      "prev": 3760439.17
     },
     {
      "ref": "44000",
      "name": "World Bank",
      "usd": 2656361.48,
-     "pct": 25.10677893271912,
+     "pct": 25.126310742162527,
      "prev": 11382096.559999999
     },
     {
      "ref": "NZ-1",
      "name": "New Zealand Ministry of Foreign Affairs and Trade",
-     "usd": 1504153.7079472006,
-     "pct": 14.216609791473156,
-     "prev": 2948118.3328029998
+     "usd": 1495929.1999472007,
+     "pct": 14.14987463458774,
+     "prev": 2948143.7539069997
     },
     {
      "ref": "KR-GOV-010",
      "name": "Office for Government Policy Coordination",
      "usd": 707954.1599999999,
-     "pct": 6.691276290310783,
+     "pct": 6.696481766241636,
      "prev": 0.0
     },
     {
      "ref": "XM-DAC-928",
      "name": "World Health Organization",
      "usd": 680333.5900000001,
-     "pct": 6.430218617924383,
+     "pct": 6.435221004134949,
      "prev": 733916.4097000001
     },
     {
      "ref": "XM-DAC-41114",
      "name": "United Nations Development Programme",
      "usd": 295898.0,
-     "pct": 2.796699819873055,
+     "pct": 2.798875511470076,
      "prev": 81597.0
     },
     {
      "ref": "XM-DAC-41302",
      "name": "International Labour Organization (ILO)",
      "usd": 256497.88999999998,
-     "pct": 2.4243070340482826,
+     "pct": 2.426193022814433,
      "prev": 160914.75999999998
     },
     {
      "ref": "XM-DAC-41301",
      "name": "Food and Agriculture Organization (FAO)",
      "usd": 146173.80000000002,
-     "pct": 1.3815714879119156,
+     "pct": 1.3826462809431783,
      "prev": 525275.09
     }
    ],
@@ -8090,37 +8090,37 @@
      "code": "122",
      "name": "Basic health",
      "usd": 2204501.125134129,
-     "pct": 20.835990441208004
+     "pct": 20.85219979231405
     },
     {
      "code": "140",
      "name": "Water & sanitation",
      "usd": 1370005.921812,
-     "pct": 12.94870298128625
+     "pct": 12.958776420011606
     },
     {
      "code": "210",
      "name": "Transport & storage",
      "usd": 1209474.2327999999,
-     "pct": 11.431426941083958
+     "pct": 11.44032001547147
     },
     {
      "code": "740",
      "name": "Disaster prevention & preparedness",
      "usd": 1167059.3475000001,
-     "pct": 11.030539804035227
+     "pct": 11.039121008421807
     },
     {
      "code": "121",
      "name": "Health (general)",
      "usd": 1153426.9485400002,
-     "pct": 10.901692269696133
+     "pct": 10.910173237190728
     },
     {
      "code": "160",
      "name": "Other social infrastructure",
      "usd": 877196.0271200001,
-     "pct": 8.290877163887094
+     "pct": 8.29732704872966
     }
    ],
    "quiet_orgs": [
@@ -8308,27 +8308,27 @@
      "names": null
     },
     {
-     "aid": "XI-IATI-CWSEC-YLCWG1038",
+     "aid": "XI-IATI-CWSEC-YNCWG1007",
      "org": "The Commonwealth Secretariat",
      "ref": "XI-IATI-CWSEC",
-     "title": "Promoting the rule of law in the Commonwealth",
-     "start": "2017-07-28",
-     "end": "2021-07-28",
-     "spend": 5630.312896832001,
+     "title": "Pan-Commonwealth Natural Resources Advisory Assistance for Sustainable Development",
+     "start": "2017-07-01",
+     "end": "2021-07-01",
+     "spend": 30458.000352797706,
      "commitment": 0.0,
-     "pct": 0.26099008,
+     "pct": 2.1133087,
      "names": null
     },
     {
-     "aid": "XI-IATI-CWSEC-YLCWG1050",
+     "aid": "XI-IATI-CWSEC-YNCWG1011",
      "org": "The Commonwealth Secretariat",
      "ref": "XI-IATI-CWSEC",
-     "title": "Strengthening cooperation among Commonwealth member states to tackle the illicit proliferation of conventional",
-     "start": "2018-01-03",
-     "end": "2022-01-03",
-     "spend": 54141.6081058,
+     "title": "Pan Commonwealth Oceans Governance Project",
+     "start": "2017-07-01",
+     "end": "2021-07-01",
+     "spend": 47670.24481467549,
      "commitment": 0.0,
-     "pct": 10.859924,
+     "pct": 5.5587215,
      "names": null
     }
    ],
@@ -8474,7 +8474,7 @@
     {
      "ref": "NZ-1",
      "name": "New Zealand Ministry of Foreign Affairs and Trade",
-     "usd": 1504153.7079472006
+     "usd": 1495929.1999472007
     },
     {
      "ref": "KR-GOV-010",
@@ -8895,7 +8895,7 @@
     {
      "ref": "NZ-1",
      "name": "New Zealand Ministry of Foreign Affairs and Trade",
-     "lifetime_usd": 277022384.9537488,
+     "lifetime_usd": 277022384.9537489,
      "latest": "2026-08-04",
      "age_days": 45
     },
@@ -8916,7 +8916,7 @@
     {
      "ref": "XI-IATI-WBTF",
      "name": "World Bank Trust Funds",
-     "lifetime_usd": 48839070.81999999,
+     "lifetime_usd": 48839070.82,
      "latest": "2021-04-30",
      "age_days": 1967
     },
@@ -8990,17 +8990,17 @@
    "code": "TV",
    "name": "Tuvalu",
    "n_trans_365": 14915,
-   "n_trans_other_country": 13237,
+   "n_trans_other_country": 13228,
    "n_null_pct": 0,
    "n_negative": 43,
    "dis90": 4885284.400260299,
-   "dis_prev90": 13948126.57055806,
-   "dis365": 70186349.51672201,
+   "dis_prev90": 13948214.31290706,
+   "dis365": 70183672.0905585,
    "n_orgs_90": 10,
    "n_orgs_365": 13,
    "n_acts_90": 49,
-   "n_acts_prev90": 59,
-   "com365": 49538956.13861741,
+   "n_acts_prev90": 60,
+   "com365": 49550031.58861741,
    "top_orgs_90": [
     {
      "ref": "44000",
@@ -9028,7 +9028,7 @@
      "name": "New Zealand Ministry of Foreign Affairs and Trade",
      "usd": 163912.8696602999,
      "pct": 3.3552369981073413,
-     "prev": 4508815.385438002
+     "prev": 4508903.127787001
     },
     {
      "ref": "XI-IATI-EC_INTPA",
@@ -9664,7 +9664,7 @@
     {
      "ref": "AU-5",
      "name": "Australia Aid",
-     "lifetime_usd": 181145282.34790343,
+     "lifetime_usd": 181145282.3479034,
      "latest": "2025-06-30",
      "age_days": 445
     },
@@ -9746,65 +9746,65 @@
    "code": "FM",
    "name": "Micronesia (Fed. States)",
    "n_trans_365": 12955,
-   "n_trans_other_country": 10384,
+   "n_trans_other_country": 10389,
    "n_null_pct": 0,
    "n_negative": 125,
-   "dis90": 3486438.5262832986,
-   "dis_prev90": 14562758.026485646,
-   "dis365": 49624173.99254426,
+   "dis90": 3486547.9662832986,
+   "dis_prev90": 14563282.594545646,
+   "dis365": 49621153.08944596,
    "n_orgs_90": 7,
    "n_orgs_365": 10,
    "n_acts_90": 59,
    "n_acts_prev90": 70,
-   "com365": 28369721.977911595,
+   "com365": 28371405.007811595,
    "top_orgs_90": [
     {
      "ref": "44000",
      "name": "World Bank",
      "usd": 1796282.0099999998,
-     "pct": 51.521975691191024,
+     "pct": 51.52035845687383,
      "prev": 11361472.622000001
     },
     {
      "ref": "XM-DAC-46004",
      "name": "Asian Development Bank",
      "usd": 844234.9578999998,
-     "pct": 24.214824140323866,
+     "pct": 24.214064056028583,
      "prev": 1753771.0259999987
     },
     {
      "ref": "XM-DAC-928",
      "name": "World Health Organization",
      "usd": 263408.98999999993,
-     "pct": 7.555245503806598,
+     "pct": 7.555008350589166,
      "prev": 484729.3699999998
     },
     {
      "ref": "XM-DAC-41114",
      "name": "United Nations Development Programme",
      "usd": 240223.0,
-     "pct": 6.890211836205487,
+     "pct": 6.889995557872119,
      "prev": 76816.0
     },
     {
      "ref": "US-GOV-1",
      "name": "U.S. Agency for International Development",
      "usd": 152125.76235619932,
-     "pct": 4.36335708228799,
+     "pct": 4.363220119939069,
      "prev": 194032.0445232464
     },
     {
      "ref": "NZ-1",
      "name": "New Zealand Ministry of Foreign Affairs and Trade",
-     "usd": 141643.65602709993,
-     "pct": 4.062703385110263,
-     "prev": 325578.98396239994
+     "usd": 141753.09602709993,
+     "pct": 4.065714781437825,
+     "prev": 326103.55202239996
     },
     {
      "ref": "XM-DAC-41301",
      "name": "Food and Agriculture Organization (FAO)",
      "usd": 48520.15,
-     "pct": 1.391682361074775,
+     "pct": 1.391638677259417,
      "prev": 28782.98
     }
    ],
@@ -9813,37 +9813,37 @@
      "code": "220",
      "name": "Communications",
      "usd": 762757.0,
-     "pct": 21.877827308578233
+     "pct": 21.877140580776462
     },
     {
      "code": "140",
      "name": "Water & sanitation",
      "usd": 513701.58989999996,
-     "pct": 14.734279294682679
+     "pct": 14.733816797237754
     },
     {
      "code": "113",
      "name": "Secondary education",
      "usd": 368311.75,
-     "pct": 10.564125746758455
+     "pct": 10.56379414715538
     },
     {
      "code": "236",
      "name": "Energy distribution",
      "usd": 366589.49199999997,
-     "pct": 10.51472696955311
+     "pct": 10.51439692053882
     },
     {
      "code": "232",
      "name": "Energy generation, renewable",
      "usd": 359757.889096,
-     "pct": 10.31877907451643
+     "pct": 10.318455176152536
     },
     {
      "code": "410",
      "name": "Environmental protection",
      "usd": 239085.40938740002,
-     "pct": 6.857582819401549
+     "pct": 6.857367565267369
     }
    ],
    "quiet_orgs": [
@@ -10116,7 +10116,7 @@
      "ref": "XM-DAC-46004",
      "name": "Asian Development Bank",
      "n": 8,
-     "spend": 20009018.119999997
+     "spend": 20009018.12
     },
     {
      "ref": "XM-DAC-47015",
@@ -10160,7 +10160,7 @@
     {
      "ref": "NZ-1",
      "name": "New Zealand Ministry of Foreign Affairs and Trade",
-     "usd": 141643.65602709993
+     "usd": 141753.09602709993
     },
     {
      "ref": "XM-DAC-41301",
@@ -10461,7 +10461,7 @@
     {
      "ref": "US-GOV-1",
      "name": "U.S. Agency for International Development",
-     "lifetime_usd": 123669613.80805549,
+     "lifetime_usd": 123669613.8080555,
      "latest": "2026-06-30",
      "age_days": 80
     },
@@ -10788,6 +10788,18 @@
      "names": null
     },
     {
+     "aid": "US-GOV-1-720202051711",
+     "org": "U.S. Agency for International Development",
+     "ref": "US-GOV-1",
+     "title": "USAID Travel and Transportation",
+     "start": "2019-10-01",
+     "end": "2020-09-30",
+     "spend": 70940.229591993,
+     "commitment": 23649.329075995203,
+     "pct": 0.81745374,
+     "names": null
+    },
+    {
      "aid": "US-GOV-1-720202351689",
      "org": "U.S. Agency for International Development",
      "ref": "US-GOV-1",
@@ -10821,18 +10833,6 @@
      "spend": 30339.719761999997,
      "commitment": 25044.7308364,
      "pct": 25.99916,
-     "names": null
-    },
-    {
-     "aid": "US-GOV-1-720202251689",
-     "org": "U.S. Agency for International Development",
-     "ref": "US-GOV-1",
-     "title": "USAID Pay and Benefits",
-     "start": "2007-10-01",
-     "end": "2023-09-30",
-     "spend": 270767.1707678184,
-     "commitment": 307076.588666328,
-     "pct": 0.088279516,
      "names": null
     }
    ],
@@ -11301,14 +11301,14 @@
     {
      "ref": "US-GOV-1",
      "name": "U.S. Agency for International Development",
-     "lifetime_usd": 48889396.37282027,
+     "lifetime_usd": 48889396.37282026,
      "latest": "2026-06-30",
      "age_days": 80
     },
     {
      "ref": "AU-5",
      "name": "Australia Aid",
-     "lifetime_usd": 40307002.83311259,
+     "lifetime_usd": 40307002.83311258,
      "latest": "2025-06-30",
      "age_days": 445
     },
@@ -11370,45 +11370,45 @@
    "code": "PW",
    "name": "Palau",
    "n_trans_365": 10835,
-   "n_trans_other_country": 9439,
+   "n_trans_other_country": 9438,
    "n_null_pct": 0,
    "n_negative": 62,
-   "dis90": 204564.2134034,
-   "dis_prev90": 2422088.344728959,
-   "dis365": 6005834.486055532,
+   "dis90": 204454.7734034,
+   "dis_prev90": 2421972.650648959,
+   "dis365": 6005108.283398832,
    "n_orgs_90": 6,
    "n_orgs_365": 10,
-   "n_acts_90": 23,
+   "n_acts_90": 22,
    "n_acts_prev90": 30,
-   "com365": 26825629.89498825,
+   "com365": 26814554.44498825,
    "top_orgs_90": [
     {
      "ref": "XM-DAC-41301",
      "name": "Food and Agriculture Organization (FAO)",
      "usd": 114058.86,
-     "pct": 55.75699586079422,
+     "pct": 55.78684131524574,
      "prev": 415147.56
     },
     {
      "ref": "US-GOV-1",
      "name": "U.S. Agency for International Development",
      "usd": 41438.0,
-     "pct": 20.256720034546998,
+     "pct": 20.267562997045147,
      "prev": 19763.9170913588
     },
     {
      "ref": "XM-DAC-928",
      "name": "World Health Organization",
      "usd": 33459.62999999999,
-     "pct": 16.356541275388036,
+     "pct": 16.36529656071291,
      "prev": 42486.86
     },
     {
      "ref": "NZ-1",
      "name": "New Zealand Ministry of Foreign Affairs and Trade",
-     "usd": 15696.423403400007,
-     "pct": 7.673103297127884,
-     "prev": 1353734.4074376002
+     "usd": 15586.983403400009,
+     "pct": 7.623682804727709,
+     "prev": 1353618.7133576002
     },
     {
      "ref": "XM-DAC-46004",
@@ -11421,7 +11421,7 @@
      "ref": "XM-DAC-41302",
      "name": "International Labour Organization (ILO)",
      "usd": -88.7,
-     "pct": -0.04336046785714365,
+     "pct": -0.04338367773150018,
      "prev": 16830.7802
     }
    ],
@@ -11430,37 +11430,37 @@
      "code": "410",
      "name": "Environmental protection",
      "usd": 113682.83,
-     "pct": 55.57317583003524
+     "pct": 55.60292288979618
     },
     {
      "code": "740",
      "name": "Disaster prevention & preparedness",
      "usd": 48261.224,
-     "pct": 23.59221253662243
+     "pct": 23.604840912556284
     },
     {
      "code": "114",
      "name": "Post-secondary education",
      "usd": 15179.252783400008,
-     "pct": 7.4202875130786285
+     "pct": 7.424259424577261
     },
     {
      "code": "720",
      "name": "Emergency response",
      "usd": 9837.334000000003,
-     "pct": 4.808922262761968
+     "pct": 4.8114963697083395
     },
     {
      "code": "123",
      "name": "Non-communicable diseases",
      "usd": 6217.76,
-     "pct": 3.039515023939498
+     "pct": 3.041142007348507
     },
     {
      "code": "430",
      "name": "Multisector",
      "usd": 5341.752,
-     "pct": 2.6112837192427603
+     "pct": 2.612681480153287
     }
    ],
    "quiet_orgs": [
@@ -11772,7 +11772,7 @@
     {
      "ref": "NZ-1",
      "name": "New Zealand Ministry of Foreign Affairs and Trade",
-     "usd": 15696.423403400007
+     "usd": 15586.983403400009
     },
     {
      "ref": "XM-DAC-46004",
@@ -12038,14 +12038,14 @@
    "code": "NR",
    "name": "Nauru",
    "n_trans_365": 9691,
-   "n_trans_other_country": 8805,
+   "n_trans_other_country": 8804,
    "n_null_pct": 0,
    "n_negative": 58,
    "dis90": -27019.54478009022,
    "dis_prev90": 1371083.4049517002,
-   "dis365": 7749391.433568217,
+   "dis365": 7749805.678933216,
    "n_orgs_90": 4,
-   "n_orgs_365": 6,
+   "n_orgs_365": 5,
    "n_acts_90": 27,
    "n_acts_prev90": 34,
    "com365": 12724123.449767347,
@@ -12119,17 +12119,12 @@
    ],
    "quiet_orgs": [
     [
-     "XM-DAC-41304",
-     "United Nations Educational, Scientific and Cultural Organization (UNESCO)",
-     "2025-12-31"
-    ],
-    [
      "XM-DAC-928",
      "World Health Organization",
      "2026-05-22"
     ]
    ],
-   "n_quiet": 2,
+   "n_quiet": 1,
    "new_starts": [],
    "n_new_starts": 0,
    "ending_soon": [
@@ -12257,15 +12252,15 @@
      "names": null
     },
     {
-     "aid": "XM-DAC-47136-PAC06",
-     "org": "Global Green Growth Institute",
-     "ref": "XM-DAC-47136",
-     "title": "Pacific NDC Hub",
-     "start": "2020-04-01",
-     "end": "2024-06-06",
-     "spend": 214390.78944759,
-     "commitment": 0.0,
-     "pct": 7.686395,
+     "aid": "XM-DAC-41304-39-1050",
+     "org": "United Nations Educational, Scientific and Cultural Organization (UNESCO)",
+     "ref": "XM-DAC-41304",
+     "title": "Strengthening national systems and building capacity of Pacific SIDS for the cultural property protection thro",
+     "start": "2018-01-01",
+     "end": "2019-12-31",
+     "spend": 380.87,
+     "commitment": 336.0,
+     "pct": 1,
      "names": null
     }
    ],
@@ -12615,7 +12610,7 @@
     {
      "ref": "XM-DAC-46004",
      "name": "Asian Development Bank",
-     "lifetime_usd": 54592072.50000001,
+     "lifetime_usd": 54592072.5,
      "latest": "2026-07-31",
      "age_days": 49
     },
@@ -12657,7 +12652,7 @@
     {
      "ref": "XM-DAC-41116",
      "name": "UN Environment Programme",
-     "lifetime_usd": 1137592.3811635196,
+     "lifetime_usd": 1137592.3811635193,
      "latest": "2025-05-01",
      "age_days": 505
     },
@@ -12684,30 +12679,30 @@
    "code": "NU",
    "name": "Niue",
    "n_trans_365": 11485,
-   "n_trans_other_country": 9865,
+   "n_trans_other_country": 9866,
    "n_null_pct": 0,
    "n_negative": 24,
-   "dis90": 593314.13758676,
-   "dis_prev90": 5091613.44964533,
-   "dis365": 8901461.201543227,
+   "dis90": 593232.0575867599,
+   "dis_prev90": 5091605.06518623,
+   "dis365": 8901734.468991326,
    "n_orgs_90": 2,
    "n_orgs_365": 3,
-   "n_acts_90": 19,
-   "n_acts_prev90": 25,
-   "com365": 18993521.816997167,
+   "n_acts_90": 18,
+   "n_acts_prev90": 26,
+   "com365": 18980757.22099717,
    "top_orgs_90": [
     {
      "ref": "NZ-1",
      "name": "New Zealand Ministry of Foreign Affairs and Trade",
-     "usd": 593564.13758676,
-     "pct": 100.04213619466694,
-     "prev": 5089830.87964533
+     "usd": 593482.0575867599,
+     "pct": 100.04214202466014,
+     "prev": 5089822.495186229
     },
     {
      "ref": "XM-DAC-41114",
      "name": "United Nations Development Programme",
      "usd": -250.0,
-     "pct": -0.04213619466693437,
+     "pct": -0.04214202466012849,
      "prev": 0.0
     }
    ],
@@ -12716,37 +12711,37 @@
      "code": "210",
      "name": "Transport & storage",
      "usd": 176295.5662,
-     "pct": 29.713697185282463
+     "pct": 29.71780839308686
     },
     {
      "code": "123",
      "name": "Non-communicable diseases",
      "usd": 134695.83821100002,
-     "pct": 22.702280238738375
+     "pct": 22.70542134201856
     },
     {
      "code": "232",
      "name": "Energy generation, renewable",
      "usd": 59358.9157,
-     "pct": 10.004635308613388
+     "pct": 10.006019556911552
     },
     {
      "code": "122",
      "name": "Basic health",
      "usd": 47143.5413721,
-     "pct": 7.945797746173919
+     "pct": 7.9468971322753035
     },
     {
      "code": "121",
      "name": "Health (general)",
      "usd": 42653.681128000004,
-     "pct": 7.189055245083012
+     "pct": 7.190049927765734
     },
     {
      "code": "332",
      "name": "Tourism",
      "usd": 33693.555,
-     "pct": 5.67887277000424
+     "pct": 5.679658502789582
     }
    ],
    "quiet_orgs": [
@@ -12861,18 +12856,6 @@
      "names": null
     },
     {
-     "aid": "XM-DAC-47136-PAC06",
-     "org": "Global Green Growth Institute",
-     "ref": "XM-DAC-47136",
-     "title": "Pacific NDC Hub",
-     "start": "2020-04-01",
-     "end": "2024-06-06",
-     "spend": 214390.78944759,
-     "commitment": 0.0,
-     "pct": 7.686395,
-     "names": null
-    },
-    {
      "aid": "XM-DAC-41304-39-1050",
      "org": "United Nations Educational, Scientific and Cultural Organization (UNESCO)",
      "ref": "XM-DAC-41304",
@@ -12905,6 +12888,18 @@
      "end": "2019-12-31",
      "spend": 199.89000000000001,
      "commitment": 200.0,
+     "pct": 1,
+     "names": null
+    },
+    {
+     "aid": "XM-DAC-41304-39-1228",
+     "org": "United Nations Educational, Scientific and Cultural Organization (UNESCO)",
+     "ref": "XM-DAC-41304",
+     "title": "Socially inclusive policies in the area of disability inclusive development, youth and sport in the Pacific",
+     "start": "2018-01-01",
+     "end": "2019-12-31",
+     "spend": 556.03,
+     "commitment": 598.29,
      "pct": 1,
      "names": null
     }
@@ -13041,7 +13036,7 @@
     {
      "ref": "NZ-1",
      "name": "New Zealand Ministry of Foreign Affairs and Trade",
-     "usd": 593564.13758676
+     "usd": 593482.0575867599
     },
     {
      "ref": "XM-DAC-41114",
@@ -13270,51 +13265,51 @@
    "code": "CK",
    "name": "Cook Islands",
    "n_trans_365": 10525,
-   "n_trans_other_country": 6921,
+   "n_trans_other_country": 6946,
    "n_null_pct": 0,
    "n_negative": 47,
-   "dis90": 918213.8229930002,
-   "dis_prev90": 3334527.0045402306,
-   "dis365": 13283439.385911172,
+   "dis90": 934826.9989930002,
+   "dis_prev90": 3333634.1753052305,
+   "dis365": 13306873.487547074,
    "n_orgs_90": 5,
    "n_orgs_365": 7,
    "n_acts_90": 43,
    "n_acts_prev90": 45,
-   "com365": 47861361.69863925,
+   "com365": 47874165.47965225,
    "top_orgs_90": [
     {
      "ref": "NZ-1",
      "name": "New Zealand Ministry of Foreign Affairs and Trade",
-     "usd": 786578.9629930002,
-     "pct": 85.66402980398135,
-     "prev": 1336719.1041402307
+     "usd": 803192.1389930003,
+     "pct": 85.91879993391316,
+     "prev": 1335826.2749052306
     },
     {
      "ref": "XM-DAC-41301",
      "name": "Food and Agriculture Organization (FAO)",
      "usd": 74077.92,
-     "pct": 8.067611066726963,
+     "pct": 7.9242383970292956,
      "prev": 58488.02
     },
     {
      "ref": "XM-DAC-46004",
      "name": "Asian Development Bank",
      "usd": 43155.51,
-     "pct": 4.699941224945923,
+     "pct": 4.61641673234591,
      "prev": 215591.95
     },
     {
      "ref": "XM-DAC-928",
      "name": "World Health Organization",
      "usd": 13372.440000000004,
-     "pct": 1.4563535927188875,
+     "pct": 1.4304721637698585,
      "prev": 40299.67990000001
     },
     {
      "ref": "XM-DAC-41302",
      "name": "International Labour Organization (ILO)",
      "usd": 1028.99,
-     "pct": 0.1120643116268839,
+     "pct": 0.11007277294177774,
      "prev": 19468.3505
     }
    ],
@@ -13322,38 +13317,38 @@
     {
      "code": "510",
      "name": "General budget support",
-     "usd": 181827.555386,
-     "pct": 19.802310837939338
+     "usd": 198440.731386,
+     "pct": 21.22753531934371
     },
     {
      "code": "123",
      "name": "Non-communicable diseases",
      "usd": 132733.47722099998,
-     "pct": 14.455617406013701
+     "pct": 14.198720978745913
     },
     {
      "code": "232",
      "name": "Energy generation, renewable",
      "usd": 119839.07,
-     "pct": 13.05132497454393
+     "pct": 12.81938477697918
     },
     {
      "code": "151",
      "name": "Government & civil society",
      "usd": 115031.63774299998,
-     "pct": 12.527761493291841
+     "pct": 12.305125747000522
     },
     {
      "code": "313",
      "name": "Fishing",
      "usd": 75677.3661198,
-     "pct": 8.241802097154546
+     "pct": 8.095333810568158
     },
     {
      "code": "122",
      "name": "Basic health",
      "usd": 46892.72927259999,
-     "pct": 5.106950919095177
+     "pct": 5.016193298130354
     }
    ],
    "quiet_orgs": [
@@ -13460,18 +13455,6 @@
      "names": null
     },
     {
-     "aid": "XM-DAC-47136-PAC06",
-     "org": "Global Green Growth Institute",
-     "ref": "XM-DAC-47136",
-     "title": "Pacific NDC Hub",
-     "start": "2020-04-01",
-     "end": "2024-06-06",
-     "spend": 214390.78944759,
-     "commitment": 0.0,
-     "pct": 7.686395,
-     "names": null
-    },
-    {
      "aid": "XM-DAC-41304-39-1050",
      "org": "United Nations Educational, Scientific and Cultural Organization (UNESCO)",
      "ref": "XM-DAC-41304",
@@ -13504,6 +13487,18 @@
      "end": "2019-12-31",
      "spend": 199.89000000000001,
      "commitment": 200.0,
+     "pct": 1,
+     "names": null
+    },
+    {
+     "aid": "XM-DAC-41304-39-1228",
+     "org": "United Nations Educational, Scientific and Cultural Organization (UNESCO)",
+     "ref": "XM-DAC-41304",
+     "title": "Socially inclusive policies in the area of disability inclusive development, youth and sport in the Pacific",
+     "start": "2018-01-01",
+     "end": "2019-12-31",
+     "spend": 556.03,
+     "commitment": 598.29,
      "pct": 1,
      "names": null
     }
@@ -13640,7 +13635,7 @@
     {
      "ref": "NZ-1",
      "name": "New Zealand Ministry of Foreign Affairs and Trade",
-     "usd": 786578.9629930002
+     "usd": 803192.1389930003
     },
     {
      "ref": "XM-DAC-41301",
@@ -13803,7 +13798,7 @@
     {
      "ref": "AU-5",
      "name": "Australian Aid",
-     "lifetime_usd": 41671778.32439999,
+     "lifetime_usd": 41671778.3244,
      "latest": "2020-06-30",
      "age_days": 2271
     },
@@ -13863,7 +13858,7 @@
   }
  },
  "dfat": {
-  "fetched": "2026-09-18T06:11:58Z",
+  "fetched": "2026-09-18T12:16:01Z",
   "notices": [
    {
     "title": "Harnessing Agricultural Resilience, Value Chains, and Enterprise for Sustainable Transformation (HARVEST)",
@@ -15297,7 +15292,7 @@
   ]
  },
  "nz": {
-  "fetched": "2026-09-18T06:12:41Z",
+  "fetched": "2026-09-18T12:16:46Z",
   "tenders": [
    {
     "id": "34863951",
@@ -15355,6 +15350,29 @@
     "regions": "International",
     "overview": "This is a Notice of Information (Advance Notice) from The Ministry of Foreign Affairs (MFAT) for provision of construction services on behalf of the Ministry of Education and Training (MoET) in Vanuatu, as part of New Zealand\u2019s International Development Cooperation (IDC) Programme. The goal is to provide resilient, inclusive and sustainable education infrastructure in Vanuatu, as well as responding to the ongoing natural disaster recovery needs. MFAT is looking to engage a construction contractor to complete works at various school sites in Vanuatu, including the provision of labour, plant, materials, project management services, logistics, etc. to complete construction works under three dif",
     "summary": "This is a Notice of Information (Advance Notice) from The Ministry of Foreign Affairs (MFAT) for provision of construction services on behalf of the Ministry of Education and Training (MoET) in Vanuatu, as part of New Zealand\u2019s International Development Cooperation (IDC) Programme. The goal is to provide resilient, inclusive and sustainable education infrastructure in Vanuatu, as well as responding to the ongoing natural disaster recovery needs. MFAT is looking to engage a construction contractor to complete works at various school sites in Vanuatu, including the provision of labour, plant, materials, project management services, logistics, etc. to complete construction works under three dif"
+   },
+   {
+    "id": "34873849",
+    "ref": "WPG-0105604",
+    "title": "ADVANCE NOTICE \u2013 Cook Islands Penrhyn Omoka Port Design Consultancy Services (WPG-0105604)",
+    "type": "NOI",
+    "date_label": "11:55 PM 18 Sep 2026 (Pacific/Auckland UTC+12:00)",
+    "org": "Ministry of Foreign Affairs and Trade",
+    "status": "completed",
+    "url": "https://www.gets.govt.nz/MFAT/ExternalTenderDetails.htm?id=34873849",
+    "opened": "Monday, 7 September 2026 11:30 AM (Pacific/Auckland UTC+12:00)",
+    "closes": "Friday, 18 September 2026 5:00 PM (Pacific/Auckland UTC+12:00)",
+    "dept": "Crown Funding",
+    "type_full": "Notice of Information (Advance Notice) (NOI)",
+    "coverage": "Sole Agency",
+    "categories": "72000000 - Building and Facility Construction and Maintenance Services 81100000 - Professional engineering services",
+    "regions": "International",
+    "overview": "The New Zealand Ministry of Foreign Affairs and Trade (MFAT) intends to procure a supplier to provide design consultancy services for the Penrhyn Omoka Port Upgrades in the Cook Islands. This opportunity will support critical transport infrastructure in one of the world's most remote locations, helping deliver safe and resilient maritime infrastructure for Penrhyn and the wider Pa Enua (outer islands). MFAT is seeking a multi-disciplinary engineering consultancy to undertake a Feasibility Study, with options for subsequent developed and detailed design, support to construction procurement, and construction-phase design services. The Feasibility Study is expected to include engineering design",
+    "outcome": {
+     "state": "completed",
+     "date": "2026-09-18"
+    },
+    "summary": "The New Zealand Ministry of Foreign Affairs and Trade (MFAT) intends to procure a supplier to provide design consultancy services for the Penrhyn Omoka Port Upgrades in the Cook Islands. This opportunity will support critical transport infrastructure in one of the world's most remote locations, helping deliver safe and resilient maritime infrastructure for Penrhyn and the wider Pa Enua (outer islands). MFAT is seeking a multi-disciplinary engineering consultancy to undertake a Feasibility Study, with options for subsequent developed and detailed design, support to construction procurement, and construction-phase design services. The Feasibility Study is expected to include engineering design"
    },
    {
     "id": "33995584",
