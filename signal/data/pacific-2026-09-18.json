@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-18T00:10:20Z",
+ "generated": "2026-09-18T06:11:58Z",
  "date": "2026-09-18",
  "countries": {
   "PG": {
@@ -13863,7 +13863,7 @@
   }
  },
  "dfat": {
-  "fetched": "2026-09-18T00:10:20Z",
+  "fetched": "2026-09-18T06:11:58Z",
   "notices": [
    {
     "title": "Harnessing Agricultural Resilience, Value Chains, and Enterprise for Sustainable Transformation (HARVEST)",
@@ -15112,7 +15112,7 @@
     "summary": "/about-us/business-opportunities/business-notifications/pacific-higher-education-partnerships-investment-call-proposals"
    }
   ],
-  "as_at": "10 September 2026",
+  "as_at": "17 September 2026",
   "items": [
    {
     "id": "DFAT-1075",
@@ -15133,12 +15133,6 @@
     "status": "The Request for Tender has been released to the shortlisted organisations and will close on 1 October 2026 Shortlisted: Abt Associates Pty Ltd, Inno-Change International Consultants, Inc, Palladium International Pty Ltd, and Tetra Tech International Development Pty Ltd. Further information is available on the Business Notifications page."
    },
    {
-    "id": "DFAT-1108",
-    "title": "Mid-Term Review of the PNG Transport Sector Support Program Phase 3 (TSSP3)",
-    "section": "In the market",
-    "status": "The Request for Tender was released on AusTender and closes on 15 September 2026."
-   },
-   {
     "id": "DFAT-1110",
     "title": "Western Province Partnership Mid-Term Review",
     "section": "In the market",
@@ -15152,7 +15146,7 @@
    },
    {
     "id": "DFAT-1112",
-    "title": "Design of InvestIn in Education Program",
+    "title": "Design of Investing in Education Program",
     "section": "In the market",
     "status": "The Request for Tender was released on AusTender and closes on 25 September 2026."
    },
@@ -15187,12 +15181,6 @@
     "status": "The Request for Tender closed on 19 August 2026 and responses are being evaluated."
    },
    {
-    "id": "DFAT-1058",
-    "title": "Timor-Leste Partnership for Human Development (Phase 2) Program",
-    "section": "Closed",
-    "status": "Evaluation has concluded. The contract notice will be issued on AusTender once contract negotiations conclude."
-   },
-   {
     "id": "DFAT-1062",
     "title": "Timor-Leste Partnership for Private Sector Development",
     "section": "Closed",
@@ -15220,7 +15208,7 @@
     "id": "DFAT-1087",
     "title": "Pacific Security College Phase 2",
     "section": "Closed",
-    "status": "Evaluation has concluded. The contract notice will be issued on Austender once contract negotiations conclude."
+    "status": "Evaluation has concluded. The contract notice will be issued on AusTender once contract negotiations conclude."
    },
    {
     "id": "DFAT-1091",
@@ -15232,13 +15220,25 @@
     "id": "DFAT-1104",
     "title": "Design for new Indonesia Disaster Risk Management Investment",
     "section": "Closed",
-    "status": "The Request for Tender closed on 19 August 2026 and responses are being evaluated."
+    "status": "Evaluation has concluded. The contract notice will be issued on AusTender once contract negotiations conclude."
+   },
+   {
+    "id": "DFAT-1108",
+    "title": "Mid-Term Review of the PNG Transport Sector Support Program Phase 3 (TSSP3)",
+    "section": "Closed",
+    "status": "The Request for Tender closed on 15 September 2026 and responses are being evaluated."
    },
    {
     "id": "DFAT-1064",
     "title": "Timor-Leste Labour Mobility and Skills Support Program",
     "section": "Planned",
     "status": "DFAT anticipates approaching the market through a procurement process to be advertised on AusTender in the third quarter of 2026. Further Information is available on the Business notifications page."
+   },
+   {
+    "id": "DFAT-1065",
+    "title": "Australia Awards Scholarships \u2013 Partnerships with Education Institutions",
+    "section": "Planned",
+    "status": "DFAT anticipates approaching the market through a one-step procurement process to be advertised on AusTender in the first quarter of 2027. Further information is available on the Business Notifications page."
    },
    {
     "id": "DFAT-1078",
@@ -15280,7 +15280,7 @@
     "id": "DFAT-1105",
     "title": "Philippines - Harnessing Agricultural Resilience, Value Chains, and Enterprise for Sustainable Transformation (HARVEST)",
     "section": "Planned",
-    "status": "DFAT anticipates approaching the market through a two-step procurement process to be advertised on AusTender in the fourth quarter of 2026."
+    "status": "DFAT anticipates approaching the market through a two-step procurement process to be advertised on AusTender in the fourth quarter of 2026. Further information is available on the Business Notifications page."
    },
    {
     "id": "DFAT-1106",
@@ -15297,27 +15297,8 @@
   ]
  },
  "nz": {
-  "fetched": "2026-09-18T00:11:06Z",
+  "fetched": "2026-09-18T06:12:41Z",
   "tenders": [
-   {
-    "id": "34873849",
-    "ref": "WPG-0105604",
-    "title": "ADVANCE NOTICE \u2013 Cook Islands Penrhyn Omoka Port Design Consultancy Services (WPG-0105604)",
-    "type": "NOI",
-    "date_label": "5:00 PM 18 Sep 2026 (Pacific/Auckland UTC+12:00)",
-    "org": "Ministry of Foreign Affairs and Trade",
-    "status": "open",
-    "url": "https://www.gets.govt.nz/MFAT/ExternalTenderDetails.htm?id=34873849",
-    "opened": "Monday, 7 September 2026 11:30 AM (Pacific/Auckland UTC+12:00)",
-    "closes": "Friday, 18 September 2026 5:00 PM (Pacific/Auckland UTC+12:00)",
-    "dept": "Crown Funding",
-    "type_full": "Notice of Information (Advance Notice) (NOI)",
-    "coverage": "Sole Agency",
-    "categories": "72000000 - Building and Facility Construction and Maintenance Services 81100000 - Professional engineering services",
-    "regions": "International",
-    "overview": "The New Zealand Ministry of Foreign Affairs and Trade (MFAT) intends to procure a supplier to provide design consultancy services for the Penrhyn Omoka Port Upgrades in the Cook Islands. This opportunity will support critical transport infrastructure in one of the world's most remote locations, helping deliver safe and resilient maritime infrastructure for Penrhyn and the wider Pa Enua (outer islands). MFAT is seeking a multi-disciplinary engineering consultancy to undertake a Feasibility Study, with options for subsequent developed and detailed design, support to construction procurement, and construction-phase design services. The Feasibility Study is expected to include engineering design",
-    "summary": "The New Zealand Ministry of Foreign Affairs and Trade (MFAT) intends to procure a supplier to provide design consultancy services for the Penrhyn Omoka Port Upgrades in the Cook Islands. This opportunity will support critical transport infrastructure in one of the world's most remote locations, helping deliver safe and resilient maritime infrastructure for Penrhyn and the wider Pa Enua (outer islands). MFAT is seeking a multi-disciplinary engineering consultancy to undertake a Feasibility Study, with options for subsequent developed and detailed design, support to construction procurement, and construction-phase design services. The Feasibility Study is expected to include engineering design"
-   },
    {
     "id": "34863951",
     "ref": null,

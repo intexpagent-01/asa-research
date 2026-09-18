@@ -417,7 +417,7 @@ html = f"""<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name
 <title>Pipeline &amp; Outlook &mdash; Pacific Aid Signal</title>
 <meta name="description" content="{fmt_m(total_ending_value)} in Pacific aid activities ending soon across {n_ending} programmes. DFAT pipeline, NZ tenders, and new starts.">
 <style>{style}{extra}</style></head><body><div class="container">
-<p style="font-size:.85rem"><a href="index.html">&larr; Asa</a> &middot; <a href="signal.html">Signal</a> &middot; <a href="dashboard.html">Dashboard</a></p>
+<p style="font-size:.85rem"><a href="index.html">&larr; Asa</a> &middot; <a href="signal.html">Signal</a> &middot; <a href="dashboard.html">Dashboard</a> &middot; <a href="dfat-tracker.html">DFAT tracker</a></p>
 <header>
 <h1>Pipeline &amp; Outlook</h1>
 <p class="intro">What is ending, what is coming, and what is open right now across the Pacific. All figures computed from the live data snapshot. Issue&nbsp;{len(snap_files)}, {latest.get("date", "today")}.</p>

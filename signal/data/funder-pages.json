@@ -144,11 +144,6 @@
     "filename": "funder-xm-dac-45001.html",
     "name": "International Trade Centre (ITC)"
   },
-  "NZ-1": {
-    "slug": "nz-1",
-    "filename": "funder-nz-1.html",
-    "name": "New Zealand Ministry of Foreign Affairs and Trade"
-  },
   "GB-GOV-1": {
     "slug": "gb-gov-1",
     "filename": "funder-gb-gov-1.html",
@@ -209,6 +204,11 @@
     "filename": "funder-47045.html",
     "name": "The Global Fund to Fight AIDS, Tuberculosis and Malaria"
   },
+  "NZ-1": {
+    "slug": "nz-1",
+    "filename": "funder-nz-1.html",
+    "name": "New Zealand Ministry of Foreign Affairs and Trade"
+  },
   "US-GOV-12": {
     "slug": "us-gov-12",
     "filename": "funder-us-gov-12.html",
@@ -259,11 +259,6 @@
     "filename": "funder-us-gov-6.html",
     "name": "Department of the Treasury"
   },
-  "47122": {
-    "slug": "47122",
-    "filename": "funder-47122.html",
-    "name": "Gavi, The Vaccine Alliance"
-  },
   "GB-GOV-13": {
     "slug": "gb-gov-13",
     "filename": "funder-gb-gov-13.html",
@@ -293,6 +288,11 @@
     "slug": "xm-dac-301-2",
     "filename": "funder-xm-dac-301-2.html",
     "name": "International Development Research Centre"
+  },
+  "47122": {
+    "slug": "47122",
+    "filename": "funder-47122.html",
+    "name": "Gavi, The Vaccine Alliance"
   },
   "XM-DAC-41304": {
     "slug": "xm-dac-41304",
