@@ -1,20 +1,20 @@
 country_code,country_name,sector_code,sector_name,disbursements_90d_usd,percentage
 CK,Cook Islands,510,General budget support,198440.73,21.23
-CK,Cook Islands,123,Non-communicable diseases,132733.48,14.2
+CK,Cook Islands,123,Non-communicable diseases,132622.06,14.19
 CK,Cook Islands,232,"Energy generation, renewable",119839.07,12.82
 CK,Cook Islands,151,Government & civil society,115031.64,12.31
 CK,Cook Islands,313,Fishing,75677.37,8.1
-CK,Cook Islands,122,Basic health,46892.73,5.02
-FJ,Fiji,410,Environmental protection,7725050.19,16.69
-FJ,Fiji,231,Energy policy,6266388.0,13.54
-FJ,Fiji,232,"Energy generation, renewable",4601809.55,9.94
-FJ,Fiji,151,Government & civil society,4110124.8,8.88
-FJ,Fiji,140,Water & sanitation,3916903.41,8.46
-FJ,Fiji,122,Basic health,3593350.19,7.77
+CK,Cook Islands,122,Basic health,46853.73,5.01
+FJ,Fiji,410,Environmental protection,7725050.19,16.73
+FJ,Fiji,231,Energy policy,6266388.0,13.57
+FJ,Fiji,232,"Energy generation, renewable",4601809.55,9.97
+FJ,Fiji,151,Government & civil society,4041422.5,8.75
+FJ,Fiji,140,Water & sanitation,3916903.41,8.48
+FJ,Fiji,122,Basic health,3593350.19,7.78
 FM,Micronesia,220,Communications,762757.0,21.88
-FM,Micronesia,140,Water & sanitation,513701.59,14.73
+FM,Micronesia,140,Water & sanitation,513701.59,14.74
 FM,Micronesia,113,Secondary education,368311.75,10.56
-FM,Micronesia,236,Energy distribution,366589.49,10.51
+FM,Micronesia,236,Energy distribution,366589.49,10.52
 FM,Micronesia,232,"Energy generation, renewable",359757.89,10.32
 FM,Micronesia,410,Environmental protection,239085.41,6.86
 KI,Kiribati,122,Basic health,2204501.13,20.85
@@ -38,8 +38,8 @@ NR,Nauru,430,Multisector,13562.36,-50.19
 NU,Niue,210,Transport & storage,176295.57,29.72
 NU,Niue,123,Non-communicable diseases,134695.84,22.71
 NU,Niue,232,"Energy generation, renewable",59358.92,10.01
-NU,Niue,122,Basic health,47143.54,7.95
-NU,Niue,121,Health (general),42653.68,7.19
+NU,Niue,122,Basic health,47103.36,7.94
+NU,Niue,121,Health (general),42617.33,7.18
 NU,Niue,332,Tourism,33693.56,5.68
 PG,Papua New Guinea,998,Unallocated / unspecified,19077019.39,29.31
 PG,Papua New Guinea,122,Basic health,6244934.74,9.59
@@ -53,14 +53,14 @@ PW,Palau,114,Post-secondary education,15179.25,7.42
 PW,Palau,720,Emergency response,9837.33,4.81
 PW,Palau,123,Non-communicable diseases,6217.76,3.04
 PW,Palau,430,Multisector,5341.75,2.61
-SB,Solomon Islands,151,Government & civil society,8151377.25,28.51
-SB,Solomon Islands,232,"Energy generation, renewable",7545240.13,26.39
+SB,Solomon Islands,151,Government & civil society,8151377.25,28.53
+SB,Solomon Islands,232,"Energy generation, renewable",7545240.13,26.4
 SB,Solomon Islands,160,Other social infrastructure,5518733.0,19.31
 SB,Solomon Islands,410,Environmental protection,2211757.52,7.74
 SB,Solomon Islands,113,Secondary education,1394999.0,4.88
 SB,Solomon Islands,430,Multisector,1159798.01,4.06
 TO,Tonga,210,Transport & storage,2384426.08,46.53
-TO,Tonga,430,Multisector,1685041.94,32.89
+TO,Tonga,430,Multisector,1685041.94,32.88
 TO,Tonga,140,Water & sanitation,970915.9,18.95
 TO,Tonga,236,Energy distribution,334501.8,6.53
 TO,Tonga,111,Education (general),266272.08,5.2

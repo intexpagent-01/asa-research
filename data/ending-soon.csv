@@ -92,10 +92,10 @@ FJ,Fiji,KR-GOV-010-KR-GOV-051-2024040102365,Office for Government Policy Coordin
 FJ,Fiji,KR-GOV-010-KR-GOV-051-2024040102604,Office for Government Policy Coordination,Master's Degree Program in Global Health Security(2024),,2026-12-01,1797.91
 FJ,Fiji,NZ-1-ACT-0104605,New Zealand Ministry of Foreign Affairs and Trade,FY25-26 Pacific Public Sector Leadership (Mid-Level) Course 2 In Country,,2026-12-20,1559.27
 FJ,Fiji,XM-DAC-47136-GGPI13,Global Green Growth Institute,EU Urban Development Technical Facility,,2026-10-01,25.0
-FJ,Fiji,US-GOV-1-720202656549,U.S. Agency for International Development,(title redacted by USAID),,2026-09-30,
-FJ,Fiji,US-GOV-1-720202656618,U.S. Agency for International Development,"USAID Communications, Utilities, and Rental Payments",,2026-09-30,
 FJ,Fiji,US-GOV-1-720202656911,U.S. Agency for International Development,"USAID Miscellaneous Goods, Services, and Operations Maintanence",,2026-09-30,
 FJ,Fiji,US-GOV-1-720202656967,U.S. Agency for International Development,(title redacted by USAID),,2026-09-30,
+FJ,Fiji,US-GOV-1-720202656549,U.S. Agency for International Development,(title redacted by USAID),,2026-09-30,
+FJ,Fiji,US-GOV-1-720202656618,U.S. Agency for International Development,"USAID Communications, Utilities, and Rental Payments",,2026-09-30,
 FJ,Fiji,XM-DAC-41304-261FIJ1000,"United Nations Educational, Scientific and Cultural Organization (UNESCO)",UNPRPD in Fiji,,2026-12-31,
 FJ,Fiji,XM-DAC-41114-OUTPUT-01005506,United Nations Development Programme,Fiji Human Rights and Anti-Discrimination Commission Capacity Development Project (PIP),,2027-03-05,
 FJ,Fiji,XM-DAC-41114-PROJECT-00081678,United Nations Development Programme,Markets for Change,,2026-12-31,
@@ -351,11 +351,10 @@ PG,Papua New Guinea,US-GOV-1-720202657565,U.S. Agency for International Developm
 PG,Papua New Guinea,US-GOV-11-72049224C00001-228191,Department of State,"Philippines, Pacific Islands, and Mongolia Monitoring, Evaluation, and Learning Activity (PIMMELA)",,2027-01-15,
 PG,Papua New Guinea,US-GOV-1-720202657324,U.S. Agency for International Development,(title redacted by USAID),,2026-09-30,
 PG,Papua New Guinea,US-GOV-1-720202657636,U.S. Agency for International Development,USAID Travel and Transportation,,2026-09-30,
-PG,Papua New Guinea,US-GOV-1-720202656515,U.S. Agency for International Development,(title redacted by USAID),,2026-09-30,
 PG,Papua New Guinea,SE-0-SE-6-15221,Sweden,WaterAid WASH and climate resilient WASH 2023-2026,,2026-12-31,
+PG,Papua New Guinea,US-GOV-1-720202656515,U.S. Agency for International Development,(title redacted by USAID),,2026-09-30,
 PG,Papua New Guinea,KR-GOV-010-KR-GOV-051-2022010102089,Office for Government Policy Coordination,Ending the Scourge of Gender-Based Violence and Sorcery Accusation Related Violence in Papua New Guinea,,2026-10-01,
 PG,Papua New Guinea,XM-DAC-41301-669183,Food and Agriculture Organization (FAO),"Support to Rural Entrepreneurship, Investment and Trade in Papua New Guinea (STREIT PNG)",,2026-12-24,
-PG,Papua New Guinea,US-GOV-1-720202682703,U.S. Agency for International Development,USAID Advisory and Assistance Services,,2026-09-30,
 PG,Papua New Guinea,XM-DAC-41114-PROJECT-00086294,United Nations Development Programme,PIMS5507 FSP Sustainable Finance of Papua New Guinea,,2026-10-31,
 PG,Papua New Guinea,XM-DAC-41114-PROJECT-00100578,United Nations Development Programme,Building Resilience to Climate Change in PNG,,2026-09-30,
 PG,Papua New Guinea,XM-DAC-41114-PROJECT-00130707,United Nations Development Programme,PNG Anticorruption Project,,2026-12-31,
@@ -372,6 +371,7 @@ PG,Papua New Guinea,XM-DAC-41114-PROJECT-01003716,United Nations Development Pro
 PG,Papua New Guinea,XM-DAC-41114-PROJECT-01005532,United Nations Development Programme,PNG-01005532 | MPTF-UK Bougainville Facilitator Consultation Project,,2026-12-31,
 PG,Papua New Guinea,XM-DAC-41114-PROJECT-01005689,United Nations Development Programme,PNG-01005689 | MPTF Disaster Risk Management,,2026-12-31,
 PG,Papua New Guinea,XM-DAC-41114-PROJECT-01005691,United Nations Development Programme,"PNG-01005691 | FW Advancing Human Rights, responsible business and Environmental Justice in Papua New Guinea",,2026-10-30,
+PG,Papua New Guinea,US-GOV-1-720202682703,U.S. Agency for International Development,USAID Advisory and Assistance Services,,2026-09-30,
 PG,Papua New Guinea,US-GOV-6-OTA3100000014-144438,Department of the Treasury,Technical Assistance for Economic Crimes - Papua New Guinea,,2026-09-30,
 PW,Palau,US-GOV-1-720BHA22IO00138,U.S. Agency for International Development,Humanitarian Assistance,,2026-09-30,1334237.0
 PW,Palau,NZ-1-ACT-0103879,New Zealand Ministry of Foreign Affairs and Trade,MFC1-02 Strengthening Climate Resilience of Communities and Marine Ecosystems in Palau,,2027-01-31,774416.75
@@ -461,6 +461,7 @@ TO,Tonga,NZ-1-ACT-0101226,New Zealand Ministry of Foreign Affairs and Trade,Clim
 TO,Tonga,NZ-1-ACT-0102603,New Zealand Ministry of Foreign Affairs and Trade,Negotiated Partnerships: Habitat for Humanity (HFHNZ) Implementation,,2027-02-28,790182.41
 TO,Tonga,NZ-1-ACT-0100405,New Zealand Ministry of Foreign Affairs and Trade,ADB Pacific Private Sector Development Initiative Phase IV,,2026-10-31,636136.77
 TO,Tonga,NZ-1-ACT-0102034,New Zealand Ministry of Foreign Affairs and Trade,Pacific Justice Sector 2021-2026,,2026-11-30,620556.55
+TO,Tonga,XI-IATI-EC_INTPA-2024-PC-38797,European Commission - Directorate-General for International Partnerships,Climate and WASH Resilience Community Project,,2027-03-19,443728.72
 TO,Tonga,NZ-1-ACT-0103469,New Zealand Ministry of Foreign Affairs and Trade,Anamata and Scholarships Future State,,2027-02-01,397283.87
 TO,Tonga,AU-5-INO169,Australia Aid,Tonga Gender Equality Investment,,2026-10-30,364735.5
 TO,Tonga,NZ-1-ACT-0102286,New Zealand Ministry of Foreign Affairs and Trade,Pacific Digital Economy Programme,,2027-03-01,363687.88
