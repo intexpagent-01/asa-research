@@ -1,14 +1,14 @@
 country_code,country_name,funder_ref,funder_name,disbursements_90d_usd
-CK,Cook Islands,NZ-1,New Zealand Ministry of Foreign Affairs and Trade,803006.44
+CK,Cook Islands,NZ-1,New Zealand Ministry of Foreign Affairs and Trade,686284.55
 CK,Cook Islands,XM-DAC-41301,Food and Agriculture Organization (FAO),74077.92
 CK,Cook Islands,XM-DAC-46004,Asian Development Bank,43155.51
-CK,Cook Islands,XM-DAC-928,World Health Organization,13372.44
+CK,Cook Islands,XM-DAC-928,World Health Organization,13384.44
 CK,Cook Islands,XM-DAC-41302,International Labour Organization (ILO),1028.99
 FJ,Fiji,XM-DAC-41114,United Nations Development Programme,13787094.7
 FJ,Fiji,XM-DAC-41122,UNICEF,13581222.71
 FJ,Fiji,XI-IATI-EC_INTPA,European Commission - Directorate-General for International Partnerships,12792405.19
 FJ,Fiji,KR-GOV-010,Office for Government Policy Coordination,1857784.73
-FJ,Fiji,NZ-1,New Zealand Ministry of Foreign Affairs and Trade,1739776.06
+FJ,Fiji,NZ-1,New Zealand Ministry of Foreign Affairs and Trade,1588314.18
 FJ,Fiji,FR-3,AFD,1412024.27
 FJ,Fiji,XM-DAC-41123,United Nations Industrial Development Organization,270598.99
 FJ,Fiji,DE-1,Federal Ministry for Economic Cooperation and Development (BMZ),186694.54
@@ -20,17 +20,17 @@ FJ,Fiji,XM-DAC-41301,Food and Agriculture Organization (FAO),55820.3
 FJ,Fiji,GB-GOV-26,"DEPARTMENT FOR SCIENCE, INNOVATION AND TECHNOLOGY",55719.43
 FJ,Fiji,CA-3,"Foreign Affairs, Trade and Development Canada (DFATD)",52715.34
 FJ,Fiji,XM-DAC-41302,International Labour Organization (ILO),37645.72
-FJ,Fiji,XM-DAC-41304,"United Nations Educational, Scientific and Cultural Organization (UNESCO)",3317.05
+FJ,Fiji,XM-DAC-41304,"United Nations Educational, Scientific and Cultural Organization (UNESCO)",12951.52
 FM,Micronesia,44000,World Bank,1796282.01
 FM,Micronesia,XM-DAC-46004,Asian Development Bank,844234.96
 FM,Micronesia,XM-DAC-928,World Health Organization,263408.99
 FM,Micronesia,XM-DAC-41114,United Nations Development Programme,240223.0
 FM,Micronesia,US-GOV-1,U.S. Agency for International Development,152125.76
-FM,Micronesia,NZ-1,New Zealand Ministry of Foreign Affairs and Trade,141468.3
+FM,Micronesia,NZ-1,New Zealand Ministry of Foreign Affairs and Trade,99432.76
 FM,Micronesia,XM-DAC-41301,Food and Agriculture Organization (FAO),48520.15
 KI,Kiribati,XM-DAC-46004,Asian Development Bank,4163642.33
 KI,Kiribati,44000,World Bank,2656361.48
-KI,Kiribati,NZ-1,New Zealand Ministry of Foreign Affairs and Trade,1495715.6
+KI,Kiribati,NZ-1,New Zealand Ministry of Foreign Affairs and Trade,1329587.35
 KI,Kiribati,KR-GOV-010,Office for Government Policy Coordination,707954.16
 KI,Kiribati,XM-DAC-928,World Health Organization,680333.59
 KI,Kiribati,XM-DAC-41114,United Nations Development Programme,295898.0
@@ -48,14 +48,14 @@ MH,Marshall Islands,XI-IATI-EC_INTPA,European Commission - Directorate-General f
 MH,Marshall Islands,XM-DAC-46004,Asian Development Bank,1129242.74
 MH,Marshall Islands,XM-DAC-41301,Food and Agriculture Organization (FAO),46019.84
 MH,Marshall Islands,XM-DAC-928,World Health Organization,9633.5
-MH,Marshall Islands,NZ-1,New Zealand Ministry of Foreign Affairs and Trade,4516.09
 MH,Marshall Islands,US-GOV-1,U.S. Agency for International Development,3213.67
+MH,Marshall Islands,NZ-1,New Zealand Ministry of Foreign Affairs and Trade,1181.31
 MH,Marshall Islands,KR-GOV-010,Office for Government Policy Coordination,0.0
 NR,Nauru,XM-DAC-46004,Asian Development Bank,800638.88
 NR,Nauru,XM-DAC-41301,Food and Agriculture Organization (FAO),174845.6
 NR,Nauru,XM-DAC-41114,United Nations Development Programme,-11578.0
-NR,Nauru,NZ-1,New Zealand Ministry of Foreign Affairs and Trade,-990926.03
-NU,Niue,NZ-1,New Zealand Ministry of Foreign Affairs and Trade,593405.53
+NR,Nauru,NZ-1,New Zealand Ministry of Foreign Affairs and Trade,-1025822.68
+NU,Niue,NZ-1,New Zealand Ministry of Foreign Affairs and Trade,484317.36
 NU,Niue,XM-DAC-41114,United Nations Development Programme,-250.0
 PG,Papua New Guinea,XM-DAC-903,International Finance Corporation,18600000.0
 PG,Papua New Guinea,XM-DAC-46004,Asian Development Bank,10172547.59
@@ -63,7 +63,7 @@ PG,Papua New Guinea,44000,World Bank,8803158.57
 PG,Papua New Guinea,XM-DAC-41114,United Nations Development Programme,5785897.0
 PG,Papua New Guinea,XM-DAC-41122,UNICEF,4867429.75
 PG,Papua New Guinea,47045,"The Global Fund to Fight AIDS, Tuberculosis and Malaria",3717060.87
-PG,Papua New Guinea,XM-DAC-928,World Health Organization,3302871.44
+PG,Papua New Guinea,XM-DAC-928,World Health Organization,3260478.31
 PG,Papua New Guinea,KR-GOV-010,Office for Government Policy Coordination,2263965.79
 PG,Papua New Guinea,XM-DAC-41301,Food and Agriculture Organization (FAO),2115207.85
 PG,Papua New Guinea,FR-3,AFD,1948181.1
@@ -73,18 +73,17 @@ PG,Papua New Guinea,US-GOV-1,U.S. Agency for International Development,715083.38
 PG,Papua New Guinea,XM-DAC-41302,International Labour Organization (ILO),474686.59
 PG,Papua New Guinea,DE-1,Federal Ministry for Economic Cooperation and Development (BMZ),178411.07
 PG,Papua New Guinea,47122,"Gavi, The Vaccine Alliance",82757.05
-PG,Papua New Guinea,NZ-1,New Zealand Ministry of Foreign Affairs and Trade,-1171090.73
+PG,Papua New Guinea,NZ-1,New Zealand Ministry of Foreign Affairs and Trade,-1438796.69
 PW,Palau,XM-DAC-41301,Food and Agriculture Organization (FAO),114058.86
 PW,Palau,US-GOV-1,U.S. Agency for International Development,41438.0
 PW,Palau,XM-DAC-928,World Health Organization,33459.63
-PW,Palau,NZ-1,New Zealand Ministry of Foreign Affairs and Trade,15586.98
+PW,Palau,NZ-1,New Zealand Ministry of Foreign Affairs and Trade,13036.89
 PW,Palau,XM-DAC-46004,Asian Development Bank,0.0
 PW,Palau,XM-DAC-41302,International Labour Organization (ILO),-88.7
 SB,Solomon Islands,XM-DAC-46004,Asian Development Bank,13628724.81
-SB,Solomon Islands,XM-DAC-41317,Green Climate Fund,8000000.0
 SB,Solomon Islands,44000,World Bank,2701375.42
 SB,Solomon Islands,KR-GOV-010,Office for Government Policy Coordination,1938475.89
-SB,Solomon Islands,XM-DAC-928,World Health Organization,892820.18
+SB,Solomon Islands,XM-DAC-928,World Health Organization,886421.83
 SB,Solomon Islands,XM-DAC-41114,United Nations Development Programme,718961.0
 SB,Solomon Islands,FR-3,AFD,453603.55
 SB,Solomon Islands,XI-IATI-EC_INTPA,European Commission - Directorate-General for International Partnerships,409985.75
@@ -94,19 +93,19 @@ SB,Solomon Islands,DE-1,Federal Ministry for Economic Cooperation and Developmen
 SB,Solomon Islands,XM-DAC-41304,"United Nations Educational, Scientific and Cultural Organization (UNESCO)",21975.94
 SB,Solomon Islands,XM-DAC-41302,International Labour Organization (ILO),3783.54
 SB,Solomon Islands,US-GOV-1,U.S. Agency for International Development,100.27
-SB,Solomon Islands,NZ-1,New Zealand Ministry of Foreign Affairs and Trade,-485289.36
+SB,Solomon Islands,NZ-1,New Zealand Ministry of Foreign Affairs and Trade,-607025.46
 TO,Tonga,XM-DAC-46004,Asian Development Bank,3980345.44
 TO,Tonga,44000,World Bank,2088276.96
 TO,Tonga,XI-IATI-EC_INTPA,European Commission - Directorate-General for International Partnerships,232839.91
 TO,Tonga,XM-DAC-41301,Food and Agriculture Organization (FAO),141754.51
-TO,Tonga,XM-DAC-928,World Health Organization,82167.36
+TO,Tonga,XM-DAC-928,World Health Organization,76457.55
 TO,Tonga,XM-DAC-41302,International Labour Organization (ILO),14142.71
 TO,Tonga,KR-GOV-010,Office for Government Policy Coordination,5393.72
-TO,Tonga,NZ-1,New Zealand Ministry of Foreign Affairs and Trade,-1420328.62
+TO,Tonga,NZ-1,New Zealand Ministry of Foreign Affairs and Trade,-1578207.95
 TV,Tuvalu,44000,World Bank,2226568.05
 TV,Tuvalu,XM-DAC-46004,Asian Development Bank,2162760.93
 TV,Tuvalu,XM-DAC-41301,Food and Agriculture Organization (FAO),171525.6
-TV,Tuvalu,NZ-1,New Zealand Ministry of Foreign Affairs and Trade,164197.67
+TV,Tuvalu,NZ-1,New Zealand Ministry of Foreign Affairs and Trade,125107.32
 TV,Tuvalu,XI-IATI-EC_INTPA,European Commission - Directorate-General for International Partnerships,105160.61
 TV,Tuvalu,XM-DAC-1409,Enhanced Integrated Framework,26534.0
 TV,Tuvalu,XM-DAC-41114,United Nations Development Programme,22370.0
@@ -116,8 +115,8 @@ TV,Tuvalu,KR-GOV-010,Office for Government Policy Coordination,0.0
 VU,Vanuatu,XI-IATI-EC_INTPA,European Commission - Directorate-General for International Partnerships,5089681.87
 VU,Vanuatu,44000,World Bank,2966193.25
 VU,Vanuatu,XM-DAC-46004,Asian Development Bank,2305671.94
-VU,Vanuatu,NZ-1,New Zealand Ministry of Foreign Affairs and Trade,1859358.27
-VU,Vanuatu,XM-DAC-928,World Health Organization,516513.46
+VU,Vanuatu,NZ-1,New Zealand Ministry of Foreign Affairs and Trade,1658139.48
+VU,Vanuatu,XM-DAC-928,World Health Organization,512251.19
 VU,Vanuatu,FR-3,AFD,406839.7
 VU,Vanuatu,XM-DAC-41301,Food and Agriculture Organization (FAO),236097.35
 VU,Vanuatu,XM-DAC-41114,United Nations Development Programme,170479.0
@@ -129,8 +128,8 @@ VU,Vanuatu,KR-GOV-010,Office for Government Policy Coordination,0.0
 WS,Samoa,XM-DAC-46004,Asian Development Bank,3708286.27
 WS,Samoa,XI-IATI-EC_INTPA,European Commission - Directorate-General for International Partnerships,2305972.23
 WS,Samoa,XM-DAC-41114,United Nations Development Programme,1567783.66
-WS,Samoa,NZ-1,New Zealand Ministry of Foreign Affairs and Trade,771366.58
 WS,Samoa,44000,World Bank,615685.0
+WS,Samoa,NZ-1,New Zealand Ministry of Foreign Affairs and Trade,523581.5
 WS,Samoa,XM-DAC-41301,Food and Agriculture Organization (FAO),503388.49
 WS,Samoa,XM-DAC-928,World Health Organization,152270.45
 WS,Samoa,XM-DAC-41304,"United Nations Educational, Scientific and Cultural Organization (UNESCO)",82216.83

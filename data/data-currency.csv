@@ -1,141 +1,141 @@
 country_code,country_name,funder_ref,funder_name,latest_transaction_date,age_days,lifetime_usd
-CK,Cook Islands,NZ-1,New Zealand Ministry of Foreign Affairs and Trade,2026-08-04,47,363028339.15
-CK,Cook Islands,XM-DAC-46004,Asian Development Bank,2026-07-31,51,146283095.2
-CK,Cook Islands,AU-5,Australian Aid,2020-06-30,2273,41671778.32
-CK,Cook Islands,XM-DAC-41317,Green Climate Fund,2026-04-08,165,16212060.8
-CK,Cook Islands,XI-BRIDGE-6385676864,Global Environment Facility,2025-11-14,310,11552535.0
-CK,Cook Islands,47111,Adaptation Fund,2012-04-02,5284,1653620.0
-CK,Cook Islands,XI-IATI-UNPF,UN Pooled Funds,2022-12-31,1359,1646614.66
-CK,Cook Islands,XM-DAC-41301,Food and Agriculture Organization (FAO),2026-08-31,20,1605611.98
-CK,Cook Islands,XM-DAC-928,World Health Organization,2026-09-04,16,1260673.39
-CK,Cook Islands,XM-DAC-41116,UN Environment Programme,2025-05-01,507,533318.85
-FJ,Fiji,AU-5,Australia Aid,2025-06-30,447,914101649.88
-FJ,Fiji,XM-DAC-46004,Asian Development Bank,2026-07-31,51,795786208.5
-FJ,Fiji,44000,World Bank,2026-05-31,112,607267382.0
-FJ,Fiji,XM-DAC-41122,UNICEF,2026-07-31,51,497581716.0
-FJ,Fiji,NZ-1,New Zealand Ministry of Foreign Affairs and Trade,2026-08-04,47,354192526.73
-FJ,Fiji,XM-DAC-41114,United Nations Development Programme,2026-09-14,6,204279622.0
-FJ,Fiji,US-GOV-1,U.S. Agency for International Development,2026-06-30,82,66352226.12
-FJ,Fiji,XI-IATI-EC_INTPA,European Commission - Directorate-General for International Partnerships,2026-08-26,25,45017108.27
-FJ,Fiji,XM-DAC-41317,Green Climate Fund,2026-04-24,149,41400417.17
-FJ,Fiji,XM-DAC-41111,United Nations Capital Development Fund (UNCDF),2025-12-31,263,34675274.83
-FM,Micronesia,US-GOV-9,Department of the Interior,2025-06-26,451,1850348379.85
-FM,Micronesia,44000,World Bank,2026-06-30,82,180031960.0
-FM,Micronesia,US-GOV-1,U.S. Agency for International Development,2026-06-30,82,123669613.81
-FM,Micronesia,AU-5,Australia Aid,2025-06-30,447,75467660.14
-FM,Micronesia,XM-DAC-46004,Asian Development Bank,2026-07-31,51,64516307.17
-FM,Micronesia,NZ-1,New Zealand Ministry of Foreign Affairs and Trade,2026-08-04,47,15158899.95
-FM,Micronesia,XI-BRIDGE-6385676864,Global Environment Facility,2026-03-12,192,14581808.05
-FM,Micronesia,XM-DAC-41114,United Nations Development Programme,2026-08-31,20,14249583.0
-FM,Micronesia,US-GOV-7,Department of Defense,2020-01-01,2454,10110967.26
-FM,Micronesia,XI-IATI-EC_INTPA,European Commission - Directorate-General for International Partnerships,2025-12-16,278,9880235.7
-KI,Kiribati,AU-5,Australia Aid,2025-06-30,447,352504036.42
-KI,Kiribati,NZ-1,New Zealand Ministry of Foreign Affairs and Trade,2026-08-04,47,277022384.95
-KI,Kiribati,44000,World Bank,2026-06-30,82,195036091.0
-KI,Kiribati,XM-DAC-46004,Asian Development Bank,2026-07-31,51,126080030.51
-KI,Kiribati,XI-IATI-WBTF,World Bank Trust Funds,2021-04-30,1969,48839070.82
-KI,Kiribati,XM-DAC-41317,Green Climate Fund,2026-02-24,208,21732560.0
-KI,Kiribati,XI-IATI-EC_INTPA,European Commission - Directorate-General for International Partnerships,2026-08-21,30,19691957.39
-KI,Kiribati,XM-DAC-928,World Health Organization,2026-09-03,17,8221070.61
-KI,Kiribati,XM-DAC-41108,International Fund for Agricultural Development,2023-05-26,1213,7108129.5
-KI,Kiribati,XM-DAC-47136,Global Green Growth Institute (GGGI),2025-01-01,627,6639793.78
-MH,Marshall Islands,US-GOV-9,Department of the Interior,2025-06-27,450,1575488044.15
-MH,Marshall Islands,44000,World Bank,2026-06-30,82,195331566.0
-MH,Marshall Islands,XM-DAC-46004,Asian Development Bank,2026-07-31,51,56466311.48
-MH,Marshall Islands,XM-DAC-41317,Green Climate Fund,2026-04-08,165,52574621.39
-MH,Marshall Islands,US-GOV-1,U.S. Agency for International Development,2026-06-30,82,48889396.37
-MH,Marshall Islands,AU-5,Australia Aid,2025-06-30,447,40307002.83
-MH,Marshall Islands,XM-DAC-41114,United Nations Development Programme,2026-09-14,6,34378452.0
-MH,Marshall Islands,XI-IATI-WBTF,World Bank Trust Funds,2026-03-31,173,27717208.98
-MH,Marshall Islands,NZ-1,New Zealand Ministry of Foreign Affairs and Trade,2026-08-04,47,24015799.72
-MH,Marshall Islands,XI-BRIDGE-6385676864,Global Environment Facility,2025-11-14,310,14370356.03
-NR,Nauru,AU-5,Australia Aid,2025-06-30,447,311611017.06
-NR,Nauru,XM-DAC-46004,Asian Development Bank,2026-07-31,51,54592072.5
-NR,Nauru,NZ-1,New Zealand Ministry of Foreign Affairs and Trade,2026-08-04,47,46978468.86
-NR,Nauru,XM-DAC-41317,Green Climate Fund,2025-09-17,368,30458620.0
-NR,Nauru,XM-DAC-41114,United Nations Development Programme,2026-08-31,20,10912043.0
-NR,Nauru,XI-BRIDGE-6385676864,Global Environment Facility,2026-03-12,192,9212234.51
-NR,Nauru,CA-3,"Foreign Affairs, Trade and Development Canada (DFATD)",2024-06-19,823,3269039.28
-NR,Nauru,XM-DAC-41116,UN Environment Programme,2025-05-01,507,1137592.38
-NR,Nauru,XM-DAC-41301,Food and Agriculture Organization (FAO),2026-08-31,20,693256.22
-NR,Nauru,XI-IATI-CWSEC,The Commonwealth Secretariat,2025-12-20,274,512309.22
-NU,Niue,NZ-1,New Zealand Ministry of Foreign Affairs and Trade,2026-08-04,47,272712389.08
-NU,Niue,AU-5,Australia Aid,2025-06-30,447,38544382.47
-NU,Niue,XI-BRIDGE-6385676864,Global Environment Facility,2026-03-12,192,13165624.74
-NU,Niue,XM-DAC-41317,Green Climate Fund,2026-04-08,165,9663886.4
-NU,Niue,XM-DAC-41114,United Nations Development Programme,2026-08-31,20,7538561.0
-NU,Niue,CA-3,"Foreign Affairs, Trade and Development Canada (DFATD)",2024-06-19,823,806176.68
-NU,Niue,XI-IATI-UNPF,UN Pooled Funds,2022-12-31,1359,591983.63
-NU,Niue,XM-DAC-41301,Food and Agriculture Organization (FAO),2025-09-30,355,553551.26
-NU,Niue,XM-DAC-47136,Global Green Growth Institute (GGGI),2025-01-01,627,315221.67
-NU,Niue,XM-DAC-41116,UN Environment Programme,2025-05-01,507,257883.54
-PG,Papua New Guinea,AU-5,Australia Aid,2025-06-30,447,5150953528.37
-PG,Papua New Guinea,XM-DAC-46004,Asian Development Bank,2026-07-31,51,3273795397.05
-PG,Papua New Guinea,44000,World Bank,2026-06-30,82,826405264.0
-PG,Papua New Guinea,47045,"The Global Fund to Fight AIDS, Tuberculosis and Malaria",2026-07-01,81,452561033.5
-PG,Papua New Guinea,NZ-1,New Zealand Ministry of Foreign Affairs and Trade,2026-08-04,47,433030900.9
-PG,Papua New Guinea,XI-IATI-UNPF,UN Pooled Funds,2022-12-31,1359,431758820.51
-PG,Papua New Guinea,US-501c3-522318905,AidData,2014-01-01,4645,340876649.5
-PG,Papua New Guinea,XM-DAC-41122,UNICEF,2026-07-31,51,279219323.33
-PG,Papua New Guinea,US-GOV-1,U.S. Agency for International Development,2026-06-30,82,268360050.28
-PG,Papua New Guinea,XI-IATI-EC_INTPA,European Commission - Directorate-General for International Partnerships,2026-08-28,23,186570897.37
-PW,Palau,US-GOV-9,Department of the Interior,2025-06-10,467,320417970.0
-PW,Palau,XM-DAC-46004,Asian Development Bank,2026-07-31,51,180538115.1
-PW,Palau,AU-5,Australia Aid,2025-06-30,447,56023543.28
-PW,Palau,XI-BRIDGE-6385676864,Global Environment Facility,2026-03-12,192,18285478.61
-PW,Palau,US-GOV-11,Department of State,2026-06-01,111,16645140.31
-PW,Palau,NZ-1,New Zealand Ministry of Foreign Affairs and Trade,2026-08-04,47,15388305.75
-PW,Palau,XM-DAC-41114,United Nations Development Programme,2026-08-31,20,14002221.0
-PW,Palau,XM-DAC-41317,Green Climate Fund,2026-04-08,165,9886868.39
-PW,Palau,US-GOV-7,Department of Defense,2020-01-01,2454,9336969.46
-PW,Palau,US-GOV-1,U.S. Agency for International Development,2026-06-30,82,8658146.67
-SB,Solomon Islands,AU-5,Australia Aid,2025-06-30,447,1920912869.8
-SB,Solomon Islands,NZ-1,New Zealand Ministry of Foreign Affairs and Trade,2026-08-04,47,487319697.7
-SB,Solomon Islands,44000,World Bank,2026-06-30,82,395021195.0
-SB,Solomon Islands,XM-DAC-46004,Asian Development Bank,2026-07-31,51,287033253.55
-SB,Solomon Islands,XI-IATI-WBTF,World Bank Trust Funds,2026-03-31,173,149499554.26
-SB,Solomon Islands,XM-DAC-41317,Green Climate Fund,2026-06-22,90,94909869.5
-SB,Solomon Islands,US-GOV-11,Department of State,2025-11-20,304,48855340.27
-SB,Solomon Islands,XI-IATI-EC_INTPA,European Commission - Directorate-General for International Partnerships,2026-08-27,24,39042398.59
-SB,Solomon Islands,XI-IATI-UNPF,UN Pooled Funds,2022-12-31,1359,33277330.65
-SB,Solomon Islands,XM-DAC-41111,United Nations Capital Development Fund (UNCDF),2025-12-31,263,33030426.82
-TO,Tonga,AU-5,Australia Aid,2025-06-30,447,450702381.52
-TO,Tonga,NZ-1,New Zealand Ministry of Foreign Affairs and Trade,2026-08-05,46,360054495.49
-TO,Tonga,44000,World Bank,2026-06-30,82,312514529.0
-TO,Tonga,XM-DAC-46004,Asian Development Bank,2026-07-31,51,196041310.52
-TO,Tonga,US-501c3-522318905,AidData,2014-01-01,4645,43961119.7
-TO,Tonga,XM-DAC-41317,Green Climate Fund,2026-05-29,114,41745943.43
-TO,Tonga,XI-IATI-WBTF,World Bank Trust Funds,2026-03-31,173,34123660.96
-TO,Tonga,US-GOV-1,U.S. Agency for International Development,2026-04-30,143,23157185.78
-TO,Tonga,XM-DAC-41108,International Fund for Agricultural Development,2025-10-24,331,18324577.2
-TO,Tonga,US-GOV-10,Peace Corps,2025-12-31,263,13795122.21
-TV,Tuvalu,AU-5,Australia Aid,2025-06-30,447,181145282.35
-TV,Tuvalu,44000,World Bank,2026-06-30,82,172948008.0
-TV,Tuvalu,NZ-1,New Zealand Ministry of Foreign Affairs and Trade,2026-08-04,47,161043689.39
-TV,Tuvalu,XM-DAC-46004,Asian Development Bank,2026-07-31,51,60640662.97
-TV,Tuvalu,XM-DAC-41317,Green Climate Fund,2026-04-08,165,45673886.4
-TV,Tuvalu,XM-DAC-41114,United Nations Development Programme,2026-08-31,20,41281678.0
-TV,Tuvalu,XM-DAC-41111,United Nations Capital Development Fund (UNCDF),2025-12-31,263,18582092.62
-TV,Tuvalu,XI-BRIDGE-6385676864,Global Environment Facility,2026-03-12,192,15214340.95
-TV,Tuvalu,CA-3,"Foreign Affairs, Trade and Development Canada (DFATD)",2026-07-17,65,5393396.54
-TV,Tuvalu,XI-IATI-WBTF,World Bank Trust Funds,2024-11-30,659,4048535.42
-VU,Vanuatu,AU-5,Australian Aid,2025-06-30,447,767693481.12
-VU,Vanuatu,NZ-1,New Zealand Ministry of Foreign Affairs and Trade,2026-08-04,47,382353068.53
-VU,Vanuatu,US-GOV-18,Millennium Challenge Corporation,2019-08-31,2577,302088334.52
-VU,Vanuatu,44000,World Bank,2026-06-30,82,271317001.0
-VU,Vanuatu,XM-DAC-46004,Asian Development Bank,2026-07-31,51,79637630.46
-VU,Vanuatu,XM-DAC-41317,Green Climate Fund,2026-06-04,108,41401509.0
-VU,Vanuatu,XI-IATI-WBTF,World Bank Trust Funds,2024-07-31,781,40725763.55
-VU,Vanuatu,US-GOV-10,Peace Corps,2025-12-31,263,28003626.76
-VU,Vanuatu,XM-DAC-47136,Global Green Growth Institute,2025-04-01,537,19572908.95
-VU,Vanuatu,XI-BRIDGE-6385676864,Global Environment Facility,2026-03-12,192,18448587.65
-WS,Samoa,AU-5,Australian Aid,2025-06-30,447,440214548.52
-WS,Samoa,NZ-1,New Zealand Ministry of Foreign Affairs and Trade,2026-08-04,47,375798416.72
-WS,Samoa,44000,World Bank,2026-06-30,82,268924684.0
-WS,Samoa,XM-DAC-46004,Asian Development Bank,2026-07-31,51,201450909.44
-WS,Samoa,XM-DAC-41114,United Nations Development Programme,2026-09-14,6,78037551.0
-WS,Samoa,US-501c3-522318905,AidData,2014-01-01,4645,61388471.6
-WS,Samoa,XM-DAC-41111,United Nations Capital Development Fund (UNCDF),2020-12-31,2089,33619071.17
-WS,Samoa,XM-DAC-41317,Green Climate Fund,2026-03-28,176,32099556.0
-WS,Samoa,XI-IATI-EC_INTPA,European Commission - Directorate-General for International Partnerships,2026-08-19,32,26626109.47
-WS,Samoa,XI-IATI-WBTF,World Bank Trust Funds,2026-03-31,173,26186815.45
+CK,Cook Islands,NZ-1,New Zealand Ministry of Foreign Affairs and Trade,2026-08-04,48,363028339.15
+CK,Cook Islands,XM-DAC-46004,Asian Development Bank,2026-07-31,52,146283095.2
+CK,Cook Islands,AU-5,Australian Aid,2020-06-30,2274,41671778.32
+CK,Cook Islands,XM-DAC-41317,Green Climate Fund,2026-04-08,166,16212060.8
+CK,Cook Islands,XI-BRIDGE-6385676864,Global Environment Facility,2025-11-14,311,11552535.0
+CK,Cook Islands,47111,Adaptation Fund,2012-04-02,5285,1653620.0
+CK,Cook Islands,XI-IATI-UNPF,UN Pooled Funds,2022-12-31,1360,1646614.66
+CK,Cook Islands,XM-DAC-41301,Food and Agriculture Organization (FAO),2026-08-31,21,1605611.98
+CK,Cook Islands,XM-DAC-928,World Health Organization,2026-09-04,17,1260673.39
+CK,Cook Islands,XM-DAC-41116,UN Environment Programme,2025-05-01,508,533318.85
+FJ,Fiji,AU-5,Australia Aid,2025-06-30,448,914101649.88
+FJ,Fiji,XM-DAC-46004,Asian Development Bank,2026-07-31,52,795786208.5
+FJ,Fiji,44000,World Bank,2026-05-31,113,607267382.0
+FJ,Fiji,XM-DAC-41122,UNICEF,2026-07-31,52,497581716.0
+FJ,Fiji,NZ-1,New Zealand Ministry of Foreign Affairs and Trade,2026-08-04,48,354192526.73
+FJ,Fiji,XM-DAC-41114,United Nations Development Programme,2026-09-14,7,204279622.0
+FJ,Fiji,US-GOV-1,U.S. Agency for International Development,2026-06-30,83,66352226.12
+FJ,Fiji,XI-IATI-EC_INTPA,European Commission - Directorate-General for International Partnerships,2026-08-26,26,45017108.27
+FJ,Fiji,XM-DAC-41317,Green Climate Fund,2026-04-24,150,41400417.17
+FJ,Fiji,XM-DAC-41111,United Nations Capital Development Fund (UNCDF),2025-12-31,264,34675274.83
+FM,Micronesia,US-GOV-9,Department of the Interior,2025-06-26,452,1850348379.85
+FM,Micronesia,44000,World Bank,2026-06-30,83,180031960.0
+FM,Micronesia,US-GOV-1,U.S. Agency for International Development,2026-06-30,83,123669613.81
+FM,Micronesia,AU-5,Australia Aid,2025-06-30,448,75467660.14
+FM,Micronesia,XM-DAC-46004,Asian Development Bank,2026-07-31,52,64516307.17
+FM,Micronesia,NZ-1,New Zealand Ministry of Foreign Affairs and Trade,2026-08-04,48,15158899.95
+FM,Micronesia,XI-BRIDGE-6385676864,Global Environment Facility,2026-03-12,193,14581808.05
+FM,Micronesia,XM-DAC-41114,United Nations Development Programme,2026-08-31,21,14249583.0
+FM,Micronesia,US-GOV-7,Department of Defense,2020-01-01,2455,10110967.26
+FM,Micronesia,XI-IATI-EC_INTPA,European Commission - Directorate-General for International Partnerships,2025-12-16,279,9880235.7
+KI,Kiribati,AU-5,Australia Aid,2025-06-30,448,352504036.42
+KI,Kiribati,NZ-1,New Zealand Ministry of Foreign Affairs and Trade,2026-08-04,48,277022384.95
+KI,Kiribati,44000,World Bank,2026-06-30,83,195036091.0
+KI,Kiribati,XM-DAC-46004,Asian Development Bank,2026-07-31,52,126080030.51
+KI,Kiribati,XI-IATI-WBTF,World Bank Trust Funds,2021-04-30,1970,48839070.82
+KI,Kiribati,XM-DAC-41317,Green Climate Fund,2026-02-24,209,21732560.0
+KI,Kiribati,XI-IATI-EC_INTPA,European Commission - Directorate-General for International Partnerships,2026-08-21,31,19691957.39
+KI,Kiribati,XM-DAC-928,World Health Organization,2026-09-03,18,8221070.61
+KI,Kiribati,XM-DAC-41108,International Fund for Agricultural Development,2023-05-26,1214,7108129.5
+KI,Kiribati,XM-DAC-47136,Global Green Growth Institute (GGGI),2025-01-01,628,6639793.78
+MH,Marshall Islands,US-GOV-9,Department of the Interior,2025-06-27,451,1575488044.15
+MH,Marshall Islands,44000,World Bank,2026-06-30,83,195331566.0
+MH,Marshall Islands,XM-DAC-46004,Asian Development Bank,2026-07-31,52,56466311.48
+MH,Marshall Islands,XM-DAC-41317,Green Climate Fund,2026-04-08,166,52574621.39
+MH,Marshall Islands,US-GOV-1,U.S. Agency for International Development,2026-06-30,83,48889396.37
+MH,Marshall Islands,AU-5,Australia Aid,2025-06-30,448,40307002.83
+MH,Marshall Islands,XM-DAC-41114,United Nations Development Programme,2026-09-14,7,34378452.0
+MH,Marshall Islands,XI-IATI-WBTF,World Bank Trust Funds,2026-03-31,174,27717208.98
+MH,Marshall Islands,NZ-1,New Zealand Ministry of Foreign Affairs and Trade,2026-08-04,48,24015799.72
+MH,Marshall Islands,XI-BRIDGE-6385676864,Global Environment Facility,2025-11-14,311,14370356.03
+NR,Nauru,AU-5,Australia Aid,2025-06-30,448,311611017.06
+NR,Nauru,XM-DAC-46004,Asian Development Bank,2026-07-31,52,54592072.5
+NR,Nauru,NZ-1,New Zealand Ministry of Foreign Affairs and Trade,2026-08-04,48,46978468.86
+NR,Nauru,XM-DAC-41317,Green Climate Fund,2025-09-17,369,30458620.0
+NR,Nauru,XM-DAC-41114,United Nations Development Programme,2026-08-31,21,10912043.0
+NR,Nauru,XI-BRIDGE-6385676864,Global Environment Facility,2026-03-12,193,9212234.51
+NR,Nauru,CA-3,"Foreign Affairs, Trade and Development Canada (DFATD)",2024-06-19,824,3269039.28
+NR,Nauru,XM-DAC-41116,UN Environment Programme,2025-05-01,508,1137592.38
+NR,Nauru,XM-DAC-41301,Food and Agriculture Organization (FAO),2026-08-31,21,693256.22
+NR,Nauru,XI-IATI-CWSEC,The Commonwealth Secretariat,2025-12-20,275,512309.22
+NU,Niue,NZ-1,New Zealand Ministry of Foreign Affairs and Trade,2026-08-04,48,272712389.08
+NU,Niue,AU-5,Australia Aid,2025-06-30,448,38544382.47
+NU,Niue,XI-BRIDGE-6385676864,Global Environment Facility,2026-03-12,193,13165624.74
+NU,Niue,XM-DAC-41317,Green Climate Fund,2026-04-08,166,9663886.4
+NU,Niue,XM-DAC-41114,United Nations Development Programme,2026-08-31,21,7538561.0
+NU,Niue,CA-3,"Foreign Affairs, Trade and Development Canada (DFATD)",2024-06-19,824,806176.68
+NU,Niue,XI-IATI-UNPF,UN Pooled Funds,2022-12-31,1360,591983.63
+NU,Niue,XM-DAC-41301,Food and Agriculture Organization (FAO),2025-09-30,356,553551.26
+NU,Niue,XM-DAC-47136,Global Green Growth Institute (GGGI),2025-01-01,628,315221.67
+NU,Niue,XM-DAC-41116,UN Environment Programme,2025-05-01,508,257883.54
+PG,Papua New Guinea,AU-5,Australia Aid,2025-06-30,448,5150953528.37
+PG,Papua New Guinea,XM-DAC-46004,Asian Development Bank,2026-07-31,52,3273795397.05
+PG,Papua New Guinea,44000,World Bank,2026-06-30,83,826405264.0
+PG,Papua New Guinea,47045,"The Global Fund to Fight AIDS, Tuberculosis and Malaria",2026-07-01,82,452561033.5
+PG,Papua New Guinea,NZ-1,New Zealand Ministry of Foreign Affairs and Trade,2026-08-04,48,433030900.9
+PG,Papua New Guinea,XI-IATI-UNPF,UN Pooled Funds,2022-12-31,1360,431758820.51
+PG,Papua New Guinea,US-501c3-522318905,AidData,2014-01-01,4646,340876649.5
+PG,Papua New Guinea,XM-DAC-41122,UNICEF,2026-07-31,52,279219323.33
+PG,Papua New Guinea,US-GOV-1,U.S. Agency for International Development,2026-06-30,83,268360050.28
+PG,Papua New Guinea,XI-IATI-EC_INTPA,European Commission - Directorate-General for International Partnerships,2026-08-28,24,186570897.37
+PW,Palau,US-GOV-9,Department of the Interior,2025-06-10,468,320417970.0
+PW,Palau,XM-DAC-46004,Asian Development Bank,2026-07-31,52,180538115.1
+PW,Palau,AU-5,Australia Aid,2025-06-30,448,56023543.28
+PW,Palau,XI-BRIDGE-6385676864,Global Environment Facility,2026-03-12,193,18285478.61
+PW,Palau,US-GOV-11,Department of State,2026-06-01,112,16645140.31
+PW,Palau,NZ-1,New Zealand Ministry of Foreign Affairs and Trade,2026-08-04,48,15388305.75
+PW,Palau,XM-DAC-41114,United Nations Development Programme,2026-08-31,21,14002221.0
+PW,Palau,XM-DAC-41317,Green Climate Fund,2026-04-08,166,9886868.39
+PW,Palau,US-GOV-7,Department of Defense,2020-01-01,2455,9336969.46
+PW,Palau,US-GOV-1,U.S. Agency for International Development,2026-06-30,83,8658146.67
+SB,Solomon Islands,AU-5,Australia Aid,2025-06-30,448,1920912869.8
+SB,Solomon Islands,NZ-1,New Zealand Ministry of Foreign Affairs and Trade,2026-08-04,48,487319697.7
+SB,Solomon Islands,44000,World Bank,2026-06-30,83,395021195.0
+SB,Solomon Islands,XM-DAC-46004,Asian Development Bank,2026-07-31,52,287033253.55
+SB,Solomon Islands,XI-IATI-WBTF,World Bank Trust Funds,2026-03-31,174,149499554.26
+SB,Solomon Islands,XM-DAC-41317,Green Climate Fund,2026-06-22,91,94909869.5
+SB,Solomon Islands,US-GOV-11,Department of State,2025-11-20,305,48855340.27
+SB,Solomon Islands,XI-IATI-EC_INTPA,European Commission - Directorate-General for International Partnerships,2026-08-27,25,39042398.59
+SB,Solomon Islands,XI-IATI-UNPF,UN Pooled Funds,2022-12-31,1360,33277330.65
+SB,Solomon Islands,XM-DAC-41111,United Nations Capital Development Fund (UNCDF),2025-12-31,264,33030426.82
+TO,Tonga,AU-5,Australia Aid,2025-06-30,448,450702381.52
+TO,Tonga,NZ-1,New Zealand Ministry of Foreign Affairs and Trade,2026-08-05,47,360054495.49
+TO,Tonga,44000,World Bank,2026-06-30,83,312514529.0
+TO,Tonga,XM-DAC-46004,Asian Development Bank,2026-07-31,52,196041310.52
+TO,Tonga,US-501c3-522318905,AidData,2014-01-01,4646,43961119.7
+TO,Tonga,XM-DAC-41317,Green Climate Fund,2026-05-29,115,41745943.43
+TO,Tonga,XI-IATI-WBTF,World Bank Trust Funds,2026-03-31,174,34123660.96
+TO,Tonga,US-GOV-1,U.S. Agency for International Development,2026-04-30,144,23157185.78
+TO,Tonga,XM-DAC-41108,International Fund for Agricultural Development,2025-10-24,332,18324577.2
+TO,Tonga,US-GOV-10,Peace Corps,2025-12-31,264,13795122.21
+TV,Tuvalu,AU-5,Australia Aid,2025-06-30,448,181145282.35
+TV,Tuvalu,44000,World Bank,2026-06-30,83,172948008.0
+TV,Tuvalu,NZ-1,New Zealand Ministry of Foreign Affairs and Trade,2026-08-04,48,161043689.39
+TV,Tuvalu,XM-DAC-46004,Asian Development Bank,2026-07-31,52,60640662.97
+TV,Tuvalu,XM-DAC-41317,Green Climate Fund,2026-04-08,166,45673886.4
+TV,Tuvalu,XM-DAC-41114,United Nations Development Programme,2026-08-31,21,41281678.0
+TV,Tuvalu,XM-DAC-41111,United Nations Capital Development Fund (UNCDF),2025-12-31,264,18582092.62
+TV,Tuvalu,XI-BRIDGE-6385676864,Global Environment Facility,2026-03-12,193,15214340.95
+TV,Tuvalu,CA-3,"Foreign Affairs, Trade and Development Canada (DFATD)",2026-07-17,66,5393396.54
+TV,Tuvalu,XI-IATI-WBTF,World Bank Trust Funds,2024-11-30,660,4048535.42
+VU,Vanuatu,AU-5,Australian Aid,2025-06-30,448,767693481.12
+VU,Vanuatu,NZ-1,New Zealand Ministry of Foreign Affairs and Trade,2026-08-04,48,382353068.53
+VU,Vanuatu,US-GOV-18,Millennium Challenge Corporation,2019-08-31,2578,302088334.52
+VU,Vanuatu,44000,World Bank,2026-06-30,83,271317001.0
+VU,Vanuatu,XM-DAC-46004,Asian Development Bank,2026-07-31,52,79637630.46
+VU,Vanuatu,XM-DAC-41317,Green Climate Fund,2026-06-04,109,41401509.0
+VU,Vanuatu,XI-IATI-WBTF,World Bank Trust Funds,2024-07-31,782,40725763.55
+VU,Vanuatu,US-GOV-10,Peace Corps,2025-12-31,264,28003626.76
+VU,Vanuatu,XM-DAC-47136,Global Green Growth Institute,2025-04-01,538,19572908.95
+VU,Vanuatu,XI-BRIDGE-6385676864,Global Environment Facility,2026-03-12,193,18448587.65
+WS,Samoa,AU-5,Australian Aid,2025-06-30,448,440214548.52
+WS,Samoa,NZ-1,New Zealand Ministry of Foreign Affairs and Trade,2026-08-04,48,375798416.72
+WS,Samoa,44000,World Bank,2026-06-30,83,268924684.0
+WS,Samoa,XM-DAC-46004,Asian Development Bank,2026-07-31,52,201450909.44
+WS,Samoa,XM-DAC-41114,United Nations Development Programme,2026-09-14,7,78037551.0
+WS,Samoa,US-501c3-522318905,AidData,2014-01-01,4646,61388471.6
+WS,Samoa,XM-DAC-41111,United Nations Capital Development Fund (UNCDF),2020-12-31,2090,33619071.17
+WS,Samoa,XM-DAC-41317,Green Climate Fund,2026-03-28,177,32099556.0
+WS,Samoa,XI-IATI-EC_INTPA,European Commission - Directorate-General for International Partnerships,2026-08-19,33,26626109.47
+WS,Samoa,XI-IATI-WBTF,World Bank Trust Funds,2026-03-31,174,26186815.45
