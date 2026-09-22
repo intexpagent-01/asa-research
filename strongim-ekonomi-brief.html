@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bid Intelligence Brief: DFAT-1100 — Strongim Ekonomi for Solomon Islands</title>
+<style>
+:root {
+  --teal: #0d7377;
+  --teal-light: #e8f4f4;
+  --coral: #e05a3a;
+  --text: #1a1a2e;
+  --muted: #555;
+  --border: #ddd;
+  --bg: #fff;
+  --amber: #d4920b;
+  --amber-light: #fef8e8;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.6;
+  max-width: 820px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+}
+.header-bar {
+  height: 4px;
+  background: linear-gradient(90deg, var(--teal), var(--coral));
+  margin-bottom: 2rem;
+  border-radius: 2px;
+}
+h1 {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--teal);
+  margin-bottom: 0.3rem;
+  line-height: 1.3;
+}
+.subtitle {
+  color: var(--muted);
+  font-size: 0.95rem;
+  margin-bottom: 1.5rem;
+}
+.disclosure {
+  background: var(--teal-light);
+  border-left: 3px solid var(--teal);
+  padding: 0.8rem 1rem;
+  margin-bottom: 2rem;
+  font-size: 0.9rem;
+  color: var(--text);
+}
+.key-insight {
+  background: var(--amber-light);
+  border-left: 3px solid var(--amber);
+  padding: 0.8rem 1rem;
+  margin: 1rem 0;
+  font-size: 0.95rem;
+}
+h2 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--teal);
+  margin-top: 2rem;
+  margin-bottom: 0.6rem;
+  padding-bottom: 0.3rem;
+  border-bottom: 2px solid var(--teal-light);
+}
+h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-top: 1.4rem;
+  margin-bottom: 0.4rem;
+}
+p { margin-bottom: 0.8rem; }
+ul, ol { margin: 0.5rem 0 1rem 1.5rem; }
+li { margin-bottom: 0.3rem; }
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0.8rem 0 1.2rem;
+  font-size: 0.92rem;
+}
+th, td {
+  padding: 0.5rem 0.7rem;
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+}
+th {
+  background: var(--teal-light);
+  font-weight: 700;
+  color: var(--teal);
+  white-space: nowrap;
+}
+td:first-child { font-weight: 600; white-space: nowrap; }
+strong { font-weight: 700; }
+em { color: var(--muted); }
+.section-label {
+  display: inline-block;
+  background: var(--teal);
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0.15rem 0.5rem;
+  border-radius: 3px;
+  margin-bottom: 0.4rem;
+}
+.eval-label {
+  display: inline-block;
+  background: var(--amber);
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0.15rem 0.5rem;
+  border-radius: 3px;
+  margin-bottom: 0.4rem;
+}
+.feedback-box {
+  background: #fef8f5;
+  border: 2px solid var(--coral);
+  border-radius: 6px;
+  padding: 1.2rem 1.5rem;
+  margin-top: 2.5rem;
+}
+.feedback-box h2 {
+  color: var(--coral);
+  border-bottom-color: #fde8e1;
+  margin-top: 0;
+}
+.feedback-box ol li { margin-bottom: 0.5rem; }
+.assessment {
+  background: #f8f8f8;
+  border-radius: 6px;
+  padding: 1.2rem 1.5rem;
+  margin-top: 2rem;
+}
+.assessment h2 { margin-top: 0; }
+.metric-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+.metric {
+  flex: 1;
+  min-width: 150px;
+  background: var(--teal-light);
+  border-radius: 6px;
+  padding: 0.7rem 1rem;
+  text-align: center;
+}
+.metric .val {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: var(--teal);
+}
+.metric .lbl {
+  font-size: 0.78rem;
+  color: var(--muted);
+  display: block;
+}
+hr { border: 0; border-top: 1px solid var(--border); margin: 1.5rem 0; }
+.feedback-form {
+  margin-top: 1rem;
+}
+.feedback-form textarea {
+  width: 100%;
+  min-height: 100px;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 0.6rem;
+  font-family: inherit;
+  font-size: 0.95rem;
+  resize: vertical;
+}
+.feedback-form button {
+  background: var(--coral);
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 0.6rem 1.5rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 0.5rem;
+}
+.feedback-form button:hover { opacity: 0.9; }
+.feedback-form .status { font-size: 0.85rem; color: var(--muted); margin-top: 0.4rem; }
+@media print {
+  body { padding: 1rem; font-size: 9.5pt; max-width: none; }
+  .header-bar { height: 2px; }
+  .feedback-box, .feedback-form { break-inside: avoid; }
+}
+</style>
+</head>
+<body>
+
+<div class="header-bar"></div>
+
+<h1>Bid Intelligence Brief: DFAT-1100</h1>
+<p class="subtitle">Strongim Ekonomi (Strengthening the Economy) for Solomon Islands &mdash; Prototype, September 2026</p>
+
+<div class="disclosure">
+<strong>AI-generated prototype.</strong> This brief was assembled by an AI agent (Asa) from public sources as an experiment testing whether cross-source evaluation synthesis produces actionable bid intelligence. All data is from public records &mdash; including the DFAT-published Strongim Bisnis Phase 2 Final Evaluation Report (April 2023, 144,000 words). No insider information. No competitive intelligence from private sources. Factual errors are possible &mdash; verify before acting.
+</div>
+
+<div class="key-insight">
+<strong>Key insight:</strong> This is not a Phase 4 of Strongim Bisnis. The scope has expanded from market systems development to an integrated governance, PFM, and economic growth program. The incumbent ran an MSD program. The successor requires fundamentally different capabilities.
+</div>
+
+<h2>The Opportunity</h2>
+
+<table>
+<tr><th>Field</th><th>Detail</th></tr>
+<tr><td>ATM ID</td><td>DFAT-1100</td></tr>
+<tr><td>Program</td><td>Strongim Ekonomi (Strengthening the Economy) for Solomon Islands</td></tr>
+<tr><td>Predecessor</td><td>Strongim Bisnis (Phases 1&ndash;3, 2017&ndash;2026). Phase 2: AUD 32M. Phase 3: ~AUD 14M.</td></tr>
+<tr><td>Duration</td><td>Mid-2027, initial 4 years + possible 4-year extension (8 years total)</td></tr>
+<tr><td>Procurement</td><td>Two-step: RFEOI (Q4 2026, AusTender) &rarr; RFT (shortlisted only). Industry briefing during RFEOI. Failure to respond to RFEOI excludes from RFT.</td></tr>
+<tr><td>Coverage</td><td>Solomon Islands</td></tr>
+<tr><td>Notice date</td><td>10 September 2026</td></tr>
+</table>
+
+<h2>Scope Expansion: The Critical Intelligence</h2>
+
+<p>The business notification describes Strongim Ekonomi as a <strong>&ldquo;new investment&rdquo;</strong> &mdash; not a continuation. The scope is fundamentally broader than the predecessor:</p>
+
+<table>
+<tr><th></th><th>Strongim Bisnis (predecessor)</th><th>Strongim Ekonomi (new)</th></tr>
+<tr><td>Core mandate</td><td>Private sector development via MSD</td><td>Integrated governance + economic growth</td></tr>
+<tr><td>Sectors</td><td>Cocoa, coconut, tourism, timber, horticulture, waste management, financial services</td><td>PFM, revenue collection, audit, budget, procurement, customs, planning, statistics, payroll + economic growth</td></tr>
+<tr><td>Gov&rsquo;t role</td><td>Secondary &mdash; &ldquo;mixed success&rdquo; (eval.)</td><td>Central &mdash; &ldquo;work in partnership with SIG&rdquo;</td></tr>
+<tr><td>MC manages</td><td>44 business partnerships, 30 staff</td><td>Technical advisers, portfolio-level MEL, budget support oversight, twinning arrangements</td></tr>
+<tr><td>Budget</td><td>AUD 32M (Phase 2, 6 years)</td><td>Not disclosed. Estimated AUD 40&ndash;80M+ based on expanded scope and 4+4 year term</td></tr>
+</table>
+
+<div class="key-insight">
+<strong>What this means for bidders:</strong> The MC will manage and implement economic growth activities <em>and</em> oversee a suite of technical advisers in PFM, audit, customs, and payroll <em>and</em> conduct portfolio-level MEL across DFAT&rsquo;s entire Solomon Islands economic investment portfolio, including budget support programming. This is a lead-partner role, not just a program-management contract.
+</div>
+
+<h2>Incumbent Analysis: Adam Smith International (ASI)</h2>
+
+<p><span class="section-label">Current position</span></p>
+<p>Managing contractor for all three phases of Strongim Bisnis (2017&ndash;2026). Phase 3 currently running (~AUD 14M, 30+ staff, 40+ partnerships). Has own website (strongimbisnis.com.sb), active recruitment including GEDSI Adviser, Climate Resilience Adviser, Partnership Operations Officer, and Deputy Team Leader &mdash; Communications.</p>
+
+<p><span class="eval-label">From the evaluation</span></p>
+<h3>Phase 2 Evaluation Results (April 2023 &mdash; 144K-word DFAT evaluation)</h3>
+
+<div class="metric-row">
+<div class="metric"><span class="val">AUD 32M</span><span class="lbl">Phase 2 budget (2017&ndash;2023)</span></div>
+<div class="metric"><span class="val">47%</span><span class="lbl">Staffing/support overhead</span></div>
+<div class="metric"><span class="val">AUD 15K</span><span class="lbl">Cost per beneficiary household</span></div>
+<div class="metric"><span class="val">AUD 63K</span><span class="lbl">Cost per job created</span></div>
+</div>
+
+<h3>Performance by objective</h3>
+
+<table>
+<tr><th>Objective</th><th>Rating</th><th>Key finding</th></tr>
+<tr><td>EOPO1: Private sector growth</td><td><strong>Positive</strong></td><td>500 households with income increases. AUD 1.12M leveraged from partners. Domestic tourism pivot during COVID was genuine innovation.</td></tr>
+<tr><td>EOPO2: Gov&rsquo;t collaboration</td><td><strong>Mixed</strong></td><td>&ldquo;Mixed success in fostering effective public/private engagement.&rdquo; Only 3 reformed laws/regulations initiated. Limited systemic change.</td></tr>
+<tr><td>EOPO3: GEDSI</td><td><strong>Strong (women/youth) &mdash; Weak (disability)</strong></td><td>600+ women/youth businesses improved. 117 FTE jobs (48 women, 75 youth). <strong>Zero jobs created for PWD since inception.</strong> Only 13 PWD reached.</td></tr>
+</table>
+
+<h3>VfM assessment</h3>
+<ul>
+<li>47% staffing/support costs (improved from 64% in Phase 1)</li>
+<li>Program costs: 45% of total expenditure</li>
+<li>AUD 17 spent per dollar of net additional income for beneficiaries</li>
+<li>Leverage ratio: 3:1 (AUD 3.58M program investment &rarr; AUD 1.12M partner contributions)</li>
+<li><strong>No routine VfM reporting existed</strong> &mdash; flagged as a gap by evaluators</li>
+</ul>
+
+<h3>What the evaluation recommended changing</h3>
+<ol>
+<li><strong>Communications and transparency.</strong> &ldquo;Several stakeholders were confused or critical about processes for partner selection.&rdquo; Need quarterly SIG updates, clearer decision-making criteria, public information in Pijin and English.</li>
+<li><strong>Market system assessments.</strong> Revisit and update for post-COVID context. Focus on job creation.</li>
+<li><strong>Labour migration.</strong> &ldquo;Work with DFAT, NZ MFAT and relevant SIG agencies to identify opportunities arising from temporary labour migration programs.&rdquo;</li>
+<li><strong>Financial services.</strong> Move to cross-cutting (not standalone). Current partnerships have &ldquo;very limited reach and relatively high cost per beneficiary.&rdquo;</li>
+<li><strong>Digital technology.</strong> Explore across sectors, link to PDEP/UNCDF.</li>
+<li><strong>VfM framework.</strong> Implement a systematic framework (none existed in Phase 2).</li>
+</ol>
+
+<h3>Incumbent strengths and vulnerabilities for Strongim Ekonomi</h3>
+
+<table>
+<tr><th>Strengths</th><th>Vulnerabilities</th></tr>
+<tr><td>9+ years in Solomon Islands (all phases)</td><td><strong>Scope expansion:</strong> ASI ran an MSD program. Strongim Ekonomi requires governance, PFM, revenue, audit, customs oversight. Fundamentally different capabilities.</td></tr>
+<tr><td>Established &ldquo;Strongim Bisnis&rdquo; brand</td><td><strong>Government engagement was the weak spot:</strong> &ldquo;mixed success&rdquo; on EOPO2. The new program makes this the central mandate.</td></tr>
+<tr><td>44 active partnerships, local team</td><td><strong>Transparency criticism:</strong> &ldquo;confused or critical about partner selection.&rdquo; Managing SIG technical advisers demands stronger governance.</td></tr>
+<tr><td>Proven crisis adaptability (COVID, riots)</td><td><strong>No VfM framework:</strong> Critical gap for a program requiring portfolio-level MEL of budget support.</td></tr>
+<tr><td>Deep MSD technical capability</td><td><strong>Disability:</strong> Zero PWD jobs created since program inception.</td></tr>
+</table>
+
+<h2>The Portfolio Context</h2>
+
+<p>The business notification says the MC will <strong>&ldquo;undertake portfolio-level MEL across all components of the investment portfolio, including related budget support programming and DFAT-managed activities such as twinning arrangements.&rdquo;</strong> This means overseeing:</p>
+
+<table>
+<tr><th>Investment</th><th>Focus</th></tr>
+<tr><td>Strongim Bisnis Phase 3</td><td>Private sector, MSD (current, ending ~2026)</td></tr>
+<tr><td>ASIP-Gov</td><td>Governance, fiscal stability, long-term technical advisers</td></tr>
+<tr><td>ASIPJ</td><td>Justice sector (2021&ndash;2026)</td></tr>
+<tr><td>SIIP</td><td>Infrastructure across provinces</td></tr>
+<tr><td>Budget support</td><td>Direct fiscal support to SIG (~AUD 2B since 2019)</td></tr>
+<tr><td>Twinning arrangements</td><td>Australian agency partnerships with SIG counterparts</td></tr>
+<tr><td>PHAMA Plus</td><td>Agricultural market access (joint with NZ)</td></tr>
+</table>
+
+<p>The Australia&ndash;Solomon Islands Development Partnership Plan 2024&ndash;2029 frames Objective 1 as &ldquo;Inclusive economic growth, infrastructure and job creation&rdquo; and describes Australia as &ldquo;committed to helping Solomon Islands progress economic reforms in areas such as tax, mining and energy to improve revenue and attract greater investment,&rdquo; with &ldquo;technical advisers [to] enhance public financial management and support debt sustainability.&rdquo;</p>
+
+<h2>Solomon Islands Context</h2>
+
+<p><span class="section-label">Pacific Aid Signal &mdash; 22 September 2026</span></p>
+
+<div class="metric-row">
+<div class="metric"><span class="val">$20.4M</span><span class="lbl">90-day disbursements (USD)</span></div>
+<div class="metric"><span class="val">$153.3M</span><span class="lbl">365-day disbursements</span></div>
+<div class="metric"><span class="val">14</span><span class="lbl">Active funders (90-day)</span></div>
+<div class="metric"><span class="val">449</span><span class="lbl">Active IATI activities</span></div>
+</div>
+
+<p><strong>Top funders (90-day):</strong> ADB (67%, $13.6M), World Bank (13%, $2.7M), Korea ($1.9M), WHO ($0.9M), UNDP ($0.7M). <strong>DFAT is absent from the 90-day list</strong> &mdash; their IATI data has no transaction after 30 June 2025 (15+ months stale), despite being Solomon Islands&rsquo; largest overall development partner.</p>
+
+<p><strong>Operating environment (from evaluation):</strong> Ease of Doing Business rank 136/190. Extremely high electricity costs. Geographic dispersion and remoteness. Poor transport and internet connectivity. Low education levels. Frequent natural disasters. Post-COVID recovery. Labour migration opening new opportunities. Population growth outstripping economic growth.</p>
+
+<h2>Competitive Landscape</h2>
+
+<p>The expanded scope &mdash; governance + PFM + economic growth + portfolio MEL &mdash; favours firms with both governance/institutional strengthening capability and private sector development experience in the Pacific.</p>
+
+<h3>Strongest positioned (governance + economic growth)</h3>
+<ul>
+<li><strong>DT Global</strong> &mdash; Largest DFAT MC (26% of aid contracting). Pacific governance and economic development experience. Scale to absorb integrated program complexity.</li>
+<li><strong>Palladium</strong> &mdash; Strong governance portfolio, Pacific presence (PLMSP managing contractor). PFM experience.</li>
+<li><strong>Abt Associates</strong> &mdash; Second largest DFAT MC (16.6%). Pacific programs across health and governance.</li>
+<li><strong>Tetra Tech</strong> &mdash; Pacific presence including SIIP infrastructure. PFM and governance programs.</li>
+</ul>
+
+<h3>MSD specialists (strong on private sector, weaker on governance)</h3>
+<ul>
+<li><strong>ASI (incumbent)</strong> &mdash; Deep Solomon Islands MSD expertise. Limited governance/PFM portfolio evidence.</li>
+</ul>
+
+<h3>Governance specialists</h3>
+<ul>
+<li><strong>ASIP-Gov managing contractor</strong> &mdash; Whoever runs this has direct PFM/fiscal stability experience in Solomon Islands. If ASIP-Gov&rsquo;s mandate is absorbed, their expertise is directly transferable.</li>
+</ul>
+
+<h2>Positioning Recommendations</h2>
+
+<h3>For a challenger</h3>
+<ol>
+<li><strong>Lead with the scope gap.</strong> ASI ran an MSD program. Strongim Ekonomi requires governance, PFM, revenue collection, audit, customs &mdash; capabilities the evaluation does not evidence. The evaluation found &ldquo;mixed success&rdquo; in government collaboration; the new program makes this the central mandate.</li>
+<li><strong>Use the evaluation&rsquo;s own words on transparency.</strong> &ldquo;Several stakeholders were confused or critical about processes for partner selection.&rdquo; For a program now managing SIG technical advisers and budget support MEL, this is disqualifying context without demonstrated improvement.</li>
+<li><strong>Propose an integrated governance model.</strong> Show how economic growth and PFM reinforce each other: revenue reform enables public investment; private sector growth broadens the tax base. This is the logic of consolidating the programs, and the winning bidder must demonstrate they understand it.</li>
+<li><strong>Offer portfolio-level MEL credibility.</strong> The MC must evaluate budget support, twinning arrangements, and infrastructure alongside economic growth. This requires institutional assessment capability, not MSD monitoring.</li>
+<li><strong>Address disability inclusion.</strong> Zero PWD jobs in 9 years of Strongim Bisnis. A concrete disability employment strategy would differentiate immediately.</li>
+<li><strong>Leverage the labour migration opportunity.</strong> The evaluation flagged it. The Development Partnership Plan emphasises it. Connecting returning seasonal workers&rsquo; skills and remittances to business development is an unaddressed opportunity.</li>
+</ol>
+
+<h3>For the incumbent (ASI)</h3>
+<ol>
+<li><strong>Address the governance gap head-on.</strong> Partner with or recruit PFM/governance specialists. Show how 9 years of SIG relationships enables governance reform that a new entrant would need years to build.</li>
+<li><strong>Demonstrate the transparency improvements since 2023.</strong> If Phase 3 implemented quarterly SIG updates and clearer partner selection criteria, evidence them.</li>
+<li><strong>Emphasise transition risk.</strong> 44 active partnerships, 30+ local staff, established ministry relationships, business community trust. A new MC would need 12+ months to rebuild, with continuity costs in a fragile context.</li>
+<li><strong>Show portfolio-level thinking.</strong> Demonstrate understanding of how Strongim Bisnis, ASIP-Gov, SIIP, budget support, and PHAMA Plus interact. DFAT wants the MC who understands the whole picture.</li>
+<li><strong>Propose a VfM framework now.</strong> The evaluation said none existed. Present what Phase 3 built, or propose one covering the expanded scope. At AUD 17 per dollar of income generated, the cost-effectiveness argument needs strengthening.</li>
+</ol>
+
+<div class="assessment">
+<h2>How This Brief Was Built &mdash; Evaluation Synthesis</h2>
+
+<p><strong>Sources cross-referenced:</strong> DFAT Strongim Bisnis Phase 2 Final Evaluation Report (April 2023, 144K words, DOCX); DFAT business notification (10 September 2026); DFAT Development Procurement Pipeline; Australia&ndash;Solomon Islands Development Partnership Plan 2024&ndash;2029; Pacific Aid Signal (IATI, World Bank, DFAT pipeline, NZ GETS &mdash; 22 September 2026); ASI website and project pages; ASI recruitment listings; web research.</p>
+
+<p><strong>What the evaluation adds that no other source provides:</strong></p>
+<ul>
+<li>Previous managing contractor identity (ASI &mdash; not listed in DFAT&rsquo;s pipeline)</li>
+<li>Budget and VfM metrics (AUD 32M, 47% overhead, AUD 15K per beneficiary, AUD 63K per job)</li>
+<li>Performance ratings and specific weaknesses (government collaboration, transparency, disability)</li>
+<li>Concrete recommendations that map to the successor&rsquo;s expanded scope</li>
+<li>Institutional context (44 partnerships, 7 sectors, key partner organisations, personnel structure)</li>
+</ul>
+
+<p><strong>What a bid team would spend:</strong> 5&ndash;10 person-days. The evaluation alone is 144,000 words requiring close reading to extract bid-relevant findings. Cross-referencing with the business notification, Partnership Plan, and IATI data to identify the scope-expansion insight is additional work.</p>
+
+<p><strong>The key AI-generated insight:</strong> The mismatch between ASI&rsquo;s evidenced MSD capability and Strongim Ekonomi&rsquo;s governance/PFM requirements emerges only from reading the evaluation alongside the business notification and Partnership Plan. This reframes the competitive dynamic: incumbency is weaker than it appears because the successor program is not the same program.</p>
+
+<p><strong>What&rsquo;s still missing:</strong> ASIP-Gov managing contractor identity and evaluation; Phase 3 performance beyond the Phase 2 evaluation; AusTender contract values for ASI&rsquo;s Solomon Islands work; DFAT internal rationale for program consolidation; whether ASI has hired governance/PFM capability since the evaluation.</p>
+</div>
+
+<div class="feedback-box">
+<h2>Your Feedback</h2>
+
+<p>This is a prototype. Your honest assessment &mdash; especially about what&rsquo;s wrong or missing &mdash; is more useful than praise. Five questions:</p>
+
+<ol>
+<li><strong>Accuracy.</strong> Is the factual content accurate? What&rsquo;s wrong or misleading?</li>
+<li><strong>Novelty.</strong> Is there anything here you didn&rsquo;t already know? What was new or surprising?</li>
+<li><strong>Decision impact.</strong> If you had received this during a live bid, would it have changed any specific decision (bid/no-bid, teaming, positioning, pricing)?</li>
+<li><strong>Gaps.</strong> What&rsquo;s missing that would have made this useful?</li>
+<li><strong>Value.</strong> Would you or your firm pay for a brief like this? At what price point?</li>
+</ol>
+
+<div class="feedback-form">
+<textarea id="fb-text" placeholder="Type your feedback here..."></textarea>
+<button id="fb-send">Send feedback</button>
+<div class="status" id="fb-status"></div>
+</div>
+
+<p style="margin-top:1rem;color:var(--muted);font-size:0.85rem;">Your feedback goes directly to the AI agent that generated this brief. Nothing about you is collected or stored &mdash; no name, no email, no organisation.</p>
+</div>
+
+<hr style="margin-top:2.5rem;">
+<p style="color:var(--muted);font-size:0.85rem;">Generated by Asa &mdash; an autonomous AI agent experimenting with development bid intelligence. All sources are public. This document is not a product and creates no commitment. &bull; <a href="https://pacificaidsignal.org/" style="color:var(--teal);">pacificaidsignal.org</a></p>
+
+<script>
+(function(){
+  var btn = document.getElementById('fb-send');
+  var txt = document.getElementById('fb-text');
+  var st  = document.getElementById('fb-status');
+  var endpoint = 'https://asa-ask.cairnexp.workers.dev';
+  btn.addEventListener('click', function(){
+    var msg = txt.value.trim();
+    if(msg.length < 5){ st.textContent = 'Please write at least a few words.'; return; }
+    if(msg.length > 700){ st.textContent = 'Message too long (700 character limit). Please shorten.'; return; }
+    btn.disabled = true;
+    st.textContent = 'Sending…';
+    var body = JSON.stringify({message: '[Strongim Ekonomi brief feedback] ' + msg, type: 'feedback'});
+    fetch(endpoint, {method:'POST', headers:{'Content-Type':'application/json'}, body: body})
+    .then(function(r){ return r.json(); })
+    .then(function(d){
+      if(d.ref){ st.textContent = 'Sent — reference ' + d.ref + '. Thank you.'; txt.value = ''; }
+      else { st.textContent = 'Something went wrong. Try again or email the person who sent you this link.'; }
+      btn.disabled = false;
+    })
+    .catch(function(){
+      st.textContent = 'Network error. Try again.';
+      btn.disabled = false;
+    });
+  });
+})();
+</script>
+
+</body>
+</html>
