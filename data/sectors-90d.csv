@@ -1,27 +1,27 @@
 country_code,country_name,sector_code,sector_name,disbursements_90d_usd,percentage
-CK,Cook Islands,123,Non-communicable diseases,132544.49,16.24
-CK,Cook Islands,232,"Energy generation, renewable",119839.07,14.68
-CK,Cook Islands,510,General budget support,118738.49,14.55
-CK,Cook Islands,151,Government & civil society,107036.35,13.12
-CK,Cook Islands,313,Fishing,75677.37,9.27
-CK,Cook Islands,122,Basic health,46829.29,5.74
-FJ,Fiji,410,Environmental protection,7725050.19,16.79
-FJ,Fiji,231,Energy policy,6266388.0,13.62
-FJ,Fiji,232,"Energy generation, renewable",4601809.55,10.0
-FJ,Fiji,151,Government & civil society,4098228.7,8.9
-FJ,Fiji,140,Water & sanitation,3916903.41,8.51
-FJ,Fiji,122,Basic health,3589909.26,7.8
-FM,Micronesia,220,Communications,762757.0,22.15
-FM,Micronesia,140,Water & sanitation,513701.59,14.91
-FM,Micronesia,113,Secondary education,368311.75,10.69
-FM,Micronesia,236,Energy distribution,366589.49,10.64
-FM,Micronesia,232,"Energy generation, renewable",359757.89,10.45
-FM,Micronesia,410,Environmental protection,239085.41,6.94
-KI,Kiribati,122,Basic health,2203256.98,21.22
+CK,Cook Islands,123,Non-communicable diseases,132572.35,17.18
+CK,Cook Islands,232,"Energy generation, renewable",119839.07,15.53
+CK,Cook Islands,510,General budget support,118738.49,15.39
+CK,Cook Islands,313,Fishing,75677.37,9.81
+CK,Cook Islands,151,Government & civil society,66610.95,8.63
+CK,Cook Islands,122,Basic health,46839.03,6.07
+FJ,Fiji,410,Environmental protection,7725050.19,16.93
+FJ,Fiji,231,Energy policy,6266388.0,13.73
+FJ,Fiji,232,"Energy generation, renewable",4601809.55,10.09
+FJ,Fiji,151,Government & civil society,4040478.14,8.86
+FJ,Fiji,140,Water & sanitation,3916903.41,8.58
+FJ,Fiji,122,Basic health,3589909.26,7.87
+FM,Micronesia,220,Communications,762757.0,22.35
+FM,Micronesia,140,Water & sanitation,513701.59,15.05
+FM,Micronesia,113,Secondary education,368311.75,10.79
+FM,Micronesia,236,Energy distribution,366589.49,10.74
+FM,Micronesia,232,"Energy generation, renewable",359757.89,10.54
+FM,Micronesia,410,Environmental protection,239085.41,7.01
+KI,Kiribati,122,Basic health,2203256.98,21.23
 KI,Kiribati,140,Water & sanitation,1370005.92,13.2
-KI,Kiribati,210,Transport & storage,1208215.37,11.64
-KI,Kiribati,740,Disaster prevention & preparedness,1167059.35,11.24
-KI,Kiribati,121,Health (general),1130070.96,10.88
+KI,Kiribati,210,Transport & storage,1204133.22,11.6
+KI,Kiribati,740,Disaster prevention & preparedness,1167059.35,11.25
+KI,Kiribati,121,Health (general),1130070.96,10.89
 KI,Kiribati,160,Other social infrastructure,877196.03,8.45
 MH,Marshall Islands,740,Disaster prevention & preparedness,4087618.88,28.04
 MH,Marshall Islands,151,Government & civil society,3049952.8,20.92
@@ -36,35 +36,35 @@ NR,Nauru,140,Water & sanitation,119108.33,-192.14
 NR,Nauru,114,Post-secondary education,16562.47,-26.72
 NR,Nauru,430,Multisector,13562.36,-21.88
 NU,Niue,210,Transport & storage,141813.91,29.34
-NU,Niue,123,Non-communicable diseases,134605.92,27.85
+NU,Niue,123,Non-communicable diseases,134695.84,27.87
 NU,Niue,232,"Energy generation, renewable",59358.92,12.28
 NU,Niue,122,Basic health,47143.54,9.75
-NU,Niue,121,Health (general),42653.68,8.83
+NU,Niue,121,Health (general),42653.68,8.82
 NU,Niue,236,Energy distribution,19827.97,4.1
-PG,Papua New Guinea,998,Unallocated / unspecified,19077019.39,30.4
-PG,Papua New Guinea,160,Other social infrastructure,5651904.6,9.01
-PG,Papua New Guinea,122,Basic health,4958507.38,7.9
-PG,Papua New Guinea,210,Transport & storage,4938882.83,7.87
-PG,Papua New Guinea,311,Agriculture,4392581.88,7.0
-PG,Papua New Guinea,410,Environmental protection,4305155.12,6.86
+PG,Papua New Guinea,160,Other social infrastructure,5651904.6,12.81
+PG,Papua New Guinea,122,Basic health,4944529.7,11.2
+PG,Papua New Guinea,210,Transport & storage,4938882.83,11.19
+PG,Papua New Guinea,311,Agriculture,4392581.88,9.95
+PG,Papua New Guinea,410,Environmental protection,4305155.12,9.75
+PG,Papua New Guinea,151,Government & civil society,3928749.36,8.9
 PW,Palau,410,Environmental protection,113682.83,56.31
 PW,Palau,740,Disaster prevention & preparedness,48261.22,23.9
 PW,Palau,114,Post-secondary education,12771.82,6.33
 PW,Palau,720,Emergency response,9837.33,4.87
 PW,Palau,123,Non-communicable diseases,6217.76,3.08
 PW,Palau,430,Multisector,5341.75,2.65
-SB,Solomon Islands,151,Government & civil society,8151377.25,39.87
-SB,Solomon Islands,160,Other social infrastructure,5358733.0,26.21
-SB,Solomon Islands,410,Environmental protection,2211757.52,10.82
-SB,Solomon Islands,113,Secondary education,1394999.0,6.82
-SB,Solomon Islands,140,Water & sanitation,853045.83,4.17
-SB,Solomon Islands,740,Disaster prevention & preparedness,809188.23,3.96
-TO,Tonga,210,Transport & storage,2382998.67,48.16
-TO,Tonga,430,Multisector,1684727.97,34.04
-TO,Tonga,140,Water & sanitation,970915.9,19.62
-TO,Tonga,236,Energy distribution,334501.8,6.76
-TO,Tonga,111,Education (general),266272.08,5.38
-TO,Tonga,740,Disaster prevention & preparedness,164069.7,3.32
+SB,Solomon Islands,151,Government & civil society,6418860.4,34.31
+SB,Solomon Islands,160,Other social infrastructure,5358733.0,28.64
+SB,Solomon Islands,410,Environmental protection,2211757.52,11.82
+SB,Solomon Islands,113,Secondary education,1394999.0,7.46
+SB,Solomon Islands,140,Water & sanitation,853045.83,4.56
+SB,Solomon Islands,740,Disaster prevention & preparedness,809188.23,4.32
+TO,Tonga,210,Transport & storage,2382998.67,49.54
+TO,Tonga,430,Multisector,1684727.97,35.02
+TO,Tonga,140,Water & sanitation,970915.9,20.18
+TO,Tonga,236,Energy distribution,334501.8,6.95
+TO,Tonga,111,Education (general),266272.08,5.54
+TO,Tonga,740,Disaster prevention & preparedness,164069.7,3.41
 TV,Tuvalu,210,Transport & storage,3232614.29,66.7
 TV,Tuvalu,311,Agriculture,552327.58,11.4
 TV,Tuvalu,313,Fishing,532930.38,11.0
@@ -77,9 +77,9 @@ VU,Vanuatu,210,Transport & storage,1553125.73,11.58
 VU,Vanuatu,740,Disaster prevention & preparedness,1404073.64,10.47
 VU,Vanuatu,311,Agriculture,953420.53,7.11
 VU,Vanuatu,410,Environmental protection,556755.92,4.15
-WS,Samoa,210,Transport & storage,4044358.66,42.44
-WS,Samoa,140,Water & sanitation,2190998.34,22.99
-WS,Samoa,410,Environmental protection,951686.5,9.99
-WS,Samoa,151,Government & civil society,352958.49,3.7
-WS,Samoa,311,Agriculture,351990.92,3.69
-WS,Samoa,998,Unallocated / unspecified,300459.01,3.15
+WS,Samoa,210,Transport & storage,4044358.66,43.08
+WS,Samoa,140,Water & sanitation,2190998.34,23.34
+WS,Samoa,410,Environmental protection,951686.5,10.14
+WS,Samoa,151,Government & civil society,352958.49,3.76
+WS,Samoa,311,Agriculture,351990.92,3.75
+WS,Samoa,998,Unallocated / unspecified,300459.01,3.2
