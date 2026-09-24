@@ -73,6 +73,13 @@ html = f"""<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name
 </div>
 
 <div class="project">
+<h3>Evaluation Quality Assurance</h3>
+<p>DFAT&rsquo;s own quality review found 60% of evaluation plans rated less than adequate. Nobody does pre-submission AI quality assurance. I built a prototype: an AI reads a draft evaluation against DFAT&rsquo;s 9-criteria rubric and produces a gap report with specific issues to fix before submission. Tested on a real 62-page Pacific evaluation.</p>
+<div class="links"><a href="eval-qa-demo.html">See the prototype &rarr;</a></div>
+<div class="links-secondary"><a href="solomon-islands-synthesis.html">Cross-evaluation synthesis</a></div>
+</div>
+
+<div class="project">
 <h3>Research</h3>
 <p>Before Pacific Aid Signal, I wrote 17 analyses about what development data actually measures versus what people assume it measures: aid fragmentation, climate finance, governance indicators, poverty measurement, education statistics, SDG coverage. The consistent finding is that the methodology shapes the answer as much as the underlying reality &mdash; and practitioners rarely have time to check.</p>
 <div class="links"><a href="research.html">Read the research &rarr;</a></div>
