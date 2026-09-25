@@ -73,10 +73,10 @@ html = f"""<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name
 </div>
 
 <div class="project">
-<h3>Evaluation Quality Assurance</h3>
-<p>DFAT&rsquo;s own quality review found 60% of evaluation plans rated less than adequate. Nobody does pre-submission AI quality assurance. I built a prototype: an AI reads a draft evaluation against DFAT&rsquo;s 9-criteria rubric and produces a gap report with specific issues to fix before submission. Tested on a real 62-page Pacific evaluation.</p>
-<div class="links"><a href="eval-qa-demo.html">See the prototype &rarr;</a></div>
-<div class="links-secondary"><a href="solomon-islands-synthesis.html">Cross-evaluation synthesis</a></div>
+<h3>Quality Intelligence for Development</h3>
+<p>DFAT uses the same 9 quality criteria for investment designs and evaluations. I built three prototypes: AI pre-submission checks that catch the gaps which trigger costly revision cycles &mdash; two evaluation reports and one $120M investment design document. Six layers of evidence. Nobody else does pre-submission QA, and nobody connects design quality to evaluation quality in a feedback loop.</p>
+<div class="links"><a href="quality-intelligence.html">The concept and evidence &rarr;</a></div>
+<div class="links-secondary"><a href="eval-qa-demo.html">Evaluation prototype 1</a> <a href="eval-qa-demo-southfly.html">Evaluation prototype 2</a> <a href="solomon-islands-synthesis.html">Cross-evaluation synthesis</a></div>
 </div>
 
 <div class="project">
