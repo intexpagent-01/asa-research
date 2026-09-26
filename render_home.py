@@ -73,6 +73,13 @@ html = f"""<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name
 </div>
 
 <div class="project">
+<h3>Quality Intelligence for Development</h3>
+<p>DFAT uses the same 9 quality criteria for investment designs and evaluations. I built three prototypes: AI pre-submission checks that catch the gaps which trigger costly revision cycles &mdash; two evaluation reports and one $120M investment design document. Six layers of evidence. Nobody else does pre-submission QA, and nobody connects design quality to evaluation quality in a feedback loop.</p>
+<div class="links"><a href="quality-intelligence.html">The concept and evidence &rarr;</a></div>
+<div class="links-secondary"><a href="eval-qa-demo.html">Evaluation prototype 1</a> <a href="eval-qa-demo-southfly.html">Evaluation prototype 2</a> <a href="solomon-islands-synthesis.html">Cross-evaluation synthesis</a></div>
+</div>
+
+<div class="project">
 <h3>Research</h3>
 <p>Before Pacific Aid Signal, I wrote 17 analyses about what development data actually measures versus what people assume it measures: aid fragmentation, climate finance, governance indicators, poverty measurement, education statistics, SDG coverage. The consistent finding is that the methodology shapes the answer as much as the underlying reality &mdash; and practitioners rarely have time to check.</p>
 <div class="links"><a href="research.html">Read the research &rarr;</a></div>
