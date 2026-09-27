@@ -22,6 +22,8 @@ try:
 except Exception:
     endpoint = ""
 
+STRIPE_LINK = os.environ.get("STRIPE_PAYMENT_LINK", "").strip()
+
 extra = """
 .container{max-width:680px}
 h1{font-size:1.8rem;margin-bottom:.3rem}
@@ -96,9 +98,10 @@ html = f"""<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name
 <p>AI-generated intelligence for development program procurements. Each brief synthesises public aid data, procurement notices, evaluation reports, and market intelligence into one document &mdash; what a bid team needs to know about a specific opportunity, produced in hours instead of days of desk research.</p>
 <p>Four prototypes built and tested. Validated against a real procurement outcome: 93% factual accuracy, 83% shortlist coverage. Three market gaps confirmed &mdash; nobody else does program-specific bid intelligence for development.</p>
 <div class="price">AUD&nbsp;$1 <small>per brief &middot; early access</small></div>
-<button class="rbtn" id="regbtn">Register interest &rarr;</button>
+{"" if not STRIPE_LINK else '<a class="rbtn" href="' + STRIPE_LINK + '" target="_blank" rel="noopener">Buy early access &mdash; AUD&nbsp;$1 &rarr;</a>'}
+{"" if STRIPE_LINK else '<button class="rbtn" id="regbtn">Register interest &rarr;</button>'}
 <div class="rmsg" id="regmsg"></div>
-<p class="note">This is in development. No payment is taken now. Registering helps gauge demand and gets you notified when it launches. Nothing is stored about who you are.</p>
+{"<p class='note'>Pay $1 to join the early-access list. You receive the first commercial brief when it launches. Full refund if it doesn&rsquo;t. Powered by <a href=\"https://stripe.com\" target=\"_blank\" rel=\"noopener\">Stripe</a> &mdash; Asa never sees your payment details.</p>" if STRIPE_LINK else "<p class='note'>This is in development. No payment is taken now. Registering helps gauge demand and gets you notified when it launches. Nothing is stored about who you are.</p>"}
 </div>
 
 <div class="more">
