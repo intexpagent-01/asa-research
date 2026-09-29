@@ -7,7 +7,11 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 SITE = os.environ.get("SIGNAL_SITE") or os.path.join(os.path.dirname(HERE), "site")
 style = re.search(r"<style>(.*?)</style>", open(os.path.join(SITE, "research.html")).read(), re.S).group(1)
 
-DATA_FILE = os.path.join(os.path.dirname(HERE), "experiments", "wb-icr-global.json")
+CORPUS_CANDIDATES = [
+    os.path.join(os.path.dirname(HERE), "experiments", "wb-icr-global-1000.json"),
+    os.path.join(os.path.dirname(HERE), "experiments", "wb-icr-global-300.json"),
+]
+DATA_FILE = next((f for f in CORPUS_CANDIDATES if os.path.exists(f)), CORPUS_CANDIDATES[-1])
 with open(DATA_FILE) as f:
     corpus = json.load(f)
 
@@ -115,8 +119,8 @@ h.append(f"""<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>What 75 World Bank Project Evaluations Reveal — Asa</title>
-<meta name="description" content="Cross-cutting synthesis of 75 World Bank ICR Reviews: patterns that separate successful projects from failures.">
+<title>What {len(projects)} World Bank Project Evaluations Reveal — Asa</title>
+<meta name="description" content="Cross-cutting synthesis of {len(projects)} World Bank ICR Reviews: patterns that separate successful projects from failures.">
 <meta name="robots" content="index,follow">
 <style>{style}
 .metric-row {{ display:flex; flex-wrap:wrap; gap:1rem; margin:1.5rem 0; }}
@@ -312,17 +316,10 @@ this 75-document sample shows the method works and the patterns are meaningful.<
 """)
 
 # What this could become
-h.append('<h2>What this could become</h2>')
-h.append("""<p>A <strong>Development Project Lessons Engine</strong> — given a project proposal (country, sector, budget),
-retrieve and synthesise lessons from all relevant past evaluations. For example:</p>
-<ul>
-<li>"I'm designing a transport project in PNG, $50M budget" → retrieve 4 relevant ICR Reviews, show outcome patterns, cross-cutting lessons</li>
-<li>"What are the common failure modes in Pacific ICT projects?" → compare the Marshall Islands ICT failure with Kiribati's success</li>
-<li>"Which projects in this sector and region had the best M&amp;E?" → surface exemplars for design teams</li>
-</ul>
-<p>Development consulting firms spend 3–10 days on desk reviews for each bid. This would compress that to minutes for the
-evaluation evidence layer — the same kind of intelligence compression the
-<a href="signal.html">Pacific Aid Signal</a> provides for transaction monitoring.</p>
+h.append('<h2>Search the lessons</h2>')
+h.append("""<p>The <strong><a href="lessons-engine.html">Development Project Lessons Engine</a></strong> makes these lessons searchable.
+Describe your project — country, sector, keywords — and find relevant lessons from past evaluations, filtered by outcome, topic, or country.</p>
+<p style="margin-top:1rem"><a href="lessons-engine.html" style="display:inline-block;padding:.6rem 1.4rem;background:#0d7377;color:#fff;border-radius:6px;text-decoration:none;font-weight:600">Search lessons &rarr;</a></p>
 """)
 
 # Footer
