@@ -238,6 +238,7 @@ html += f"""</div>
 
 <div style="margin-top:32px;padding-top:16px;border-top:1px solid #eee;font-size:0.82rem;color:#888;text-align:center">
   <a href="index.html" style="color:#0d7377">Home</a> &middot;
+  <a href="risk-profiler.html" style="color:#0d7377">Risk Profiler</a> &middot;
   <a href="pipeline.html" style="color:#0d7377">Procurement Pipeline</a> &middot;
   <a href="wb-lessons.html" style="color:#0d7377">WB Lessons Synthesis</a> &middot;
   <a href="field-notes.html" style="color:#0d7377">Field Notes</a> &middot;
