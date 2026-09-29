@@ -107,7 +107,7 @@ html = f"""<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name
 <div class="more">
 <strong>Explore:</strong>
 <a href="lessons-engine.html">Lessons Engine</a>
-<a href="wb-lessons.html">WB project lessons</a>
+<a href="pipeline.html">Procurement Pipeline</a>
 <a href="data-quality.html">IATI data quality</a>
 <a href="quality-intelligence.html">Quality intelligence</a>
 <a href="field-notes.html">Field notes</a>

@@ -701,6 +701,28 @@ def country_body(r, full):
     if flags: H.append("<h4>Watch</h4>" + "".join(f"<div class=flag>{f}</div>" for f in flags))
     return "\n".join(H)
 
+_LESSON_KW = [
+    (["health","phc","medical","biomedical"],"health+service+delivery"),
+    (["education","school","learning","scholarship","awards"],"education"),
+    (["infrastructure","esip","transport","road","bridge"],"infrastructure"),
+    (["agriculture","agri","harvest","resilience initiative"],"agriculture+rural"),
+    (["climate","resilient","disaster","drm"],"climate+adaptation"),
+    (["governance","institutional","public sector"],"governance+institutional+capacity"),
+    (["labour","labor","mobility","skills"],"labor+migration+skills"),
+    (["sport","community"],"community+participation"),
+    (["water","sanitation","wash"],"water+supply+sanitation"),
+    (["gender","women","inclusion"],"gender+inclusion"),
+    (["economic","ekonomi","economy","finance","private sector"],"economic+development"),
+    (["security","maritime","defence"],"security"),
+    (["volunteer","partnership"],"community+participation"),
+    (["mid-term review","mtr","evaluation"],"monitoring+evaluation"),
+]
+def _lessons_q(title):
+    tl = title.lower()
+    for triggers, q in _LESSON_KW:
+        if any(t in tl for t in triggers): return q
+    return None
+
 def dfat_html(code, name, dfat, seen, base):
     """DFAT pipeline items and business notifications naming the country, then Pacific-wide ones."""
     if not dfat: return "<p class=muted>DFAT's business notifications and procurement pipeline were not read for this issue.</p>"
@@ -712,7 +734,9 @@ def dfat_html(code, name, dfat, seen, base):
         if not items: return
         H.append(f"<h4>{title} ({len(items)})</h4><ul>")
         for p in sorted(items, key=lambda p: ordr.get(p["section"].lower(), 9)):
-            H.append(f"<li><strong>{esc(p['section'])}</strong> &middot; {esc(p['id'])} {esc(p['title'])}{since(p['id'])}<br><span class=muted>{esc(short(p['status'], 300))}</span></li>")
+            lq = _lessons_q(p.get("title", ""))
+            llink = f" <a href='lessons-engine.html?q={lq}' style='font-size:.78rem;color:var(--series-1,#0d7377);opacity:.7'>lessons →</a>" if lq else ""
+            H.append(f"<li><strong>{esc(p['section'])}</strong> &middot; {esc(p['id'])} {esc(p['title'])}{llink}{since(p['id'])}<br><span class=muted>{esc(short(p['status'], 300))}</span></li>")
         H.append("</ul>")
     plist(cp, f"Procurement pipeline items naming {esc(name)}")
     plist(rp, "Pacific-wide pipeline items")
