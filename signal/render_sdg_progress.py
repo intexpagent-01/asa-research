@@ -214,7 +214,7 @@ tr:hover{{background:var(--surface-card)}}
 </head>
 <body>
 <div class="container">
-<a href="index.html" class="back">&larr; Home</a>
+<a href="index.html" class="back">&larr; Home</a> &middot; <a href="sdg-alignment.html">SDG–Aid Alignment &rarr;</a>
 <h1>Pacific SDG Progress</h1>
 <p class="subtitle">SDG indicator coverage and data gaps for {n_countries} Pacific Island countries, from the <a href="https://unstats.un.org/sdgs/dataportal">UN SDG Global Database</a>. Updated {today}.</p>
 

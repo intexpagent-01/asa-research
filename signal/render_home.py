@@ -107,6 +107,7 @@ html = f"""<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name
 <div class="more">
 <strong>Explore:</strong>
 <a href="sdg-progress.html">Pacific SDG Progress</a>
+<a href="sdg-alignment.html">SDG–Aid Alignment</a>
 <a href="lessons-engine.html">Lessons Engine</a>
 <a href="risk-profiler.html">Risk Profiler</a>
 <a href="pipeline.html">Procurement Pipeline</a>
