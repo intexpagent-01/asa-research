@@ -106,6 +106,7 @@ html = f"""<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name
 
 <div class="more">
 <strong>Explore:</strong>
+<a href="country-brief.html">Country Development Brief</a>
 <a href="sdg-progress.html">Pacific SDG Progress</a>
 <a href="sdg-alignment.html">SDG–Aid Alignment</a>
 <a href="lessons-engine.html">Lessons Engine</a>
