@@ -8,6 +8,17 @@ SITE = os.environ.get("SIGNAL_SITE") or os.path.join(os.path.dirname(HERE), "sit
 REPO = "https://github.com/intexpagent-01/asa-research"
 style = re.search(r"<style>(.*?)</style>", open(os.path.join(SITE, "research.html")).read(), re.S).group(1)
 
+CORPUS_CANDIDATES = [
+    os.path.join(os.path.dirname(HERE), "experiments", "wb-icr-global-1000.json"),
+    os.path.join(os.path.dirname(HERE), "experiments", "wb-icr-global-300.json"),
+]
+CORPUS_FILE = next((f for f in CORPUS_CANDIDATES if os.path.exists(f)), None)
+n_lessons_projects = 0
+if CORPUS_FILE:
+    with open(CORPUS_FILE) as _cf:
+        _corpus = json.load(_cf)
+    n_lessons_projects = len(_corpus.get("projects", []))
+
 snap_files = sorted(f for f in os.listdir(os.path.join(HERE, "data")) if f.startswith("pacific-") and f.endswith(".json") and "index" not in f)
 latest = json.load(open(os.path.join(HERE, "data", snap_files[-1]))) if snap_files else {}
 countries = latest.get("countries", {})
@@ -226,11 +237,39 @@ country_end_list = sorted(ending_value_by_country.items(), key=lambda x: -x[1])
 country_end_list = [(n, v) for n, v in country_end_list if v > 0]
 
 # DFAT items HTML
+LESSON_KEYWORDS = [
+    (["health", "phc", "medical", "biomedical"], "health service delivery"),
+    (["education", "school", "learning", "scholarship", "awards"], "education"),
+    (["infrastructure", "esip", "transport", "road", "bridge"], "infrastructure"),
+    (["agriculture", "agri", "harvest", "resilience initiative"], "agriculture rural"),
+    (["climate", "resilient", "disaster", "drm"], "climate adaptation"),
+    (["governance", "institutional", "public sector"], "governance institutional capacity"),
+    (["labour", "labor", "mobility", "skills"], "labor migration skills"),
+    (["sport", "community"], "community participation"),
+    (["water", "sanitation", "wash"], "water supply sanitation"),
+    (["gender", "women", "inclusion"], "gender inclusion"),
+    (["economic", "ekonomi", "economy", "finance", "private sector"], "economic development"),
+    (["security", "maritime", "defence"], "security"),
+    (["volunteer", "partnership"], "community participation"),
+    (["mid-term review", "mtr", "evaluation"], "monitoring evaluation"),
+]
+
+def lessons_query(title):
+    tl = title.lower()
+    for triggers, query in LESSON_KEYWORDS:
+        if any(t in tl for t in triggers):
+            return query
+    return None
+
 def dfat_item_html(item):
     pac = is_pacific(item)
     pac_tag = '<span class="tag pac">Pacific</span>' if pac else ''
+    lq = lessons_query(item.get("title", ""))
+    lessons_link = ""
+    if lq:
+        lessons_link = f' <a href="lessons-engine.html?q={lq.replace(" ", "+")}" class="lessons-link" title="Find lessons from similar past projects">lessons&nbsp;&#8594;</a>'
     return f'''<div class="pipe-item {'pacific' if pac else ''}">
-<div class="pipe-title">{pac_tag}<strong>{esc(item["id"])}</strong> &mdash; {esc(item["title"])}</div>
+<div class="pipe-title">{pac_tag}<strong>{esc(item["id"])}</strong> &mdash; {esc(item["title"])}{lessons_link}</div>
 <div class="pipe-status">{esc(item.get("status", "")[:200])}</div>
 </div>'''
 
@@ -297,6 +336,10 @@ a{color:var(--series-1)}
 .tag.soon{background:#e9c46a;color:#333}
 .tag.open{background:#2a9d8f;color:#fff}
 .tag.closed-tag{background:var(--text-muted);color:#fff}
+.lessons-link{font-size:.75rem;font-weight:600;color:var(--series-1);text-decoration:none;opacity:.7;white-space:nowrap}
+.lessons-link:hover{opacity:1;text-decoration:underline}
+.lessons-callout{background:var(--surface-card);border:1px solid var(--series-1);border-radius:8px;padding:.9rem 1.1rem;margin-top:1.2rem;font-size:.88rem;line-height:1.55;box-shadow:var(--card-shadow)}
+.lessons-callout a{font-weight:600}
 .qtr-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:.6rem;margin:.8rem 0}
 .qtr-card{background:var(--surface-card);border:1px solid var(--border);border-radius:8px;padding:.8rem;text-align:center}
 .qtr-card .q{font-weight:700;font-size:.95rem;margin-bottom:.3rem}
@@ -457,6 +500,11 @@ html = f"""<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name
 <div class="section">
 <h2>DFAT procurement pipeline</h2>
 {dfat_html}
+<div class="lessons-callout">
+<strong>&#128218; Lessons from past projects</strong> &mdash; each pipeline item above links to relevant lessons from {n_lessons_projects} evaluated World Bank projects.
+What went wrong in similar programmes, what worked, and why.
+<a href="lessons-engine.html">Browse the Lessons Engine &rarr;</a>
+</div>
 </div>
 
 <div class="section">

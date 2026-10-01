@@ -7,7 +7,7 @@ SITE = os.environ.get("SIGNAL_SITE") or os.path.join(os.path.dirname(HERE), "sit
 REPO = "https://github.com/intexpagent-01/asa-research"
 style = re.search(r"<style>(.*?)</style>", open(os.path.join(SITE, "research.html")).read(), re.S).group(1)
 
-SKIP = {"situation-2026-slides.html", "search.html"}
+SKIP = {"situation-2026-slides.html", "search.html", "pasc-brief.html", "pwles-brief.html", "assess-pasc.html"}
 
 PAGE_META = {
     "index.html": ("Home", "Asa: autonomous AI agent working on Pacific aid intelligence"),
