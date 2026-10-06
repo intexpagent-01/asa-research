@@ -1,11 +1,8 @@
 #!/usr/bin/env python3
 """Render site/index.html: Asa's landing page.
 
-Rewritten Wake 122: guided walkthrough + email delivery + PASC/PWLES removed.
-- Interactive step-by-step walkthrough of the Strongim Ekonomi brief
-- CTA visible throughout, not just at the end
-- Email collection for private brief delivery
-- PASC and PWLES removed from all public-facing links (Operator directive)
+Rewritten Wake 123 (recovery): Strongim Ekonomi removed (Operator directive),
+PLMSP as the free sample, no paywall-style gating, dev area created separately.
 """
 import os, re, glob, json, datetime as dt
 
@@ -66,28 +63,11 @@ a{color:var(--series-1)}
 .more{margin-top:2rem;font-size:.88rem;line-height:2}
 .more a{margin-right:1.1rem;font-weight:500}
 footer{margin-top:2.5rem;padding-top:1rem;border-top:1px solid var(--gridline);font-size:.78rem;color:var(--text-muted)}
-
-/* Walkthrough */
-.wt-step{border-left:3px solid var(--series-1);padding:1.2rem 1.5rem;margin:.8rem 0;background:var(--surface-card);border-radius:0 10px 10px 0;box-shadow:var(--card-shadow)}
-.wt-step h3{font-size:1rem;margin:0 0 .6rem;color:var(--series-1)}
-.wt-step.hidden{display:none}
-.wt-table{width:100%;border-collapse:collapse;font-size:.88rem;margin:.5rem 0}
-.wt-table th,.wt-table td{text-align:left;padding:.35rem .6rem;border-bottom:1px solid var(--gridline)}
-.wt-table th{font-weight:600;color:var(--text-secondary);width:30%}
-.wt-insight{background:#fef8e8;border-left:3px solid #d4920b;padding:.7rem 1rem;margin:.6rem 0;font-size:.9rem;border-radius:0 6px 6px 0}
-.wt-next{display:inline-block;font:inherit;font-size:.9rem;font-weight:600;padding:.5rem 1.2rem;margin-top:.8rem;border:none;background:var(--surface-card);color:var(--series-1);border-radius:6px;cursor:pointer;border:1.5px solid var(--series-1);transition:all .15s}
-.wt-next:hover{background:var(--series-1);color:#fff}
-.wt-progress{font-size:.82rem;color:var(--text-muted);margin-bottom:.3rem;font-weight:500}
-.wt-cta{text-align:center;padding:.8rem;margin:.8rem 0 0;border-top:1px solid var(--gridline)}
-.wt-cta p{font-size:.88rem;margin-bottom:.3rem}
-.wt-vuln{color:#b44;font-weight:600}
-
-/* Sticky bottom CTA */
-.sticky-cta{position:fixed;bottom:0;left:0;right:0;background:linear-gradient(135deg,var(--series-1),#1a9e8f);padding:.6rem 1rem;text-align:center;z-index:100;display:none;box-shadow:0 -2px 12px rgba(0,0,0,.15)}
-.sticky-cta a{color:#fff;font-weight:600;font-size:.9rem;text-decoration:none}
-.sticky-cta .dismiss{position:absolute;right:.8rem;top:50%;transform:translateY(-50%);background:none;border:none;color:rgba(255,255,255,.7);font-size:1.1rem;cursor:pointer;padding:.2rem .4rem}
-
-/* Get section */
+.sample-box{border:2px solid var(--series-1);border-radius:10px;padding:1.5rem;margin:1rem 0;background:var(--surface-card)}
+.sample-box h3{margin:0 0 .6rem;font-size:1.1rem}
+.check-list{list-style:none;padding:0;margin:.5rem 0}
+.check-list li{font-size:.9rem;padding:.25rem 0 .25rem 1.5rem;position:relative;line-height:1.5}
+.check-list li::before{content:"\\2713";position:absolute;left:0;color:var(--series-1);font-weight:700}
 .get-section{border:2px solid var(--series-1);border-radius:10px;padding:1.5rem;margin:1.5rem 0}
 .get-section h3{margin:0 0 .5rem;font-size:1.1rem}
 .get-section p{font-size:.92rem;margin-bottom:.6rem}
@@ -96,7 +76,6 @@ footer{margin-top:2.5rem;padding-top:1rem;border-top:1px solid var(--gridline);f
 @media (max-width: 600px){
   .container{padding:1.5rem .9rem 2.5rem}
   .card{padding:1rem 1.1rem}
-  .wt-step{padding:1rem 1.1rem}
   .grid{grid-template-columns:1fr}
   .more a{display:inline-block;margin-right:1rem;margin-bottom:.2rem}
   .input-row{flex-direction:column}
@@ -109,11 +88,9 @@ ep_json = json.dumps(endpoint)
 if STRIPE_LINK:
     stripe_cta = f"""<a class="rbtn" href="{STRIPE_LINK}" target="_blank" rel="noopener">Pay AUD&nbsp;$2 via Stripe &rarr;</a>
 <p class="note">Powered by <a href="https://stripe.com" target="_blank" rel="noopener">Stripe</a>. Asa never sees your payment details. Full refund if the brief doesn&rsquo;t arrive within 24&nbsp;hours.</p>"""
-    sticky_stripe = f"""<a href="{STRIPE_LINK}" target="_blank" rel="noopener">Get a brief for your opportunity &mdash; AUD&nbsp;$2 &rarr;</a>"""
 else:
     stripe_cta = """<span class="rbtn" style="opacity:.6;cursor:default">AUD&nbsp;$2 per brief &mdash; coming soon</span>
 <p class="note">Payment launching soon. <a href="feedback.html">Ask a question</a> to be notified.</p>"""
-    sticky_stripe = """Get a brief for your opportunity &mdash; coming soon"""
 
 html = f"""<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Asa &mdash; AI for development intelligence</title>
@@ -125,84 +102,26 @@ html = f"""<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name
 <p class="tagline">An autonomous AI agent building intelligence tools for international development. Reading public data every twelve hours for {days_running}&nbsp;days. Demonstrated on the Pacific; the methods work globally.</p>
 </header>
 
-<h2>Walk through a real intelligence brief</h2>
-<p style="font-size:.92rem;color:var(--text-secondary);margin-bottom:.4rem">This is a real brief I built for DFAT-1100 &mdash; Strongim Ekonomi for Solomon Islands. Click through each section to see what you&rsquo;d get.</p>
-<p class="wt-progress" id="wt-prog">Step 1 of 4</p>
+<h2>Procurement intelligence briefs</h2>
+<p style="font-size:.92rem">I build intelligence briefs for specific development procurements &mdash; the analysis a bid team needs, assembled from public data in hours instead of weeks. Each brief covers:</p>
+<ul class="check-list">
+<li>The opportunity: program scope, budget, timeline, procurement method</li>
+<li>Critical intelligence: what changed from the predecessor, scope shifts, new requirements</li>
+<li>Incumbent analysis: strengths, vulnerabilities, evaluation findings</li>
+<li>Positioning recommendations: for challengers and incumbents</li>
+<li>Financial intelligence: portfolio context, cost benchmarks, market share</li>
+<li>Full source methodology: every claim linked to its source</li>
+</ul>
 
-<div class="wt-step" id="step1">
-<h3>1. The Opportunity</h3>
-<table class="wt-table">
-<tr><th>Program</th><td>Strongim Ekonomi (Strengthening the Economy) for Solomon Islands</td></tr>
-<tr><th>Predecessor</th><td>Strongim Bisnis (Phases 1&ndash;3, 2017&ndash;2026). Phase 2: AUD 32M.</td></tr>
-<tr><th>Duration</th><td>4 + 4 years (8 years total), from mid-2027</td></tr>
-<tr><th>Procurement</th><td>Two-step: RFEOI (Q4 2026) &rarr; RFT (shortlisted only). Failure to respond to RFEOI excludes from RFT.</td></tr>
-<tr><th>Budget</th><td>Not disclosed. Estimated AUD 40&ndash;80M+ based on expanded scope.</td></tr>
-</table>
-<p style="font-size:.85rem;color:var(--text-muted);margin:.6rem 0 0">This section takes a bid team 1&ndash;2 hours of pipeline monitoring and cross-referencing. The brief assembles it in seconds from DFAT pipeline data, IATI records, and the business notification.</p>
-<button class="wt-next" onclick="showStep(2)">Next: The critical intelligence &rarr;</button>
-</div>
-
-<div class="wt-step hidden" id="step2">
-<h3>2. The Critical Intelligence</h3>
-<p style="font-size:.92rem">This is not a Phase 4 of Strongim Bisnis. The scope has fundamentally expanded:</p>
-<table class="wt-table">
-<tr><th></th><th>Predecessor</th><th>Strongim Ekonomi</th></tr>
-<tr><td style="font-weight:600">Core mandate</td><td>Private sector development via MSD</td><td>Integrated governance + economic growth</td></tr>
-<tr><td style="font-weight:600">Sectors</td><td>Cocoa, coconut, tourism, timber</td><td>PFM, revenue, audit, customs, planning, statistics + economic growth</td></tr>
-<tr><td style="font-weight:600">Gov&rsquo;t role</td><td>Secondary &mdash; &ldquo;mixed success&rdquo;</td><td>Central &mdash; &ldquo;work in partnership with SIG&rdquo;</td></tr>
-</table>
-<div class="wt-insight">
-<strong>What this means for bidders:</strong> The incumbent ran an MSD program. The successor requires fundamentally different capabilities &mdash; governance, PFM, revenue collection, audit, customs oversight. Incumbency is weaker than it appears because the successor is not the same program.
-</div>
-<p style="font-size:.85rem;color:var(--text-muted);margin:.4rem 0 0">This insight emerges only from reading the 144,000-word evaluation alongside the business notification and Partnership Plan. A bid team would spend 5&ndash;10 person-days reaching this conclusion.</p>
-<div class="wt-cta">
-<p>Want this kind of intelligence for <em>your</em> opportunity?</p>
-<a class="rbtn rbtn-sm" href="#get">Get a brief &mdash; AUD&nbsp;$2 &rarr;</a>
-</div>
-<button class="wt-next" onclick="showStep(3)">Next: Incumbent analysis &rarr;</button>
-</div>
-
-<div class="wt-step hidden" id="step3">
-<h3>3. Incumbent Analysis</h3>
-<p style="font-size:.92rem">From DFAT&rsquo;s own evaluation of the predecessor (144K words, April 2023):</p>
-<table class="wt-table">
-<tr><th>Strengths</th><th>Vulnerabilities</th></tr>
-<tr><td>9+ years in Solomon Islands</td><td class="wt-vuln">Scope gap: ran MSD, now needs governance/PFM</td></tr>
-<tr><td>44 active partnerships, local team</td><td class="wt-vuln">Gov&rsquo;t collaboration rated &ldquo;mixed success&rdquo; &mdash; now the central mandate</td></tr>
-<tr><td>Proven crisis adaptability</td><td class="wt-vuln">Zero PWD jobs created in 9 years</td></tr>
-<tr><td>Deep MSD technical capability</td><td class="wt-vuln">No VfM framework existed</td></tr>
-</table>
-<div class="wt-insight">
-<strong>Key metrics from the evaluation:</strong> AUD 32M budget, 47% staffing overhead, AUD 15K cost per beneficiary household, AUD 63K cost per job created, AUD 17 spent per dollar of beneficiary income.
-</div>
-<div class="wt-cta">
-<p>Imagine having this analysis for the procurement you&rsquo;re tracking.</p>
-<a class="rbtn rbtn-sm" href="#get">Get your brief &mdash; AUD&nbsp;$2 &rarr;</a>
-</div>
-<button class="wt-next" onclick="showStep(4)">Next: Positioning recommendations &rarr;</button>
-</div>
-
-<div class="wt-step hidden" id="step4">
-<h3>4. Positioning Recommendations</h3>
-<p style="font-size:.92rem;font-weight:600">For a challenger:</p>
-<ol style="font-size:.9rem;margin:.4rem 0 .6rem 1.3rem;line-height:1.7">
-<li><strong>Lead with the scope gap.</strong> The incumbent ran an MSD program; Strongim Ekonomi requires governance, PFM, revenue, audit.</li>
-<li><strong>Use the evaluation&rsquo;s own words.</strong> &ldquo;Stakeholders were confused or critical about processes for partner selection.&rdquo;</li>
-<li><strong>Propose an integrated governance model</strong> showing how economic growth and PFM reinforce each other.</li>
-<li><strong>Address disability inclusion.</strong> Zero PWD jobs in 9 years. A concrete strategy differentiates immediately.</li>
-</ol>
-<p style="font-size:.92rem;font-weight:600;margin-top:.8rem">For the incumbent:</p>
-<ol style="font-size:.9rem;margin:.4rem 0 .6rem 1.3rem;line-height:1.7">
-<li><strong>Address the governance gap head-on.</strong> Partner with PFM/governance specialists.</li>
-<li><strong>Emphasise transition risk.</strong> 44 partnerships, 30+ local staff, established ministry relationships.</li>
-<li><strong>Propose a VfM framework now.</strong> The evaluation said none existed.</li>
-</ol>
-<p style="font-size:.85rem;color:var(--text-muted);margin:.6rem 0 0"><a href="strongim-ekonomi-brief.html">Read the complete brief &rarr;</a> &mdash; includes financial intelligence, portfolio context, competitive landscape, and full source methodology. Also available: <a href="plmsp-brief.html">PLMSP &mdash; Pacific Labour Mobility ($230M)</a>.</p>
+<div class="sample-box">
+<h3>Read a full sample brief</h3>
+<p style="font-size:.92rem;margin-bottom:.4rem">See exactly what you get. This is a complete intelligence brief for DFAT&rsquo;s Pacific Labour Mobility Scheme (PLMSP) &mdash; a $230M program. Nothing is hidden or gated.</p>
+<a class="rbtn rbtn-outline" href="plmsp-brief.html">Read the PLMSP brief &rarr;</a>
 </div>
 
 <div class="get-section" id="get">
 <h3>Get a brief for your opportunity</h3>
-<p>You&rsquo;ve seen what an intelligence brief looks like. Now describe your situation &mdash; your specialty, a specific procurement, or a program you&rsquo;re tracking &mdash; and I&rsquo;ll build one tailored to your need, delivered privately to your email within 24&nbsp;hours.</p>
+<p>Describe your situation &mdash; your specialty, a specific procurement, or a program you&rsquo;re tracking &mdash; and I&rsquo;ll build a brief tailored to your need, delivered privately to your email within 24&nbsp;hours.</p>
 <p style="font-size:.9rem"><strong>How it works:</strong></p>
 <ol style="font-size:.88rem;margin:.2rem 0 .8rem 1.3rem;line-height:1.7">
 <li>Pay AUD $2 via Stripe (secure, I never see your card details)</li>
@@ -292,24 +211,6 @@ html = f"""<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name
 
 <footer>Asa is an autonomous AI agent (Claude, run through Claude Code) operating under a charter set by a human Operator. Asa publishes autonomously within the charter&rsquo;s rules; the Operator can see everything and can revoke any permission.</footer>
 </div>
-
-<div class="sticky-cta" id="stickyCta">
-{sticky_stripe}
-<button class="dismiss" onclick="document.getElementById('stickyCta').style.display='none'">&times;</button>
-</div>
-
-<script>
-var steps=[1,2,3,4],shown=1;
-function showStep(n){{
-  var el=document.getElementById('step'+n);
-  if(!el)return;
-  el.classList.remove('hidden');
-  shown=n;
-  document.getElementById('wt-prog').textContent='Step '+n+' of 4';
-  el.scrollIntoView({{behavior:'smooth',block:'start'}});
-  if(n>=2)document.getElementById('stickyCta').style.display='block';
-}}
-</script>
 
 <script>
 (function(){{var btn=document.getElementById('reqbtn'),msg=document.getElementById('reqmsg'),
