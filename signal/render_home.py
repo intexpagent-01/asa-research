@@ -1,9 +1,5 @@
 #!/usr/bin/env python3
-"""Render site/index.html: Asa's landing page.
-
-Rewritten Wake 123 (recovery): Strongim Ekonomi removed (Operator directive),
-PLMSP as the free sample, no paywall-style gating, dev area created separately.
-"""
+"""Render site/index.html: Asa's landing page."""
 import os, re, glob, json, datetime as dt
 
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -85,12 +81,6 @@ footer{margin-top:2.5rem;padding-top:1rem;border-top:1px solid var(--gridline);f
 
 ep_json = json.dumps(endpoint)
 
-if STRIPE_LINK:
-    stripe_cta = f"""<a class="rbtn" href="{STRIPE_LINK}" target="_blank" rel="noopener">Pay AUD&nbsp;$2 via Stripe &rarr;</a>
-<p class="note">Powered by <a href="https://stripe.com" target="_blank" rel="noopener">Stripe</a>. Asa never sees your payment details. Full refund if the brief doesn&rsquo;t arrive within 24&nbsp;hours.</p>"""
-else:
-    stripe_cta = """<span class="rbtn" style="opacity:.6;cursor:default">AUD&nbsp;$2 per brief &mdash; coming soon</span>
-<p class="note">Payment launching soon. <a href="feedback.html">Ask a question</a> to be notified.</p>"""
 
 html = f"""<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Asa &mdash; AI for development intelligence</title>
@@ -122,22 +112,16 @@ html = f"""<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name
 <div class="get-section" id="get">
 <h3>Get a brief for your opportunity</h3>
 <p>Describe your situation &mdash; your specialty, a specific procurement, or a program you&rsquo;re tracking &mdash; and I&rsquo;ll build a brief tailored to your need, delivered privately to your email within 24&nbsp;hours.</p>
-<p style="font-size:.9rem"><strong>How it works:</strong></p>
-<ol style="font-size:.88rem;margin:.2rem 0 .8rem 1.3rem;line-height:1.7">
-<li>Pay AUD $2 via Stripe (secure, I never see your card details)</li>
-<li>Enter your email and describe what you need below</li>
-<li>Your brief arrives in your inbox within 24&nbsp;hours</li>
-</ol>
-{stripe_cta}
-<div style="margin-top:1rem;text-align:left">
+<p style="font-size:.9rem;margin-bottom:.3rem"><strong>Step 1: Describe what you need</strong></p>
+<textarea id="reqtext" rows="3" placeholder="Example: I'm a human-centred design specialist. Which current DFAT programs in the Pacific could use my services? When do their expert pools open?" style="width:100%;font:inherit;font-size:.9rem;padding:.6rem;border:1px solid var(--border);border-radius:6px;resize:vertical;background:var(--surface-card);color:var(--text-primary)"></textarea>
+<p style="font-size:.9rem;margin:.8rem 0 .3rem"><strong>Step 2: Where should I send it?</strong></p>
 <div class="input-row">
 <input type="email" id="reqemail" placeholder="Your email address" required>
 </div>
-<textarea id="reqtext" rows="3" placeholder="Example: I'm a human-centred design specialist. Which current DFAT programs in the Pacific could use my services? When do their expert pools open?" style="width:100%;font:inherit;font-size:.9rem;padding:.6rem;border:1px solid var(--border);border-radius:6px;resize:vertical;background:var(--surface-card);color:var(--text-primary)"></textarea>
-<button class="rbtn" id="reqbtn" style="margin-top:.4rem;width:100%">Submit your request &rarr;</button>
+<p style="font-size:.9rem;margin:.8rem 0 .3rem"><strong>Step 3: Pay AUD&nbsp;$2 and submit</strong></p>
+<button class="rbtn" id="reqbtn" style="width:100%">Submit &amp; pay AUD&nbsp;$2 &rarr;</button>
 <div class="rmsg" id="reqmsg"></div>
-<p class="note" style="margin-top:.6rem">Your brief is delivered privately to your email &mdash; not published on the site. Your email is used only for delivery and is not shared or stored beyond that purpose.</p>
-</div>
+<p class="note" style="margin-top:.6rem">Secure payment via <a href="https://stripe.com" target="_blank" rel="noopener">Stripe</a> &mdash; I never see your card details. Your brief is delivered privately to your email, not published on the site. Full refund if it doesn&rsquo;t arrive within 24&nbsp;hours.</p>
 </div>
 
 <h2>Explore free tools</h2>
@@ -215,21 +199,26 @@ html = f"""<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name
 <script>
 (function(){{var btn=document.getElementById('reqbtn'),msg=document.getElementById('reqmsg'),
  ta=document.getElementById('reqtext'),em=document.getElementById('reqemail');
-if(!btn)return;var EP={ep_json};
+if(!btn)return;var EP={ep_json},SL={json.dumps(STRIPE_LINK)};
 btn.addEventListener('click',function(){{
  var t=(ta.value||'').trim(),e=(em.value||'').trim();
+ if(!t){{msg.textContent='Please describe what you need first.';msg.className='rmsg err';return;}}
  if(!e||e.indexOf('@')<1){{msg.textContent='Please enter a valid email address.';msg.className='rmsg err';return;}}
- if(!t){{msg.textContent='Please describe what you need.';msg.className='rmsg err';return;}}
  if(!EP){{msg.textContent='Not available yet. Try the feedback page.';msg.className='rmsg err';return;}}
- btn.disabled=true;btn.textContent='Sending\\u2026';
+ btn.disabled=true;btn.textContent='Submitting\\u2026';
  fetch(EP,{{method:'POST',headers:{{'content-type':'application/json'}},
   body:JSON.stringify({{text:'[Brief request] [email: '+e+'] '+t,kind:'question',country:''}})
  }})
  .then(function(r){{return r.json().then(function(j){{return{{s:r.status,j:j}};}});}})
- .then(function(o){{btn.disabled=false;btn.textContent='Submit request \\u2192';
-  if(o.s===200&&o.j.ref){{msg.innerHTML='Received \\u2014 reference <strong>'+o.j.ref+'</strong>. Your brief will be delivered to <strong>'+e+'</strong> within 24\\u00a0hours.';msg.className='rmsg ok';ta.value='';}}
-  else{{msg.textContent=o.j&&o.j.error?o.j.error:'That didn\\u2019t work. Try the feedback page.';msg.className='rmsg err';}}}})
- .catch(function(){{btn.disabled=false;btn.textContent='Submit request \\u2192';
+ .then(function(o){{
+  if(o.s===200&&o.j.ref){{
+   msg.innerHTML='Request received \\u2014 reference <strong>'+o.j.ref+'</strong>. Redirecting to payment\\u2026';msg.className='rmsg ok';ta.value='';
+   if(SL){{setTimeout(function(){{window.open(SL,'_blank');}},1200);}}
+   else{{msg.innerHTML+=' <em>Payment link coming soon \\u2014 your request has been saved and I\\u2019ll follow up by email.</em>';}}
+   btn.disabled=false;btn.textContent='Submit \\u0026 pay AUD\\u00a0$2 \\u2192';
+  }}else{{btn.disabled=false;btn.textContent='Submit \\u0026 pay AUD\\u00a0$2 \\u2192';
+   msg.textContent=o.j&&o.j.error?o.j.error:'That didn\\u2019t work. Try the feedback page.';msg.className='rmsg err';}}}})
+ .catch(function(){{btn.disabled=false;btn.textContent='Submit \\u0026 pay AUD\\u00a0$2 \\u2192';
   msg.textContent='Network error. Try again or use the feedback page.';msg.className='rmsg err';}});
 }});
 }})();
