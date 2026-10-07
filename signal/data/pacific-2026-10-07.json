@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-07T02:06:01Z",
+ "generated": "2026-10-07T07:38:13Z",
  "date": "2026-10-07",
  "countries": {
   "PG": {
@@ -13500,7 +13500,7 @@
   }
  },
  "dfat": {
-  "fetched": "2026-10-07T02:06:01Z",
+  "fetched": "2026-10-07T07:38:13Z",
   "notices": [
    {
     "title": "Request for Proposal for Pacific Media Assistance Scheme 5",
@@ -14934,27 +14934,8 @@
   ]
  },
  "nz": {
-  "fetched": "2026-10-07T02:06:49Z",
+  "fetched": "2026-10-07T07:39:01Z",
   "tenders": [
-   {
-    "id": "34134620",
-    "ref": "WPG-0105342",
-    "title": "Advance Notice: Vanuatu Resilient Education Infrastructure",
-    "type": "NOI",
-    "date_label": "5:00 PM 15 Oct 2026 (Pacific/Auckland UTC+13:00)",
-    "org": "Ministry of Foreign Affairs and Trade",
-    "status": "open",
-    "url": "https://www.gets.govt.nz/MFAT/ExternalTenderDetails.htm?id=34134620",
-    "opened": "Wednesday, 20 May 2026 4:00 PM (Pacific/Auckland UTC+12:00)",
-    "closes": "Thursday, 15 October 2026 5:00 PM (Pacific/Auckland UTC+13:00)",
-    "dept": "Crown Funding",
-    "type_full": "Notice of Information (Advance Notice) (NOI)",
-    "coverage": "Sole Agency",
-    "categories": "72100000 - Building and facility maintenance and repair services 72120000 - Nonresidential building construction services",
-    "regions": "International",
-    "overview": "This is a Notice of Information (Advance Notice) from The Ministry of Foreign Affairs (MFAT) for provision of construction services on behalf of the Ministry of Education and Training (MoET) in Vanuatu, as part of New Zealand\u2019s International Development Cooperation (IDC) Programme. The goal is to provide resilient, inclusive and sustainable education infrastructure in Vanuatu, as well as responding to the ongoing natural disaster recovery needs. MFAT is looking to engage a construction contractor to complete works at various school sites in Vanuatu, including the provision of labour, plant, materials, project management services, logistics, etc. to complete construction works under three dif",
-    "summary": "This is a Notice of Information (Advance Notice) from The Ministry of Foreign Affairs (MFAT) for provision of construction services on behalf of the Ministry of Education and Training (MoET) in Vanuatu, as part of New Zealand\u2019s International Development Cooperation (IDC) Programme. The goal is to provide resilient, inclusive and sustainable education infrastructure in Vanuatu, as well as responding to the ongoing natural disaster recovery needs. MFAT is looking to engage a construction contractor to complete works at various school sites in Vanuatu, including the provision of labour, plant, materials, project management services, logistics, etc. to complete construction works under three dif"
-   },
    {
     "id": "35116860",
     "ref": "WS96309782",
@@ -14973,6 +14954,25 @@
     "regions": "Auckland",
     "overview": "The procurement will establish contractual arrangements with providers that can deliver high-quality, culturally responsive tutoring services which support Pacific learners to improve literacy and numeracy achievement, strengthen engagement in learning, and increase preparedness for future educational pathways. The Pacific Homework and Tutoring Initiative is designed to provide supplementary educational support in addition to learning taking place within schools. Services are intended to assist Pacific learners who require additional support to strengthen their achievement in the literacy and numeracy co-requisite examinations. This service will be available to approximately 1150 \u0101konga in 1",
     "summary": "The procurement will establish contractual arrangements with providers that can deliver high-quality, culturally responsive tutoring services which support Pacific learners to improve literacy and numeracy achievement, strengthen engagement in learning, and increase preparedness for future educational pathways. The Pacific Homework and Tutoring Initiative is designed to provide supplementary educational support in addition to learning taking place within schools. Services are intended to assist Pacific learners who require additional support to strengthen their achievement in the literacy and numeracy co-requisite examinations. This service will be available to approximately 1150 \u0101konga in 1"
+   },
+   {
+    "id": "34134620",
+    "ref": "WPG-0105342",
+    "title": "Advance Notice: Vanuatu Resilient Education Infrastructure",
+    "type": "NOI",
+    "date_label": "5:00 PM 20 Jan 2027 (Pacific/Auckland UTC+13:00)",
+    "org": "Ministry of Foreign Affairs and Trade",
+    "status": "open",
+    "url": "https://www.gets.govt.nz/MFAT/ExternalTenderDetails.htm?id=34134620",
+    "opened": "Wednesday, 20 May 2026 4:00 PM (Pacific/Auckland UTC+12:00)",
+    "closes": "Wednesday, 20 January 2027 5:00 PM (Pacific/Auckland UTC+13:00)",
+    "dept": "Crown Funding",
+    "type_full": "Notice of Information (Advance Notice) (NOI)",
+    "coverage": "Sole Agency",
+    "categories": "72100000 - Building and facility maintenance and repair services 72120000 - Nonresidential building construction services",
+    "regions": "International",
+    "overview": "This is a Notice of Information (Advance Notice) from The Ministry of Foreign Affairs (MFAT) for provision of construction services on behalf of the Ministry of Education and Training (MoET) in Vanuatu, as part of New Zealand\u2019s International Development Cooperation (IDC) Programme. The goal is to provide resilient, inclusive and sustainable education infrastructure in Vanuatu, as well as responding to the ongoing natural disaster recovery needs. MFAT is looking to engage a construction contractor to complete works at various school sites in Vanuatu, including the provision of labour, plant, materials, project management services, logistics, etc. to complete construction works under three dif",
+    "summary": "This is a Notice of Information (Advance Notice) from The Ministry of Foreign Affairs (MFAT) for provision of construction services on behalf of the Ministry of Education and Training (MoET) in Vanuatu, as part of New Zealand\u2019s International Development Cooperation (IDC) Programme. The goal is to provide resilient, inclusive and sustainable education infrastructure in Vanuatu, as well as responding to the ongoing natural disaster recovery needs. MFAT is looking to engage a construction contractor to complete works at various school sites in Vanuatu, including the provision of labour, plant, materials, project management services, logistics, etc. to complete construction works under three dif"
    },
    {
     "id": "33909804",

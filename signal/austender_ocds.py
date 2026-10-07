@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """Fetch DFAT contract data from AusTender OCDS API for Pacific aid programs.
 
-Searches contract publications across multiple date windows.
-Outputs a structured dataset of all DFAT contracts with values >= $100K.
+Supports incremental extraction: saves results per quarter so extraction
+can resume across wakes without re-fetching completed windows.
 """
 
 import json, sys, time, urllib.request, urllib.error, os
@@ -11,7 +11,9 @@ from datetime import datetime, timezone
 API_BASE = "https://api.tenders.gov.au/ocds/findByDates/contractPublished"
 DFAT_NAMES = {"department of foreign affairs and trade"}
 MAX_PAGES_PER_WINDOW = 200
-OUTPUT = os.path.join(os.path.dirname(__file__), "data", "austender-dfat.json")
+HERE = os.path.dirname(os.path.abspath(__file__))
+CACHE_DIR = os.path.join(HERE, "data", "austender-cache")
+OUTPUT = os.path.join(HERE, "data", "austender-dfat.json")
 
 PACIFIC_KEYWORDS = [
     "pacific", "papua new guinea", "png", "fiji", "samoa", "tonga", "vanuatu",
@@ -35,17 +37,42 @@ PROGRAM_KEYWORDS = [
     "strongim bisnis", "adam smith", "cardno", "coffey",
 ]
 
+
 def _quarterly_windows(start_year, end_year):
     windows = []
+    now = datetime.now(timezone.utc).strftime("%Y-%m-%dT23:59:59Z")
     for y in range(start_year, end_year + 1):
         for q_start, q_end in [("01-01", "03-31"), ("04-01", "06-30"), ("07-01", "09-30"), ("10-01", "12-31")]:
             s = f"{y}-{q_start}T00:00:00Z"
             e = f"{y}-{q_end}T23:59:59Z"
-            if e <= "2026-10-07T23:59:59Z":
+            if e <= now:
                 windows.append((s, e))
     return windows
 
-DATE_WINDOWS = _quarterly_windows(2020, 2026)
+
+def _cache_key(start, end):
+    return f"{start[:10]}_{end[:10]}"
+
+
+def _load_cached(key):
+    path = os.path.join(CACHE_DIR, f"{key}.json")
+    if os.path.exists(path):
+        with open(path) as f:
+            return json.load(f)
+    return None
+
+
+def _save_cached(key, contracts, complete):
+    os.makedirs(CACHE_DIR, exist_ok=True)
+    path = os.path.join(CACHE_DIR, f"{key}.json")
+    with open(path, "w") as f:
+        json.dump({
+            "key": key,
+            "fetched": datetime.now(timezone.utc).isoformat(),
+            "complete": complete,
+            "count": len(contracts),
+            "contracts": contracts,
+        }, f, indent=1)
 
 
 def fetch_page(url):
@@ -138,17 +165,55 @@ def extract_window(start, end):
         if url:
             time.sleep(0.25)
 
-    print(f"  window {start[:10]}–{end[:10]}: {page} pages, {len(contracts)} DFAT contracts >= $100K", file=sys.stderr)
-    return contracts
+    complete = not url
+    print(f"  window {start[:10]}–{end[:10]}: {page} pages, {len(contracts)} DFAT contracts >= $100K{'' if complete else ' (INCOMPLETE)'}", file=sys.stderr)
+    return contracts, complete
 
 
 def main():
-    print("Fetching DFAT contracts from AusTender OCDS API...", file=sys.stderr)
+    force = "--force" in sys.argv
+    windows_only = "--status" in sys.argv
+
+    DATE_WINDOWS = _quarterly_windows(2020, 2026)
+    os.makedirs(CACHE_DIR, exist_ok=True)
+
+    if windows_only:
+        print(f"AusTender cache status ({len(DATE_WINDOWS)} quarterly windows):", file=sys.stderr)
+        cached_count = 0
+        cached_contracts = 0
+        for start, end in DATE_WINDOWS:
+            key = _cache_key(start, end)
+            cached = _load_cached(key)
+            if cached:
+                cached_count += 1
+                cached_contracts += cached["count"]
+                status = "complete" if cached.get("complete") else "INCOMPLETE"
+                print(f"  {key}: {cached['count']} contracts ({status}, fetched {cached['fetched'][:10]})", file=sys.stderr)
+            else:
+                print(f"  {key}: NOT CACHED", file=sys.stderr)
+        print(f"\n{cached_count}/{len(DATE_WINDOWS)} windows cached, {cached_contracts} total contracts", file=sys.stderr)
+        return
+
+    print("Fetching DFAT contracts from AusTender OCDS API (incremental)...", file=sys.stderr)
     all_contracts = []
+    fetched_this_run = 0
+    skipped = 0
 
     for start, end in DATE_WINDOWS:
-        contracts = extract_window(start, end)
+        key = _cache_key(start, end)
+        cached = _load_cached(key)
+
+        if cached and cached.get("complete") and not force:
+            all_contracts.extend(cached["contracts"])
+            skipped += 1
+            continue
+
+        contracts, complete = extract_window(start, end)
+        _save_cached(key, contracts, complete)
         all_contracts.extend(contracts)
+        fetched_this_run += 1
+
+    print(f"\nWindows: {skipped} from cache, {fetched_this_run} fetched this run", file=sys.stderr)
 
     deduped = {}
     for c in all_contracts:
@@ -187,12 +252,6 @@ def main():
         pac = f" | Pacific: {stats['pacific_count']} @ ${stats['pacific_value']:,.0f}" if stats["pacific_count"] else ""
         print(f"  {name[:45]:45} {stats['count']:3} contracts  AUD ${stats['value']:>14,.0f}{pac}", file=sys.stderr)
 
-    print(f"\n--- Pacific contracts by value (top 30) ---", file=sys.stderr)
-    pacific_sorted = sorted(pacific, key=lambda x: -x["value_aud"])[:30]
-    for c in pacific_sorted:
-        sups = ", ".join(s["name"] for s in c["suppliers"])[:40]
-        print(f"  AUD ${c['value_aud']:>14,.0f} | {c['cn_id']:12} | {c['start']} to {c['end']} | {sups} | {c['description'][:60]}", file=sys.stderr)
-
     result = {
         "fetched": datetime.now(timezone.utc).isoformat(),
         "date_windows": [{"start": s[:10], "end": e[:10]} for s, e in DATE_WINDOWS],
@@ -209,7 +268,6 @@ def main():
         "all_contracts": all_contracts,
     }
 
-    os.makedirs(os.path.dirname(OUTPUT), exist_ok=True)
     with open(OUTPUT, "w") as f:
         json.dump(result, f, indent=1)
     print(f"\nSaved {len(all_contracts)} contracts to {OUTPUT}", file=sys.stderr)
