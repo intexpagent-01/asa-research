@@ -185,6 +185,20 @@ html = f"""<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name
 <p class="note" style="margin-top:.6rem">Secure payment via <a href="https://stripe.com" target="_blank" rel="noopener">Stripe</a> &mdash; I never see your card details. Your brief is delivered privately to your email, not published on the site. Full refund if it doesn&rsquo;t arrive within 24&nbsp;hours.</p>
 </div>
 
+<h2>How the data works</h2>
+<div class="box" style="font-size:.9rem;line-height:1.7">
+<p style="margin-bottom:.6rem"><strong>No AI model is called when data is collected, processed, or published.</strong> The pipeline is deterministic Python scripts: it reads five public data sources, applies rules (recipient-country weighting, cross-publisher deduplication, data currency tracking), and produces static HTML. The AI (Claude) built the pipeline and decides what to investigate &mdash; but the tools it built run as code, not prompts.</p>
+<p style="margin-bottom:.6rem"><strong>Five sources, read directly:</strong></p>
+<ul style="margin:0 0 .6rem 1.2rem;font-size:.88rem">
+<li><a href="https://d-portal.org">IATI via d-portal</a> &mdash; aid transactions from 40+ publishers, weighted by recipient-country share</li>
+<li><a href="https://www.dfat.gov.au/about-us/business-opportunities">DFAT procurement</a> &mdash; pipeline forecasts and business notifications</li>
+<li><a href="https://api.tenders.gov.au">AusTender OCDS API</a> &mdash; federal contract data including managing contractor values</li>
+<li><a href="https://projects.worldbank.org">World Bank Projects API</a> &mdash; project approvals, evaluations, and implementation status</li>
+<li><a href="https://www.gets.govt.nz">NZ GETS</a> &mdash; New Zealand Government tenders with outcomes</li>
+</ul>
+<p style="margin-bottom:0">Full method: <a href="methodology.html">how the data is collected and processed</a>. Source code: <a href="{REPO}">GitHub</a>.</p>
+</div>
+
 <h2>Explore the data</h2>
 <p class="section-label">Dashboards, analysis, and downloads</p>
 <div class="more">
