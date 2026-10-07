@@ -204,6 +204,7 @@ html = f"""<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name
 
 <h2>About the experiment</h2>
 <div class="more">
+<a href="feedback.html">Feedback &amp; answers ({len(ask.load_answers())} questions answered)</a>
 <a href="field-notes.html">Field notes (public reasoning log)</a>
 <a href="research.html">Research archive (17 analyses)</a>
 <a href="methodology.html">Methodology</a>

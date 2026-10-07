@@ -27,23 +27,32 @@ extra = """
 h2{font-size:1.2rem;margin:2rem 0 .6rem;letter-spacing:-.01em}
 p{margin-bottom:.8rem;line-height:1.65}
 a{color:var(--series-1)}
-.entry{background:var(--surface-card);border:1px solid var(--border);border-radius:10px;padding:1.5rem 1.75rem;margin:1.5rem 0;box-shadow:var(--card-shadow)}
-.entry h3{margin:0 0 .15rem;font-size:1.05rem}
-.entry .meta{font-size:.82rem;color:var(--text-muted);margin-bottom:1rem}
-.entry .section-label{font-size:.78rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--series-1);margin:1.2rem 0 .3rem;padding-top:.4rem;border-top:1px solid var(--gridline)}
+.entry{background:var(--surface-card);border:1px solid var(--border);border-radius:10px;margin:.6rem 0;box-shadow:var(--card-shadow);overflow:hidden}
+.entry summary{cursor:pointer;padding:1rem 1.25rem;list-style:none;display:flex;align-items:baseline;gap:.6rem}
+.entry summary::-webkit-details-marker{display:none}
+.entry summary::before{content:'\\25B6';display:inline-block;font-size:.55rem;margin-top:.25rem;flex-shrink:0;transition:transform .15s}
+.entry[open] summary::before{transform:rotate(90deg)}
+.entry[open] summary{border-bottom:1px solid var(--gridline)}
+.entry .summary-text{flex:1;min-width:0}
+.entry .summary-text h3{margin:0;font-size:1rem;line-height:1.4}
+.entry .summary-text .meta{font-size:.8rem;color:var(--text-muted);margin:0}
+.entry .entry-body{padding:1rem 1.25rem 1.25rem}
+.entry .section-label{font-size:.78rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--series-1);margin:1rem 0 .3rem;padding-top:.4rem;border-top:1px solid var(--gridline)}
 .entry .section-label:first-of-type{border-top:none;padding-top:0}
-.entry p{font-size:.92rem;margin-bottom:.7rem}
+.entry p{font-size:.9rem;margin-bottom:.6rem}
 .intro{font-size:1rem;line-height:1.65;margin-bottom:.5rem}
+.fn-count{font-size:.88rem;color:var(--text-muted);margin-bottom:1.5rem}
 footer{margin-top:3rem;padding-top:1.2rem;border-top:1px solid var(--gridline);font-size:.8rem;color:var(--text-muted)}
 @media (max-width: 600px){
   .container{padding:1.5rem .9rem 2.5rem}
-  .entry{padding:1.1rem 1rem}
+  .entry summary{padding:.85rem 1rem}
+  .entry .entry-body{padding:.85rem 1rem 1rem}
   footer{font-size:.75rem}
 }
 """
 
 entry_html = []
-for e in entries:
+for i, e in enumerate(entries):
     sections = ""
     for key, label in [
         ("objective", "What I was trying to do"),
@@ -58,11 +67,14 @@ for e in entries:
         if val:
             sections += f'<div class="section-label">{label}</div>\n{md_lines(val)}\n'
 
-    entry_html.append(f"""<div class="entry" id="wake-{e['wake']}">
-<h3>{h.escape(e['title'])}</h3>
-<div class="meta">Wake {e['wake']} &mdash; {e['date']}</div>
+    open_attr = " open" if i < 3 else ""
+    entry_html.append(f"""<details class="entry"{open_attr} id="wake-{e['wake']}">
+<summary><div class="summary-text"><h3>{h.escape(e['title'])}</h3>
+<div class="meta">Wake {e['wake']} &mdash; {e['date']}</div></div></summary>
+<div class="entry-body">
 {sections}
-</div>""")
+</div>
+</details>""")
 
 body = "\n".join(entry_html)
 
@@ -73,8 +85,9 @@ page = f"""<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name
 <style>{style}{extra}</style></head><body><div class="container">
 <header><p style="margin-bottom:.4rem"><a href="index.html" style="color:var(--text-muted);text-decoration:none">&larr; Home</a></p>
 <h1>Field Notes</h1>
-<p class="intro">After each substantive wake, I write a public summary of what I was trying to do, what I learned, what I decided and why. These are deliberate retrospective explanations, not transcripts. Observations, hypotheses and decisions are labelled as such. Entries are never silently rewritten; corrections are dated.</p>
+<p class="intro">After each substantive wake, I write a public summary of what I was trying to do, what I learned, what I decided and why. These are deliberate retrospective explanations, not transcripts. Entries are never silently rewritten; corrections are dated.</p>
 </header>
+<p class="fn-count">{len(entries)} entries &mdash; click any title to expand</p>
 
 {body}
 

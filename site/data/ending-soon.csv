@@ -7,7 +7,7 @@ CK,Cook Islands,NZ-1-ACT-0101074,New Zealand Ministry of Foreign Affairs and Tra
 CK,Cook Islands,NZ-1-ACT-0102034,New Zealand Ministry of Foreign Affairs and Trade,Pacific Justice Sector 2021-2026,,2026-11-30,620556.55
 CK,Cook Islands,NZ-1-ACT-0100405,New Zealand Ministry of Foreign Affairs and Trade,ADB Pacific Private Sector Development Initiative Phase IV,,2026-11-30,127624.94
 CK,Cook Islands,NZ-1-ACT-0104607,New Zealand Ministry of Foreign Affairs and Trade,FY25-26 Pacific Diplomatic Training In-Country & In-Region,,2026-12-20,61368.75
-CK,Cook Islands,XM-DAC-41301-760000,Food and Agriculture Organization (FAO),"Restoring Biodiversity and Cultural Resilience in the Cook Islands through Native Species Recovery, Invasive S",,2026-12-31,51796.39
+CK,Cook Islands,XM-DAC-41301-760000,Food and Agriculture Organization (FAO),"Restoring Biodiversity and Cultural Resilience in the Cook Islands through Native Species Recovery, Invasive S",,2026-12-31,51799.97
 CK,Cook Islands,XM-DAC-45001-C475,International Trade Centre (ITC),Pacific: EU-Pacific Business Forum,,2026-10-27,44776.08
 CK,Cook Islands,NZ-1-ACT-0104606,New Zealand Ministry of Foreign Affairs and Trade,FY25-26 Pacific Infrastructure Project Management In Country,,2026-12-20,20745.34
 CK,Cook Islands,NZ-1-ACT-0104605,New Zealand Ministry of Foreign Affairs and Trade,FY25-26 Pacific Public Sector Leadership (Mid-Level) Course 2 In Country,,2026-12-20,8822.29
@@ -129,7 +129,7 @@ FM,Micronesia,NZ-1-ACT-0102034,New Zealand Ministry of Foreign Affairs and Trade
 FM,Micronesia,NZ-1-ACT-0102286,New Zealand Ministry of Foreign Affairs and Trade,Pacific Digital Economy Programme,,2027-03-01,181843.94
 FM,Micronesia,XM-DAC-301-2-109293-001,International Development Research Centre,"Knowledge and Innovation Exchange hub for education in Asia, Europe, the Pacific, Middle East, and North Afric",,2027-04-01,173201.79
 FM,Micronesia,NZ-1-ACT-0103612,New Zealand Ministry of Foreign Affairs and Trade,North Pacific 2023 Tertiary Scholarships,,2027-02-28,105875.97
-FM,Micronesia,XM-DAC-41301-760658,Food and Agriculture Organization (FAO),FSM Access and Benefit Sharing Project (PPG),,2027-03-30,76393.63
+FM,Micronesia,XM-DAC-41301-760658,Food and Agriculture Organization (FAO),FSM Access and Benefit Sharing Project (PPG),,2027-03-30,91628.88
 FM,Micronesia,AU-5-INO015,Australia Aid,Australia Awards Pacific Scholarships,,2026-12-31,67935.73
 FM,Micronesia,NZ-1-ACT-0105182,New Zealand Ministry of Foreign Affairs and Trade,2026 Typhoon Sinlaku Federated States of Micronesia Response,,2027-01-31,57750.56
 FM,Micronesia,XM-DAC-41304-570RAS4006,"United Nations Educational, Scientific and Cultural Organization (UNESCO)",UNESCO Asia-Pacific Awards for Cultural Heritage Conservation,,2026-11-30,52333.56
@@ -250,7 +250,7 @@ NU,Niue,NZ-1-ACT-0104602,New Zealand Ministry of Foreign Affairs and Trade,FY25-
 NU,Niue,NZ-1-ACT-0104605,New Zealand Ministry of Foreign Affairs and Trade,FY25-26 Pacific Public Sector Leadership (Mid-Level) Course 2 In Country,,2026-12-20,8822.29
 NU,Niue,NZ-1-ACT-0100405,New Zealand Ministry of Foreign Affairs and Trade,ADB Pacific Private Sector Development Initiative Phase IV,,2026-11-30,7554.12
 PG,Papua New Guinea,XI-IATI-EC_INTPA-2019-PCC-410934,European Commission - Directorate-General for International Partnerships,"Support to Rural Entrepreneurship, Investment and Trade in Papua New Guinea (STREIT PNG)",,2026-12-25,90595840.0
-PG,Papua New Guinea,XM-DAC-41301-650700,Food and Agriculture Organization (FAO),"Support to Rural Entrepreneurship, Investment and Trade in Papua New Guinea (STREIT PNG)",,2026-12-24,55038052.0
+PG,Papua New Guinea,XM-DAC-41301-650700,Food and Agriculture Organization (FAO),"Support to Rural Entrepreneurship, Investment and Trade in Papua New Guinea (STREIT PNG)",,2026-12-24,55279960.0
 PG,Papua New Guinea,44000-P155087,World Bank,Water Supply and Sanitation Development Project,,2026-10-30,30174348.0
 PG,Papua New Guinea,47045-PNG-M-RAM-4,"The Global Fund to Fight AIDS, Tuberculosis and Malaria",Managing malaria control program in Papua New Guinea - Papua New Guinea (01-Jan-2024-31-Dec-2026),,2026-12-31,29797154.0
 PG,Papua New Guinea,47122-PNG-MR,"Gavi, The Vaccine Alliance",Papua New Guinea: Measles and Measles-rubella,,2026-12-31,20525620.0
@@ -353,7 +353,7 @@ SB,Solomon Islands,44000-P178676,World Bank,The First Solomon Islands Resilience
 SB,Solomon Islands,NZ-1-ACT-0A12445,New Zealand Ministry of Foreign Affairs and Trade,Solomon Islands Policing Support,,2027-03-31,15587602.0
 SB,Solomon Islands,44000-P173043,World Bank,Solomon Islands Agriculture and Rural Transformation Project,,2026-12-31,10421624.0
 SB,Solomon Islands,47045-SLB-Z-WVI-1,"The Global Fund to Fight AIDS, Tuberculosis and Malaria",Support to the Solomon Islands to reduce the incidence of Malaria and Tuberculosis - Solomon Islands (01-Jan-2,,2026-12-31,5986506.0
-SB,Solomon Islands,XM-DAC-41301-618735,Food and Agriculture Organization (FAO),Integrated forest management in the Solomon Islands (FSP),,2026-12-31,4714185.5
+SB,Solomon Islands,XM-DAC-41301-618735,Food and Agriculture Organization (FAO),Integrated forest management in the Solomon Islands (FSP),,2026-12-31,4720352.0
 SB,Solomon Islands,XM-DAC-41114-OUTPUT-00127761,United Nations Development Programme,Integrated Approach to Disaster Risk Management (DRM) in Solomon Islands (2021-2023),,2026-12-31,2805930.0
 SB,Solomon Islands,NZ-1-ACT-0102602,New Zealand Ministry of Foreign Affairs and Trade,Negotiated Partnerships: Oxfam Aotearoa Implementation,,2027-04-01,2216093.91
 SB,Solomon Islands,NZ-1-ACT-0102608,New Zealand Ministry of Foreign Affairs and Trade,Negotiated Partnership: TearFund New Zealand (TFNZ) Implementation,,2026-11-30,1825488.1
@@ -362,7 +362,7 @@ SB,Solomon Islands,NZ-1-ACT-0101037,New Zealand Ministry of Foreign Affairs and 
 SB,Solomon Islands,47122-SLB-PCV,"Gavi, The Vaccine Alliance",Solomon Islands: Pneumococcal Conjugate Vaccines,,2026-12-31,1410326.8
 SB,Solomon Islands,NZ-1-ACT-0102606,New Zealand Ministry of Foreign Affairs and Trade,Negotiated Partnership: UNICEF NZ Implementation,,2027-02-28,1366433.1
 SB,Solomon Islands,47122-SLB-HPV,"Gavi, The Vaccine Alliance",Solomon Islands: Human Papillomavirus,,2026-12-31,1089344.9
-SB,Solomon Islands,XM-DAC-41301-698302,Food and Agriculture Organization (FAO),Strengthening capacity in the agriculture and land-use as well as energy sectors in Solomon Islands for enhanc,,2026-12-31,865099.8
+SB,Solomon Islands,XM-DAC-41301-698302,Food and Agriculture Organization (FAO),Strengthening capacity in the agriculture and land-use as well as energy sectors in Solomon Islands for enhanc,,2026-12-31,867344.5
 SB,Solomon Islands,NZ-1-ACT-0100405,New Zealand Ministry of Foreign Affairs and Trade,ADB Pacific Private Sector Development Initiative Phase IV,,2026-11-30,811074.38
 SB,Solomon Islands,NZ-1-ACT-0101074,New Zealand Ministry of Foreign Affairs and Trade,Pacific Infrastructure Technical Assistance Fund (PITAF),,2027-03-31,765356.81
 SB,Solomon Islands,NZ-1-ACT-0102990,New Zealand Ministry of Foreign Affairs and Trade,Pacific Insurance and Climate Adaptation Programme (PICAP),,2027-01-31,763322.07
@@ -460,7 +460,7 @@ TV,Tuvalu,NZ-1-ACT-0102602,New Zealand Ministry of Foreign Affairs and Trade,Neg
 TV,Tuvalu,NZ-1-ACT-0102034,New Zealand Ministry of Foreign Affairs and Trade,Pacific Justice Sector 2021-2026,,2026-11-30,620556.55
 TV,Tuvalu,XI-BRIDGE-6385676864-10517,Global Environment Facility,Integrated Agro-ecosystem Approach for enhancing Livelihoods and Climate Resilience in Tuvalu,,2026-11-30,538944.0
 TV,Tuvalu,XM-DAC-41111-XM-DAC-41111-125879-7,United Nations Capital Development Fund,Pacific Insurance Climate Adap-UNCDF-00125879,,2026-12-31,336841.0
-TV,Tuvalu,XM-DAC-41301-761088,Food and Agriculture Organization (FAO),Developing capacity for implementing Tuvalu National Crops and Livestock Census 2026,,2026-11-30,200176.94
+TV,Tuvalu,XM-DAC-41301-761088,Food and Agriculture Organization (FAO),Developing capacity for implementing Tuvalu National Crops and Livestock Census 2026,,2026-11-30,200368.89
 TV,Tuvalu,XM-DAC-301-2-109293-001,International Development Research Centre,"Knowledge and Innovation Exchange hub for education in Asia, Europe, the Pacific, Middle East, and North Afric",,2027-04-01,173201.79
 TV,Tuvalu,NZ-1-ACT-0101074,New Zealand Ministry of Foreign Affairs and Trade,Pacific Infrastructure Technical Assistance Fund (PITAF),,2027-03-31,153071.36
 TV,Tuvalu,XI-IATI-EC_INTPA-2024-PC-41728,European Commission - Directorate-General for International Partnerships,Support measures for Tuvalu,,2026-12-15,141071.78
@@ -496,7 +496,7 @@ VU,Vanuatu,NZ-1-ACT-0102606,New Zealand Ministry of Foreign Affairs and Trade,Ne
 VU,Vanuatu,NZ-1-ACT-0102990,New Zealand Ministry of Foreign Affairs and Trade,Pacific Insurance and Climate Adaptation Programme (PICAP),,2027-01-31,1144983.1
 VU,Vanuatu,NZ-1-ACT-0101226,New Zealand Ministry of Foreign Affairs and Trade,Climate Change Programme - Climate Information for Decision Making,,2026-10-31,1112489.01
 VU,Vanuatu,AU-5-INN063,Australia Aid,Pacific Australia Labour Mobility Scheme (Vanuatu),,2026-12-31,824369.1
-VU,Vanuatu,XM-DAC-41301-649476,Food and Agriculture Organization (FAO),Ecosystem Restoration and Sustainable Land Management in Tongoa Island (MSP) (FSP),,2027-03-31,754544.25
+VU,Vanuatu,XM-DAC-41301-649476,Food and Agriculture Organization (FAO),Ecosystem Restoration and Sustainable Land Management in Tongoa Island (MSP) (FSP),,2027-03-31,754316.0
 VU,Vanuatu,NZ-1-ACT-0101074,New Zealand Ministry of Foreign Affairs and Trade,Pacific Infrastructure Technical Assistance Fund (PITAF),,2027-03-31,663309.21
 VU,Vanuatu,XM-DAC-47136-VU15,Global Green Growth Institute (GGGI),Enhancing Adaptation Actions through the National Adaptation Plan,,2027-03-25,654804.25
 VU,Vanuatu,NZ-1-ACT-0102608,New Zealand Ministry of Foreign Affairs and Trade,Negotiated Partnership: TearFund New Zealand (TFNZ) Implementation,,2026-11-30,623337.4
@@ -514,7 +514,7 @@ VU,Vanuatu,XM-DAC-47066-CC0083,International Organization for Migration (IOM),Se
 VU,Vanuatu,NZ-1-ACT-0102286,New Zealand Ministry of Foreign Affairs and Trade,Pacific Digital Economy Programme,,2027-03-01,181843.94
 VU,Vanuatu,XM-DAC-301-2-109293-001,International Development Research Centre,"Knowledge and Innovation Exchange hub for education in Asia, Europe, the Pacific, Middle East, and North Afric",,2027-04-01,173201.79
 VU,Vanuatu,NL-KVK-27108436-A-07827-18:25,Oxfam Novib,Oxfam in Pacific,,2027-03-31,109265.52
-VU,Vanuatu,XM-DAC-41301-754297,Food and Agriculture Organization (FAO),Integrating Bioeconomy and Tourism for Sustainable Vanuatu (IBET) (PPG),,2027-03-20,97738.87
+VU,Vanuatu,XM-DAC-41301-754297,Food and Agriculture Organization (FAO),Integrating Bioeconomy and Tourism for Sustainable Vanuatu (IBET) (PPG),,2027-03-20,97739.91
 VU,Vanuatu,XM-DAC-47136-VU017,Global Green Growth Institute (GGGI),Strengthening the Legal and Operational Framework for Vehicle Emissions Standards in Vanuatu,,2027-02-28,61186.48
 VU,Vanuatu,XM-DAC-41304-570RAS4006,"United Nations Educational, Scientific and Cultural Organization (UNESCO)",UNESCO Asia-Pacific Awards for Cultural Heritage Conservation,,2026-11-30,52333.56
 VU,Vanuatu,XM-DAC-301-2-110574-001,International Development Research Centre,Promoting sustainable investments in quality and affordable childcare in Vanuatu,,2026-12-01,49179.44
@@ -532,7 +532,7 @@ VU,Vanuatu,NZ-1-ACT-0104605,New Zealand Ministry of Foreign Affairs and Trade,FY
 VU,Vanuatu,NL-KVK-27378529-4000003042,Netherlands Enterprise Agency,Mental Health and Psychosocial Support (DSS MHPSS),,2026-12-31,
 VU,Vanuatu,XM-DAC-47066-PX.0565,International Organization for Migration (IOM),Vanuatu: Piloting Implementation of the National Action Plan to Combat Trafficking in Persons,,2027-01-31,
 VU,Vanuatu,XM-DAC-301-2-109293-003,International Development Research Centre,"Knowledge and Innovation Exchange hub for education in Asia, Europe, the Pacific, Middle East, and North Afric",,2027-04-01,
-VU,Vanuatu,XM-DAC-701-8-201942320,Japan International Cooperation Agency,サント島における水力発電施設建設計画,,2027-03-31,
+VU,Vanuatu,XM-DAC-701-8-201942320,Japan International Cooperation Agency (JICA),サント島における水力発電施設建設計画,,2027-03-31,
 VU,Vanuatu,XM-DAC-701-2-2019010024,MINISTRY OF FOREIGN AFFAIRS IN JAPAN,Project for the Disaster Reconstruction of Teouma Bridge,,2026-12-31,
 WS,Samoa,44000-P165782,World Bank,Samoa Climate Resilient Transport Project,,2027-03-31,28463276.0
 WS,Samoa,XI-IATI-EC_INTPA-2022-PC-24576,European Commission - Directorate-General for International Partnerships,"Samoa, Water Sector Resilience and Climate Change Adaptation Sector Budget Support Programme",,2026-12-22,25064844.0
