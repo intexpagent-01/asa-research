@@ -43,11 +43,33 @@ def infer_region(country, api_region=""):
             return v
     return ""
 
+SECTOR_KEYWORDS = {
+    "WASH": ["wash", "water supply", "water service", "sanitation", "hygiene", "sewage", "sewerage", "latrine", "borehole", "handwashing", "drinking water", "wastewater", "water point"],
+    "health": ["health", "hospital", "clinic", "maternal", "malaria", "hiv", "aids", "tuberculosis", "nutrition", "vaccine", "immunization", "pharmaceutical", "epidemi"],
+    "education": ["education", "school", "teacher", "student", "learning", "literacy", "curriculum", "classroom", "university", "tertiary", "primary education", "secondary education", "vocational training"],
+    "livelihoods": ["livelihood", "income", "employment", "job", "enterprise", "small business", "microfinance", "micro-finance", "self-employment", "cash crop", "fishing", "livestock", "poultry", "artisan"],
+    "agriculture": ["agricultur", "farm", "irrigation", "crop", "harvest", "seed", "fertilizer", "agri-business", "agribusiness", "horticultur", "pastoral", "rice", "wheat", "maize", "food security", "food production"],
+    "transport": ["transport", "road", "highway", "bridge", "port", "airport", "railway", "rail", "bus", "ferry", "logistics", "freight"],
+    "energy": ["energy", "electri", "solar", "wind power", "hydropower", "geothermal", "power grid", "power plant", "renewable", "fossil fuel", "biomass", "off-grid"],
+    "governance": ["governance", "public sector", "civil service", "anti-corruption", "transparency", "accountability", "decentralization", "municipal", "local government", "public administration", "judicial", "rule of law", "parliament"],
+}
+
+def infer_sectors(text, project_name):
+    combined = (text + " " + project_name).lower()
+    sectors = []
+    for sector, keywords in SECTOR_KEYWORDS.items():
+        for kw in keywords:
+            if kw in combined:
+                sectors.append(sector)
+                break
+    return sectors
+
 # Prepare embedded data: slim lessons for client-side search
 slim_lessons = []
 for i, l in enumerate(all_lessons):
     region = l.get("region") or infer_region(l["country"])
     pid = l.get("project_id", "")
+    sectors = infer_sectors(l["text"], l["project"])
     slim_lessons.append({
         "i": i,
         "t": l["text"][:600],
@@ -58,12 +80,17 @@ for i, l in enumerate(all_lessons):
         "r": region,
         "g": l["tags"],
         "d": pid,
+        "x": sectors,
     })
 
-# Collect all unique tags, countries, and regions for filter dropdowns
+# Collect all unique tags, countries, regions, and sectors for filter dropdowns
 all_tags = sorted(synth.get("tag_distribution", {}).keys())
 all_countries = sorted(set(l["c"] for l in slim_lessons if l["c"]))
 all_regions = sorted(set(l["r"] for l in slim_lessons if l["r"]))
+all_sectors = sorted(SECTOR_KEYWORDS.keys())
+sector_counts = {}
+for s in all_sectors:
+    sector_counts[s] = sum(1 for l in slim_lessons if s in l["x"])
 
 # Statistics
 n_projects = len(projects)
@@ -166,6 +193,8 @@ Find what worked, what failed, and why &mdash; before you design your next proje
   <a href="?q=climate+adaptation">Climate adaptation</a>
   <a href="?tag=M%26E">M&amp;E lessons</a>
   <a href="?q=gender+inclusion">Gender &amp; inclusion</a>
+  <a href="?sector=WASH">WASH projects</a>
+  <a href="?sector=livelihoods&tag=M%26E">M&amp;E in livelihoods</a>
   <a href="?region=East+Asia+and+Pacific">East Asia &amp; Pacific</a>
   <a href="?q=sustainability+exit+strategy">Sustainability &amp; exit</a>
 </div>
@@ -191,6 +220,21 @@ Find what worked, what failed, and why &mdash; before you design your next proje
 for tag in all_tags:
     count = tag_dist.get(tag, 0)
     html += f'      <option value="{esc(tag)}">{esc(tag)} ({count})</option>\n'
+
+html += """    </select>
+    <select id="f-tag2">
+      <option value="">+ second topic</option>
+"""
+for tag in all_tags:
+    count = tag_dist.get(tag, 0)
+    html += f'      <option value="{esc(tag)}">{esc(tag)} ({count})</option>\n'
+
+html += """    </select>
+    <select id="f-sector">
+      <option value="">All sectors</option>
+"""
+for s in all_sectors:
+    html += f'      <option value="{esc(s)}">{esc(s)} ({sector_counts[s]})</option>\n'
 
 html += """    </select>
     <select id="f-region">
@@ -309,6 +353,7 @@ function renderCard(l, words){{
   if(l.r) h+='<span style="font-style:italic">'+l.r+'</span>';
   h+=outcomeBadge(l.o);
   for(var g of l.g) h+='<span class="tag '+(cls==='fail'?'fail-tag':'')+'">'+g+'</span>';
+  if(l.x) for(var s of l.x) h+='<span class="tag" style="background:#e8f5e922;color:#2e7d32;border:1px solid #2e7d3244">'+s+'</span>';
   h+='</div></div>';
   return h;
 }}
@@ -317,6 +362,8 @@ function doSearch(){{
   var q=document.getElementById('q').value;
   var fOutcome=document.getElementById('f-outcome').value;
   var fTag=document.getElementById('f-tag').value||activeTag;
+  var fTag2=document.getElementById('f-tag2').value;
+  var fSector=document.getElementById('f-sector').value;
   var fRegion=document.getElementById('f-region').value;
   var fCountry=document.getElementById('f-country').value;
   var words=norm(q).split(' ').filter(function(w){{return w.length>1;}});
@@ -329,6 +376,8 @@ function doSearch(){{
     if(fOutcome==='success' && !succ[l.o]) continue;
     if(fOutcome && fOutcome!=='fail' && fOutcome!=='success' && l.o!==fOutcome) continue;
     if(fTag && l.g.indexOf(fTag)<0) continue;
+    if(fTag2 && l.g.indexOf(fTag2)<0) continue;
+    if(fSector && (!l.x || l.x.indexOf(fSector)<0)) continue;
     if(fRegion && l.r!==fRegion) continue;
     if(fCountry && l.c!==fCountry) continue;
     var score=matchScore(l, words);
@@ -377,6 +426,8 @@ function resetFilters(){{
   document.getElementById('q').value='';
   document.getElementById('f-outcome').value='';
   document.getElementById('f-tag').value='';
+  document.getElementById('f-tag2').value='';
+  document.getElementById('f-sector').value='';
   document.getElementById('f-region').value='';
   document.getElementById('f-country').value='';
   activeTag='';
@@ -396,6 +447,8 @@ document.getElementById('f-tag').addEventListener('change', function(){{
   }});
   doSearch();
 }});
+document.getElementById('f-tag2').addEventListener('change', doSearch);
+document.getElementById('f-sector').addEventListener('change', doSearch);
 document.getElementById('f-region').addEventListener('change', doSearch);
 document.getElementById('f-country').addEventListener('change', doSearch);
 
@@ -406,6 +459,8 @@ if(params.get('region')) document.getElementById('f-region').value=params.get('r
 if(params.get('country')) document.getElementById('f-country').value=params.get('country');
 if(params.get('outcome')) document.getElementById('f-outcome').value=params.get('outcome');
 if(params.get('tag')){{ document.getElementById('f-tag').value=params.get('tag'); activeTag=params.get('tag'); }}
+if(params.get('tag2')) document.getElementById('f-tag2').value=params.get('tag2');
+if(params.get('sector')) document.getElementById('f-sector').value=params.get('sector');
 doSearch();
 </script>
 </body>
