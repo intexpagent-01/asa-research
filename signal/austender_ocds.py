@@ -10,7 +10,7 @@ from datetime import datetime, timezone
 
 API_BASE = "https://api.tenders.gov.au/ocds/findByDates/contractPublished"
 DFAT_NAMES = {"department of foreign affairs and trade"}
-MAX_PAGES_PER_WINDOW = 80
+MAX_PAGES_PER_WINDOW = 200
 OUTPUT = os.path.join(os.path.dirname(__file__), "data", "austender-dfat.json")
 
 PACIFIC_KEYWORDS = [
@@ -29,15 +29,23 @@ PROGRAM_KEYWORDS = [
     "esip", "aiffp", "phc4png", "development assistance",
     "managing contractor", "support facility", "program support",
     "bilateral", "partnership", "enabling services",
+    "transport", "australia awards", "new colombo", "incentive fund",
+    "iwiser", "access", "women lead", "rt4d", "koneksi",
+    "mfat", "tafe", "volunteer", "sport", "pasc",
+    "strongim bisnis", "adam smith", "cardno", "coffey",
 ]
 
-DATE_WINDOWS = [
-    ("2018-01-01T00:00:00Z", "2019-12-31T23:59:59Z"),
-    ("2020-01-01T00:00:00Z", "2021-12-31T23:59:59Z"),
-    ("2022-01-01T00:00:00Z", "2023-06-30T23:59:59Z"),
-    ("2023-07-01T00:00:00Z", "2024-12-31T23:59:59Z"),
-    ("2025-01-01T00:00:00Z", "2026-10-06T23:59:59Z"),
-]
+def _quarterly_windows(start_year, end_year):
+    windows = []
+    for y in range(start_year, end_year + 1):
+        for q_start, q_end in [("01-01", "03-31"), ("04-01", "06-30"), ("07-01", "09-30"), ("10-01", "12-31")]:
+            s = f"{y}-{q_start}T00:00:00Z"
+            e = f"{y}-{q_end}T23:59:59Z"
+            if e <= "2026-10-07T23:59:59Z":
+                windows.append((s, e))
+    return windows
+
+DATE_WINDOWS = _quarterly_windows(2020, 2026)
 
 
 def fetch_page(url):
