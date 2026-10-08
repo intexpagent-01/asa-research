@@ -142,7 +142,12 @@ html = f"""<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name
 
 <div class="grid">
 <div class="card">
-<h3>Evidence Explorer <span class="badge badge-new">New</span></h3>
+<h3>Design Lab <span class="badge badge-new">New</span></h3>
+<p>From evidence to action. Pick a development challenge and get design principles from successful projects, common pitfalls from failures, an implementation checklist, and risk factors. {n_lessons:,} lessons, synthesised for designers.</p>
+<a class="cta" href="design-lab.html">Design from evidence &rarr;</a>
+</div>
+<div class="card">
+<h3>Evidence Explorer</h3>
 <p>What does global evidence say about a development problem? Pick a topic and region &mdash; see what worked, what didn&rsquo;t, and where outcomes differ. {n_lessons:,} lessons from {n_projects:,} evaluated projects.</p>
 <a class="cta" href="evidence.html">Explore the evidence &rarr;</a>
 </div>
