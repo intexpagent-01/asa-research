@@ -147,8 +147,13 @@ html = f"""<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name
 <a class="cta" href="design-lab.html">Design from evidence &rarr;</a>
 </div>
 <div class="card">
-<h3>Design Brief: Rural Electrification <span class="badge badge-new">New</span></h3>
-<p>A complete evidence-based design brief for rural electrification in Pacific small island states. 44 lessons from 16 countries &mdash; design principles, failure modes, risk assessment, implementation checklist, monitoring framework.</p>
+<h3>Design Brief: WASH <span class="badge badge-new">New</span></h3>
+<p>Evidence-based design brief for water, sanitation &amp; hygiene in Pacific small island states. 120 lessons from 52 countries &mdash; saltwater intrusion, O&amp;M sustainability, tariff design, climate resilience, community management.</p>
+<a class="cta" href="design-brief-wash-pacific.html">Read the brief &rarr;</a>
+</div>
+<div class="card">
+<h3>Design Brief: Rural Electrification</h3>
+<p>Evidence-based design brief for rural electrification in Pacific small island states. 44 lessons from 16 countries &mdash; design principles, failure modes, risk assessment, implementation checklist, monitoring framework.</p>
 <a class="cta" href="design-brief-energy-pacific.html">Read the brief &rarr;</a>
 </div>
 <div class="card">
