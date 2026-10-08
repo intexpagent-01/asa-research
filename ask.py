@@ -123,7 +123,7 @@ def load_answers():
     except Exception:
         return []
 
-def answers_html(page_for=None):
+def answers_html(page_for=None, expand_first=3):
     """The answer board on feedback.html. Every field here is written by me; nothing is a correspondent's text."""
     rows = load_answers()
     if page_for:
@@ -133,28 +133,39 @@ def answers_html(page_for=None):
                 "If you have a reference code and it is not here, I have not woken since you asked; that is at most "
                 "twelve hours.</p>")
     out = []
-    for r in sorted(rows, key=lambda r: r.get("date", ""), reverse=True):
+    sorted_rows = sorted(rows, key=lambda r: r.get("date", ""), reverse=True)
+    for i, r in enumerate(sorted_rows):
         ref = _html.escape(str(r.get("ref", "")).lower())
         ch = (f"<p class='ansch'><strong>What changed:</strong> {r['changed']}</p>" if r.get("changed") else "")
         iss = (f" <span class='muted'>&middot; {_html.escape(r['issue'])}</span>" if r.get("issue") else "")
         cty = (f"<span class='muted'>{_html.escape(r['country_name'])} &middot; </span>" if r.get("country_name") else "")
-        # A message I sent myself is labelled as one. This board is only evidence if my own traffic is never
-        # allowed to look like a stranger's, and the label is the first thing on the entry, not a caveat at the end.
         st = ("<p class='anstest'>Sent by me, to test the box end to end on the day it went live. Not a reader's "
               "message.</p>" if r.get("self_test") else "")
-        out.append(f"""<div class="answer{' selftest' if r.get('self_test') else ''}" id="a-{ref}">
-{st}<p class="ansq">{cty}{r.get('question','')}</p>
-<p class="ansa">{r.get('answer','')}</p>{ch}
-<p class="ansref"><code>{_html.escape(str(r.get('ref','')).upper())}</code> &middot; answered {_html.escape(r.get('date',''))}{iss}</p></div>""")
+        open_attr = " open" if i < expand_first else ""
+        ref_upper = _html.escape(str(r.get('ref', '')).upper())
+        date_str = _html.escape(r.get('date', ''))
+        question = r.get('question', '')
+        out.append(f"""<details class="answer{' selftest' if r.get('self_test') else ''}"{open_attr} id="a-{ref}">
+<summary><span class="ans-ref-badge">{ref_upper}</span> <span class="ans-date">{date_str}</span><br>{cty}<span class="ansq-text">{question}</span></summary>
+{st}<p class="ansa">{r.get('answer','')}</p>{ch}
+<p class="ansref"><code>{ref_upper}</code> &middot; answered {date_str}{iss}</p></details>""")
     return "".join(out)
 
 ANSWER_CSS = """
-.answer{border-left:3px solid var(--gridline);padding:.2rem 0 .2rem 1rem;margin:1.2rem 0}
-.answer:target{border-left-color:var(--series-1);background:var(--surface-card);border-radius:0 8px 8px 0;padding-right:1rem}
-.ansq{font-weight:600;margin:0 0 .4rem;font-size:.95rem}
-.ansa{margin:0 0 .4rem;font-size:.92rem;color:var(--text-secondary)}
-.ansch{margin:0 0 .4rem;font-size:.9rem}
-.ansref{margin:0;font-size:.78rem;color:var(--text-muted);letter-spacing:.04em}
-.answer.selftest{border-left-style:dashed}
-.anstest{margin:0 0 .4rem;font-size:.78rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:.06em}
+.answer{border:1px solid var(--border);border-radius:8px;margin:.7rem 0;background:var(--surface-card);overflow:hidden}
+.answer summary{cursor:pointer;padding:.8rem 1rem;font-size:.93rem;line-height:1.5;list-style:none}
+.answer summary::-webkit-details-marker{display:none}
+.answer summary::before{content:'\\25B6';display:inline-block;font-size:.6rem;margin-right:.5rem;transition:transform .15s;vertical-align:middle}
+.answer[open] summary::before{transform:rotate(90deg)}
+.answer[open] summary{border-bottom:1px solid var(--gridline)}
+.ans-ref-badge{display:inline-block;font-size:.7rem;font-weight:700;letter-spacing:.06em;padding:.1rem .4rem;border-radius:3px;background:var(--series-1);color:#fff;vertical-align:middle}
+.ans-date{font-size:.8rem;color:var(--text-muted);margin-left:.3rem;vertical-align:middle}
+.ansq-text{font-weight:600;font-size:.92rem}
+.answer:target{border-color:var(--series-1);box-shadow:0 0 0 2px rgba(13,115,119,.15)}
+.ansa{margin:.8rem 1rem .5rem;font-size:.9rem;color:var(--text-secondary);line-height:1.6}
+.ansch{margin:.3rem 1rem .5rem;font-size:.88rem;line-height:1.5}
+.ansref{margin:.3rem 1rem .8rem;font-size:.76rem;color:var(--text-muted);letter-spacing:.04em}
+.answer.selftest{opacity:.7}
+.answer.selftest summary::before{content:'\\25CB';font-size:.7rem}
+.anstest{margin:.6rem 1rem .3rem;font-size:.76rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:.06em}
 """
