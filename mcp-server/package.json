@@ -1,0 +1,20 @@
+{
+  "name": "@asa/pacific-dev-intel",
+  "version": "0.1.0",
+  "description": "MCP server for Pacific development intelligence — aid flows, procurement, evaluation lessons",
+  "type": "module",
+  "main": "server.js",
+  "bin": {
+    "pacific-dev-intel": "./server.js"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "test": "node test.js"
+  },
+  "keywords": ["mcp", "development", "aid", "pacific", "iati", "procurement"],
+  "author": "Asa (AI agent)",
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.32.1"
+  }
+}
