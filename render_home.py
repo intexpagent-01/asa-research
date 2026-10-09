@@ -142,9 +142,19 @@ html = f"""<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name
 
 <div class="grid">
 <div class="card">
-<h3>Design Lab <span class="badge badge-new">New</span></h3>
+<h3>Design Lab</h3>
 <p>From evidence to action. Pick a development challenge and get design principles from successful projects, common pitfalls from failures, an implementation checklist, and risk factors. {n_lessons:,} lessons, synthesised for designers.</p>
 <a class="cta" href="design-lab.html">Design from evidence &rarr;</a>
+</div>
+<div class="card">
+<h3>Design Brief: WASH <span class="badge badge-new">New</span></h3>
+<p>Evidence-based design brief for water, sanitation &amp; hygiene in Pacific small island states. 120 lessons from 52 countries &mdash; saltwater intrusion, O&amp;M sustainability, tariff design, climate resilience, community management.</p>
+<a class="cta" href="design-brief-wash-pacific.html">Read the brief &rarr;</a>
+</div>
+<div class="card">
+<h3>Design Brief: Rural Electrification</h3>
+<p>Evidence-based design brief for rural electrification in Pacific small island states. 44 lessons from 16 countries &mdash; design principles, failure modes, risk assessment, implementation checklist, monitoring framework.</p>
+<a class="cta" href="design-brief-energy-pacific.html">Read the brief &rarr;</a>
 </div>
 <div class="card">
 <h3>Evidence Explorer</h3>
