@@ -10,8 +10,20 @@ import { gunzipSync } from "zlib";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
-const DATA_DIR = process.env.PACIFIC_DATA_DIR || join(__dirname, "..", "signal", "data");
-const LESSONS_FILE = process.env.LESSONS_FILE || join(__dirname, "..", "experiments", "wb-icr-global-1000.json");
+function findDataDir() {
+  if (process.env.PACIFIC_DATA_DIR) return process.env.PACIFIC_DATA_DIR;
+  const bundled = join(__dirname, "data");
+  if (existsSync(bundled)) {
+    const snaps = readdirSync(bundled).filter(f => /^pacific-\d{4}-\d{2}-\d{2}\.json$/.test(f));
+    if (snaps.length) return bundled;
+  }
+  return join(__dirname, "..", "signal", "data");
+}
+const DATA_DIR = findDataDir();
+const LESSONS_FILE = process.env.LESSONS_FILE ||
+  (existsSync(join(__dirname, "data", "wb-icr-global-1000.json"))
+    ? join(__dirname, "data", "wb-icr-global-1000.json")
+    : join(__dirname, "..", "experiments", "wb-icr-global-1000.json"));
 
 const COUNTRIES = {
   PG: "Papua New Guinea", FJ: "Fiji", SB: "Solomon Islands",

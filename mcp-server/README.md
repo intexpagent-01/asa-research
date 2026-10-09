@@ -16,6 +16,16 @@ Connect this server to Claude Desktop, VS Code, or any MCP-compatible client. Th
 
 The server answers from real data — IATI aid transactions, DFAT procurement notices, NZ MFAT tenders, and World Bank evaluation reports — updated every 12 hours.
 
+## Quick setup (recommended)
+
+```bash
+git clone https://github.com/intexpagent-01/asa-research.git
+cd asa-research/mcp-server
+bash setup.sh
+```
+
+The setup script installs dependencies and configures Claude Desktop automatically. Restart Claude Desktop after running it.
+
 ## Tools
 
 | Tool | What it does |
@@ -36,48 +46,62 @@ The server answers from real data — IATI aid transactions, DFAT procurement no
 - **NZ MFAT / GETS** — New Zealand government tender portal
 - **World Bank** — Projects API and 991 Implementation Completion Report evaluations
 
-## Setup
+## Manual setup
 
-### With Claude Desktop
+### Claude Desktop
 
-Add to your `claude_desktop_config.json`:
+Add to your `claude_desktop_config.json` (macOS: `~/Library/Application Support/Claude/claude_desktop_config.json`):
 
 ```json
 {
   "mcpServers": {
     "pacific-dev-intel": {
       "command": "node",
-      "args": ["/path/to/mcp-server/server.js"]
+      "args": ["/full/path/to/mcp-server/server.js"]
     }
   }
 }
 ```
 
-### With Claude Code
+### Claude Code
 
 ```bash
-claude mcp add pacific-dev-intel node /path/to/mcp-server/server.js
+claude mcp add pacific-dev-intel node /full/path/to/mcp-server/server.js
 ```
 
-### Standalone
+### VS Code with Copilot (experimental)
+
+Add to your VS Code `settings.json`:
+
+```json
+{
+  "mcp": {
+    "servers": {
+      "pacific-dev-intel": {
+        "command": "node",
+        "args": ["/full/path/to/mcp-server/server.js"]
+      }
+    }
+  }
+}
+```
+
+## Data
+
+The server includes bundled data snapshots in the `data/` directory (updated periodically). To get the freshest data, pull the latest from the repository:
 
 ```bash
-npm install
-node server.js
+git pull
 ```
 
-The server communicates over stdio using the MCP protocol.
+The server reads snapshot files named `pacific-YYYY-MM-DD.json` and compressed activity indexes `pacific-YYYY-MM-DD.index.json.gz`. It always serves from the most recent snapshot.
 
 ## Environment variables
 
 | Variable | Default | Description |
 |----------|---------|-------------|
-| `PACIFIC_DATA_DIR` | `../signal/data` | Directory containing Pacific aid snapshot JSON files |
-| `LESSONS_FILE` | `../experiments/wb-icr-global-1000.json` | World Bank evaluation lessons file |
-
-## Data format
-
-The server reads snapshot files named `pacific-YYYY-MM-DD.json` (produced by the Pacific Aid Signal pipeline) and compressed activity indexes `pacific-YYYY-MM-DD.index.json.gz`. It always serves from the most recent snapshot.
+| `PACIFIC_DATA_DIR` | `./data` (bundled) | Directory containing Pacific aid snapshot JSON files |
+| `LESSONS_FILE` | Auto-detected | World Bank evaluation lessons file |
 
 ## License
 

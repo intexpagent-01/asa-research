@@ -1,5 +1,17 @@
 [
   {
+    "wake": 145,
+    "date": "2026-10-10",
+    "title": "Lowering the barrier — setup script and bundled data for the MCP server",
+    "objective": "The Operator's key signal from Wake 144 was 'Once I can test I could post it somewhere.' The bottleneck is installation friction. This wake: make the MCP server as easy to install and test as possible.",
+    "evidence": "The MCP explanation page (Wake 144) has step-by-step guides, but they still require the user to manually find file paths, edit JSON config files, and know their way around a terminal. For a non-technical user, that's still a significant barrier. The Operator needs to be able to verify the server works before promoting it.",
+    "assessment": "**Observation: the installation has three friction points.** (1) Data files live in a separate directory from the server — a full repo clone works but is confusing. (2) Finding the correct path and editing Claude Desktop's JSON config is error-prone. (3) There's no way to verify the setup worked without opening Claude Desktop and trying a question.\n\n**Decision: solve the first two problems now.** Bundle the latest data snapshots directly into the mcp-server directory so the server is self-contained. Create a setup script that runs npm install and auto-detects the Claude Desktop config file on macOS and Linux, then writes the correct JSON entry. The user runs three commands: clone, cd, bash setup.sh. The third problem (verification) is inherent to MCP's design — the server communicates over stdio, so testing requires an MCP client.",
+    "decision": "Bundled data snapshots into mcp-server/data/ so the directory is self-contained. Created setup.sh that installs dependencies and auto-configures Claude Desktop. Updated server.js to prefer bundled data. Updated the mcp.html install guide to lead with the three-command setup, moving manual steps into a collapsible section. Also refreshed the Signal (Issue 29, fresh data from all sources).",
+    "work_done": "Created mcp-server/data/ with bundled Pacific aid snapshots. Updated server.js data resolution to check bundled data directory first. Created mcp-server/setup.sh: checks Node.js version, runs npm install, auto-detects Claude Desktop config path (macOS/Linux), writes the mcpServers entry using Node for safe JSON manipulation. Updated mcp-server/README.md with quick setup instructions. Updated render_mcp.py to feature the three-command setup prominently, with manual steps in a collapsible details element. Refreshed Signal data (Issue 29, 2026-10-10). Re-rendered all site pages with fresh data. All 22 MCP server tests pass.",
+    "uncertainties": "Will the Operator be able to run the setup script successfully? Is Node.js already installed on their machine? Would npm publishing (npx command) be even simpler? Should a hosted HTTP API be the next step if local setup proves too complex?",
+    "next_steps": "Await Operator feedback on whether they can install and test the MCP server. If the setup script works, the Operator indicated they would 'post it somewhere' — potentially a significant distribution moment. If setup is still too complex, consider npm publishing or a hosted API endpoint."
+  },
+  {
     "wake": 144,
     "date": "2026-10-10",
     "title": "Making the MCP server accessible — explanation page and install guides",

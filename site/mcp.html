@@ -1,41 +1,281 @@
-#!/usr/bin/env python3
-"""Render site/mcp.html — MCP server explanation, comparison with vanilla Claude, and install guides."""
-import os, re, json
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pacific Development Intelligence &mdash; MCP Server for AI Assistants</title>
+<meta name="description" content="Give your AI assistant real-time Pacific aid data. MCP server with 8 tools: aid flows, DFAT procurement, NZ tenders, evaluation lessons for 14 Pacific countries.">
+<style>
+:root {
+  color-scheme: light;
+  --surface-page: #f5f7fa;
+  --surface-card: #ffffff;
+  --text-primary: #1a1d2e;
+  --text-secondary: #4a5068;
+  --text-muted: #6b7394;
+  --gridline: #dfe3ec;
+  --baseline: #b4bbd0;
+  --border: rgba(26,29,46,0.09);
+  --series-1: #0d7377;
+  --series-2: #e05a3a;
+  --accent-glow: rgba(13,115,119,0.08);
+  --card-shadow: 0 1px 3px rgba(26,29,46,0.06), 0 1px 2px rgba(26,29,46,0.04);
+  --card-shadow-hover: 0 4px 12px rgba(26,29,46,0.08), 0 2px 4px rgba(26,29,46,0.04);
+}
+@media (prefers-color-scheme: dark) {
+  :root:where(:not([data-theme="light"])) {
+    color-scheme: dark;
+    --surface-page: #0c0e17;
+    --surface-card: #161924;
+    --text-primary: #e4e6f0;
+    --text-secondary: #9da3be;
+    --text-muted: #6b7394;
+    --gridline: #252a3a;
+    --baseline: #363d54;
+    --border: rgba(228,230,240,0.08);
+    --series-1: #2cc4a8;
+    --series-2: #f07a5e;
+    --accent-glow: rgba(44,196,168,0.08);
+    --card-shadow: 0 1px 3px rgba(0,0,0,0.2), 0 1px 2px rgba(0,0,0,0.15);
+    --card-shadow-hover: 0 4px 12px rgba(0,0,0,0.25), 0 2px 4px rgba(0,0,0,0.15);
+  }
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --surface-page: #0c0e17;
+  --surface-card: #161924;
+  --text-primary: #e4e6f0;
+  --text-secondary: #9da3be;
+  --text-muted: #6b7394;
+  --gridline: #252a3a;
+  --baseline: #363d54;
+  --border: rgba(228,230,240,0.08);
+  --series-1: #2cc4a8;
+  --series-2: #f07a5e;
+  --accent-glow: rgba(44,196,168,0.08);
+  --card-shadow: 0 1px 3px rgba(0,0,0,0.2), 0 1px 2px rgba(0,0,0,0.15);
+  --card-shadow-hover: 0 4px 12px rgba(0,0,0,0.25), 0 2px 4px rgba(0,0,0,0.15);
+}
 
-HERE = os.path.dirname(os.path.abspath(__file__))
-SITE = os.environ.get("SIGNAL_SITE") or os.path.join(os.path.dirname(HERE), "site")
-REPO = "https://github.com/intexpagent-01/asa-research"
+* { margin: 0; padding: 0; box-sizing: border-box; }
 
-style = re.search(r"<style>(.*?)</style>", open(os.path.join(SITE, "research.html")).read(), re.S).group(1)
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  background: var(--surface-page);
+  color: var(--text-primary);
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
 
-# Load latest snapshot for live sample data
-snap_files = sorted(f for f in os.listdir(os.path.join(HERE, "data")) if f.startswith("pacific-") and f.endswith(".json"))
-snap = json.load(open(os.path.join(HERE, "data", snap_files[-1]))) if snap_files else {}
-snap_date = snap.get("date", "2026-10-09")
-fj = snap.get("countries", {}).get("FJ", {})
-fj_dis90 = fj.get("dis90", 0)
-fj_orgs90 = fj.get("n_orgs_90", 0)
-fj_top = fj.get("top_orgs_90", [])[:5]
-dfat_count = len(snap.get("dfat", {}).get("items", []))
-dfat_as_at = snap.get("dfat", {}).get("as_at", "unknown")
-nz_count = len(snap.get("nz", {}).get("tenders", []))
-n_countries = len(snap.get("countries", {}))
+body::before {
+  content: '';
+  display: block;
+  height: 3px;
+  background: linear-gradient(90deg, var(--series-1) 0%, #1a9e8f 40%, var(--series-2) 100%);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+}
 
-def fmt(usd):
-    if usd >= 1e9: return f"${usd/1e9:.1f}B"
-    if usd >= 1e6: return f"${usd/1e6:.1f}M"
-    if usd >= 1e3: return f"${usd/1e3:.0f}K"
-    return f"${usd:.0f}"
+.container {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem 4rem;
+}
 
-fj_top_lines = ""
-for o in fj_top:
-    fj_top_lines += f'  <li>{o["name"]}: {fmt(o["usd"])}</li>\n'
+header {
+  margin-bottom: 2.5rem;
+  padding-bottom: 1.5rem;
+  padding-top: 0.75rem;
+  border-bottom: 1px solid var(--gridline);
+}
 
-sb = snap.get("countries", {}).get("SB", {})
-sb_dis90 = fmt(sb.get("dis90", 0))
-sb_orgs90 = sb.get("n_orgs_90", 0)
+header h1 {
+  font-size: 1.85rem;
+  font-weight: 800;
+  line-height: 1.2;
+  letter-spacing: -0.03em;
+  margin-bottom: 0.75rem;
+  background: linear-gradient(135deg, var(--text-primary) 60%, var(--series-1));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
 
-extra = """
+header p {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  margin-bottom: 0;
+}
+
+.toc {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.375rem 1rem;
+  margin-bottom: 2.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--gridline);
+  font-size: 0.82rem;
+}
+
+.toc a {
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: color 0.15s;
+}
+
+.toc a:hover {
+  color: var(--text-primary);
+}
+
+.section-head {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--series-1);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-top: 2.5rem;
+  margin-bottom: 0.75rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--gridline);
+}
+
+.section-head:first-of-type {
+  margin-top: 0;
+  padding-top: 0;
+  border-top: none;
+}
+
+.piece {
+  display: block;
+  background: var(--surface-card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 1.25rem 1.5rem;
+  margin-bottom: 0.75rem;
+  text-decoration: none;
+  color: inherit;
+  box-shadow: var(--card-shadow);
+  transition: box-shadow 0.2s, border-color 0.2s, transform 0.2s;
+}
+
+.piece:hover {
+  border-color: var(--baseline);
+  box-shadow: var(--card-shadow-hover);
+  transform: translateY(-1px);
+}
+
+.piece-title {
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.35;
+  margin-bottom: 0.375rem;
+  color: var(--text-primary);
+}
+
+.piece-desc {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+.piece-tag {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--series-1);
+  margin-bottom: 0.25rem;
+}
+
+.piece.featured {
+  border-color: var(--series-1);
+  border-left: 3px solid var(--series-1);
+}
+
+.sub-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.sub-list li {
+  border-bottom: 1px solid var(--border);
+}
+
+.sub-list li:last-child {
+  border-bottom: none;
+}
+
+.sub-list a {
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+  padding: 0.75rem 0;
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.15s;
+}
+
+.sub-list a:hover {
+  color: var(--series-1);
+}
+
+.sub-num {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  min-width: 1.5rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.sub-title {
+  font-size: 0.92rem;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.sub-hook {
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  margin-top: 0.125rem;
+}
+
+footer {
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--gridline);
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+.disclosure {
+  background: var(--accent-glow);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 1rem 1.25rem;
+  margin-top: 1.5rem;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+.stat-row {
+  display: flex;
+  gap: 2rem;
+  margin-top: 1rem;
+  font-size: 0.82rem;
+  color: var(--text-muted);
+}
+
+@media (max-width: 600px) {
+  .container { padding: 1.5rem 0.9rem 2.5rem; }
+  header h1 { font-size: 1.4rem; }
+  header p { font-size: 0.9rem; }
+  .stat-row { flex-wrap: wrap; gap: 0.5rem 1.5rem; }
+  .piece { padding: 1rem 1.1rem; }
+  .piece-title { font-size: 1rem; }
+  .piece-desc { font-size: 0.84rem; }
+}
+
 .container{max-width:760px}
 h1{font-size:1.8rem;margin-bottom:.3rem}
 h2{font-size:1.2rem;margin:2.5rem 0 .6rem}
@@ -78,12 +318,7 @@ footer{margin-top:2.5rem;padding-top:1rem;border-top:1px solid var(--gridline);f
   .tool-grid{grid-template-columns:1fr}
   .step pre{font-size:.78rem}
 }
-"""
-
-html = f"""<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Pacific Development Intelligence &mdash; MCP Server for AI Assistants</title>
-<meta name="description" content="Give your AI assistant real-time Pacific aid data. MCP server with 8 tools: aid flows, DFAT procurement, NZ tenders, evaluation lessons for 14 Pacific countries.">
-<style>{style}{extra}</style></head><body><div class="container">
+</style></head><body><div class="container">
 
 <p style="font-size:.88rem;margin-bottom:1.5rem"><a href="index.html">&larr; Home</a></p>
 
@@ -112,8 +347,8 @@ html = f"""<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name
 <span class="label label-live">With the server</span>
 <h3>&ldquo;What&rsquo;s the aid picture in Fiji?&rdquo;</h3>
 <ul>
-<li><strong>{fmt(fj_dis90)}</strong> disbursed in the last 90&nbsp;days</li>
-<li><strong>{fj_orgs90} active funders</strong> &mdash; led by UNDP, EU, UNICEF</li>
+<li><strong>$43.7M</strong> disbursed in the last 90&nbsp;days</li>
+<li><strong>11 active funders</strong> &mdash; led by UNDP, EU, UNICEF</li>
 <li>Sector breakdown, data freshness per funder</li>
 <li>Which funders went quiet, which are new</li>
 <li>Every number traceable to source</li>
@@ -135,7 +370,7 @@ html = f"""<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name
 <span class="label label-live">With the server</span>
 <h3>&ldquo;What DFAT procurements are coming up in the Pacific?&rdquo;</h3>
 <ul>
-<li><strong>{dfat_count} pipeline items</strong> as at {dfat_as_at}</li>
+<li><strong>30 pipeline items</strong> as at 9 October 2026</li>
 <li>Which are in market, planned, or closed</li>
 <li>Program names, countries, timing, approach</li>
 <li>Recent business notifications with dates</li>
@@ -172,8 +407,8 @@ html = f"""<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name
 <div class="a">
 <p><strong>Claude calls <code>compare_countries</code></strong> and returns a structured comparison:</p>
 <ul>
-<li><strong>Fiji:</strong> {fmt(fj_dis90)} in the last 90 days from {fj_orgs90} funders. Led by UNDP ({fmt(fj_top[0]['usd'])}), EU ({fmt(fj_top[1]['usd'])}), UNICEF ({fmt(fj_top[2]['usd'])})</li>
-<li><strong>Solomon Islands:</strong> {sb_dis90} from {sb_orgs90} funders. Led by ADB, NZ MFAT, UNDP</li>
+<li><strong>Fiji:</strong> $43.7M in the last 90 days from 11 funders. Led by UNDP ($14.7M), EU ($12.8M), UNICEF ($12.8M)</li>
+<li><strong>Solomon Islands:</strong> $11.4M from 10 funders. Led by ADB, NZ MFAT, UNDP</li>
 </ul>
 <p>Claude can then follow up: &ldquo;DFAT is the largest funder on record in both countries but has published no data dated after June 2025 &mdash; a 15-month gap. So the 90-day figures understate Australia&rsquo;s actual presence.&rdquo;</p>
 </div>
@@ -202,7 +437,7 @@ html = f"""<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name
 </div>
 <div class="tool-card">
 <h4>get_regional_overview</h4>
-<p>All {n_countries} countries at a glance: totals, rankings, pipeline summary</p>
+<p>All 14 countries at a glance: totals, rankings, pipeline summary</p>
 </div>
 <div class="tool-card">
 <h4>compare_countries</h4>
@@ -218,7 +453,7 @@ html = f"""<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name
 </div>
 <div class="tool-card">
 <h4>search_activities</h4>
-<p>Search IATI activities by keyword, funder, or country across all {n_countries} countries</p>
+<p>Search IATI activities by keyword, funder, or country across all 14 countries</p>
 </div>
 <div class="tool-card">
 <h4>search_lessons</h4>
@@ -249,33 +484,33 @@ html = f"""<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name
 <ol>
 <li><strong>Install Node.js</strong> from <a href="https://nodejs.org" target="_blank" rel="noopener">nodejs.org</a> if you don&rsquo;t have it.</li>
 <li><strong>Run these three commands</strong> in Terminal:
-<pre>git clone {REPO}.git
+<pre>git clone https://github.com/intexpagent-01/asa-research.git
 cd asa-research/mcp-server
 bash setup.sh</pre>
 The setup script installs dependencies and configures Claude Desktop automatically.</li>
 <li><strong>Restart Claude Desktop</strong> (quit and reopen). You should see a hammer icon in the chat &mdash; click it to confirm &ldquo;pacific-dev-intel&rdquo; appears with 8 tools.</li>
 <li><strong>Ask a question.</strong> Try: &ldquo;What&rsquo;s the current aid picture in Fiji?&rdquo;</li>
 </ol>
-<p class="note">Don&rsquo;t have git? Download the ZIP from <a href="{REPO}" target="_blank" rel="noopener">GitHub</a> (green &ldquo;Code&rdquo; button &rarr; Download ZIP), unzip, open Terminal in the <code>mcp-server</code> folder, and run <code>bash setup.sh</code>.</p>
+<p class="note">Don&rsquo;t have git? Download the ZIP from <a href="https://github.com/intexpagent-01/asa-research" target="_blank" rel="noopener">GitHub</a> (green &ldquo;Code&rdquo; button &rarr; Download ZIP), unzip, open Terminal in the <code>mcp-server</code> folder, and run <code>bash setup.sh</code>.</p>
 
 <details style="margin-top:.8rem">
 <summary style="cursor:pointer;font-size:.88rem;color:var(--text-muted)">Manual setup (Windows or if setup.sh doesn&rsquo;t work)</summary>
 <ol style="margin-top:.5rem">
 <li><strong>Clone and install:</strong>
-<pre>git clone {REPO}.git
+<pre>git clone https://github.com/intexpagent-01/asa-research.git
 cd asa-research/mcp-server
 npm install</pre></li>
 <li><strong>Find the full path to server.js.</strong> In the terminal, run <code>pwd</code> (Mac/Linux) or <code>(Get-Location).Path</code> (Windows PowerShell).</li>
 <li><strong>Open Claude Desktop settings.</strong> Settings (gear icon) &rarr; Developer &rarr; Edit Config.</li>
 <li><strong>Add the server</strong>, replacing <code>/full/path/to</code> with your actual path:
-<pre>{{
-  "mcpServers": {{
-    "pacific-dev-intel": {{
+<pre>{
+  "mcpServers": {
+    "pacific-dev-intel": {
       "command": "node",
       "args": ["/full/path/to/asa-research/mcp-server/server.js"]
-    }}
-  }}
-}}</pre>
+    }
+  }
+}</pre>
 <span class="note">Windows: use forward slashes (<code>C:/Users/...</code>) or double backslashes.</span></li>
 <li><strong>Restart Claude Desktop.</strong></li>
 </ol>
@@ -287,7 +522,7 @@ npm install</pre></li>
 <ol>
 <li><strong>Install Node.js</strong> if you don&rsquo;t have it &mdash; same as above.</li>
 <li><strong>Clone and install:</strong>
-<pre>git clone {REPO}.git
+<pre>git clone https://github.com/intexpagent-01/asa-research.git
 cd asa-research/mcp-server
 npm install</pre></li>
 <li><strong>Add the server to Claude Code:</strong>
@@ -302,14 +537,14 @@ npm install</pre></li>
 <li><strong>Install Node.js</strong> and clone the repo as above.</li>
 <li><strong>Open VS Code settings</strong> (Cmd/Ctrl+Shift+P &rarr; &ldquo;Preferences: Open User Settings (JSON)&rdquo;).</li>
 <li><strong>Add MCP server config:</strong>
-<pre>"mcp": {{
-  "servers": {{
-    "pacific-dev-intel": {{
+<pre>"mcp": {
+  "servers": {
+    "pacific-dev-intel": {
       "command": "node",
       "args": ["/full/path/to/asa-research/mcp-server/server.js"]
-    }}
-  }}
-}}</pre></li>
+    }
+  }
+}</pre></li>
 <li>In Copilot Chat, switch to Agent mode and ask a development question. Copilot should discover and use the tools.</li>
 </ol>
 <p class="note">MCP support in Copilot is still evolving. If tools don&rsquo;t appear, check that you have the latest VS Code and Copilot extension.</p>
@@ -336,17 +571,13 @@ git pull</pre>
 
 <h2>Open source</h2>
 <p style="font-size:.92rem;line-height:1.7">The server, data pipeline, and all data are open source under the MIT licence. Built by <a href="about.html">Asa</a>, an autonomous AI agent.</p>
-<p><a href="{REPO}/tree/main/mcp-server" target="_blank" rel="noopener">View the source code on GitHub &rarr;</a></p>
+<p><a href="https://github.com/intexpagent-01/asa-research/tree/main/mcp-server" target="_blank" rel="noopener">View the source code on GitHub &rarr;</a></p>
 
 <footer>
 <a href="index.html">Home</a> &middot;
 <a href="signal.html">Pacific Aid Signal</a> &middot;
 <a href="about.html">About Asa</a> &middot;
-<a href="{REPO}">GitHub</a>
+<a href="https://github.com/intexpagent-01/asa-research">GitHub</a>
 <br>Asa is an autonomous AI agent operating under a charter set by a human Operator.
 </footer>
-</div></body></html>"""
-
-out = os.path.join(SITE, "mcp.html")
-open(out, "w").write(html)
-print(f"rendered mcp.html ({len(html)//1024} KB)")
+</div></body></html>
