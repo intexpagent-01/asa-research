@@ -25,7 +25,11 @@ echo "Node.js $(node -v) found."
 # Install dependencies
 echo "Installing dependencies..."
 cd "$SCRIPT_DIR"
-npm install --silent 2>&1
+if [ -f "package-lock.json" ]; then
+  npm ci --silent --ignore-scripts 2>&1
+else
+  npm install --silent --ignore-scripts 2>&1
+fi
 echo "Dependencies installed."
 
 # Detect Claude Desktop config path
@@ -55,7 +59,11 @@ mkdir -p "$CONFIG_DIR"
 # Read or create config
 if [ -f "$CONFIG_FILE" ]; then
   EXISTING=$(cat "$CONFIG_FILE")
-  if echo "$EXISTING" | grep -q "pacific-dev-intel"; then
+  # Check for exact server entry, not just substring
+  if node -e "
+    const c = JSON.parse(process.argv[1]);
+    process.exit(c.mcpServers && c.mcpServers['pacific-dev-intel'] ? 0 : 1);
+  " "$EXISTING" 2>/dev/null; then
     echo ""
     echo "Already configured! The 'pacific-dev-intel' server is in your config."
     echo "Restart Claude Desktop to pick up any changes."
@@ -65,18 +73,33 @@ else
   EXISTING='{}'
 fi
 
-# Build the new config entry using node for safe JSON manipulation
-NEW_CONFIG=$(node -e "
+# Back up existing config
+if [ -f "$CONFIG_FILE" ]; then
+  cp "$CONFIG_FILE" "${CONFIG_FILE}.backup.$(date +%s)"
+  echo "Existing config backed up."
+fi
+
+# Build the new config entry — pass path via environment, not string interpolation
+NEW_CONFIG=$(SERVER_PATH="$SERVER_PATH" node -e "
   const config = JSON.parse(process.argv[1]);
   if (!config.mcpServers) config.mcpServers = {};
   config.mcpServers['pacific-dev-intel'] = {
     command: 'node',
-    args: ['$SERVER_PATH']
+    args: [process.env.SERVER_PATH]
   };
   console.log(JSON.stringify(config, null, 2));
 " "$EXISTING")
 
-echo "$NEW_CONFIG" > "$CONFIG_FILE"
+# Validate the output is valid JSON before writing
+if ! echo "$NEW_CONFIG" | node -e "JSON.parse(require('fs').readFileSync('/dev/stdin','utf8'))" 2>/dev/null; then
+  echo "Error: Generated config is not valid JSON. Aborting."
+  exit 1
+fi
+
+# Write atomically via temp file
+TMPFILE=$(mktemp "${CONFIG_FILE}.tmp.XXXXXX")
+echo "$NEW_CONFIG" > "$TMPFILE"
+mv "$TMPFILE" "$CONFIG_FILE"
 
 echo ""
 echo "Done! Configuration added to Claude Desktop."
@@ -88,3 +111,10 @@ echo "     Try: 'What aid is flowing to Fiji right now?'"
 echo ""
 echo "Server path: $SERVER_PATH"
 echo "Data directory: $(ls -d "$SCRIPT_DIR"/data 2>/dev/null && echo "$SCRIPT_DIR/data" || echo "$SCRIPT_DIR/../signal/data")"
+echo ""
+echo "Permissions: The server reads local data files and contacts api.github.com"
+echo "for data updates. It does not open a network listener or access other files."
+echo "Run as an ordinary user — no elevated privileges needed."
+echo ""
+echo "To uninstall: remove the 'pacific-dev-intel' entry from $CONFIG_FILE"
+echo "and restart Claude Desktop. Then delete this directory."

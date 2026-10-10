@@ -88,16 +88,53 @@ function matchFunder(query) {
   return FUNDER_ALIASES[q] || q;
 }
 
+const COUNTRY_ALIASES = {
+  png: "PG", fiji: "FJ", solomons: "SB", "solomon islands": "SB",
+  vanuatu: "VU", samoa: "WS", tonga: "TO", kiribati: "KI",
+  tuvalu: "TV", micronesia: "FM", "marshall islands": "MH", "fsm": "FM",
+  palau: "PW", nauru: "NR", niue: "NU", "cook islands": "CK", rmi: "MH",
+};
+
 function matchCountry(query) {
   const q = query.toUpperCase().trim();
   if (COUNTRIES[q]) return q;
   const lower = query.toLowerCase().trim();
+  if (COUNTRY_ALIASES[lower]) return COUNTRY_ALIASES[lower];
   for (const [code, name] of Object.entries(COUNTRIES)) {
     if (name.toLowerCase() === lower) return code;
+  }
+  for (const [code, name] of Object.entries(COUNTRIES)) {
     if (name.toLowerCase().includes(lower)) return code;
   }
   return null;
 }
+
+function countryMatchesFilter(text, countryCode) {
+  if (!text || !countryCode) return false;
+  const name = COUNTRIES[countryCode].toLowerCase();
+  const lower = text.toLowerCase();
+  if (lower.includes(name)) return true;
+  for (const [alias, code] of Object.entries(COUNTRY_ALIASES)) {
+    if (code === countryCode && lower.includes(alias)) return true;
+  }
+  if (countryCode === "PG" && lower.includes("png")) return true;
+  if (lower.includes("pacific") || lower.includes("regional")) return true;
+  return false;
+}
+
+function decodeIndex(countryData) {
+  if (!countryData) return [];
+  if (Array.isArray(countryData)) return countryData;
+  const { cols, rows } = countryData;
+  if (!cols || !rows) return [];
+  return rows.map(row => {
+    const obj = {};
+    cols.forEach((col, i) => { obj[col] = row[i]; });
+    return obj;
+  });
+}
+
+const STATUS_MAP = { 1: "Pipeline", 2: "Implementation", 3: "Finalisation", 4: "Closed", 5: "Suspended" };
 
 // --- Server setup ---
 
@@ -130,9 +167,9 @@ server.tool(
       `Data as of: ${snap.date}`,
       "",
       `## Key Figures (90-day window)`,
-      `- Disbursements (90 days): ${fmt(c.dis90)}`,
-      `- Disbursements (previous 90 days): ${fmt(c.dis_prev90)}`,
-      `- Disbursements (365 days): ${fmt(c.dis365)}`,
+      `- Reported spending (90 days): ${fmt(c.dis90)} (IATI disbursements + expenditures, weighted by recipient-country share)`,
+      `- Reported spending (previous 90 days): ${fmt(c.dis_prev90)}`,
+      `- Reported spending (365 days): ${fmt(c.dis365)}`,
       `- Commitments (365 days): ${fmt(c.com365)}`,
       `- Active funders (90 days): ${c.n_orgs_90}`,
       `- Active funders (365 days): ${c.n_orgs_365}`,
@@ -181,8 +218,17 @@ server.tool(
     lines.push("", `## Data Quality`,
       `- Transactions in 365 days: ${c.n_trans_365.toLocaleString()}`,
       `- Excluded (tagged to other country): ${c.n_trans_other_country.toLocaleString()} (${c.n_trans_365 ? ((c.n_trans_other_country / c.n_trans_365) * 100).toFixed(0) : 0}%)`,
-      `- Implausible values: ${c.n_stale > 0 ? c.implausible.length : 0}`
+      `- Implausible values: ${c.n_stale > 0 ? (c.implausible || []).length : 0}`
     );
+    const staleOrgs = (c.currency || []).filter(f => f.age_days > 365);
+    if (staleOrgs.length) {
+      lines.push("", `## Coverage Warnings`);
+      for (const f of staleOrgs.slice(0, 5)) {
+        lines.push(`- ${f.name}: no transactions reported for ${f.age_days} days. Reported spending figures may understate actual activity from this funder.`);
+      }
+      if (staleOrgs.length > 5) lines.push(`  ... and ${staleOrgs.length - 5} more funders with stale data`);
+    }
+    lines.push("", "---", `Note: Spending figures combine IATI disbursement and expenditure transactions, weighted by declared recipient-country percentage. Reporting organisations are publishers, not necessarily original donors. Where no recent transactions are reported, this reflects missing published data — not necessarily zero activity. Snapshot: ${snap.date}.`);
     return { content: [{ type: "text", text: lines.join("\n") }] };
   }
 );
@@ -199,29 +245,34 @@ server.tool(
     const snap = latestSnapshot();
     const dfat = snap.dfat;
     if (!dfat || !dfat.items) {
-      return { content: [{ type: "text", text: "DFAT pipeline data not available." }] };
+      return { content: [{ type: "text", text: "DFAT pipeline data not available in the current snapshot." }] };
     }
     let items = dfat.items;
+    const countryCode = country ? matchCountry(country) : null;
     if (status !== "all") {
       const statusMap = { in_market: "in the market", planned: "planned", closed: "closed" };
       const target = statusMap[status] || status;
       items = items.filter(i => (i.section || "").toLowerCase().includes(target));
     }
     if (country) {
-      const lower = country.toLowerCase();
-      items = items.filter(i => (i.country || "").toLowerCase().includes(lower) || (i.title || "").toLowerCase().includes(lower));
+      items = items.filter(i =>
+        countryMatchesFilter(i.country, countryCode) ||
+        countryMatchesFilter(i.title, countryCode) ||
+        (countryCode && (i.country || "").toLowerCase().includes(country.toLowerCase())) ||
+        (i.title || "").toLowerCase().includes(country.toLowerCase())
+      );
     }
     const lines = [
       `# DFAT Procurement Pipeline`,
       `As at: ${dfat.as_at || "unknown"}`,
       `Fetched: ${dfat.fetched || "unknown"}`,
-      `Total items: ${dfat.items.length} (showing ${items.length})`,
+      `Total items: ${dfat.items.length} (showing ${items.length}${status !== "all" ? `, filtered to ${status}` : ""}${country ? `, filtered to ${country}` : ""})`,
       ""
     ];
     for (const item of items) {
       lines.push(`## ${item.id || "?"} — ${item.title || "Untitled"}`);
       if (item.country) lines.push(`Country: ${item.country}`);
-      if (item.section) lines.push(`Section: ${item.section}`);
+      if (item.section) lines.push(`Stage: ${item.section}`);
       if (item.status) lines.push(`Status: ${item.status}`);
       if (item.approach) lines.push(`Approach: ${item.approach}`);
       if (item.timing) lines.push(`Timing: ${item.timing}`);
@@ -229,11 +280,20 @@ server.tool(
       lines.push("");
     }
     if (dfat.notices && dfat.notices.length) {
-      const recent = dfat.notices.slice(0, 10);
-      lines.push("## Recent Business Notifications (latest 10)");
-      for (const n of recent) {
-        lines.push(`- [${n.date || "?"}] ${n.title || "Untitled"}`);
-        if (n.url) lines.push(`  ${n.url}`);
+      let notices = dfat.notices;
+      if (country) {
+        notices = notices.filter(n =>
+          countryMatchesFilter(n.title, countryCode) ||
+          (n.title || "").toLowerCase().includes(country.toLowerCase())
+        );
+      }
+      if (notices.length) {
+        const recent = notices.slice(0, 10);
+        lines.push(`## Recent Business Notifications${country ? ` mentioning ${country}` : ""} (latest ${Math.min(10, notices.length)})`);
+        for (const n of recent) {
+          lines.push(`- [${n.date || "?"}] ${n.title || "Untitled"}`);
+          if (n.url) lines.push(`  ${n.url}`);
+        }
       }
     }
     return { content: [{ type: "text", text: lines.join("\n") }] };
@@ -243,15 +303,16 @@ server.tool(
 // Tool 3: NZ MFAT tenders
 server.tool(
   "get_nz_tenders",
-  "Get current New Zealand MFAT (Ministry of Foreign Affairs and Trade) tenders for Pacific island countries from the GETS portal.",
+  "Get New Zealand tenders for Pacific island countries from the GETS portal, including open and completed.",
   {
-    country: z.string().optional().describe("Filter by country name (optional)")
+    country: z.string().optional().describe("Filter by country name (optional)"),
+    status: z.enum(["all", "open", "completed"]).default("all").describe("Filter by tender status")
   },
-  async ({ country }) => {
+  async ({ country, status }) => {
     const snap = latestSnapshot();
     const nz = snap.nz;
     if (!nz || !nz.tenders) {
-      return { content: [{ type: "text", text: "NZ MFAT tender data not available." }] };
+      return { content: [{ type: "text", text: "NZ tender data not available in the current snapshot." }] };
     }
     let tenders = nz.tenders;
     if (country) {
@@ -261,16 +322,25 @@ server.tool(
         (t.countries || []).some(c => c.toLowerCase().includes(lower))
       );
     }
+    if (status !== "all") {
+      tenders = tenders.filter(t => (t.status || "").toLowerCase() === status);
+    }
+    const openCount = nz.tenders.filter(t => (t.status || "").toLowerCase() === "open").length;
+    const completedCount = nz.tenders.filter(t => (t.status || "").toLowerCase() === "completed").length;
     const lines = [
-      `# NZ MFAT Pacific Tenders`,
+      `# NZ Pacific Tenders (GETS)`,
       `Fetched: ${nz.fetched || "unknown"}`,
-      `Total: ${nz.tenders.length} (showing ${tenders.length})`,
+      `Total: ${nz.tenders.length} (${openCount} open, ${completedCount} completed)`,
+      `Showing: ${tenders.length}${status !== "all" ? ` (${status} only)` : ""}${country ? ` matching ${country}` : ""}`,
+      "",
+      "Note: These tenders were identified by Pacific-related terms in the listing. Agency, geographic scope, and delivery location vary — check individual tenders for details.",
       ""
     ];
     for (const t of tenders) {
       lines.push(`## ${t.title || "Untitled"}`);
       if (t.ref) lines.push(`Reference: ${t.ref}`);
       if (t.status) lines.push(`Status: ${t.status}`);
+      if (t.agency) lines.push(`Agency: ${t.agency}`);
       if (t.closes) lines.push(`Closes: ${t.closes}`);
       if (t.countries && t.countries.length) lines.push(`Countries: ${t.countries.join(", ")}`);
       if (t.value) lines.push(`Value: ${t.value}`);
@@ -288,9 +358,10 @@ server.tool(
   {
     query: z.string().describe("Search term: keyword, funder name, project title, or IATI identifier"),
     country: z.string().optional().describe("Restrict to a specific country (name or code)"),
-    limit: z.number().default(20).describe("Maximum results to return")
+    limit: z.number().default(20).describe("Maximum results to return (max 100)")
   },
   async ({ query, country, limit }) => {
+    limit = Math.max(1, Math.min(limit || 20, 100));
     const snap = latestSnapshot();
     const date = snap.date;
     const index = loadIndex(date);
@@ -301,33 +372,41 @@ server.tool(
     let targetCountries = Object.keys(COUNTRIES);
     if (country) {
       const code = matchCountry(country);
-      if (code) targetCountries = [code];
+      if (code) {
+        targetCountries = [code];
+      } else {
+        return { content: [{ type: "text", text: `Country not recognised: "${country}". Available: ${Object.entries(COUNTRIES).map(([c,n]) => `${n} (${c})`).join(", ")}` }] };
+      }
     }
     const results = [];
+    let totalMatches = 0;
     for (const code of targetCountries) {
-      const acts = index[code];
-      if (!acts) continue;
+      const acts = decodeIndex(index[code]);
+      if (!acts.length) continue;
       for (const a of acts) {
         const text = [a.title, a.org, a.aid, a.ref].filter(Boolean).join(" ").toLowerCase();
         if (text.includes(q)) {
-          results.push({ ...a, country: COUNTRIES[code], countryCode: code });
-          if (results.length >= limit) break;
+          totalMatches++;
+          if (results.length < limit) {
+            results.push({ ...a, country: COUNTRIES[code], countryCode: code });
+          }
         }
       }
-      if (results.length >= limit) break;
     }
     if (!results.length) {
       return { content: [{ type: "text", text: `No activities found matching "${query}"${country ? ` in ${country}` : ""}.` }] };
     }
-    const lines = [`# Activities matching "${query}"`, `Found: ${results.length}`, ""];
+    const lines = [`# Activities matching "${query}"`, `Showing: ${results.length} of ${totalMatches} matches`, `Source: IATI activity index, snapshot ${date}`, ""];
     for (const r of results) {
       lines.push(`## ${r.title || "Untitled"}`);
+      const status = STATUS_MAP[r.st] || r.st || "?";
       lines.push(`Country: ${r.country} | Funder: ${r.org || "?"} | ID: ${r.aid || "?"}`);
       if (r.start || r.end) lines.push(`Period: ${r.start || "?"} to ${r.end || "?"}`);
-      if (r.spend != null) lines.push(`Spend: ${fmt(r.spend)}`);
-      if (r.status) lines.push(`Status: ${r.status}`);
+      if (r.spend != null) lines.push(`Reported spending: ${fmt(r.spend)}${r.pct != null && r.pct < 100 ? ` (${r.pct}% country share)` : ""}`);
+      lines.push(`Status: ${status}${r.stale ? " (stale — past declared end date by >365 days)" : ""}`);
       lines.push("");
     }
+    lines.push("---", "Note: Spending figures combine IATI disbursement and expenditure transactions, weighted by declared recipient-country percentage. Figures reflect what reporting organisations have published, not necessarily what was provided as the original donor.");
     return { content: [{ type: "text", text: lines.join("\n") }] };
   }
 );
@@ -340,11 +419,15 @@ server.tool(
     query: z.string().describe("Search term: topic, sector, country, or keyword (e.g. 'water supply', 'community engagement', 'gender')"),
     country: z.string().optional().describe("Filter by country name"),
     outcome: z.enum(["any", "satisfactory", "unsatisfactory"]).default("any").describe("Filter by project outcome rating"),
-    limit: z.number().default(10).describe("Maximum results to return")
+    limit: z.number().default(10).describe("Maximum results to return (max 50)")
   },
   async ({ query, country, outcome, limit }) => {
+    limit = Math.max(1, Math.min(limit || 10, 50));
     const data = loadLessons();
     const projects = data.projects || [];
+    if (!projects.length) {
+      return { content: [{ type: "text", text: "Evaluation lesson corpus is not available. The lessons dataset may not be installed. Check that wb-icr-global-1000.json exists in the data directory." }] };
+    }
     const q = query.toLowerCase();
     const results = [];
     for (const p of projects) {
@@ -377,21 +460,24 @@ server.tool(
       if (results.length >= limit) break;
     }
     if (!results.length) {
-      return { content: [{ type: "text", text: `No lessons found matching "${query}"${country ? ` in ${country}` : ""}.` }] };
+      return { content: [{ type: "text", text: `No lessons found matching "${query}"${country ? ` in ${country}` : ""}. The search uses substring matching on lesson text, project title, country, sectors, and themes.` }] };
     }
     const lines = [
       `# Evaluation Lessons: "${query}"`,
-      `Found: ${results.length} lessons from World Bank project evaluations`,
+      `Found: ${results.length} lessons from World Bank ICR (Implementation Completion Report) reviews`,
+      `Corpus: ${projects.length} projects, searched by substring match (not semantic or relevance-ranked)`,
       ""
     ];
     for (const r of results) {
       lines.push(`## ${r.project || "Untitled Project"}`);
       lines.push(`Country: ${r.country || "?"} | Region: ${r.region || "?"} | Outcome: ${r.outcome_rating || "?"}`);
+      if (r.project_id) lines.push(`Project ID: ${r.project_id}`);
       if (r.sectors && r.sectors.length) lines.push(`Sectors: ${r.sectors.join(", ")}`);
       lines.push("");
       lines.push(r.lesson.length > 800 ? r.lesson.substring(0, 800) + "..." : r.lesson);
       lines.push("");
     }
+    lines.push("---", "Note: Lessons are extracted from World Bank ICR reviews. A project's outcome rating does not prove each individual lesson caused success or failure. Global findings may not transfer directly to Pacific or other specific contexts. These are evidence inputs, not conclusions.");
     return { content: [{ type: "text", text: lines.join("\n") }] };
   }
 );
@@ -443,6 +529,18 @@ server.tool(
     for (const org of (b.top_orgs_90 || []).slice(0, 5)) {
       lines.push(`- ${org.name}: ${fmt(org.usd)}`);
     }
+    lines.push("", `## Data Freshness Warnings`);
+    for (const [label, c] of [[a.name, a], [b.name, b]]) {
+      const staleOrgs = (c.currency || []).filter(f => f.age_days > 365);
+      if (staleOrgs.length) {
+        lines.push(`### ${label}`);
+        for (const f of staleOrgs.slice(0, 5)) {
+          lines.push(`- ${f.name}: no transactions reported for ${f.age_days} days (latest: ${f.latest || "unknown"}). Figures may understate actual activity.`);
+        }
+        if (staleOrgs.length > 5) lines.push(`  ... and ${staleOrgs.length - 5} more with stale data`);
+      }
+    }
+    lines.push("", "---", "Note: Spending figures combine IATI disbursement and expenditure transactions. Reporting organisations are publishers, not necessarily original donors. Where a funder's data is stale, $0 reflects missing reports, not zero activity.");
     return { content: [{ type: "text", text: lines.join("\n") }] };
   }
 );
@@ -476,9 +574,9 @@ server.tool(
       `# Pacific Aid — Regional Overview`,
       `Data as of: ${snap.date}`,
       "",
-      `## Totals`,
-      `- 90-day disbursements: ${fmt(totalDis90)}`,
-      `- 365-day disbursements: ${fmt(totalDis365)}`,
+      `## Totals (IATI-reported spending: disbursements + expenditures, weighted by recipient-country share)`,
+      `- 90-day reported spending: ${fmt(totalDis90)}`,
+      `- 365-day reported spending: ${fmt(totalDis365)}`,
       `- Active activities: ${totalActs.toLocaleString()}`,
       `- Stale activities: ${totalStale.toLocaleString()}`,
       `- Countries: ${Object.keys(countries).length}`,
@@ -495,16 +593,26 @@ server.tool(
 
     const dfat = snap.dfat;
     if (dfat) {
+      const items = dfat.items || [];
+      const inMarket = items.filter(i => (i.section || "").toLowerCase() === "in the market").length;
+      const planned = items.filter(i => (i.section || "").toLowerCase() === "planned").length;
+      const inCollab = items.filter(i => (i.section || "").toLowerCase() === "in collaboration").length;
+      const closed = items.filter(i => (i.section || "").toLowerCase() === "closed").length;
       lines.push("", `## DFAT Pipeline Summary`,
         `- As at: ${dfat.as_at}`,
-        `- Total items: ${(dfat.items || []).length}`,
-        `- In market: ${(dfat.items || []).filter(i => (i.status || "").toLowerCase().includes("in market")).length}`,
-        `- Planned: ${(dfat.items || []).filter(i => (i.status || "").toLowerCase().includes("planned")).length}`
+        `- Total items: ${items.length}`,
+        `- In the market: ${inMarket}`,
+        `- Planned: ${planned}`,
+        `- In collaboration: ${inCollab}`,
+        `- Closed: ${closed}`
       );
     }
     const nz = snap.nz;
     if (nz) {
-      lines.push("", `## NZ MFAT Tenders: ${(nz.tenders || []).length} open`);
+      const tenders = nz.tenders || [];
+      const openCount = tenders.filter(t => (t.status || "").toLowerCase() === "open").length;
+      const completedCount = tenders.filter(t => (t.status || "").toLowerCase() === "completed").length;
+      lines.push("", `## NZ Pacific Tenders (GETS): ${tenders.length} total (${openCount} open, ${completedCount} completed)`);
     }
     return { content: [{ type: "text", text: lines.join("\n") }] };
   }
@@ -587,26 +695,54 @@ server.tool(
       const currentLatest = currentFiles.length ? currentFiles[currentFiles.length - 1] : null;
       const currentDate = currentLatest ? currentLatest.replace(/^pacific-|\.json$/g, "") : null;
 
-      if (currentDate === latestDate) {
-        return { content: [{ type: "text", text: `Data is already current: ${latestDate}.` }] };
-      }
-
-      const dataResp = await fetch(latest.download_url);
-      if (!dataResp.ok) throw new Error(`Failed to fetch snapshot: ${dataResp.status}`);
-      const data = await dataResp.text();
-
       const targetDir = join(__dirname, "data");
       if (!existsSync(targetDir)) mkdirSync(targetDir, { recursive: true });
+
+      if (currentDate === latestDate) {
+        const currentSize = existsSync(join(DATA_DIR, currentLatest))
+          ? readFileSync(join(DATA_DIR, currentLatest)).length : 0;
+        if (currentSize > 0 && latest.size && Math.abs(currentSize - latest.size) < 100) {
+          return { content: [{ type: "text", text: `Data is already current: ${latestDate} (${(currentSize / 1024).toFixed(0)} KB).` }] };
+        }
+      }
+
+      const controller = new AbortController();
+      const timeout = setTimeout(() => controller.abort(), 60000);
+      let dataResp;
+      try {
+        dataResp = await fetch(latest.download_url, { signal: controller.signal });
+      } finally {
+        clearTimeout(timeout);
+      }
+      if (!dataResp.ok) throw new Error(`Failed to fetch snapshot: ${dataResp.status}`);
+      const data = await dataResp.text();
+      if (data.length > 50 * 1024 * 1024) throw new Error(`Snapshot too large: ${(data.length / 1024 / 1024).toFixed(1)} MB`);
+
+      let parsed;
+      try {
+        parsed = JSON.parse(data);
+        if (!parsed.date || !parsed.countries) throw new Error("Invalid snapshot structure");
+      } catch (e) {
+        throw new Error(`Downloaded snapshot failed validation: ${e.message}`);
+      }
       writeFileSync(join(targetDir, latest.name), data);
 
       const indexName = latest.name.replace(".json", ".index.json.gz");
       const indexFile = files.find(f => f.name === indexName);
       let indexUpdated = false;
       if (indexFile) {
-        const idxResp = await fetch(indexFile.download_url);
-        if (idxResp.ok) {
-          writeFileSync(join(targetDir, indexName), Buffer.from(await idxResp.arrayBuffer()));
-          indexUpdated = true;
+        const idxController = new AbortController();
+        const idxTimeout = setTimeout(() => idxController.abort(), 60000);
+        try {
+          const idxResp = await fetch(indexFile.download_url, { signal: idxController.signal });
+          if (idxResp.ok) {
+            const idxBuf = Buffer.from(await idxResp.arrayBuffer());
+            if (idxBuf.length > 20 * 1024 * 1024) throw new Error("Index too large");
+            writeFileSync(join(targetDir, indexName), idxBuf);
+            indexUpdated = true;
+          }
+        } finally {
+          clearTimeout(idxTimeout);
         }
       }
 

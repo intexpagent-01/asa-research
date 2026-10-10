@@ -68,7 +68,7 @@ async function run() {
     const fiji = await send("tools/call", { name: "get_country_summary", arguments: { country: "Fiji" } });
     const fjText = fiji.result.content[0].text;
     assert(fjText.includes("Fiji — Aid Summary"), "fiji summary title");
-    assert(fjText.includes("Disbursements (90 days)"), "fiji has disbursements");
+    assert(fjText.includes("Reported spending (90 days)"), "fiji has reported spending label");
 
     // country by code
     const pg = await send("tools/call", { name: "get_country_summary", arguments: { country: "PG" } });
@@ -104,7 +104,35 @@ async function run() {
 
     // get_nz_tenders
     const nz = await send("tools/call", { name: "get_nz_tenders", arguments: {} });
-    assert(nz.result.content[0].text.includes("NZ MFAT"), "nz tenders title");
+    assert(nz.result.content[0].text.includes("NZ Pacific Tenders"), "nz tenders title");
+
+    // Activity search — regression: must not crash on columnar index
+    const actSearch = await send("tools/call", { name: "search_activities", arguments: { query: "climate", country: "Tonga", limit: 5 } });
+    const actText = actSearch.result.content[0].text;
+    assert(!actText.includes("is not iterable"), "activity search does not crash on columnar index");
+    assert(actText.includes("Activities matching") || actText.includes("No activities found"), "activity search returns valid response");
+
+    // Country alias — "PNG" should find Papua New Guinea in DFAT pipeline
+    const pngPipeline = await send("tools/call", { name: "get_dfat_pipeline", arguments: { status: "all", country: "PNG" } });
+    const pngPipeText = pngPipeline.result.content[0].text;
+    assert(pngPipeText.includes("DFAT Procurement Pipeline"), "PNG alias works in DFAT pipeline");
+
+    // Regional overview — DFAT counts should not all be zero
+    assert(regText.includes("In the market:") && !regText.includes("In the market: 0\n- Planned: 0"), "regional DFAT counts not all zero");
+
+    // NZ tenders — should show open vs completed breakdown
+    const nzText = nz.result.content[0].text;
+    assert(nzText.includes("open") && nzText.includes("completed"), "nz tenders show status breakdown");
+
+    // Lessons corpus — should be loaded
+    assert(!lesText.includes("not available"), "lessons corpus is loaded");
+
+    // Country summary has coverage warnings section
+    assert(fjText.includes("Coverage Warnings") || fjText.includes("Data Quality"), "country summary has data quality section");
+
+    // Comparison has freshness warnings
+    const cmpText = compare.result.content[0].text;
+    assert(cmpText.includes("Data Freshness") || cmpText.includes("Note:"), "comparison includes data caveats");
 
   } finally {
     proc.kill();
