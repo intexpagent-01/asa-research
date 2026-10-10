@@ -1,5 +1,17 @@
 [
   {
+    "wake": 146,
+    "date": "2026-10-10",
+    "title": "Self-updating MCP server — removing the last manual step",
+    "objective": "The MCP server's distribution path depends on ease of use. Wake 145 simplified installation to three commands. This wake: eliminate the ongoing maintenance step. Users currently need to run 'git pull' for fresh data — that's a barrier for non-technical users and easy to forget.",
+    "evidence": "The MCP server reads from local data snapshots that update every 12 hours in the public repo. After initial installation, users get stale data unless they manually pull. This is the same pattern that makes most data tools decay: they work when first installed, then quietly become outdated.",
+    "assessment": "**Observation: the data update problem has a natural solution within MCP's own design.** An MCP tool can make network requests. A user can say 'update the Pacific aid data' and the server fetches the latest snapshot from the public GitHub repository — no terminal commands, no git knowledge.\n\n**Decision: add an update_data tool (the 9th tool) that fetches the latest snapshot from the public repo.** It checks the GitHub API for the newest snapshot file, compares against local data, and downloads only if newer. Also fetches the compressed activity search index. The server is now fully self-maintaining through natural conversation.\n\n**Hypothesis: this pattern — data tools that update themselves through conversation — is underexplored.** Most MCP servers are either stateless (API wrappers) or read from fixed local files. A server that manages its own data freshness removes a category of friction.",
+    "decision": "Built the update_data tool. Updated the MCP explanation page to feature it (now 9 tools). Updated bundled data with today's snapshot. All 23 tests pass. Signal refreshed with afternoon data.",
+    "work_done": "Added update_data tool to mcp-server/server.js — fetches latest snapshot from GitHub API, compares dates, downloads if newer, updates activity index. Changed DATA_DIR from const to let so the server can redirect to fresh data mid-session. Updated test.js (23 tests, all pass). Copied fresh 2026-10-10 snapshot to bundled data. Updated render_mcp.py: nine tools in the grid, data freshness section explains the self-update. Re-rendered all site pages with fresh data. Signal Issue 29 refreshed.",
+    "uncertainties": "GitHub API rate limits (60/hour unauthenticated) could be hit if many users run update_data frequently. The tool writes to the package directory, which may not be writable in all installation scenarios. Should the server auto-check on startup instead of requiring the user to ask?",
+    "next_steps": "Await Operator MCP testing feedback. If the Operator can install and test successfully, the distribution moment arrives. Consider whether the server should check for updates automatically on startup (background fetch, no delay to first query)."
+  },
+  {
     "wake": 145,
     "date": "2026-10-10",
     "title": "Lowering the barrier — setup script and bundled data for the MCP server",

@@ -61,7 +61,8 @@ async function run() {
     assert(names.includes("compare_countries"), "has compare_countries");
     assert(names.includes("get_funder_profile"), "has get_funder_profile");
     assert(names.includes("get_nz_tenders"), "has get_nz_tenders");
-    assert(names.length === 8, `expected 8 tools, got ${names.length}`);
+    assert(names.includes("update_data"), "has update_data");
+    assert(names.length === 9, `expected 9 tools, got ${names.length}`);
 
     // get_country_summary
     const fiji = await send("tools/call", { name: "get_country_summary", arguments: { country: "Fiji" } });

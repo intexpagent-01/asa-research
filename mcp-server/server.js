@@ -3,7 +3,7 @@
 import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
 import { z } from "zod";
-import { readFileSync, readdirSync, existsSync } from "fs";
+import { readFileSync, readdirSync, existsSync, writeFileSync, mkdirSync } from "fs";
 import { join, dirname } from "path";
 import { fileURLToPath } from "url";
 import { gunzipSync } from "zlib";
@@ -19,7 +19,7 @@ function findDataDir() {
   }
   return join(__dirname, "..", "signal", "data");
 }
-const DATA_DIR = findDataDir();
+let DATA_DIR = findDataDir();
 const LESSONS_FILE = process.env.LESSONS_FILE ||
   (existsSync(join(__dirname, "data", "wb-icr-global-1000.json"))
     ? join(__dirname, "data", "wb-icr-global-1000.json")
@@ -557,6 +557,65 @@ server.tool(
       lines.push(line);
     }
     return { content: [{ type: "text", text: lines.join("\n") }] };
+  }
+);
+
+// Tool 9: Update data from public repo
+server.tool(
+  "update_data",
+  "Fetch the latest Pacific aid data from the public repository. The data updates every 12 hours; use this to get the most recent snapshot without manually updating files.",
+  {},
+  async () => {
+    try {
+      const resp = await fetch(
+        "https://api.github.com/repos/intexpagent-01/asa-research/contents/signal/data",
+        { headers: { "User-Agent": "pacific-dev-intel-mcp/0.1" } }
+      );
+      if (!resp.ok) throw new Error(`GitHub API: ${resp.status}`);
+      const files = await resp.json();
+      const snapshots = files
+        .filter(f => /^pacific-\d{4}-\d{2}-\d{2}\.json$/.test(f.name))
+        .sort((a, b) => a.name.localeCompare(b.name));
+      if (!snapshots.length) throw new Error("No snapshots found in repository");
+
+      const latest = snapshots[snapshots.length - 1];
+      const latestDate = latest.name.replace(/^pacific-|\.json$/g, "");
+
+      const currentFiles = readdirSync(DATA_DIR)
+        .filter(f => /^pacific-\d{4}-\d{2}-\d{2}\.json$/.test(f))
+        .sort();
+      const currentLatest = currentFiles.length ? currentFiles[currentFiles.length - 1] : null;
+      const currentDate = currentLatest ? currentLatest.replace(/^pacific-|\.json$/g, "") : null;
+
+      if (currentDate === latestDate) {
+        return { content: [{ type: "text", text: `Data is already current: ${latestDate}.` }] };
+      }
+
+      const dataResp = await fetch(latest.download_url);
+      if (!dataResp.ok) throw new Error(`Failed to fetch snapshot: ${dataResp.status}`);
+      const data = await dataResp.text();
+
+      const targetDir = join(__dirname, "data");
+      if (!existsSync(targetDir)) mkdirSync(targetDir, { recursive: true });
+      writeFileSync(join(targetDir, latest.name), data);
+
+      const indexName = latest.name.replace(".json", ".index.json.gz");
+      const indexFile = files.find(f => f.name === indexName);
+      let indexUpdated = false;
+      if (indexFile) {
+        const idxResp = await fetch(indexFile.download_url);
+        if (idxResp.ok) {
+          writeFileSync(join(targetDir, indexName), Buffer.from(await idxResp.arrayBuffer()));
+          indexUpdated = true;
+        }
+      }
+
+      DATA_DIR = targetDir;
+
+      return { content: [{ type: "text", text: `Updated from ${currentDate || "none"} to ${latestDate}.${indexUpdated ? " Activity search index also updated." : ""}` }] };
+    } catch (e) {
+      return { content: [{ type: "text", text: `Update failed: ${e.message}. Using existing data.` }] };
+    }
   }
 );
 

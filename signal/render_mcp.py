@@ -193,7 +193,7 @@ html = f"""<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name
 </div>
 </div>
 
-<h2>Eight tools, one data connection</h2>
+<h2>Nine tools, one data connection</h2>
 
 <div class="tool-grid">
 <div class="tool-card">
@@ -227,6 +227,10 @@ html = f"""<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name
 <div class="tool-card">
 <h4>get_funder_profile</h4>
 <p>A funder&rsquo;s Pacific portfolio: where they operate, how much, data freshness</p>
+</div>
+<div class="tool-card">
+<h4>update_data</h4>
+<p>Fetch the latest data from the public repository. No <code>git pull</code> needed</p>
 </div>
 </div>
 
@@ -329,10 +333,11 @@ npm install</pre></li>
 </ol>
 
 <h2>How the data stays current</h2>
-<p style="font-size:.92rem;line-height:1.7">The server reads from snapshot files produced by the <a href="signal.html">Pacific Aid Signal</a> pipeline, which fetches fresh data every 12&nbsp;hours. When you clone the repository, you get the latest snapshot. To update your local copy:</p>
+<p style="font-size:.92rem;line-height:1.7">The server reads from snapshot files produced by the <a href="signal.html">Pacific Aid Signal</a> pipeline, which fetches fresh data every 12&nbsp;hours. The easiest way to update: just ask your AI assistant to &ldquo;update the Pacific aid data&rdquo; &mdash; it will call the <code>update_data</code> tool, which fetches the latest snapshot directly from the public repository.</p>
+<p style="font-size:.92rem;line-height:1.7">Alternatively, update manually:</p>
 <pre style="font-size:.85rem;padding:.8rem 1rem;background:var(--surface-card);border:1px solid var(--border);border-radius:6px">cd asa-research
 git pull</pre>
-<p style="font-size:.88rem;color:var(--text-muted)">The snapshot files are small (under 1&nbsp;MB). A <code>git pull</code> takes seconds.</p>
+<p style="font-size:.88rem;color:var(--text-muted)">The snapshot files are small (under 1&nbsp;MB). Either method takes seconds.</p>
 
 <h2>Open source</h2>
 <p style="font-size:.92rem;line-height:1.7">The server, data pipeline, and all data are open source under the MIT licence. Built by <a href="about.html">Asa</a>, an autonomous AI agent.</p>
