@@ -1,6 +1,6 @@
 <!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Pacific Development Intelligence &mdash; MCP Server for AI Assistants</title>
-<meta name="description" content="Give your AI assistant real-time Pacific aid data. MCP server with 8 tools: aid flows, DFAT procurement, NZ tenders, evaluation lessons for 14 Pacific countries.">
+<meta name="description" content="Give your AI assistant curated Pacific aid data. MCP server with 9 tools: quality-corrected aid flows, DFAT procurement, NZ tenders, evaluation lessons for 14 Pacific countries.">
 <style>
 :root {
   color-scheme: light;
@@ -323,91 +323,51 @@ footer{margin-top:2.5rem;padding-top:1rem;border-top:1px solid var(--gridline);f
 <p style="font-size:.88rem;margin-bottom:1.5rem"><a href="index.html">&larr; Home</a></p>
 
 <h1>Pacific Development Intelligence</h1>
-<p class="tagline">Give your AI assistant live development data for 14 Pacific island countries. Not a chatbot &mdash; a data connection that makes Claude, Copilot, or any MCP-compatible assistant genuinely useful for development work.</p>
+<p class="tagline">Give your AI assistant curated, quality-corrected development data for 14 Pacific island countries. Nine tools that connect Claude, Copilot, or any MCP-compatible assistant to maintained datasets &mdash; not raw web pages.</p>
 
-<h2>Why this is different from just asking Claude or ChatGPT</h2>
+<h2>What this adds that web search does not</h2>
 
-<p>If you ask an AI assistant about Pacific aid today, it answers from its training data &mdash; months or years old, with no access to current figures. It will give you plausible-sounding paragraphs, but the numbers are either outdated, vague, or fabricated.</p>
-
-<p>This MCP server connects your assistant to <strong>live data, refreshed every 12&nbsp;hours</strong>. The difference is concrete:</p>
+<p>Yes, your AI assistant can search the web. It can find IATI portals, read DFAT pages, and summarise what it finds. But for Pacific aid data, the raw sources have serious problems that web search alone does not fix:</p>
 
 <div class="compare">
 <div class="compare-box without">
-<span class="label label-old">Without the server</span>
-<h3>&ldquo;What&rsquo;s the aid picture in Fiji?&rdquo;</h3>
+<span class="label label-old">The raw data problem</span>
+<h3>About 70% of IATI transactions tagged to Pacific countries are actually for somewhere else</h3>
 <ul>
-<li>General paragraphs about Fiji&rsquo;s development</li>
-<li>Mentions DFAT and JICA as &ldquo;key donors&rdquo;</li>
-<li>No specific disbursement figures</li>
-<li>Cannot tell you what changed this week</li>
-<li>May hallucinate statistics</li>
+<li>d-portal reports the US State Department as Tonga&rsquo;s largest funder at $91&nbsp;billion</li>
+<li>Tonga&rsquo;s declared share of that programme is 0.005%</li>
+<li>An assistant searching the web gets these uncorrected figures</li>
+<li>No IATI portal applies recipient-country weighting</li>
 </ul>
 </div>
 <div class="compare-box with">
-<span class="label label-live">With the server</span>
-<h3>&ldquo;What&rsquo;s the aid picture in Fiji?&rdquo;</h3>
+<span class="label label-live">What the server provides</span>
+<h3>Pre-processed, quality-corrected data</h3>
 <ul>
-<li><strong>$43.7M</strong> disbursed in the last 90&nbsp;days</li>
-<li><strong>11 active funders</strong> &mdash; led by UNDP, EU, UNICEF</li>
-<li>Sector breakdown, data freshness per funder</li>
-<li>Which funders went quiet, which are new</li>
-<li>Every number traceable to source</li>
+<li>Recipient-country weighting applied to every transaction</li>
+<li>Cross-publisher deduplication ($388M in likely double-counting removed)</li>
+<li>Data currency tracking per funder per country</li>
+<li>Every number traceable to source with quality caveats</li>
 </ul>
 </div>
 </div>
 
-<div class="compare">
-<div class="compare-box without">
-<span class="label label-old">Without the server</span>
-<h3>&ldquo;What DFAT procurements are coming up in the Pacific?&rdquo;</h3>
-<ul>
-<li>&ldquo;I don&rsquo;t have access to current procurement data&rdquo;</li>
-<li>Suggests checking dfat.gov.au manually</li>
-<li>May recall programs from its training data</li>
-</ul>
-</div>
-<div class="compare-box with">
-<span class="label label-live">With the server</span>
-<h3>&ldquo;What DFAT procurements are coming up in the Pacific?&rdquo;</h3>
-<ul>
-<li><strong>30 pipeline items</strong> as at 9 October 2026</li>
-<li>Which are in market, planned, or closed</li>
-<li>Program names, countries, timing, approach</li>
-<li>Recent business notifications with dates</li>
-</ul>
-</div>
-</div>
+<p>This server provides <strong>maintained datasets</strong>, not web scraping. The data is refreshed every 12&nbsp;hours by a pipeline that applies consistent quality corrections across four public sources. Three things it does that web search cannot:</p>
 
-<div class="compare">
-<div class="compare-box without">
-<span class="label label-old">Without the server</span>
-<h3>&ldquo;What do evaluations say about water supply projects in the Pacific?&rdquo;</h3>
-<ul>
-<li>General advice based on training data</li>
-<li>May reference well-known evaluations</li>
-<li>Cannot search a structured evidence base</li>
-</ul>
-</div>
-<div class="compare-box with">
-<span class="label label-live">With the server</span>
-<h3>&ldquo;What do evaluations say about water supply projects in the Pacific?&rdquo;</h3>
-<ul>
-<li>Searches <strong>3,043 lessons</strong> from 991 World Bank evaluations</li>
-<li>Filters by topic, country, outcome rating</li>
-<li>Returns specific findings from specific projects</li>
-<li>Distinguishes successful from unsuccessful projects</li>
-</ul>
-</div>
-</div>
+<ol style="font-size:.92rem;line-height:1.8">
+<li><strong>Consistent data quality.</strong> The same corrections applied to every query, every time. Recipient-country weighting, deduplication, and data-staleness flags are built into the data, not improvised per search.</li>
+<li><strong>Cross-source synthesis.</strong> IATI transactions, DFAT procurement pipeline, NZ&nbsp;MFAT tenders, and World Bank evaluations &mdash; pre-joined and queryable in one question. Web search would require navigating four portals and reconciling different formats.</li>
+<li><strong>Historical snapshots.</strong> The pipeline keeps dated snapshots. The server can answer &ldquo;what changed in Fiji&rsquo;s aid picture this month?&rdquo; because it has the previous state to compare against. Portals show you the current state; they do not track what changed.</li>
+</ol>
 
-<h2>Sample: what a conversation looks like</h2>
+<h2>What it looks like in practice</h2>
 
 <div class="sample">
 <p class="q">You: &ldquo;Compare Fiji and Solomon Islands &mdash; who are the main funders and how do aid volumes differ?&rdquo;</p>
 <div class="a">
 <p><strong>Claude calls <code>compare_countries</code></strong> and returns a structured comparison:</p>
 <ul>
-<li><strong>Fiji:</strong> $43.7M in the last 90 days from 11 funders. Led by UNDP ($14.7M), EU ($12.8M), UNICEF ($12.8M)</li>
+<li><strong>Fiji:</strong> $43.7M in the last 90 days from 12 funders. Led by UNDP ($14.7M), EU ($12.8M), UNICEF ($12.8M)</li>
 <li><strong>Solomon Islands:</strong> $11.4M from 10 funders. Led by ADB, NZ MFAT, UNDP</li>
 </ul>
 <p>Claude can then follow up: &ldquo;DFAT is the largest funder on record in both countries but has published no data dated after June 2025 &mdash; a 15-month gap. So the 90-day figures understate Australia&rsquo;s actual presence.&rdquo;</p>
@@ -492,7 +452,7 @@ footer{margin-top:2.5rem;padding-top:1rem;border-top:1px solid var(--gridline);f
 cd asa-research/mcp-server
 bash setup.sh</pre>
 The setup script installs dependencies and configures Claude Desktop automatically.</li>
-<li><strong>Restart Claude Desktop</strong> (quit and reopen). You should see a hammer icon in the chat &mdash; click it to confirm &ldquo;pacific-dev-intel&rdquo; appears with 8 tools.</li>
+<li><strong>Restart Claude Desktop</strong> (quit and reopen). You should see a hammer icon in the chat &mdash; click it to confirm &ldquo;pacific-dev-intel&rdquo; appears with 9 tools.</li>
 <li><strong>Ask a question.</strong> Try: &ldquo;What&rsquo;s the current aid picture in Fiji?&rdquo;</li>
 </ol>
 <p class="note">Don&rsquo;t have git? Download the ZIP from <a href="https://github.com/intexpagent-01/asa-research" target="_blank" rel="noopener">GitHub</a> (green &ldquo;Code&rdquo; button &rarr; Download ZIP), unzip, open Terminal in the <code>mcp-server</code> folder, and run <code>bash setup.sh</code>.</p>
@@ -555,17 +515,19 @@ npm install</pre></li>
 </div>
 
 <div class="step">
-<h3>ChatGPT</h3>
-<p style="font-size:.92rem">ChatGPT does not currently support MCP servers natively. If OpenAI adds MCP support, this server will work with it automatically &mdash; MCP is an open standard. In the meantime, you can use the tools listed above through Claude Desktop, Claude Code, or VS Code.</p>
+<h3>ChatGPT <span class="badge badge-exp">Experimental</span></h3>
+<p style="font-size:.92rem">OpenAI has announced MCP support for ChatGPT. MCP is an open standard, so this server should work with any compliant client. Check OpenAI&rsquo;s documentation for the current setup process and any limitations. If you have trouble, Claude Desktop is the most tested option.</p>
 </div>
 
-<h2>Why not just search the web?</h2>
-<p style="font-size:.92rem;line-height:1.7">Three reasons this server gives better answers than web search or browsing IATI portals:</p>
-<ol style="font-size:.92rem;line-height:1.8">
-<li><strong>Data quality.</strong> About 70% of transactions tagged to Pacific countries in IATI are actually for other countries. Standard portals show you these uncorrected figures &mdash; for example, d-portal reports the US State Department as Tonga&rsquo;s largest funder at $91&nbsp;billion, when Tonga&rsquo;s actual share is 0.005%. This server applies recipient-country weighting to every transaction.</li>
-<li><strong>Cross-source synthesis.</strong> No single portal combines IATI transactions, DFAT procurement pipeline, NZ&nbsp;MFAT tenders, and World Bank evaluations. This server searches all four in one question.</li>
-<li><strong>Structured answers.</strong> Instead of pointing you to a portal to browse, the server returns structured data your AI assistant can reason about, compare, and summarise.</li>
-</ol>
+<h2>Limitations</h2>
+<p style="font-size:.92rem;line-height:1.7">This server provides curated snapshots, not a live API. The data reflects what was published in IATI, DFAT, GETS, and World Bank sources at the time of the last pipeline run. Notable gaps:</p>
+<ul style="font-size:.9rem;line-height:1.8">
+<li>DFAT (the largest funder in 9 of 14 Pacific countries) has published no IATI transaction dated after June 2025</li>
+<li>ADB data is IATI-only &mdash; the ADB website blocks automated access</li>
+<li>AusTender contract values are not included (API returns 403)</li>
+<li>China, Taiwan, and Gulf state aid is not in IATI and is not covered</li>
+<li>The lessons corpus covers World Bank evaluations only, not bilateral evaluations</li>
+</ul>
 
 <h2>How the data stays current</h2>
 <p style="font-size:.92rem;line-height:1.7">The server reads from snapshot files produced by the <a href="signal.html">Pacific Aid Signal</a> pipeline, which fetches fresh data every 12&nbsp;hours. The easiest way to update: just ask your AI assistant to &ldquo;update the Pacific aid data&rdquo; &mdash; it will call the <code>update_data</code> tool, which fetches the latest snapshot directly from the public repository.</p>

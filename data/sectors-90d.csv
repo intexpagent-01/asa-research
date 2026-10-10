@@ -1,16 +1,16 @@
 country_code,country_name,sector_code,sector_name,disbursements_90d_usd,percentage
-CK,Cook Islands,151,Government & civil society,636105.23,37.36
+CK,Cook Islands,151,Government & civil society,636105.23,37.35
 CK,Cook Islands,510,General budget support,225797.97,13.26
-CK,Cook Islands,130,Population & reproductive health,143418.83,8.42
+CK,Cook Islands,130,Population & reproductive health,143451.4,8.42
 CK,Cook Islands,231,Energy policy,143010.84,8.4
 CK,Cook Islands,123,Non-communicable diseases,129883.54,7.63
 CK,Cook Islands,313,Fishing,88273.29,5.18
-FJ,Fiji,410,Environmental protection,9143606.21,20.93
-FJ,Fiji,231,Energy policy,5956528.0,13.64
-FJ,Fiji,151,Government & civil society,5149468.88,11.79
-FJ,Fiji,232,"Energy generation, renewable",3973278.56,9.1
-FJ,Fiji,140,Water & sanitation,3487562.23,7.98
-FJ,Fiji,111,Education (general),2624726.71,6.01
+FJ,Fiji,410,Environmental protection,9143606.21,20.91
+FJ,Fiji,231,Energy policy,5956528.0,13.62
+FJ,Fiji,151,Government & civil society,5202184.22,11.89
+FJ,Fiji,232,"Energy generation, renewable",3973278.56,9.08
+FJ,Fiji,140,Water & sanitation,3487562.23,7.97
+FJ,Fiji,111,Education (general),2624726.71,6.0
 FM,Micronesia,140,Water & sanitation,355994.94,39.11
 FM,Micronesia,210,Transport & storage,87745.95,9.64
 FM,Micronesia,410,Environmental protection,81851.41,8.99
@@ -43,11 +43,11 @@ NU,Niue,121,Health (general),42669.68,0.47
 NU,Niue,114,Post-secondary education,17466.9,0.19
 PG,Papua New Guinea,210,Transport & storage,8980790.44,19.61
 PG,Papua New Guinea,510,General budget support,7341872.6,16.03
-PG,Papua New Guinea,151,Government & civil society,5293906.2,11.56
+PG,Papua New Guinea,151,Government & civil society,5293904.56,11.56
 PG,Papua New Guinea,311,Agriculture,5048252.56,11.02
 PG,Papua New Guinea,430,Multisector,3049070.55,6.66
-PG,Papua New Guinea,122,Basic health,2715946.33,5.93
-PW,Palau,140,Water & sanitation,191167.05,82.29
+PG,Papua New Guinea,122,Basic health,2715045.33,5.93
+PW,Palau,140,Water & sanitation,191167.05,82.3
 PW,Palau,720,Emergency response,7260.65,3.13
 PW,Palau,740,Disaster prevention & preparedness,6823.22,2.94
 PW,Palau,123,Non-communicable diseases,6217.76,2.68
