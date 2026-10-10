@@ -1,85 +1,85 @@
 country_code,country_name,sector_code,sector_name,disbursements_90d_usd,percentage
-CK,Cook Islands,151,Government & civil society,636105.23,37.66
-CK,Cook Islands,510,General budget support,226316.3,13.4
-CK,Cook Islands,130,Population & reproductive health,143451.4,8.49
-CK,Cook Islands,231,Energy policy,143010.84,8.47
-CK,Cook Islands,123,Non-communicable diseases,129883.54,7.69
-CK,Cook Islands,331,Trade policy,87583.66,5.19
-FJ,Fiji,410,Environmental protection,6893790.29,16.83
-FJ,Fiji,231,Energy policy,5955306.0,14.54
-FJ,Fiji,151,Government & civil society,4977558.17,12.15
-FJ,Fiji,232,"Energy generation, renewable",3966711.13,9.68
-FJ,Fiji,140,Water & sanitation,3487562.23,8.51
-FJ,Fiji,111,Education (general),2624726.71,6.41
-FM,Micronesia,140,Water & sanitation,355994.94,39.62
-FM,Micronesia,210,Transport & storage,87745.95,9.77
-FM,Micronesia,410,Environmental protection,81851.41,9.11
-FM,Micronesia,510,General budget support,76605.77,8.53
-FM,Micronesia,720,Emergency response,74373.59,8.28
-FM,Micronesia,232,"Energy generation, renewable",49490.15,5.51
-KI,Kiribati,122,Basic health,2433296.37,48.64
-KI,Kiribati,140,Water & sanitation,622698.7,12.45
-KI,Kiribati,121,Health (general),552036.75,11.04
-KI,Kiribati,113,Secondary education,205858.7,4.12
-KI,Kiribati,740,Disaster prevention & preparedness,195696.03,3.91
-KI,Kiribati,130,Population & reproductive health,174590.11,3.49
-MH,Marshall Islands,140,Water & sanitation,2316057.5,49.07
-MH,Marshall Islands,410,Environmental protection,1855425.61,39.31
-MH,Marshall Islands,236,Energy distribution,249848.65,5.29
-MH,Marshall Islands,250,Business & other services,136014.24,2.88
-MH,Marshall Islands,151,Government & civil society,135953.28,2.88
-MH,Marshall Islands,232,"Energy generation, renewable",30454.8,0.65
-NR,Nauru,210,Transport & storage,1438988.29,43.25
-NR,Nauru,510,General budget support,902899.4,27.14
-NR,Nauru,232,"Energy generation, renewable",450675.32,13.55
-NR,Nauru,151,Government & civil society,191831.21,5.77
-NR,Nauru,410,Environmental protection,165902.26,4.99
-NR,Nauru,140,Water & sanitation,133180.33,4.0
-NU,Niue,510,General budget support,8662584.0,95.34
-NU,Niue,210,Transport & storage,157745.49,1.74
-NU,Niue,123,Non-communicable diseases,134746.37,1.48
+CK,Cook Islands,151,Government & civil society,636105.23,37.36
+CK,Cook Islands,510,General budget support,225797.97,13.26
+CK,Cook Islands,130,Population & reproductive health,143418.83,8.42
+CK,Cook Islands,231,Energy policy,143010.84,8.4
+CK,Cook Islands,123,Non-communicable diseases,129883.54,7.63
+CK,Cook Islands,313,Fishing,88273.29,5.18
+FJ,Fiji,410,Environmental protection,9143606.21,20.93
+FJ,Fiji,231,Energy policy,5956528.0,13.64
+FJ,Fiji,151,Government & civil society,5149468.88,11.79
+FJ,Fiji,232,"Energy generation, renewable",3973278.56,9.1
+FJ,Fiji,140,Water & sanitation,3487562.23,7.98
+FJ,Fiji,111,Education (general),2624726.71,6.01
+FM,Micronesia,140,Water & sanitation,355994.94,39.11
+FM,Micronesia,210,Transport & storage,87745.95,9.64
+FM,Micronesia,410,Environmental protection,81851.41,8.99
+FM,Micronesia,510,General budget support,76432.99,8.4
+FM,Micronesia,720,Emergency response,74373.59,8.17
+FM,Micronesia,232,"Energy generation, renewable",49490.15,5.44
+KI,Kiribati,122,Basic health,2433296.37,48.43
+KI,Kiribati,140,Water & sanitation,622698.7,12.39
+KI,Kiribati,121,Health (general),546084.62,10.87
+KI,Kiribati,113,Secondary education,205858.7,4.1
+KI,Kiribati,740,Disaster prevention & preparedness,196182.03,3.9
+KI,Kiribati,130,Population & reproductive health,174590.11,3.47
+MH,Marshall Islands,140,Water & sanitation,2516917.5,51.13
+MH,Marshall Islands,410,Environmental protection,1856480.11,37.71
+MH,Marshall Islands,236,Energy distribution,249848.65,5.08
+MH,Marshall Islands,250,Business & other services,136014.24,2.76
+MH,Marshall Islands,151,Government & civil society,135953.28,2.76
+MH,Marshall Islands,232,"Energy generation, renewable",30454.8,0.62
+NR,Nauru,210,Transport & storage,1438988.29,43.84
+NR,Nauru,510,General budget support,902899.4,27.51
+NR,Nauru,232,"Energy generation, renewable",450675.32,13.73
+NR,Nauru,151,Government & civil society,191831.21,5.84
+NR,Nauru,140,Water & sanitation,133180.33,4.06
+NR,Nauru,410,Environmental protection,121170.68,3.69
+NU,Niue,510,General budget support,8662584.0,95.92
+NU,Niue,123,Non-communicable diseases,134746.37,1.49
+NU,Niue,210,Transport & storage,102021.45,1.13
 NU,Niue,122,Basic health,47161.23,0.52
 NU,Niue,121,Health (general),42669.68,0.47
 NU,Niue,114,Post-secondary education,17466.9,0.19
-PG,Papua New Guinea,210,Transport & storage,8980790.44,20.06
-PG,Papua New Guinea,510,General budget support,7341915.79,16.4
-PG,Papua New Guinea,151,Government & civil society,5163165.09,11.53
-PG,Papua New Guinea,311,Agriculture,4749148.28,10.61
-PG,Papua New Guinea,430,Multisector,3026277.03,6.76
-PG,Papua New Guinea,122,Basic health,2725565.37,6.09
-PW,Palau,140,Water & sanitation,191167.05,55.96
-PW,Palau,410,Environmental protection,112396.31,32.9
-PW,Palau,720,Emergency response,7260.65,2.13
-PW,Palau,740,Disaster prevention & preparedness,6823.22,2.0
-PW,Palau,123,Non-communicable diseases,6217.76,1.82
-PW,Palau,114,Post-secondary education,5588.01,1.64
-SB,Solomon Islands,140,Water & sanitation,3215208.4,29.1
-SB,Solomon Islands,210,Transport & storage,2316231.93,20.96
-SB,Solomon Islands,151,Government & civil society,2288973.46,20.72
-SB,Solomon Islands,113,Secondary education,1146064.25,10.37
-SB,Solomon Islands,410,Environmental protection,459804.15,4.16
-SB,Solomon Islands,321,Industry,324737.84,2.94
-TO,Tonga,510,General budget support,3012552.11,32.48
-TO,Tonga,210,Transport & storage,1256873.35,13.55
-TO,Tonga,430,Multisector,1144043.73,12.33
-TO,Tonga,323,Construction,1027638.82,11.08
-TO,Tonga,151,Government & civil society,892743.83,9.62
-TO,Tonga,140,Water & sanitation,748522.56,8.07
-TV,Tuvalu,210,Transport & storage,256551.07,26.76
-TV,Tuvalu,430,Multisector,195882.39,20.43
-TV,Tuvalu,151,Government & civil society,153133.12,15.97
-TV,Tuvalu,232,"Energy generation, renewable",87591.43,9.14
-TV,Tuvalu,311,Agriculture,73093.13,7.62
-TV,Tuvalu,121,Health (general),46229.7,4.82
-VU,Vanuatu,151,Government & civil society,2517545.08,28.23
-VU,Vanuatu,430,Multisector,2012341.08,22.57
-VU,Vanuatu,311,Agriculture,847562.69,9.51
-VU,Vanuatu,740,Disaster prevention & preparedness,759971.52,8.52
-VU,Vanuatu,410,Environmental protection,517727.91,5.81
-VU,Vanuatu,121,Health (general),467089.23,5.24
-WS,Samoa,510,General budget support,5775025.5,38.43
-WS,Samoa,210,Transport & storage,3763551.18,25.05
-WS,Samoa,140,Water & sanitation,2181198.34,14.52
-WS,Samoa,410,Environmental protection,807631.54,5.37
-WS,Samoa,332,Tourism,534144.64,3.55
-WS,Samoa,151,Government & civil society,366416.02,2.44
+PG,Papua New Guinea,210,Transport & storage,8980790.44,19.61
+PG,Papua New Guinea,510,General budget support,7341872.6,16.03
+PG,Papua New Guinea,151,Government & civil society,5293906.2,11.56
+PG,Papua New Guinea,311,Agriculture,5048252.56,11.02
+PG,Papua New Guinea,430,Multisector,3049070.55,6.66
+PG,Papua New Guinea,122,Basic health,2715946.33,5.93
+PW,Palau,140,Water & sanitation,191167.05,82.29
+PW,Palau,720,Emergency response,7260.65,3.13
+PW,Palau,740,Disaster prevention & preparedness,6823.22,2.94
+PW,Palau,123,Non-communicable diseases,6217.76,2.68
+PW,Palau,114,Post-secondary education,5588.01,2.41
+PW,Palau,430,Multisector,5341.75,2.3
+SB,Solomon Islands,140,Water & sanitation,3215208.4,28.12
+SB,Solomon Islands,151,Government & civil society,2663069.93,23.29
+SB,Solomon Islands,210,Transport & storage,2316231.93,20.26
+SB,Solomon Islands,113,Secondary education,1146064.25,10.02
+SB,Solomon Islands,410,Environmental protection,462048.83,4.04
+SB,Solomon Islands,321,Industry,324737.84,2.84
+TO,Tonga,510,General budget support,3012552.11,32.5
+TO,Tonga,210,Transport & storage,1256873.35,13.56
+TO,Tonga,430,Multisector,1144043.73,12.34
+TO,Tonga,323,Construction,1027638.82,11.09
+TO,Tonga,151,Government & civil society,883848.75,9.54
+TO,Tonga,140,Water & sanitation,748522.56,8.08
+TV,Tuvalu,210,Transport & storage,256551.07,26.87
+TV,Tuvalu,430,Multisector,195882.39,20.51
+TV,Tuvalu,151,Government & civil society,151651.81,15.88
+TV,Tuvalu,232,"Energy generation, renewable",87591.43,9.17
+TV,Tuvalu,311,Agriculture,74254.62,7.78
+TV,Tuvalu,121,Health (general),46229.7,4.84
+VU,Vanuatu,151,Government & civil society,2517545.08,28.27
+VU,Vanuatu,430,Multisector,2016486.15,22.64
+VU,Vanuatu,311,Agriculture,847600.02,9.52
+VU,Vanuatu,740,Disaster prevention & preparedness,759971.52,8.53
+VU,Vanuatu,410,Environmental protection,526801.94,5.92
+VU,Vanuatu,121,Health (general),443005.4,4.97
+WS,Samoa,510,General budget support,5775025.5,37.17
+WS,Samoa,210,Transport & storage,3763551.18,24.22
+WS,Samoa,140,Water & sanitation,2181195.34,14.04
+WS,Samoa,410,Environmental protection,875905.74,5.64
+WS,Samoa,998,Unallocated / unspecified,573123.5,3.69
+WS,Samoa,332,Tourism,534144.64,3.44

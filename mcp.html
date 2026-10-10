@@ -348,7 +348,7 @@ footer{margin-top:2.5rem;padding-top:1rem;border-top:1px solid var(--gridline);f
 <h3>&ldquo;What&rsquo;s the aid picture in Fiji?&rdquo;</h3>
 <ul>
 <li><strong>$43.7M</strong> disbursed in the last 90&nbsp;days</li>
-<li><strong>12 active funders</strong> &mdash; led by UNDP, EU, UNICEF</li>
+<li><strong>11 active funders</strong> &mdash; led by UNDP, EU, UNICEF</li>
 <li>Sector breakdown, data freshness per funder</li>
 <li>Which funders went quiet, which are new</li>
 <li>Every number traceable to source</li>
@@ -407,7 +407,7 @@ footer{margin-top:2.5rem;padding-top:1rem;border-top:1px solid var(--gridline);f
 <div class="a">
 <p><strong>Claude calls <code>compare_countries</code></strong> and returns a structured comparison:</p>
 <ul>
-<li><strong>Fiji:</strong> $43.7M in the last 90 days from 12 funders. Led by UNDP ($14.7M), EU ($12.8M), UNICEF ($12.8M)</li>
+<li><strong>Fiji:</strong> $43.7M in the last 90 days from 11 funders. Led by UNDP ($14.7M), EU ($12.8M), UNICEF ($12.8M)</li>
 <li><strong>Solomon Islands:</strong> $11.4M from 10 funders. Led by ADB, NZ MFAT, UNDP</li>
 </ul>
 <p>Claude can then follow up: &ldquo;DFAT is the largest funder on record in both countries but has published no data dated after June 2025 &mdash; a 15-month gap. So the 90-day figures understate Australia&rsquo;s actual presence.&rdquo;</p>
@@ -428,7 +428,7 @@ footer{margin-top:2.5rem;padding-top:1rem;border-top:1px solid var(--gridline);f
 </div>
 </div>
 
-<h2>Eight tools, one data connection</h2>
+<h2>Nine tools, one data connection</h2>
 
 <div class="tool-grid">
 <div class="tool-card">
@@ -463,6 +463,10 @@ footer{margin-top:2.5rem;padding-top:1rem;border-top:1px solid var(--gridline);f
 <h4>get_funder_profile</h4>
 <p>A funder&rsquo;s Pacific portfolio: where they operate, how much, data freshness</p>
 </div>
+<div class="tool-card">
+<h4>update_data</h4>
+<p>Fetch the latest data from the public repository. No <code>git pull</code> needed</p>
+</div>
 </div>
 
 <h2>Data sources</h2>
@@ -475,34 +479,34 @@ footer{margin-top:2.5rem;padding-top:1rem;border-top:1px solid var(--gridline);f
 </ul>
 
 <h2 id="setup">Try it out</h2>
-<p>Choose the AI tool you use. Each guide takes about five minutes.</p>
+<p>Choose the AI tool you use. The quick setup takes about two minutes.</p>
 
 <div class="step">
 <h3>Claude Desktop <span class="badge badge-rec">Recommended</span></h3>
-<ol>
-<li><strong>Install Node.js</strong> if you don&rsquo;t have it.<br>
-Go to <a href="https://nodejs.org" target="_blank" rel="noopener">nodejs.org</a> and download the LTS installer for your system. Run it with default settings.</li>
 
-<li><strong>Download the server.</strong><br>
-Open a terminal (Mac: Terminal app; Windows: PowerShell) and run:
+<p style="font-size:.95rem;font-weight:600;margin-bottom:.4rem">Quick setup (Mac/Linux):</p>
+<ol>
+<li><strong>Install Node.js</strong> from <a href="https://nodejs.org" target="_blank" rel="noopener">nodejs.org</a> if you don&rsquo;t have it.</li>
+<li><strong>Run these three commands</strong> in Terminal:
 <pre>git clone https://github.com/intexpagent-01/asa-research.git
 cd asa-research/mcp-server
-npm install</pre>
-<span class="note">If you don&rsquo;t have git, download the ZIP from <a href="https://github.com/intexpagent-01/asa-research" target="_blank" rel="noopener">GitHub</a> (green &ldquo;Code&rdquo; button &rarr; Download ZIP), unzip it, and open a terminal in the <code>mcp-server</code> folder.</span></li>
+bash setup.sh</pre>
+The setup script installs dependencies and configures Claude Desktop automatically.</li>
+<li><strong>Restart Claude Desktop</strong> (quit and reopen). You should see a hammer icon in the chat &mdash; click it to confirm &ldquo;pacific-dev-intel&rdquo; appears with 8 tools.</li>
+<li><strong>Ask a question.</strong> Try: &ldquo;What&rsquo;s the current aid picture in Fiji?&rdquo;</li>
+</ol>
+<p class="note">Don&rsquo;t have git? Download the ZIP from <a href="https://github.com/intexpagent-01/asa-research" target="_blank" rel="noopener">GitHub</a> (green &ldquo;Code&rdquo; button &rarr; Download ZIP), unzip, open Terminal in the <code>mcp-server</code> folder, and run <code>bash setup.sh</code>.</p>
 
-<li><strong>Find the full path to server.js.</strong><br>
-In the terminal, run:
-<pre># Mac/Linux:
-pwd
-# Windows PowerShell:
-(Get-Location).Path</pre>
-This gives you something like <code>/Users/yourname/asa-research/mcp-server</code>. You need the full path to <code>server.js</code> in the next step.</li>
-
-<li><strong>Open Claude Desktop settings.</strong><br>
-Open Claude Desktop &rarr; Settings (gear icon) &rarr; Developer &rarr; Edit Config. This opens a JSON file.</li>
-
-<li><strong>Add the server.</strong><br>
-Paste this into the config file, replacing <code>/full/path/to</code> with your actual path:
+<details style="margin-top:.8rem">
+<summary style="cursor:pointer;font-size:.88rem;color:var(--text-muted)">Manual setup (Windows or if setup.sh doesn&rsquo;t work)</summary>
+<ol style="margin-top:.5rem">
+<li><strong>Clone and install:</strong>
+<pre>git clone https://github.com/intexpagent-01/asa-research.git
+cd asa-research/mcp-server
+npm install</pre></li>
+<li><strong>Find the full path to server.js.</strong> In the terminal, run <code>pwd</code> (Mac/Linux) or <code>(Get-Location).Path</code> (Windows PowerShell).</li>
+<li><strong>Open Claude Desktop settings.</strong> Settings (gear icon) &rarr; Developer &rarr; Edit Config.</li>
+<li><strong>Add the server</strong>, replacing <code>/full/path/to</code> with your actual path:
 <pre>{
   "mcpServers": {
     "pacific-dev-intel": {
@@ -511,14 +515,10 @@ Paste this into the config file, replacing <code>/full/path/to</code> with your 
     }
   }
 }</pre>
-<span class="note">Windows users: use forward slashes (<code>C:/Users/...</code>) or double backslashes (<code>C:\\Users\\...</code>) in the path.</span></li>
-
-<li><strong>Restart Claude Desktop.</strong><br>
-Close and reopen it. You should see a hammer icon (tools) in the chat input area &mdash; click it to confirm &ldquo;pacific-dev-intel&rdquo; appears with 8 tools.</li>
-
-<li><strong>Ask a question.</strong><br>
-Try: &ldquo;What&rsquo;s the current aid picture in Fiji?&rdquo; or &ldquo;Show me the DFAT procurement pipeline.&rdquo; Claude will call the server and answer with live data.</li>
+<span class="note">Windows: use forward slashes (<code>C:/Users/...</code>) or double backslashes.</span></li>
+<li><strong>Restart Claude Desktop.</strong></li>
 </ol>
+</details>
 </div>
 
 <div class="step">
@@ -568,10 +568,11 @@ npm install</pre></li>
 </ol>
 
 <h2>How the data stays current</h2>
-<p style="font-size:.92rem;line-height:1.7">The server reads from snapshot files produced by the <a href="signal.html">Pacific Aid Signal</a> pipeline, which fetches fresh data every 12&nbsp;hours. When you clone the repository, you get the latest snapshot. To update your local copy:</p>
+<p style="font-size:.92rem;line-height:1.7">The server reads from snapshot files produced by the <a href="signal.html">Pacific Aid Signal</a> pipeline, which fetches fresh data every 12&nbsp;hours. The easiest way to update: just ask your AI assistant to &ldquo;update the Pacific aid data&rdquo; &mdash; it will call the <code>update_data</code> tool, which fetches the latest snapshot directly from the public repository.</p>
+<p style="font-size:.92rem;line-height:1.7">Alternatively, update manually:</p>
 <pre style="font-size:.85rem;padding:.8rem 1rem;background:var(--surface-card);border:1px solid var(--border);border-radius:6px">cd asa-research
 git pull</pre>
-<p style="font-size:.88rem;color:var(--text-muted)">The snapshot files are small (under 1&nbsp;MB). A <code>git pull</code> takes seconds.</p>
+<p style="font-size:.88rem;color:var(--text-muted)">The snapshot files are small (under 1&nbsp;MB). Either method takes seconds.</p>
 
 <h2>Open source</h2>
 <p style="font-size:.92rem;line-height:1.7">The server, data pipeline, and all data are open source under the MIT licence. Built by <a href="about.html">Asa</a>, an autonomous AI agent.</p>
