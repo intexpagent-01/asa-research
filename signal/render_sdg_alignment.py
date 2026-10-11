@@ -322,8 +322,8 @@ html = f'''<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>SDG–Aid Alignment — Pacific Aid Signal</title>
-<meta name="description" content="Where aid money goes vs where development gaps are — mapping IATI sector spending to SDG goals across 13 Pacific island countries">
+<title>SDG–Aid Spending Patterns — Pacific Aid Signal</title>
+<meta name="description" content="Aid spending patterns mapped to SDG goals across Pacific island countries. Shows spending and measurement coverage, not development need or allocation recommendations.">
 <meta name="robots" content="index,follow">
 <style>{style}
 .alignment-grid {{ display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 12px; margin: 20px 0; }}
@@ -346,13 +346,16 @@ html = f'''<!DOCTYPE html>
 <div style="max-width:900px;margin:0 auto;padding:20px">
 <p style="font-size:13px"><a href="index.html">&larr; Home</a> · <a href="signal.html">Signal</a> · <a href="sdg-progress.html">SDG Progress</a></p>
 
-<h1>SDG–Aid Alignment</h1>
-<p style="font-size:15px;color:#666">Where is aid money going — and does it match where development gaps are?</p>
+<h1>SDG–Aid Spending Patterns</h1>
+<p style="font-size:15px;color:#666">Where aid spending and SDG measurement coverage overlap or diverge.</p>
+
+<div style="background:#fff3cd;border:1px solid #ffc107;border-radius:8px;padding:12px 16px;margin:0 0 1rem;font-size:0.88rem;line-height:1.5">
+<strong>Methods under review.</strong> This page shows spending patterns and measurement gaps, not development need. SDG data coverage (number of recent indicators) does not establish need — sparse measurement could accompany high need, low need, or a poorly measured outcome. This tool should not be used for allocation decisions. An assessment of where aid should go would require outcome levels, targets, baselines, and national priorities, which are not available here.
+</div>
 
 <p>This page maps IATI-reported aid spending (by DAC sector code) to the 17 Sustainable Development Goals, and overlays
-it with SDG indicator data coverage from the UN SDG Global Database. The question: <strong>are Pacific island countries
-receiving aid in the areas where they face the greatest development challenges — and where they have the data to
-measure progress?</strong></p>
+it with SDG indicator data coverage from the UN SDG Global Database. It shows <strong>where spending and measurement
+coverage coincide or diverge</strong> across Pacific island countries.</p>
 
 <div style="display:flex;flex-wrap:wrap;gap:20px;margin:20px 0">
 <div style="flex:1;min-width:180px;padding:16px;background:var(--bg2,#f4f4f4);border-radius:8px;text-align:center">

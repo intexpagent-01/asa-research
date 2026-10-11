@@ -218,12 +218,12 @@ for cname, q, orgs in sorted(quiet_data, key=lambda x: -x[1])[:10]:
 # Summary of what Signal does about each issue
 corrections_html = f"""
 <h2>What the Signal does about it</h2>
-<p>The Pacific Aid Signal applies five corrections to raw IATI data before publishing anything. These are deterministic rules with no model calls at runtime &mdash; every correction is reproducible and auditable.</p>
+<p>The Pacific Aid Signal applies rules to raw IATI data before publishing. These are deterministic scripts with no model calls at runtime &mdash; every rule is reproducible and auditable. <em>Deterministic processing does not guarantee correct methods or complete coverage.</em></p>
 
 <table class="summary-table">
 <tr><th>Problem</th><th>What the Signal does</th><th>Scale</th></tr>
 <tr><td>Misattributed transactions</td><td>Recipient-country weighting: reads declared percentage splits and excludes transactions where the money is for another country</td><td>{total_other:,} transactions excluded ({pct(total_other, total_trans)})</td></tr>
-<tr><td>Cross-publisher double-counting</td><td>Identifies the same activity reported by multiple publishers; deduplicates by keeping the publisher with the most recent data</td><td>$388M (4.1%) of $9.36B identified as likely duplicates</td></tr>
+<tr><td>Cross-publisher overlap</td><td>Identifies potential duplicates by title matching across publishers; flags clusters for investigation (may not distinguish co-financing from duplicate reporting)</td><td>$388M (4.1%) of $9.36B flagged as potential duplicates (indicative, not confirmed)</td></tr>
 <tr><td>Data staleness</td><td>Per-funder data currency tracking: shows when each funder last published, flags stale data, supplements with direct source reading (DFAT procurement notices, NZ GETS tenders)</td><td>{stale_funders} funders with data &gt;1 year old</td></tr>
 <tr><td>Implausible amounts</td><td>Flags activities claiming &gt;$500M lifetime with &gt;50% attributed to a single Pacific country</td><td>Caught US State Department showing as Tonga&rsquo;s largest funder at $91B</td></tr>
 <tr><td>Negative transactions</td><td>Included in totals (they represent real refunds/adjustments) but counted separately for transparency</td><td>{total_negative:,} across {len(negative_data)} countries</td></tr>
@@ -237,7 +237,7 @@ iati_context = """
 
 <p>The problems documented on this page are exactly what that initiative aims to address. They are not abstract &mdash; they are what happens when you try to answer a simple question like &ldquo;how much aid did Fiji receive in the last 90 days?&rdquo; using raw IATI data. The answer without corrections is wrong by a factor of three or more.</p>
 
-<p>In July 2026, <a href="https://www.publishwhatyoufund.org/">Publish What You Fund</a> tested Claude Code on IATI data and found three failure modes: hallucinations, missed double-counting, and context blindness. The Pacific Aid Signal addresses all three by design: no model calls at runtime (no hallucinations possible), cross-publisher deduplication (double-counting caught), and recipient-country weighting (context preserved).</p>
+<p>In July 2026, <a href="https://www.publishwhatyoufund.org/">Publish What You Fund</a> tested Claude Code on IATI data and found three failure modes: hallucinations, missed double-counting, and context blindness. The Pacific Aid Signal uses a different approach: no model calls at runtime (reducing hallucination risk), cross-publisher overlap flagging, and recipient-country weighting. However, a deterministic pipeline can still contain incorrect methods or hardcoded conclusions, and the deduplication approach has not been independently validated.</p>
 
 <p>Four AI tools now work with IATI data, each at a different layer: <a href="https://devexplorer.ai">DevExplorer</a> reads narrative documents (RAG), <a href="https://check-iati.org">ChecKI</a> checks publisher text quality, AidInsights answers natural-language queries, and the Pacific Aid Signal monitors transactions with data quality correction. The quality problems described here affect all of them differently &mdash; but they hit hardest at the transaction level, where a single misattributed activity can shift a country&rsquo;s total by billions.</p>
 """
@@ -304,9 +304,9 @@ html = f"""<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name
 <div class="issue-section">
 <p>The same aid activity can appear multiple times in IATI when both the funder and the implementing partner publish it. A $50M programme reported by both the donor government and the UN agency implementing it shows up as $100M in a na&iuml;ve sum.</p>
 
-<p>Across the Pacific, <strong>$388M (4.1%) of $9.36B in active spend</strong> is likely double-counted, in 88 identified duplicate clusters. This is not a rounding error &mdash; it is enough to change the ranking of funders in any country and to distort sector totals.</p>
+<p>Across the Pacific, <strong>$388M (4.1%) of $9.36B in active spend</strong> was identified as potential duplicates in 88 clusters using title matching across publishers (September 2026). <em>This figure is indicative, not a confirmed correction.</em> Title matching cannot distinguish genuine co-financing from duplicate reporting &mdash; if two donors contribute $10M and $20M to one programme, the real total may be $30M, not $20M. IATI provides transaction linkages that could help resolve this, and d-portal applies its own secondary-publisher rules. The clusters identify records requiring investigation, not a validated financial correction.</p>
 
-<div class="correction"><strong>Signal correction:</strong> identifies duplicate activities by matching publisher identifiers, titles, and amounts across publishers. Deduplicates by keeping the publisher with the most recent data. The methodology and duplicate clusters are documented in the pipeline code.</div>
+<div class="correction"><strong>Signal approach:</strong> identifies potential duplicate activities by matching publisher identifiers, titles, and amounts across publishers. Flags clusters for investigation. The method is documented in the pipeline code but has not been independently validated.</div>
 </div>
 
 <h2>Problem 4: negative transactions</h2>
