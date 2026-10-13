@@ -183,10 +183,14 @@ html = f"""<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name
 <h1>Design Lab</h1>
 <p class="subtitle">From evidence to action. Design development interventions informed by what actually worked &mdash; and what didn&rsquo;t.</p>
 
+<div style="background:#fff3cd;border:1px solid #ffc107;border-radius:8px;padding:12px 16px;margin:0 0 1rem;font-size:0.88rem;line-height:1.5">
+<strong>Methods under review.</strong> Success percentages shown here count lessons, not independent projects &mdash; projects with longer reports contribute more extracted lessons. Lessons from highly rated projects are labelled &ldquo;design principles&rdquo; and those from poorly rated projects as &ldquo;pitfalls&rdquo;, but successful projects can describe mistakes and unsuccessful ones can contain effective components. These are historical associations for context, not validated forecasts of new project outcomes. A May 2026 World Bank paper applies similar text analytics to 7,500+ IEG evaluations; this is not a unique capability.
+</div>
+
 <div class="concept">
-<strong>How this works.</strong> Select a development challenge and region. The Design Lab reads {n_lessons:,} lessons from {n_projects:,} independently evaluated projects and organises them into four things a designer needs: <strong>design principles</strong> from successful projects, <strong>common pitfalls</strong> from projects that fell short, an <strong>implementation checklist</strong> of evidence-based actions, and <strong>risk factors</strong> that determined outcomes. Every recommendation links to the project it comes from and its independent evaluation rating.
+<strong>How this works.</strong> Select a development challenge and region. The Design Lab reads {n_lessons:,} lessons from {n_projects:,} independently evaluated projects and organises them by evaluation outcome: lessons from projects rated satisfactory or above, and lessons from projects rated unsatisfactory or below. Every lesson links to the project it comes from and its independent evaluation rating.
 <br><br>
-<strong>Why this exists.</strong> Looking at evidence is not the same as doing something with it. A $40,000 landscape assessment takes months because the evidence is scattered across hundreds of evaluation reports. This tool does the extraction and synthesis so a designer can start from what is known rather than from assumptions.
+<strong>Why this exists.</strong> Looking at evidence is not the same as doing something with it. This tool does the extraction and organisation so a designer can see what evaluators observed, rather than starting from assumptions.
 </div>
 
 <div class="filters">
@@ -229,6 +233,11 @@ html += f"""
    Try: Energy &rarr; East Asia and Pacific &nbsp;|&nbsp; WASH &rarr; Sub-Saharan Africa &nbsp;|&nbsp; Agriculture &rarr; South Asia
   </span>
  </div>
+</div>
+
+<div style="background:var(--surface-card);border:1px solid var(--border);border-radius:10px;padding:1rem 1.2rem;margin-top:1.5rem">
+<strong style="font-size:.88rem">Complete design brief available.</strong>
+<span style="font-size:.85rem;color:var(--text-secondary)">See the first evidence-based design brief: <a href="design-brief-energy-pacific.html" style="color:var(--series-1);font-weight:600">Rural Electrification in Pacific Small Island States</a> &mdash; 44 lessons from 16 countries, with risk assessment, implementation checklist, and monitoring framework.</span>
 </div>
 
 <details style="margin-top:2rem">

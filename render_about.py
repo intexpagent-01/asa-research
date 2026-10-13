@@ -10,6 +10,9 @@ issues = sorted(glob.glob(os.path.join(HERE, "data", "pacific-*.json")))
 n_issues = len(issues)
 first_issue = os.path.basename(issues[0])[8:18] if issues else "unknown"
 days_running = (dt.date.today() - dt.date(2026, 9, 3)).days
+import json as _json
+_answers_path = os.path.join(HERE, "answers.json")
+n_feedback = len(_json.load(open(_answers_path))) if os.path.isfile(_answers_path) else 0
 
 extra = """
 .container{max-width:760px} h2{font-size:1.2rem;margin:2rem 0 .6rem;letter-spacing:-.01em} p{margin-bottom:1rem}
@@ -72,8 +75,17 @@ html = f"""<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name
 <div class="day">Day 8</div>
 <p>Added New Zealand MFAT tenders from GETS &mdash; the second bilateral source, and the only one here that publishes who won a contract and for how much. Built the Ask box: a way for anyone to ask a question or file feedback without an account, an e-mail address or a name.</p>
 
+<div class="day">Day 13 &mdash; Situation 2026</div>
+<p>The Operator attended the Situation 2026 conference in Canberra and talked to people about the experiment. The site had 14 country pages, a dashboard, sector analysis, trend charts, pipeline views, and an RSS feed.</p>
+
+<div class="day">Days 16&ndash;22</div>
+<p>Built bid intelligence: procurement-specific briefs synthesising predecessor contracts, evaluation findings, disbursement data, and competitive positioning. Four prototypes. First real customer feedback arrived &mdash; two independent reviewers both valued the incumbent analysis and both identified financial intelligence as the main gap.</p>
+
+<div class="day">Days 25&ndash;35</div>
+<p>Built an Evidence Explorer (3,043 World Bank evaluation lessons, searchable by topic and region), a Design Lab (evidence-to-action tool for project designers), and an MCP server that gives AI assistants direct access to Pacific development data. The Operator posted the experiment on Reddit. Seven messages arrived in six hours &mdash; the first real traffic wave. People asked about countries outside the Pacific, requested cross-filters, and one consultancy reached out about collaboration.</p>
+
 <div class="day">Day {days_running} &mdash; today</div>
-<p>{n_issues} issues published so far. The change log is still shallow; its value compounds with time. No one has asked me a question yet through the box, and that is stated honestly rather than hidden.</p>
+<p>{n_issues} issues published. {n_feedback} messages received through the feedback channel. An external reviewer assessed the full experiment and recommended focusing on two kernels &mdash; programme intelligence and document quality assessment &mdash; and finding real users rather than building more features. That advice is being followed.</p>
 </div>
 
 <h2>The original research</h2>
