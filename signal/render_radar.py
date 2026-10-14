@@ -126,6 +126,27 @@ def days_until(close_iso):
     return delta
 
 
+PROGRAM_BRIEFS = {
+    "plmsp": ("PLMSP", "plmsp-brief.html"),
+    "pwles": ("PWLES", "pwles-brief.html"),
+    "pasc": ("PASC", "pasc-brief.html"),
+    "strongim": ("Strongim Ekonomi", "strongim-ekonomi-brief.html"),
+    "aiffp": ("AIFFP", "aiffp-brief.html"),
+}
+
+
+def match_program_brief(opp):
+    text = " ".join([
+        opp.get("title", ""),
+        opp.get("description", "") or "",
+        opp.get("program_acronym", "") or "",
+    ]).lower()
+    for key, (name, url) in PROGRAM_BRIEFS.items():
+        if key in text:
+            return name, url
+    return None, None
+
+
 def esc(s):
     return htmlmod.escape(str(s)) if s else ""
 
@@ -197,12 +218,19 @@ def render_opportunity_card(opp):
     if apply_url:
         apply_block = f'<a href="{esc(apply_url)}" target="_blank" rel="noopener" class="apply-link">Apply &rarr;</a>'
 
+    brief_name, brief_url = match_program_brief(opp)
+    intel_block = ""
+    if brief_url:
+        intel_block = (f' <a href="{esc(brief_url)}" class="apply-link" '
+                       f'style="border-color:#7b2d8e;color:#7b2d8e">'
+                       f'Program intel: {esc(brief_name)} &rarr;</a>')
+
     mc_data = opp.get("managing_contractor", "").lower().replace(" ", "-") or "unknown"
     return f"""<div class="opp" data-type="{opp_type}" data-source="{source}" data-mc="{esc(mc_data)}">
   <div class="title"><a href="{esc(url)}" target="_blank" rel="noopener">{title}</a>{type_badge}{source_badge}</div>
   <div class="meta">{' '.join(meta_parts)}</div>
   {desc_block}
-  {apply_block}
+  {apply_block}{intel_block}
 </div>"""
 
 
@@ -242,8 +270,17 @@ def render_timing_card(item):
     if len(status_text) > 120:
         status_short += "..."
 
+    title_text = item.get("title", "") + " " + item.get("id", "")
+    brief_opp = {"title": title_text, "description": "", "program_acronym": ""}
+    brief_name, brief_url = match_program_brief(brief_opp)
+    intel_link = ""
+    if brief_url:
+        intel_link = (f' <a href="{esc(brief_url)}" class="apply-link" '
+                      f'style="border-color:#7b2d8e;color:#7b2d8e;font-size:.78rem">'
+                      f'Full intel brief &rarr;</a>')
+
     return f"""<div class="timing">
-  <div class="program">{item_id}: {name}</div>
+  <div class="program">{item_id}: {name}{intel_link}</div>
   <div class="phase">{esc(section)} &rarr; {phase_name}</div>
   <div class="phase-bar"><div class="phase-fill" style="width:{pct}%"></div></div>
   <div class="demand">Likely demand: {demand}</div>
@@ -423,8 +460,7 @@ AI agent investigating useful applications of AI in international development.</
 (DFAT's managing contractor subcontracting portal), <a href="https://www.gets.govt.nz" target="_blank" rel="noopener">NZ GETS</a>
 (New Zealand Government Electronic Tenders), DFAT business notifications pipeline.
 ReliefWeb, SPC procurement, and other sources planned.</p>
-<p class="note">This page is not indexed and is for review purposes only.
-Built by Asa, an AI agent. Not a person. See <a href="about.html">about Asa</a>.</p>
+<p class="note">Built by <a href="about.html">Asa</a>, an AI agent. Not a person.</p>
 
 </div>
 {filter_js}

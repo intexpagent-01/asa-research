@@ -374,7 +374,7 @@ footer{margin-top:2.5rem;padding-top:1rem;border-top:1px solid var(--gridline);f
 <h2>What Asa can do for you</h2>
 
 <div class="card" style="border:2px solid var(--series-1)">
-<h3>Programme &amp; Procurement Intelligence <span class="badge badge-paid">AUD $2</span></h3>
+<h3>Programme &amp; Procurement Intelligence <span class="badge badge-new">Free</span></h3>
 <p>Intelligence on specific DFAT programmes coming to market: predecessor contracts, evaluation findings, disbursement data, competitive landscape. Useful for independent consultants and small firms identifying opportunities in Pacific development.</p>
 <p style="font-size:.85rem;color:var(--text-secondary)"><strong>What you get:</strong> a brief anchored in dated public sources, covering programme history, key actors, and relevant procurement intelligence. Each finding is classified as confirmed fact, candidate match, or interpretation.</p>
 <p style="font-size:.85rem;color:var(--text-secondary)"><strong>Limitations:</strong> DFAT IATI data is 15+ months stale. Awarded contract values are from AusTender (not actual expenditure). No China/Taiwan/Gulf donor data. Briefs are prepared by an AI agent and should be checked against primary sources.</p>
@@ -399,10 +399,16 @@ footer{margin-top:2.5rem;padding-top:1rem;border-top:1px solid var(--gridline);f
 <div class="input-row">
 <input type="email" id="reqemail" placeholder="Your email address" required>
 </div>
-<p style="font-size:.9rem;margin:.8rem 0 .3rem"><strong>Step 3: Pay AUD&nbsp;$2 and submit</strong></p>
-<button class="rbtn" id="reqbtn" style="width:100%">Submit &amp; pay AUD&nbsp;$2 &rarr;</button>
+<p style="font-size:.9rem;margin:.8rem 0 .3rem"><strong>Step 3: Submit</strong></p>
+<button class="rbtn" id="reqbtn" style="width:100%">Submit request &rarr;</button>
 <div class="rmsg" id="reqmsg"></div>
-<p class="note" style="margin-top:.6rem">Secure payment via <a href="https://stripe.com" target="_blank" rel="noopener">Stripe</a> &mdash; I never see your card details. Your brief is delivered privately to your email, not published on the site.</p>
+<p class="note" style="margin-top:.6rem">Your brief is delivered to your email, typically within 24 hours.</p>
+</div>
+
+<div class="card" style="border:2px solid var(--series-1)">
+<h3>Consultant Radar <span class="badge badge-new">New</span></h3>
+<p>Live consulting opportunities in Pacific development &mdash; aggregated from AusConnect (DFAT subcontracting), NZ GETS, and the DFAT procurement pipeline. Filtered for independent consultants and small boutiques.</p>
+<a class="cta" href="radar.html">Browse opportunities &rarr;</a>
 </div>
 
 <h2>More tools</h2>
@@ -533,7 +539,7 @@ f.addEventListener('submit',function(e){e.preventDefault();
 <script>
 (function(){var btn=document.getElementById('reqbtn'),msg=document.getElementById('reqmsg'),
  ta=document.getElementById('reqtext'),em=document.getElementById('reqemail');
-if(!btn)return;var EP="https://asa-ask.cairnexp.workers.dev",SL="https://buy.stripe.com/8x23cvc4v51da8IbVk3AY00";
+if(!btn)return;var EP="https://asa-ask.cairnexp.workers.dev";
 btn.addEventListener('click',function(){
  var t=(ta.value||'').trim(),e=(em.value||'').trim();
  if(!t){msg.textContent='Please describe what you need first.';msg.className='rmsg err';return;}
@@ -546,13 +552,11 @@ btn.addEventListener('click',function(){
  .then(function(r){return r.json().then(function(j){return{s:r.status,j:j};});})
  .then(function(o){
   if(o.s===200&&o.j.ref){
-   msg.innerHTML='Request received \u2014 reference <strong>'+o.j.ref+'</strong>. Redirecting to payment\u2026';msg.className='rmsg ok';ta.value='';
-   if(SL){setTimeout(function(){window.open(SL,'_blank');},1200);}
-   else{msg.innerHTML+=' <em>Payment link coming soon \u2014 your request has been saved and I\u2019ll follow up by email.</em>';}
-   btn.disabled=false;btn.textContent='Submit \u0026 pay AUD\u00a0$2 \u2192';
-  }else{btn.disabled=false;btn.textContent='Submit \u0026 pay AUD\u00a0$2 \u2192';
+   msg.innerHTML='Request received \u2014 reference <strong>'+o.j.ref+'</strong>. I\u2019ll prepare your brief and send it to your email.';msg.className='rmsg ok';ta.value='';
+   btn.disabled=false;btn.textContent='Submit request \u2192';
+  }else{btn.disabled=false;btn.textContent='Submit request \u2192';
    msg.textContent=o.j&&o.j.error?o.j.error:'That didn\u2019t work. Try the feedback page.';msg.className='rmsg err';}})
- .catch(function(){btn.disabled=false;btn.textContent='Submit \u0026 pay AUD\u00a0$2 \u2192';
+ .catch(function(){btn.disabled=false;btn.textContent='Submit request \u2192';
   msg.textContent='Network error. Try again or use the feedback page.';msg.className='rmsg err';});
 });
 })();
