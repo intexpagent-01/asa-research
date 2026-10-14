@@ -115,6 +115,18 @@ def parse_list_page(page_html):
     return opps
 
 
+MC_URL_HINTS = {
+    "dt-global.com": "DT Global",
+    "tbe.taleo.net": "DT Global",
+    "oraclecloud.com": "Abt",
+    "palladium.breezy.hr": "Palladium",
+    "tetratech.com": "Tetra Tech",
+    "smec.com": "SMEC",
+    "ghd.com": "GHD",
+    "scopeglobal": "Scope Global",
+}
+
+
 def classify_opportunity(opp):
     """Tag an opportunity with region classification and detected MC."""
     combined = " ".join([
@@ -147,7 +159,87 @@ def classify_opportunity(opp):
     return opp
 
 
-def fetch_all_opportunities(max_pages=20, delay=1.5):
+COUNTRY_RE = re.compile(
+    r"\b(Papua New Guinea|PNG|Fiji|Solomon Islands|Vanuatu|Samoa|Tonga|Kiribati"
+    r"|Tuvalu|Nauru|Niue|Cook Islands|Marshall Islands|Micronesia|Palau"
+    r"|Timor.Leste|Bougainville)\b", re.I)
+
+COUNTRY_NORMALISE = {
+    "png": "Papua New Guinea", "bougainville": "Papua New Guinea",
+    "timor-leste": "Timor-Leste", "timor leste": "Timor-Leste",
+}
+
+PROGRAM_ACRONYM_RE = re.compile(
+    r"\b([A-Z][A-Z0-9]{2,8})\b(?:\s+(?:program|programme|project|facility|initiative))?")
+
+
+def parse_detail_page(detail_html):
+    """Extract rich fields from an AusConnect detail page."""
+    result = {}
+
+    summary_m = re.search(
+        r'field--name-field-summary.*?<div class="field__item">(.*?)</div>\s*</div>',
+        detail_html, re.S)
+    if summary_m:
+        raw = summary_m.group(1)
+        cleaned = strip_contacts(re.sub(r"<[^>]+>", "\n", raw))
+        cleaned = re.sub(r"\n\s*\n+", "\n", htmlmod.unescape(cleaned)).strip()
+        result["description"] = cleaned
+
+    link_m = re.search(
+        r'field--name-field-link.*?href="([^"]+)"', detail_html, re.S)
+    if link_m:
+        result["apply_url"] = htmlmod.unescape(link_m.group(1))
+
+    full_text = result.get("description", "")
+
+    countries_found = set()
+    for m in COUNTRY_RE.finditer(full_text):
+        name = m.group(1)
+        countries_found.add(COUNTRY_NORMALISE.get(name.lower(), name))
+    if countries_found:
+        result["countries"] = sorted(countries_found)
+
+    mc_m = MC_RE.search(full_text)
+    if mc_m:
+        result["detail_mc"] = mc_m.group(1)
+
+    if not result.get("detail_mc") and result.get("apply_url"):
+        for domain, mc_name in MC_URL_HINTS.items():
+            if domain in result["apply_url"]:
+                result["detail_mc"] = mc_name
+                break
+
+    acronyms = set()
+    for m in PROGRAM_ACRONYM_RE.finditer(full_text):
+        acr = m.group(1)
+        if acr not in ("DFAT", "MFAT", "EOI", "RFP", "RFT", "HOW", "THE",
+                        "FOR", "PNG", "AND", "EOPO", "AUS", "AUD", "NZD",
+                        "CEO", "COO", "CFO", "ASP", "TOC", "MEL", "GEDSI",
+                        "GBV", "HIV", "AIDS", "WHS", "TOR", "SOW", "MOU",
+                        "NOT", "ALL", "GOV", "ABN"):
+            acronyms.add(acr)
+    if acronyms:
+        result["program_acronyms"] = sorted(acronyms)
+
+    return result
+
+
+def fetch_detail(opp, delay=1.0):
+    """Fetch and parse a detail page for a single opportunity."""
+    url_path = opp.get("url", "")
+    if not url_path:
+        return {}
+    full_url = BASE + url_path if url_path.startswith("/") else url_path
+    try:
+        detail_html = get(full_url)
+        return parse_detail_page(detail_html)
+    except Exception as e:
+        print(f"  detail fetch error for {url_path}: {e}", file=sys.stderr)
+        return {}
+
+
+def fetch_all_opportunities(max_pages=20, delay=1.5, fetch_details=False):
     """Fetch all current AusConnect opportunities across paginated pages."""
     all_opps = []
     for page in range(max_pages):
@@ -169,6 +261,20 @@ def fetch_all_opportunities(max_pages=20, delay=1.5):
 
         if page < max_pages - 1:
             time.sleep(delay)
+
+    if fetch_details:
+        pacific_opps = [o for o in all_opps if o.get("is_pacific")]
+        print(f"  fetching detail pages for {len(pacific_opps)} Pacific opportunities...",
+              file=sys.stderr)
+        for i, o in enumerate(pacific_opps):
+            detail = fetch_detail(o)
+            o.update(detail)
+            if detail.get("detail_mc") and not o.get("managing_contractor"):
+                o["managing_contractor"] = detail["detail_mc"]
+            if (i + 1) % 5 == 0:
+                print(f"    {i + 1}/{len(pacific_opps)} details fetched", file=sys.stderr)
+            time.sleep(delay)
+        print(f"  {len(pacific_opps)} detail pages fetched", file=sys.stderr)
 
     return all_opps
 
@@ -268,6 +374,8 @@ def main():
     parser = argparse.ArgumentParser(description="Fetch AusConnect opportunities")
     parser.add_argument("--summary-only", action="store_true",
                         help="Read existing snapshot and print summary")
+    parser.add_argument("--details", action="store_true",
+                        help="Fetch detail pages for Pacific opportunities")
     parser.add_argument("--data-dir",
                         help="Override data directory")
     args = parser.parse_args()
@@ -286,7 +394,7 @@ def main():
         return
 
     print("Fetching AusConnect opportunities...", file=sys.stderr)
-    opps = fetch_all_opportunities()
+    opps = fetch_all_opportunities(fetch_details=args.details)
     snap = snapshot(opps, data_dir)
     summary(snap)
 

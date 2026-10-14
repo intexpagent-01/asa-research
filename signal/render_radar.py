@@ -62,6 +62,17 @@ a{color:var(--series-1)}
 .timing .phase-fill{height:100%;border-radius:3px;background:linear-gradient(90deg,var(--series-1),#1a9e8f)}
 .timing .demand{font-size:.82rem;color:var(--text-secondary);margin:.3rem 0 0}
 .note{font-size:.8rem;color:var(--text-muted);margin-top:.5rem}
+.mc-tag{font-weight:600;color:var(--series-1)}
+.apply-link{display:inline-block;font-size:.78rem;margin-top:.3rem;padding:.2rem .6rem;border:1px solid var(--series-1);border-radius:4px;text-decoration:none;color:var(--series-1);transition:background .15s,color .15s}
+.apply-link:hover{background:var(--series-1);color:#fff}
+.detail-expand{margin-top:.3rem}
+.detail-expand summary{font-size:.78rem;color:var(--series-1);cursor:pointer}
+.desc-full{font-size:.82rem;color:var(--text-secondary);line-height:1.55;white-space:pre-line;margin:.4rem 0;max-height:400px;overflow-y:auto;padding:.5rem;background:var(--surface);border-radius:4px}
+.mc-chart{margin:1rem 0}
+.mc-bar{display:flex;align-items:center;margin:.25rem 0;font-size:.82rem}
+.mc-bar .bar{height:18px;background:linear-gradient(90deg,var(--series-1),#1a9e8f);border-radius:3px;margin:0 .5rem;min-width:2px}
+.mc-bar .count{color:var(--text-secondary);min-width:20px;text-align:right}
+.mc-bar .name{min-width:100px}
 @media(max-width:600px){.stats{flex-direction:column}.filters{flex-direction:column}}
 """
 
@@ -125,11 +136,13 @@ def render_opportunity_card(opp):
     url = opp.get("full_url", opp.get("url", "#"))
     close_display = esc(opp.get("close_display", ""))
     days = opp.get("days_until_close")
-    summary = esc(opp.get("summary", "")[:200])
     opp_type = opp.get("opportunity_type", "unknown")
     mc = esc(opp.get("managing_contractor", ""))
     sectors = ", ".join(opp.get("sectors", []))[:60]
-    regions = ", ".join(opp.get("regions", []))
+    countries = opp.get("countries", [])
+    apply_url = opp.get("apply_url", "")
+    description = opp.get("description", "")
+    summary_text = opp.get("summary", "")
 
     type_badges = {
         "position": '<span class="badge badge-position">Position</span>',
@@ -148,7 +161,7 @@ def render_opportunity_card(opp):
     close_text = close_display
     if days is not None:
         if days < 0:
-            close_text = f"Closed"
+            close_text = "Closed"
         elif days < 3:
             close_class = ' class="closing-soon"'
             close_text = f"{close_display} ({int(days)}d left)"
@@ -159,16 +172,37 @@ def render_opportunity_card(opp):
     if close_text:
         meta_parts.append(f'<span{close_class}>{close_text}</span>')
     if mc:
-        meta_parts.append(f"<span>{mc}</span>")
+        meta_parts.append(f'<span class="mc-tag">{mc}</span>')
+    if countries:
+        meta_parts.append(f"<span>{esc(', '.join(countries))}</span>")
+    elif opp.get("regions"):
+        meta_parts.append(f"<span>{esc(', '.join(opp['regions']))}</span>")
     if sectors:
         meta_parts.append(f"<span>{esc(sectors)}</span>")
-    if regions:
-        meta_parts.append(f"<span>{esc(regions)}</span>")
 
-    return f"""<div class="opp" data-type="{opp_type}" data-source="{source}" data-regions="{esc(regions)}">
+    desc_block = ""
+    if description and len(description) > 100:
+        desc_preview = esc(description[:250]).replace("\n", " ")
+        if len(description) > 250:
+            desc_preview += "..."
+        desc_block = f'<p class="summary">{desc_preview}</p>'
+        if len(description) > 250:
+            desc_block += (
+                f'<details class="detail-expand"><summary>Full description</summary>'
+                f'<div class="desc-full">{esc(description[:3000])}</div></details>')
+    elif summary_text:
+        desc_block = f'<p class="summary">{esc(summary_text[:200])}</p>'
+
+    apply_block = ""
+    if apply_url:
+        apply_block = f'<a href="{esc(apply_url)}" target="_blank" rel="noopener" class="apply-link">Apply &rarr;</a>'
+
+    mc_data = opp.get("managing_contractor", "").lower().replace(" ", "-") or "unknown"
+    return f"""<div class="opp" data-type="{opp_type}" data-source="{source}" data-mc="{esc(mc_data)}">
   <div class="title"><a href="{esc(url)}" target="_blank" rel="noopener">{title}</a>{type_badge}{source_badge}</div>
   <div class="meta">{' '.join(meta_parts)}</div>
-  {f'<p class="summary">{summary}</p>' if summary else ''}
+  {desc_block}
+  {apply_block}
 </div>"""
 
 
@@ -276,20 +310,44 @@ def render():
     n_positions = len([o for o in combined if o.get("opportunity_type") == "position"])
     n_rfp = len([o for o in combined if o.get("opportunity_type") in ("rfp", "eoi", "tender")])
 
+    mc_counts = {}
+    for o in open_opps:
+        mc_name = o.get("managing_contractor") or "Unknown"
+        mc_counts[mc_name] = mc_counts.get(mc_name, 0) + 1
+    mc_sorted = sorted(mc_counts.items(), key=lambda x: -x[1])
+    mc_max = max(mc_counts.values()) if mc_counts else 1
+
+    n_with_mc = sum(1 for o in open_opps if o.get("managing_contractor"))
+    n_countries = len(set(
+        c for o in open_opps for c in o.get("countries", [])))
+
     pacific_pipeline = [item for item in pipeline if is_pacific_program(item)]
 
     opp_cards = "\n".join(render_opportunity_card(o) for o in open_opps)
     timing_cards = "\n".join(render_timing_card(item) for item in pacific_pipeline[:15])
+
+    mc_bars = ""
+    for mc_name, count in mc_sorted:
+        pct = int(count / mc_max * 100) if mc_max else 0
+        mc_bars += (f'<div class="mc-bar"><span class="name">{esc(mc_name)}</span>'
+                    f'<span class="bar" style="width:{pct}%"></span>'
+                    f'<span class="count">{count}</span></div>\n')
+
+    mc_options = "\n".join(
+        f'<option value="{esc(mc.lower().replace(" ","-"))}">{esc(mc)} ({c})</option>'
+        for mc, c in mc_sorted)
 
     filter_js = """
 <script>
 function filterOpps(){
   var type=document.getElementById('f-type').value;
   var source=document.getElementById('f-source').value;
+  var mc=document.getElementById('f-mc').value;
   document.querySelectorAll('.opp').forEach(function(el){
     var show=true;
     if(type!=='all'&&el.dataset.type!==type)show=false;
     if(source!=='all'&&el.dataset.source!==source)show=false;
+    if(mc!=='all'&&el.dataset.mc!==mc)show=false;
     el.style.display=show?'':'none';
   });
   var shown=document.querySelectorAll('.opp:not([style*="display: none"])').length;
@@ -315,8 +373,15 @@ Updated {esc(now_str)}. Filters for Pacific island countries automatically appli
 <div class="stats">
   <div class="stat"><span class="n">{len(open_opps)}</span><span class="label">Open opportunities</span></div>
   <div class="stat"><span class="n">{len(closing_soon)}</span><span class="label">Closing within 7 days</span></div>
-  <div class="stat"><span class="n">{n_positions}</span><span class="label">Positions</span></div>
-  <div class="stat"><span class="n">{n_rfp}</span><span class="label">RFPs / Tenders</span></div>
+  <div class="stat"><span class="n">{n_with_mc}</span><span class="label">MC identified</span></div>
+  <div class="stat"><span class="n">{n_countries}</span><span class="label">Countries</span></div>
+</div>
+
+<h2>Managing Contractors</h2>
+<p class="section-note">Who is hiring. Most independent consultant roles in Pacific development are recruited by managing contractors
+on behalf of DFAT. Knowing which MC posted an opportunity tells you who to approach.</p>
+<div class="mc-chart">
+{mc_bars}
 </div>
 
 <h2>Open Opportunities</h2>
@@ -324,16 +389,21 @@ Updated {esc(now_str)}. Filters for Pacific island countries automatically appli
   <label>Type:</label>
   <select id="f-type" onchange="filterOpps()">
     <option value="all">All types</option>
-    <option value="position">Positions</option>
-    <option value="rfp">RFPs</option>
-    <option value="eoi">EOIs</option>
-    <option value="tender">Tenders</option>
+    <option value="position">Positions ({n_positions})</option>
+    <option value="rfp">RFPs ({len([o for o in open_opps if o.get('opportunity_type')=='rfp'])})</option>
+    <option value="eoi">EOIs ({len([o for o in open_opps if o.get('opportunity_type')=='eoi'])})</option>
+    <option value="tender">Tenders ({len([o for o in open_opps if o.get('opportunity_type')=='tender'])})</option>
   </select>
   <label>Source:</label>
   <select id="f-source" onchange="filterOpps()">
     <option value="all">All sources</option>
     <option value="ausconnect">AusConnect ({n_ac})</option>
     <option value="gets">NZ GETS ({n_gets})</option>
+  </select>
+  <label>MC:</label>
+  <select id="f-mc" onchange="filterOpps()">
+    <option value="all">All MCs</option>
+    {mc_options}
   </select>
   <span id="count" style="font-size:.82rem;color:var(--text-muted)">{len(open_opps)} shown</span>
 </div>
