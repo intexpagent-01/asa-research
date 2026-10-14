@@ -1,0 +1,2745 @@
+{
+  "source": "spc",
+  "fetched": "2026-10-14T13:37:08.795428+00:00",
+  "total": 1105,
+  "advertised": 20,
+  "selection_ongoing": 131,
+  "by_status": {
+    "Awarded": 721,
+    "Selection Process Ongoing": 131,
+    "Cancelled": 124,
+    "Advertised": 20,
+    "Not awarded": 109
+  },
+  "tenders": [
+    {
+      "ref": "RFP26-9946",
+      "title": "Travel Management Services",
+      "location": "All Pacific Community Sites",
+      "unit": "Travel",
+      "category": "Services",
+      "status": "Advertised",
+      "posting_date": "23 September 2026",
+      "posting_iso": "2026-09-23",
+      "closing_date": "4 November 2026",
+      "closing_iso": "2026-11-04",
+      "countries": [
+        "Pacific region"
+      ],
+      "opportunity_type": "rfp",
+      "source": "spc",
+      "url": "https://www.spc.int/procurement"
+    },
+    {
+      "ref": "RFQ26-10787",
+      "title": "Consultancy for development of an AMF inoculum suited to Tuvalu’s soils to improve crop growth and resilience and to regenerate agricultural soils in the context of climate change",
+      "location": "Tuvalu",
+      "unit": "J00553",
+      "category": "Services",
+      "status": "Advertised",
+      "posting_date": "14 October 2026",
+      "posting_iso": "2026-10-14",
+      "closing_date": "28 October 2026",
+      "closing_iso": "2026-10-28",
+      "countries": [
+        "Tuvalu"
+      ],
+      "opportunity_type": "rfq",
+      "source": "spc",
+      "url": "https://www.spc.int/procurement"
+    },
+    {
+      "ref": "RFP26-10782",
+      "title": "Review and Update of Naoero’s National Water, Sanitation and Hygiene (WASH) Policy",
+      "location": "Naoero",
+      "unit": "CCES",
+      "category": "Services",
+      "status": "Advertised",
+      "posting_date": "13 October 2026",
+      "posting_iso": "2026-10-13",
+      "closing_date": "10 November 2026",
+      "closing_iso": "2026-11-10",
+      "countries": [
+        "Nauru"
+      ],
+      "opportunity_type": "rfp",
+      "source": "spc",
+      "url": "https://www.spc.int/procurement"
+    },
+    {
+      "ref": "RFQ26-10779",
+      "title": "Consultancy for the Feasibility Study of Planting Material Distribution in Samoa under the Pacific Vision for Adapted Crops and Soils",
+      "location": "Samoa",
+      "unit": "J00553",
+      "category": "Services",
+      "status": "Advertised",
+      "posting_date": "6 October 2026",
+      "posting_iso": "2026-10-06",
+      "closing_date": "25 October 2026",
+      "closing_iso": "2026-10-25",
+      "countries": [
+        "Samoa",
+        "Pacific region"
+      ],
+      "opportunity_type": "rfq",
+      "source": "spc",
+      "url": "https://www.spc.int/procurement"
+    },
+    {
+      "ref": "RFQ26-10773",
+      "title": "Procurement of BioGas Unit for Zai Na Tina Organic Learning Farm (OLF)",
+      "location": "Solomon Islands",
+      "unit": "J00317 PHLFN Project",
+      "category": "Goods",
+      "status": "Advertised",
+      "posting_date": "6 October 2026",
+      "posting_iso": "2026-10-06",
+      "closing_date": "18 October 2026",
+      "closing_iso": "2026-10-18",
+      "countries": [
+        "Solomon Islands"
+      ],
+      "opportunity_type": "rfq",
+      "source": "spc",
+      "url": "https://www.spc.int/procurement"
+    },
+    {
+      "ref": "RFP26-10769",
+      "title": "Study on Suitability of Electric Vehicles (EVs) for Tuvalu",
+      "location": "Tuvalu",
+      "unit": "CCES",
+      "category": "Services",
+      "status": "Advertised",
+      "posting_date": "7 October 2026",
+      "posting_iso": "2026-10-07",
+      "closing_date": "4 November 2026",
+      "closing_iso": "2026-11-04",
+      "countries": [
+        "Tuvalu"
+      ],
+      "opportunity_type": "rfp",
+      "source": "spc",
+      "url": "https://www.spc.int/procurement"
+    },
+    {
+      "ref": "RFQ26-10759",
+      "title": "Strengthening Clinical Services delivery in Tuvalu through deployment of an Internal Medicine Consultant",
+      "location": "Tuvalu",
+      "unit": "PHD- Clinical Services",
+      "category": "Services",
+      "status": "Advertised",
+      "posting_date": "8 October 2026",
+      "posting_iso": "2026-10-08",
+      "closing_date": "18 October 2026",
+      "closing_iso": "2026-10-18",
+      "countries": [
+        "Tuvalu"
+      ],
+      "opportunity_type": "rfq",
+      "source": "spc",
+      "url": "https://www.spc.int/procurement"
+    },
+    {
+      "ref": "RFQ26-10754",
+      "title": "Consultancy for the development of an opportunity crop profiling framework and methodology under the Pacific Vision for Adapted Crops and Soils (PACS)",
+      "location": "Vanuatu, Samoa, RMI",
+      "unit": "LRD",
+      "category": "Services",
+      "status": "Advertised",
+      "posting_date": "1 October 2026",
+      "posting_iso": "2026-10-01",
+      "closing_date": "18 October 2026",
+      "closing_iso": "2026-10-18",
+      "countries": [
+        "Vanuatu",
+        "Samoa",
+        "Pacific region"
+      ],
+      "opportunity_type": "rfq",
+      "source": "spc",
+      "url": "https://www.spc.int/procurement"
+    },
+    {
+      "ref": "RFQ26-10751",
+      "title": "Guidelines for Integrated Ocean Management",
+      "location": "Pacific region",
+      "unit": "PEUMP",
+      "category": "Services",
+      "status": "Advertised",
+      "posting_date": "1 October 2026",
+      "posting_iso": "2026-10-01",
+      "closing_date": "16 October 2026",
+      "closing_iso": "2026-10-16",
+      "countries": [
+        "Pacific region"
+      ],
+      "opportunity_type": "rfq",
+      "source": "spc",
+      "url": "https://www.spc.int/procurement"
+    },
+    {
+      "ref": "RFQ26-10746",
+      "title": "Consultancy for Communication and Engagement for the Pacific Vision for Adapted Crops and Soils (PACS)",
+      "location": "Vanuatu, Samoa, RMI",
+      "unit": "J00553",
+      "category": "Services",
+      "status": "Advertised",
+      "posting_date": "24 September 2026",
+      "posting_iso": "2026-09-24",
+      "closing_date": "18 October 2026",
+      "closing_iso": "2026-10-18",
+      "countries": [
+        "Vanuatu",
+        "Samoa",
+        "Pacific region"
+      ],
+      "opportunity_type": "rfq",
+      "source": "spc",
+      "url": "https://www.spc.int/procurement"
+    },
+    {
+      "ref": "RFQ26-10731",
+      "title": "Regional And Satellite Office Governance, Accountability and Coordination",
+      "location": "All SPC Locations",
+      "unit": "OMD",
+      "category": "Services",
+      "status": "Advertised",
+      "posting_date": "7 October 2026",
+      "posting_iso": "2026-10-07",
+      "closing_date": "21 October 2026",
+      "closing_iso": "2026-10-21",
+      "countries": [
+        "Pacific region"
+      ],
+      "opportunity_type": "rfq",
+      "source": "spc",
+      "url": "https://www.spc.int/procurement"
+    },
+    {
+      "ref": "EOI26-10665",
+      "title": "Regional OpenCRVS Technical Support Services for Pacific Countries",
+      "location": "Pacific region",
+      "unit": "SDD",
+      "category": "Services",
+      "status": "Advertised",
+      "posting_date": "29 September 2026",
+      "posting_iso": "2026-09-29",
+      "closing_date": "13 October 2026",
+      "closing_iso": "2026-10-13",
+      "countries": [
+        "Pacific region"
+      ],
+      "opportunity_type": "eoi",
+      "source": "spc",
+      "url": "https://www.spc.int/procurement"
+    },
+    {
+      "ref": "RFQ26-10663",
+      "title": "Readvertisement - Consultancy for PMRS Power Platform Application Configuration, Integration and Module Development",
+      "location": "Fiji and New Caledonia",
+      "unit": "CCES",
+      "category": "Services",
+      "status": "Advertised",
+      "posting_date": "6 October 2026",
+      "posting_iso": "2026-10-06",
+      "closing_date": "14 October 2026",
+      "closing_iso": "2026-10-14",
+      "countries": [
+        "Fiji",
+        "New Caledonia"
+      ],
+      "opportunity_type": "rfq",
+      "source": "spc",
+      "url": "https://www.spc.int/procurement"
+    },
+    {
+      "ref": "RFP26-10656",
+      "title": "Supply of Hybrid Power Supply Materials to Kiritimati Island",
+      "location": "Kiribati",
+      "unit": "GEM",
+      "category": "Goods",
+      "status": "Advertised",
+      "posting_date": "2 October 2026",
+      "posting_iso": "2026-10-02",
+      "closing_date": "1 November 2026",
+      "closing_iso": "2026-11-01",
+      "countries": [
+        "Kiribati"
+      ],
+      "opportunity_type": "rfp",
+      "source": "spc",
+      "url": "https://www.spc.int/procurement"
+    },
+    {
+      "ref": "RFP26-10652",
+      "title": "Development of Tuvalu NDC 3.0 Implementation Roadmap and Investment Plan",
+      "location": "Tuvalu",
+      "unit": "CCES",
+      "category": "Services",
+      "status": "Advertised",
+      "posting_date": "28 September 2026",
+      "posting_iso": "2026-09-28",
+      "closing_date": "25 October 2026",
+      "closing_iso": "2026-10-25",
+      "countries": [
+        "Tuvalu"
+      ],
+      "opportunity_type": "rfp",
+      "source": "spc",
+      "url": "https://www.spc.int/procurement"
+    },
+    {
+      "ref": "RFP26-10651",
+      "title": "Development of Federated Sates of Micronesia Energy Act and Regulatory Framework",
+      "location": "FSM",
+      "unit": "CCES",
+      "category": "Services",
+      "status": "Advertised",
+      "posting_date": "28 September 2026",
+      "posting_iso": "2026-09-28",
+      "closing_date": "25 October 2026",
+      "closing_iso": "2026-10-25",
+      "countries": [
+        "Micronesia"
+      ],
+      "opportunity_type": "rfp",
+      "source": "spc",
+      "url": "https://www.spc.int/procurement"
+    },
+    {
+      "ref": "RFP26-10576",
+      "title": "Preferred Suppliers – State Facilitating Agents for FSM",
+      "location": "Federated States of Micronesia (FSM)",
+      "unit": "MRO",
+      "category": "Services",
+      "status": "Advertised",
+      "posting_date": "17 September 2026",
+      "posting_iso": "2026-09-17",
+      "closing_date": "14 October 2026",
+      "closing_iso": "2026-10-14",
+      "countries": [
+        "Micronesia"
+      ],
+      "opportunity_type": "rfp",
+      "source": "spc",
+      "url": "https://www.spc.int/procurement"
+    },
+    {
+      "ref": "RFP26-10530",
+      "title": "Feasibility Assessment of Pacific Regional Aquaculture Facilities",
+      "location": "Pacific region",
+      "unit": "FAME",
+      "category": "Services",
+      "status": "Advertised",
+      "posting_date": "21 September 2026",
+      "posting_iso": "2026-09-21",
+      "closing_date": "19 October 2026",
+      "closing_iso": "2026-10-19",
+      "countries": [
+        "Pacific region"
+      ],
+      "opportunity_type": "rfp",
+      "source": "spc",
+      "url": "https://www.spc.int/procurement"
+    },
+    {
+      "ref": "RFP26-10339",
+      "title": "Backup, Recovery and Disaster Recovery Services (ICT)",
+      "location": "New Caledonia and Fiji - remote",
+      "unit": "Information Services",
+      "category": "Services",
+      "status": "Advertised",
+      "posting_date": "31 July 2026",
+      "posting_iso": "2026-07-31",
+      "closing_date": "18 October 2026",
+      "closing_iso": "2026-10-18",
+      "countries": [
+        "New Caledonia",
+        "Fiji"
+      ],
+      "opportunity_type": "rfp",
+      "source": "spc",
+      "url": "https://www.spc.int/procurement"
+    },
+    {
+      "ref": "RFP26-10175",
+      "title": "Preferred Supplier Agreements for Digital, Data, ICT and Knowledge Management professional services",
+      "location": "Pacific region",
+      "unit": "ICT",
+      "category": "Services",
+      "status": "Advertised",
+      "posting_date": "17 August 2026",
+      "posting_iso": "2026-08-17",
+      "closing_date": "25 October 2026",
+      "closing_iso": "2026-10-25",
+      "countries": [
+        "Pacific region"
+      ],
+      "opportunity_type": "rfp",
+      "source": "spc",
+      "url": "https://www.spc.int/procurement"
+    },
+    {
+      "ref": "RFQ26-9990",
+      "title": "Technical Advisor for the National Health Emergency Plan (SI NHEP)",
+      "location": "Honiara, Solomon Islands",
+      "unit": "GEM",
+      "category": "Services",
+      "status": "Selection Process Ongoing",
+      "posting_date": "11 March 2026",
+      "posting_iso": "2026-03-11",
+      "closing_date": "25 March 2026",
+      "closing_iso": "2026-03-25",
+      "countries": [
+        "Solomon Islands"
+      ],
+      "opportunity_type": "rfq",
+      "source": "spc",
+      "url": "https://www.spc.int/procurement"
+    },
+    {
+      "ref": "RFQ26-9979",
+      "title": "Hosting of Plant and Soil Health Training on Farm with catering and accommodation",
+      "location": "Fiji",
+      "unit": "LRD",
+      "category": "Services",
+      "status": "Selection Process Ongoing",
+      "posting_date": "11 March 2026",
+      "posting_iso": "2026-03-11",
+      "closing_date": "17 March 2026",
+      "closing_iso": "2026-03-17",
+      "countries": [
+        "Fiji"
+      ],
+      "opportunity_type": "rfq",
+      "source": "spc",
+      "url": "https://www.spc.int/procurement"
+    },
+    {
+      "ref": "RFQ26-9908",
+      "title": "Development and Delivery of Training to Support the Implementation of the Disability Statistics Regional Guidebook",
+      "location": "Fiji/Noumea",
+      "unit": "SDD",
+      "category": "Services",
+      "status": "Selection Process Ongoing",
+      "posting_date": "24 February 2026",
+      "posting_iso": "2026-02-24",
+      "closing_date": "16 March 2026",
+      "closing_iso": "2026-03-16",
+      "countries": [
+        "Fiji"
+      ],
+      "opportunity_type": "rfq",
+      "source": "spc",
+      "url": "https://www.spc.int/procurement"
+    },
+    {
+      "ref": "RFQ26-9841",
+      "title": "Preferred Supplier | Cleaning Services for the MRO (Re-Advertisement)",
+      "location": "",
+      "unit": "MRO",
+      "category": "Services",
+      "status": "Selection Process Ongoing",
+      "posting_date": "23 February 2026",
+      "posting_iso": "2026-02-23",
+      "closing_date": "6 March 2026",
+      "closing_iso": "2026-03-06",
+      "countries": [],
+      "opportunity_type": "rfq",
+      "source": "spc",
+      "url": "https://www.spc.int/procurement"
+    },
+    {
+      "ref": "RFQ26-9821",
+      "title": "Climate Finance & Investment Planning (Consultancy)",
+      "location": "Home based with travel to Port Moresby, Papua New Guinea",
+      "unit": "CFU (CCES)",
+      "category": "Services",
+      "status": "Selection Process Ongoing",
+      "posting_date": "16 January 2026",
+      "posting_iso": "2026-01-16",
+      "closing_date": "6 February 2026",
+      "closing_iso": "2026-02-06",
+      "countries": [
+        "Papua New Guinea"
+      ],
+      "opportunity_type": "rfq",
+      "source": "spc",
+      "url": "https://www.spc.int/procurement"
+    },
+    {
+      "ref": "RFP26-9818",
+      "title": "Conference Equipment (Preferred Supplier Agreement)",
+      "location": "New Caledonia, Fiji",
+      "unit": "Information Services",
+      "category": "Goods, Services",
+      "status": "Selection Process Ongoing",
+      "posting_date": "19 January 2026",
+      "posting_iso": "2026-01-19",
+      "closing_date": "15 April 2026",
+      "closing_iso": "2026-04-15",
+      "countries": [
+        "New Caledonia",
+        "Fiji"
+      ],
+      "opportunity_type": "rfp",
+      "source": "spc",
+      "url": "https://www.spc.int/procurement"
+    },
+    {
+      "ref": "EOI26-9815",
+      "title": "Standard Setting for Literacy Writing",
+      "location": "Fiji",
+      "unit": "EQAP",
+      "category": "Services",
+      "status": "Selection Process Ongoing",
+      "posting_date": "14 January 2026",
+      "posting_iso": "2026-01-14",
+      "closing_date": "28 January 2026",
+      "closing_iso": "2026-01-28",
+      "countries": [
+        "Fiji"
+      ],
+      "opportunity_type": "eoi",
+      "source": "spc",
+      "url": "https://www.spc.int/procurement"
+    },
+    {
+      "ref": "RFQ26-9812",
+      "title": "Land Resources Division (LRD) Leadership Development Program",
+      "location": "Fiji",
+      "unit": "LRD",
+      "category": "Services",
+      "status": "Selection Process Ongoing",
+      "posting_date": "13 January 2026",
+      "posting_iso": "2026-01-13",
+      "closing_date": "25 January 2026",
+      "closing_iso": "2026-01-25",
+      "countries": [
+        "Fiji"
+      ],
+      "opportunity_type": "rfq",
+      "source": "spc",
+      "url": "https://www.spc.int/procurement"
+    },
+    {
+      "ref": "RFQ26-9796",
+      "title": "Consultancy to review existing para-vet training course manuals and delivery approach",
+      "location": "Regional",
+      "unit": "LRD",
+      "category": "Services",
+      "status": "Selection Process Ongoing",
+      "posting_date": "22 January 2026",
+      "posting_iso": "2026-01-22",
+      "closing_date": "12 February 2026",
+      "closing_iso": "2026-02-12",
+      "countries": [],
+      "opportunity_type": "rfq",
+      "source": "spc",
+      "url": "https://www.spc.int/procurement"
+    },
+    {
+      "ref": "RFQ26-10750",
+      "title": "Consultancy Services for Program Assistant, FSM Readiness Programme with the Green Climate Fund",
+      "location": "FSM",
+      "unit": "CCES",
+      "category": "Services",
+      "status": "Selection Process Ongoing",
+      "posting_date": "30 September 2026",
+      "posting_iso": "2026-09-30",
+      "closing_date": "11 October 2026",
+      "closing_iso": "2026-10-11",
+      "countries": [
+        "Micronesia"
+      ],
+      "opportunity_type": "rfq",
+      "source": "spc",
+      "url": "https://www.spc.int/procurement"
+    },
+    {
+      "ref": "RFQ26-10749",
+      "title": "Consultancy Services for Team Leader, FSM Readiness Programme with the Green Climate Fund",
+      "location": "FSM",
+      "unit": "CCES",
+      "category": "Services",
+      "status": "Selection Process Ongoing",
+      "posting_date": "30 September 2026",
+      "posting_iso": "2026-09-30",
+      "closing_date": "11 October 2026",
+      "closing_iso": "2026-10-11",
+      "countries": [
+        "Micronesia"
+      ],
+      "opportunity_type": "rfq",
+      "source": "spc",
+      "url": "https://www.spc.int/procurement"
+    },
+    {
+      "ref": "RFQ26-10747",
+      "title": "Consultancy Services for National Coordinator, FSM Readiness Programme with the Green Climate Fund",
+      "location": "FSM",
+      "unit": "CCES",
+      "category": "Services",
+      "status": "Selection Process Ongoing",
+      "posting_date": "30 September 2026",
+      "posting_iso": "2026-09-30",
+      "closing_date": "11 October 2026",
+      "closing_iso": "2026-10-11",
+      "countries": [
+        "Micronesia"
+      ],
+      "opportunity_type": "rfq",
+      "source": "spc",
+      "url": "https://www.spc.int/procurement"
+    },
+    {
+      "ref": "RFQ26-10745",
+      "title": "Baseline assessment of the Arbuscular Mycorrhizal Fungi (AMF) present in soils of Solomon Islands",
+      "location": "Solomon Islands",
+      "unit": "POLFN Project",
+      "category": "Services",
+      "status": "Selection Process Ongoing",
+      "posting_date": "24 September 2026",
+      "posting_iso": "2026-09-24",
+      "closing_date": "5 October 2026",
+      "closing_iso": "2026-10-05",
+      "countries": [
+        "Solomon Islands"
+      ],
+      "opportunity_type": "rfq",
+      "source": "spc",
+      "url": "https://www.spc.int/procurement"
+    },
+    {
+      "ref": "RFQ26-10730",
+      "title": "Triennial Conference of Pacific Women",
+      "location": "Consultant’s home base",
+      "unit": "HRSD",
+      "category": "Services",
+      "status": "Selection Process Ongoing",
+      "posting_date": "21 September 2026",
+      "posting_iso": "2026-09-21",
+      "closing_date": "5 October 2026",
+      "closing_iso": "2026-10-05",
+      "countries": [
+        "Pacific region"
+      ],
+      "opportunity_type": "rfq",
+      "source": "spc",
+      "url": "https://www.spc.int/procurement"
+    },
+    {
+      "ref": "RFQ26-10721",
+      "title": "Procurement of Value Adding Equipment for Ovava Organic Learning Farm (OLF)",
+      "location": "Tonga",
+      "unit": "LRD",
+      "category": "Services",
+      "status": "Selection Process Ongoing",
+      "posting_date": "2 October 2026",
+      "posting_iso": "2026-10-02",
+      "closing_date": "11 October 2026",
+      "closing_iso": "2026-10-11",
+      "countries": [
+        "Tonga"
+      ],
+      "opportunity_type": "rfq",
+      "source": "spc",
+      "url": "https://www.spc.int/procurement"
+    },
+    {
+      "ref": "RFQ26-10718(R1)",
+      "title": "Re-Advertisement - Supply & installation of equipment and furniture’s for the Savai’i Emergency Operation Centre (EOC), Samoa",
+      "location": "Samoa",
+      "unit": "GEM",
+      "category": "Goods",
+      "status": "Selection Process Ongoing",
+      "posting_date": "28 September 2026",
+      "posting_iso": "2026-09-28",
+      "closing_date": "12 October 2026",
+      "closing_iso": "2026-10-12",
+      "countries": [
+        "Samoa"
+      ],
+      "opportunity_type": "rfq",
+      "source": "spc",
+      "url": "https://www.spc.int/procurement"
+    },
+    {
+      "ref": "RFQ26-10662",
+      "title": "Consultancy for PMRS Systems Developer – Power Platform, API Integration and Photocopying support",
+      "location": "Fiji and New Caledonia",
+      "unit": "CCES",
+      "category": "Services",
+      "status": "Selection Process Ongoing",
+      "posting_date": "16 September 2026",
+      "posting_iso": "2026-09-16",
+      "closing_date": "27 September 2026",
+      "closing_iso": "2026-09-27",
+      "countries": [
+        "Fiji",
+        "New Caledonia"
+      ],
+      "opportunity_type": "rfq",
+      "source": "spc",
+      "url": "https://www.spc.int/procurement"
+    },
+    {
+      "ref": "RFQ26-10657",
+      "title": "Coordinator services to support the delivery of the 4th Pacific Human Rights Conference (PHRC4) in French Polynesia.",
+      "location": "Tahiti",
+      "unit": "HRSD",
+      "category": "Services",
+      "status": "Selection Process Ongoing",
+      "posting_date": "7 September 2026",
+      "posting_iso": "2026-09-07",
+      "closing_date": "22 September 2026",
+      "closing_iso": "2026-09-22",
+      "countries": [
+        "Pacific region",
+        "French Polynesia"
+      ],
+      "opportunity_type": "rfq",
+      "source": "spc",
+      "url": "https://www.spc.int/procurement"
+    },
+    {
+      "ref": "RFQ26-10655",
+      "title": "Consultancy Services: National Study on Climate Loss & Damage and Social Inclusion",
+      "location": "Papua New Guinea (PNG)",
+      "unit": "CCES (L&D)",
+      "category": "Services",
+      "status": "Selection Process Ongoing",
+      "posting_date": "4 September 2026",
+      "posting_iso": "2026-09-04",
+      "closing_date": "20 September 2026 SPC invites suitably qualified consultants to conduct a research study in the Papua New Guinea (PNG) on the impacts of climate-induced loss and damage on persons with disabilities and socially excluded groups. The consultancy will generate evidence-based recommendations to strengthen inclusive climate action, policy development, and loss and damage programming while contributing to regional knowledge and advocacy across the Pacific.",
+      "closing_iso": "",
+      "countries": [
+        "Papua New Guinea"
+      ],
+      "opportunity_type": "rfq",
+      "source": "spc",
+      "url": "https://www.spc.int/procurement"
+    },
+    {
+      "ref": "RFQ26-10632",
+      "title": "RFQ26-10632 - Development of regional guidelines, recommendations and a model legislation for the implementation of the Biodiversity Beyond National Jurisdiction (BBNJ) Agreement",
+      "location": "Pacific region",
+      "unit": "FAME - PEUMP",
+      "category": "Services",
+      "status": "Selection Process Ongoing",
+      "posting_date": "8 September 2026",
+      "posting_iso": "2026-09-08",
+      "closing_date": "22 September 2026 Legal consultancy services for the Development of regional guidelines, recommendations and a model legislation for the implementation of the Biodiversity Beyond National Jurisdiction (BBNJ) Agreement.",
+      "closing_iso": "",
+      "countries": [
+        "Pacific region"
+      ],
+      "opportunity_type": "rfq",
+      "source": "spc",
+      "url": "https://www.spc.int/procurement"
+    },
+    {
+      "ref": "RFP26-10614",
+      "title": "Development of Palau's Technology Transfer and Energy Transition Roadmap",
+      "location": "Palau",
+      "unit": "CCES (NDC Hub)",
+      "category": "Services",
+      "status": "Selection Process Ongoing",
+      "posting_date": "4 September 2026",
+      "posting_iso": "2026-09-04",
+      "closing_date": "4 October 2026",
+      "closing_iso": "2026-10-04",
+      "countries": [
+        "Palau"
+      ],
+      "opportunity_type": "rfp",
+      "source": "spc",
+      "url": "https://www.spc.int/procurement"
+    },
+    {
+      "ref": "RFQ26-10612",
+      "title": "Development of FSM’s NDC 3.0 Investment Plan with Project Pipeline",
+      "location": "FSM",
+      "unit": "CCES",
+      "category": "Services",
+      "status": "Selection Process Ongoing",
+      "posting_date": "2 September 2026",
+      "posting_iso": "2026-09-02",
+      "closing_date": "14 September 2026",
+      "closing_iso": "2026-09-14",
+      "countries": [
+        "Micronesia"
+      ],
+      "opportunity_type": "rfq",
+      "source": "spc",
+      "url": "https://www.spc.int/procurement"
+    },
+    {
+      "ref": "RFQ26-10580",
+      "title": "Accredited Partnership Brokering Training for GEM",
+      "location": "Fiji",
+      "unit": "GEM",
+      "category": "Services",
+      "status": "Selection Process Ongoing",
+      "posting_date": "31 August 2026",
+      "posting_iso": "2026-08-31",
+      "closing_date": "14 September 2026",
+      "closing_iso": "2026-09-14",
+      "countries": [
+        "Fiji"
+      ],
+      "opportunity_type": "rfq",
+      "source": "spc",
+      "url": "https://www.spc.int/procurement"
+    },
+    {
+      "ref": "RFQ26-10575",
+      "title": "International Consultant for Strengthening Tonga's Climate Change Policy through Loss and Damage Integration",
+      "location": "Home-based with travel to Tonga",
+      "unit": "CCES",
+      "category": "Services",
+      "status": "Selection Process Ongoing",
+      "posting_date": "20 August 2026",
+      "posting_iso": "2026-08-20",
+      "closing_date": "4 September 2026",
+      "closing_iso": "2026-09-04",
+      "countries": [
+        "Tonga"
+      ],
+      "opportunity_type": "rfq",
+      "source": "spc",
+      "url": "https://www.spc.int/procurement"
+    },
+    {
+      "ref": "RFQ26-10574",
+      "title": "Consultancy services to support the technical review and update of the Tonga Climate Change Policy 2016 to integrate Loss and Damage",
+      "location": "Tonga",
+      "unit": "CCES",
+      "category": "Services",
+      "status": "Selection Process Ongoing",
+      "posting_date": "20 August 2026",
+      "posting_iso": "2026-08-20",
+      "closing_date": "4 September 2026",
+      "closing_iso": "2026-09-04",
+      "countries": [
+        "Tonga"
+      ],
+      "opportunity_type": "rfq",
+      "source": "spc",
+      "url": "https://www.spc.int/procurement"
+    },
+    {
+      "ref": "RFQ26-10573",
+      "title": "Behaviour change pilot consultancy for the GCF RTP",
+      "location": "Pacific region",
+      "unit": "FAME",
+      "category": "Services",
+      "status": "Selection Process Ongoing",
+      "posting_date": "11 September 2026",
+      "posting_iso": "2026-09-11",
+      "closing_date": "1 October 2026",
+      "closing_iso": "2026-10-01",
+      "countries": [
+        "Pacific region"
+      ],
+      "opportunity_type": "rfq",
+      "source": "spc",
+      "url": "https://www.spc.int/procurement"
+    },
+    {
+      "ref": "RFQ26-10566",
+      "title": "Purchase of Professional enterprise UAV system with DJI Zenmuse P1 photogrammetry payload",
+      "location": "Fiji",
+      "unit": "GEM",
+      "category": "Goods",
+      "status": "Selection Process Ongoing",
+      "posting_date": "28 August 2026",
+      "posting_iso": "2026-08-28",
+      "closing_date": "18 September 2026",
+      "closing_iso": "2026-09-18",
+      "countries": [
+        "Fiji"
+      ],
+      "opportunity_type": "rfq",
+      "source": "spc",
+      "url": "https://www.spc.int/procurement"
+    },
+    {
+      "ref": "RFQ26-10554",
+      "title": "National Coordinator: Adaptation Planning (PNG)",
+      "location": "Papua New Guinea (PNG)",
+      "unit": "CCES (CFU)",
+      "category": "Services",
+      "status": "Selection Process Ongoing",
+      "posting_date": "28 August 2026",
+      "posting_iso": "2026-08-28",
+      "closing_date": "13 September 2026",
+      "closing_iso": "2026-09-13",
+      "countries": [
+        "Papua New Guinea"
+      ],
+      "opportunity_type": "rfq",
+      "source": "spc",
+      "url": "https://www.spc.int/procurement"
+    },
+    {
+      "ref": "RFQ26-10552",
+      "title": "Consultancy Services for Pacific Nature-based Solutions Implementation Training",
+      "location": "Samoa",
+      "unit": "CCES",
+      "category": "Services",
+      "status": "Selection Process Ongoing",
+      "posting_date": "14 August 2026",
+      "posting_iso": "2026-08-14",
+      "closing_date": "28 August 2026",
+      "closing_iso": "2026-08-28",
+      "countries": [
+        "Samoa",
+        "Pacific region"
+      ],
+      "opportunity_type": "rfq",
+      "source": "spc",
+      "url": "https://www.spc.int/procurement"
+    },
+    {
+      "ref": "RFQ26-10545",
+      "title": "READVERTISED - Procurement of materials for the construction of Compost Shed for Mahuleva Organic Learning Farm (OLF) in Tonga",
+      "location": "Tonga",
+      "unit": "LRD",
+      "category": "Goods",
+      "status": "Selection Process Ongoing",
+      "posting_date": "19 August 2026",
+      "posting_iso": "2026-08-19",
+      "closing_date": "26 August 2026",
+      "closing_iso": "2026-08-26",
+      "countries": [
+        "Tonga"
+      ],
+      "opportunity_type": "rfq",
+      "source": "spc",
+      "url": "https://www.spc.int/procurement"
+    },
+    {
+      "ref": "RFQ26-10540",
+      "title": "Scientific review of the revised chapter 8 on native forests, plantation forest and trees outside forests: their vulnerability and roles in mitigating and building resilience to climate change",
+      "location": "Fiji",
+      "unit": "J00565 - Enhancing Data Availabiltiy for Agr and Forestry",
+      "category": "Services",
+      "status": "Selection Process Ongoing",
+      "posting_date": "7 August 2026",
+      "posting_iso": "2026-08-07",
+      "closing_date": "23 August 2026",
+      "closing_iso": "2026-08-23",
+      "countries": [
+        "Fiji"
+      ],
+      "opportunity_type": "rfq",
+      "source": "spc",
+      "url": "https://www.spc.int/procurement"
+    },
+    {
+      "ref": "RFQ26-10538",
+      "title": "Consultancy: Book Chapter 9: Implications of climate change for contributions by agriculture and forestry to Pacific Island economies and communities",
+      "location": "Home based but will work with the team based in the Land Resources Division, Narere Campus, Suva, Fiji",
+      "unit": "",
+      "category": "Services",
+      "status": "Selection Process Ongoing",
+      "posting_date": "19 August 2026",
+      "posting_iso": "2026-08-19",
+      "closing_date": "30 August 2026",
+      "closing_iso": "2026-08-30",
+      "countries": [
+        "Fiji",
+        "Pacific region"
+      ],
+      "opportunity_type": "rfq",
+      "source": "spc",
+      "url": "https://www.spc.int/procurement"
+    },
+    {
+      "ref": "RFQ26-10537",
+      "title": "Consultancy: Book Chapter 3: Agriculture and climate change: an overview in the Pacific Islands",
+      "location": "Home based but will work with the team based in the Land Resources Division, Narere Campus, Suva, Fiji",
+      "unit": "LRD",
+      "category": "Services",
+      "status": "Selection Process Ongoing",
+      "posting_date": "19 August 2026",
+      "posting_iso": "2026-08-19",
+      "closing_date": "30 August 2026",
+      "closing_iso": "2026-08-30",
+      "countries": [
+        "Fiji",
+        "Pacific region"
+      ],
+      "opportunity_type": "rfq",
+      "source": "spc",
+      "url": "https://www.spc.int/procurement"
+    },
+    {
+      "ref": "RFQ26-10536",
+      "title": "Consultancy: Book chapter 1: agriculture and climate change",
+      "location": "Suva, Fiji",
+      "unit": "LRD",
+      "category": "Services",
+      "status": "Selection Process Ongoing",
+      "posting_date": "19 August 2026",
+      "posting_iso": "2026-08-19",
+      "closing_date": "30 August 2026",
+      "closing_iso": "2026-08-30",
+      "countries": [
+        "Fiji"
+      ],
+      "opportunity_type": "rfq",
+      "source": "spc",
+      "url": "https://www.spc.int/procurement"
+    },
+    {
+      "ref": "RFQ26-10535",
+      "title": "Consultancy: Book Chapter 5 and 10: Vulnerability of export commodities to climate change.",
+      "location": "Suva, Fiji",
+      "unit": "LRD",
+      "category": "Services",
+      "status": "Selection Process Ongoing",
+      "posting_date": "19 August 2026",
+      "posting_iso": "2026-08-19",
+      "closing_date": "30 August 2026",
+      "closing_iso": "2026-08-30",
+      "countries": [
+        "Fiji"
+      ],
+      "opportunity_type": "rfq",
+      "source": "spc",
+      "url": "https://www.spc.int/procurement"
+    },
+    {
+      "ref": "RFQ26-10532",
+      "title": "Portable Bluetooth-enabled GNSS receivers for high-accuracy GIS field data collection",
+      "location": "Fiji",
+      "unit": "GEM",
+      "category": "Goods",
+      "status": "Selection Process Ongoing",
+      "posting_date": "6 August 2026",
+      "posting_iso": "2026-08-06",
+      "closing_date": "21 August 2026",
+      "closing_iso": "2026-08-21",
+      "countries": [
+        "Fiji"
+      ],
+      "opportunity_type": "rfq",
+      "source": "spc",
+      "url": "https://www.spc.int/procurement"
+    },
+    {
+      "ref": "RFQ26-10520",
+      "title": "Accelerating Transfer of Environmentally sound Technologies through demonstration pilots to reduce biofouling and related emissions (TEST Biofouling)",
+      "location": "Tonga",
+      "unit": "GEM",
+      "category": "Services",
+      "status": "Selection Process Ongoing",
+      "posting_date": "30 July 2026",
+      "posting_iso": "2026-07-30",
+      "closing_date": "7 August 2026",
+      "closing_iso": "2026-08-07",
+      "countries": [
+        "Tonga"
+      ],
+      "opportunity_type": "rfq",
+      "source": "spc",
+      "url": "https://www.spc.int/procurement"
+    },
+    {
+      "ref": "RFP26-10514",
+      "title": "Consultancy services for the preparation of the Adaptation Fund Full Proposal for the ROOTS Project in Vanuatu",
+      "location": "Remote with travels to Vanuatu",
+      "unit": "CCES",
+      "category": "Services",
+      "status": "Selection Process Ongoing",
+      "posting_date": "23 July 2026",
+      "posting_iso": "2026-07-23",
+      "closing_date": "20 August 2026",
+      "closing_iso": "2026-08-20",
+      "countries": [
+        "Vanuatu"
+      ],
+      "opportunity_type": "rfp",
+      "source": "spc",
+      "url": "https://www.spc.int/procurement"
+    },
+    {
+      "ref": "RFQ26-10509",
+      "title": "Development of Pacific Climate and Health Investment case studies to support funding requests to the Pacific Resilience Facility",
+      "location": "Pacific region",
+      "unit": "PHD",
+      "category": "Services",
+      "status": "Selection Process Ongoing",
+      "posting_date": "13 August 2026",
+      "posting_iso": "2026-08-13",
+      "closing_date": "19 August 2026",
+      "closing_iso": "2026-08-19",
+      "countries": [
+        "Pacific region"
+      ],
+      "opportunity_type": "rfq",
+      "source": "spc",
+      "url": "https://www.spc.int/procurement"
+    },
+    {
+      "ref": "RFQ26-10508",
+      "title": "National Consultant (Palau)",
+      "location": "Palau",
+      "unit": "CCES",
+      "category": "Services",
+      "status": "Selection Process Ongoing",
+      "posting_date": "21 July 2026",
+      "posting_iso": "2026-07-21",
+      "closing_date": "10 August 2026",
+      "closing_iso": "2026-08-10",
+      "countries": [
+        "Palau"
+      ],
+      "opportunity_type": "rfq",
+      "source": "spc",
+      "url": "https://www.spc.int/procurement"
+    },
+    {
+      "ref": "RFQ26-10506",
+      "title": "Development of Kiribati NDC 3.0",
+      "location": "Kiribati",
+      "unit": "CCES",
+      "category": "Services",
+      "status": "Selection Process Ongoing",
+      "posting_date": "20 July 2026",
+      "posting_iso": "2026-07-20",
+      "closing_date": "31 July 2026 The objectives of the Consultancy are the: Development of Kiribati’s NDC 3.0 in line with its national development priorities, including loss and damage and other as guided by the government of Kiribati. Strengthen national capacity and coordination to implement, monitor, and mobilize climate actions and investments supporting low-emission and climate-resilient development.",
+      "closing_iso": "",
+      "countries": [
+        "Kiribati"
+      ],
+      "opportunity_type": "rfq",
+      "source": "spc",
+      "url": "https://www.spc.int/procurement"
+    },
+    {
+      "ref": "RFQ26-10505",
+      "title": "Supply and Delivery of a Portable Streamflow Meter",
+      "location": "Fiji",
+      "unit": "GEM",
+      "category": "Goods",
+      "status": "Selection Process Ongoing",
+      "posting_date": "16 July 2026",
+      "posting_iso": "2026-07-16",
+      "closing_date": "31 July 2026",
+      "closing_iso": "2026-07-31",
+      "countries": [
+        "Fiji"
+      ],
+      "opportunity_type": "rfq",
+      "source": "spc",
+      "url": "https://www.spc.int/procurement"
+    },
+    {
+      "ref": "RFQ26-10503",
+      "title": "Consultancy Services - Communications Specialist (FSM)",
+      "location": "Federated States of Micronesia (FSM)",
+      "unit": "CFU (CCES)",
+      "category": "Services",
+      "status": "Selection Process Ongoing",
+      "posting_date": "16 July 2026",
+      "posting_iso": "2026-07-16",
+      "closing_date": "27 July 2026",
+      "closing_iso": "2026-07-27",
+      "countries": [
+        "Micronesia"
+      ],
+      "opportunity_type": "rfq",
+      "source": "spc",
+      "url": "https://www.spc.int/procurement"
+    },
+    {
+      "ref": "RFQ26-10500",
+      "title": "Supply and installation of Web-based Monitoring and Evaluation online tracker for Fiji National Disaster Risk Management Office",
+      "location": "Fiji",
+      "unit": "GEM",
+      "category": "Goods",
+      "status": "Selection Process Ongoing",
+      "posting_date": "17 July 2026",
+      "posting_iso": "2026-07-17",
+      "closing_date": "27 July 2026",
+      "closing_iso": "2026-07-27",
+      "countries": [
+        "Fiji"
+      ],
+      "opportunity_type": "rfq",
+      "source": "spc",
+      "url": "https://www.spc.int/procurement"
+    },
+    {
+      "ref": "RFQ26-10499",
+      "title": "Anibare Bay Protected Area Establishment and Priority Endemic Bird Species Conservation, Naoero",
+      "location": "Naoero",
+      "unit": "LRD",
+      "category": "Services",
+      "status": "Selection Process Ongoing",
+      "posting_date": "22 July 2026",
+      "posting_iso": "2026-07-22",
+      "closing_date": "9 August 2026",
+      "closing_iso": "2026-08-09",
+      "countries": [
+        "Nauru"
+      ],
+      "opportunity_type": "rfq",
+      "source": "spc",
+      "url": "https://www.spc.int/procurement"
+    },
+    {
+      "ref": "RFQ26-10497",
+      "title": "Deployment of Specialised Nurse Consultants to Tuvalu",
+      "location": "Tuvalu",
+      "unit": "PHD",
+      "category": "Services",
+      "status": "Selection Process Ongoing",
+      "posting_date": "7 August 2026",
+      "posting_iso": "2026-08-07",
+      "closing_date": "16 August 2026 Deployment of specialised nurse consultants to Tuvalu.",
+      "closing_iso": "",
+      "countries": [
+        "Tuvalu"
+      ],
+      "opportunity_type": "rfq",
+      "source": "spc",
+      "url": "https://www.spc.int/procurement"
+    },
+    {
+      "ref": "RFQ26-10494",
+      "title": "Geospatial Officer to design, develop, and implement Geospatial Information Systems (GIS) to support the One Health approach in Fiji",
+      "location": "Fiji",
+      "unit": "LRD",
+      "category": "Services",
+      "status": "Selection Process Ongoing",
+      "posting_date": "8 July 2026",
+      "posting_iso": "2026-07-08",
+      "closing_date": "2 August 2026",
+      "closing_iso": "2026-08-02",
+      "countries": [
+        "Fiji"
+      ],
+      "opportunity_type": "rfq",
+      "source": "spc",
+      "url": "https://www.spc.int/procurement"
+    },
+    {
+      "ref": "RFQ26-10434",
+      "title": "Drafting of a Pacific Regional Hydrological Services Strategy",
+      "location": "Pacific Island Countries",
+      "unit": "GEM",
+      "category": "Services",
+      "status": "Selection Process Ongoing",
+      "posting_date": "3 July 2026",
+      "posting_iso": "2026-07-03",
+      "closing_date": "14 July 2026",
+      "closing_iso": "2026-07-14",
+      "countries": [
+        "Pacific region"
+      ],
+      "opportunity_type": "rfq",
+      "source": "spc",
+      "url": "https://www.spc.int/procurement"
+    },
+    {
+      "ref": "RFQ26-10392",
+      "title": "(Consultancy Services) Climate Finance Advisor, FSM Readiness Programme with the GCF",
+      "location": "Federated States of Micronesia (FSM)",
+      "unit": "CCES",
+      "category": "Services",
+      "status": "Selection Process Ongoing",
+      "posting_date": "2 July 2026",
+      "posting_iso": "2026-07-02",
+      "closing_date": "10 July 2026",
+      "closing_iso": "2026-07-10",
+      "countries": [
+        "Micronesia"
+      ],
+      "opportunity_type": "rfq",
+      "source": "spc",
+      "url": "https://www.spc.int/procurement"
+    },
+    {
+      "ref": "RFP26-10391",
+      "title": "Solar Pumps and Technical Assistance for Kiritimati Island",
+      "location": "Kirimati Island, Kiribati",
+      "unit": "GEM",
+      "category": "Goods",
+      "status": "Selection Process Ongoing",
+      "posting_date": "1 July 2026",
+      "posting_iso": "2026-07-01",
+      "closing_date": "30 July 2026",
+      "closing_iso": "2026-07-30",
+      "countries": [
+        "Kiribati"
+      ],
+      "opportunity_type": "rfp",
+      "source": "spc",
+      "url": "https://www.spc.int/procurement"
+    },
+    {
+      "ref": "RFQ26-10389",
+      "title": "Consultancy of Development of Gender Equality Policy",
+      "location": "Fiji and Remotely",
+      "unit": "HRSD",
+      "category": "Services",
+      "status": "Selection Process Ongoing",
+      "posting_date": "26 June 2026",
+      "posting_iso": "2026-06-26",
+      "closing_date": "10 July 2026",
+      "closing_iso": "2026-07-10",
+      "countries": [
+        "Fiji"
+      ],
+      "opportunity_type": "rfq",
+      "source": "spc",
+      "url": "https://www.spc.int/procurement"
+    },
+    {
+      "ref": "RFQ26-10386",
+      "title": "Social media and communications activities for CBFM community",
+      "location": "Home based for the Pacific Region",
+      "unit": "FAME",
+      "category": "Services",
+      "status": "Selection Process Ongoing",
+      "posting_date": "18 September 2026",
+      "posting_iso": "2026-09-18",
+      "closing_date": "4 October 2026",
+      "closing_iso": "2026-10-04",
+      "countries": [
+        "Pacific region"
+      ],
+      "opportunity_type": "rfq",
+      "source": "spc",
+      "url": "https://www.spc.int/procurement"
+    },
+    {
+      "ref": "RFQ26-10370",
+      "title": "Structural Review and Certification of School Infrastructure Designs for the National Department of Education",
+      "location": "Papua New Guinea (PNG)",
+      "unit": "GEM",
+      "category": "Services",
+      "status": "Selection Process Ongoing",
+      "posting_date": "26 June 2026",
+      "posting_iso": "2026-06-26",
+      "closing_date": "10 July 2026",
+      "closing_iso": "2026-07-10",
+      "countries": [
+        "Papua New Guinea"
+      ],
+      "opportunity_type": "rfq",
+      "source": "spc",
+      "url": "https://www.spc.int/procurement"
+    },
+    {
+      "ref": "RFQ26-10367",
+      "title": "Additional Works at the Emergency Operations Centre (EOC), Sigatoka, Fiji",
+      "location": "Fiji",
+      "unit": "GEM",
+      "category": "Services",
+      "status": "Selection Process Ongoing",
+      "posting_date": "7 July 2026",
+      "posting_iso": "2026-07-07",
+      "closing_date": "21 July 2026",
+      "closing_iso": "2026-07-21",
+      "countries": [
+        "Fiji"
+      ],
+      "opportunity_type": "rfq",
+      "source": "spc",
+      "url": "https://www.spc.int/procurement"
+    },
+    {
+      "ref": "RFQ26-10340",
+      "title": "Network Architecture Review - Discovery",
+      "location": "Fiji and New Caledonia",
+      "unit": "ICT",
+      "category": "Services",
+      "status": "Selection Process Ongoing",
+      "posting_date": "30 June 2026",
+      "posting_iso": "2026-06-30",
+      "closing_date": "14 July 2026",
+      "closing_iso": "2026-07-14",
+      "countries": [
+        "Fiji",
+        "New Caledonia"
+      ],
+      "opportunity_type": "rfq",
+      "source": "spc",
+      "url": "https://www.spc.int/procurement"
+    },
+    {
+      "ref": "RFQ26-10336",
+      "title": "Pacific Women Lead at SPC",
+      "location": "Fiji",
+      "unit": "",
+      "category": "Services",
+      "status": "Selection Process Ongoing",
+      "posting_date": "23 June 2026",
+      "posting_iso": "2026-06-23",
+      "closing_date": "14 July 2026",
+      "closing_iso": "2026-07-14",
+      "countries": [
+        "Fiji",
+        "Pacific region"
+      ],
+      "opportunity_type": "rfq",
+      "source": "spc",
+      "url": "https://www.spc.int/procurement"
+    },
+    {
+      "ref": "RFQ26-10333",
+      "title": "Online Training Modules Competency-based Interview (CBI) Training for SPC Recruitment Selection Panel Members",
+      "location": "Remote for the Pacific Region",
+      "unit": "OMD- Human Resources",
+      "category": "Services",
+      "status": "Selection Process Ongoing",
+      "posting_date": "23 July 2026",
+      "posting_iso": "2026-07-23",
+      "closing_date": "20 August 2026",
+      "closing_iso": "2026-08-20",
+      "countries": [
+        "Pacific region"
+      ],
+      "opportunity_type": "rfq",
+      "source": "spc",
+      "url": "https://www.spc.int/procurement"
+    },
+    {
+      "ref": "EOI26-10320",
+      "title": "Expression of Interest (EOI) Qualifications and Standards External Evaluators",
+      "location": "Fiji",
+      "unit": "EQAP",
+      "category": "Services",
+      "status": "Selection Process Ongoing",
+      "posting_date": "18 June 2026",
+      "posting_iso": "2026-06-18",
+      "closing_date": "26 June 2026",
+      "closing_iso": "2026-06-26",
+      "countries": [
+        "Fiji"
+      ],
+      "opportunity_type": "eoi",
+      "source": "spc",
+      "url": "https://www.spc.int/procurement"
+    },
+    {
+      "ref": "RFQ26-10319",
+      "title": "Consultancy Services to Deliver Water Quality Laboratory Training and Develop a Laboratory Quality Assurance Framework",
+      "location": "Tarawa, Kiribati",
+      "unit": "GEM",
+      "category": "Services",
+      "status": "Selection Process Ongoing",
+      "posting_date": "9 July 2026",
+      "posting_iso": "2026-07-09",
+      "closing_date": "27 July 2026",
+      "closing_iso": "2026-07-27",
+      "countries": [
+        "Kiribati"
+      ],
+      "opportunity_type": "rfq",
+      "source": "spc",
+      "url": "https://www.spc.int/procurement"
+    },
+    {
+      "ref": "RFQ26-10315",
+      "title": "Re-Advertisement - Strengthening Clinical Services Delivery in Tuvalu through the Deployment of a Locum Pharmacist Adviser",
+      "location": "Tuvalu",
+      "unit": "PHD",
+      "category": "Services",
+      "status": "Selection Process Ongoing",
+      "posting_date": "17 July 2026",
+      "posting_iso": "2026-07-17",
+      "closing_date": "27 July 2026",
+      "closing_iso": "2026-07-27",
+      "countries": [
+        "Tuvalu"
+      ],
+      "opportunity_type": "rfq",
+      "source": "spc",
+      "url": "https://www.spc.int/procurement"
+    },
+    {
+      "ref": "RFQ26-10314",
+      "title": "Supporting the development of Strategic Workforce Plans in Pacific",
+      "location": "",
+      "unit": "FAME",
+      "category": "Services",
+      "status": "Selection Process Ongoing",
+      "posting_date": "8 July 2026",
+      "posting_iso": "2026-07-08",
+      "closing_date": "23 July 2026",
+      "closing_iso": "2026-07-23",
+      "countries": [
+        "Pacific region"
+      ],
+      "opportunity_type": "rfq",
+      "source": "spc",
+      "url": "https://www.spc.int/procurement"
+    },
+    {
+      "ref": "RFQ26-10302(R1)",
+      "title": "Development and Delivery of TFGBV Training Manual-Readvertisement",
+      "location": "Fiji, Solomon Islands and Tonga",
+      "unit": "HRSD",
+      "category": "Services",
+      "status": "Selection Process Ongoing",
+      "posting_date": "24 June 2026",
+      "posting_iso": "2026-06-24",
+      "closing_date": "5 July 2026",
+      "closing_iso": "2026-07-05",
+      "countries": [
+        "Fiji",
+        "Solomon Islands",
+        "Tonga"
+      ],
+      "opportunity_type": "rfq",
+      "source": "spc",
+      "url": "https://www.spc.int/procurement"
+    },
+    {
+      "ref": "RFQ26-10302",
+      "title": "Development and Pilot Delivery of a Country Specific Training Manual on Technology Facilitated Gender-Based Violence (TFGBV)",
+      "location": "Kiribati & Solomon Islands",
+      "unit": "HRSD",
+      "category": "Services",
+      "status": "Selection Process Ongoing",
+      "posting_date": "9 June 2026",
+      "posting_iso": "2026-06-09",
+      "closing_date": "21 June 2026",
+      "closing_iso": "2026-06-21",
+      "countries": [
+        "Kiribati",
+        "Solomon Islands"
+      ],
+      "opportunity_type": "rfq",
+      "source": "spc",
+      "url": "https://www.spc.int/procurement"
+    },
+    {
+      "ref": "RFQ26-10298-1",
+      "title": "Consultancy Services to Lead the KAP Survey Data Collection and Reporting for Vanuatu.",
+      "location": "Vanuatu",
+      "unit": "HRSD",
+      "category": "Services",
+      "status": "Selection Process Ongoing",
+      "posting_date": "8 July 2026",
+      "posting_iso": "2026-07-08",
+      "closing_date": "22 July 2026",
+      "closing_iso": "2026-07-22",
+      "countries": [
+        "Vanuatu"
+      ],
+      "opportunity_type": "rfq",
+      "source": "spc",
+      "url": "https://www.spc.int/procurement"
+    },
+    {
+      "ref": "RFQ26-10298",
+      "title": "Consultancy services to lead the KAP Survey Data Collection and Reporting",
+      "location": "Vanuatu",
+      "unit": "HRSD",
+      "category": "Services",
+      "status": "Selection Process Ongoing",
+      "posting_date": "16 June 2026",
+      "posting_iso": "2026-06-16",
+      "closing_date": "25 June 2026",
+      "closing_iso": "2026-06-25",
+      "countries": [
+        "Vanuatu"
+      ],
+      "opportunity_type": "rfq",
+      "source": "spc",
+      "url": "https://www.spc.int/procurement"
+    },
+    {
+      "ref": "RFQ26-10296",
+      "title": "Consultancy services to lead the KAP Survey Data Analysis and Reporting",
+      "location": "Solomon Islands",
+      "unit": "HRSD",
+      "category": "Services",
+      "status": "Selection Process Ongoing",
+      "posting_date": "4 June 2026",
+      "posting_iso": "2026-06-04",
+      "closing_date": "14 June 2026",
+      "closing_iso": "2026-06-14",
+      "countries": [
+        "Solomon Islands"
+      ],
+      "opportunity_type": "rfq",
+      "source": "spc",
+      "url": "https://www.spc.int/procurement"
+    },
+    {
+      "ref": "RFQ26-10291",
+      "title": "Consultancy services for strategic advisory and technical support to Pacific Girl Programme",
+      "location": "Fiji",
+      "unit": "HRSD",
+      "category": "Services",
+      "status": "Selection Process Ongoing",
+      "posting_date": "28 May 2026",
+      "posting_iso": "2026-05-28",
+      "closing_date": "7 June 2026",
+      "closing_iso": "2026-06-07",
+      "countries": [
+        "Fiji",
+        "Pacific region"
+      ],
+      "opportunity_type": "rfq",
+      "source": "spc",
+      "url": "https://www.spc.int/procurement"
+    },
+    {
+      "ref": "RFQ26-10289",
+      "title": "Consultancy for the Project Management and Reporting System (PMRS)",
+      "location": "Home-Based with travel as required",
+      "unit": "CCES",
+      "category": "Services",
+      "status": "Selection Process Ongoing",
+      "posting_date": "4 June 2026",
+      "posting_iso": "2026-06-04",
+      "closing_date": "17 June 2026",
+      "closing_iso": "2026-06-17",
+      "countries": [],
+      "opportunity_type": "rfq",
+      "source": "spc",
+      "url": "https://www.spc.int/procurement"
+    },
+    {
+      "ref": "RFP26-10287",
+      "title": "Moodle Support on the SPC website.",
+      "location": "Fiji",
+      "unit": "EQAP",
+      "category": "Services",
+      "status": "Selection Process Ongoing",
+      "posting_date": "29 June 2026",
+      "posting_iso": "2026-06-29",
+      "closing_date": "10 August 2026",
+      "closing_iso": "2026-08-10",
+      "countries": [
+        "Fiji"
+      ],
+      "opportunity_type": "rfp",
+      "source": "spc",
+      "url": "https://www.spc.int/procurement"
+    },
+    {
+      "ref": "RFQ26-10266",
+      "title": "Shared Digital Workspaces (Shared Digital Collaboration Space for Cross Divisional and Programme Integration)",
+      "location": "Remote",
+      "unit": "Executive",
+      "category": "Services",
+      "status": "Selection Process Ongoing",
+      "posting_date": "12 June 2026",
+      "posting_iso": "2026-06-12",
+      "closing_date": "12 July 2026",
+      "closing_iso": "2026-07-12",
+      "countries": [],
+      "opportunity_type": "rfq",
+      "source": "spc",
+      "url": "https://www.spc.int/procurement"
+    },
+    {
+      "ref": "RFP26-10264",
+      "title": "Design, Supply, Construction and Capacity Building for Domestic Biogas Systems in Funafuti and outer islands of Tuvalu",
+      "location": "Tuvalu",
+      "unit": "GEM",
+      "category": "Goods",
+      "status": "Selection Process Ongoing",
+      "posting_date": "31 July 2026",
+      "posting_iso": "2026-07-31",
+      "closing_date": "13 September 2026",
+      "closing_iso": "2026-09-13",
+      "countries": [
+        "Tuvalu"
+      ],
+      "opportunity_type": "rfp",
+      "source": "spc",
+      "url": "https://www.spc.int/procurement"
+    },
+    {
+      "ref": "RFQ26-10263",
+      "title": "Consultancy services for Pacific Human Rights Film Festival 2026",
+      "location": "Fiji",
+      "unit": "HRSD",
+      "category": "Services",
+      "status": "Selection Process Ongoing",
+      "posting_date": "26 May 2026",
+      "posting_iso": "2026-05-26",
+      "closing_date": "8 June 2026",
+      "closing_iso": "2026-06-08",
+      "countries": [
+        "Fiji",
+        "Pacific region"
+      ],
+      "opportunity_type": "rfq",
+      "source": "spc",
+      "url": "https://www.spc.int/procurement"
+    },
+    {
+      "ref": "RFQ26-10260",
+      "title": "Consultancy Services for Specialist Training in Seismic Refraction Data Acquisition, Processing and Interpretation",
+      "location": "Fiji",
+      "unit": "GEM",
+      "category": "Services",
+      "status": "Selection Process Ongoing",
+      "posting_date": "22 May 2026",
+      "posting_iso": "2026-05-22",
+      "closing_date": "31 May 2026",
+      "closing_iso": "2026-05-31",
+      "countries": [
+        "Fiji"
+      ],
+      "opportunity_type": "rfq",
+      "source": "spc",
+      "url": "https://www.spc.int/procurement"
+    },
+    {
+      "ref": "RFP26-10247",
+      "title": "Supply and Installation of Warehouse Racking Systems and Equipment for the NDMO Warehouse, Honiara, Solomon Islands",
+      "location": "Honiara, Solomon Islands",
+      "unit": "GEM",
+      "category": "Works",
+      "status": "Selection Process Ongoing",
+      "posting_date": "22 May 2026",
+      "posting_iso": "2026-05-22",
+      "closing_date": "22 June 2026",
+      "closing_iso": "2026-06-22",
+      "countries": [
+        "Solomon Islands"
+      ],
+      "opportunity_type": "rfp",
+      "source": "spc",
+      "url": "https://www.spc.int/procurement"
+    },
+    {
+      "ref": "EOI26-10246",
+      "title": "Qualifications and Standards External Evaluators",
+      "location": "Fiji",
+      "unit": "EQAP",
+      "category": "Services",
+      "status": "Selection Process Ongoing",
+      "posting_date": "18 May 2026",
+      "posting_iso": "2026-05-18",
+      "closing_date": "22 May 2026",
+      "closing_iso": "2026-05-22",
+      "countries": [
+        "Fiji"
+      ],
+      "opportunity_type": "eoi",
+      "source": "spc",
+      "url": "https://www.spc.int/procurement"
+    },
+    {
+      "ref": "RFQ26-10244",
+      "title": "Tonga Fire and Emergency Services (TFES) Consultancy",
+      "location": "Tonga",
+      "unit": "GEM",
+      "category": "Services",
+      "status": "Selection Process Ongoing",
+      "posting_date": "18 June 2026",
+      "posting_iso": "2026-06-18",
+      "closing_date": "3 July 2026",
+      "closing_iso": "2026-07-03",
+      "countries": [
+        "Tonga"
+      ],
+      "opportunity_type": "rfq",
+      "source": "spc",
+      "url": "https://www.spc.int/procurement"
+    },
+    {
+      "ref": "RFP26-10205",
+      "title": "SPC Nabua Sewer Reticulation – Hydraulics Services",
+      "location": "Fiji",
+      "unit": "OMD",
+      "category": "Services",
+      "status": "Selection Process Ongoing",
+      "posting_date": "26 May 2026",
+      "posting_iso": "2026-05-26",
+      "closing_date": "7 July 2026",
+      "closing_iso": "2026-07-07",
+      "countries": [
+        "Fiji"
+      ],
+      "opportunity_type": "rfp",
+      "source": "spc",
+      "url": "https://www.spc.int/procurement"
+    },
+    {
+      "ref": "RFP26-10201",
+      "title": "Preferred Supplier Agreements for Ocean Acidification Technical Expert",
+      "location": "",
+      "unit": "PCCOS",
+      "category": "Services",
+      "status": "Selection Process Ongoing",
+      "posting_date": "1 July 2026",
+      "posting_iso": "2026-07-01",
+      "closing_date": "12 August 2026",
+      "closing_iso": "2026-08-12",
+      "countries": [],
+      "opportunity_type": "rfp",
+      "source": "spc",
+      "url": "https://www.spc.int/procurement"
+    },
+    {
+      "ref": "RFP26-10200",
+      "title": "Preferred Suppliers for Multifan-CL maintenance, refinement and training and specialist technical support on Multifan-CL stock assessments for tuna",
+      "location": "Pacific region",
+      "unit": "FAME",
+      "category": "Services",
+      "status": "Selection Process Ongoing",
+      "posting_date": "24 July 2026",
+      "posting_iso": "2026-07-24",
+      "closing_date": "23 August 2026",
+      "closing_iso": "2026-08-23",
+      "countries": [
+        "Pacific region"
+      ],
+      "opportunity_type": "rfp",
+      "source": "spc",
+      "url": "https://www.spc.int/procurement"
+    },
+    {
+      "ref": "RFP26-10199",
+      "title": "Purchase of a High-Performance NVMe Storage Server",
+      "location": "New Caledonia",
+      "unit": "PCCOS",
+      "category": "Goods",
+      "status": "Selection Process Ongoing",
+      "posting_date": "2 July 2026",
+      "posting_iso": "2026-07-02",
+      "closing_date": "3 September 2026",
+      "closing_iso": "2026-09-03",
+      "countries": [
+        "New Caledonia"
+      ],
+      "opportunity_type": "rfp",
+      "source": "spc",
+      "url": "https://www.spc.int/procurement"
+    },
+    {
+      "ref": "RFQ26-10195",
+      "title": "Enhancing Financial Awareness towards climate and disaster insurance solutions in Kiribati Communities through targeted campaigns",
+      "location": "Kiribati",
+      "unit": "GEM",
+      "category": "Services",
+      "status": "Selection Process Ongoing",
+      "posting_date": "11 May 2026",
+      "posting_iso": "2026-05-11",
+      "closing_date": "26 May 2026",
+      "closing_iso": "2026-05-26",
+      "countries": [
+        "Kiribati"
+      ],
+      "opportunity_type": "rfq",
+      "source": "spc",
+      "url": "https://www.spc.int/procurement"
+    },
+    {
+      "ref": "RFQ26-10194",
+      "title": "Basic Farm Tools for Cluster Farms in Solomon Islands and Tonga under Pacific Organic Learning Farms Network Project",
+      "location": "Solomon Islands and Tonga",
+      "unit": "LRD",
+      "category": "Goods",
+      "status": "Selection Process Ongoing",
+      "posting_date": "26 April 2026",
+      "posting_iso": "2026-04-26",
+      "closing_date": "11 May 2026",
+      "closing_iso": "2026-05-11",
+      "countries": [
+        "Solomon Islands",
+        "Tonga",
+        "Pacific region"
+      ],
+      "opportunity_type": "rfq",
+      "source": "spc",
+      "url": "https://www.spc.int/procurement"
+    },
+    {
+      "ref": "RFQ26-10184",
+      "title": "Kiribati Warehouse After Action Review (AAR)",
+      "location": "Kiribati",
+      "unit": "GEM",
+      "category": "Services",
+      "status": "Selection Process Ongoing",
+      "posting_date": "24 April 2026",
+      "posting_iso": "2026-04-24",
+      "closing_date": "8 May 2026",
+      "closing_iso": "2026-05-08",
+      "countries": [
+        "Kiribati"
+      ],
+      "opportunity_type": "rfq",
+      "source": "spc",
+      "url": "https://www.spc.int/procurement"
+    },
+    {
+      "ref": "EOI26-10183",
+      "title": "Expression of Interest (EOI) Qualifications and Standards External Evaluators",
+      "location": "Fiji",
+      "unit": "EQAP",
+      "category": "Services",
+      "status": "Selection Process Ongoing",
+      "posting_date": "24 April 2026",
+      "posting_iso": "2026-04-24",
+      "closing_date": "8 May 2026",
+      "closing_iso": "2026-05-08",
+      "countries": [
+        "Fiji"
+      ],
+      "opportunity_type": "eoi",
+      "source": "spc",
+      "url": "https://www.spc.int/procurement"
+    },
+    {
+      "ref": "RFQ26-10180",
+      "title": "Integrated Health Threat Intelligence and Infodemic Monitoring Platform",
+      "location": "",
+      "unit": "PHD",
+      "category": "Services",
+      "status": "Selection Process Ongoing",
+      "posting_date": "30 April 2026",
+      "posting_iso": "2026-04-30",
+      "closing_date": "25 May 2026 Development of an Integrated Health Threat Intelligence and Infodemic Monitoring Platform.",
+      "closing_iso": "",
+      "countries": [],
+      "opportunity_type": "rfq",
+      "source": "spc",
+      "url": "https://www.spc.int/procurement"
+    },
+    {
+      "ref": "RFQ26-10174",
+      "title": "Developing an Integrated Surveillance System for Leptospirosis in a Pacific Island Country using a GIS Platform",
+      "location": "Fiji",
+      "unit": "LRD",
+      "category": "Services",
+      "status": "Selection Process Ongoing",
+      "posting_date": "23 April 2026",
+      "posting_iso": "2026-04-23",
+      "closing_date": "3 May 2026",
+      "closing_iso": "2026-05-03",
+      "countries": [
+        "Fiji",
+        "Pacific region"
+      ],
+      "opportunity_type": "rfq",
+      "source": "spc",
+      "url": "https://www.spc.int/procurement"
+    },
+    {
+      "ref": "RFQ26-10169",
+      "title": "Consultancy Services for M&E Specialist for online and M&E system",
+      "location": "Vanuatu",
+      "unit": "CFU (CCES)",
+      "category": "Services",
+      "status": "Selection Process Ongoing",
+      "posting_date": "24 April 2026",
+      "posting_iso": "2026-04-24",
+      "closing_date": "8 May 2026 The consultant will design a Monitoring and Evaluation (M&E) framework and manual and support the development of a centralised online M&E system to strengthen the Government of Vanuatu’s capacity to monitor climate change initiatives and climate finance. Working under SPC supervision and in coordination with the NDA Office, the consultant will define indicators, data sources, roles, and reporting processes aligned with GCF requirements and national systems. The consultant will provide technical guidance to support integration of the M&E framework into the upgraded NAB portal, including indicators, datasets, and dashboards, and develop training materials and deliver in‑country training for NDA and relevant government officials.",
+      "closing_iso": "",
+      "countries": [
+        "Vanuatu"
+      ],
+      "opportunity_type": "rfq",
+      "source": "spc",
+      "url": "https://www.spc.int/procurement"
+    },
+    {
+      "ref": "RFQ26-10168",
+      "title": "Consultancy Services for IT Specialist",
+      "location": "Vanuatu",
+      "unit": "CFU (CCES)",
+      "category": "Services",
+      "status": "Selection Process Ongoing",
+      "posting_date": "24 April 2026",
+      "posting_iso": "2026-04-24",
+      "closing_date": "8 May 2026 The consultant will review existing national digital platforms and identify opportunities to integrate climate change and development data into a centralised online system, aligned with the upgraded NAB portal. In coordination with the NDA, SPC’s CFU, and technical specialists, the consultant will design and develop a centralised M&E system and an online climate finance tracking system, including data management, reporting, and dashboards. The consultant will also develop training materials and deliver in‑country training for NDA and relevant government officials.",
+      "closing_iso": "",
+      "countries": [
+        "Vanuatu"
+      ],
+      "opportunity_type": "rfq",
+      "source": "spc",
+      "url": "https://www.spc.int/procurement"
+    },
+    {
+      "ref": "RFQ26-10167",
+      "title": "Consultancy Services for Climate Finance Tracking Specialist",
+      "location": "Vanuatu",
+      "unit": "CFU (CCES)",
+      "category": "Services",
+      "status": "Selection Process Ongoing",
+      "posting_date": "24 April 2026",
+      "posting_iso": "2026-04-24",
+      "closing_date": "8 May 2026 The Climate Finance Tracking Specialist will be engaged to develop a national framework and online system for tracking climate finance and climate‑related initiatives in Vanuatu. The assignment aims to strengthen government capacity for improved tracking, reporting, coordination, and decision‑making. The system will be integrated, where possible, with the upgraded NAB portal. Working closely with the NDA, SPC’s Climate Finance Unit, MFEM, and an IT Systems Specialist, the consultant will review existing tools and methodologies, define indicators and data requirements aligned with national and international reporting standards, and support the development of a centralised online climate finance tracking system. The consultant will also develop and deliver training to relevant government officials.",
+      "closing_iso": "",
+      "countries": [
+        "Vanuatu"
+      ],
+      "opportunity_type": "rfq",
+      "source": "spc",
+      "url": "https://www.spc.int/procurement"
+    },
+    {
+      "ref": "RFQ26-10158",
+      "title": "International Consultancy Services to Support the Interim Independent Evaluation of the GCF FP169 EDA Project in FSM",
+      "location": "Federated States of Micronesia (FSM)",
+      "unit": "CCES",
+      "category": "Services",
+      "status": "Selection Process Ongoing",
+      "posting_date": "22 April 2026",
+      "posting_iso": "2026-04-22",
+      "closing_date": "6 May 2026",
+      "closing_iso": "2026-05-06",
+      "countries": [
+        "Micronesia"
+      ],
+      "opportunity_type": "rfq",
+      "source": "spc",
+      "url": "https://www.spc.int/procurement"
+    },
+    {
+      "ref": "RFQ26-10157",
+      "title": "Local Consultancy Services to Support the Interim Independent Evaluation of the GCF FP169 EDA Project in FSM",
+      "location": "Federated States of Micronesia (FSM)",
+      "unit": "CFU (CCES)",
+      "category": "Services",
+      "status": "Selection Process Ongoing",
+      "posting_date": "22 April 2026",
+      "posting_iso": "2026-04-22",
+      "closing_date": "6 May 2026",
+      "closing_iso": "2026-05-06",
+      "countries": [
+        "Micronesia"
+      ],
+      "opportunity_type": "rfq",
+      "source": "spc",
+      "url": "https://www.spc.int/procurement"
+    },
+    {
+      "ref": "RFQ26-10085",
+      "title": "(Consultancy Services) Climate Finance Advisor, FSM Readiness Programme with the GCF",
+      "location": "FSM",
+      "unit": "CFU (CCES)",
+      "category": "Services",
+      "status": "Selection Process Ongoing",
+      "posting_date": "17 April 2026",
+      "posting_iso": "2026-04-17",
+      "closing_date": "24 April 2026 This consultancy aims to strengthen the capacity of the FSM NDA Office to identify, access, and effectively manage international climate finance. The consultant will provide strategic, technical, and advisory support to maximise FSM’s access to climate finance, align funding with national and sub-national priorities, and support the development and quality assurance of climate finance strategies and GCF project pipelines. The role includes building partnerships across donors, accredited entities, government, civil society, and the private sector; supporting readiness and capacity-building efforts; advising on financing options for FSM’s climate action needs; and ensuring that climate projects are technically sound, economically feasible, and aligned with country priorities.",
+      "closing_iso": "",
+      "countries": [
+        "Micronesia"
+      ],
+      "opportunity_type": "rfq",
+      "source": "spc",
+      "url": "https://www.spc.int/procurement"
+    },
+    {
+      "ref": "RFP26-10072",
+      "title": "Occupational Preventive Medicine Services",
+      "location": "Global",
+      "unit": "HR",
+      "category": "Services",
+      "status": "Selection Process Ongoing",
+      "posting_date": "17 July 2026",
+      "posting_iso": "2026-07-17",
+      "closing_date": "20 September 2026",
+      "closing_iso": "2026-09-20",
+      "countries": [],
+      "opportunity_type": "rfp",
+      "source": "spc",
+      "url": "https://www.spc.int/procurement"
+    },
+    {
+      "ref": "EOI26-10070",
+      "title": "Curriculum and Assessment Training and Short-Term Consultancy",
+      "location": "Fiji",
+      "unit": "EQAP",
+      "category": "Services",
+      "status": "Selection Process Ongoing",
+      "posting_date": "1 April 2026",
+      "posting_iso": "2026-04-01",
+      "closing_date": "24 April 2026",
+      "closing_iso": "2026-04-24",
+      "countries": [
+        "Fiji"
+      ],
+      "opportunity_type": "eoi",
+      "source": "spc",
+      "url": "https://www.spc.int/procurement"
+    },
+    {
+      "ref": "RFQ26-10021",
+      "title": "Consultant for Disability Accessibility Audit and Technical Advisor – Fiji NDRMO EOCs",
+      "location": "Fiji",
+      "unit": "GEM",
+      "category": "Services",
+      "status": "Selection Process Ongoing",
+      "posting_date": "1 April 2026",
+      "posting_iso": "2026-04-01",
+      "closing_date": "22 April 2026",
+      "closing_iso": "2026-04-22",
+      "countries": [
+        "Fiji"
+      ],
+      "opportunity_type": "rfq",
+      "source": "spc",
+      "url": "https://www.spc.int/procurement"
+    },
+    {
+      "ref": "RFQ26-10012",
+      "title": "Consultant to formulate Regional Implementation Guidelines for FP/DV Legislation",
+      "location": "Pacific region",
+      "unit": "",
+      "category": "Services",
+      "status": "Selection Process Ongoing",
+      "posting_date": "17 March 2026",
+      "posting_iso": "2026-03-17",
+      "closing_date": "27 March 2026",
+      "closing_iso": "2026-03-27",
+      "countries": [
+        "Pacific region"
+      ],
+      "opportunity_type": "rfq",
+      "source": "spc",
+      "url": "https://www.spc.int/procurement"
+    },
+    {
+      "ref": "RFQ26-10007",
+      "title": "Consultancy to develop and establish a passive surveillance system for avian influenza",
+      "location": "Remote based with travelling to targeted countries identified",
+      "unit": "LRD",
+      "category": "Services",
+      "status": "Selection Process Ongoing",
+      "posting_date": "13 March 2026",
+      "posting_iso": "2026-03-13",
+      "closing_date": "31 March 2026",
+      "closing_iso": "2026-03-31",
+      "countries": [],
+      "opportunity_type": "rfq",
+      "source": "spc",
+      "url": "https://www.spc.int/procurement"
+    },
+    {
+      "ref": "RFQ26-10004",
+      "title": "Supply and Construction of Generator Shed for NDRMO, NES, Nauru",
+      "location": "Naoero",
+      "unit": "GEM",
+      "category": "Works",
+      "status": "Selection Process Ongoing",
+      "posting_date": "13 March 2026",
+      "posting_iso": "2026-03-13",
+      "closing_date": "23 March 2026",
+      "closing_iso": "2026-03-23",
+      "countries": [
+        "Nauru"
+      ],
+      "opportunity_type": "rfq",
+      "source": "spc",
+      "url": "https://www.spc.int/procurement"
+    },
+    {
+      "ref": "RFQ25-9822",
+      "title": "Centralised Project Pipeline Repository (Consultancy)",
+      "location": "PNG",
+      "unit": "CCES",
+      "category": "Services",
+      "status": "Selection Process Ongoing",
+      "posting_date": "16 January 2026",
+      "posting_iso": "2026-01-16",
+      "closing_date": "30 January 2026",
+      "closing_iso": "2026-01-30",
+      "countries": [
+        "Papua New Guinea"
+      ],
+      "opportunity_type": "rfq",
+      "source": "spc",
+      "url": "https://www.spc.int/procurement"
+    },
+    {
+      "ref": "RFQ25-9792",
+      "title": "Pacific Organic Learning Farms Network (POLFN)",
+      "location": "Regional",
+      "unit": "LRD",
+      "category": "Services",
+      "status": "Selection Process Ongoing",
+      "posting_date": "12 January 2026",
+      "posting_iso": "2026-01-12",
+      "closing_date": "26 January 2026",
+      "closing_iso": "2026-01-26",
+      "countries": [
+        "Pacific region"
+      ],
+      "opportunity_type": "rfq",
+      "source": "spc",
+      "url": "https://www.spc.int/procurement"
+    },
+    {
+      "ref": "RFP25-9654",
+      "title": "Hybrid Mini Grid Installations in Solomon, Vanuatu & PNG",
+      "location": "Solomon, Vanuatu & PNG",
+      "unit": "GEM",
+      "category": "Works",
+      "status": "Selection Process Ongoing",
+      "posting_date": "19 December 2025",
+      "posting_iso": "2025-12-19",
+      "closing_date": "15 February 2026",
+      "closing_iso": "2026-02-15",
+      "countries": [
+        "Vanuatu",
+        "Papua New Guinea"
+      ],
+      "opportunity_type": "rfp",
+      "source": "spc",
+      "url": "https://www.spc.int/procurement"
+    },
+    {
+      "ref": "RFQ25-9481",
+      "title": "Consumables and Material supplies for rapid response to Animal and Plant pest and disease incursions",
+      "location": "Regional",
+      "unit": "LRD",
+      "category": "Goods",
+      "status": "Selection Process Ongoing",
+      "posting_date": "21 November 2025",
+      "posting_iso": "2025-11-21",
+      "closing_date": "18 January 2026",
+      "closing_iso": "2026-01-18",
+      "countries": [],
+      "opportunity_type": "rfq",
+      "source": "spc",
+      "url": "https://www.spc.int/procurement"
+    },
+    {
+      "ref": "RFQ25-9433 (R1)",
+      "title": "Supply & Installation of Warehouse Racking System, Forklift, Handling Equipment’s and other warehouse accessories – Solomon Islands National Disaster Management Office(Re-Advertisement)",
+      "location": "Honiara, Solomon Islands",
+      "unit": "GEM",
+      "category": "Goods",
+      "status": "Selection Process Ongoing",
+      "posting_date": "23 November 2025",
+      "posting_iso": "2025-11-23",
+      "closing_date": "18 December 2025",
+      "closing_iso": "2025-12-18",
+      "countries": [
+        "Solomon Islands"
+      ],
+      "opportunity_type": "rfq",
+      "source": "spc",
+      "url": "https://www.spc.int/procurement"
+    },
+    {
+      "ref": "RFQ25-9373",
+      "title": "Procurement of local Consultant to lead and support the review of existing consultation reports and documents and develop a workplan for the development of the Savo Volcano Disaster Response Plan.",
+      "location": "Solomon Islands",
+      "unit": "GEM",
+      "category": "Services",
+      "status": "Selection Process Ongoing",
+      "posting_date": "5 November 2025",
+      "posting_iso": "2025-11-05",
+      "closing_date": "21 November 2025",
+      "closing_iso": "2025-11-21",
+      "countries": [
+        "Solomon Islands"
+      ],
+      "opportunity_type": "rfq",
+      "source": "spc",
+      "url": "https://www.spc.int/procurement"
+    },
+    {
+      "ref": "RFQ25-9018",
+      "title": "Development of a pilot Ocean Account for Solomon Islands’ maritime transport sector",
+      "location": "Solomon Islands",
+      "unit": "GEM",
+      "category": "Services",
+      "status": "Selection Process Ongoing",
+      "posting_date": "24 September 2025",
+      "posting_iso": "2025-09-24",
+      "closing_date": "30 September 2025",
+      "closing_iso": "2025-09-30",
+      "countries": [
+        "Solomon Islands"
+      ],
+      "opportunity_type": "rfq",
+      "source": "spc",
+      "url": "https://www.spc.int/procurement"
+    },
+    {
+      "ref": "RFP25-8864",
+      "title": "Engineering, Procurement, Construction for Hybrid Mini Grid Systems and Supply of materials for the low voltage distribution network, Etten & Piis Paneu Islands",
+      "location": "Chuuk State, Federated States of Micronesia",
+      "unit": "GEM",
+      "category": "Works",
+      "status": "Selection Process Ongoing",
+      "posting_date": "15 September 2025",
+      "posting_iso": "2025-09-15",
+      "closing_date": "16 November 2025",
+      "closing_iso": "2025-11-16",
+      "countries": [
+        "Micronesia"
+      ],
+      "opportunity_type": "rfp",
+      "source": "spc",
+      "url": "https://www.spc.int/procurement"
+    },
+    {
+      "ref": "RFQ25-8850",
+      "title": "Climate Ocean Support Program for the Pacific (COSPPac) Phase 3 Mid-Term Evaluation",
+      "location": "Home-based, with face-to-face interviews in Fiji or Samoa available if possible",
+      "unit": "GEM",
+      "category": "Services",
+      "status": "Selection Process Ongoing",
+      "posting_date": "29 September 2025",
+      "posting_iso": "2025-09-29",
+      "closing_date": "31 October 2025",
+      "closing_iso": "2025-10-31",
+      "countries": [
+        "Fiji",
+        "Samoa",
+        "Pacific region"
+      ],
+      "opportunity_type": "rfq",
+      "source": "spc",
+      "url": "https://www.spc.int/procurement"
+    },
+    {
+      "ref": "RFQ25-8382(R1)",
+      "title": "Training of WASH principles and the SODIS Technique Solomon Islands. Re-advertised",
+      "location": "Solomon Islands",
+      "unit": "GEM",
+      "category": "Services",
+      "status": "Selection Process Ongoing",
+      "posting_date": "19 August 2025",
+      "posting_iso": "2025-08-19",
+      "closing_date": "27 August 2025",
+      "closing_iso": "2025-08-27",
+      "countries": [
+        "Solomon Islands"
+      ],
+      "opportunity_type": "rfq",
+      "source": "spc",
+      "url": "https://www.spc.int/procurement"
+    },
+    {
+      "ref": "RFQ25-8372",
+      "title": "Procurement of Servers for the Papua New Guinea National Multi-Hazard Early Warning Centre",
+      "location": "Papua New Guinea (PNG)",
+      "unit": "GEM",
+      "category": "Goods",
+      "status": "Selection Process Ongoing",
+      "posting_date": "5 August 2025",
+      "posting_iso": "2025-08-05",
+      "closing_date": "3 September 2025",
+      "closing_iso": "2025-09-03",
+      "countries": [
+        "Papua New Guinea"
+      ],
+      "opportunity_type": "rfq",
+      "source": "spc",
+      "url": "https://www.spc.int/procurement"
+    },
+    {
+      "ref": "RFQ25-8205",
+      "title": "Green Port Strategy and Energy Audit - Cook Islands Ports Authority",
+      "location": "Cook Islands",
+      "unit": "GEM",
+      "category": "Services",
+      "status": "Selection Process Ongoing",
+      "posting_date": "18 July 2025",
+      "posting_iso": "2025-07-18",
+      "closing_date": "27 July 2025",
+      "closing_iso": "2025-07-27",
+      "countries": [
+        "Cook Islands"
+      ],
+      "opportunity_type": "rfq",
+      "source": "spc",
+      "url": "https://www.spc.int/procurement"
+    },
+    {
+      "ref": "RFQ25-8156",
+      "title": "Water Supply Pipe & Fittings for Kiritimati island, Kiribati",
+      "location": "Kirimati Island",
+      "unit": "GEM",
+      "category": "Goods",
+      "status": "Selection Process Ongoing",
+      "posting_date": "4 July 2025",
+      "posting_iso": "2025-07-04",
+      "closing_date": "16 July 2025",
+      "closing_iso": "2025-07-16",
+      "countries": [
+        "Kiribati"
+      ],
+      "opportunity_type": "rfq",
+      "source": "spc",
+      "url": "https://www.spc.int/procurement"
+    },
+    {
+      "ref": "RFP25-8143",
+      "title": "Support the work of the Climate Change and Environmental Sustainability Division (Preferred Supplier Agreements)",
+      "location": "Pacific region",
+      "unit": "CCES",
+      "category": "Services",
+      "status": "Selection Process Ongoing",
+      "posting_date": "22 July 2025",
+      "posting_iso": "2025-07-22",
+      "closing_date": "2 September 2025 The Pacific Community (SPC) hereby gives",
+      "closing_iso": "",
+      "countries": [
+        "Pacific region"
+      ],
+      "opportunity_type": "rfp",
+      "source": "spc",
+      "url": "https://www.spc.int/procurement"
+    },
+    {
+      "ref": "RFQ25-8073",
+      "title": "Provision of consultancy service to the development of A. Fiji National Disaster Risk Information System and B. Contextualised Risk Profiling Methodology",
+      "location": "Fiji",
+      "unit": "GEM",
+      "category": "Services",
+      "status": "Selection Process Ongoing",
+      "posting_date": "12 June 2025",
+      "posting_iso": "2025-06-12",
+      "closing_date": "3 July 2025",
+      "closing_iso": "2025-07-03",
+      "countries": [
+        "Fiji"
+      ],
+      "opportunity_type": "rfq",
+      "source": "spc",
+      "url": "https://www.spc.int/procurement"
+    },
+    {
+      "ref": "RFQ25-8060",
+      "title": "Construction of a new weir at Tirokogu Spring",
+      "location": "Solomon Islands",
+      "unit": "GEM",
+      "category": "Works",
+      "status": "Selection Process Ongoing",
+      "posting_date": "5 June 2025",
+      "posting_iso": "2025-06-05",
+      "closing_date": "25 June 2025",
+      "closing_iso": "2025-06-25",
+      "countries": [
+        "Solomon Islands"
+      ],
+      "opportunity_type": "rfq",
+      "source": "spc",
+      "url": "https://www.spc.int/procurement"
+    },
+    {
+      "ref": "RFQ25-7994",
+      "title": "Development and delivery of Science to Media Training",
+      "location": "Fiji and New Caledonia",
+      "unit": "Communications",
+      "category": "Services",
+      "status": "Selection Process Ongoing",
+      "posting_date": "22 May 2025",
+      "posting_iso": "2025-05-22",
+      "closing_date": "24 June 2025",
+      "closing_iso": "2025-06-24",
+      "countries": [
+        "Fiji",
+        "New Caledonia"
+      ],
+      "opportunity_type": "rfq",
+      "source": "spc",
+      "url": "https://www.spc.int/procurement"
+    },
+    {
+      "ref": "RFP25-7988",
+      "title": "Supply of Satellite Imagery",
+      "location": "Fiji",
+      "unit": "GEM",
+      "category": "Services",
+      "status": "Selection Process Ongoing",
+      "posting_date": "4 June 2025",
+      "posting_iso": "2025-06-04",
+      "closing_date": "4 July 2025",
+      "closing_iso": "2025-07-04",
+      "countries": [
+        "Fiji"
+      ],
+      "opportunity_type": "rfp",
+      "source": "spc",
+      "url": "https://www.spc.int/procurement"
+    },
+    {
+      "ref": "RFQ25-7788",
+      "title": "Service Procurement for Wind Pump Installation, Rehabilitation, and Capacity Building on Kiritimati Island",
+      "location": "Kiribati",
+      "unit": "GEM",
+      "category": "Services",
+      "status": "Selection Process Ongoing",
+      "posting_date": "1 April 2025",
+      "posting_iso": "2025-04-01",
+      "closing_date": "21 April 2025 Submission Extension",
+      "closing_iso": "",
+      "countries": [
+        "Kiribati"
+      ],
+      "opportunity_type": "rfq",
+      "source": "spc",
+      "url": "https://www.spc.int/procurement"
+    },
+    {
+      "ref": "RFQ25-7682",
+      "title": "Supply and Delivery of Electrical Personal Protective Equipment",
+      "location": "Kiritimati Island, Kiribati",
+      "unit": "GEM",
+      "category": "Goods",
+      "status": "Selection Process Ongoing",
+      "posting_date": "2 March 2025",
+      "posting_iso": "2025-03-02",
+      "closing_date": "17 March 2025",
+      "closing_iso": "2025-03-17",
+      "countries": [
+        "Kiribati"
+      ],
+      "opportunity_type": "rfq",
+      "source": "spc",
+      "url": "https://www.spc.int/procurement"
+    },
+    {
+      "ref": "RFQ24-7452",
+      "title": "Supply of materials and construction of 3 x tank bases for the villages of Liku, Lakepa and Tuapa.",
+      "location": "Niue",
+      "unit": "GEM",
+      "category": "Goods",
+      "status": "Selection Process Ongoing",
+      "posting_date": "4 December 2024",
+      "posting_iso": "2024-12-04",
+      "closing_date": "18 December 2024",
+      "closing_iso": "2024-12-18",
+      "countries": [
+        "Niue"
+      ],
+      "opportunity_type": "rfq",
+      "source": "spc",
+      "url": "https://www.spc.int/procurement"
+    },
+    {
+      "ref": "RFQ24-7295",
+      "title": "Research, assess and advise on sustainable financing considerations for the Pacific Research Vessel",
+      "location": "Noumea",
+      "unit": "FAME",
+      "category": "Services",
+      "status": "Selection Process Ongoing",
+      "posting_date": "6 November 2024",
+      "posting_iso": "2024-11-06",
+      "closing_date": "10 December 2024",
+      "closing_iso": "2024-12-10",
+      "countries": [
+        "Pacific region"
+      ],
+      "opportunity_type": "rfq",
+      "source": "spc",
+      "url": "https://www.spc.int/procurement"
+    },
+    {
+      "ref": "RFQ24-7043",
+      "title": "BSRP II Project Coordinator Vanuatu - Readvertisement",
+      "location": "Port Vila, Vanuatu",
+      "unit": "GEM/Building Safety and Resilience in the Pacific Phase II",
+      "category": "Services",
+      "status": "Selection Process Ongoing",
+      "posting_date": "2 February 2025",
+      "posting_iso": "2025-02-02",
+      "closing_date": "3 March 2025",
+      "closing_iso": "2025-03-03",
+      "countries": [
+        "Vanuatu"
+      ],
+      "opportunity_type": "rfq",
+      "source": "spc",
+      "url": "https://www.spc.int/procurement"
+    },
+    {
+      "ref": "RFQ24-6948",
+      "title": "Leveraging Vanuatu’s National Green Energy Fund – GCF Funding Proposal Development Phase 1: Feasibility Study and Risk Assessment",
+      "location": "Home based with in-country missions to Vanuatu",
+      "unit": "CCES",
+      "category": "Services",
+      "status": "Selection Process Ongoing",
+      "posting_date": "15 August 2024",
+      "posting_iso": "2024-08-15",
+      "closing_date": "29 August 2024 Nature of the services: Undertake a feasibility study and risk assessments to inform the design of a GCF funding proposal. The Consultant/Firm will produce: i) the feasibility study (including economic analysis and stakeholder engagement plan); and ii) the risk assessment and management plan.",
+      "closing_iso": "",
+      "countries": [
+        "Vanuatu"
+      ],
+      "opportunity_type": "rfq",
+      "source": "spc",
+      "url": "https://www.spc.int/procurement"
+    },
+    {
+      "ref": "RFP24-6536",
+      "title": "Enterprise Wireless Connectivity Solution",
+      "location": "All SPC Locations",
+      "unit": "OMD - IS",
+      "category": "Goods, Services",
+      "status": "Selection Process Ongoing",
+      "posting_date": "25 June 2024",
+      "posting_iso": "2024-06-25",
+      "closing_date": "21 August 2024 Nature Of Service: Preferred Service Providers - Supply of Goods and Installation of Wireless Solutions across SPC Sites Submission Deadline Extended The Pacific Community hereby gives",
+      "closing_iso": "",
+      "countries": [
+        "Pacific region"
+      ],
+      "opportunity_type": "rfp",
+      "source": "spc",
+      "url": "https://www.spc.int/procurement"
+    },
+    {
+      "ref": "RFQ24-6451",
+      "title": "Uplink and broadcast to broadcast partners across the Pacific region throughout the Festival of Pacific Arts in partnership with SPC and Hawai",
+      "location": "Honolulu, Hawai’i",
+      "unit": "OMD - COMMS",
+      "category": "Services",
+      "status": "Selection Process Ongoing",
+      "posting_date": "23 April 2024",
+      "posting_iso": "2024-04-23",
+      "closing_date": "8 May 2024",
+      "closing_iso": "2024-05-08",
+      "countries": [
+        "Pacific region"
+      ],
+      "opportunity_type": "rfq",
+      "source": "spc",
+      "url": "https://www.spc.int/procurement"
+    },
+    {
+      "ref": "RFQ23-5621",
+      "title": "Hiring a Venue in Nadi for a Regional workshop from 21 to 24 November 2023 of Regional Qualifications - Pacific Adoption of Waste-to-energy solution (PAWES) project",
+      "location": "Fiji",
+      "unit": "GEM -PAWES",
+      "category": "Services",
+      "status": "Selection Process Ongoing",
+      "posting_date": "10 August 2023",
+      "posting_iso": "2023-08-10",
+      "closing_date": "25 August 2023",
+      "closing_iso": "2023-08-25",
+      "countries": [
+        "Fiji",
+        "Pacific region"
+      ],
+      "opportunity_type": "rfq",
+      "source": "spc",
+      "url": "https://www.spc.int/procurement"
+    },
+    {
+      "ref": "RFQ23-5578",
+      "title": "Production of event related collateral",
+      "location": "Fiji",
+      "unit": "HRSD",
+      "category": "Services",
+      "status": "Selection Process Ongoing",
+      "posting_date": "21 July 2023",
+      "posting_iso": "2023-07-21",
+      "closing_date": "4 August 2023",
+      "closing_iso": "2023-08-04",
+      "countries": [
+        "Fiji"
+      ],
+      "opportunity_type": "rfq",
+      "source": "spc",
+      "url": "https://www.spc.int/procurement"
+    },
+    {
+      "ref": "RFQ23-5117",
+      "title": "Supply and delivery of Survey equipment’s to Enhancing Work at the Cook Island Ministy of Marine Resources.",
+      "location": "Cook Islands",
+      "unit": "GEM - GCCA-SUPA",
+      "category": "Goods",
+      "status": "Selection Process Ongoing",
+      "posting_date": "23 March 2023",
+      "posting_iso": "2023-03-23",
+      "closing_date": "31 March 2023",
+      "closing_iso": "2023-03-31",
+      "countries": [
+        "Cook Islands"
+      ],
+      "opportunity_type": "rfq",
+      "source": "spc",
+      "url": "https://www.spc.int/procurement"
+    },
+    {
+      "ref": "RFQ23-5117",
+      "title": "Goods (Survey Equipment) for Cook Islands Ministry of Marine Resources (MMR).",
+      "location": "Cook Islands",
+      "unit": "GEM - GCCA SUPA",
+      "category": "Goods",
+      "status": "Selection Process Ongoing",
+      "posting_date": "27 February 2023",
+      "posting_iso": "2023-02-27",
+      "closing_date": "10 March 2023",
+      "closing_iso": "2023-03-10",
+      "countries": [
+        "Cook Islands"
+      ],
+      "opportunity_type": "rfq",
+      "source": "spc",
+      "url": "https://www.spc.int/procurement"
+    },
+    {
+      "ref": "RFQ23-5116",
+      "title": "Enhancing Work at the Cook Island Ministry of Marine Resources laboratory equipment’s will be delivered to the GCCA+SUPA Cook Islands National Coordinator based in the Ministry of Marine Resources in Rarotonga, Cook Islands.",
+      "location": "Cook Islands",
+      "unit": "GEM - GCCA-SUPA",
+      "category": "Goods",
+      "status": "Selection Process Ongoing",
+      "posting_date": "23 March 2023",
+      "posting_iso": "2023-03-23",
+      "closing_date": "31 March 2023",
+      "closing_iso": "2023-03-31",
+      "countries": [
+        "Cook Islands"
+      ],
+      "opportunity_type": "rfq",
+      "source": "spc",
+      "url": "https://www.spc.int/procurement"
+    },
+    {
+      "ref": "RFQ23-5047",
+      "title": "Event Management during the Pacific Prevention Summit from 23 -29 April 2023, Intercontinental Resort, Nadi.",
+      "location": "Fiji",
+      "unit": "HRSD",
+      "category": "Services",
+      "status": "Selection Process Ongoing",
+      "posting_date": "15 February 2023",
+      "posting_iso": "2023-02-15",
+      "closing_date": "3 March 2023",
+      "closing_iso": "2023-03-03",
+      "countries": [
+        "Fiji",
+        "Pacific region"
+      ],
+      "opportunity_type": "rfq",
+      "source": "spc",
+      "url": "https://www.spc.int/procurement"
+    },
+    {
+      "ref": "RFQ22-4921",
+      "title": "Motion graphic video production services",
+      "location": "Fiji",
+      "unit": "HRSD",
+      "category": "Services",
+      "status": "Selection Process Ongoing",
+      "posting_date": "16 December 2022",
+      "posting_iso": "2022-12-16",
+      "closing_date": "23 January 2023",
+      "closing_iso": "2023-01-23",
+      "countries": [
+        "Fiji"
+      ],
+      "opportunity_type": "rfq",
+      "source": "spc",
+      "url": "https://www.spc.int/procurement"
+    }
+  ]
+}

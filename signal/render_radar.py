@@ -50,6 +50,9 @@ a{color:var(--series-1)}
 .badge-gets{background:#2d6a4f;color:#fff}
 .badge-ausconnect{background:#0d7377;color:#fff}
 .badge-pipeline{background:#7b2d8e;color:#fff}
+.badge-spc{background:#1565c0;color:#fff}
+.badge-undp{background:#0468b1;color:#fff}
+.badge-rfq{background:#e07a3a;color:#fff}
 .closing-soon{color:#e05a3a;font-weight:600}
 .filters{display:flex;gap:.8rem;flex-wrap:wrap;margin:1rem 0;align-items:center}
 .filters select{padding:.35rem .6rem;border:1px solid var(--border);border-radius:5px;font-size:.85rem;background:var(--surface-card);color:var(--text-primary)}
@@ -106,6 +109,24 @@ def load_dfat_pipeline():
     items = dfat.get("items", [])
     as_at = dfat.get("as_at", "")
     return items, as_at
+
+
+def load_spc():
+    path = os.path.join(HERE, "data", "spc-latest.json")
+    if not os.path.exists(path):
+        return []
+    with open(path) as f:
+        data = json.load(f)
+    return [t for t in data.get("tenders", []) if t.get("status") == "Advertised"]
+
+
+def load_undp():
+    path = os.path.join(HERE, "data", "undp-latest.json")
+    if not os.path.exists(path):
+        return []
+    with open(path) as f:
+        data = json.load(f)
+    return data.get("jobs", [])
 
 
 def parse_close_date(iso_str):
@@ -168,13 +189,18 @@ def render_opportunity_card(opp):
     type_badges = {
         "position": '<span class="badge badge-position">Position</span>',
         "rfp": '<span class="badge badge-rfp">RFP</span>',
+        "rfq": '<span class="badge badge-rfq">RFQ</span>',
         "eoi": '<span class="badge badge-eoi">EOI</span>',
         "tender": '<span class="badge badge-tender">Tender</span>',
+        "rft": '<span class="badge badge-rfp">RFT</span>',
+        "itb": '<span class="badge badge-tender">ITB</span>',
     }
     type_badge = type_badges.get(opp_type, "")
     source_badges = {
         "ausconnect": '<span class="badge badge-ausconnect">AusConnect</span>',
         "gets": '<span class="badge badge-gets">NZ GETS</span>',
+        "spc": '<span class="badge badge-spc">SPC</span>',
+        "undp": '<span class="badge badge-undp">UNDP</span>',
     }
     source_badge = source_badges.get(source, "")
 
@@ -295,6 +321,8 @@ def render():
     ac_opps = load_ausconnect()
     gets_tenders = load_gets()
     pipeline, pipeline_as_at = load_dfat_pipeline()
+    spc_tenders = load_spc()
+    undp_jobs = load_undp()
 
     combined = []
 
@@ -337,6 +365,49 @@ def render():
         }
         combined.append(entry)
 
+    for t in spc_tenders:
+        close_iso = t.get("closing_iso", "")
+        if close_iso:
+            close_iso_full = close_iso + "T23:59:59+00:00"
+        else:
+            close_iso_full = None
+        entry = {
+            "title": t.get("title", ""),
+            "source": "spc",
+            "full_url": t.get("url", "https://www.spc.int/procurement"),
+            "close_iso": close_iso_full,
+            "close_display": t.get("closing_date", ""),
+            "days_until_close": days_until(close_iso_full) if close_iso_full else None,
+            "countries": t.get("countries", []),
+            "sectors": [t.get("category", "")] if t.get("category") else [],
+            "summary": f"{t.get('ref', '')}: {t.get('unit', '')}",
+            "opportunity_type": t.get("opportunity_type", "rfq"),
+            "managing_contractor": "",
+            "ref": t.get("ref", ""),
+        }
+        combined.append(entry)
+
+    for j in undp_jobs:
+        close_iso = j.get("closing_iso", "")
+        if close_iso:
+            close_iso_full = close_iso + "T23:59:59+00:00"
+        else:
+            close_iso_full = None
+        entry = {
+            "title": j.get("title", ""),
+            "source": "undp",
+            "full_url": j.get("url", ""),
+            "close_iso": close_iso_full,
+            "close_display": j.get("closing_date", ""),
+            "days_until_close": days_until(close_iso_full) if close_iso_full else None,
+            "countries": j.get("countries", []),
+            "sectors": [],
+            "summary": f"{j.get('agency', 'UNDP')} — {j.get('level', '')}",
+            "opportunity_type": "position",
+            "managing_contractor": "",
+        }
+        combined.append(entry)
+
     combined.sort(key=lambda x: x.get("close_iso") or "9999")
 
     open_opps = [o for o in combined if (o.get("days_until_close") or 0) >= 0]
@@ -344,8 +415,10 @@ def render():
 
     n_ac = len([o for o in combined if o["source"] == "ausconnect"])
     n_gets = len([o for o in combined if o["source"] == "gets"])
+    n_spc = len([o for o in combined if o["source"] == "spc"])
+    n_undp = len([o for o in combined if o["source"] == "undp"])
     n_positions = len([o for o in combined if o.get("opportunity_type") == "position"])
-    n_rfp = len([o for o in combined if o.get("opportunity_type") in ("rfp", "eoi", "tender")])
+    n_rfp = len([o for o in combined if o.get("opportunity_type") in ("rfp", "eoi", "tender", "rfq", "rft", "itb")])
 
     mc_counts = {}
     for o in open_opps:
@@ -403,7 +476,8 @@ function filterOpps(){
 <p style="font-size:.82rem;margin-bottom:.3rem"><a href="index.html">&larr; Home</a></p>
 <h1>Consultant Radar</h1>
 <p class="tagline">Live opportunities for independent consultants in Pacific development</p>
-<p class="intro">Aggregated from AusConnect (DFAT's subcontracting portal) and NZ GETS (New Zealand's government tenders).
+<p class="intro">Aggregated from AusConnect (DFAT subcontracting), NZ GETS (NZ government tenders),
+SPC (Pacific Community procurement), and UNDP (UN Development Programme).
 Updated {esc(now_str)}. Filters for Pacific island countries automatically applied.</p>
 
 <div class="stats">
@@ -427,6 +501,7 @@ on behalf of DFAT. Knowing which MC posted an opportunity tells you who to appro
     <option value="all">All types</option>
     <option value="position">Positions ({n_positions})</option>
     <option value="rfp">RFPs ({len([o for o in open_opps if o.get('opportunity_type')=='rfp'])})</option>
+    <option value="rfq">RFQs ({len([o for o in open_opps if o.get('opportunity_type')=='rfq'])})</option>
     <option value="eoi">EOIs ({len([o for o in open_opps if o.get('opportunity_type')=='eoi'])})</option>
     <option value="tender">Tenders ({len([o for o in open_opps if o.get('opportunity_type')=='tender'])})</option>
   </select>
@@ -435,6 +510,8 @@ on behalf of DFAT. Knowing which MC posted an opportunity tells you who to appro
     <option value="all">All sources</option>
     <option value="ausconnect">AusConnect ({n_ac})</option>
     <option value="gets">NZ GETS ({n_gets})</option>
+    <option value="spc">SPC ({n_spc})</option>
+    <option value="undp">UNDP ({n_undp})</option>
   </select>
   <label>MC:</label>
   <select id="f-mc" onchange="filterOpps()">
@@ -457,9 +534,11 @@ before positions are publicly advertised. The bar shows estimated progress throu
 consultants would otherwise check manually. It is part of the <a href="index.html">Asa</a> experiment — an autonomous
 AI agent investigating useful applications of AI in international development.</p>
 <p class="note">Sources: <a href="https://ausconnect.dfat.gov.au/opportunities" target="_blank" rel="noopener">AusConnect</a>
-(DFAT's managing contractor subcontracting portal), <a href="https://www.gets.govt.nz" target="_blank" rel="noopener">NZ GETS</a>
-(New Zealand Government Electronic Tenders), DFAT business notifications pipeline.
-ReliefWeb, SPC procurement, and other sources planned.</p>
+(DFAT subcontracting portal), <a href="https://www.gets.govt.nz" target="_blank" rel="noopener">NZ GETS</a>
+(NZ Government Electronic Tenders), <a href="https://www.spc.int/procurement" target="_blank" rel="noopener">SPC Procurement</a>
+(Pacific Community tenders), <a href="https://jobs.undp.org" target="_blank" rel="noopener">UNDP Jobs</a>,
+DFAT business notifications pipeline.
+Planned: ReliefWeb, PIFS, SPREP.</p>
 <p class="note">Built by <a href="about.html">Asa</a>, an AI agent. Not a person.</p>
 
 </div>
@@ -471,7 +550,7 @@ ReliefWeb, SPC procurement, and other sources planned.</p>
     with open(out, "w") as f:
         f.write(page)
     print(f"Wrote {out}")
-    print(f"  {len(open_opps)} open opportunities ({n_ac} AusConnect, {n_gets} GETS)")
+    print(f"  {len(open_opps)} open opportunities ({n_ac} AusConnect, {n_gets} GETS, {n_spc} SPC, {n_undp} UNDP)")
     print(f"  {len(closing_soon)} closing within 7 days")
     print(f"  {len(pacific_pipeline)} pipeline items in Timing Radar")
 

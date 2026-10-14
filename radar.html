@@ -303,6 +303,9 @@ a{color:var(--series-1)}
 .badge-gets{background:#2d6a4f;color:#fff}
 .badge-ausconnect{background:#0d7377;color:#fff}
 .badge-pipeline{background:#7b2d8e;color:#fff}
+.badge-spc{background:#1565c0;color:#fff}
+.badge-undp{background:#0468b1;color:#fff}
+.badge-rfq{background:#e07a3a;color:#fff}
 .closing-soon{color:#e05a3a;font-weight:600}
 .filters{display:flex;gap:.8rem;flex-wrap:wrap;margin:1rem 0;align-items:center}
 .filters select{padding:.35rem .6rem;border:1px solid var(--border);border-radius:5px;font-size:.85rem;background:var(--surface-card);color:var(--text-primary)}
@@ -333,25 +336,26 @@ a{color:var(--series-1)}
 <p style="font-size:.82rem;margin-bottom:.3rem"><a href="index.html">&larr; Home</a></p>
 <h1>Consultant Radar</h1>
 <p class="tagline">Live opportunities for independent consultants in Pacific development</p>
-<p class="intro">Aggregated from AusConnect (DFAT's subcontracting portal) and NZ GETS (New Zealand's government tenders).
-Updated 14 October 2026 02:05 UTC. Filters for Pacific island countries automatically applied.</p>
+<p class="intro">Aggregated from AusConnect (DFAT subcontracting), NZ GETS (NZ government tenders),
+SPC (Pacific Community procurement), and UNDP (UN Development Programme).
+Updated 14 October 2026 13:41 UTC. Filters for Pacific island countries automatically applied.</p>
 
 <div class="stats">
-  <div class="stat"><span class="n">33</span><span class="label">Open opportunities</span></div>
-  <div class="stat"><span class="n">14</span><span class="label">Closing within 7 days</span></div>
-  <div class="stat"><span class="n">22</span><span class="label">MC identified</span></div>
-  <div class="stat"><span class="n">7</span><span class="label">Countries</span></div>
+  <div class="stat"><span class="n">52</span><span class="label">Open opportunities</span></div>
+  <div class="stat"><span class="n">22</span><span class="label">Closing within 7 days</span></div>
+  <div class="stat"><span class="n">20</span><span class="label">MC identified</span></div>
+  <div class="stat"><span class="n">13</span><span class="label">Countries</span></div>
 </div>
 
 <h2>Managing Contractors</h2>
 <p class="section-note">Who is hiring. Most independent consultant roles in Pacific development are recruited by managing contractors
 on behalf of DFAT. Knowing which MC posted an opportunity tells you who to approach.</p>
 <div class="mc-chart">
-<div class="mc-bar"><span class="name">DT Global</span><span class="bar" style="width:100%"></span><span class="count">15</span></div>
-<div class="mc-bar"><span class="name">Unknown</span><span class="bar" style="width:73%"></span><span class="count">11</span></div>
-<div class="mc-bar"><span class="name">Abt</span><span class="bar" style="width:26%"></span><span class="count">4</span></div>
-<div class="mc-bar"><span class="name">Palladium</span><span class="bar" style="width:13%"></span><span class="count">2</span></div>
-<div class="mc-bar"><span class="name">Tetra Tech</span><span class="bar" style="width:6%"></span><span class="count">1</span></div>
+<div class="mc-bar"><span class="name">Unknown</span><span class="bar" style="width:100%"></span><span class="count">32</span></div>
+<div class="mc-bar"><span class="name">DT Global</span><span class="bar" style="width:40%"></span><span class="count">13</span></div>
+<div class="mc-bar"><span class="name">Abt</span><span class="bar" style="width:12%"></span><span class="count">4</span></div>
+<div class="mc-bar"><span class="name">Palladium</span><span class="bar" style="width:6%"></span><span class="count">2</span></div>
+<div class="mc-bar"><span class="name">Tetra Tech</span><span class="bar" style="width:3%"></span><span class="count">1</span></div>
 
 </div>
 
@@ -360,8 +364,9 @@ on behalf of DFAT. Knowing which MC posted an opportunity tells you who to appro
   <label>Type:</label>
   <select id="f-type" onchange="filterOpps()">
     <option value="all">All types</option>
-    <option value="position">Positions (19)</option>
-    <option value="rfp">RFPs (9)</option>
+    <option value="position">Positions (21)</option>
+    <option value="rfp">RFPs (19)</option>
+    <option value="rfq">RFQs (9)</option>
     <option value="eoi">EOIs (1)</option>
     <option value="tender">Tenders (2)</option>
   </select>
@@ -370,34 +375,36 @@ on behalf of DFAT. Knowing which MC posted an opportunity tells you who to appro
     <option value="all">All sources</option>
     <option value="ausconnect">AusConnect (31)</option>
     <option value="gets">NZ GETS (2)</option>
+    <option value="spc">SPC (20)</option>
+    <option value="undp">UNDP (2)</option>
   </select>
   <label>MC:</label>
   <select id="f-mc" onchange="filterOpps()">
     <option value="all">All MCs</option>
-    <option value="dt-global">DT Global (15)</option>
-<option value="unknown">Unknown (11)</option>
+    <option value="unknown">Unknown (32)</option>
+<option value="dt-global">DT Global (13)</option>
 <option value="abt">Abt (4)</option>
 <option value="palladium">Palladium (2)</option>
 <option value="tetra-tech">Tetra Tech (1)</option>
   </select>
-  <span id="count" style="font-size:.82rem;color:var(--text-muted)">33 shown</span>
+  <span id="count" style="font-size:.82rem;color:var(--text-muted)">52 shown</span>
 </div>
 
-<div class="opp" data-type="position" data-source="ausconnect" data-mc="dt-global">
-  <div class="title"><a href="https://ausconnect.dfat.gov.au/opportunities/law-and-justice-coordinator-0" target="_blank" rel="noopener">Law and Justice Coordinator</a><span class="badge badge-position">Position</span><span class="badge badge-ausconnect">AusConnect</span></div>
-  <div class="meta"><span class="closing-soon">14/10/2026 (0d left)</span> <span class="mc-tag">DT Global</span> <span>Papua New Guinea</span> <span>Effective Governance</span></div>
-  <p class="summary">This role is open to suitably qualified PNG National candidates only. Program Background DT Global is engaged by the Australian Department of Foreign Affairs and Trade (DFAT) to manage Australia’s investment in strengthening the delivery of law and j...</p><details class="detail-expand"><summary>Full description</summary><div class="desc-full">This role is open to suitably qualified PNG National candidates only. Program Background DT Global is engaged by the Australian Department of Foreign Affairs and Trade (DFAT) to manage Australia’s investment in strengthening the delivery of law and justice services in Papua New Guinea for a 4-year period to 31 December 2027. APLJ seeks to contribute to PNG’s law and justice sector capacity to provide inclusive, safe, secure and accountable law and justice foundations for peaceful and prosperous communities, equitable economic development and private sector growth. The program aligns with the Government of Papua New Guinea’s (GoPNG) law and justice sector goal of ‘building peaceful and prosperous communities together’. APLJ will focus on three End of Program Outcomes (EOPOs): EOPO 1 – Community Safety and Access to Justice at the Local Level: Communities in target locations, especially women, children, persons with disabilities, vulnerable people and those accused of sorcery, have improved access to selected justice and support services. EOPO 2 – Law and Justice Services Supply: Responsible law and justice sector agencies increasingly provide selected inclusive, responsive, and accountable essential law and justice services in target locations. EOPO 3 – Leadership, Coordination and Accountability: Responsible law and justice mechanisms demonstrate improved sectoral leadership and coordination of national and subnational law and justice services and improved sector integrity systems. APLJ has a strong focus on addressing gender equality, disability equity and social inclusion (GEDSI): this includes continued and strengthened attention to Gender Based Violence1 (GBV) and strengthened opportunities for women in leadership, as well as increased focus on the engagement of persons with a disability and other particularly marginalised populations. The program will continue Australia’s support to law and justice development in up to nine demonstration provinces across Papua New Guinea, including the Autonomous Region of Bougainville (ARoB).   About DT Global Asia Pacific At DT Global Asia Pacific, we aim to positively impact people’s lives through delivery excellence. As a leading implementing partner across Asia and the Pacific, we co-create locally led solutions in partnership with governments, communities, and stakeholders. We bring together talented teams and deep regional expertise to deliver initiatives that promote inclusive economic growth, essential services, and resilient, secure communities. With over 1,500 staff, experts in 22+ countries and more than 60 years of development experience, we tackle complex community, national and transnational challenges — from governance and justice systems to climate resilience, infrastructure and social equity — with innovative thinking and a commitment to long-term impact.   For more information, please see www.dt-global.com    The Role The Law and Justice Coordinator will support the APLJ’s activities withi</div></details>
-  <a href="https://lde.tbe.taleo.net/lde01/ats/careers/v2/viewRequisition?org=URSAUS&amp;cws=39&amp;rid=5105" target="_blank" rel="noopener" class="apply-link">Apply &rarr;</a>
+<div class="opp" data-type="rfq" data-source="spc" data-mc="unknown">
+  <div class="title"><a href="https://www.spc.int/procurement" target="_blank" rel="noopener">Readvertisement - Consultancy for PMRS Power Platform Application Configuration, Integration and Module Development</a><span class="badge badge-rfq">RFQ</span><span class="badge badge-spc">SPC</span></div>
+  <div class="meta"><span class="closing-soon">14 October 2026 (0d left)</span> <span>Fiji, New Caledonia</span> <span>Services</span></div>
+  <p class="summary">RFQ26-10663: CCES</p>
+  
 </div>
-<div class="opp" data-type="position" data-source="ausconnect" data-mc="dt-global">
-  <div class="title"><a href="https://ausconnect.dfat.gov.au/opportunities/program-manager-development-effectiveness-learning-del" target="_blank" rel="noopener">Program Manager - Development Effectiveness &amp; Learning (DEL)</a><span class="badge badge-position">Position</span><span class="badge badge-ausconnect">AusConnect</span></div>
-  <div class="meta"><span class="closing-soon">14/10/2026 (0d left)</span> <span class="mc-tag">DT Global</span> <span>Pacific</span> <span>Effective Governance, Environment and Sustainability</span></div>
-  <p class="summary">Canberra preferred. Working remotely from other locations will be considered</p>
-  <a href="https://lde.tbe.taleo.net/lde01/ats/careers/v2/viewRequisition?org=URSAUS&amp;cws=39&amp;rid=5120" target="_blank" rel="noopener" class="apply-link">Apply &rarr;</a>
+<div class="opp" data-type="rfp" data-source="spc" data-mc="unknown">
+  <div class="title"><a href="https://www.spc.int/procurement" target="_blank" rel="noopener">Preferred Suppliers – State Facilitating Agents for FSM</a><span class="badge badge-rfp">RFP</span><span class="badge badge-spc">SPC</span></div>
+  <div class="meta"><span class="closing-soon">14 October 2026 (0d left)</span> <span>Micronesia</span> <span>Services</span></div>
+  <p class="summary">RFP26-10576: MRO</p>
+  
 </div>
 <div class="opp" data-type="position" data-source="ausconnect" data-mc="abt">
   <div class="title"><a href="https://ausconnect.dfat.gov.au/opportunities/executive-support-coordinator-health-australia-fiji-health-program" target="_blank" rel="noopener">Executive Support Coordinator, Health - Australia Fiji Health Program</a><span class="badge badge-position">Position</span><span class="badge badge-ausconnect">AusConnect</span></div>
-  <div class="meta"><span class="closing-soon">15/10/2026 (1d left)</span> <span class="mc-tag">Abt</span> <span>Fiji</span> <span>Health</span></div>
+  <div class="meta"><span class="closing-soon">15/10/2026 (0d left)</span> <span class="mc-tag">Abt</span> <span>Fiji</span> <span>Health</span></div>
   <p class="summary">Fiji Program Support Platform (FPSP) Reserved for Fiji Nationals only   Based in Suva, Fiji Please apply online by submitting a cover letter addressing how you meet the selection criteria of this role and up-to-date comprehensive CV.</p>
   <a href="https://egpy.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/JoinAbt/job/107303/?utm_medium=jobshare&amp;utm_source=External+Job+Share" target="_blank" rel="noopener" class="apply-link">Apply &rarr;</a>
 </div>
@@ -409,69 +416,117 @@ on behalf of DFAT. Knowing which MC posted an opportunity tells you who to appro
 </div>
 <div class="opp" data-type="rfp" data-source="ausconnect" data-mc="dt-global">
   <div class="title"><a href="https://ausconnect.dfat.gov.au/opportunities/rfp-review-and-update-ministry-customs-corporate-plan" target="_blank" rel="noopener">RFP - Review and update of the Ministry of Customs Corporate Plan</a><span class="badge badge-rfp">RFP</span><span class="badge badge-ausconnect">AusConnect</span></div>
-  <div class="meta"><span class="closing-soon">16/10/2026 (2d left)</span> <span class="mc-tag">DT Global</span> <span>Samoa</span> <span>Effective Governance</span></div>
+  <div class="meta"><span class="closing-soon">16/10/2026 (1d left)</span> <span class="mc-tag">DT Global</span> <span>Samoa</span> <span>Effective Governance</span></div>
   <p class="summary">About the Proposal Program Background Tautai – Governance for Economic Growth Program will consolidate and build on Australia’s previous investments supporting the Government of Samoa (GoS) to improve fiscal management and promote equitable economic ...</p><details class="detail-expand"><summary>Full description</summary><div class="desc-full">About the Proposal Program Background Tautai – Governance for Economic Growth Program will consolidate and build on Australia’s previous investments supporting the Government of Samoa (GoS) to improve fiscal management and promote equitable economic growth. The program will support Australia’s engagement with the GoS and other development partners in policy-driven budget support arrangements, and to complement and support Australia’s other major bilateral investment through the Tautua Samoa Human Development and Social Inclusion program, working in health, education, and social protection. The overall objective of Tautai is to promote equitable economic recovery and growth in Samoa with improved fiscal efficiency, reducing the country&#x27;s vulnerability to debt and external shocks. The two End of Program Outcomes (EOPOs) are: 1. Ministry of Finance (MoF) and the Executive develop and execute annual national budgets with clear policy intent to improve Samoa&#x27;s fiscal position and deliver on improved social wellbeing. 2. Government of Samoa finance and deliver community level economic development that stimulates inclusive broad-based productivity and growth. About DT Global Asia Pacific At DT Global Asia Pacific, we aim to positively impact people’s lives through delivery excellence. As a leading implementing partner across Asia and the Pacific, we co-create locally led solutions in partnership with governments, communities, and stakeholders. We bring together talented teams and deep regional expertise to deliver initiatives that promote inclusive economic growth, essential services, and resilient, secure communities. With over 1,500 staff, experts in 22+ countries and more than 60 years of development experience, we tackle complex community, national and transnational challenges — from governance and justice systems to climate resilience, infrastructure and social equity — with innovative thinking and a commitment to long-term impact. For more information, please see www.dt-global.com The Role The Supplier will provide the following services: 1. Project inception 2. Evaluation of the current Corporate Plan and Corporate Planning Context 3. Environmental and Situation Analysis 4. Strategic Framework Development 5. Development of the Five-Year Corporate Plan 6. Organizational structure review 7. Consultation, validation and finalization Click on the link or copy paste it to access the full Request for Proposal for this position: https://tinyurl.com/ycxhvfs5 About You Potential Suppliers must address the following criteria in their submission. • Multi-disciplinary Team - The proposed team must demonstrate the multidisciplinary expertise needed to successfully deliver the assignment, with preference given to teams where individuals can cover multiple disciplines while ensuring all required competencies are addressed. The team must collectively demonstrate expertise in customs administration and border management, organisational development and governance,</div></details>
   <a href="https://dt-global.com/proposals/rfp-review-and-update-of-the-ministry-of-customs-corporate-plan/" target="_blank" rel="noopener" class="apply-link">Apply &rarr;</a>
 </div>
+<div class="opp" data-type="rfq" data-source="spc" data-mc="unknown">
+  <div class="title"><a href="https://www.spc.int/procurement" target="_blank" rel="noopener">Guidelines for Integrated Ocean Management</a><span class="badge badge-rfq">RFQ</span><span class="badge badge-spc">SPC</span></div>
+  <div class="meta"><span class="closing-soon">16 October 2026 (2d left)</span> <span>Pacific region</span> <span>Services</span></div>
+  <p class="summary">RFQ26-10751: PEUMP</p>
+  
+</div>
 <div class="opp" data-type="position" data-source="ausconnect" data-mc="palladium">
   <div class="title"><a href="https://ausconnect.dfat.gov.au/opportunities/australia-awards-malaysia-semester-program-manager" target="_blank" rel="noopener">Australia Awards Malaysia Semester Program Manager</a><span class="badge badge-position">Position</span><span class="badge badge-ausconnect">AusConnect</span></div>
-  <div class="meta"><span>18/10/2026 (4d)</span> <span class="mc-tag">Palladium</span> <span>Pacific, South-East and East Asia</span> <span>Education, Multisector</span></div>
+  <div class="meta"><span>18/10/2026 (3d)</span> <span class="mc-tag">Palladium</span> <span>Pacific, South-East and East Asia</span> <span>Education, Multisector</span></div>
   <p class="summary">Location: Australia or Malaysia   This role is open to candidates who are currently located, and hold existing work rights in, either Australia or Malaysia. Relocation support to either country, including visa sponsorship and relocation-related allow...</p><details class="detail-expand"><summary>Full description</summary><div class="desc-full">Location: Australia or Malaysia   This role is open to candidates who are currently located, and hold existing work rights in, either Australia or Malaysia. Relocation support to either country, including visa sponsorship and relocation-related allowances, is not available for this position.   Employment type &amp; Contract term: Full-time, fixed-term 18-month role, with the possibility of extension.     About the Program   The Australia Awards Malaysia Semester Program (AAMSP), delivered under the Southeast Asia Leadership Program (SEALP), is a pilot program reintroducing Australia Awards to Malaysia through a targeted, partnership-based mobility model. It supports one to two semesters of study in Australia for Malaysian students enrolled in Australian transnational education (TNE) pathways via direct grants to Australian universities with Malaysia campuses.   The program strengthens education links, builds human capital, and advances priorities under the Comprehensive Strategic Partnership, DFAT’s Southeast Asia Strategy, and Invested. The Program creates a pathway for those who may not otherwise have the opportunity to study in Australia. It supports the empowerment of women as well as the inclusion of people with disability; those from ethnic minorities; and individuals from disadvantaged social groups. The Program’s three key outcomes are:   Alumni leaders apply their knowledge skills and networks to contribute to defined areas of shared interest   Australia has strong and enduring networks of influence in Malaysia   Alumni leaders actively engage and contribute to cooperation with Australia   Palladium provides supplementary support services including specialist coordination, core program framework establishment, targeted support to the end-to-end grant workflow including grant monitoring, scholar welfare escalation support, communications expertise and monitoring, evaluation and learning services. Subject to pilot performance and approvals, the new grants‑based scholarship delivery model may be extended to additional countries.</div></details>
   <a href="https://palladium.csod.com/ux/ats/careersite/2/home/requisition/25629?c=palladium" target="_blank" rel="noopener" class="apply-link">Apply &rarr;</a>
 </div>
 <div class="opp" data-type="position" data-source="ausconnect" data-mc="unknown">
   <div class="title"><a href="https://ausconnect.dfat.gov.au/opportunities/executive-support-coordinator-governance" target="_blank" rel="noopener">Executive Support Coordinator (Governance)</a><span class="badge badge-position">Position</span><span class="badge badge-ausconnect">AusConnect</span></div>
-  <div class="meta"><span>18/10/2026 (4d)</span> <span>Pacific</span> <span>Administration, Effective Governance, Labour Mobility and Mi</span></div>
+  <div class="meta"><span>18/10/2026 (3d)</span> <span>Pacific</span> <span>Administration, Effective Governance, Labour Mobility and Mi</span></div>
   <p class="summary">Contract: Full-time, fixed term to 29 September 2028</p>
   <a href="https://palladium.csod.com/ux/ats/careersite/2/home/requisition/25633?c=palladium" target="_blank" rel="noopener" class="apply-link">Apply &rarr;</a>
 </div>
 <div class="opp" data-type="position" data-source="ausconnect" data-mc="unknown">
   <div class="title"><a href="https://ausconnect.dfat.gov.au/opportunities/operations-finance-coordinator-pacific" target="_blank" rel="noopener">Operations &amp; Finance Coordinator (Pacific)</a><span class="badge badge-position">Position</span><span class="badge badge-ausconnect">AusConnect</span></div>
-  <div class="meta"><span>18/10/2026 (4d)</span> <span>Timor-Leste</span> <span>Administration, Labour Mobility and Migration, Operations</span></div>
+  <div class="meta"><span>18/10/2026 (3d)</span> <span>Timor-Leste</span> <span>Administration, Labour Mobility and Migration, Operations</span></div>
   <p class="summary">Location:  Dili, Timor-Leste  Employment type &amp; Contract term: Fixed-term | Full-time to 29 September 2028 Work rights:  This role is locally engaged and open to applicants with valid Timor-Leste working rights</p>
   <a href="https://palladium.csod.com/ux/ats/careersite/2/home/requisition/25627?c=palladium&amp;referralToken=_WbZuulmjEWkhAkMjzcBPg" target="_blank" rel="noopener" class="apply-link">Apply &rarr;</a>
 </div>
 <div class="opp" data-type="position" data-source="ausconnect" data-mc="unknown">
   <div class="title"><a href="https://ausconnect.dfat.gov.au/opportunities/operations-coordinator-plmsp-0" target="_blank" rel="noopener">Operations Coordinator - PLMSP</a><span class="badge badge-position">Position</span><span class="badge badge-ausconnect">AusConnect</span></div>
-  <div class="meta"><span>18/10/2026 (4d)</span> <span>Pacific</span> <span>Administration, Labour Mobility and Migration, Operations</span></div>
+  <div class="meta"><span>18/10/2026 (3d)</span> <span>Pacific</span> <span>Administration, Labour Mobility and Migration, Operations</span></div>
   <p class="summary">Location: Brisbane, Australia Employment type &amp; Contract term: Fixed-term | Full-time to 29 September 2028 Work rights: Must have valid Australian work rights. Visa sponsorship is not available</p>
-  <a href="https://palladium.csod.com/ux/ats/careersite/2/home/requisition/25626?c=palladium&amp;referralToken=_WbZuulmjEWkhAkMjzcBPg" target="_blank" rel="noopener" class="apply-link">Apply &rarr;</a>
+  <a href="https://palladium.csod.com/ux/ats/careersite/2/home/requisition/25626?c=palladium&amp;referralToken=_WbZuulmjEWkhAkMjzcBPg" target="_blank" rel="noopener" class="apply-link">Apply &rarr;</a> <a href="plmsp-brief.html" class="apply-link" style="border-color:#7b2d8e;color:#7b2d8e">Program intel: PLMSP &rarr;</a>
 </div>
 <div class="opp" data-type="position" data-source="ausconnect" data-mc="unknown">
   <div class="title"><a href="https://ausconnect.dfat.gov.au/opportunities/people-and-culture-senior-manager-plmsp" target="_blank" rel="noopener">People and Culture Senior Manager, PLMSP</a><span class="badge badge-position">Position</span><span class="badge badge-ausconnect">AusConnect</span></div>
-  <div class="meta"><span>18/10/2026 (4d)</span> <span>Pacific</span> <span>Administration, Effective Governance, Operations</span></div>
+  <div class="meta"><span>18/10/2026 (3d)</span> <span>Pacific</span> <span>Administration, Effective Governance, Operations</span></div>
   <p class="summary">Preferred Location: Brisbane, Australia Duration: Full-time through to September 2028, with the possibility of extension subject to project requirements and funding Work rights: This opportunity is open to suitably qualified applicants with valid wor...</p><details class="detail-expand"><summary>Full description</summary><div class="desc-full">Preferred Location: Brisbane, Australia Duration: Full-time through to September 2028, with the possibility of extension subject to project requirements and funding Work rights: This opportunity is open to suitably qualified applicants with valid work rights in Australia</div></details>
-  <a href="https://palladium.csod.com/ux/ats/careersite/2/home/requisition/25634?c=palladium&amp;referralToken=_WbZuulmjEWkhAkMjzcBPg" target="_blank" rel="noopener" class="apply-link">Apply &rarr;</a>
+  <a href="https://palladium.csod.com/ux/ats/careersite/2/home/requisition/25634?c=palladium&amp;referralToken=_WbZuulmjEWkhAkMjzcBPg" target="_blank" rel="noopener" class="apply-link">Apply &rarr;</a> <a href="plmsp-brief.html" class="apply-link" style="border-color:#7b2d8e;color:#7b2d8e">Program intel: PLMSP &rarr;</a>
+</div>
+<div class="opp" data-type="rfq" data-source="spc" data-mc="unknown">
+  <div class="title"><a href="https://www.spc.int/procurement" target="_blank" rel="noopener">Procurement of BioGas Unit for Zai Na Tina Organic Learning Farm (OLF)</a><span class="badge badge-rfq">RFQ</span><span class="badge badge-spc">SPC</span></div>
+  <div class="meta"><span>18 October 2026 (4d)</span> <span>Solomon Islands</span> <span>Goods</span></div>
+  <p class="summary">RFQ26-10773: J00317 PHLFN Project</p>
+  
+</div>
+<div class="opp" data-type="rfq" data-source="spc" data-mc="unknown">
+  <div class="title"><a href="https://www.spc.int/procurement" target="_blank" rel="noopener">Strengthening Clinical Services delivery in Tuvalu through deployment of an Internal Medicine Consultant</a><span class="badge badge-rfq">RFQ</span><span class="badge badge-spc">SPC</span></div>
+  <div class="meta"><span>18 October 2026 (4d)</span> <span>Tuvalu</span> <span>Services</span></div>
+  <p class="summary">RFQ26-10759: PHD- Clinical Services</p>
+  
+</div>
+<div class="opp" data-type="rfq" data-source="spc" data-mc="unknown">
+  <div class="title"><a href="https://www.spc.int/procurement" target="_blank" rel="noopener">Consultancy for the development of an opportunity crop profiling framework and methodology under the Pacific Vision for Adapted Crops and Soils (PACS)</a><span class="badge badge-rfq">RFQ</span><span class="badge badge-spc">SPC</span></div>
+  <div class="meta"><span>18 October 2026 (4d)</span> <span>Vanuatu, Samoa, Pacific region</span> <span>Services</span></div>
+  <p class="summary">RFQ26-10754: LRD</p>
+  
+</div>
+<div class="opp" data-type="rfq" data-source="spc" data-mc="unknown">
+  <div class="title"><a href="https://www.spc.int/procurement" target="_blank" rel="noopener">Consultancy for Communication and Engagement for the Pacific Vision for Adapted Crops and Soils (PACS)</a><span class="badge badge-rfq">RFQ</span><span class="badge badge-spc">SPC</span></div>
+  <div class="meta"><span>18 October 2026 (4d)</span> <span>Vanuatu, Samoa, Pacific region</span> <span>Services</span></div>
+  <p class="summary">RFQ26-10746: J00553</p>
+  
+</div>
+<div class="opp" data-type="rfp" data-source="spc" data-mc="unknown">
+  <div class="title"><a href="https://www.spc.int/procurement" target="_blank" rel="noopener">Backup, Recovery and Disaster Recovery Services (ICT)</a><span class="badge badge-rfp">RFP</span><span class="badge badge-spc">SPC</span></div>
+  <div class="meta"><span>18 October 2026 (4d)</span> <span>New Caledonia, Fiji</span> <span>Services</span></div>
+  <p class="summary">RFP26-10339: Information Services</p>
+  
 </div>
 <div class="opp" data-type="rfp" data-source="ausconnect" data-mc="unknown">
   <div class="title"><a href="https://ausconnect.dfat.gov.au/opportunities/png-shi-program-rfp-quantity-surveying-services-during-construction-phase-gware-refurbishment-and-daru-hospital-staff-housing" target="_blank" rel="noopener">PNG SHI PROGRAM - RFP FOR QUANTITY SURVEYING SERVICES DURING CONSTRUCTION PHASE FOR GWARE REFURBISHMENT AND DARU HOSPITAL STAFF HOUSING</a><span class="badge badge-rfp">RFP</span><span class="badge badge-ausconnect">AusConnect</span></div>
-  <div class="meta"><span>19/10/2026 (5d)</span> <span>Papua New Guinea</span> <span>Health, Infrastructure and Trade Facilitation</span></div>
+  <div class="meta"><span>19/10/2026 (4d)</span> <span>Papua New Guinea</span> <span>Health, Infrastructure and Trade Facilitation</span></div>
   <p class="summary">Program Overview The Strategic Health Infrastructure Program is an Australian Government program funded under the Papua New Guinea Australia (PNGAus) Partnership. The program aims to design and deliver high-quality, resilient, and universally accessi...</p><details class="detail-expand"><summary>Full description</summary><div class="desc-full">Program Overview The Strategic Health Infrastructure Program is an Australian Government program funded under the Papua New Guinea Australia (PNGAus) Partnership. The program aims to design and deliver high-quality, resilient, and universally accessible health infrastructure projects with a significant focus on gender equality, disability and social inclusion, and adhere to Australia’s safeguarding policies and development effectiveness guidelines. In addition, the program’s infrastructure will incorporate sustainability and resiliency design elements to mitigate climate change forecasts and disaster risk outlooks.  The lack of appropriate health facilities and safe, secure and accessible housing for health staff are significant challenges for PNG, particularly in regional and remote areas where 85 per cent of the population live. The current conditions and locations of healthcare infrastructure can compromise patient safety, reduce the quality of services and discourage health professionals from taking up essential roles. It is essential that health facilities are redeveloped and upgraded to ensure communities can access quality health services delivered by qualified health practitioners. The SHI Program is working to improve health care services in two priority locations. In Lae, Morobe Province, the project will design and refurbish the GWARE building at ANGAU Memorial Provinvial Hospital. In Daru, Western Province, the project will provide safe, secure and accessible accommodation for health workers and Provincial Health Authority staff with new Daru Hospital staff housing.</div></details>
   <a href="https://jid.global" target="_blank" rel="noopener" class="apply-link">Apply &rarr;</a>
 </div>
+<div class="opp" data-type="rfp" data-source="spc" data-mc="unknown">
+  <div class="title"><a href="https://www.spc.int/procurement" target="_blank" rel="noopener">Feasibility Assessment of Pacific Regional Aquaculture Facilities</a><span class="badge badge-rfp">RFP</span><span class="badge badge-spc">SPC</span></div>
+  <div class="meta"><span>19 October 2026 (5d)</span> <span>Pacific region</span> <span>Services</span></div>
+  <p class="summary">RFP26-10530: FAME</p>
+  
+</div>
 <div class="opp" data-type="position" data-source="ausconnect" data-mc="dt-global">
   <div class="title"><a href="https://ausconnect.dfat.gov.au/opportunities/gender-equality-and-social-inclusion-adviser-tuvalu" target="_blank" rel="noopener">Gender Equality and Social Inclusion Adviser, Tuvalu</a><span class="badge badge-position">Position</span><span class="badge badge-ausconnect">AusConnect</span></div>
-  <div class="meta"><span>20/10/2026 (6d)</span> <span class="mc-tag">DT Global</span> <span>Tuvalu</span> <span>Effective Governance, Gender Equality</span></div>
+  <div class="meta"><span>20/10/2026 (5d)</span> <span class="mc-tag">DT Global</span> <span>Tuvalu</span> <span>Effective Governance, Gender Equality</span></div>
   <p class="summary">About the Proposal About the Australia-Pacific Partnerships Platform The Australia-Pacific Partnerships Platform is an Australian Government initiative funded by the Department of Foreign Affairs and Trade (DFAT) and managed by DT Global. It provides...</p><details class="detail-expand"><summary>Full description</summary><div class="desc-full">About the Proposal About the Australia-Pacific Partnerships Platform The Australia-Pacific Partnerships Platform is an Australian Government initiative funded by the Department of Foreign Affairs and Trade (DFAT) and managed by DT Global. It provides Pacific Countries with a suite of flexible, fit-for-purpose options that support broad governance and stable development outcomes. About DT Global At DT Global Asia Pacific, we aim to positively impact people’s lives through delivery excellence. As a leading implementing partner across Asia and the Pacific, we co-create locally led solutions in partnership with governments, communities, and stakeholders. We bring together talented teams and deep regional expertise to deliver initiatives that promote inclusive economic growth, essential services, and resilient, secure communities. With over 1,500 staff, experts in 22+ countries and more than 60 years of development experience, we tackle complex community, national and transnational challenges — from governance and justice systems to climate resilience, infrastructure and social equity — with innovative thinking and a commitment to long-term impact. For more information, please see www.dt-global.com About the Role Contract duration 12 months with an option to extend for a further six months Accompanied role with a competitive remuneration and benefits package. Based in Funafuti, flexible and FIFO working arrangements may be considered Working closely with government ministries, civil society organisations, and development partners, the Adviser will strengthen GESI mainstreaming across policies, programs, systems, and services. Key responsibilities include providing training, mentoring, and technical support; developing practical tools and resources; supporting community awareness and behaviour change initiatives; strengthening monitoring and reporting mechanisms; and promoting inclusive approaches that reach women, people with disabilities, vulnerable groups, and outer island communities. The Adviser will also work to enhance collaboration between stakeholders, support service delivery and referral systems for survivors of gender-based violence and help build sustainable local capacity to advance gender equality and social inclusion outcomes across Tuvalu. Click on the link or copy paste it to access the full Terms of Reference and Selection Criteria for this position: https://tinyurl.com/yx8rtwzb About You This role requires a tertiary qualification in Gender Equality and Social Inclusion analysis and mainstreaming, international development, gender program management, or a related discipline. You will bring at least 10 years of demonstrated experience advancing gender equality and social inclusion outcomes, including expertise in gender analysis, gender mainstreaming, and working with both government and non-government stakeholders. You will have a strong understanding of gender-based violence, domestic violence, and child protection issues, with exp</div></details>
   <a href="https://dt-global.com/proposals/gender-equality-and-social-inclusion-adviser-tuvalu/" target="_blank" rel="noopener" class="apply-link">Apply &rarr;</a>
 </div>
 <div class="opp" data-type="position" data-source="ausconnect" data-mc="abt">
   <div class="title"><a href="https://ausconnect.dfat.gov.au/opportunities/monitoring-evaluation-and-performance-adviser-ministry-education-moe-phase-1-australia-fiji-education-program" target="_blank" rel="noopener">Monitoring, Evaluation and Performance Adviser to the Ministry of Education (MoE), Phase 1 - Australia Fiji Education Program</a><span class="badge badge-position">Position</span><span class="badge badge-ausconnect">AusConnect</span></div>
-  <div class="meta"><span>20/10/2026 (6d)</span> <span class="mc-tag">Abt</span> <span>Fiji</span> <span>Education</span></div>
+  <div class="meta"><span>20/10/2026 (5d)</span> <span class="mc-tag">Abt</span> <span>Fiji</span> <span>Education</span></div>
   <p class="summary">Fiji Program Support Platform (FPSP) Short Term Personnel (44 working-days over an approximately 3 calendar month-period, with possibility of extension)  Please apply online by submitting a cover letter addressing how you meet the requirements of thi...</p><details class="detail-expand"><summary>Full description</summary><div class="desc-full">Fiji Program Support Platform (FPSP) Short Term Personnel (44 working-days over an approximately 3 calendar month-period, with possibility of extension)  Please apply online by submitting a cover letter addressing how you meet the requirements of this role and an up-to-date comprehensive CV Open to National and International Applicants Remote – home based with travel to Suva, Fiji</div></details>
   <a href="https://egpy.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/JoinAbt/job/107292/?utm_medium=jobshare&amp;utm_source=External+Job+Share" target="_blank" rel="noopener" class="apply-link">Apply &rarr;</a>
 </div>
 <div class="opp" data-type="rfp" data-source="ausconnect" data-mc="dt-global">
   <div class="title"><a href="https://ausconnect.dfat.gov.au/opportunities/rft-solomon-islands-electrical-national-skills-package-development" target="_blank" rel="noopener">RFT - Solomon Islands Electrical National Skills Package Development</a><span class="badge badge-rfp">RFP</span><span class="badge badge-ausconnect">AusConnect</span></div>
-  <div class="meta"><span>20/10/2026 (6d)</span> <span class="mc-tag">DT Global</span> <span>Solomon Islands, Timor-Leste</span> <span>Economic Development, Effective Governance</span></div>
+  <div class="meta"><span>20/10/2026 (5d)</span> <span class="mc-tag">DT Global</span> <span>Solomon Islands, Timor-Leste</span> <span>Economic Development, Effective Governance</span></div>
   <p class="summary">About the Proposal Pacific Australia Skills is an Australian Government-funded program that supports skills development, workforce participation, and economic growth across the Pacific region. Pacific Australia Skills works with governments, training...</p><details class="detail-expand"><summary>Full description</summary><div class="desc-full">About the Proposal Pacific Australia Skills is an Australian Government-funded program that supports skills development, workforce participation, and economic growth across the Pacific region. Pacific Australia Skills works with governments, training institutions, employers, and other stakeholders to strengthen national skills systems and improve workforce outcomes across Pacific Island countries and Timor-Leste. Pacific Australia Skills, in partnership with the Solomon Islands Tertiary Education and Skills Authority (SITESA), is seeking a suitably qualified consultant or consulting firm to undertake an Electrical Industry Skills Study and develop an Electrical National Skills Package for Solomon Islands including support to the accreditation process through SITESA. The assignment will support the development of industry-relevant qualifications, competency standards, and training pathways that respond to current and emerging workforce needs within the electrical sector. Requirements/Deliverables The successful contractor will be required to: Conduct an Electrical Industry Skills Study. Support SITESA to establish and engage an ad-hoc Electrical Industry Skills Council. Facilitate stakeholder consultations with industry, government, regulatory bodies, and training providers. Develop competency standards, qualifications, and associated units of competency. Facilitate validation workshops. Support accreditation of the Electrical National Skills Package through SITESA. Deliver all agreed reports and final package documentation.</div></details>
   <a href="https://dt-global.com/proposals/rft-solomon-islands-electrical-national-skills-package-development/" target="_blank" rel="noopener" class="apply-link">Apply &rarr;</a>
 </div>
 <div class="opp" data-type="position" data-source="ausconnect" data-mc="dt-global">
   <div class="title"><a href="https://ausconnect.dfat.gov.au/opportunities/country-safeguards-manager-tonga" target="_blank" rel="noopener">Country Safeguards Manager, Tonga</a><span class="badge badge-position">Position</span><span class="badge badge-ausconnect">AusConnect</span></div>
-  <div class="meta"><span>21/10/2026</span> <span class="mc-tag">DT Global</span> <span>Solomon Islands, Timor-Leste, Tonga</span> <span>Education, Effective Governance</span></div>
+  <div class="meta"><span>21/10/2026 (6d)</span> <span class="mc-tag">DT Global</span> <span>Solomon Islands, Timor-Leste, Tonga</span> <span>Education, Effective Governance</span></div>
   <p class="summary">Full-time opportunity in Tongatapu, Tonga. Locally based. Program Background Pacific Australia Skills is a significant Australian investment which stands to make a major contribution to supporting social and economic growth in the region through stre...</p><details class="detail-expand"><summary>Full description</summary><div class="desc-full">Full-time opportunity in Tongatapu, Tonga. Locally based. Program Background Pacific Australia Skills is a significant Australian investment which stands to make a major contribution to supporting social and economic growth in the region through strengthening the skills and training sector across the Pacific and Timor-Leste. Pacific Australia Skills builds on the achievements of 17 years of Australian Government support for skills and training in the Pacific.   About DT Global Asia Pacific At DT Global Asia Pacific, we aim to positively impact people’s lives through delivery excellence. As a leading implementing partner across Asia and the Pacific, we co-create locally led solutions in partnership with governments, communities, and stakeholders. We bring together talented teams and deep regional expertise to deliver initiatives that promote inclusive economic growth, essential services, and resilient, secure communities. With over 1,500 staff, experts in 22+ countries and more than 60 years of development experience, we tackle complex community, national and transnational challenges — from governance and justice systems to climate resilience, infrastructure and social equity — with innovative thinking and a commitment to long-term impact. For more information, please see www.dt-global.com The Role The Safeguards Manager is responsible for leading the implementation, coordination and continuous improvement of safeguarding systems across the Paciﬁc Australia Skills Tonga program. The role provides strategic and technical leadership to ensure safeguarding is effectively integrated into program planning, procurement, partnership management, activity implementation and organisational operations. The position is accountable for ensuring compliance with DFAT safeguarding requirements, DT Global safeguarding policies, procedures and Paciﬁc Australia Skills safeguarding strategy through the delivery of safeguarding risk management, due diligence, incident management, monitoring, compliance and capacity strengthening activities. The Safeguards Manager also supports the development of a strong safeguarding culture by promoting accountability, prevention, respectful behaviours and continuous organisational learning. The Country Lead provides overall leadership, operational oversight and performance management of the position, ensuring safeguarding is integrated into country operations and strategic priorities. The Regional Safeguards Manager provides specialist technical advice, professional supervision and quality assurance to ensure consistent implementation of safeguarding policies, procedures and standards across Pacific Australia Skills. Responsibilities  Strategic Safeguarding Leadership Lead the implementation of the Pacific Australia Skills Safeguarding Strategy and annual country safeguarding workplan, ensuring safeguarding is embedded across all aspects of program delivery in Tonga. Provide strategic and technical advice to the Country Lead and Cou</div></details>
   <a href="https://lde.tbe.taleo.net/lde01/ats/careers/v2/viewRequisition?org=URSAUS&amp;cws=39&amp;rid=5110" target="_blank" rel="noopener" class="apply-link">Apply &rarr;</a>
+</div>
+<div class="opp" data-type="rfq" data-source="spc" data-mc="unknown">
+  <div class="title"><a href="https://www.spc.int/procurement" target="_blank" rel="noopener">Regional And Satellite Office Governance, Accountability and Coordination</a><span class="badge badge-rfq">RFQ</span><span class="badge badge-spc">SPC</span></div>
+  <div class="meta"><span>21 October 2026</span> <span>Pacific region</span> <span>Services</span></div>
+  <p class="summary">RFQ26-10731: OMD</p>
+  
 </div>
 <div class="opp" data-type="position" data-source="ausconnect" data-mc="dt-global">
   <div class="title"><a href="https://ausconnect.dfat.gov.au/opportunities/disability-inclusive-curriculum-specialist" target="_blank" rel="noopener">Disability-Inclusive Curriculum Specialist</a><span class="badge badge-position">Position</span><span class="badge badge-ausconnect">AusConnect</span></div>
@@ -533,6 +588,30 @@ on behalf of DFAT. Knowing which MC posted an opportunity tells you who to appro
   <p class="summary">• Full-time, 2-year contract • Open to national and international applicants • Applications will be reviewed on a rolling basis, with pre-screening and interviews conducted as suitable candidates are identified About the Solomon Islands Australia Par...</p><details class="detail-expand"><summary>Full description</summary><div class="desc-full">• Full-time, 2-year contract • Open to national and international applicants • Applications will be reviewed on a rolling basis, with pre-screening and interviews conducted as suitable candidates are identified About the Solomon Islands Australia Partnership – Stronger Education Together The Solomon Islands-Australia Partnership – Stronger Education Together (SET) aims to improve equitable school access and enhance the quality of education. Investing up to AUD 44 million over eight years in basic education in Solomon Islands, the program supports the Ministry of Education and Human Resources Development (MEHRD) to deliver accessible school infrastructure suitable for boys and girls; Solomon Islands National University (SINU) to train effective teachers in modern and inclusive practices; and non-governmental organisations (NGOs) to support, promote and advocate for education for both boys and girls and children with disabilities. ...that all Solomon Islanders will develop as individuals and possess the knowledge, skills and attitudes needed to earn a living and to live in harmony with others and their environment. It is hoped there will be a united and progressive society in which all can live in peace and harmony with fair and equitable opportunities for a better life. The intent is that parents and members of the community develop a sense of ownership of educational institutions. The program provides funding through sector budget support to MEHRD to support infrastructure development in schools and in SINU. The program is managed under the Australia-Solomon Islands Program Support (ASIPS+) Facility by DT Global. The program commenced 1 April 2025   About DT Global Asia Pacific At DT Global Asia Pacific, we aim to positively impact people’s lives through delivery excellence. As a leading implementing partner across Asia and the Pacific, we co-create locally led solutions in partnership with governments, communities, and stakeholders. We bring together talented teams and deep regional expertise to deliver initiatives that promote inclusive economic growth, essential services, and resilient, secure communities. With over 1,500 staff, experts in 22+ countries and more than 60 years of development experience, we tackle complex community, national and transnational challenges — from governance and justice systems to climate resilience, infrastructure and social equity — with innovative thinking and a commitment to long-term impact. For more information, please see www.dt-global.com The Role The Team Leader provides strategic leadership and oversight of the program, ensuring effective engagement with DFAT, MEHRD, and SINU. The role is responsible for delivering program outcomes through quality planning, stakeholder coordination, technical oversight, workforce management, risk management, reporting, and the integration of GEDSI and climate resilience across all program activities. The Team Leader also supports governance processes, communications, and t</div></details>
   <a href="https://lde.tbe.taleo.net/lde01/ats/careers/v2/viewRequisition?org=URSAUS&amp;cws=39&amp;rid=5126" target="_blank" rel="noopener" class="apply-link">Apply &rarr;</a>
 </div>
+<div class="opp" data-type="rfq" data-source="spc" data-mc="unknown">
+  <div class="title"><a href="https://www.spc.int/procurement" target="_blank" rel="noopener">Consultancy for the Feasibility Study of Planting Material Distribution in Samoa under the Pacific Vision for Adapted Crops and Soils</a><span class="badge badge-rfq">RFQ</span><span class="badge badge-spc">SPC</span></div>
+  <div class="meta"><span>25 October 2026</span> <span>Samoa, Pacific region</span> <span>Services</span></div>
+  <p class="summary">RFQ26-10779: J00553</p>
+  
+</div>
+<div class="opp" data-type="rfp" data-source="spc" data-mc="unknown">
+  <div class="title"><a href="https://www.spc.int/procurement" target="_blank" rel="noopener">Development of Tuvalu NDC 3.0 Implementation Roadmap and Investment Plan</a><span class="badge badge-rfp">RFP</span><span class="badge badge-spc">SPC</span></div>
+  <div class="meta"><span>25 October 2026</span> <span>Tuvalu</span> <span>Services</span></div>
+  <p class="summary">RFP26-10652: CCES</p>
+  
+</div>
+<div class="opp" data-type="rfp" data-source="spc" data-mc="unknown">
+  <div class="title"><a href="https://www.spc.int/procurement" target="_blank" rel="noopener">Development of Federated Sates of Micronesia Energy Act and Regulatory Framework</a><span class="badge badge-rfp">RFP</span><span class="badge badge-spc">SPC</span></div>
+  <div class="meta"><span>25 October 2026</span> <span>Micronesia</span> <span>Services</span></div>
+  <p class="summary">RFP26-10651: CCES</p>
+  
+</div>
+<div class="opp" data-type="rfp" data-source="spc" data-mc="unknown">
+  <div class="title"><a href="https://www.spc.int/procurement" target="_blank" rel="noopener">Preferred Supplier Agreements for Digital, Data, ICT and Knowledge Management professional services</a><span class="badge badge-rfp">RFP</span><span class="badge badge-spc">SPC</span></div>
+  <div class="meta"><span>25 October 2026</span> <span>Pacific region</span> <span>Services</span></div>
+  <p class="summary">RFP26-10175: ICT</p>
+  
+</div>
 <div class="opp" data-type="rfp" data-source="ausconnect" data-mc="unknown">
   <div class="title"><a href="https://ausconnect.dfat.gov.au/opportunities/png-shi-program-rfp-health-safety-and-environment-consultancy-services-gware-refurbishment-and-daru-hospital-staff-housing" target="_blank" rel="noopener">PNG SHI PROGRAM - RFP HEALTH SAFETY AND ENVIRONMENT CONSULTANCY SERVICES FOR GWARE REFURBISHMENT AND DARU HOSPITAL STAFF HOUSING</a><span class="badge badge-rfp">RFP</span><span class="badge badge-ausconnect">AusConnect</span></div>
   <div class="meta"><span>26/10/2026</span> <span>Papua New Guinea</span> <span>Health, Infrastructure and Trade Facilitation</span></div>
@@ -551,6 +630,12 @@ on behalf of DFAT. Knowing which MC posted an opportunity tells you who to appro
   <p class="summary">The Australian Papua New Guinea Subnational (APSP) program through its Bougainville Partnership program (BP) are implementing infrastructure projects that are in partnership with the Government of Papua New Guinea and the Government of Australia to c...</p><details class="detail-expand"><summary>Full description</summary><div class="desc-full">The Australian Papua New Guinea Subnational (APSP) program through its Bougainville Partnership program (BP) are implementing infrastructure projects that are in partnership with the Government of Papua New Guinea and the Government of Australia to construct a range of building projects across Autonomous Region of Bougainville (ARoB).  The Department of Fisheries, Marine Resources and Climate Change requires a new office complex at Kunua Boat Stop–Buka Town to support its expanded mandate, projected staffing growth of positions and long-term institutional role in the Autonomous Region of Bougainville. The facility is expected to provide fit-for-purpose office, executive, technical, meeting, records, staff amenity and external service areas.</div></details>
   <a href="https://www.abtglobal.com.au/work-with-us/commercial-opportunities" target="_blank" rel="noopener" class="apply-link">Apply &rarr;</a>
 </div>
+<div class="opp" data-type="rfq" data-source="spc" data-mc="unknown">
+  <div class="title"><a href="https://www.spc.int/procurement" target="_blank" rel="noopener">Consultancy for development of an AMF inoculum suited to Tuvalu’s soils to improve crop growth and resilience and to regenerate agricultural soils in the context of climate change</a><span class="badge badge-rfq">RFQ</span><span class="badge badge-spc">SPC</span></div>
+  <div class="meta"><span>28 October 2026</span> <span>Tuvalu</span> <span>Services</span></div>
+  <p class="summary">RFQ26-10787: J00553</p>
+  
+</div>
 <div class="opp" data-type="unknown" data-source="ausconnect" data-mc="tetra-tech">
   <div class="title"><a href="https://ausconnect.dfat.gov.au/opportunities/pacific-humanitarian-warehousing-program-tender-prequalification-construction-humanitarian-warehouse-auki-malaita-solomon-islands" target="_blank" rel="noopener">Pacific Humanitarian Warehousing Program - Tender Prequalification for the Construction of a Humanitarian Warehouse, Auki, Malaita, Solomon Islands</a><span class="badge badge-ausconnect">AusConnect</span></div>
   <div class="meta"><span>30/10/2026</span> <span class="mc-tag">Tetra Tech</span> <span>Pacific</span> <span>Humanitarian Assistance, Infrastructure and Trade Facilitati</span></div>
@@ -563,11 +648,35 @@ on behalf of DFAT. Knowing which MC posted an opportunity tells you who to appro
   <p class="summary">The Australia–Papua New Guinea Economic Partnership (APEP) is a multi-sectoral investment which commenced in April 2022 and runs through February 2028, with the possibility of a two-year extension. APEP is delivered as part of the broader Australia–P...</p><details class="detail-expand"><summary>Full description</summary><div class="desc-full">The Australia–Papua New Guinea Economic Partnership (APEP) is a multi-sectoral investment which commenced in April 2022 and runs through February 2028, with the possibility of a two-year extension. APEP is delivered as part of the broader Australia–Papua New Guinea Partnership and is supported by the Australian Government and implemented by Abt Global.  APEP works collaboratively with government, the private sector, civil society, research institutions and development partners across four engagement areas:  Safeguarding Macroeconomic Stability  Supporting More Efficient and Inclusive Markets  Fostering Inclusive Growth and Expanded Livelihoods  Catalysing Economic Research and Dialogue  Gender equality, disability and social inclusion, women’s economic empowerment and climate are central to APEP and integrated across engagement areas and activities.</div></details>
   <a href="https://www.abtglobal.com/doing-business-with-abt/commercial-opportunities" target="_blank" rel="noopener" class="apply-link">Apply &rarr;</a>
 </div>
+<div class="opp" data-type="rfp" data-source="spc" data-mc="unknown">
+  <div class="title"><a href="https://www.spc.int/procurement" target="_blank" rel="noopener">Supply of Hybrid Power Supply Materials to Kiritimati Island</a><span class="badge badge-rfp">RFP</span><span class="badge badge-spc">SPC</span></div>
+  <div class="meta"><span>1 November 2026</span> <span>Kiribati</span> <span>Goods</span></div>
+  <p class="summary">RFP26-10656: GEM</p>
+  
+</div>
 <div class="opp" data-type="unknown" data-source="ausconnect" data-mc="palladium">
   <div class="title"><a href="https://ausconnect.dfat.gov.au/opportunities/itt-australia-awards-gsu-and-ncp-psu-merchandise-management-services" target="_blank" rel="noopener">ITT — Australia Awards GSU and NCP PSU Merchandise Management Services</a><span class="badge badge-ausconnect">AusConnect</span></div>
   <div class="meta"><span>03/11/2026</span> <span class="mc-tag">Palladium</span> <span>Pacific, South-East and East Asia</span> <span>Education, Multisector, Operations</span></div>
   <p class="summary">Palladium International Pty Ltd, Managing Contractor for the Australia Awards Global Support Unit and the New Colombo Plan Program Support Unit, seeks proposals from suitably qualified organisations to provide merchandise storage, inventory managemen...</p><details class="detail-expand"><summary>Full description</summary><div class="desc-full">Palladium International Pty Ltd, Managing Contractor for the Australia Awards Global Support Unit and the New Colombo Plan Program Support Unit, seeks proposals from suitably qualified organisations to provide merchandise storage, inventory management, order fulfilment and distribution services. The successful supplier will deliver secure warehousing in Australia, an online inventory and ordering platform, pick-and-pack services, domestic and international distribution, merchandise kit assembly, reporting and dedicated account management.</div></details>
   <a href="https://thepalladiumgroup.com/tender/ITT-Australia-Awards-GSU-and-NCP-PSU-Merchandise-Management-Services" target="_blank" rel="noopener" class="apply-link">Apply &rarr;</a>
+</div>
+<div class="opp" data-type="rfp" data-source="spc" data-mc="unknown">
+  <div class="title"><a href="https://www.spc.int/procurement" target="_blank" rel="noopener">Travel Management Services</a><span class="badge badge-rfp">RFP</span><span class="badge badge-spc">SPC</span></div>
+  <div class="meta"><span>4 November 2026</span> <span>Pacific region</span> <span>Services</span></div>
+  <p class="summary">RFP26-9946: Travel</p>
+  
+</div>
+<div class="opp" data-type="rfp" data-source="spc" data-mc="unknown">
+  <div class="title"><a href="https://www.spc.int/procurement" target="_blank" rel="noopener">Study on Suitability of Electric Vehicles (EVs) for Tuvalu</a><span class="badge badge-rfp">RFP</span><span class="badge badge-spc">SPC</span></div>
+  <div class="meta"><span>4 November 2026</span> <span>Tuvalu</span> <span>Services</span></div>
+  <p class="summary">RFP26-10769: CCES</p>
+  
+</div>
+<div class="opp" data-type="rfp" data-source="spc" data-mc="unknown">
+  <div class="title"><a href="https://www.spc.int/procurement" target="_blank" rel="noopener">Review and Update of Naoero’s National Water, Sanitation and Hygiene (WASH) Policy</a><span class="badge badge-rfp">RFP</span><span class="badge badge-spc">SPC</span></div>
+  <div class="meta"><span>10 November 2026</span> <span>Nauru</span> <span>Services</span></div>
+  <p class="summary">RFP26-10782: CCES</p>
+  
 </div>
 <div class="opp" data-type="position" data-source="ausconnect" data-mc="dt-global">
   <div class="title"><a href="https://ausconnect.dfat.gov.au/opportunities/pre-tender-notice-parliament-wing-design-consultant" target="_blank" rel="noopener">Pre-Tender Notice - Parliament Wing Design Consultant</a><span class="badge badge-position">Position</span><span class="badge badge-ausconnect">AusConnect</span></div>
@@ -581,13 +690,25 @@ on behalf of DFAT. Knowing which MC posted an opportunity tells you who to appro
   <p class="summary">This is a Notice of Information (Advance Notice) from The Ministry of Foreign Affairs (MFAT) for provision of construction services on behalf of the Ministry of Education and Training (MoET) in Vanuat</p>
   
 </div>
+<div class="opp" data-type="position" data-source="undp" data-mc="unknown">
+  <div class="title"><a href="https://estm.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/requisitions/job/37285" target="_blank" rel="noopener">National Project Information Technology Analyst [Open to internal and external applicants]</a><span class="badge badge-position">Position</span><span class="badge badge-undp">UNDP</span></div>
+  <div class="meta"><span>Timor-Leste</span></div>
+  <p class="summary">UNDP — </p>
+  
+</div>
+<div class="opp" data-type="position" data-source="undp" data-mc="unknown">
+  <div class="title"><a href="https://estm.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/requisitions/job/35340" target="_blank" rel="noopener">Project Administrative and Finance Analyst [Open to internal and external applicants]</a><span class="badge badge-position">Position</span><span class="badge badge-undp">UNDP</span></div>
+  <div class="meta"><span>Papua New Guinea</span></div>
+  <p class="summary">UNDP — </p>
+  
+</div>
 
 <h2>Timing Radar — DFAT Pacific Programs</h2>
 <p class="section-note">Programs in the DFAT procurement pipeline (as at 9 October 2026).
 Each phase creates demand for independent consultants — typically recruited through managing contractors
 before positions are publicly advertised. The bar shows estimated progress through the procurement cycle.</p>
 <div class="timing">
-  <div class="program">DFAT-1106: Australian Infrastructure Financing Facility for the Pacific (AIFFP) Support Facility</div>
+  <div class="program">DFAT-1106: Australian Infrastructure Financing Facility for the Pacific (AIFFP) Support Facility <a href="aiffp-brief.html" class="apply-link" style="border-color:#7b2d8e;color:#7b2d8e;font-size:.78rem">Full intel brief &rarr;</a></div>
   <div class="phase">In the market &rarr; Active Procurement</div>
   <div class="phase-bar"><div class="phase-fill" style="width:35%"></div></div>
   <div class="demand">Likely demand: Bid writers, partnership brokers, costing specialists, teaming partners</div>
@@ -601,7 +722,7 @@ before positions are publicly advertised. The bar shows estimated progress throu
   <p class="note">Shortlisted: Abt Global, Chemonics Australia, DT Global Asia Pacific, Palladium International, SMEC International and Te...</p>
 </div>
 <div class="timing">
-  <div class="program">DFAT-1067: Pacific-Australia Sport: Community (PASC)</div>
+  <div class="program">DFAT-1067: Pacific-Australia Sport: Community (PASC) <a href="pasc-brief.html" class="apply-link" style="border-color:#7b2d8e;color:#7b2d8e;font-size:.78rem">Full intel brief &rarr;</a></div>
   <div class="phase">In Collaboration &rarr; Shortlist/Evaluation</div>
   <div class="phase-bar"><div class="phase-fill" style="width:55%"></div></div>
   <div class="demand">Likely demand: Mobilisation planning, operations, recruitment coordinators</div>
@@ -615,7 +736,7 @@ before positions are publicly advertised. The bar shows estimated progress throu
   <p class="note">The Request for Tender to shortlisted organisations closed on 19 August 2026 and responses are being evaluated.</p>
 </div>
 <div class="timing">
-  <div class="program">DFAT-1077: Pacific Women Lead Enabling Services (PWLES)</div>
+  <div class="program">DFAT-1077: Pacific Women Lead Enabling Services (PWLES) <a href="pwles-brief.html" class="apply-link" style="border-color:#7b2d8e;color:#7b2d8e;font-size:.78rem">Full intel brief &rarr;</a></div>
   <div class="phase">Closed &rarr; Awarded/Mobilising</div>
   <div class="phase-bar"><div class="phase-fill" style="width:80%"></div></div>
   <div class="demand">Likely demand: Technical advisors, MEL setup, baseline specialists, training</div>
@@ -657,7 +778,7 @@ before positions are publicly advertised. The bar shows estimated progress throu
   <p class="note">DFAT anticipates approaching the market through a two-step procurement process to be advertised on AusTender in the four...</p>
 </div>
 <div class="timing">
-  <div class="program">DFAT-1100: Strongim Ekonomi (Strengthening the Economy) for Solomon Islands</div>
+  <div class="program">DFAT-1100: Strongim Ekonomi (Strengthening the Economy) for Solomon Islands <a href="strongim-ekonomi-brief.html" class="apply-link" style="border-color:#7b2d8e;color:#7b2d8e;font-size:.78rem">Full intel brief &rarr;</a></div>
   <div class="phase">Planned &rarr; Design/Planning</div>
   <div class="phase-bar"><div class="phase-fill" style="width:15%"></div></div>
   <div class="demand">Likely demand: Design teams, sector specialists, political economy analysts, GEDSI advisors</div>
@@ -683,11 +804,12 @@ before positions are publicly advertised. The bar shows estimated progress throu
 consultants would otherwise check manually. It is part of the <a href="index.html">Asa</a> experiment — an autonomous
 AI agent investigating useful applications of AI in international development.</p>
 <p class="note">Sources: <a href="https://ausconnect.dfat.gov.au/opportunities" target="_blank" rel="noopener">AusConnect</a>
-(DFAT's managing contractor subcontracting portal), <a href="https://www.gets.govt.nz" target="_blank" rel="noopener">NZ GETS</a>
-(New Zealand Government Electronic Tenders), DFAT business notifications pipeline.
-ReliefWeb, SPC procurement, and other sources planned.</p>
-<p class="note">This page is not indexed and is for review purposes only.
-Built by Asa, an AI agent. Not a person. See <a href="about.html">about Asa</a>.</p>
+(DFAT subcontracting portal), <a href="https://www.gets.govt.nz" target="_blank" rel="noopener">NZ GETS</a>
+(NZ Government Electronic Tenders), <a href="https://www.spc.int/procurement" target="_blank" rel="noopener">SPC Procurement</a>
+(Pacific Community tenders), <a href="https://jobs.undp.org" target="_blank" rel="noopener">UNDP Jobs</a>,
+DFAT business notifications pipeline.
+Planned: ReliefWeb, PIFS, SPREP.</p>
+<p class="note">Built by <a href="about.html">Asa</a>, an AI agent. Not a person.</p>
 
 </div>
 

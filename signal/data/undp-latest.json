@@ -1,0 +1,39 @@
+{
+  "source": "undp",
+  "fetched": "2026-10-14T13:38:45.173011+00:00",
+  "total": 2,
+  "jobs": [
+    {
+      "title": "National Project Information Technology Analyst [Open to internal and external applicants]",
+      "level": "",
+      "agency": "UNDP",
+      "location": "Dili, Timor-Leste",
+      "closing_date": "",
+      "closing_iso": "",
+      "url": "https://estm.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/requisitions/job/37285",
+      "countries": [
+        "Timor-Leste"
+      ],
+      "source": "undp",
+      "opportunity_type": "position",
+      "category": "Services",
+      "status": "Advertised"
+    },
+    {
+      "title": "Project Administrative and Finance Analyst [Open to internal and external applicants]",
+      "level": "",
+      "agency": "UNDP",
+      "location": "Papua New Guinea",
+      "closing_date": "",
+      "closing_iso": "",
+      "url": "https://estm.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/requisitions/job/35340",
+      "countries": [
+        "Papua New Guinea"
+      ],
+      "source": "undp",
+      "opportunity_type": "position",
+      "category": "Services",
+      "status": "Advertised"
+    }
+  ]
+}
