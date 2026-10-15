@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-14T19:36:07Z",
+ "generated": "2026-10-15T01:43:32Z",
  "date": "2026-10-15",
  "countries": {
   "PG": {
@@ -13527,7 +13527,7 @@
   }
  },
  "dfat": {
-  "fetched": "2026-10-14T19:36:07Z",
+  "fetched": "2026-10-15T01:43:32Z",
   "notices": [
    {
     "title": "Request for Proposal for Pacific Media Assistance Scheme 5",
@@ -14961,7 +14961,7 @@
   ]
  },
  "nz": {
-  "fetched": "2026-10-14T19:37:03Z",
+  "fetched": "2026-10-15T01:44:17Z",
   "tenders": [
    {
     "id": "35116860",
@@ -15139,30 +15139,6 @@
      "date": "2026-09-09"
     },
     "summary": "The New Zealand Government, through the Ministry of Foreign Affairs and Trade (MFAT), is partnering with the Government of Tuvalu to strengthen the management of Tuvalu\u2019s fisheries resources. As part of this, MFAT and the Tuvalu Fisheries Authority (TFA) are seeking a Tuvalu Fisheries Adviser (Offshore) to provide technical assistance and capacity development support to the TFA, helping to maximise sustainable benefits from Tuvalu\u2019s rich marine resources. This part time role will be remote with extended in-country visits and contracted directly to MFAT. It is a senior technical advisory position working alongside the TFA Managing Director and supporting the delivery of the Tuvalu Fisheries S"
-   },
-   {
-    "id": "33688717",
-    "ref": "WPG-0105239",
-    "title": "Principal Advisor, Revenue Management - Niue",
-    "type": "ROI",
-    "date_label": "10:19 AM 7 Sep 2026 (Pacific/Auckland UTC+12:00)",
-    "org": "Ministry of Foreign Affairs and Trade",
-    "status": "completed",
-    "url": "https://www.gets.govt.nz/MFAT/ExternalTenderDetails.htm?id=33688717",
-    "opened": "Friday, 13 March 2026 9:00 AM (Pacific/Auckland UTC+13:00)",
-    "closes": "Sunday, 5 April 2026 5:00 PM (Pacific/Auckland UTC+12:00)",
-    "dept": "Crown Funding",
-    "type_full": "Registration of Interest (ROI)",
-    "coverage": "Sole Agency",
-    "categories": "84110000 - Accounting and bookkeeping services",
-    "regions": "International",
-    "overview": "The New Zealand Government, through the Ministry of Foreign Affairs and Trade (MFAT), is partnering with the Government of Niue to strengthen the collection, management, and long\u2011term sustainability of government revenue. MFAT and the Government of Niue are seeking a Principal Adviser - Revenue Strategy to support improved revenue recovery, lead policy and legislative development, and drive strategic initiatives that enhance fiscal sustainability. This role will be based in Alofi and contracted directly to MFAT. It is a senior technical advisory position working closely with the Niue Prime Minister\u2019s Office, Treasury, Customs, Tax, and other revenue\u2011generating departments to strengthen syste",
-    "outcome": {
-     "state": "awarded",
-     "supplier_withheld": true,
-     "date": "2026-09-07"
-    },
-    "summary": "The New Zealand Government, through the Ministry of Foreign Affairs and Trade (MFAT), is partnering with the Government of Niue to strengthen the collection, management, and long\u2011term sustainability of government revenue. MFAT and the Government of Niue are seeking a Principal Adviser - Revenue Strategy to support improved revenue recovery, lead policy and legislative development, and drive strategic initiatives that enhance fiscal sustainability. This role will be based in Alofi and contracted directly to MFAT. It is a senior technical advisory position working closely with the Niue Prime Minister\u2019s Office, Treasury, Customs, Tax, and other revenue\u2011generating departments to strengthen syste"
    }
   ]
  }
