@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-16T01:45:58Z",
+ "generated": "2026-10-16T07:41:14Z",
  "date": "2026-10-16",
  "countries": {
   "PG": {
@@ -11124,8 +11124,19 @@
     }
    ],
    "wb_recent": [],
-   "wb_pipeline": [],
-   "n_wb_total": 0
+   "wb_pipeline": [
+    {
+     "id": "P175181",
+     "name": "RMI First Enhancing Sustainability Development Policy Operation with a Catastrophe-Deferred Drawdown Option",
+     "amount": 21000000.0
+    },
+    {
+     "id": "P181252",
+     "name": "RMI Strengthening Public Financial Management II",
+     "amount": 10000000.0
+    }
+   ],
+   "n_wb_total": 21
   },
   "PW": {
    "code": "PW",
@@ -11746,8 +11757,14 @@
     }
    ],
    "wb_recent": [],
-   "wb_pipeline": [],
-   "n_wb_total": 0
+   "wb_pipeline": [
+    {
+     "id": "P180227",
+     "name": "Palau Blue Prosperity",
+     "amount": 10000000.0
+    }
+   ],
+   "n_wb_total": 3
   },
   "NR": {
    "code": "NR",
@@ -13593,7 +13610,7 @@
   }
  },
  "dfat": {
-  "fetched": "2026-10-16T01:45:58Z",
+  "fetched": "2026-10-16T07:41:14Z",
   "notices": [
    {
     "title": "Request for Proposal for Pacific Media Assistance Scheme 5",
@@ -15021,26 +15038,26 @@
   ]
  },
  "nz": {
-  "fetched": "2026-10-16T01:46:43Z",
+  "fetched": "2026-10-16T07:41:58Z",
   "tenders": [
    {
-    "id": "35116860",
-    "ref": "WS96309782",
-    "title": "Pacific Homework and Tutoring Initiative",
-    "type": "NOI",
-    "date_label": "5:00 PM 16 Oct 2026 (Pacific/Auckland UTC+13:00)",
-    "org": "Ministry of Education",
+    "id": "35238876",
+    "ref": "WPG-0105504",
+    "title": "Niue Justice Building Construction",
+    "type": "ROI",
+    "date_label": "5:00 PM 19 Nov 2026 (Pacific/Auckland UTC+13:00)",
+    "org": "Ministry of Foreign Affairs and Trade",
     "status": "open",
-    "url": "https://www.gets.govt.nz/MEDU/ExternalTenderDetails.htm?id=35116860",
-    "opened": "Tuesday, 6 October 2026 1:00 PM (Pacific/Auckland UTC+13:00)",
-    "closes": "Friday, 16 October 2026 5:00 PM (Pacific/Auckland UTC+13:00)",
-    "dept": "Te Mahau Education Services",
-    "type_full": "Notice of Information (Advance Notice) (NOI)",
+    "url": "https://www.gets.govt.nz/MFAT/ExternalTenderDetails.htm?id=35238876",
+    "opened": "Friday, 16 October 2026 5:00 PM (Pacific/Auckland UTC+13:00)",
+    "closes": "Thursday, 19 November 2026 5:00 PM (Pacific/Auckland UTC+13:00)",
+    "dept": "Crown Funding",
+    "type_full": "Registration of Interest (ROI)",
     "coverage": "Sole Agency",
-    "categories": "86000000 - Education and Training Services",
-    "regions": "Auckland",
-    "overview": "The procurement will establish contractual arrangements with providers that can deliver high-quality, culturally responsive tutoring services which support Pacific learners to improve literacy and numeracy achievement, strengthen engagement in learning, and increase preparedness for future educational pathways. The Pacific Homework and Tutoring Initiative is designed to provide supplementary educational support in addition to learning taking place within schools. Services are intended to assist Pacific learners who require additional support to strengthen their achievement in the literacy and numeracy co-requisite examinations. This service will be available to approximately 1150 \u0101konga in 1",
-    "summary": "The procurement will establish contractual arrangements with providers that can deliver high-quality, culturally responsive tutoring services which support Pacific learners to improve literacy and numeracy achievement, strengthen engagement in learning, and increase preparedness for future educational pathways. The Pacific Homework and Tutoring Initiative is designed to provide supplementary educational support in addition to learning taking place within schools. Services are intended to assist Pacific learners who require additional support to strengthen their achievement in the literacy and numeracy co-requisite examinations. This service will be available to approximately 1150 \u0101konga in 1"
+    "categories": "30000000 - Structures and Building and Construction and Manufacturing Components and Supplies 72000000 - Building and Facility Construction and Maintenance Services 81100000 - Professional engineering services 95000000 - Land and Buildings and Structures and Thoroughfares",
+    "regions": "International",
+    "overview": "This is a Call for Registrations of Interests (ROI) from the Ministry of Foreign Affairs (MFAT) as part of New Zealand\u2019s International Development Cooperation Programme for the provision of Early Contractor Involvement (ECI) services for the Niue Justice Building (WPG-0105504). This opportunity is part of New Zealand\u2019s International Development Cooperation (IDC) Programme, and is targeting main contractors for the provision of ECI services for the Niue Justice Building. This opportunity may lead to continuation to Construction services. MFAT is working in partnership with the Government of Niue to design and construct a new Justice Building to enable effective, reliable and inclusive justice",
+    "summary": "This is a Call for Registrations of Interests (ROI) from the Ministry of Foreign Affairs (MFAT) as part of New Zealand\u2019s International Development Cooperation Programme for the provision of Early Contractor Involvement (ECI) services for the Niue Justice Building (WPG-0105504). This opportunity is part of New Zealand\u2019s International Development Cooperation (IDC) Programme, and is targeting main contractors for the provision of ECI services for the Niue Justice Building. This opportunity may lead to continuation to Construction services. MFAT is working in partnership with the Government of Niue to design and construct a new Justice Building to enable effective, reliable and inclusive justice"
    },
    {
     "id": "34134620",
