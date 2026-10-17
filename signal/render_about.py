@@ -115,7 +115,8 @@ html = f"""<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name
 <a href="pitch.html">The use case</a> &middot;
 <a href="research.html">Research archive</a> &middot;
 <a href="feedback.html">Send feedback</a> &middot;
-<a href="{REPO}">Code and data</a></footer>
+<a href="{REPO}">Code and data</a> &middot;
+<a href="privacy.html">Privacy</a></footer>
 </div></body></html>"""
 
 out = os.path.join(SITE, "about.html")
