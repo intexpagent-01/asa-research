@@ -427,6 +427,41 @@ footer {
 .file-label:hover { background: rgba(13,115,119,0.08); }
 .or-text { color: #888; font-size: 0.9em; }
 .char-count { margin-left: auto; font-size: 0.85em; color: #888; }
+.paste-box.drag-over {
+  border-color: #e05a3a;
+  background: rgba(13,115,119,0.05);
+  border-style: solid;
+}
+@media (prefers-color-scheme: dark) {
+  .paste-box.drag-over { background: rgba(42,157,143,0.1); }
+}
+.loading-indicator {
+  display: none;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 0;
+  color: #0d7377;
+  font-size: 0.95em;
+}
+.loading-indicator .spinner {
+  width: 20px;
+  height: 20px;
+  border: 3px solid #e0e0e0;
+  border-top-color: #0d7377;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+.pdf-badge {
+  display: inline-block;
+  background: rgba(13,115,119,0.1);
+  color: #0d7377;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 0.8em;
+  font-weight: 600;
+  margin-left: 8px;
+}
 </style>
 </head>
 <body>
@@ -439,12 +474,12 @@ footer {
 
 <div class="privacy-note">
 <span class="icon">&#128274;</span>
-<div><strong>Privacy:</strong> Your document never leaves your browser. All checks run locally in JavaScript. No data is sent to any server. No text is stored, logged, or transmitted.</div>
+<div><strong>Privacy:</strong> Your document never leaves your browser. PDF text extraction and all checks run locally in JavaScript. No data is sent to any server. No text is stored, logged, or transmitted.</div>
 </div>
 
 <div class="checker-area">
-<label for="doc-text" style="font-weight:600;display:block;margin-bottom:8px">Paste your document text below, or upload a .txt file:</label>
-<textarea id="doc-text" class="paste-box" placeholder="Paste the text of your evaluation plan or evaluation report here...&#10;&#10;Tip: copy from Word/PDF and paste. The checker looks for structural elements — section headings, key terms, and required content indicators."></textarea>
+<label for="doc-text" style="font-weight:600;display:block;margin-bottom:8px">Paste your document text, or upload a PDF or text file:</label>
+<textarea id="doc-text" class="paste-box" placeholder="Paste your evaluation plan or report text here, or drag and drop a PDF...&#10;&#10;Supported: paste text, drag &amp; drop PDF, or use the upload button. The checker looks for structural elements &mdash; section headings, key terms, and required content indicators."></textarea>
 
 <div class="controls-row">
 <select id="doc-type" class="type-select">
@@ -454,10 +489,15 @@ footer {
 </select>
 <button id="check-btn" class="check-btn" disabled onclick="runCheck()">Check Compliance</button>
 <label class="file-label">
-  Upload .txt
-  <input type="file" id="file-input" accept=".txt,.text" style="display:none">
+  Upload file
+  <input type="file" id="file-input" accept=".pdf,.txt,.text" style="display:none">
 </label>
+<span id="file-name"></span>
 <span class="char-count" id="char-count">0 characters</span>
+</div>
+<div id="loading-indicator" class="loading-indicator">
+  <div class="spinner"></div>
+  <span>Extracting text from PDF&hellip;</span>
 </div>
 
 <div id="results" class="results-panel">
@@ -901,6 +941,62 @@ const checkBtn = document.getElementById('check-btn');
 const charCount = document.getElementById('char-count');
 const fileInput = document.getElementById('file-input');
 const resultsPanel = document.getElementById('results');
+const fileNameEl = document.getElementById('file-name');
+
+let pdfjsLib = null;
+async function loadPdfJs() {
+  if (pdfjsLib) return pdfjsLib;
+  pdfjsLib = await import('https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.4.168/pdf.min.mjs');
+  pdfjsLib.GlobalWorkerOptions.workerSrc =
+    'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.4.168/pdf.worker.min.mjs';
+  return pdfjsLib;
+}
+
+async function extractPdfText(arrayBuffer) {
+  const lib = await loadPdfJs();
+  const pdf = await lib.getDocument({ data: arrayBuffer }).promise;
+  const pages = [];
+  for (let i = 1; i <= pdf.numPages; i++) {
+    const page = await pdf.getPage(i);
+    const content = await page.getTextContent();
+    const text = content.items.map(item => item.str).join(' ');
+    pages.push(text);
+  }
+  return pages.join('\n\n');
+}
+
+function setLoading(on) {
+  document.getElementById('loading-indicator').style.display = on ? 'flex' : 'none';
+  checkBtn.disabled = on;
+  textarea.disabled = on;
+}
+
+async function handleFile(file) {
+  if (!file) return;
+  const isPdf = file.name.toLowerCase().endsWith('.pdf') || file.type === 'application/pdf';
+  if (isPdf) {
+    setLoading(true);
+    try {
+      const buf = await file.arrayBuffer();
+      const text = await extractPdfText(buf);
+      textarea.value = text;
+      textarea.dispatchEvent(new Event('input'));
+      fileNameEl.innerHTML = '<span class="pdf-badge">' + file.name + '</span>';
+    } catch (err) {
+      alert('Could not extract text from this PDF: ' + err.message);
+    } finally {
+      setLoading(false);
+    }
+  } else {
+    const reader = new FileReader();
+    reader.onload = function(ev) {
+      textarea.value = ev.target.result;
+      textarea.dispatchEvent(new Event('input'));
+      fileNameEl.textContent = file.name;
+    };
+    reader.readAsText(file);
+  }
+}
 
 textarea.addEventListener('input', function() {
   const len = this.value.length;
@@ -909,14 +1005,21 @@ textarea.addEventListener('input', function() {
 });
 
 fileInput.addEventListener('change', function(e) {
-  const file = e.target.files[0];
-  if (!file) return;
-  const reader = new FileReader();
-  reader.onload = function(ev) {
-    textarea.value = ev.target.result;
-    textarea.dispatchEvent(new Event('input'));
-  };
-  reader.readAsText(file);
+  handleFile(e.target.files[0]);
+});
+
+textarea.addEventListener('dragover', function(e) {
+  e.preventDefault();
+  this.classList.add('drag-over');
+});
+textarea.addEventListener('dragleave', function() {
+  this.classList.remove('drag-over');
+});
+textarea.addEventListener('drop', function(e) {
+  e.preventDefault();
+  this.classList.remove('drag-over');
+  const file = e.dataTransfer.files[0];
+  if (file) handleFile(file);
 });
 
 function runCheck() {
