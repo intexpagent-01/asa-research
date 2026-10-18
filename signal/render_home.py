@@ -136,11 +136,11 @@ html = f"""<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name
 </div>
 
 <div class="card" style="border:2px solid var(--series-1)">
-<h3>Document Quality Assessment</h3>
-<p>Before submitting a development proposal or evaluation, identify consequential gaps against donor quality frameworks (DFAT, USAID, FCDO). The tool checks for missing evidence, weak logic, and requirements your document may not meet.</p>
-<p style="font-size:.85rem;color:var(--text-secondary)"><strong>What you get:</strong> a structured review listing gaps by rubric section, with evidence locations and suggested repairs. Prototypes tested on real documents; no independent blind comparison yet.</p>
-<p style="font-size:.85rem;color:var(--text-secondary)"><strong>Limitations:</strong> this capability is reproducible with a capable LLM and the relevant rubric. Asa&rsquo;s advantage is a structured, consistent workflow, not unique analytical capability.</p>
-<a class="cta" href="quality-intelligence.html">Prototypes and concept &rarr;</a>
+<h3>Evaluation Compliance Checker <span class="badge badge-new">New</span></h3>
+<p>Paste an evaluation plan or report and instantly check it against DFAT DMEL Standards 9 and 10. The checker identifies which required structural elements are present or missing &mdash; the same gaps that cause 40% of DFAT evaluation plans to fail quality review.</p>
+<p style="font-size:.85rem;color:var(--text-secondary)"><strong>How it works:</strong> all checks run in your browser. No data is sent to any server. Pattern-based structural detection &mdash; deterministic, no AI model calls. Covers 14 evaluation plan criteria and 12 report criteria.</p>
+<p style="font-size:.85rem;color:var(--text-secondary)"><strong>Limitations:</strong> checks structural presence, not depth or quality of treatment. A document may contain the right keywords without substantively addressing the criterion. Use as a pre-submission sanity check.</p>
+<a class="cta" href="compliance-checker.html">Check your document &rarr;</a> &nbsp; <a class="cta" href="quality-intelligence.html" style="font-size:.85rem">More quality tools &rarr;</a>
 </div>
 
 <div class="get-section" id="get">
