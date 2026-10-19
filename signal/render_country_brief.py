@@ -193,9 +193,15 @@ def build_country_data():
         c["n_ending"] = sc.get("n_ending_soon", 0)
         c["n_new"] = sc.get("n_new_starts", 0)
 
-        # Top funders
+        # Top funders (90-day)
         top_orgs = sc.get("top_orgs_90", [])[:6]
         c["funders"] = [{"name": o["name"][:40], "usd": o.get("usd", 0)} for o in top_orgs]
+
+        # All funders by total spend (comprehensive)
+        all_funders = sc.get("active_by_funder", [])
+        c["all_funders"] = [{"name": af["name"][:40], "n": af.get("n", 0), "spend": af.get("spend", 0)} for af in all_funders]
+        c["n_orgs_365"] = sc.get("n_orgs_365", 0)
+        c["com365"] = sc.get("com365", 0)
 
         # Sectors with SDG mapping
         sectors = sc.get("sectors_90", [])
@@ -508,17 +514,38 @@ function renderBrief(code) {
 
   // --- Metrics row ---
   let h = '<div class="metrics">';
-  h += `<div class="metric"><div class="val">${fmt(c.dis90)}</div><div class="lbl">90-day disbursements</div></div>`;
-  h += `<div class="metric"><div class="val">${c.n_orgs_90}</div><div class="lbl">Active funders (90d)</div></div>`;
-  h += `<div class="metric"><div class="val">${c.n_active}</div><div class="lbl">Active activities</div></div>`;
-  h += `<div class="metric"><div class="val">${c.sdg_coverage}/17</div><div class="lbl">SDG goals with recent data</div></div>`;
+  h += `<div class="metric"><div class="val">${fmt(c.dis365)}</div><div class="lbl">Annual aid reported<br>(12 months)</div></div>`;
+  h += `<div class="metric"><div class="val">${fmt(c.dis90)}</div><div class="lbl">Recent disbursements<br>(90 days)</div></div>`;
+  h += `<div class="metric"><div class="val">${c.n_orgs_365 || c.n_orgs_90}</div><div class="lbl">Development partners<br>reporting this year</div></div>`;
+  h += `<div class="metric"><div class="val">${c.n_active}</div><div class="lbl">Active programs</div></div>`;
   h += `<div class="metric"><div class="val">${c.n_ending}</div><div class="lbl">Ending soon</div></div>`;
-  h += `<div class="metric"><div class="val">${c.n_stale_funders}</div><div class="lbl">Stale funders (>1yr)</div></div>`;
+  h += `<div class="metric"><div class="val">${c.sdg_coverage}/17</div><div class="lbl">SDG goals with<br>recent data</div></div>`;
   h += '</div>';
 
-  // --- SDG Indicators ---
+  // --- Development Profile ---
   h += '<div class="section"><h3>Development Profile</h3>';
+
+  // Funding overview
+  h += '<p style="font-size:.88rem;font-weight:600;margin:.5rem 0 .3rem">Aid Funding Overview</p>';
+  h += '<div class="metrics" style="grid-template-columns:repeat(auto-fit,minmax(140px,1fr));margin:.5rem 0 1rem">';
+  h += `<div class="metric"><div class="val">${fmt(c.dis365)}</div><div class="lbl">Annual disbursements</div></div>`;
+  h += `<div class="metric"><div class="val">${fmt(c.com365)}</div><div class="lbl">Annual commitments</div></div>`;
+  h += `<div class="metric"><div class="val">${c.n_orgs_365 || c.n_orgs_90}</div><div class="lbl">Active partners</div></div>`;
+  h += `<div class="metric"><div class="val">${c.n_active}</div><div class="lbl">Active programs</div></div>`;
+  h += '</div>';
+
+  // All funders by total spend
+  if (c.all_funders && c.all_funders.length > 0) {
+    h += '<table class="indicators-table"><thead><tr><th>Development Partner</th><th style="text-align:right">Programs</th><th style="text-align:right">Total Reported Spend</th></tr></thead><tbody>';
+    c.all_funders.forEach(f => {
+      h += `<tr><td>${f.name}</td><td style="text-align:right">${f.n}</td><td style="text-align:right"><strong>${fmt(f.spend)}</strong></td></tr>`;
+    });
+    h += '</tbody></table>';
+  }
+
+  // SDG indicators
   if (c.sdg_indicators && c.sdg_indicators.length > 0) {
+    h += '<p style="font-size:.88rem;font-weight:600;margin:1.2rem 0 .3rem">Key Development Indicators</p>';
     h += '<table class="indicators-table"><thead><tr><th>Indicator</th><th>Value</th><th>Year</th><th>Goal</th></tr></thead><tbody>';
     c.sdg_indicators.forEach(ind => {
       const gname = GOALS[ind.goal] || "";
@@ -530,8 +557,9 @@ function renderBrief(code) {
   }
   h += '</div>';
 
-  // --- Aid Landscape ---
-  h += '<div class="section"><h3>Aid Landscape</h3>';
+  // --- Recent Aid Flows ---
+  h += '<div class="section"><h3>Recent Aid Flows (90 Days)</h3>';
+  h += '<p style="font-size:.84rem;color:var(--text-muted);margin-bottom:.5rem">Most recent disbursements by development partner. Partners not shown may have active programs but no recent transactions reported to IATI.</p>';
   if (c.funders && c.funders.length > 0) {
     const maxFunder = Math.max(...c.funders.map(f => f.usd));
     c.funders.forEach(f => {
@@ -539,7 +567,7 @@ function renderBrief(code) {
       h += `<div class="bar-row"><span class="lbl">${f.name}</span><div class="bar" style="width:${w}%;background:var(--series-1)"></div><span class="val">${fmt(f.usd)}</span></div>`;
     });
   } else {
-    h += '<p class="empty">No 90-day disbursement data.</p>';
+    h += '<p class="empty">No 90-day disbursement data available.</p>';
   }
   h += '</div>';
 
