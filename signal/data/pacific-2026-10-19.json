@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-18T19:39:55Z",
+ "generated": "2026-10-19T01:45:17Z",
  "date": "2026-10-19",
  "countries": {
   "PG": {
@@ -13574,7 +13574,7 @@
   }
  },
  "dfat": {
-  "fetched": "2026-10-18T19:39:55Z",
+  "fetched": "2026-10-19T01:45:17Z",
   "notices": [
    {
     "title": "Request for Proposal for Pacific Media Assistance Scheme 5",
@@ -15002,8 +15002,27 @@
   ]
  },
  "nz": {
-  "fetched": "2026-10-18T19:40:42Z",
+  "fetched": "2026-10-19T01:46:08Z",
   "tenders": [
+   {
+    "id": "35254159",
+    "ref": "WS113055529",
+    "title": "Pacific Homework and Tutoring Initiative",
+    "type": "RFP",
+    "date_label": "12:00 PM 13 Nov 2026 (Pacific/Auckland UTC+13:00)",
+    "org": "Ministry of Education",
+    "status": "open",
+    "url": "https://www.gets.govt.nz/MEDU/ExternalTenderDetails.htm?id=35254159",
+    "opened": "Monday, 19 October 2026 2:00 PM (Pacific/Auckland UTC+13:00)",
+    "closes": "Friday, 13 November 2026 12:00 PM (Pacific/Auckland UTC+13:00)",
+    "dept": "Te Mahau Education Services",
+    "type_full": "Request for Proposals (RFP)",
+    "coverage": "Sole Agency",
+    "categories": "86000000 - Education and Training Services",
+    "regions": "Auckland",
+    "overview": "The procurement will establish contractual arrangements with providers that can deliver high-quality, culturally responsive tutoring services which support Pacific learners to improve literacy and numeracy achievement, strengthen engagement in learning, and increase preparedness for future educational pathways. The Pacific Homework and Tutoring Initiative is designed to provide supplementary educational support in addition to learning taking place within schools. Services are intended to assist Pacific learners who require additional support to strengthen their achievement in the literacy and numeracy co-requisite examinations. This service will be available to approximately 1150 \u0101konga in 1",
+    "summary": "The procurement will establish contractual arrangements with providers that can deliver high-quality, culturally responsive tutoring services which support Pacific learners to improve literacy and numeracy achievement, strengthen engagement in learning, and increase preparedness for future educational pathways. The Pacific Homework and Tutoring Initiative is designed to provide supplementary educational support in addition to learning taking place within schools. Services are intended to assist Pacific learners who require additional support to strengthen their achievement in the literacy and numeracy co-requisite examinations. This service will be available to approximately 1150 \u0101konga in 1"
+   },
    {
     "id": "35238876",
     "ref": "WPG-0105504",

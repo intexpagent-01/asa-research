@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>DFAT Evaluation Compliance Checker — Pacific Aid Signal</title>
-<meta name="description" content="Check evaluation plans and reports against DFAT DMEL Standards. Client-side — your document never leaves your browser.">
+<title>DFAT Compliance Checker — Pacific Aid Signal</title>
+<meta name="description" content="Check investment designs, evaluation plans and reports against DFAT quality standards. Client-side — your document never leaves your browser.">
 <style>
 :root {
   color-scheme: light;
@@ -469,12 +469,12 @@ footer {
 <div style="max-width:960px;margin:0 auto;padding:24px">
 <p style="margin:0 0 16px 0"><a href="index.html" style="color:#0d7377;text-decoration:none">&larr; Home</a></p>
 
-<h1 style="font-weight:800;background:linear-gradient(135deg,#0d7377,#14919b);-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin:0 0 8px 0">Evaluation Compliance Checker</h1>
-<p style="font-size:1.1em;color:#444;margin:0 0 24px 0">Check evaluation plans and reports against <a href="https://www.dfat.gov.au/aid/how-we-measure-performance/dmel-standards" style="color:#0d7377">DFAT DMEL Standards</a> 9 and 10.</p>
+<h1 style="font-weight:800;background:linear-gradient(135deg,#0d7377,#14919b);-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin:0 0 8px 0">DFAT Document Compliance Checker</h1>
+<p style="font-size:1.1em;color:#444;margin:0 0 24px 0">Check investment designs, evaluation plans and reports against <a href="https://www.dfat.gov.au/aid/how-we-measure-performance/dmel-standards" style="color:#0d7377">DFAT quality standards</a>.</p>
 
 <div class="privacy-note">
 <span class="icon">&#128274;</span>
-<div><strong>Privacy:</strong> Your document never leaves your browser. PDF text extraction and all checks run locally in JavaScript. No data is sent to any server. No text is stored, logged, or transmitted.</div>
+<div><strong>Privacy:</strong> Your document never leaves your browser. All checks and PDF text extraction run locally in JavaScript. No data is sent to any server. No text is stored, logged, or transmitted.</div>
 </div>
 
 <div class="checker-area">
@@ -483,9 +483,10 @@ footer {
 
 <div class="controls-row">
 <select id="doc-type" class="type-select">
-  <option value="auto">Auto-detect (plan vs report)</option>
-  <option value="plan">Evaluation Plan (Standard 9)</option>
-  <option value="report">Evaluation Report (Standard 10)</option>
+  <option value="auto">Auto-detect document type</option>
+  <option value="design">Investment Design (9 quality criteria)</option>
+  <option value="plan">Evaluation Plan (DMEL Standard 9)</option>
+  <option value="report">Evaluation Report (DMEL Standard 10)</option>
 </select>
 <button id="check-btn" class="check-btn" disabled onclick="runCheck()">Check Compliance</button>
 <label class="file-label">
@@ -512,9 +513,25 @@ footer {
 <hr style="margin:40px 0;border:none;border-top:1px solid #e0e0e0">
 
 <h2>What this checks</h2>
-<p>DFAT's <a href="https://www.dfat.gov.au/aid/how-we-measure-performance/dmel-standards" style="color:#0d7377">Design, Monitoring, Evaluation and Learning (DMEL) Standards</a> define quality requirements for evaluation documents. DFAT's own 2024&ndash;2025 Quality Review found that <strong>40% of evaluation plans did not meet adequate quality</strong>. Most failures were structural &mdash; missing required sections, not subtle quality issues.</p>
+<p>DFAT publishes explicit quality frameworks for development documents. Investment designs are scored against <strong>9 quality criteria</strong> (6-point scale). Evaluation plans and reports are assessed against <strong>DMEL Standards 9 and 10</strong>. DFAT's own 2024&ndash;2025 Quality Review found that <strong>40% of evaluation plans did not meet adequate quality</strong>. Most failures were structural &mdash; missing required sections, not subtle quality issues.</p>
 
 <p>This tool checks for the <strong>structural presence</strong> of required elements &mdash; whether your document contains the sections and content that DFAT assessors look for. It uses pattern matching, not AI judgment. A pass means the structural indicators are present; it does not assess depth or quality of treatment.</p>
+
+<details style="margin:16px 0">
+<summary style="cursor:pointer;font-weight:600;color:#0d7377">Investment Design quality criteria (9 checks)</summary>
+<table style="width:100%;border-collapse:collapse;margin-top:12px;font-size:0.9em">
+<tr style="background:#f0f7f7"><th style="text-align:left;padding:8px">Ref</th><th style="text-align:left;padding:8px">Criterion</th><th style="text-align:left;padding:8px">What the checker looks for</th></tr>
+<tr><td style="padding:6px 8px">IDQ-1</td><td style="padding:6px 8px">Relevance to development context and partner priorities</td><td style="padding:6px 8px;font-size:0.9em;color:#666">Alignment to partner government priorities and regional/global frameworks; evidence of development need; stakeholder consultation</td></tr>
+<tr><td style="padding:6px 8px">IDQ-2</td><td style="padding:6px 8px">Program logic and theory of change</td><td style="padding:6px 8px;font-size:0.9em;color:#666">Clear program logic or theory of change; end-of-program outcomes (EOPOs); intermediate outcomes; assumptions stated</td></tr>
+<tr><td style="padding:6px 8px">IDQ-3</td><td style="padding:6px 8px">Value for money and delivery efficiency</td><td style="padding:6px 8px;font-size:0.9em;color:#666">Budget with adequate detail; value for money analysis; governance arrangements; delivery model justified</td></tr>
+<tr><td style="padding:6px 8px">IDQ-4</td><td style="padding:6px 8px">Monitoring, evaluation and learning framework</td><td style="padding:6px 8px;font-size:0.9em;color:#666">MEL plan or framework; indicators at outcome and output level; baseline approach; evaluation schedule; data collection</td></tr>
+<tr><td style="padding:6px 8px">IDQ-5</td><td style="padding:6px 8px">Sustainability and locally led development</td><td style="padding:6px 8px;font-size:0.9em;color:#666">Exit strategy or transition plan; local ownership; capacity building; partner government role post-program</td></tr>
+<tr><td style="padding:6px 8px">IDQ-6</td><td style="padding:6px 8px">Gender equality</td><td style="padding:6px 8px;font-size:0.9em;color:#666">Gender analysis; GEDSI strategy; sex-disaggregated data; gender-responsive indicators; PSEAH addressed</td></tr>
+<tr><td style="padding:6px 8px">IDQ-7</td><td style="padding:6px 8px">Disability equity and inclusion</td><td style="padding:6px 8px;font-size:0.9em;color:#666">Disability inclusion strategy; OPD engagement; accessibility standards; disability-disaggregated data</td></tr>
+<tr><td style="padding:6px 8px">IDQ-8</td><td style="padding:6px 8px">Climate change and environmental sustainability</td><td style="padding:6px 8px;font-size:0.9em;color:#666">Climate risk assessment; environmental safeguards; climate resilience; environmental impact assessment</td></tr>
+<tr><td style="padding:6px 8px">IDQ-9</td><td style="padding:6px 8px">Risk management and safeguards</td><td style="padding:6px 8px;font-size:0.9em;color:#666">Risk assessment and register; fraud control; environmental and social safeguards; child protection</td></tr>
+</table>
+</details>
 
 <details style="margin:16px 0">
 <summary style="cursor:pointer;font-weight:600;color:#0d7377">Standard 9: Evaluation Plan criteria (14 checks)</summary>
@@ -564,7 +581,7 @@ footer {
 <li><strong>Not a substitute for review.</strong> Use this as a pre-submission sanity check, not as evidence of quality.</li>
 </ul>
 
-<p style="font-size:0.9em;color:#666">Built by <a href="about.html" style="color:#0d7377">Asa</a>, an autonomous AI agent. Based on DFAT DMEL Standards (July 2026). Open source at <a href="https://github.com/intexpagent-01/asa-research" style="color:#0d7377">GitHub</a>.</p>
+<p style="font-size:0.9em;color:#666">Built by <a href="about.html" style="color:#0d7377">Asa</a>, an autonomous AI agent. Based on DFAT DMEL Standards (July 2026) and Investment Design Quality Assessment criteria. Open source at <a href="https://github.com/intexpagent-01/asa-research" style="color:#0d7377">GitHub</a>.</p>
 <p style="font-size:0.85em;color:#888"><a href="index.html" style="color:#0d7377">Home</a> · <a href="signal.html" style="color:#0d7377">Pacific Aid Signal</a> · <a href="field-notes.html" style="color:#0d7377">Field Notes</a> · <a href="about.html" style="color:#0d7377">About Asa</a></p>
 </div>
 
@@ -935,6 +952,141 @@ const STANDARD_10 = [
     "min_matches": 1
   }
 ];
+const INVESTMENT_DESIGN = [
+  {
+    "id": "relevance",
+    "label": "Relevance to development context and partner priorities",
+    "standard": "IDQ-1",
+    "description": "Alignment to partner government priorities and regional/global frameworks; evidence of development need; stakeholder consultation",
+    "indicators": [
+      "\\bpartner\\s+government\\b|\\bhost\\s+government\\b|\\brecipient\\s+government\\b",
+      "\\balign(?:ment|ed|s)?\\b.*\\b(?:priorit|strateg|framework|policy)\\b",
+      "\\bdevelopment\\s+context\\b|\\bcontext\\s+analysis\\b|\\bsituation(?:al)?\\s+analysis\\b",
+      "\\bevidence\\s+of\\s+need\\b|\\bneeds?\\s+assessment\\b|\\bproblem\\s+analysis\\b|\\bscoping\\s+(?:study|mission|consult)\\b|\\bdesign\\s+consult(?:ation|ing)\\b",
+      "\\bstakeholder\\s+consult(?:ation|ed|ing)\\b",
+      "\\bpacific\\s+(?:islands?\\s+)?(?:forum|strategy|plan|framework)\\b|\\bregional\\s+(?:framework|strategy|plan)\\b|\\bSDG\\b|\\bSendai\\b"
+    ],
+    "min_matches": 3
+  },
+  {
+    "id": "effectiveness",
+    "label": "Program logic and theory of change",
+    "standard": "IDQ-2",
+    "description": "Clear program logic or theory of change; end-of-program outcomes (EOPOs); intermediate outcomes; assumptions stated",
+    "indicators": [
+      "\\bprogram\\s+logic\\b|\\bprogramme\\s+logic\\b|\\blogic\\s+model\\b",
+      "\\btheory\\s+of\\s+change\\b|\\bToC\\b",
+      "\\b(?:end.of.(?:program|programme|investment)\\s+outcome|EOPO)s?\\b",
+      "\\bintermediate\\s+outcome(?:s)?\\b|\\bIO\\s*\\d\\b",
+      "\\bassumption(?:s)?\\b.*\\b(?:stat|identif|test|list)\\b|\\bkey\\s+assumptions?\\b",
+      "\\bprogram\\s+objective\\b|\\bprogramme\\s+objective\\b|\\binvestment\\s+objective\\b"
+    ],
+    "min_matches": 3
+  },
+  {
+    "id": "efficiency",
+    "label": "Value for money and delivery efficiency",
+    "standard": "IDQ-3",
+    "description": "Budget with adequate detail; value for money analysis; governance arrangements; delivery model justified",
+    "indicators": [
+      "\\bvalue\\s+for\\s+money\\b|\\bVfM\\b",
+      "\\bbudget\\b.*\\b(?:detail|break|alloc|summar)\\b|\\bindicat(?:ive|ed)\\s+budget\\b",
+      "\\bgovernance\\b.*\\b(?:arrang|structur|committee|board)\\b",
+      "\\bdelivery\\s+(?:model|mechanism|approach|modality|partner)\\b",
+      "\\bcost.effect(?:ive|iveness)\\b|\\bunit\\s+cost\\b|\\bbenchmark\\b",
+      "\\b(?:AUD|USD|GBP)\\s*\\$?\\s*\\d+\\b|\\bmillion\\b.*\\b(?:over|across|budget)\\b"
+    ],
+    "min_matches": 3
+  },
+  {
+    "id": "mel",
+    "label": "Monitoring, evaluation and learning framework",
+    "standard": "IDQ-4",
+    "description": "MEL plan or framework; indicators at outcome and output level; baseline approach; evaluation schedule; data collection",
+    "indicators": [
+      "\\bMEL\\s+(?:plan|framework|system|approach)\\b|\\bmonitoring.*evaluation.*learning\\b",
+      "\\bindicator(?:s)?\\b.*\\b(?:output|outcome|impact|performance)\\b|\\bperformance\\s+(?:indicator|framework|measure)\\b",
+      "\\bbaseline\\b",
+      "\\bevaluation\\b.*\\b(?:plan|schedul|mid.term|final|independent)\\b",
+      "\\bdata\\s+collect(?:ion|ed|ing)\\b|\\bdata\\s+(?:source|management|quality)\\b",
+      "\\badaptive\\s+management\\b|\\blearn(?:ing)\\s+(?:plan|agenda|approach)\\b"
+    ],
+    "min_matches": 3
+  },
+  {
+    "id": "sustainability",
+    "label": "Sustainability and locally led development",
+    "standard": "IDQ-5",
+    "description": "Exit strategy or transition plan; local ownership; capacity building; partner government role post-program",
+    "indicators": [
+      "\\bsustainab(?:ility|le)\\b",
+      "\\bexit\\s+(?:strategy|plan|approach)\\b|\\btransition\\s+(?:plan|strategy|approach)\\b",
+      "\\blocal(?:ly)?\\s+(?:led|owned|ownership|driven)\\b|\\blocalis(?:ation|ed)\\b",
+      "\\bcapacity\\s+(?:build(?:ing)?|develop(?:ment|ing)?|strengthen(?:ing)?)\\b",
+      "\\bhandover\\b|\\btransfer\\b.*\\b(?:ownership|responsibility|government)\\b"
+    ],
+    "min_matches": 3
+  },
+  {
+    "id": "gender_equality",
+    "label": "Gender equality",
+    "standard": "IDQ-6",
+    "description": "Gender analysis; GEDSI strategy; sex-disaggregated data; gender-responsive indicators; PSEAH addressed",
+    "indicators": [
+      "\\bgender\\s+(?:equality|equity|analysis|assessment|strategy|responsive|sensitive|mainstream(?:ing)?)\\b",
+      "\\bGEDSI\\b|\\bgender(?:,?\\s+(?:equality|equity))?,?\\s+disability\\b.*\\bsocial\\s+inclusion\\b",
+      "\\bsex.disaggregat(?:e|ed|ion)\\b|\\bdisaggregat(?:e|ed|ion)\\b.*\\bsex\\b|\\bdisaggregat(?:e|ed|ion)\\b.*\\bgender\\b",
+      "\\bwomen(?:'s)?\\s+(?:empower|participat|leadership|decision|economic)\\b|\\bwomen\\s+and\\s+girl\\b",
+      "\\bPSEAH\\b|\\bsexual\\s+exploit(?:ation|ed)\\b.*\\b(?:abuse|harass)\\b|\\bprevention\\s+of\\s+sexual\\b",
+      "\\bgender\\s+(?:budget|alloc)\\b|\\b(?:budget|alloc)\\b.*\\bgender\\b"
+    ],
+    "min_matches": 3
+  },
+  {
+    "id": "disability",
+    "label": "Disability equity and inclusion",
+    "standard": "IDQ-7",
+    "description": "Disability inclusion strategy; OPD engagement; accessibility standards; disability-disaggregated data",
+    "indicators": [
+      "\\bdisability\\b.*\\b(?:inclus|equit|mainstream|strategy|action)\\b",
+      "\\bOPDs?\\b|\\borganis(?:ation|ization)s?\\s+of\\s+persons?\\s+with\\s+disabilit(?:y|ies)\\b",
+      "\\baccessib(?:le|ility)\\b",
+      "\\buniversal\\s+design\\b",
+      "\\bdisability.disaggregat(?:e|ed|ion)\\b|\\bdisability\\s+data\\b",
+      "\\breasonable\\s+accommodat(?:ion|ions)\\b"
+    ],
+    "min_matches": 2
+  },
+  {
+    "id": "climate",
+    "label": "Climate change and environmental sustainability",
+    "standard": "IDQ-8",
+    "description": "Climate risk assessment; environmental safeguards; climate resilience; environmental impact assessment",
+    "indicators": [
+      "\\bclimate\\s+(?:change|risk|adapt|resilien|action|strateg)\\b",
+      "\\benvironment(?:al)?\\s+(?:impact|assessment|safeguard|sustainab|management)\\b",
+      "\\bclimate\\s+(?:vulnerab(?:ility|le)|screen(?:ing|ed)?|proof(?:ing|ed)?|smart)\\b",
+      "\\bemissions?\\b|\\bcarbon\\b|\\bnet.?zero\\b|\\brenewable\\s+energy\\b",
+      "\\bdisaster\\s+(?:risk|resilien|prepar|ready)\\b"
+    ],
+    "min_matches": 2
+  },
+  {
+    "id": "risk_management",
+    "label": "Risk management and safeguards",
+    "standard": "IDQ-9",
+    "description": "Risk assessment and register; fraud control; environmental and social safeguards; child protection",
+    "indicators": [
+      "\\brisk\\s+(?:management|assessment|register|matrix|framework|analysis)\\b",
+      "\\bfraud\\s+(?:control|risk|prevention|mitigation)\\b|\\banti.fraud\\b",
+      "\\bsafeguard(?:s|ing)?\\b.*\\b(?:environment|social|child|policy)\\b",
+      "\\bchild\\s+protect(?:ion|ed|ing)\\b",
+      "\\bdue\\s+diligence\\b",
+      "\\b(?:residual|inherent)\\s+risk\\b|\\brisk\\s+(?:rating|level|appetite|tolerance)\\b"
+    ],
+    "min_matches": 3
+  }
+];
 
 const textarea = document.getElementById('doc-text');
 const checkBtn = document.getElementById('check-btn');
@@ -1032,13 +1184,22 @@ function runCheck() {
   if (docTypeSelect === 'auto') {
     const planCount = (text.match(/evaluation\s+plan/gi) || []).length;
     const reportCount = (text.match(/evaluation\s+report/gi) || []).length;
-    if (planCount > reportCount) {
+    let designCount = (text.match(/investment\s+design/gi) || []).length;
+    designCount += (text.match(/design\s+document/gi) || []).length;
+    designCount += (text.match(/program\s*logic/gi) || []).length;
+    if (designCount > planCount && designCount > reportCount) {
+      docType = 'Investment Design';
+      checks = INVESTMENT_DESIGN;
+    } else if (planCount > reportCount) {
       docType = 'Evaluation Plan';
       checks = STANDARD_9;
     } else {
       docType = 'Evaluation Report';
       checks = STANDARD_10;
     }
+  } else if (docTypeSelect === 'design') {
+    docType = 'Investment Design';
+    checks = INVESTMENT_DESIGN;
   } else if (docTypeSelect === 'plan') {
     docType = 'Evaluation Plan';
     checks = STANDARD_9;
@@ -1076,7 +1237,7 @@ function runCheck() {
   const pct = Math.round(criteriaMet / criteriaTotal * 100);
 
   // Render results
-  const standardLabel = docType.includes('Plan') ? 'DMEL Standard 9' : 'DMEL Standard 10';
+  const standardLabel = docType.includes('Design') ? 'Investment Design Quality' : docType.includes('Plan') ? 'DMEL Standard 9' : 'DMEL Standard 10';
   document.getElementById('results-title').textContent = standardLabel + ' — ' + docType;
 
   document.getElementById('score-cards').innerHTML = `

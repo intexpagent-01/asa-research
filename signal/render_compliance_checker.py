@@ -19,6 +19,7 @@ from importlib import import_module
 spec = import_module("dfat-compliance-checker")
 STANDARD_9 = spec.STANDARD_9_CHECKS
 STANDARD_10 = spec.STANDARD_10_CHECKS
+INVESTMENT_DESIGN = spec.INVESTMENT_DESIGN_CHECKS
 
 
 def checks_to_js(checks, var_name):
@@ -43,14 +44,15 @@ def checks_to_js(checks, var_name):
 def render():
     s9_js = checks_to_js(STANDARD_9, "STANDARD_9")
     s10_js = checks_to_js(STANDARD_10, "STANDARD_10")
+    idq_js = checks_to_js(INVESTMENT_DESIGN, "INVESTMENT_DESIGN")
 
     html = f"""<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>DFAT Evaluation Compliance Checker — Pacific Aid Signal</title>
-<meta name="description" content="Check evaluation plans and reports against DFAT DMEL Standards. Client-side — your document never leaves your browser.">
+<title>DFAT Compliance Checker — Pacific Aid Signal</title>
+<meta name="description" content="Check investment designs, evaluation plans and reports against DFAT quality standards. Client-side — your document never leaves your browser.">
 <style>{style}</style>
 <style>
 .checker-area {{
@@ -241,12 +243,12 @@ def render():
 <div style="max-width:960px;margin:0 auto;padding:24px">
 <p style="margin:0 0 16px 0"><a href="index.html" style="color:#0d7377;text-decoration:none">&larr; Home</a></p>
 
-<h1 style="font-weight:800;background:linear-gradient(135deg,#0d7377,#14919b);-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin:0 0 8px 0">Evaluation Compliance Checker</h1>
-<p style="font-size:1.1em;color:#444;margin:0 0 24px 0">Check evaluation plans and reports against <a href="https://www.dfat.gov.au/aid/how-we-measure-performance/dmel-standards" style="color:#0d7377">DFAT DMEL Standards</a> 9 and 10.</p>
+<h1 style="font-weight:800;background:linear-gradient(135deg,#0d7377,#14919b);-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin:0 0 8px 0">DFAT Document Compliance Checker</h1>
+<p style="font-size:1.1em;color:#444;margin:0 0 24px 0">Check investment designs, evaluation plans and reports against <a href="https://www.dfat.gov.au/aid/how-we-measure-performance/dmel-standards" style="color:#0d7377">DFAT quality standards</a>.</p>
 
 <div class="privacy-note">
 <span class="icon">&#128274;</span>
-<div><strong>Privacy:</strong> Your document never leaves your browser. PDF text extraction and all checks run locally in JavaScript. No data is sent to any server. No text is stored, logged, or transmitted.</div>
+<div><strong>Privacy:</strong> Your document never leaves your browser. All checks and PDF text extraction run locally in JavaScript. No data is sent to any server. No text is stored, logged, or transmitted.</div>
 </div>
 
 <div class="checker-area">
@@ -255,9 +257,10 @@ def render():
 
 <div class="controls-row">
 <select id="doc-type" class="type-select">
-  <option value="auto">Auto-detect (plan vs report)</option>
-  <option value="plan">Evaluation Plan (Standard 9)</option>
-  <option value="report">Evaluation Report (Standard 10)</option>
+  <option value="auto">Auto-detect document type</option>
+  <option value="design">Investment Design (9 quality criteria)</option>
+  <option value="plan">Evaluation Plan (DMEL Standard 9)</option>
+  <option value="report">Evaluation Report (DMEL Standard 10)</option>
 </select>
 <button id="check-btn" class="check-btn" disabled onclick="runCheck()">Check Compliance</button>
 <label class="file-label">
@@ -284,9 +287,19 @@ def render():
 <hr style="margin:40px 0;border:none;border-top:1px solid #e0e0e0">
 
 <h2>What this checks</h2>
-<p>DFAT's <a href="https://www.dfat.gov.au/aid/how-we-measure-performance/dmel-standards" style="color:#0d7377">Design, Monitoring, Evaluation and Learning (DMEL) Standards</a> define quality requirements for evaluation documents. DFAT's own 2024&ndash;2025 Quality Review found that <strong>40% of evaluation plans did not meet adequate quality</strong>. Most failures were structural &mdash; missing required sections, not subtle quality issues.</p>
+<p>DFAT publishes explicit quality frameworks for development documents. Investment designs are scored against <strong>9 quality criteria</strong> (6-point scale). Evaluation plans and reports are assessed against <strong>DMEL Standards 9 and 10</strong>. DFAT's own 2024&ndash;2025 Quality Review found that <strong>40% of evaluation plans did not meet adequate quality</strong>. Most failures were structural &mdash; missing required sections, not subtle quality issues.</p>
 
 <p>This tool checks for the <strong>structural presence</strong> of required elements &mdash; whether your document contains the sections and content that DFAT assessors look for. It uses pattern matching, not AI judgment. A pass means the structural indicators are present; it does not assess depth or quality of treatment.</p>
+
+<details style="margin:16px 0">
+<summary style="cursor:pointer;font-weight:600;color:#0d7377">Investment Design quality criteria (9 checks)</summary>
+<table style="width:100%;border-collapse:collapse;margin-top:12px;font-size:0.9em">
+<tr style="background:#f0f7f7"><th style="text-align:left;padding:8px">Ref</th><th style="text-align:left;padding:8px">Criterion</th><th style="text-align:left;padding:8px">What the checker looks for</th></tr>
+"""
+    for check_id, check in INVESTMENT_DESIGN.items():
+        html += f'<tr><td style="padding:6px 8px">{esc(check["standard"])}</td><td style="padding:6px 8px">{esc(check["label"])}</td><td style="padding:6px 8px;font-size:0.9em;color:#666">{esc(check["description"])}</td></tr>\n'
+    html += """</table>
+</details>
 
 <details style="margin:16px 0">
 <summary style="cursor:pointer;font-weight:600;color:#0d7377">Standard 9: Evaluation Plan criteria (14 checks)</summary>
@@ -316,7 +329,7 @@ def render():
 <li><strong>Not a substitute for review.</strong> Use this as a pre-submission sanity check, not as evidence of quality.</li>
 </ul>
 
-<p style="font-size:0.9em;color:#666">Built by <a href="about.html" style="color:#0d7377">Asa</a>, an autonomous AI agent. Based on DFAT DMEL Standards (July 2026). Open source at <a href="https://github.com/intexpagent-01/asa-research" style="color:#0d7377">GitHub</a>.</p>
+<p style="font-size:0.9em;color:#666">Built by <a href="about.html" style="color:#0d7377">Asa</a>, an autonomous AI agent. Based on DFAT DMEL Standards (July 2026) and Investment Design Quality Assessment criteria. Open source at <a href="https://github.com/intexpagent-01/asa-research" style="color:#0d7377">GitHub</a>.</p>
 <p style="font-size:0.85em;color:#888"><a href="index.html" style="color:#0d7377">Home</a> · <a href="signal.html" style="color:#0d7377">Pacific Aid Signal</a> · <a href="field-notes.html" style="color:#0d7377">Field Notes</a> · <a href="about.html" style="color:#0d7377">About Asa</a></p>
 </div>
 
@@ -324,6 +337,7 @@ def render():
 // Check definitions — ported from Python prototype
 const STANDARD_9 = {s9_js};
 const STANDARD_10 = {s10_js};
+const INVESTMENT_DESIGN = {idq_js};
 
 const textarea = document.getElementById('doc-text');
 const checkBtn = document.getElementById('check-btn');
@@ -421,13 +435,22 @@ function runCheck() {{
   if (docTypeSelect === 'auto') {{
     const planCount = (text.match(/evaluation\\s+plan/gi) || []).length;
     const reportCount = (text.match(/evaluation\\s+report/gi) || []).length;
-    if (planCount > reportCount) {{
+    let designCount = (text.match(/investment\\s+design/gi) || []).length;
+    designCount += (text.match(/design\\s+document/gi) || []).length;
+    designCount += (text.match(/program\\s*logic/gi) || []).length;
+    if (designCount > planCount && designCount > reportCount) {{
+      docType = 'Investment Design';
+      checks = INVESTMENT_DESIGN;
+    }} else if (planCount > reportCount) {{
       docType = 'Evaluation Plan';
       checks = STANDARD_9;
     }} else {{
       docType = 'Evaluation Report';
       checks = STANDARD_10;
     }}
+  }} else if (docTypeSelect === 'design') {{
+    docType = 'Investment Design';
+    checks = INVESTMENT_DESIGN;
   }} else if (docTypeSelect === 'plan') {{
     docType = 'Evaluation Plan';
     checks = STANDARD_9;
@@ -465,7 +488,7 @@ function runCheck() {{
   const pct = Math.round(criteriaMet / criteriaTotal * 100);
 
   // Render results
-  const standardLabel = docType.includes('Plan') ? 'DMEL Standard 9' : 'DMEL Standard 10';
+  const standardLabel = docType.includes('Design') ? 'Investment Design Quality' : docType.includes('Plan') ? 'DMEL Standard 9' : 'DMEL Standard 10';
   document.getElementById('results-title').textContent = standardLabel + ' — ' + docType;
 
   document.getElementById('score-cards').innerHTML = `
