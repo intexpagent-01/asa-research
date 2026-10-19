@@ -136,9 +136,9 @@ html = f"""<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name
 </div>
 
 <div class="card" style="border:2px solid var(--series-1)">
-<h3>DFAT Document Compliance Checker <span class="badge badge-new">New</span></h3>
-<p>Check investment designs, evaluation plans or reports against DFAT quality standards. The checker identifies which required structural elements are present or missing &mdash; the same gaps that cause 40% of DFAT evaluation plans to fail quality review.</p>
-<p style="font-size:.85rem;color:var(--text-secondary)"><strong>How it works:</strong> all checks run in your browser. No data is sent to any server. Pattern-based structural detection &mdash; deterministic, no AI model calls. Covers 9 investment design quality criteria, 14 evaluation plan criteria, and 12 report criteria.</p>
+<h3>Development Document Compliance Checker <span class="badge badge-new">Now multi-donor</span></h3>
+<p>Check evaluation documents against <strong>DFAT</strong> or <strong>USAID</strong> quality standards. The checker identifies which required structural elements are present or missing &mdash; the same gaps that cause 40% of DFAT evaluation plans to fail quality review.</p>
+<p style="font-size:.85rem;color:var(--text-secondary)"><strong>How it works:</strong> all checks run in your browser. No data is sent to any server. Pattern-based structural detection &mdash; deterministic, no AI model calls. Covers DFAT (9 investment design + 14 evaluation plan + 12 report criteria) and USAID ADS 201 (13 evaluation report criteria).</p>
 <p style="font-size:.85rem;color:var(--text-secondary)"><strong>Limitations:</strong> checks structural presence, not depth or quality of treatment. A document may contain the right keywords without substantively addressing the criterion. Use as a pre-submission sanity check.</p>
 <a class="cta" href="compliance-checker.html">Check your document &rarr;</a> &nbsp; <a class="cta" href="quality-intelligence.html" style="font-size:.85rem">More quality tools &rarr;</a>
 </div>
