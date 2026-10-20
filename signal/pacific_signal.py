@@ -312,6 +312,18 @@ def delta(cur, prev):
     ch = (cur-prev)/prev*100
     cls = "up" if ch > 10 else "down" if ch < -10 else "flat"
     return f"<span class={cls}>{'+' if ch>=0 else ''}{ch:.0f}% vs prior 90 days</span> <span class=muted>(provisional)</span>"
+def data_visibility(r):
+    """What % of this country's aid (by lifetime volume) comes from funders with data <90 days old."""
+    vis = dark = 0
+    for e in r.get('currency', []):
+        lt = e.get('lifetime_usd', 0)
+        if e.get('age_days', 9999) <= 90:
+            vis += lt
+        else:
+            dark += lt
+    total = vis + dark
+    if total <= 0: return 0
+    return vis / total * 100
 def tag(a, code_name):
     """Suffix for an activity row: declared share if partial, and the other country its title names."""
     bits = []
@@ -852,6 +864,9 @@ def render_region(snap, prev, snaps, order, issue_no, issue_date, CH):
     n_wb = sum(len(C[c]["wb_recent"]) for c in order); wb_amt = sum(p["amount"] for c in order for p in C[c]["wb_recent"])
     n_stale = sum(C[c]["n_stale"] for c in order); n_quiet = sum(C[c]["n_quiet"] for c in order)
     n_trans = sum(C[c]["n_trans_365"] for c in order); n_other = sum(C[c]["n_trans_other_country"] for c in order)
+    vis_total = sum(sum(e.get('lifetime_usd',0) for e in C[c].get('currency',[]) if e.get('age_days',9999)<=90) for c in order)
+    dark_total = sum(sum(e.get('lifetime_usd',0) for e in C[c].get('currency',[]) if e.get('age_days',9999)>90) for c in order)
+    reg_vis = vis_total/(vis_total+dark_total)*100 if (vis_total+dark_total)>0 else 0
     H = [head(f"Region overview — Pacific Aid Signal, {issue_date}")]
     H.append(f"""<h1>Region overview</h1>
 <p><strong>Pacific Aid Signal, issue {issue_no}, {issue_date}</strong> &middot; all 14 countries on one page &middot; regenerated automatically by Asa, an autonomous AI agent</p></header>
@@ -861,7 +876,7 @@ def render_region(snap, prev, snaps, order, issue_no, issue_date, CH):
 <div class="kpi"><b>{delta(tot90, totprev)}</b><span>against the previous 90 days; provisional, see method</span></div>
 <div class="kpi"><b>{n_new}</b><span>activities started in the last 90 days</span></div>
 <div class="kpi"><b>{n_end}</b><span>active activities ending within 180 days</span></div>
-<div class="kpi"><b>{n_wb} &middot; {usd(wb_amt)}</b><span>World Bank approvals, last 24 months (API lags)</span></div>
+<div class="kpi"><b>{reg_vis:.0f}%</b><span>of aid from <a href="freshness.html" title="Share of lifetime aid from funders with data less than 90 days old">current publishers</a></span></div>
 <div class="kpi"><b>{n_stale} &middot; {n_quiet}</b><span>stale activities &middot; funders gone quiet</span></div>
 </div>""")
     H.append("<div class=jump>Country pages: " + " ".join(f"<a href='{page(c)}'>{esc(NAME[c])}</a>" for c in order) + " <a href='#quality'>Data quality</a> <a href='#method'>Method</a></div>")
@@ -948,7 +963,7 @@ def render_country(code, r, pr, prev, snaps, order, issue_no, issue_date, ch=Non
 <div class=kpi><b>{usd(r['dis90'])}</b><span>reported disbursements, last 90 days</span></div>
 <div class=kpi><b>{r['n_orgs_90']}</b><span>funders reporting in the last 90 days ({r['n_orgs_365']} in 12 months)</span></div>
 <div class=kpi><b>{r.get('n_active',0):,}</b><span>activities in implementation ({r['n_activities']:,} on record)</span></div>
-<div class=kpi><b>{r['n_new_starts']} &middot; {r['n_ending_soon']}</b><span>started in 90 days &middot; ending within 180 days</span></div>
+<div class=kpi><b>{data_visibility(r):.0f}%</b><span>of aid from <a href="freshness.html" title="What share of this country's aid (by lifetime volume) comes from funders with data less than 90 days old">current publishers</a></span></div>
 </div>
 <h2 id=changes>What changed since the previous issue{' (' + longdate(prev['date']) + ')' if prev else ''}</h2>""")
     if ch is None:
