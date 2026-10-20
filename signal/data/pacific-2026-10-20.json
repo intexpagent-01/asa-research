@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-19T19:40:27Z",
+ "generated": "2026-10-20T01:45:05Z",
  "date": "2026-10-20",
  "countries": {
   "PG": {
@@ -13574,7 +13574,7 @@
   }
  },
  "dfat": {
-  "fetched": "2026-10-19T19:40:27Z",
+  "fetched": "2026-10-20T01:45:05Z",
   "notices": [
    {
     "title": "Request for Proposal for Pacific Media Assistance Scheme 5",
@@ -15002,7 +15002,7 @@
   ]
  },
  "nz": {
-  "fetched": "2026-10-19T19:41:13Z",
+  "fetched": "2026-10-20T01:45:49Z",
   "tenders": [
    {
     "id": "35254159",
@@ -15174,54 +15174,6 @@
      "date": "2026-09-17"
     },
     "summary": "This RFP is issued by the Ministry of Foreign Affairs and Trade (MFAT), referred to as \u201cthe Buyer\u201d, \u201cwe\u201d, or \u201cus\u201d. We are seeking one provider to deliver a design and implementation engagement under the Nauru\u2013New Zealand Education Partnership. The opportunity involves two stages: an initial design phase to develop a costed Activity Design in collaboration with the Nauru Department of Education and Training (DoET), followed by implementation of the approved activities that strengthen the integration of Naoero language, culture, and identity across the education system. The activity supports Nauru\u2019s education priorities by improving learning outcomes\u2014including literacy, numeracy, and student e"
-   },
-   {
-    "id": "33995584",
-    "ref": "WPG-0105530",
-    "title": "Technical Adviser for National Reserve Bank of Tonga",
-    "type": "ROI",
-    "date_label": "4:59 PM 9 Sep 2026 (Pacific/Auckland UTC+12:00)",
-    "org": "Ministry of Foreign Affairs and Trade",
-    "status": "completed",
-    "url": "https://www.gets.govt.nz/MFAT/ExternalTenderDetails.htm?id=33995584",
-    "opened": "Tuesday, 28 April 2026 5:00 PM (Pacific/Auckland UTC+12:00)",
-    "closes": "Tuesday, 19 May 2026 5:00 PM (Pacific/Auckland UTC+12:00)",
-    "dept": "Crown Funding",
-    "type_full": "Registration of Interest (ROI)",
-    "coverage": "Sole Agency",
-    "categories": "84000000 - Financial and Insurance Services 93000000 - Politics and Civic Affairs Services",
-    "regions": "International",
-    "overview": "The New Zealand Government, through the Ministry of Foreign Affairs and Trade (MFAT), is partnering with the National Reserve Bank of Tonga (NRBT) to strengthen regulatory oversight and institutional capacity in Anti Money Laundering (AML) supervision. MFAT and NRBT are seeking an experienced Technical Adviser to provide specialist AML supervisory expertise, support implementation of amended legislation, and build sustainable capability across NRBT teams. This role will contribute to protecting the integrity of Tonga\u2019s financial system and strengthening compliance with international AML standards. This is a senior technical advisory position, embedded within the National Reserve Bank of Tong",
-    "outcome": {
-     "state": "not awarded",
-     "date": "2026-09-09",
-     "note": "Please note this role has not been successfully awarded at this time. We are looking into alternative options."
-    },
-    "summary": "The New Zealand Government, through the Ministry of Foreign Affairs and Trade (MFAT), is partnering with the National Reserve Bank of Tonga (NRBT) to strengthen regulatory oversight and institutional capacity in Anti Money Laundering (AML) supervision. MFAT and NRBT are seeking an experienced Technical Adviser to provide specialist AML supervisory expertise, support implementation of amended legislation, and build sustainable capability across NRBT teams. This role will contribute to protecting the integrity of Tonga\u2019s financial system and strengthening compliance with international AML standards. This is a senior technical advisory position, embedded within the National Reserve Bank of Tong"
-   },
-   {
-    "id": "34141244",
-    "ref": "WPG-0105610",
-    "title": "Tuvalu Fisheries Adviser (Offshore)",
-    "type": "ROI",
-    "date_label": "4:55 PM 9 Sep 2026 (Pacific/Auckland UTC+12:00)",
-    "org": "Ministry of Foreign Affairs and Trade",
-    "status": "completed",
-    "url": "https://www.gets.govt.nz/MFAT/ExternalTenderDetails.htm?id=34141244",
-    "opened": "Thursday, 21 May 2026 5:30 PM (Pacific/Auckland UTC+12:00)",
-    "closes": "Sunday, 7 June 2026 5:00 PM (Pacific/Auckland UTC+12:00)",
-    "dept": "Crown Funding",
-    "type_full": "Registration of Interest (ROI)",
-    "coverage": "Sole Agency",
-    "categories": "70100000 - Fisheries and aquaculture 80100000 - Management advisory services 80150000 - Trade policy and services 84100000 - Development finance 93000000 - Politics and Civic Affairs Services",
-    "regions": "International",
-    "overview": "The New Zealand Government, through the Ministry of Foreign Affairs and Trade (MFAT), is partnering with the Government of Tuvalu to strengthen the management of Tuvalu\u2019s fisheries resources. As part of this, MFAT and the Tuvalu Fisheries Authority (TFA) are seeking a Tuvalu Fisheries Adviser (Offshore) to provide technical assistance and capacity development support to the TFA, helping to maximise sustainable benefits from Tuvalu\u2019s rich marine resources. This part time role will be remote with extended in-country visits and contracted directly to MFAT. It is a senior technical advisory position working alongside the TFA Managing Director and supporting the delivery of the Tuvalu Fisheries S",
-    "outcome": {
-     "state": "awarded",
-     "supplier": "Mordros Services Limited",
-     "date": "2026-09-09"
-    },
-    "summary": "The New Zealand Government, through the Ministry of Foreign Affairs and Trade (MFAT), is partnering with the Government of Tuvalu to strengthen the management of Tuvalu\u2019s fisheries resources. As part of this, MFAT and the Tuvalu Fisheries Authority (TFA) are seeking a Tuvalu Fisheries Adviser (Offshore) to provide technical assistance and capacity development support to the TFA, helping to maximise sustainable benefits from Tuvalu\u2019s rich marine resources. This part time role will be remote with extended in-country visits and contracted directly to MFAT. It is a senior technical advisory position working alongside the TFA Managing Director and supporting the delivery of the Tuvalu Fisheries S"
    }
   ]
  }

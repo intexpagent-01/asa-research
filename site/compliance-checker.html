@@ -1190,7 +1190,8 @@ const USAID_REPORT = [
       "\\bcountry\\s+context\\b|\\bsector\\s+context\\b|\\bcontext(?:ual)?\\s+(?:analysis|background)\\b",
       "\\bdevelopment\\s+hypothesis\\b|\\btheory\\s+of\\s+change\\b|\\bToC\\b|\\blogic\\s+model\\b|\\bresults\\s+framework\\b",
       "\\bproblem\\s+(?:statement|analysis|being\\s+addressed)\\b|\\bopportunity\\b.*\\baddress\\b",
-      "\\bcausal\\s+(?:chain|pathway|mechanism|relationship)\\b"
+      "\\bcausal\\s+(?:chain|pathway|mechanism|relationship)\\b",
+      "\\boperating\\s+(?:context|environment)\\b|\\bintroduction\\s+and\\s+background\\b|\\bprogram\\s+(?:context|background|description)\\b"
     ],
     "min_matches": 2
   },
@@ -1259,7 +1260,9 @@ const USAID_REPORT = [
       "\\bconclusion(?:s)?\\b",
       "\\b(?:in|to)\\s+conclude\\b|\\bconcluding\\s+(?:remark|observation)\\b",
       "\\boverall\\s+(?:assessment|conclusion|judgement)\\b",
-      "\\bthe\\s+(?:evaluation|evidence|data)\\s+(?:supports?|suggests?|indicates?|demonstrates?)\\b"
+      "\\bthe\\s+(?:evaluation|evidence|data|ET|team|analysis)\\s+(?:supports?|suggests?|indicates?|demonstrates?|concluded|found|revealed|showed|confirmed|determined)\\b",
+      "\\bconcluded\\s+that\\b",
+      "\\bfindings\\s+and\\s+conclusions\\b"
     ],
     "min_matches": 2
   },
