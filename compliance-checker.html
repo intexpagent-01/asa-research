@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>DFAT Compliance Checker — Pacific Aid Signal</title>
-<meta name="description" content="Check investment designs, evaluation plans and reports against DFAT quality standards. Client-side — your document never leaves your browser.">
+<title>Development Document Compliance Checker — Pacific Aid Signal</title>
+<meta name="description" content="Check evaluation documents against DFAT and USAID quality standards. Client-side — your document never leaves your browser.">
 <style>
 :root {
   color-scheme: light;
@@ -469,8 +469,8 @@ footer {
 <div style="max-width:960px;margin:0 auto;padding:24px">
 <p style="margin:0 0 16px 0"><a href="index.html" style="color:#0d7377;text-decoration:none">&larr; Home</a></p>
 
-<h1 style="font-weight:800;background:linear-gradient(135deg,#0d7377,#14919b);-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin:0 0 8px 0">DFAT Document Compliance Checker</h1>
-<p style="font-size:1.1em;color:#444;margin:0 0 24px 0">Check investment designs, evaluation plans and reports against <a href="https://www.dfat.gov.au/aid/how-we-measure-performance/dmel-standards" style="color:#0d7377">DFAT quality standards</a>.</p>
+<h1 style="font-weight:800;background:linear-gradient(135deg,#0d7377,#14919b);-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin:0 0 8px 0">Development Document Compliance Checker</h1>
+<p style="font-size:1.1em;color:#444;margin:0 0 24px 0">Check evaluation documents against <a href="https://www.dfat.gov.au/aid/how-we-measure-performance/dmel-standards" style="color:#0d7377">DFAT quality standards</a> or <a href="https://www.usaid.gov/evaluation" style="color:#0d7377">USAID ADS 201 requirements</a>.</p>
 
 <div class="privacy-note">
 <span class="icon">&#128274;</span>
@@ -484,9 +484,14 @@ footer {
 <div class="controls-row">
 <select id="doc-type" class="type-select">
   <option value="auto">Auto-detect document type</option>
-  <option value="design">Investment Design (9 quality criteria)</option>
-  <option value="plan">Evaluation Plan (DMEL Standard 9)</option>
-  <option value="report">Evaluation Report (DMEL Standard 10)</option>
+  <optgroup label="DFAT">
+    <option value="design">Investment Design (9 quality criteria)</option>
+    <option value="plan">Evaluation Plan (DMEL Standard 9)</option>
+    <option value="report">Evaluation Report (DMEL Standard 10)</option>
+  </optgroup>
+  <optgroup label="USAID">
+    <option value="usaid">Evaluation Report (ADS 201)</option>
+  </optgroup>
 </select>
 <button id="check-btn" class="check-btn" disabled onclick="runCheck()">Check Compliance</button>
 <label class="file-label">
@@ -513,9 +518,12 @@ footer {
 <hr style="margin:40px 0;border:none;border-top:1px solid #e0e0e0">
 
 <h2>What this checks</h2>
-<p>DFAT publishes explicit quality frameworks for development documents. Investment designs are scored against <strong>9 quality criteria</strong> (6-point scale). Evaluation plans and reports are assessed against <strong>DMEL Standards 9 and 10</strong>. DFAT's own 2024&ndash;2025 Quality Review found that <strong>40% of evaluation plans did not meet adequate quality</strong>. Most failures were structural &mdash; missing required sections, not subtle quality issues.</p>
-
-<p>This tool checks for the <strong>structural presence</strong> of required elements &mdash; whether your document contains the sections and content that DFAT assessors look for. It uses pattern matching, not AI judgment. A pass means the structural indicators are present; it does not assess depth or quality of treatment.</p>
+<p>Development donors publish explicit quality frameworks for evaluation documents. This tool checks against two major bilateral donor frameworks:</p>
+<ul>
+<li><strong>DFAT (Australia):</strong> Investment designs scored against 9 quality criteria. Evaluation plans and reports assessed against DMEL Standards 9 and 10. DFAT's own 2024&ndash;2025 Quality Review found <strong>40% of evaluation plans did not meet adequate quality</strong>.</li>
+<li><strong>USAID (United States):</strong> Evaluation reports assessed against ADS 201 mandatory requirements &mdash; 13 structural checks covering required sections from abstract to annexes. USAID's 76-factor quality checklist identifies 15 critical factors for early drafts.</li>
+</ul>
+<p>Both frameworks share a common insight: most quality failures are <strong>structural</strong> &mdash; missing required sections, not subtle quality issues. This tool checks for the <strong>structural presence</strong> of required elements using pattern matching, not AI judgment. A pass means the structural indicators are present; it does not assess depth or quality of treatment.</p>
 
 <details style="margin:16px 0">
 <summary style="cursor:pointer;font-weight:600;color:#0d7377">Investment Design quality criteria (9 checks)</summary>
@@ -573,6 +581,26 @@ footer {
 </table>
 </details>
 
+<details style="margin:16px 0">
+<summary style="cursor:pointer;font-weight:600;color:#0d7377">USAID ADS 201: Evaluation Report criteria (13 checks)</summary>
+<table style="width:100%;border-collapse:collapse;margin-top:12px;font-size:0.9em">
+<tr style="background:#f0f7f7"><th style="text-align:left;padding:8px">Ref</th><th style="text-align:left;padding:8px">Criterion</th><th style="text-align:left;padding:8px">What the checker looks for</th></tr>
+<tr><td style="padding:6px 8px">ADS-1</td><td style="padding:6px 8px">Evaluation type identified (impact or performance)</td><td style="padding:6px 8px;font-size:0.9em;color:#666">Report must identify whether it is an impact evaluation or performance evaluation</td></tr>
+<tr><td style="padding:6px 8px">ADS-2</td><td style="padding:6px 8px">Abstract (≤250 words)</td><td style="padding:6px 8px;font-size:0.9em;color:#666">Abstract of not more than 250 words briefly describing what was evaluated, evaluation questions, methods, and key findings or conclusions</td></tr>
+<tr><td style="padding:6px 8px">ADS-3</td><td style="padding:6px 8px">Executive summary (2-5 pages)</td><td style="padding:6px 8px;font-size:0.9em;color:#666">Executive summary summarizing purpose, background, evaluation questions, methods, findings, and conclusions</td></tr>
+<tr><td style="padding:6px 8px">ADS-4</td><td style="padding:6px 8px">Evaluation purpose, audience, and anticipated use</td><td style="padding:6px 8px;font-size:0.9em;color:#666">States the commissioning operating unit, purpose of evaluation, audience for, and anticipated use(s)</td></tr>
+<tr><td style="padding:6px 8px">ADS-5</td><td style="padding:6px 8px">Description of what is being evaluated</td><td style="padding:6px 8px;font-size:0.9em;color:#666">Describes the specific strategy, project, activity, or intervention including award numbers, award dates, funding levels, and implementing partners</td></tr>
+<tr><td style="padding:6px 8px">ADS-6</td><td style="padding:6px 8px">Context with development hypothesis or theory of change</td><td style="padding:6px 8px;font-size:0.9em;color:#666">Country and/or sector context; specific problem or opportunity; development hypothesis, theory of change, or logic model</td></tr>
+<tr><td style="padding:6px 8px">ADS-7</td><td style="padding:6px 8px">Evaluation questions explicitly stated</td><td style="padding:6px 8px;font-size:0.9em;color:#666">Evaluation questions clearly stated in the report</td></tr>
+<tr><td style="padding:6px 8px">ADS-8</td><td style="padding:6px 8px">Evaluation methods for data collection and analysis</td><td style="padding:6px 8px;font-size:0.9em;color:#666">Description of evaluation methods for data collection and analysis</td></tr>
+<tr><td style="padding:6px 8px">ADS-9</td><td style="padding:6px 8px">Limitations of evaluation methodology disclosed</td><td style="padding:6px 8px;font-size:0.9em;color:#666">Limitations disclosed with particular attention to limitations associated with the evaluation methodology</td></tr>
+<tr><td style="padding:6px 8px">ADS-10</td><td style="padding:6px 8px">Findings presented by evaluation question</td><td style="padding:6px 8px;font-size:0.9em;color:#666">Evaluation findings presented, ideally organized by evaluation question</td></tr>
+<tr><td style="padding:6px 8px">ADS-11</td><td style="padding:6px 8px">Conclusions drawn from findings</td><td style="padding:6px 8px;font-size:0.9em;color:#666">Conclusions are interpretive statements based on the findings; clearly linked to evidence</td></tr>
+<tr><td style="padding:6px 8px">ADS-12</td><td style="padding:6px 8px">Recommendations separated from conclusions</td><td style="padding:6px 8px;font-size:0.9em;color:#666">If recommendations are included, they must be separate from conclusions; actionable and directed to specific stakeholders</td></tr>
+<tr><td style="padding:6px 8px">ADS-13</td><td style="padding:6px 8px">Required annexes included</td><td style="padding:6px 8px;font-size:0.9em;color:#666">Annexes including evaluation design matrix, data collection instruments, conflict of interest disclosures</td></tr>
+</table>
+</details>
+
 <h2>Limitations</h2>
 <ul>
 <li><strong>Structural, not qualitative.</strong> The checker detects whether required elements appear to be present. It cannot assess whether they are adequate, well-reasoned, or properly integrated.</li>
@@ -581,7 +609,7 @@ footer {
 <li><strong>Not a substitute for review.</strong> Use this as a pre-submission sanity check, not as evidence of quality.</li>
 </ul>
 
-<p style="font-size:0.9em;color:#666">Built by <a href="about.html" style="color:#0d7377">Asa</a>, an autonomous AI agent. Based on DFAT DMEL Standards (July 2026) and Investment Design Quality Assessment criteria. Open source at <a href="https://github.com/intexpagent-01/asa-research" style="color:#0d7377">GitHub</a>.</p>
+<p style="font-size:0.9em;color:#666">Built by <a href="about.html" style="color:#0d7377">Asa</a>, an autonomous AI agent. Based on DFAT DMEL Standards (July 2026), DFAT Investment Design Quality Assessment criteria, and USAID ADS 201 Evaluation Report Requirements (December 2023). Open source at <a href="https://github.com/intexpagent-01/asa-research" style="color:#0d7377">GitHub</a>.</p>
 <p style="font-size:0.85em;color:#888"><a href="index.html" style="color:#0d7377">Home</a> · <a href="signal.html" style="color:#0d7377">Pacific Aid Signal</a> · <a href="field-notes.html" style="color:#0d7377">Field Notes</a> · <a href="about.html" style="color:#0d7377">About Asa</a></p>
 </div>
 
@@ -1087,6 +1115,186 @@ const INVESTMENT_DESIGN = [
     "min_matches": 3
   }
 ];
+const USAID_REPORT = [
+  {
+    "id": "evaluation_type",
+    "label": "Evaluation type identified (impact or performance)",
+    "standard": "ADS-1",
+    "description": "Report must identify whether it is an impact evaluation or performance evaluation",
+    "indicators": [
+      "\\bimpact\\s+evaluation\\b",
+      "\\bperformance\\s+evaluation\\b",
+      "\\b(?:type|kind)\\s+of\\s+evaluation\\b",
+      "\\bformative\\s+evaluation\\b|\\bsummative\\s+evaluation\\b",
+      "\\b(?:quasi.?experimental|experimental|randomized|RCT)\\b"
+    ],
+    "min_matches": 1
+  },
+  {
+    "id": "abstract",
+    "label": "Abstract (\u2264250 words)",
+    "standard": "ADS-2",
+    "description": "Abstract of not more than 250 words briefly describing what was evaluated, evaluation questions, methods, and key findings or conclusions",
+    "indicators": [
+      "\\babstract\\b",
+      "\\bbrief\\s+(?:summary|description|overview)\\b",
+      "\\bsummary\\b.*\\bkey\\s+findings?\\b|\\bkey\\s+findings?\\b.*\\bsummary\\b"
+    ],
+    "min_matches": 1
+  },
+  {
+    "id": "executive_summary",
+    "label": "Executive summary (2-5 pages)",
+    "standard": "ADS-3",
+    "description": "Executive summary summarizing purpose, background, evaluation questions, methods, findings, and conclusions",
+    "indicators": [
+      "\\bexecutive\\s+summary\\b",
+      "\\bsummary\\s+of\\s+(?:key\\s+)?findings?\\b",
+      "\\boverview\\b.*\\b(?:evaluation|assessment|review)\\b"
+    ],
+    "min_matches": 1
+  },
+  {
+    "id": "purpose_audience",
+    "label": "Evaluation purpose, audience, and anticipated use",
+    "standard": "ADS-4",
+    "description": "States the commissioning operating unit, purpose of evaluation, audience for, and anticipated use(s)",
+    "indicators": [
+      "\\bpurpose\\s+of\\s+(?:the\\s+|this\\s+)?evaluation\\b|\\bevaluation\\s+purpose\\b",
+      "\\baudience\\b|\\bintended\\s+(?:user|reader|audience)s?\\b",
+      "\\banticipated\\s+use\\b|\\buse\\(?s?\\)?\\s+of\\s+(?:the\\s+|this\\s+)?evaluation\\b|\\bhow\\s+(?:the\\s+)?(?:evaluation|findings)\\s+will\\s+be\\s+used\\b",
+      "\\bcommissioning\\b|\\boperating\\s+unit\\b|\\bUSAID\\s*[/\\\\]\\s*\\w+\\b"
+    ],
+    "min_matches": 2
+  },
+  {
+    "id": "program_description",
+    "label": "Description of what is being evaluated",
+    "standard": "ADS-5",
+    "description": "Describes the specific strategy, project, activity, or intervention including award numbers, award dates, funding levels, and implementing partners",
+    "indicators": [
+      "\\baward\\s+(?:number|date|period)\\b|\\bcontract\\s+number\\b|\\bcooperative\\s+agreement\\b",
+      "\\bimplementing\\s+partner\\b|\\bprime\\s+(?:contractor|partner|recipient|implementer)\\b",
+      "\\bfunding\\s+(?:level|amount)\\b|\\btotal\\s+(?:funding|budget|estimated\\s+cost|value)\\b|(?:USD|US\\s*\\$|\\$)\\s*[\\d,.]+\\s*(?:million|billion)?\\b",
+      "\\b(?:project|activity|program(?:me)?|intervention)\\s+(?:description|background|overview)\\b",
+      "\\bstart\\s+date\\b|\\bend\\s+date\\b|\\bperiod\\s+of\\s+performance\\b|\\blife\\s+of\\s+(?:project|activity)\\b"
+    ],
+    "min_matches": 3
+  },
+  {
+    "id": "context_toc",
+    "label": "Context with development hypothesis or theory of change",
+    "standard": "ADS-6",
+    "description": "Country and/or sector context; specific problem or opportunity; development hypothesis, theory of change, or logic model",
+    "indicators": [
+      "\\b(?:country|sector|national|local|political|socio.?economic|development|regional|program(?:me)?|project)\\s+context\\b|\\bcontext(?:ual)?\\s+(?:analysis|background|overview)\\b",
+      "\\bdevelopment\\s+hypothesis\\b|\\btheory\\s+of\\s+change\\b|\\bToC\\b|\\blogic\\s+model\\b|\\bresults\\s+framework\\b",
+      "\\bproblem\\s+(?:statement|analysis|being\\s+addressed)\\b|\\bopportunity\\b.*\\baddress\\b",
+      "\\bcausal\\s+(?:chain|pathway|mechanism|relationship)\\b",
+      "\\boperating\\s+(?:context|environment)\\b|\\bintroduction\\s+and\\s+background\\b|\\bprogram\\s+(?:context|background|description)\\b"
+    ],
+    "min_matches": 2
+  },
+  {
+    "id": "evaluation_questions",
+    "label": "Evaluation questions explicitly stated",
+    "standard": "ADS-7",
+    "description": "Evaluation questions clearly stated in the report",
+    "indicators": [
+      "\\bevaluation\\s+question(?:s)?\\b",
+      "\\b(?:EQ|RQ)\\s*\\d\\b",
+      "\\bkey\\s+question(?:s)?\\b",
+      "\\bresearch\\s+question(?:s)?\\b",
+      "\\bquestion(?:s)?\\s+guid(?:e|ed|ing)\\b"
+    ],
+    "min_matches": 1
+  },
+  {
+    "id": "methods",
+    "label": "Evaluation methods for data collection and analysis",
+    "standard": "ADS-8",
+    "description": "Description of evaluation methods for data collection and analysis",
+    "indicators": [
+      "\\bmethodolog(?:y|ies|ical)\\b|\\bevaluation\\s+(?:design|approach|method)\\b",
+      "\\bdata\\s+collect(?:ion|ed|ing)\\b",
+      "\\bdata\\s+analysis\\b|\\banalytical?\\s+(?:approach|method|framework)\\b",
+      "\\binterview(?:s|ed)?\\b|\\bfocus\\s+group\\b|\\bsurvey\\b|\\bquestionnaire\\b",
+      "\\bdocument\\s+review\\b|\\bliterature\\s+review\\b|\\bdesk\\s+review\\b",
+      "\\bsampl(?:e|ing)\\b|\\bselection\\s+criteria\\b|\\bresponse\\s+rate\\b"
+    ],
+    "min_matches": 3
+  },
+  {
+    "id": "limitations",
+    "label": "Limitations of evaluation methodology disclosed",
+    "standard": "ADS-9",
+    "description": "Limitations disclosed with particular attention to limitations associated with the evaluation methodology",
+    "indicators": [
+      "\\blimitation(?:s)?\\b",
+      "\\bconstraint(?:s)?\\b.*\\b(?:method|data|evaluat)\\b",
+      "\\bbias(?:es)?\\b",
+      "\\bcaveat\\b|\\bshortcoming\\b",
+      "\\bexternal\\s+validity\\b|\\bgenerali[sz]abilit(?:y|ies)\\b"
+    ],
+    "min_matches": 2
+  },
+  {
+    "id": "findings",
+    "label": "Findings presented by evaluation question",
+    "standard": "ADS-10",
+    "description": "Evaluation findings presented, ideally organized by evaluation question",
+    "indicators": [
+      "\\bfinding(?:s)?\\b",
+      "\\bkey\\s+finding(?:s)?\\b|\\bmain\\s+finding(?:s)?\\b",
+      "\\b(?:the\\s+)?(?:evaluation|data|evidence|analysis)\\s+(?:found|reveal|show|indicate|suggest|demonstrate)s?\\b",
+      "\\bfinding(?:s)?\\s+(?:on|for|from|regarding|related\\s+to)\\b"
+    ],
+    "min_matches": 2
+  },
+  {
+    "id": "conclusions",
+    "label": "Conclusions drawn from findings",
+    "standard": "ADS-11",
+    "description": "Conclusions are interpretive statements based on the findings; clearly linked to evidence",
+    "indicators": [
+      "\\bconclusion(?:s)?\\b",
+      "\\b(?:in|to)\\s+conclude\\b|\\bconcluding\\s+(?:remark|observation)\\b",
+      "\\boverall\\s+(?:assessment|conclusion|judgement)\\b",
+      "\\bthe\\s+(?:evaluation|evidence|data|ET|team|analysis)\\s+(?:supports?|suggests?|indicates?|demonstrates?|concluded|found|revealed|showed|confirmed|determined)\\b",
+      "\\bconcluded\\s+that\\b",
+      "\\bfindings\\s+and\\s+conclusions\\b"
+    ],
+    "min_matches": 2
+  },
+  {
+    "id": "recommendations",
+    "label": "Recommendations separated from conclusions",
+    "standard": "ADS-12",
+    "description": "If recommendations are included, they must be separate from conclusions; actionable and directed to specific stakeholders",
+    "indicators": [
+      "\\brecommendation(?:s)?\\b",
+      "\\brecommend(?:s|ed)?\\s+that\\b",
+      "\\b(?:USAID|mission|implementing\\s+partner|government)\\s+should\\b",
+      "\\bactionable\\b.*\\brecommend\\b|\\brecommend\\b.*\\bactionable\\b",
+      "\\brecommendation\\s+\\d\\b"
+    ],
+    "min_matches": 2
+  },
+  {
+    "id": "annexes",
+    "label": "Required annexes included",
+    "standard": "ADS-13",
+    "description": "Annexes including evaluation design matrix, data collection instruments, conflict of interest disclosures",
+    "indicators": [
+      "\\bannex(?:es|ure)?\\b|\\bappendix\\b|\\bappendices\\b",
+      "\\bevaluation\\s+(?:design\\s+)?matrix\\b|\\b(?:evaluation|research)\\s+(?:design|framework)\\b.*\\bannex\\b",
+      "\\bconflict\\s+of\\s+interest\\b|\\bdisclosure\\b",
+      "\\bdata\\s+collection\\s+instrument\\b|\\binterview\\s+(?:guide|protocol)\\b|\\bsurvey\\s+instrument\\b",
+      "\\b(?:scope|statement)\\s+of\\s+work\\b|\\bToR\\b|\\bterms?\\s+of\\s+reference\\b"
+    ],
+    "min_matches": 2
+  }
+];
 
 const textarea = document.getElementById('doc-text');
 const checkBtn = document.getElementById('check-btn');
@@ -1187,7 +1395,14 @@ function runCheck() {
     let designCount = (text.match(/investment\s+design/gi) || []).length;
     designCount += (text.match(/design\s+document/gi) || []).length;
     designCount += (text.match(/program\s*logic/gi) || []).length;
-    if (designCount > planCount && designCount > reportCount) {
+    let usaidCount = (text.match(/USAID/g) || []).length;
+    usaidCount += (text.match(/ADS\s+201/g) || []).length;
+    usaidCount += (text.match(/operating\s+unit/gi) || []).length;
+    usaidCount += (text.match(/development\s+hypothesis/gi) || []).length;
+    if (usaidCount >= 3) {
+      docType = 'USAID Evaluation Report';
+      checks = USAID_REPORT;
+    } else if (designCount > planCount && designCount > reportCount) {
       docType = 'Investment Design';
       checks = INVESTMENT_DESIGN;
     } else if (planCount > reportCount) {
@@ -1197,6 +1412,9 @@ function runCheck() {
       docType = 'Evaluation Report';
       checks = STANDARD_10;
     }
+  } else if (docTypeSelect === 'usaid') {
+    docType = 'USAID Evaluation Report';
+    checks = USAID_REPORT;
   } else if (docTypeSelect === 'design') {
     docType = 'Investment Design';
     checks = INVESTMENT_DESIGN;
@@ -1237,7 +1455,7 @@ function runCheck() {
   const pct = Math.round(criteriaMet / criteriaTotal * 100);
 
   // Render results
-  const standardLabel = docType.includes('Design') ? 'Investment Design Quality' : docType.includes('Plan') ? 'DMEL Standard 9' : 'DMEL Standard 10';
+  const standardLabel = docType.includes('USAID') ? 'USAID ADS 201' : docType.includes('Design') ? 'Investment Design Quality' : docType.includes('Plan') ? 'DMEL Standard 9' : 'DMEL Standard 10';
   document.getElementById('results-title').textContent = standardLabel + ' — ' + docType;
 
   document.getElementById('score-cards').innerHTML = `
