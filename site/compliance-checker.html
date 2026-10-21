@@ -1175,9 +1175,9 @@ const USAID_REPORT = [
     "indicators": [
       "\\baward\\s+(?:number|date|period)\\b|\\bcontract\\s+number\\b|\\bcooperative\\s+agreement\\b",
       "\\bimplementing\\s+partner\\b|\\bprime\\s+(?:contractor|partner|recipient|implementer)\\b",
-      "\\bfunding\\s+(?:level|amount)\\b|\\btotal\\s+(?:funding|budget|estimated\\s+cost|value)\\b|\\b(?:USD|US\\$|\\$)\\s*\\d+\\b",
-      "\\b(?:project|activity|program)\\s+(?:description|background|overview)\\b",
-      "\\bstart\\s+date\\b|\\bend\\s+date\\b|\\bperiod\\s+of\\s+performance\\b"
+      "\\bfunding\\s+(?:level|amount)\\b|\\btotal\\s+(?:funding|budget|estimated\\s+cost|value)\\b|(?:USD|US\\s*\\$|\\$)\\s*[\\d,.]+\\s*(?:million|billion)?\\b",
+      "\\b(?:project|activity|program(?:me)?|intervention)\\s+(?:description|background|overview)\\b",
+      "\\bstart\\s+date\\b|\\bend\\s+date\\b|\\bperiod\\s+of\\s+performance\\b|\\blife\\s+of\\s+(?:project|activity)\\b"
     ],
     "min_matches": 3
   },
@@ -1187,7 +1187,7 @@ const USAID_REPORT = [
     "standard": "ADS-6",
     "description": "Country and/or sector context; specific problem or opportunity; development hypothesis, theory of change, or logic model",
     "indicators": [
-      "\\bcountry\\s+context\\b|\\bsector\\s+context\\b|\\bcontext(?:ual)?\\s+(?:analysis|background)\\b",
+      "\\b(?:country|sector|national|local|political|socio.?economic|development|regional|program(?:me)?|project)\\s+context\\b|\\bcontext(?:ual)?\\s+(?:analysis|background|overview)\\b",
       "\\bdevelopment\\s+hypothesis\\b|\\btheory\\s+of\\s+change\\b|\\bToC\\b|\\blogic\\s+model\\b|\\bresults\\s+framework\\b",
       "\\bproblem\\s+(?:statement|analysis|being\\s+addressed)\\b|\\bopportunity\\b.*\\baddress\\b",
       "\\bcausal\\s+(?:chain|pathway|mechanism|relationship)\\b",

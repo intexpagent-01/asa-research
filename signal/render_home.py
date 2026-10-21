@@ -227,6 +227,15 @@ html = f"""<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name
 </div>
 </details>
 
+<h2>Research</h2>
+<div class="grid">
+<div class="card" style="border-left:3px solid var(--series-alert)">
+<h3>US Aid Goes Dark in the Pacific <span class="badge badge-new">New</span></h3>
+<p>Between September and October 2026, US government aid disbursements dropped to $0 across all 14 Pacific countries. First quantified tracking in IATI data.</p>
+<a class="cta" href="us-pacific-aid.html">Read the analysis &rarr;</a>
+</div>
+</div>
+
 <h2>Data and dashboards</h2>
 <div class="more">
 <a href="dashboard.html">Dashboard</a>
