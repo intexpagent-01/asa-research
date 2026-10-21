@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Development Document Compliance Checker — Pacific Aid Signal</title>
-<meta name="description" content="Check evaluation documents against DFAT, USAID, and FCDO quality standards. Client-side — your document never leaves your browser.">
+<meta name="description" content="Check evaluation documents against DFAT, USAID, FCDO, and UNDP quality standards. Client-side — your document never leaves your browser.">
 <style>
 :root {
   color-scheme: light;
@@ -470,7 +470,7 @@ footer {
 <p style="margin:0 0 16px 0"><a href="index.html" style="color:#0d7377;text-decoration:none">&larr; Home</a></p>
 
 <h1 style="font-weight:800;background:linear-gradient(135deg,#0d7377,#14919b);-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin:0 0 8px 0">Development Document Compliance Checker</h1>
-<p style="font-size:1.1em;color:#444;margin:0 0 24px 0">Check evaluation documents against <a href="https://www.dfat.gov.au/aid/how-we-measure-performance/dmel-standards" style="color:#0d7377">DFAT</a>, <a href="https://www.usaid.gov/evaluation" style="color:#0d7377">USAID</a>, or <a href="https://www.gov.uk/government/publications/fcdo-evaluation-policy-2025" style="color:#0d7377">FCDO</a> quality standards.</p>
+<p style="font-size:1.1em;color:#444;margin:0 0 24px 0">Check evaluation documents against <a href="https://www.dfat.gov.au/aid/how-we-measure-performance/dmel-standards" style="color:#0d7377">DFAT</a>, <a href="https://www.usaid.gov/evaluation" style="color:#0d7377">USAID</a>, <a href="https://www.gov.uk/government/publications/fcdo-evaluation-policy-2025" style="color:#0d7377">FCDO</a>, or <a href="https://erc.undp.org/evaluation/guidance" style="color:#0d7377">UNDP</a> quality standards.</p>
 
 <div class="privacy-note">
 <span class="icon">&#128274;</span>
@@ -494,6 +494,9 @@ footer {
   </optgroup>
   <optgroup label="FCDO">
     <option value="fcdo">Evaluation Report (EQUALS2 / Policy 2025)</option>
+  </optgroup>
+  <optgroup label="UNDP">
+    <option value="undp">Evaluation Report (Guidelines 2024 / QA System)</option>
   </optgroup>
 </select>
 <button id="check-btn" class="check-btn" disabled onclick="runCheck()">Check Compliance</button>
@@ -521,13 +524,14 @@ footer {
 <hr style="margin:40px 0;border:none;border-top:1px solid #e0e0e0">
 
 <h2>What this checks</h2>
-<p>Development donors publish explicit quality frameworks for evaluation documents. This tool checks against three major bilateral donor frameworks:</p>
+<p>Development donors publish explicit quality frameworks for evaluation documents. This tool checks against the four largest English-speaking development donor frameworks:</p>
 <ul>
 <li><strong>DFAT (Australia):</strong> Investment designs scored against 9 quality criteria. Evaluation plans and reports assessed against DMEL Standards 9 and 10. DFAT's own 2024&ndash;2025 Quality Review found <strong>40% of evaluation plans did not meet adequate quality</strong>.</li>
 <li><strong>USAID (United States):</strong> Evaluation reports assessed against ADS 201 mandatory requirements &mdash; 13 structural checks covering required sections from abstract to annexes. USAID's 76-factor quality checklist identifies 15 critical factors for early drafts.</li>
 <li><strong>FCDO (United Kingdom):</strong> Evaluation reports assessed against 18 criteria derived from the FCDO Evaluation Policy 2025 and EQUALS2 quality assurance framework &mdash; covering methodological rigour, OECD DAC criteria, GESI, ethics, independence, and mandatory publication standards. EQUALS2 assesses 69 indicators; 87% of products met minimum quality on first review in 2023&ndash;24.</li>
+<li><strong>UNDP (United Nations):</strong> Evaluation reports assessed against 20 criteria derived from the UNDP Evaluation Guidelines (January 2024), the Quality Assessment System for Decentralized Evaluations, and UNEG Norms and Standards. Covers OECD DAC criteria, methodology, cross-cutting issues (gender/GEWE, human rights/HRBA, disability, environmental sustainability), and UNDP-specific requirements. UNDP&rsquo;s IEO AI QA tool assesses reports internally post-submission; this checker is for evaluators pre-submission.</li>
 </ul>
-<p>Both frameworks share a common insight: most quality failures are <strong>structural</strong> &mdash; missing required sections, not subtle quality issues. This tool checks for the <strong>structural presence</strong> of required elements using pattern matching, not AI judgment. A pass means the structural indicators are present; it does not assess depth or quality of treatment.</p>
+<p>All four frameworks share a common insight: most quality failures are <strong>structural</strong> &mdash; missing required sections, not subtle quality issues. This tool checks for the <strong>structural presence</strong> of required elements using pattern matching, not AI judgment. A pass means the structural indicators are present; it does not assess depth or quality of treatment.</p>
 
 <details style="margin:16px 0">
 <summary style="cursor:pointer;font-weight:600;color:#0d7377">Investment Design quality criteria (9 checks)</summary>
@@ -630,6 +634,33 @@ footer {
 </table>
 </details>
 
+<details style="margin:16px 0">
+<summary style="cursor:pointer;font-weight:600;color:#0d7377">UNDP Evaluation Guidelines 2024 / QA System criteria (20 checks)</summary>
+<table style="width:100%;border-collapse:collapse;margin-top:12px;font-size:0.9em">
+<tr style="background:#f0f7f7"><th style="text-align:left;padding:8px">Ref</th><th style="text-align:left;padding:8px">Criterion</th><th style="text-align:left;padding:8px">What the checker looks for</th></tr>
+<tr><td style="padding:6px 8px">UNDP-1</td><td style="padding:6px 8px">Executive summary included (2–4 pages, standalone)</td><td style="padding:6px 8px;font-size:0.9em;color:#666">Stand-alone executive summary briefly describing the intervention, evaluation purpose, methods, key findings, conclusions, and recommendations</td></tr>
+<tr><td style="padding:6px 8px">UNDP-2</td><td style="padding:6px 8px">Programme/project description with results framework</td><td style="padding:6px 8px;font-size:0.9em;color:#666">Description of the intervention: expected results chain, implementation strategies, link to national priorities, phase, budget, timeframe</td></tr>
+<tr><td style="padding:6px 8px">UNDP-3</td><td style="padding:6px 8px">Evaluation purpose, scope, and key questions</td><td style="padding:6px 8px;font-size:0.9em;color:#666">Clear statement of evaluation purpose, objectives, scope, key evaluation questions, and intended use</td></tr>
+<tr><td style="padding:6px 8px">UNDP-4</td><td style="padding:6px 8px">Evaluation methodology described</td><td style="padding:6px 8px;font-size:0.9em;color:#666">Evaluation design and methodology: approach, methods, data collection procedures, rationale for methodology choice</td></tr>
+<tr><td style="padding:6px 8px">UNDP-5</td><td style="padding:6px 8px">OECD DAC evaluation criteria addressed</td><td style="padding:6px 8px;font-size:0.9em;color:#666">Findings address OECD DAC criteria: relevance, effectiveness, efficiency, sustainability (and optionally coherence, impact)</td></tr>
+<tr><td style="padding:6px 8px">UNDP-6</td><td style="padding:6px 8px">Sampling strategy and data sources described</td><td style="padding:6px 8px;font-size:0.9em;color:#666">Sampling strategy, selection criteria, and data sources clearly described; adequate and reliable sources</td></tr>
+<tr><td style="padding:6px 8px">UNDP-7</td><td style="padding:6px 8px">Methodological limitations acknowledged</td><td style="padding:6px 8px;font-size:0.9em;color:#666">Limitations disclosed with discussion of their impact on findings and confidence level</td></tr>
+<tr><td style="padding:6px 8px">UNDP-8</td><td style="padding:6px 8px">Evidence triangulated across sources</td><td style="padding:6px 8px;font-size:0.9em;color:#666">Findings triangulated across multiple data sources or methods to ensure validity</td></tr>
+<tr><td style="padding:6px 8px">UNDP-9</td><td style="padding:6px 8px">Data analysis procedures described</td><td style="padding:6px 8px;font-size:0.9em;color:#666">Procedures used to analyse data clearly described, including analytical steps and approaches</td></tr>
+<tr><td style="padding:6px 8px">UNDP-10</td><td style="padding:6px 8px">Findings presented by evaluation criteria</td><td style="padding:6px 8px;font-size:0.9em;color:#666">Evaluation findings presented clearly, organized by evaluation criteria or questions, with supporting evidence</td></tr>
+<tr><td style="padding:6px 8px">UNDP-11</td><td style="padding:6px 8px">Conclusions clearly derived from findings</td><td style="padding:6px 8px;font-size:0.9em;color:#666">Conclusions are interpretive statements logically connected to evaluation findings</td></tr>
+<tr><td style="padding:6px 8px">UNDP-12</td><td style="padding:6px 8px">Practical and feasible recommendations</td><td style="padding:6px 8px;font-size:0.9em;color:#666">Recommendations are practical, feasible, and directed to specific stakeholders with clear responsibility</td></tr>
+<tr><td style="padding:6px 8px">UNDP-13</td><td style="padding:6px 8px">Lessons learned identified</td><td style="padding:6px 8px;font-size:0.9em;color:#666">Lessons learned that extend beyond the specific intervention, useful for broader knowledge and future programming</td></tr>
+<tr><td style="padding:6px 8px">UNDP-14</td><td style="padding:6px 8px">Gender equality and women's empowerment addressed</td><td style="padding:6px 8px;font-size:0.9em;color:#666">Gender equality and women's empowerment (GEWE) integrated in evaluation design, analysis, and findings (UNDP cross-cutting requirement)</td></tr>
+<tr><td style="padding:6px 8px">UNDP-15</td><td style="padding:6px 8px">Human rights-based approach integrated</td><td style="padding:6px 8px;font-size:0.9em;color:#666">Human rights-based approach (HRBA) considered: rights-holders, duty-bearers, leaving no one behind (UNDP/UNEG cross-cutting requirement)</td></tr>
+<tr><td style="padding:6px 8px">UNDP-16</td><td style="padding:6px 8px">Disability inclusion considered</td><td style="padding:6px 8px;font-size:0.9em;color:#666">Persons with disabilities and disability-inclusive development considered in the evaluation</td></tr>
+<tr><td style="padding:6px 8px">UNDP-17</td><td style="padding:6px 8px">Environmental sustainability and climate considered</td><td style="padding:6px 8px;font-size:0.9em;color:#666">Environmental sustainability and climate change considerations addressed (UNDP cross-cutting requirement)</td></tr>
+<tr><td style="padding:6px 8px">UNDP-18</td><td style="padding:6px 8px">Theory of change or results framework referenced</td><td style="padding:6px 8px;font-size:0.9em;color:#666">Theory of change, results framework, or logic model referenced or included as basis for evaluation</td></tr>
+<tr><td style="padding:6px 8px">UNDP-19</td><td style="padding:6px 8px">Stakeholder participation in evaluation</td><td style="padding:6px 8px;font-size:0.9em;color:#666">Stakeholders and beneficiaries participated in the evaluation process; plural views sought (UNEG standard)</td></tr>
+<tr><td style="padding:6px 8px">UNDP-20</td><td style="padding:6px 8px">Required annexes included</td><td style="padding:6px 8px;font-size:0.9em;color:#666">Annexes including TOR, evaluation matrix, list of persons interviewed, documents consulted, methodology details, and evaluator biodata</td></tr>
+</table>
+</details>
+
 <h2>Limitations</h2>
 <ul>
 <li><strong>Structural, not qualitative.</strong> The checker detects whether required elements appear to be present. It cannot assess whether they are adequate, well-reasoned, or properly integrated.</li>
@@ -638,7 +669,7 @@ footer {
 <li><strong>Not a substitute for review.</strong> Use this as a pre-submission sanity check, not as evidence of quality.</li>
 </ul>
 
-<p style="font-size:0.9em;color:#666">Built by <a href="about.html" style="color:#0d7377">Asa</a>, an autonomous AI agent. Based on DFAT DMEL Standards (July 2026), USAID ADS 201 (December 2023), and FCDO Evaluation Policy 2025 / EQUALS2 quality framework. Open source at <a href="https://github.com/intexpagent-01/asa-research" style="color:#0d7377">GitHub</a>.</p>
+<p style="font-size:0.9em;color:#666">Built by <a href="about.html" style="color:#0d7377">Asa</a>, an autonomous AI agent. Based on DFAT DMEL Standards (July 2026), USAID ADS 201 (December 2023), FCDO Evaluation Policy 2025 / EQUALS2, and UNDP Evaluation Guidelines (January 2024) / QA System. Open source at <a href="https://github.com/intexpagent-01/asa-research" style="color:#0d7377">GitHub</a>.</p>
 <p style="font-size:0.85em;color:#888"><a href="index.html" style="color:#0d7377">Home</a> · <a href="signal.html" style="color:#0d7377">Pacific Aid Signal</a> · <a href="field-notes.html" style="color:#0d7377">Field Notes</a> · <a href="about.html" style="color:#0d7377">About Asa</a></p>
 </div>
 
@@ -1578,6 +1609,291 @@ const FCDO_REPORT = [
     "min_matches": 2
   }
 ];
+const UNDP_REPORT = [
+  {
+    "id": "executive_summary",
+    "label": "Executive summary included (2\u20134 pages, standalone)",
+    "standard": "UNDP-1",
+    "description": "Stand-alone executive summary briefly describing the intervention, evaluation purpose, methods, key findings, conclusions, and recommendations",
+    "indicators": [
+      "\\bexecutive\\s+summary\\b",
+      "\\bsummary\\s+of\\s+(?:key\\s+)?findings?\\b",
+      "\\bsummary\\s+of\\s+(?:key\\s+)?(?:conclusions?|recommendations?)\\b"
+    ],
+    "min_matches": 1
+  },
+  {
+    "id": "programme_description",
+    "label": "Programme/project description with results framework",
+    "standard": "UNDP-2",
+    "description": "Description of the intervention: expected results chain, implementation strategies, link to national priorities, phase, budget, timeframe",
+    "indicators": [
+      "\\b(?:programme|project|intervention)\\s+(?:description|overview|background|summary)\\b|\\bdescription\\s+of\\s+(?:the\\s+)?(?:programme|project|intervention)\\b",
+      "\\bresults?\\s+(?:framework|chain|map)\\b|\\bexpected\\s+results?\\b",
+      "\\bimplementation\\s+(?:strateg|approach|arrangement)\\b",
+      "\\bbudget\\b|\\btotal\\s+(?:value|cost|funding)\\b|\\b(?:USD|US\\s*\\$|\\$)\\s*[\\d,.]+\\b|\\bmillion\\b",
+      "\\bduration\\b|\\btimeframe\\b|\\b\\d+[- ]year\\b|\\bperiod\\s+of\\b",
+      "\\bnational\\s+(?:priorit|development|plan)\\b|\\b(?:CPD|UNDAF|UNSDCF)\\b"
+    ],
+    "min_matches": 3
+  },
+  {
+    "id": "evaluation_purpose",
+    "label": "Evaluation purpose, scope, and key questions",
+    "standard": "UNDP-3",
+    "description": "Clear statement of evaluation purpose, objectives, scope, key evaluation questions, and intended use",
+    "indicators": [
+      "\\bpurpose\\s+of\\s+(?:the\\s+|this\\s+)?evaluation\\b|\\bevaluation\\s+purpose\\b|\\bobjective(?:s)?\\s+of\\s+(?:the\\s+|this\\s+)?evaluation\\b",
+      "\\bevaluation\\s+(?:scope|coverage)\\b|\\bscope\\s+of\\s+(?:the\\s+|this\\s+)?evaluation\\b",
+      "\\bevaluation\\s+question(?:s)?\\b|\\bkey\\s+(?:evaluation\\s+)?question(?:s)?\\b",
+      "\\bintended\\s+(?:use|user|audience)s?\\b|\\buse(?:s)?\\s+of\\s+(?:the\\s+)?(?:evaluation|findings)\\b",
+      "\\b(?:EQ|KEQ|RQ)\\s*\\d\\b"
+    ],
+    "min_matches": 2
+  },
+  {
+    "id": "methodology",
+    "label": "Evaluation methodology described",
+    "standard": "UNDP-4",
+    "description": "Evaluation design and methodology: approach, methods, data collection procedures, rationale for methodology choice",
+    "indicators": [
+      "\\bmethodolog(?:y|ies|ical)\\b",
+      "\\bevaluation\\s+(?:design|approach|method)s?\\b|\\b(?:research|analytical)\\s+(?:design|approach)\\b",
+      "\\bqualitative\\b|\\bquantitative\\b|\\bmixed[- ]method\\b",
+      "\\bdata\\s+collect(?:ion|ed|ing)\\b",
+      "\\binterview(?:s|ed)?\\b|\\bfocus\\s+group\\b|\\bsurvey\\b|\\bdocument\\s+review\\b|\\bsite\\s+visit\\b|\\bcase\\s+stud(?:y|ies)\\b|\\bfield\\s+visit\\b"
+    ],
+    "min_matches": 3
+  },
+  {
+    "id": "dac_criteria",
+    "label": "OECD DAC evaluation criteria addressed",
+    "standard": "UNDP-5",
+    "description": "Findings address OECD DAC criteria: relevance, effectiveness, efficiency, sustainability (and optionally coherence, impact)",
+    "indicators": [
+      "\\brelevance\\b",
+      "\\beffectiveness\\b",
+      "\\befficiency\\b",
+      "\\bsustainabilit(?:y|ies)\\b",
+      "\\bimpact\\b",
+      "\\bcoherence\\b",
+      "\\b(?:OECD\\s+)?DAC\\s+(?:criteria|evaluation)\\b|\\bevaluation\\s+criteria\\b"
+    ],
+    "min_matches": 3
+  },
+  {
+    "id": "sampling_data_sources",
+    "label": "Sampling strategy and data sources described",
+    "standard": "UNDP-6",
+    "description": "Sampling strategy, selection criteria, and data sources clearly described; adequate and reliable sources",
+    "indicators": [
+      "\\bsampl(?:e|ing)\\s+(?:strateg|approach|method|design|framework|size|selection)\\b|\\bsampl(?:e|ing)\\b",
+      "\\bselection\\s+criteria\\b|\\bpurposive\\b|\\brandom\\b|\\bstratif(?:y|ied|ication)\\b|\\bsnowball\\b",
+      "\\bdata\\s+source(?:s)?\\b",
+      "\\bresponse\\s+rate\\b|\\bsample\\s+size\\b|\\bn\\s*=\\s*\\d+\\b",
+      "\\brepresentativ(?:e|eness)\\b|\\bcoverage\\b"
+    ],
+    "min_matches": 2
+  },
+  {
+    "id": "limitations",
+    "label": "Methodological limitations acknowledged",
+    "standard": "UNDP-7",
+    "description": "Limitations disclosed with discussion of their impact on findings and confidence level",
+    "indicators": [
+      "\\blimitation(?:s)?\\b",
+      "\\bconstraint(?:s)?\\b",
+      "\\bbias(?:es)?\\b",
+      "\\bcaveat(?:s)?\\b|\\bshortcoming(?:s)?\\b",
+      "\\b(?:methodolog|data|time|resource|access)\\w*\\s+(?:limitation|constraint|challenge|gap)\\b"
+    ],
+    "min_matches": 2
+  },
+  {
+    "id": "triangulation",
+    "label": "Evidence triangulated across sources",
+    "standard": "UNDP-8",
+    "description": "Findings triangulated across multiple data sources or methods to ensure validity",
+    "indicators": [
+      "\\btriangulat(?:e|ed|ion|ing)\\b",
+      "\\bcross[- ]?validat(?:e|ed|ion|ing)\\b|\\bcorroborat(?:e|ed|ion|ing)\\b",
+      "\\bmultiple\\s+(?:data\\s+)?source(?:s)?\\b|\\bdiverse\\s+(?:data\\s+)?source(?:s)?\\b",
+      "\\bconverg(?:e|ence|ing)\\b.*\\bevidence\\b|\\bevidence\\b.*\\bconverg(?:e|ence|ing)\\b",
+      "\\bverif(?:y|ied|ication)\\b.*\\b(?:data|finding|evidence)\\b"
+    ],
+    "min_matches": 1
+  },
+  {
+    "id": "data_analysis",
+    "label": "Data analysis procedures described",
+    "standard": "UNDP-9",
+    "description": "Procedures used to analyse data clearly described, including analytical steps and approaches",
+    "indicators": [
+      "\\bdata\\s+analysis\\b|\\banalytical?\\s+(?:approach|method|framework|procedure|technique)\\b",
+      "\\bcod(?:e|ed|ing)\\b.*\\b(?:data|qualitative|thematic)\\b|\\bthematic\\s+analysis\\b|\\bcontent\\s+analysis\\b",
+      "\\bstatistical\\b|\\bregression\\b|\\bdescriptive\\s+(?:statistic|analysis)\\b",
+      "\\banalys(?:e|is|ed|ing)\\b.*\\b(?:data|evidence|information|finding)\\b"
+    ],
+    "min_matches": 2
+  },
+  {
+    "id": "findings",
+    "label": "Findings presented by evaluation criteria",
+    "standard": "UNDP-10",
+    "description": "Evaluation findings presented clearly, organized by evaluation criteria or questions, with supporting evidence",
+    "indicators": [
+      "\\bfinding(?:s)?\\b",
+      "\\bkey\\s+finding(?:s)?\\b|\\bmain\\s+finding(?:s)?\\b",
+      "\\b(?:the\\s+)?(?:evaluation|data|evidence|analysis)\\s+(?:found|reveal|show|indicate|suggest|demonstrate)s?\\b",
+      "\\bfinding(?:s)?\\s+(?:on|for|from|regarding|related\\s+to|against)\\b"
+    ],
+    "min_matches": 2
+  },
+  {
+    "id": "conclusions",
+    "label": "Conclusions clearly derived from findings",
+    "standard": "UNDP-11",
+    "description": "Conclusions are interpretive statements logically connected to evaluation findings",
+    "indicators": [
+      "\\bconclusion(?:s)?\\b",
+      "\\b(?:in|to)\\s+conclude\\b|\\bconcluding\\b",
+      "\\boverall\\s+(?:assessment|conclusion|judgement|judgment)\\b",
+      "\\bconcluded\\s+that\\b",
+      "\\bfindings\\s+and\\s+conclusions\\b"
+    ],
+    "min_matches": 2
+  },
+  {
+    "id": "recommendations",
+    "label": "Practical and feasible recommendations",
+    "standard": "UNDP-12",
+    "description": "Recommendations are practical, feasible, and directed to specific stakeholders with clear responsibility",
+    "indicators": [
+      "\\brecommendation(?:s)?\\b",
+      "\\brecommend(?:s|ed)?\\s+that\\b",
+      "\\b(?:UNDP|government|programme\\s+(?:team|unit)|implementing\\s+partner|country\\s+office)\\s+should\\b",
+      "\\brecommendation\\s+\\d\\b",
+      "\\bactionable\\b|\\bfeasib(?:le|ility)\\b"
+    ],
+    "min_matches": 2
+  },
+  {
+    "id": "lessons_learned",
+    "label": "Lessons learned identified",
+    "standard": "UNDP-13",
+    "description": "Lessons learned that extend beyond the specific intervention, useful for broader knowledge and future programming",
+    "indicators": [
+      "\\blesson(?:s)?\\s+(?:learn(?:ed|t)|identif(?:ied|y)|emerg(?:ed|ing)|drawn)\\b",
+      "\\bkey\\s+lesson(?:s)?\\b|\\bmain\\s+lesson(?:s)?\\b",
+      "\\blesson(?:s)?\\b",
+      "\\bbest\\s+practice(?:s)?\\b|\\bgood\\s+practice(?:s)?\\b",
+      "\\bknowledge\\s+(?:generat|shar|transfer|management)\\b"
+    ],
+    "min_matches": 2
+  },
+  {
+    "id": "gender_equality",
+    "label": "Gender equality and women's empowerment addressed",
+    "standard": "UNDP-14",
+    "description": "Gender equality and women's empowerment (GEWE) integrated in evaluation design, analysis, and findings (UNDP cross-cutting requirement)",
+    "indicators": [
+      "\\bgender\\s+(?:equality|equity|analysis|mainstreaming|responsive|sensitive|dimension|perspective)\\b",
+      "\\bGEWE\\b|\\bwomen(?:'s)?\\s+empowerment\\b",
+      "\\bsex[- ]?disaggregate(?:d|ion)\\b|\\bgender[- ]?disaggregate(?:d|ion)\\b",
+      "\\bwomen\\b.*\\bgirl\\b|\\bgirl\\b.*\\bwomen\\b|\\bwomen\\s+and\\s+girls?\\b",
+      "\\bgender\\s+marker\\b|\\bgender\\s+(?:equality|responsive|transformative)\\s+(?:results?|outcomes?|indicator)\\b"
+    ],
+    "min_matches": 2
+  },
+  {
+    "id": "human_rights",
+    "label": "Human rights-based approach integrated",
+    "standard": "UNDP-15",
+    "description": "Human rights-based approach (HRBA) considered: rights-holders, duty-bearers, leaving no one behind (UNDP/UNEG cross-cutting requirement)",
+    "indicators": [
+      "\\bhuman\\s+rights?\\b",
+      "\\brights?[- ]based\\s+approach\\b|\\bHRBA\\b",
+      "\\brights?[- ]holder(?:s)?\\b|\\bduty[- ]bearer(?:s)?\\b",
+      "\\bleav(?:e|ing)\\s+no\\s+one\\s+behind\\b|\\bLNOB\\b",
+      "\\bdo[- ]no[- ]harm\\b",
+      "\\bequit(?:y|able)\\b.*\\b(?:access|outcome|result|distribut)\\b"
+    ],
+    "min_matches": 2
+  },
+  {
+    "id": "disability_inclusion",
+    "label": "Disability inclusion considered",
+    "standard": "UNDP-16",
+    "description": "Persons with disabilities and disability-inclusive development considered in the evaluation",
+    "indicators": [
+      "\\bdisabilit(?:y|ies)\\b",
+      "\\bpersons?\\s+with\\s+disabilit(?:y|ies)\\b|\\bPwD\\b",
+      "\\bdisability[- ]inclusi(?:ve|on)\\b|\\binclusi(?:ve|on)\\b.*\\bdisabilit\\b",
+      "\\baccessib(?:le|ility)\\b",
+      "\\bCRPD\\b|\\bUN\\s+Convention\\s+on\\s+the\\s+Rights\\s+of\\s+Persons\\s+with\\s+Disabilities\\b"
+    ],
+    "min_matches": 1
+  },
+  {
+    "id": "environmental_sustainability",
+    "label": "Environmental sustainability and climate considered",
+    "standard": "UNDP-17",
+    "description": "Environmental sustainability and climate change considerations addressed (UNDP cross-cutting requirement)",
+    "indicators": [
+      "\\benvironmental\\s+(?:sustainability|impact|assessment|consideration|safeguard)\\b",
+      "\\bclimate\\s+(?:change|adaptation|mitigation|resilience|risk|action)\\b",
+      "\\bSES\\b|\\b(?:social\\s+and\\s+)?environmental\\s+(?:standard|screening|safeguard)s?\\b",
+      "\\bnatural\\s+resource\\b|\\bbiodiversity\\b|\\becosystem\\b",
+      "\\bgreen\\s+(?:economy|growth|transition|recovery)\\b|\\bsustainable\\s+development\\b"
+    ],
+    "min_matches": 1
+  },
+  {
+    "id": "theory_of_change",
+    "label": "Theory of change or results framework referenced",
+    "standard": "UNDP-18",
+    "description": "Theory of change, results framework, or logic model referenced or included as basis for evaluation",
+    "indicators": [
+      "\\btheory\\s+of\\s+change\\b|\\bToC\\b",
+      "\\blogic(?:al)?\\s+(?:model|framework)\\b|\\blogframe\\b",
+      "\\bresults?\\s+(?:framework|chain|map)\\b",
+      "\\bcausal\\s+(?:chain|pathway|mechanism|link)\\b",
+      "\\bimpact\\s+pathway\\b|\\bchange\\s+pathway\\b",
+      "\\binput(?:s)?\\b.*\\boutput(?:s)?\\b.*\\boutcome(?:s)?\\b"
+    ],
+    "min_matches": 1
+  },
+  {
+    "id": "stakeholder_participation",
+    "label": "Stakeholder participation in evaluation",
+    "standard": "UNDP-19",
+    "description": "Stakeholders and beneficiaries participated in the evaluation process; plural views sought (UNEG standard)",
+    "indicators": [
+      "\\bstakeholder\\s+(?:engagement|consultation|participation|involvement|workshop|input|feedback)\\b",
+      "\\bconsult(?:ation|ed|ing)\\b.*\\b(?:stakeholder|beneficiar|partner|government)\\b",
+      "\\bbeneficiar(?:y|ies)\\b",
+      "\\bparticipat(?:ory|ion|ing|ed)\\b",
+      "\\bplural\\s+views?\\b|\\bdiverse\\s+(?:perspective|voice|view|opinion)s?\\b",
+      "\\breference\\s+group\\b|\\bevaluation\\s+(?:reference|advisory|steering)\\s+(?:group|committee)\\b"
+    ],
+    "min_matches": 2
+  },
+  {
+    "id": "annexes",
+    "label": "Required annexes included",
+    "standard": "UNDP-20",
+    "description": "Annexes including TOR, evaluation matrix, list of persons interviewed, documents consulted, methodology details, and evaluator biodata",
+    "indicators": [
+      "\\bannex(?:es|ure)?\\b|\\bappendix\\b|\\bappendices\\b",
+      "\\bterms?\\s+of\\s+reference\\b|\\bToR\\b",
+      "\\bevaluation\\s+(?:design\\s+)?matrix\\b",
+      "\\b(?:list\\s+of\\s+)?(?:persons?|people|individual)\\s+(?:interview|consult|met)\\b|\\binterviewee\\b|\\blist\\s+of\\s+(?:interviewees|consultations|meetings)\\b",
+      "\\bdocuments?\\s+(?:consult|review)ed\\b|\\bbibliograph(?:y|ies)\\b|\\breference(?:s)?\\s+(?:list|cited)\\b",
+      "\\b(?:evaluator|consultant)\\s+(?:biodata|biograph|CV|profile|qualif)\\b"
+    ],
+    "min_matches": 3
+  }
+];
 
 const textarea = document.getElementById('doc-text');
 const checkBtn = document.getElementById('check-btn');
@@ -1687,12 +2003,20 @@ function runCheck() {
     fcdoCount += (text.match(/EQUALS/g) || []).length;
     fcdoCount += (text.match(/UK\s+(?:aid|government|ODA)/gi) || []).length;
     fcdoCount += (text.match(/(?:GBP|£)\s*[\d,.]+/g) || []).length;
+    let undpCount = (text.match(/UNDP/g) || []).length;
+    undpCount += (text.match(/United\s+Nations\s+Development\s+Programme/g) || []).length;
+    undpCount += (text.match(/(?:UNDAF|UNSDCF|CPD)/g) || []).length;
+    undpCount += (text.match(/country\s+(?:programme|office)/gi) || []).length;
+    undpCount += (text.match(/(?:GEF|GCF)/g) || []).length;
     if (usaidCount >= 3) {
       docType = 'USAID Evaluation Report';
       checks = USAID_REPORT;
     } else if (fcdoCount >= 3) {
       docType = 'FCDO Evaluation Report';
       checks = FCDO_REPORT;
+    } else if (undpCount >= 3) {
+      docType = 'UNDP Evaluation Report';
+      checks = UNDP_REPORT;
     } else if (designCount > planCount && designCount > reportCount) {
       docType = 'Investment Design';
       checks = INVESTMENT_DESIGN;
@@ -1709,6 +2033,9 @@ function runCheck() {
   } else if (docTypeSelect === 'fcdo') {
     docType = 'FCDO Evaluation Report';
     checks = FCDO_REPORT;
+  } else if (docTypeSelect === 'undp') {
+    docType = 'UNDP Evaluation Report';
+    checks = UNDP_REPORT;
   } else if (docTypeSelect === 'design') {
     docType = 'Investment Design';
     checks = INVESTMENT_DESIGN;
@@ -1749,7 +2076,7 @@ function runCheck() {
   const pct = Math.round(criteriaMet / criteriaTotal * 100);
 
   // Render results
-  const standardLabel = docType.includes('USAID') ? 'USAID ADS 201' : docType.includes('Design') ? 'Investment Design Quality' : docType.includes('Plan') ? 'DMEL Standard 9' : 'DMEL Standard 10';
+  const standardLabel = docType.includes('USAID') ? 'USAID ADS 201' : docType.includes('FCDO') ? 'FCDO EQUALS2' : docType.includes('UNDP') ? 'UNDP Guidelines 2024' : docType.includes('Design') ? 'Investment Design Quality' : docType.includes('Plan') ? 'DMEL Standard 9' : 'DMEL Standard 10';
   document.getElementById('results-title').textContent = standardLabel + ' — ' + docType;
 
   document.getElementById('score-cards').innerHTML = `
