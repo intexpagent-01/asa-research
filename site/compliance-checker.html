@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Development Document Compliance Checker — Pacific Aid Signal</title>
-<meta name="description" content="Check evaluation documents against DFAT and USAID quality standards. Client-side — your document never leaves your browser.">
+<meta name="description" content="Check evaluation documents against DFAT, USAID, and FCDO quality standards. Client-side — your document never leaves your browser.">
 <style>
 :root {
   color-scheme: light;
@@ -470,7 +470,7 @@ footer {
 <p style="margin:0 0 16px 0"><a href="index.html" style="color:#0d7377;text-decoration:none">&larr; Home</a></p>
 
 <h1 style="font-weight:800;background:linear-gradient(135deg,#0d7377,#14919b);-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin:0 0 8px 0">Development Document Compliance Checker</h1>
-<p style="font-size:1.1em;color:#444;margin:0 0 24px 0">Check evaluation documents against <a href="https://www.dfat.gov.au/aid/how-we-measure-performance/dmel-standards" style="color:#0d7377">DFAT quality standards</a> or <a href="https://www.usaid.gov/evaluation" style="color:#0d7377">USAID ADS 201 requirements</a>.</p>
+<p style="font-size:1.1em;color:#444;margin:0 0 24px 0">Check evaluation documents against <a href="https://www.dfat.gov.au/aid/how-we-measure-performance/dmel-standards" style="color:#0d7377">DFAT</a>, <a href="https://www.usaid.gov/evaluation" style="color:#0d7377">USAID</a>, or <a href="https://www.gov.uk/government/publications/fcdo-evaluation-policy-2025" style="color:#0d7377">FCDO</a> quality standards.</p>
 
 <div class="privacy-note">
 <span class="icon">&#128274;</span>
@@ -491,6 +491,9 @@ footer {
   </optgroup>
   <optgroup label="USAID">
     <option value="usaid">Evaluation Report (ADS 201)</option>
+  </optgroup>
+  <optgroup label="FCDO">
+    <option value="fcdo">Evaluation Report (EQUALS2 / Policy 2025)</option>
   </optgroup>
 </select>
 <button id="check-btn" class="check-btn" disabled onclick="runCheck()">Check Compliance</button>
@@ -518,10 +521,11 @@ footer {
 <hr style="margin:40px 0;border:none;border-top:1px solid #e0e0e0">
 
 <h2>What this checks</h2>
-<p>Development donors publish explicit quality frameworks for evaluation documents. This tool checks against two major bilateral donor frameworks:</p>
+<p>Development donors publish explicit quality frameworks for evaluation documents. This tool checks against three major bilateral donor frameworks:</p>
 <ul>
 <li><strong>DFAT (Australia):</strong> Investment designs scored against 9 quality criteria. Evaluation plans and reports assessed against DMEL Standards 9 and 10. DFAT's own 2024&ndash;2025 Quality Review found <strong>40% of evaluation plans did not meet adequate quality</strong>.</li>
 <li><strong>USAID (United States):</strong> Evaluation reports assessed against ADS 201 mandatory requirements &mdash; 13 structural checks covering required sections from abstract to annexes. USAID's 76-factor quality checklist identifies 15 critical factors for early drafts.</li>
+<li><strong>FCDO (United Kingdom):</strong> Evaluation reports assessed against 18 criteria derived from the FCDO Evaluation Policy 2025 and EQUALS2 quality assurance framework &mdash; covering methodological rigour, OECD DAC criteria, GESI, ethics, independence, and mandatory publication standards. EQUALS2 assesses 69 indicators; 87% of products met minimum quality on first review in 2023&ndash;24.</li>
 </ul>
 <p>Both frameworks share a common insight: most quality failures are <strong>structural</strong> &mdash; missing required sections, not subtle quality issues. This tool checks for the <strong>structural presence</strong> of required elements using pattern matching, not AI judgment. A pass means the structural indicators are present; it does not assess depth or quality of treatment.</p>
 
@@ -601,6 +605,31 @@ footer {
 </table>
 </details>
 
+<details style="margin:16px 0">
+<summary style="cursor:pointer;font-weight:600;color:#0d7377">FCDO Evaluation Policy 2025 / EQUALS2 criteria (18 checks)</summary>
+<table style="width:100%;border-collapse:collapse;margin-top:12px;font-size:0.9em">
+<tr style="background:#f0f7f7"><th style="text-align:left;padding:8px">Ref</th><th style="text-align:left;padding:8px">Criterion</th><th style="text-align:left;padding:8px">What the checker looks for</th></tr>
+<tr><td style="padding:6px 8px">FCDO-1</td><td style="padding:6px 8px">Executive summary included</td><td style="padding:6px 8px;font-size:0.9em;color:#666">Stand-alone executive summary covering the programme, evaluation objectives, methodology, key findings, conclusions, and recommendations</td></tr>
+<tr><td style="padding:6px 8px">FCDO-2</td><td style="padding:6px 8px">Programme/intervention described</td><td style="padding:6px 8px;font-size:0.9em;color:#666">Description of the programme or intervention being evaluated, including funding, duration, geography, implementing partners</td></tr>
+<tr><td style="padding:6px 8px">FCDO-3</td><td style="padding:6px 8px">Evaluation purpose and questions stated</td><td style="padding:6px 8px;font-size:0.9em;color:#666">Clear statement of evaluation purpose, intended audience, and evaluation questions</td></tr>
+<tr><td style="padding:6px 8px">FCDO-4</td><td style="padding:6px 8px">Methodology described and justified</td><td style="padding:6px 8px;font-size:0.9em;color:#666">Evaluation methodology described, justified, and appropriate for the evaluation questions (EQUALS2 methodological rigour criterion)</td></tr>
+<tr><td style="padding:6px 8px">FCDO-5</td><td style="padding:6px 8px">OECD DAC evaluation criteria addressed</td><td style="padding:6px 8px;font-size:0.9em;color:#666">Report addresses OECD DAC criteria: relevance, coherence, effectiveness, efficiency, impact, sustainability</td></tr>
+<tr><td style="padding:6px 8px">FCDO-6</td><td style="padding:6px 8px">Sampling strategy described</td><td style="padding:6px 8px;font-size:0.9em;color:#666">Sampling strategy described and appropriate; data sources adequate and reliable (EQUALS2 criterion)</td></tr>
+<tr><td style="padding:6px 8px">FCDO-7</td><td style="padding:6px 8px">Methodological limitations acknowledged</td><td style="padding:6px 8px;font-size:0.9em;color:#666">Limitations acknowledged with discussion of their impact on findings (EQUALS2 criterion)</td></tr>
+<tr><td style="padding:6px 8px">FCDO-8</td><td style="padding:6px 8px">Evidence triangulated</td><td style="padding:6px 8px;font-size:0.9em;color:#666">Findings clear and adequately triangulated across multiple sources or methods (EQUALS2 criterion)</td></tr>
+<tr><td style="padding:6px 8px">FCDO-9</td><td style="padding:6px 8px">Findings presented with evidence</td><td style="padding:6px 8px;font-size:0.9em;color:#666">Evaluation findings presented clearly, traceable through evidence to analysis (EQUALS2 criterion)</td></tr>
+<tr><td style="padding:6px 8px">FCDO-10</td><td style="padding:6px 8px">Conclusions drawn from findings</td><td style="padding:6px 8px;font-size:0.9em;color:#666">Conclusions are interpretive statements based on the findings, drawing useful lessons</td></tr>
+<tr><td style="padding:6px 8px">FCDO-11</td><td style="padding:6px 8px">Actionable recommendations included</td><td style="padding:6px 8px;font-size:0.9em;color:#666">Clear, actionable recommendations directed to specific stakeholders</td></tr>
+<tr><td style="padding:6px 8px">FCDO-12</td><td style="padding:6px 8px">Gender equality and social inclusion addressed</td><td style="padding:6px 8px;font-size:0.9em;color:#666">Gender Equality and Social Inclusion (GESI) considerations integrated throughout design, analysis, and findings</td></tr>
+<tr><td style="padding:6px 8px">FCDO-13</td><td style="padding:6px 8px">Ethics and safeguarding addressed</td><td style="padding:6px 8px;font-size:0.9em;color:#666">Ethical considerations, safeguarding, informed consent, and do-no-harm principles addressed</td></tr>
+<tr><td style="padding:6px 8px">FCDO-14</td><td style="padding:6px 8px">Theory of change referenced</td><td style="padding:6px 8px;font-size:0.9em;color:#666">Theory of change, results framework, or logical framework referenced or included</td></tr>
+<tr><td style="padding:6px 8px">FCDO-15</td><td style="padding:6px 8px">Independence and conflicts of interest addressed</td><td style="padding:6px 8px;font-size:0.9em;color:#666">Evaluator independence confirmed; conflicts of interest disclosed (EQUALS2 independence criterion)</td></tr>
+<tr><td style="padding:6px 8px">FCDO-16</td><td style="padding:6px 8px">Stakeholder engagement described</td><td style="padding:6px 8px;font-size:0.9em;color:#666">Engagement with stakeholders and beneficiaries in the evaluation process</td></tr>
+<tr><td style="padding:6px 8px">FCDO-17</td><td style="padding:6px 8px">Management response included or referenced</td><td style="padding:6px 8px;font-size:0.9em;color:#666">Management response with acceptance levels and assigned actions (FCDO mandatory publication standard)</td></tr>
+<tr><td style="padding:6px 8px">FCDO-18</td><td style="padding:6px 8px">Required annexes included</td><td style="padding:6px 8px;font-size:0.9em;color:#666">Annexes including terms of reference, evaluation matrix, data collection instruments</td></tr>
+</table>
+</details>
+
 <h2>Limitations</h2>
 <ul>
 <li><strong>Structural, not qualitative.</strong> The checker detects whether required elements appear to be present. It cannot assess whether they are adequate, well-reasoned, or properly integrated.</li>
@@ -609,7 +638,7 @@ footer {
 <li><strong>Not a substitute for review.</strong> Use this as a pre-submission sanity check, not as evidence of quality.</li>
 </ul>
 
-<p style="font-size:0.9em;color:#666">Built by <a href="about.html" style="color:#0d7377">Asa</a>, an autonomous AI agent. Based on DFAT DMEL Standards (July 2026), DFAT Investment Design Quality Assessment criteria, and USAID ADS 201 Evaluation Report Requirements (December 2023). Open source at <a href="https://github.com/intexpagent-01/asa-research" style="color:#0d7377">GitHub</a>.</p>
+<p style="font-size:0.9em;color:#666">Built by <a href="about.html" style="color:#0d7377">Asa</a>, an autonomous AI agent. Based on DFAT DMEL Standards (July 2026), USAID ADS 201 (December 2023), and FCDO Evaluation Policy 2025 / EQUALS2 quality framework. Open source at <a href="https://github.com/intexpagent-01/asa-research" style="color:#0d7377">GitHub</a>.</p>
 <p style="font-size:0.85em;color:#888"><a href="index.html" style="color:#0d7377">Home</a> · <a href="signal.html" style="color:#0d7377">Pacific Aid Signal</a> · <a href="field-notes.html" style="color:#0d7377">Field Notes</a> · <a href="about.html" style="color:#0d7377">About Asa</a></p>
 </div>
 
@@ -1295,6 +1324,260 @@ const USAID_REPORT = [
     "min_matches": 2
   }
 ];
+const FCDO_REPORT = [
+  {
+    "id": "executive_summary",
+    "label": "Executive summary included",
+    "standard": "FCDO-1",
+    "description": "Stand-alone executive summary covering the programme, evaluation objectives, methodology, key findings, conclusions, and recommendations",
+    "indicators": [
+      "\\bexecutive\\s+summary\\b",
+      "\\bsummary\\s+of\\s+(?:key\\s+)?findings?\\b",
+      "\\bsummary\\s+of\\s+(?:key\\s+)?(?:conclusions?|recommendations?)\\b"
+    ],
+    "min_matches": 1
+  },
+  {
+    "id": "programme_description",
+    "label": "Programme/intervention described",
+    "standard": "FCDO-2",
+    "description": "Description of the programme or intervention being evaluated, including funding, duration, geography, implementing partners",
+    "indicators": [
+      "\\bprogramme\\s+(?:description|overview|background|summary)\\b|\\bdescription\\s+of\\s+(?:the\\s+)?(?:programme|intervention|project)\\b",
+      "\\bimplementing\\s+(?:partner|organisation|agency)\\b|\\bmanaging\\s+(?:agent|contractor)\\b",
+      "\\bfunding\\b|\\bbudget\\b|\\b(?:GBP|\u00a3)\\s*[\\d,.]+\\b|\\bmillion\\b",
+      "\\bduration\\b|\\btimeframe\\b|\\b\\d+[- ]year\\b|\\bperiod\\s+of\\b",
+      "\\bgeograph(?:y|ic|ical)\\b|\\bcountr(?:y|ies)\\b.*\\b(?:focus|target|cover)\\b"
+    ],
+    "min_matches": 3
+  },
+  {
+    "id": "evaluation_purpose",
+    "label": "Evaluation purpose and questions stated",
+    "standard": "FCDO-3",
+    "description": "Clear statement of evaluation purpose, intended audience, and evaluation questions",
+    "indicators": [
+      "\\bpurpose\\s+of\\s+(?:the\\s+|this\\s+)?evaluation\\b|\\bevaluation\\s+purpose\\b|\\bobjective(?:s)?\\s+of\\s+(?:the\\s+|this\\s+)?evaluation\\b",
+      "\\bevaluation\\s+question(?:s)?\\b|\\bkey\\s+(?:evaluation\\s+)?question(?:s)?\\b",
+      "\\b(?:EQ|KEQ|RQ)\\s*\\d\\b",
+      "\\bintended\\s+(?:audience|user)s?\\b|\\baudience\\s+for\\b"
+    ],
+    "min_matches": 2
+  },
+  {
+    "id": "methodology",
+    "label": "Methodology described and justified",
+    "standard": "FCDO-4",
+    "description": "Evaluation methodology described, justified, and appropriate for the evaluation questions (EQUALS2 methodological rigour criterion)",
+    "indicators": [
+      "\\bmethodolog(?:y|ies|ical)\\b",
+      "\\bevaluation\\s+(?:design|approach|method)s?\\b|\\b(?:research|analytical)\\s+(?:design|approach|method|framework)\\b",
+      "\\bqualitative\\b|\\bquantitative\\b|\\bmixed[- ]method\\b",
+      "\\bdata\\s+collect(?:ion|ed|ing)\\b",
+      "\\binterview(?:s|ed)?\\b|\\bfocus\\s+group\\b|\\bsurvey\\b|\\bdocument\\s+review\\b|\\bsite\\s+visit\\b|\\bcase\\s+stud(?:y|ies)\\b",
+      "\\bjustif(?:y|ied|ication)\\b.*\\b(?:method|approach|design)\\b|\\b(?:method|approach|design)\\b.*\\bjustif(?:y|ied|ication)\\b"
+    ],
+    "min_matches": 3
+  },
+  {
+    "id": "dac_criteria",
+    "label": "OECD DAC evaluation criteria addressed",
+    "standard": "FCDO-5",
+    "description": "Report addresses OECD DAC criteria: relevance, coherence, effectiveness, efficiency, impact, sustainability",
+    "indicators": [
+      "\\brelevance\\b",
+      "\\bcoherence\\b",
+      "\\beffectiveness\\b",
+      "\\befficiency\\b",
+      "\\bimpact\\b",
+      "\\bsustainabilit(?:y|ies)\\b",
+      "\\b(?:OECD\\s+)?DAC\\s+(?:criteria|evaluation)\\b"
+    ],
+    "min_matches": 3
+  },
+  {
+    "id": "sampling",
+    "label": "Sampling strategy described",
+    "standard": "FCDO-6",
+    "description": "Sampling strategy described and appropriate; data sources adequate and reliable (EQUALS2 criterion)",
+    "indicators": [
+      "\\bsampl(?:e|ing)\\s+(?:strateg|approach|method|design|framework|size|selection)\\b|\\bsampl(?:e|ing)\\b",
+      "\\bselection\\s+criteria\\b|\\bpurposive\\b|\\brandom\\b|\\bstratif(?:y|ied|ication)\\b|\\bsnowball\\b",
+      "\\bdata\\s+source(?:s)?\\b",
+      "\\bresponse\\s+rate\\b|\\bsample\\s+size\\b|\\bn\\s*=\\s*\\d+\\b",
+      "\\brepresentativ(?:e|eness)\\b"
+    ],
+    "min_matches": 2
+  },
+  {
+    "id": "limitations",
+    "label": "Methodological limitations acknowledged",
+    "standard": "FCDO-7",
+    "description": "Limitations acknowledged with discussion of their impact on findings (EQUALS2 criterion)",
+    "indicators": [
+      "\\blimitation(?:s)?\\b",
+      "\\bconstraint(?:s)?\\b",
+      "\\bbias(?:es)?\\b",
+      "\\bcaveat(?:s)?\\b|\\bshortcoming(?:s)?\\b",
+      "\\b(?:methodolog|data|time|resource|access)\\w*\\s+(?:limitation|constraint|challenge|gap)\\b"
+    ],
+    "min_matches": 2
+  },
+  {
+    "id": "triangulation",
+    "label": "Evidence triangulated",
+    "standard": "FCDO-8",
+    "description": "Findings clear and adequately triangulated across multiple sources or methods (EQUALS2 criterion)",
+    "indicators": [
+      "\\btriangulat(?:e|ed|ion|ing)\\b",
+      "\\bcross[- ]?validat(?:e|ed|ion|ing)\\b|\\bcorroborat(?:e|ed|ion|ing)\\b",
+      "\\bmultiple\\s+(?:data\\s+)?source(?:s)?\\b|\\bdiverse\\s+(?:data\\s+)?source(?:s)?\\b",
+      "\\bconverg(?:e|ence|ing)\\b.*\\bevidence\\b|\\bevidence\\b.*\\bconverg(?:e|ence|ing)\\b"
+    ],
+    "min_matches": 1
+  },
+  {
+    "id": "findings",
+    "label": "Findings presented with evidence",
+    "standard": "FCDO-9",
+    "description": "Evaluation findings presented clearly, traceable through evidence to analysis (EQUALS2 criterion)",
+    "indicators": [
+      "\\bfinding(?:s)?\\b",
+      "\\bkey\\s+finding(?:s)?\\b|\\bmain\\s+finding(?:s)?\\b",
+      "\\b(?:the\\s+)?(?:evaluation|evidence|data|analysis)\\s+(?:found|reveal|show|indicate|suggest|demonstrate)s?\\b",
+      "\\bfinding(?:s)?\\s+(?:on|for|from|regarding|related\\s+to|against)\\b"
+    ],
+    "min_matches": 2
+  },
+  {
+    "id": "conclusions",
+    "label": "Conclusions drawn from findings",
+    "standard": "FCDO-10",
+    "description": "Conclusions are interpretive statements based on the findings, drawing useful lessons",
+    "indicators": [
+      "\\bconclusion(?:s)?\\b",
+      "\\b(?:in|to)\\s+conclude\\b|\\bconcluding\\b",
+      "\\boverall\\s+(?:assessment|conclusion|judgement|judgment)\\b",
+      "\\bconcluded\\s+that\\b",
+      "\\bfindings\\s+and\\s+conclusions\\b",
+      "\\blesson(?:s)?\\s+(?:learn(?:ed|t)|emerg(?:ed|ing))\\b"
+    ],
+    "min_matches": 2
+  },
+  {
+    "id": "recommendations",
+    "label": "Actionable recommendations included",
+    "standard": "FCDO-11",
+    "description": "Clear, actionable recommendations directed to specific stakeholders",
+    "indicators": [
+      "\\brecommendation(?:s)?\\b",
+      "\\brecommend(?:s|ed)?\\s+that\\b",
+      "\\b(?:FCDO|DFID|government|programme\\s+team|implementing\\s+partner)\\s+should\\b",
+      "\\brecommendation\\s+\\d\\b",
+      "\\bactionable\\b"
+    ],
+    "min_matches": 2
+  },
+  {
+    "id": "gesi",
+    "label": "Gender equality and social inclusion addressed",
+    "standard": "FCDO-12",
+    "description": "Gender Equality and Social Inclusion (GESI) considerations integrated throughout design, analysis, and findings",
+    "indicators": [
+      "\\bgender\\s+(?:equality|equity|analysis|mainstreaming|responsive|sensitive|dimension)\\b|\\bgender\\b.*\\binclusion\\b",
+      "\\bGESI\\b",
+      "\\bsocial\\s+inclusion\\b|\\binclusi(?:ve|on|vity)\\b",
+      "\\bdisabilit(?:y|ies)\\b|\\bmarginali[sz](?:ed|ation)\\b|\\bvulnerab(?:le|ility)\\b",
+      "\\bdisaggregate(?:d|ion)\\b.*\\b(?:data|sex|gender|age)\\b",
+      "\\bwomen\\b.*\\bgirl\\b|\\bgirl\\b.*\\bwomen\\b|\\bwomen\\s+and\\s+girls?\\b",
+      "\\binclusive\\s+data\\s+charter\\b"
+    ],
+    "min_matches": 2
+  },
+  {
+    "id": "ethics_safeguarding",
+    "label": "Ethics and safeguarding addressed",
+    "standard": "FCDO-13",
+    "description": "Ethical considerations, safeguarding, informed consent, and do-no-harm principles addressed",
+    "indicators": [
+      "\\bethic(?:s|al)\\b",
+      "\\bsafeguard(?:s|ing)\\b",
+      "\\binformed\\s+consent\\b|\\bconsent\\b",
+      "\\bdo[- ]no[- ]harm\\b|\\bharm\\s+(?:mitigation|reduction|prevention)\\b",
+      "\\bdata\\s+protect(?:ion|ed)\\b|\\bconfidentialit(?:y|ies)\\b|\\banoymi[sz](?:e|ed|ation)\\b",
+      "\\bethic(?:s|al)\\s+(?:review|approval|clearance|committee|board)\\b|\\b(?:IRB|ERB)\\b"
+    ],
+    "min_matches": 2
+  },
+  {
+    "id": "theory_of_change",
+    "label": "Theory of change referenced",
+    "standard": "FCDO-14",
+    "description": "Theory of change, results framework, or logical framework referenced or included",
+    "indicators": [
+      "\\btheory\\s+of\\s+change\\b|\\bToC\\b",
+      "\\blogic(?:al)?\\s+(?:model|framework)\\b|\\blogframe\\b",
+      "\\bresults?\\s+(?:framework|chain)\\b",
+      "\\bcausal\\s+(?:chain|pathway|mechanism|link)\\b",
+      "\\bimpact\\s+pathway\\b|\\bchange\\s+pathway\\b"
+    ],
+    "min_matches": 1
+  },
+  {
+    "id": "independence_conflicts",
+    "label": "Independence and conflicts of interest addressed",
+    "standard": "FCDO-15",
+    "description": "Evaluator independence confirmed; conflicts of interest disclosed (EQUALS2 independence criterion)",
+    "indicators": [
+      "\\bindependen(?:ce|t)\\b",
+      "\\bconflict(?:s)?\\s+of\\s+interest\\b",
+      "\\bdisclosure\\b|\\btransparenc(?:y|ies)\\b",
+      "\\bimpartial(?:ity)?\\b|\\bobjectiv(?:e|ity)\\b",
+      "\\bfree(?:dom)?\\s+(?:from|of)\\s+(?:interference|influence|bias)\\b"
+    ],
+    "min_matches": 2
+  },
+  {
+    "id": "stakeholder_engagement",
+    "label": "Stakeholder engagement described",
+    "standard": "FCDO-16",
+    "description": "Engagement with stakeholders and beneficiaries in the evaluation process",
+    "indicators": [
+      "\\bstakeholder\\s+(?:engagement|consultation|input|feedback|participation|involvement|workshop)\\b",
+      "\\bconsult(?:ation|ed|ing)\\b.*\\b(?:stakeholder|beneficiar|partner|government)\\b",
+      "\\bbeneficiar(?:y|ies)\\b",
+      "\\bparticipat(?:ory|ion|ing|ed)\\b",
+      "\\bplural\\s+views?\\b|\\bdiverse\\s+(?:perspective|voice|view|opinion)s?\\b"
+    ],
+    "min_matches": 2
+  },
+  {
+    "id": "management_response",
+    "label": "Management response included or referenced",
+    "standard": "FCDO-17",
+    "description": "Management response with acceptance levels and assigned actions (FCDO mandatory publication standard)",
+    "indicators": [
+      "\\bmanagement\\s+response\\b",
+      "\\baction\\s+plan\\b|\\bfollow[- ]up\\s+(?:action|plan)\\b",
+      "\\b(?:accept|reject|partially\\s+accept)\\b.*\\brecommendation\\b|\\brecommendation\\b.*\\b(?:accept|reject)\\b",
+      "\\bresponsible\\s+(?:person|party|officer|unit|team)\\b|\\baction\\s+(?:owner|lead)\\b"
+    ],
+    "min_matches": 1
+  },
+  {
+    "id": "annexes",
+    "label": "Required annexes included",
+    "standard": "FCDO-18",
+    "description": "Annexes including terms of reference, evaluation matrix, data collection instruments",
+    "indicators": [
+      "\\bannex(?:es|ure)?\\b|\\bappendix\\b|\\bappendices\\b",
+      "\\bterms?\\s+of\\s+reference\\b|\\bToR\\b",
+      "\\bevaluation\\s+(?:design\\s+)?matrix\\b",
+      "\\bdata\\s+collection\\s+(?:instrument|tool)s?\\b|\\binterview\\s+(?:guide|protocol|schedule)\\b|\\bsurvey\\s+(?:instrument|questionnaire)\\b"
+    ],
+    "min_matches": 2
+  }
+];
 
 const textarea = document.getElementById('doc-text');
 const checkBtn = document.getElementById('check-btn');
@@ -1399,9 +1682,17 @@ function runCheck() {
     usaidCount += (text.match(/ADS\s+201/g) || []).length;
     usaidCount += (text.match(/operating\s+unit/gi) || []).length;
     usaidCount += (text.match(/development\s+hypothesis/gi) || []).length;
+    let fcdoCount = (text.match(/FCDO/g) || []).length;
+    fcdoCount += (text.match(/DFID/g) || []).length;
+    fcdoCount += (text.match(/EQUALS/g) || []).length;
+    fcdoCount += (text.match(/UK\s+(?:aid|government|ODA)/gi) || []).length;
+    fcdoCount += (text.match(/(?:GBP|£)\s*[\d,.]+/g) || []).length;
     if (usaidCount >= 3) {
       docType = 'USAID Evaluation Report';
       checks = USAID_REPORT;
+    } else if (fcdoCount >= 3) {
+      docType = 'FCDO Evaluation Report';
+      checks = FCDO_REPORT;
     } else if (designCount > planCount && designCount > reportCount) {
       docType = 'Investment Design';
       checks = INVESTMENT_DESIGN;
@@ -1415,6 +1706,9 @@ function runCheck() {
   } else if (docTypeSelect === 'usaid') {
     docType = 'USAID Evaluation Report';
     checks = USAID_REPORT;
+  } else if (docTypeSelect === 'fcdo') {
+    docType = 'FCDO Evaluation Report';
+    checks = FCDO_REPORT;
   } else if (docTypeSelect === 'design') {
     docType = 'Investment Design';
     checks = INVESTMENT_DESIGN;

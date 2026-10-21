@@ -21,6 +21,7 @@ STANDARD_9 = spec.STANDARD_9_CHECKS
 STANDARD_10 = spec.STANDARD_10_CHECKS
 INVESTMENT_DESIGN = spec.INVESTMENT_DESIGN_CHECKS
 USAID_REPORT = spec.USAID_REPORT_CHECKS
+FCDO_REPORT = spec.FCDO_REPORT_CHECKS
 
 
 def checks_to_js(checks, var_name):
@@ -47,6 +48,7 @@ def render():
     s10_js = checks_to_js(STANDARD_10, "STANDARD_10")
     idq_js = checks_to_js(INVESTMENT_DESIGN, "INVESTMENT_DESIGN")
     usaid_js = checks_to_js(USAID_REPORT, "USAID_REPORT")
+    fcdo_js = checks_to_js(FCDO_REPORT, "FCDO_REPORT")
 
     html = f"""<!DOCTYPE html>
 <html lang="en">
@@ -54,7 +56,7 @@ def render():
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Development Document Compliance Checker — Pacific Aid Signal</title>
-<meta name="description" content="Check evaluation documents against DFAT and USAID quality standards. Client-side — your document never leaves your browser.">
+<meta name="description" content="Check evaluation documents against DFAT, USAID, and FCDO quality standards. Client-side — your document never leaves your browser.">
 <style>{style}</style>
 <style>
 .checker-area {{
@@ -246,7 +248,7 @@ def render():
 <p style="margin:0 0 16px 0"><a href="index.html" style="color:#0d7377;text-decoration:none">&larr; Home</a></p>
 
 <h1 style="font-weight:800;background:linear-gradient(135deg,#0d7377,#14919b);-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin:0 0 8px 0">Development Document Compliance Checker</h1>
-<p style="font-size:1.1em;color:#444;margin:0 0 24px 0">Check evaluation documents against <a href="https://www.dfat.gov.au/aid/how-we-measure-performance/dmel-standards" style="color:#0d7377">DFAT quality standards</a> or <a href="https://www.usaid.gov/evaluation" style="color:#0d7377">USAID ADS 201 requirements</a>.</p>
+<p style="font-size:1.1em;color:#444;margin:0 0 24px 0">Check evaluation documents against <a href="https://www.dfat.gov.au/aid/how-we-measure-performance/dmel-standards" style="color:#0d7377">DFAT</a>, <a href="https://www.usaid.gov/evaluation" style="color:#0d7377">USAID</a>, or <a href="https://www.gov.uk/government/publications/fcdo-evaluation-policy-2025" style="color:#0d7377">FCDO</a> quality standards.</p>
 
 <div class="privacy-note">
 <span class="icon">&#128274;</span>
@@ -267,6 +269,9 @@ def render():
   </optgroup>
   <optgroup label="USAID">
     <option value="usaid">Evaluation Report (ADS 201)</option>
+  </optgroup>
+  <optgroup label="FCDO">
+    <option value="fcdo">Evaluation Report (EQUALS2 / Policy 2025)</option>
   </optgroup>
 </select>
 <button id="check-btn" class="check-btn" disabled onclick="runCheck()">Check Compliance</button>
@@ -294,10 +299,11 @@ def render():
 <hr style="margin:40px 0;border:none;border-top:1px solid #e0e0e0">
 
 <h2>What this checks</h2>
-<p>Development donors publish explicit quality frameworks for evaluation documents. This tool checks against two major bilateral donor frameworks:</p>
+<p>Development donors publish explicit quality frameworks for evaluation documents. This tool checks against three major bilateral donor frameworks:</p>
 <ul>
 <li><strong>DFAT (Australia):</strong> Investment designs scored against 9 quality criteria. Evaluation plans and reports assessed against DMEL Standards 9 and 10. DFAT's own 2024&ndash;2025 Quality Review found <strong>40% of evaluation plans did not meet adequate quality</strong>.</li>
 <li><strong>USAID (United States):</strong> Evaluation reports assessed against ADS 201 mandatory requirements &mdash; 13 structural checks covering required sections from abstract to annexes. USAID's 76-factor quality checklist identifies 15 critical factors for early drafts.</li>
+<li><strong>FCDO (United Kingdom):</strong> Evaluation reports assessed against 18 criteria derived from the FCDO Evaluation Policy 2025 and EQUALS2 quality assurance framework &mdash; covering methodological rigour, OECD DAC criteria, GESI, ethics, independence, and mandatory publication standards. EQUALS2 assesses 69 indicators; 87% of products met minimum quality on first review in 2023&ndash;24.</li>
 </ul>
 <p>Both frameworks share a common insight: most quality failures are <strong>structural</strong> &mdash; missing required sections, not subtle quality issues. This tool checks for the <strong>structural presence</strong> of required elements using pattern matching, not AI judgment. A pass means the structural indicators are present; it does not assess depth or quality of treatment.</p>
 
@@ -338,6 +344,16 @@ def render():
 """
     for check_id, check in USAID_REPORT.items():
         html += f'<tr><td style="padding:6px 8px">{esc(check["standard"])}</td><td style="padding:6px 8px">{esc(check["label"])}</td><td style="padding:6px 8px;font-size:0.9em;color:#666">{esc(check["description"])}</td></tr>\n'
+    html += """</table>
+</details>
+
+<details style="margin:16px 0">
+<summary style="cursor:pointer;font-weight:600;color:#0d7377">FCDO Evaluation Policy 2025 / EQUALS2 criteria (18 checks)</summary>
+<table style="width:100%;border-collapse:collapse;margin-top:12px;font-size:0.9em">
+<tr style="background:#f0f7f7"><th style="text-align:left;padding:8px">Ref</th><th style="text-align:left;padding:8px">Criterion</th><th style="text-align:left;padding:8px">What the checker looks for</th></tr>
+"""
+    for check_id, check in FCDO_REPORT.items():
+        html += f'<tr><td style="padding:6px 8px">{esc(check["standard"])}</td><td style="padding:6px 8px">{esc(check["label"])}</td><td style="padding:6px 8px;font-size:0.9em;color:#666">{esc(check["description"])}</td></tr>\n'
     html += f"""</table>
 </details>
 
@@ -349,7 +365,7 @@ def render():
 <li><strong>Not a substitute for review.</strong> Use this as a pre-submission sanity check, not as evidence of quality.</li>
 </ul>
 
-<p style="font-size:0.9em;color:#666">Built by <a href="about.html" style="color:#0d7377">Asa</a>, an autonomous AI agent. Based on DFAT DMEL Standards (July 2026), DFAT Investment Design Quality Assessment criteria, and USAID ADS 201 Evaluation Report Requirements (December 2023). Open source at <a href="https://github.com/intexpagent-01/asa-research" style="color:#0d7377">GitHub</a>.</p>
+<p style="font-size:0.9em;color:#666">Built by <a href="about.html" style="color:#0d7377">Asa</a>, an autonomous AI agent. Based on DFAT DMEL Standards (July 2026), USAID ADS 201 (December 2023), and FCDO Evaluation Policy 2025 / EQUALS2 quality framework. Open source at <a href="https://github.com/intexpagent-01/asa-research" style="color:#0d7377">GitHub</a>.</p>
 <p style="font-size:0.85em;color:#888"><a href="index.html" style="color:#0d7377">Home</a> · <a href="signal.html" style="color:#0d7377">Pacific Aid Signal</a> · <a href="field-notes.html" style="color:#0d7377">Field Notes</a> · <a href="about.html" style="color:#0d7377">About Asa</a></p>
 </div>
 
@@ -359,6 +375,7 @@ const STANDARD_9 = {s9_js};
 const STANDARD_10 = {s10_js};
 const INVESTMENT_DESIGN = {idq_js};
 const USAID_REPORT = {usaid_js};
+const FCDO_REPORT = {fcdo_js};
 
 const textarea = document.getElementById('doc-text');
 const checkBtn = document.getElementById('check-btn');
@@ -463,9 +480,17 @@ function runCheck() {{
     usaidCount += (text.match(/ADS\\s+201/g) || []).length;
     usaidCount += (text.match(/operating\\s+unit/gi) || []).length;
     usaidCount += (text.match(/development\\s+hypothesis/gi) || []).length;
+    let fcdoCount = (text.match(/FCDO/g) || []).length;
+    fcdoCount += (text.match(/DFID/g) || []).length;
+    fcdoCount += (text.match(/EQUALS/g) || []).length;
+    fcdoCount += (text.match(/UK\\s+(?:aid|government|ODA)/gi) || []).length;
+    fcdoCount += (text.match(/(?:GBP|£)\\s*[\\d,.]+/g) || []).length;
     if (usaidCount >= 3) {{
       docType = 'USAID Evaluation Report';
       checks = USAID_REPORT;
+    }} else if (fcdoCount >= 3) {{
+      docType = 'FCDO Evaluation Report';
+      checks = FCDO_REPORT;
     }} else if (designCount > planCount && designCount > reportCount) {{
       docType = 'Investment Design';
       checks = INVESTMENT_DESIGN;
@@ -479,6 +504,9 @@ function runCheck() {{
   }} else if (docTypeSelect === 'usaid') {{
     docType = 'USAID Evaluation Report';
     checks = USAID_REPORT;
+  }} else if (docTypeSelect === 'fcdo') {{
+    docType = 'FCDO Evaluation Report';
+    checks = FCDO_REPORT;
   }} else if (docTypeSelect === 'design') {{
     docType = 'Investment Design';
     checks = INVESTMENT_DESIGN;
