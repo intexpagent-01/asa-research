@@ -1476,7 +1476,8 @@ const FCDO_REPORT = [
       "\\bfinding(?:s)?\\b",
       "\\bkey\\s+finding(?:s)?\\b|\\bmain\\s+finding(?:s)?\\b",
       "\\b(?:the\\s+)?(?:evaluation|evidence|data|analysis)\\s+(?:found|reveal|show|indicate|suggest|demonstrate)s?\\b",
-      "\\bfinding(?:s)?\\s+(?:on|for|from|regarding|related\\s+to|against)\\b"
+      "\\bfinding(?:s)?\\s+(?:on|for|from|regarding|related\\s+to|against)\\b",
+      "\\bfinding\\s+\\d+\\b"
     ],
     "min_matches": 2
   },
@@ -1490,8 +1491,9 @@ const FCDO_REPORT = [
       "\\b(?:in|to)\\s+conclude\\b|\\bconcluding\\b",
       "\\boverall\\s+(?:assessment|conclusion|judgement|judgment)\\b",
       "\\bconcluded\\s+that\\b",
-      "\\bfindings\\s+and\\s+conclusions\\b",
-      "\\blesson(?:s)?\\s+(?:learn(?:ed|t)|emerg(?:ed|ing))\\b"
+      "\\bfindings\\s+and\\s+conclusions\\b|\\bconclusions?\\s+and\\s+recommendations?\\b",
+      "\\blesson(?:s)?\\s+(?:learn(?:ed|t)|emerg(?:ed|ing))\\b",
+      "\\bconclusion\\s+\\d+\\b"
     ],
     "min_matches": 2
   },
@@ -1617,8 +1619,10 @@ const UNDP_REPORT = [
     "description": "Stand-alone executive summary briefly describing the intervention, evaluation purpose, methods, key findings, conclusions, and recommendations",
     "indicators": [
       "\\bexecutive\\s+summary\\b",
+      "\\bevaluation\\s+brief\\b",
       "\\bsummary\\s+of\\s+(?:key\\s+)?findings?\\b",
-      "\\bsummary\\s+of\\s+(?:key\\s+)?(?:conclusions?|recommendations?)\\b"
+      "\\bsummary\\s+of\\s+(?:key\\s+)?(?:conclusions?|recommendations?)\\b",
+      "\\boverview\\s+of\\s+(?:key\\s+)?(?:findings?|conclusions?|recommendations?)\\b"
     ],
     "min_matches": 1
   },
@@ -1732,7 +1736,8 @@ const UNDP_REPORT = [
       "\\bdata\\s+analysis\\b|\\banalytical?\\s+(?:approach|method|framework|procedure|technique)\\b",
       "\\bcod(?:e|ed|ing)\\b.*\\b(?:data|qualitative|thematic)\\b|\\bthematic\\s+analysis\\b|\\bcontent\\s+analysis\\b",
       "\\bstatistical\\b|\\bregression\\b|\\bdescriptive\\s+(?:statistic|analysis)\\b",
-      "\\banalys(?:e|is|ed|ing)\\b.*\\b(?:data|evidence|information|finding)\\b"
+      "\\banalys(?:e|is|ed|ing)\\b.*\\b(?:data|evidence|information|finding)\\b",
+      "\\b(?:portfolio|contribution|contributory|comparative|theory[- ]based)\\s+analysis\\b"
     ],
     "min_matches": 2
   },
@@ -1745,7 +1750,8 @@ const UNDP_REPORT = [
       "\\bfinding(?:s)?\\b",
       "\\bkey\\s+finding(?:s)?\\b|\\bmain\\s+finding(?:s)?\\b",
       "\\b(?:the\\s+)?(?:evaluation|data|evidence|analysis)\\s+(?:found|reveal|show|indicate|suggest|demonstrate)s?\\b",
-      "\\bfinding(?:s)?\\s+(?:on|for|from|regarding|related\\s+to|against)\\b"
+      "\\bfinding(?:s)?\\s+(?:on|for|from|regarding|related\\s+to|against)\\b",
+      "\\bfinding\\s+\\d+\\b"
     ],
     "min_matches": 2
   },
@@ -1759,7 +1765,8 @@ const UNDP_REPORT = [
       "\\b(?:in|to)\\s+conclude\\b|\\bconcluding\\b",
       "\\boverall\\s+(?:assessment|conclusion|judgement|judgment)\\b",
       "\\bconcluded\\s+that\\b",
-      "\\bfindings\\s+and\\s+conclusions\\b"
+      "\\bfindings\\s+and\\s+conclusions\\b|\\bconclusions?\\s+and\\s+recommendations?\\b",
+      "\\bconclusion\\s+\\d+\\b"
     ],
     "min_matches": 2
   },
