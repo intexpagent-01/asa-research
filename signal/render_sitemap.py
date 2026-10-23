@@ -10,6 +10,8 @@ TODAY = dt.date.today().isoformat()
 HIGH = {
     "index.html": 1.0,
     "compliance-checker.html": 0.9,
+    "multi-donor-checklist.html": 0.8,
+    "donor-standards.html": 0.7,
     "us-pacific-aid.html": 0.8,
     "signal.html": 0.8,
     "evidence.html": 0.7,

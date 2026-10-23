@@ -140,7 +140,7 @@ html = f"""<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name
 <p>Check evaluation documents against <strong>DFAT</strong>, <strong>USAID</strong>, <strong>FCDO</strong>, or <strong>UNDP</strong> quality standards. The checker identifies which required structural elements are present or missing &mdash; the same gaps that cause 40% of DFAT evaluation plans and 13% of FCDO evaluation products to fail quality review on first submission.</p>
 <p style="font-size:.85rem;color:var(--text-secondary)"><strong>How it works:</strong> all checks run in your browser. No data is sent to any server. Pattern-based structural detection &mdash; deterministic, no AI model calls. Covers DFAT (35 criteria across 3 doc types), USAID ADS 201 (13 criteria), FCDO EQUALS2 (18 criteria), and UNDP (20 criteria). 86 checks total, validated on 7 real evaluation documents.</p>
 <p style="font-size:.85rem;color:var(--text-secondary)"><strong>Limitations:</strong> checks structural presence, not depth or quality of treatment. A document may contain the right keywords without substantively addressing the criterion. Use as a pre-submission sanity check.</p>
-<a class="cta" href="compliance-checker.html">Check your document &rarr;</a> &nbsp; <a class="cta" href="donor-standards.html" style="font-size:.85rem">Compare donor standards &rarr;</a>
+<a class="cta" href="compliance-checker.html">Check your document &rarr;</a> &nbsp; <a class="cta" href="multi-donor-checklist.html" style="font-size:.85rem">Multi-donor checklist &rarr;</a> &nbsp; <a class="cta" href="donor-standards.html" style="font-size:.85rem">Compare standards &rarr;</a>
 </div>
 
 <div class="get-section" id="get">

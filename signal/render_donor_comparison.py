@@ -180,6 +180,19 @@ THEMES = [
 
 
 def render():
+    structured_data = json.dumps({
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Evaluation Standards Compared: DFAT vs USAID vs FCDO vs UNDP",
+        "description": "Side-by-side comparison of evaluation quality requirements across DFAT, USAID, FCDO, and UNDP. 27 dimensions compared, with unique requirements per donor and practical guidance for multi-donor evaluations.",
+        "url": "https://pacificaidsignal.org/donor-standards.html",
+        "isAccessibleForFree": True,
+        "about": [
+            {"@type": "Thing", "name": "Development evaluation quality standards"},
+            {"@type": "Thing", "name": "Multi-donor evaluation requirements"},
+        ],
+    }, indent=2)
+
     # Count statistics
     n_themes = len(THEMES)
     donors = ["DFAT", "USAID", "FCDO", "UNDP"]
@@ -248,6 +261,7 @@ def render():
 <title>Evaluation Standards Compared: DFAT vs USAID vs FCDO vs UNDP — Pacific Aid Signal</title>
 <meta name="description" content="Side-by-side comparison of evaluation quality requirements across DFAT, USAID, FCDO, and UNDP. What each donor requires in evaluation reports, and where they differ. Reference for multi-donor evaluators.">
 <meta name="keywords" content="DFAT evaluation standards, USAID ADS 201 requirements, FCDO EQUALS2, UNDP evaluation guidelines, evaluation quality checklist, donor compliance, development evaluation, DMEL Standards">
+<script type="application/ld+json">{structured_data}</script>
 <style>{style}</style>
 <style>
 .compare-table {{

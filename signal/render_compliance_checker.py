@@ -52,6 +52,28 @@ def render():
     fcdo_js = checks_to_js(FCDO_REPORT, "FCDO_REPORT")
     undp_js = checks_to_js(UNDP_REPORT, "UNDP_REPORT")
 
+    n_checks = len(STANDARD_9) + len(STANDARD_10) + len(INVESTMENT_DESIGN) + len(USAID_REPORT) + len(FCDO_REPORT) + len(UNDP_REPORT)
+    structured_data = json.dumps({
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Development Document Compliance Checker",
+        "description": "Free tool to check evaluation documents against DFAT, USAID, FCDO, and UNDP quality standards. 86 structural checks across 4 major development donors. Client-side processing — your document never leaves your browser.",
+        "url": "https://pacificaidsignal.org/compliance-checker.html",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "Web browser",
+        "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"},
+        "featureList": [
+            f"{n_checks} structural compliance checks",
+            "DFAT DMEL Standards (evaluation plans, reports, investment designs)",
+            "USAID ADS 201 evaluation report checks",
+            "FCDO EQUALS2 quality assessment",
+            "UNDP evaluation quality system checks",
+            "PDF upload with client-side text extraction",
+            "Privacy-first: no data leaves the browser",
+        ],
+        "isAccessibleForFree": True,
+    }, indent=2)
+
     html = f"""<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -59,6 +81,7 @@ def render():
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Development Document Compliance Checker — Pacific Aid Signal</title>
 <meta name="description" content="Check evaluation documents against DFAT, USAID, FCDO, and UNDP quality standards. Client-side — your document never leaves your browser.">
+<script type="application/ld+json">{structured_data}</script>
 <style>{style}</style>
 <style>
 .checker-area {{
@@ -247,7 +270,9 @@ def render():
 <body>
 <div style="background:linear-gradient(135deg,#0d7377,#14919b);height:4px"></div>
 <div style="max-width:960px;margin:0 auto;padding:24px">
-<p style="margin:0 0 16px 0"><a href="index.html" style="color:#0d7377;text-decoration:none">&larr; Home</a></p>
+<p style="margin:0 0 16px 0"><a href="index.html" style="color:#0d7377;text-decoration:none">&larr; Home</a>
+&nbsp;|&nbsp; <a href="multi-donor-checklist.html" style="color:#0d7377;text-decoration:none">Multi-Donor Checklist</a>
+&nbsp;|&nbsp; <a href="donor-standards.html" style="color:#0d7377;text-decoration:none">Standards Compared</a></p>
 
 <h1 style="font-weight:800;background:linear-gradient(135deg,#0d7377,#14919b);-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin:0 0 8px 0">Development Document Compliance Checker</h1>
 <p style="font-size:1.1em;color:#444;margin:0 0 24px 0">Check evaluation documents against <a href="https://www.dfat.gov.au/aid/how-we-measure-performance/dmel-standards" style="color:#0d7377">DFAT</a>, <a href="https://www.usaid.gov/evaluation" style="color:#0d7377">USAID</a>, <a href="https://www.gov.uk/government/publications/fcdo-evaluation-policy-2025" style="color:#0d7377">FCDO</a>, or <a href="https://erc.undp.org/evaluation/guidance" style="color:#0d7377">UNDP</a> quality standards.</p>
