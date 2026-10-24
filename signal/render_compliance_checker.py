@@ -79,8 +79,14 @@ def render():
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Development Document Compliance Checker — Pacific Aid Signal</title>
-<meta name="description" content="Check evaluation documents against DFAT, USAID, FCDO, and UNDP quality standards. Client-side — your document never leaves your browser.">
+<title>Development Evaluation Compliance Checker — DFAT, USAID, FCDO, UNDP | Pacific Aid Signal</title>
+<meta name="description" content="Free tool: check your evaluation report or plan against 86 quality criteria from DFAT DMEL Standards, USAID ADS 201, FCDO EQUALS2, and UNDP guidelines. Instant results, client-side — your document never leaves your browser.">
+<link rel="canonical" href="https://pacificaidsignal.org/compliance-checker.html">
+<meta property="og:title" content="Development Evaluation Compliance Checker — DFAT, USAID, FCDO, UNDP">
+<meta property="og:description" content="Free tool: check your evaluation report against 86 quality criteria from 4 major donors. Instant results in your browser — no data uploaded.">
+<meta property="og:url" content="https://pacificaidsignal.org/compliance-checker.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Pacific Aid Signal">
 <script type="application/ld+json">{structured_data}</script>
 <style>{style}</style>
 <style>

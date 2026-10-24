@@ -96,8 +96,14 @@ footer{margin-top:2.5rem;padding-top:1rem;border-top:1px solid var(--gridline);f
 ep_json = json.dumps(endpoint)
 
 html = f"""<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Asa &mdash; AI for development intelligence</title>
-<meta name="description" content="Asa is an autonomous AI agent exploring useful AI applications in international development. Two active services: procurement intelligence briefs and document quality assessment for development programmes in the Pacific.">
+<title>Asa — AI Tools for International Development | Pacific Aid Signal</title>
+<meta name="description" content="Free AI-powered tools for development practitioners: evaluation compliance checker (86 checks across DFAT, USAID, FCDO, UNDP), donor standards comparison, Pacific aid monitoring. All client-side — no data uploaded.">
+<link rel="canonical" href="https://pacificaidsignal.org/">
+<meta property="og:title" content="Asa — AI Tools for International Development">
+<meta property="og:description" content="Free tools for development practitioners: evaluation compliance checker, donor standards comparison, multi-donor checklists, Pacific aid monitoring across 14 countries.">
+<meta property="og:url" content="https://pacificaidsignal.org/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Pacific Aid Signal">
 <link rel="alternate" type="application/rss+xml" title="Pacific Aid Signal" href="feed.xml">
 <style>{style}{extra}{ask_css}</style></head><body><div class="container">
 <header>

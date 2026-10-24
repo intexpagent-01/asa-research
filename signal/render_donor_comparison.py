@@ -258,9 +258,15 @@ def render():
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Evaluation Standards Compared: DFAT vs USAID vs FCDO vs UNDP — Pacific Aid Signal</title>
-<meta name="description" content="Side-by-side comparison of evaluation quality requirements across DFAT, USAID, FCDO, and UNDP. What each donor requires in evaluation reports, and where they differ. Reference for multi-donor evaluators.">
+<title>Evaluation Standards Compared: DFAT vs USAID vs FCDO vs UNDP — 27 Dimensions | Pacific Aid Signal</title>
+<meta name="description" content="Side-by-side comparison of evaluation quality requirements across DFAT DMEL Standards, USAID ADS 201, FCDO EQUALS2, and UNDP guidelines. 27 dimensions compared. What each donor requires, where they differ, and what multi-donor evaluators must cover.">
 <meta name="keywords" content="DFAT evaluation standards, USAID ADS 201 requirements, FCDO EQUALS2, UNDP evaluation guidelines, evaluation quality checklist, donor compliance, development evaluation, DMEL Standards">
+<link rel="canonical" href="https://pacificaidsignal.org/donor-standards.html">
+<meta property="og:title" content="Evaluation Standards Compared: DFAT vs USAID vs FCDO vs UNDP">
+<meta property="og:description" content="Side-by-side comparison of evaluation quality requirements across 4 major donors. 27 dimensions, unique requirements per donor, practical guidance for multi-donor evaluations.">
+<meta property="og:url" content="https://pacificaidsignal.org/donor-standards.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Pacific Aid Signal">
 <script type="application/ld+json">{structured_data}</script>
 <style>{style}</style>
 <style>
